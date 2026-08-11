@@ -1,18 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Phone, Mail, Globe, User } from "lucide-react";
-import { motion } from "framer-motion";
+import { useRobot } from "@/context/RobotContext";
+import { Phone, Mail, Globe, User, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export default function Header() {
   const { t, language, toggleLanguage } = useLanguage();
+  const { isRobotActive, toggleRobot } = useRobot();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
-      {/* Top Bar - Dark Theme */}
-      <div className="bg-[#111827] py-2.5 px-4 sm:px-8 text-xs text-gray-300 border-b border-gray-800">
+    <>
+      {/* Top Bar - Dark Theme (Hidden on Mobile, Not Sticky) */}
+      <div className="hidden lg:block bg-[#111827] py-2.5 px-4 sm:px-8 text-xs text-gray-300 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
 
           {/* Left: Contact Info in Pills */}
@@ -72,38 +75,116 @@ export default function Header() {
               </span>
             </div>
 
+            {/* Robot Toggle */}
+            <div
+              className={`flex items-center space-x-1.5 cursor-pointer group px-3 py-1.5 rounded-full border transition-colors ${isRobotActive ? 'bg-cyan-500/20 border-cyan-400/50 hover:bg-cyan-500/30' : 'bg-white/5 border-white/10 hover:bg-white/10'}`}
+              onClick={toggleRobot}
+            >
+              <div className={`w-2 h-2 rounded-full ${isRobotActive ? 'bg-cyan-400 animate-pulse' : 'bg-gray-500'}`}></div>
+              <span className={`font-semibold transition-colors ${isRobotActive ? 'text-cyan-400' : 'text-gray-400'}`}>
+                {isRobotActive ? 'AI ON' : 'AI OFF'}
+              </span>
+            </div>
+
           </div>
         </div>
       </div>
 
-      {/* Main Nav */}
-      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-8 flex justify-between items-center bg-white">
-        {/* Logo */}
-        <div className="flex items-center cursor-pointer">
-          <img src="/logo/logo.png" alt="US Software LTD" className="h-12 w-auto object-contain" />
+      {/* Main Nav (Sticky & Premium) */}
+      <header className="w-full bg-white/85 backdrop-blur-xl sticky top-0 z-50 shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div className="max-w-7xl mx-auto py-3.5 px-4 sm:px-8 flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center cursor-pointer">
+            {/* Mobile Logo */}
+            <img src="/logo/us software logo.png" alt="US Software LTD" className="lg:hidden h-9 w-auto object-contain" />
+            {/* Desktop Logo */}
+            <img src="/logo/logo.png" alt="US Software LTD" className="hidden lg:block h-12 w-auto object-contain" />
+          </div>
+
+          {/* Right Side: Nav & CTA */}
+          <div className="flex items-center space-x-4 lg:space-x-10">
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex space-x-8 text-[15px] font-bold text-gray-700">
+              <Link href="#" className="text-[#00a884] border-b-2 border-[#00a884] pb-1">
+                {t.header.home}
+              </Link>
+              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.services}</Link>
+              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.solutions}</Link>
+              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.company}</Link>
+              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.portfolio}</Link>
+              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.contact}</Link>
+            </nav>
+
+            {/* CTA Button (Premium Style) */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden md:block bg-gradient-to-r from-[#00a884] to-[#008f6f] text-white px-8 py-2.5 rounded-full font-bold text-sm shadow-[0_5px_15px_rgba(0,168,132,0.3)] hover:shadow-[0_8px_25px_rgba(0,168,132,0.4)] transition-all"
+            >
+              {t.header.getQuote}
+            </motion.button>
+            {/* Mobile Menu Button */}
+            <button 
+              className="lg:hidden text-[#0b2b46] p-2 focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex space-x-8 text-sm font-bold text-gray-700">
-          <Link href="#" className="text-[#00a884] border-b-2 border-[#00a884] pb-1">
-            {t.header.home}
-          </Link>
-          <Link href="#" className="hover:text-[#00a884] pb-1 transition-colors">{t.header.services}</Link>
-          <Link href="#" className="hover:text-[#00a884] pb-1 transition-colors">{t.header.solutions}</Link>
-          <Link href="#" className="hover:text-[#00a884] pb-1 transition-colors">{t.header.company}</Link>
-          <Link href="#" className="hover:text-[#00a884] pb-1 transition-colors">{t.header.portfolio}</Link>
-          <Link href="#" className="hover:text-[#00a884] pb-1 transition-colors">{t.header.contact}</Link>
-        </nav>
+        {/* Mobile Nav Dropdown */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+            >
+              <div className="flex flex-col px-6 py-4 space-y-4 text-base font-bold text-gray-700">
+                <Link href="#" className="text-[#00a884]" onClick={() => setIsMobileMenuOpen(false)}>{t.header.home}</Link>
+                <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.services}</Link>
+                <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.solutions}</Link>
+                <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.company}</Link>
+                <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.portfolio}</Link>
+                <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.contact}</Link>
+                
+                {/* Mobile CTA and Toggles */}
+                <div className="pt-4 mt-2 border-t border-gray-100 flex flex-col space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500 font-semibold text-sm">Language:</span>
+                    <div
+                      className="flex items-center space-x-1.5 cursor-pointer bg-gray-100 px-4 py-2 rounded-full"
+                      onClick={toggleLanguage}
+                    >
+                      <Globe size={16} className="text-[#00a884]" />
+                      <span className="font-bold text-gray-700">{language === "en" ? "English" : "Bengali"}</span>
+                    </div>
+                  </div>
 
-        {/* CTA Button */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden md:block bg-[#00a884] text-white px-7 py-2.5 rounded-md font-bold text-sm shadow-lg shadow-[#00a884]/20 hover:bg-[#008f6f] transition-colors"
-        >
-          {t.header.getQuote}
-        </motion.button>
-      </div>
-    </header>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500 font-semibold text-sm">AI Assistant:</span>
+                    <div
+                      className={`flex items-center space-x-2 cursor-pointer px-4 py-2 rounded-full border ${isRobotActive ? 'bg-cyan-50 border-cyan-200' : 'bg-gray-100 border-gray-200'}`}
+                      onClick={toggleRobot}
+                    >
+                      <div className={`w-2.5 h-2.5 rounded-full ${isRobotActive ? 'bg-cyan-500 animate-pulse' : 'bg-gray-400'}`}></div>
+                      <span className={`font-bold ${isRobotActive ? 'text-cyan-600' : 'text-gray-500'}`}>
+                        {isRobotActive ? 'ON' : 'OFF'}
+                      </span>
+                    </div>
+                  </div>
+
+                  <button className="w-full bg-gradient-to-r from-[#00a884] to-[#008f6f] text-white px-8 py-3 rounded-full font-bold text-base shadow-[0_5px_15px_rgba(0,168,132,0.3)] mt-2">
+                    {t.header.getQuote}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { RobotProvider } from "@/context/RobotContext";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +37,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans" style={{ fontFamily: "var(--font-hind), sans-serif" }}>
-        <LanguageProvider>{children}</LanguageProvider>
+        <SmoothScroll>
+          <RobotProvider>
+            <LanguageProvider>{children}</LanguageProvider>
+          </RobotProvider>
+        </SmoothScroll>
       </body>
     </html>
   );

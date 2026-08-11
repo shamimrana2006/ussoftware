@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useRobot } from "@/context/RobotContext";
 import { motion, useMotionValue, useTransform, useSpring, useMotionTemplate } from "framer-motion";
 import { ArrowRight, ShieldCheck, Globe2, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart } from "lucide-react";
 
@@ -70,6 +71,7 @@ const Counter = ({ end, suffix = "", duration = 2 }: { end: number, suffix?: str
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const { isRobotActive } = useRobot();
 
   // Track mouse position globally
   const mouseX = useMotionValue(0);
@@ -347,43 +349,52 @@ export default function HeroSection() {
                 ))}
               </div>
 
-              {/* Futuristic AI Eyes (Top of Logo Box) */}
-              <motion.div 
-                className="absolute top-[18px] flex space-x-4 z-50"
-                style={{ left: "50%", x: "-50%", z: 45 }}
-              >
-                {/* Left Eye */}
-                <div className="relative w-8 h-2.5 bg-[#020617] rounded-full overflow-hidden border border-white/10 shadow-[inset_0_0_6px_#000,0_0_12px_rgba(34,211,238,0.4)]">
-                  {/* Glowing Pupil */}
-                  <motion.div 
-                    className="absolute w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_12px_3px_#22d3ee] top-0"
-                    animate={{ left: ['10%', '65%', '40%', '10%'] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  {/* Blinking Eyelid */}
-                  <motion.div 
-                    className="absolute top-0 left-0 right-0 bg-[#020617] z-10"
-                    animate={{ height: ['0%', '0%', '100%', '0%', '0%'] }}
-                    transition={{ duration: 4, repeat: Infinity, times: [0, 0.45, 0.5, 0.55, 1] }}
-                  />
-                </div>
+              {/* AI Scanner Layer (Attached to the glass layer) */}
+              <div className="absolute inset-0 rounded-[28px] overflow-hidden pointer-events-none" style={{ transform: "translateZ(1px)" }}>
                 
-                {/* Right Eye */}
-                <div className="relative w-8 h-2.5 bg-[#020617] rounded-full overflow-hidden border border-white/10 shadow-[inset_0_0_6px_#000,0_0_12px_rgba(34,211,238,0.4)]">
-                  {/* Glowing Pupil */}
-                  <motion.div 
-                    className="absolute w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_12px_3px_#22d3ee] top-0"
-                    animate={{ left: ['10%', '65%', '40%', '10%'] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  {/* Blinking Eyelid */}
-                  <motion.div 
-                    className="absolute top-0 left-0 right-0 bg-[#020617] z-10"
-                    animate={{ height: ['0%', '0%', '100%', '0%', '0%'] }}
-                    transition={{ duration: 4, repeat: Infinity, times: [0, 0.45, 0.5, 0.55, 1] }}
-                  />
-                </div>
-              </motion.div>
+                {/* 1. Sweeping Laser & Grid */}
+                <motion.div 
+                  className="absolute left-0 w-full h-[50%] bg-gradient-to-b from-transparent via-cyan-500/20 to-cyan-400/40 border-b-2 border-cyan-300 z-10 flex flex-col justify-end pointer-events-none"
+                  animate={{ top: ['-50%', '110%', '-50%'] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
+                >
+                  <div className="absolute bottom-0 w-full h-[2px] bg-cyan-100 shadow-[0_0_20px_4px_#22d3ee]"></div>
+                  {/* Grid Pattern */}
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] bg-[size:12px_12px] opacity-60"></div>
+                  
+                  {/* Binary Data running inside scanner */}
+                  <div className="absolute bottom-2 left-2 text-[9px] font-mono text-cyan-300 font-bold leading-tight">
+                    <motion.span animate={{ opacity: [1, 0, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>[SYS.SCAN]</motion.span><br/>
+                    <motion.span animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 0.1, repeat: Infinity }}>101100101</motion.span>
+                  </div>
+                </motion.div>
+
+                {/* 2. AI Target HUD (Blinking Target Box) */}
+                <motion.div 
+                  className="absolute inset-[18%] border border-cyan-400/20 pointer-events-none z-0 flex items-center justify-center"
+                  animate={{ opacity: [0.3, 1, 0.3], scale: [0.98, 1.02, 0.98] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  {/* 4 Corner Targeting Brackets */}
+                  <div className="absolute top-[-2px] left-[-2px] w-6 h-6 border-t-[3px] border-l-[3px] border-cyan-400"></div>
+                  <div className="absolute top-[-2px] right-[-2px] w-6 h-6 border-t-[3px] border-r-[3px] border-cyan-400"></div>
+                  <div className="absolute bottom-[-2px] left-[-2px] w-6 h-6 border-b-[3px] border-l-[3px] border-cyan-400"></div>
+                  <div className="absolute bottom-[-2px] right-[-2px] w-6 h-6 border-b-[3px] border-r-[3px] border-cyan-400"></div>
+                  
+                  {/* AI Status Text */}
+                  <div className="absolute top-[-24px] left-0 text-[10px] font-mono font-bold text-cyan-300 tracking-widest bg-[#0b2b46]/90 px-2 py-0.5 rounded-sm border border-cyan-500/50">
+                    TARGET: IDENTIFIED
+                  </div>
+
+                  {/* AI Data Fluctuation Bars on Right Side */}
+                  <div className="absolute right-[-14px] top-1/2 -translate-y-1/2 flex flex-col space-y-1">
+                    <motion.div animate={{ height: [4, 12, 4] }} transition={{ duration: 0.3, repeat: Infinity }} className="w-1.5 bg-cyan-400"></motion.div>
+                    <motion.div animate={{ height: [12, 4, 12] }} transition={{ duration: 0.5, repeat: Infinity }} className="w-1.5 bg-cyan-400"></motion.div>
+                    <motion.div animate={{ height: [6, 16, 6] }} transition={{ duration: 0.4, repeat: Infinity }} className="w-1.5 bg-cyan-400"></motion.div>
+                  </div>
+                </motion.div>
+
+              </div>
             </motion.div>
 
             {/* 3D CIRCUIT TRACKS & LASERS (Single Box per Track with Drop Shadow & Radius) */}
@@ -554,6 +565,100 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
+
+      {/* Website Roaming AI Bot with Jetpack & Plasma Torch */}
+      {isRobotActive && (
+        <motion.div 
+          className="fixed z-[100] flex flex-col items-center pointer-events-none"
+          animate={{ 
+            x: ['-20vw', '75vw', '35vw', '80vw', '-20vw'], 
+            y: ['15vh', '35vh', '65vh', '25vh', '15vh'],
+            rotateZ: [15, -5, 20, -10, 15]
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+        >
+          {/* Jetpack Flames */}
+          <div className="absolute top-[40px] left-[6px] w-3 h-16 bg-gradient-to-t from-cyan-400 to-transparent rounded-full blur-[2px] opacity-80" style={{ transform: "rotate(10deg)" }}>
+            <motion.div animate={{ height: [40, 64, 40] }} transition={{ duration: 0.2, repeat: Infinity }} className="absolute bottom-0 w-full bg-white rounded-full blur-[1px]"></motion.div>
+          </div>
+          <div className="absolute top-[40px] right-[6px] w-3 h-16 bg-gradient-to-t from-cyan-400 to-transparent rounded-full blur-[2px] opacity-80" style={{ transform: "rotate(-10deg)" }}>
+            <motion.div animate={{ height: [40, 64, 40] }} transition={{ duration: 0.2, repeat: Infinity, delay: 0.1 }} className="absolute bottom-0 w-full bg-white rounded-full blur-[1px]"></motion.div>
+          </div>
+
+          {/* Jetpack Backpack */}
+          <div className="absolute top-[28px] w-14 h-12 bg-slate-800 rounded-xl shadow-lg border-2 border-slate-700 -z-10"></div>
+
+          {/* Head: AI Brain */}
+          <motion.div 
+            className="relative z-20 text-fuchsia-400 drop-shadow-[0_0_15px_rgba(232,121,249,0.9)]"
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <BrainCircuit size={40} strokeWidth={1.5} />
+          </motion.div>
+
+          {/* Torso (Silver Armor) */}
+          <div className="relative w-12 h-14 bg-gradient-to-b from-gray-200 to-gray-400 rounded-[10px] shadow-lg flex justify-center -mt-2 z-10 border border-gray-100">
+            
+            {/* Glowing Arc Reactor Chest */}
+            <motion.div 
+              className="w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_15px_#22d3ee] mt-3 border-2 border-white"
+              animate={{ opacity: [0.6, 1, 0.6] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+
+            {/* Left Arm (Holding Plasma Torch) */}
+            <motion.div 
+              className="absolute top-2 left-[-12px] w-3.5 h-12 bg-gray-300 rounded-full origin-top z-30 shadow-md border border-gray-400 flex flex-col items-center justify-end"
+              animate={{ rotateZ: [60, 80, 60] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {/* Robotic Claw */}
+              <div className="w-5 h-5 border-[3px] border-gray-600 rounded-full border-t-transparent -mb-2 flex items-center justify-center relative transform rotate-45">
+                {/* Plasma Torch Tool */}
+                <div className="absolute w-2 h-8 bg-slate-800 rounded-sm transform -rotate-45 -translate-y-2 translate-x-1 border border-slate-600">
+                  {/* Laser Beam / Spark */}
+                  <motion.div 
+                    className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-1 h-6 bg-yellow-400 rounded-full shadow-[0_0_15px_#facc15]"
+                    animate={{ height: [5, 20, 5], opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 0.1, repeat: Infinity }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Arm (Flying Posture) */}
+            <motion.div 
+              className="absolute top-2 right-[-12px] w-3.5 h-12 bg-gray-300 rounded-full origin-top z-30 shadow-md border border-gray-400"
+              animate={{ rotateZ: [-40, -60, -40] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {/* Robotic Claw */}
+              <div className="absolute bottom-[-4px] right-[-2px] w-5 h-5 border-[3px] border-gray-600 rounded-full border-t-transparent transform -rotate-45"></div>
+            </motion.div>
+          </div>
+
+          {/* Legs */}
+          <div className="flex space-x-3 -mt-2 z-0">
+            {/* Left Leg */}
+            <motion.div 
+              className="w-3.5 h-12 bg-gray-300 rounded-b-sm origin-top border-l border-gray-400 relative"
+              animate={{ rotateZ: [10, 25, 10] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="absolute bottom-0 left-[-2px] w-5 h-4 bg-slate-800 rounded-md border-b-2 border-cyan-400 shadow-[0_5px_15px_rgba(34,211,238,0.5)]"></div>
+            </motion.div>
+            {/* Right Leg */}
+            <motion.div 
+              className="w-3.5 h-12 bg-gray-300 rounded-b-sm origin-top border-r border-gray-400 relative"
+              animate={{ rotateZ: [-10, -25, -10] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            >
+              <div className="absolute bottom-0 right-[-2px] w-5 h-4 bg-slate-800 rounded-md border-b-2 border-cyan-400 shadow-[0_5px_15px_rgba(34,211,238,0.5)]"></div>
+            </motion.div>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 }
