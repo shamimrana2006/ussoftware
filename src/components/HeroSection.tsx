@@ -96,12 +96,19 @@ export default function HeroSection() {
   const smoothY = useSpring(mouseY, { damping: 40, stiffness: 150 });
 
   // Calculate 3D Rotations (Tilt) based on global mouse position
-  const rotateX = useTransform(smoothY, [0, windowSize.height], [15, -15]);
-  const rotateY = useTransform(smoothX, [0, windowSize.width], [-15, 15]);
+  // Increased range so the left side tracks much better
+  const rotateX = useTransform(smoothY, [0, windowSize.height], [20, -20]);
+  const rotateY = useTransform(smoothX, [0, windowSize.width], [-35, 35]);
 
-  // Extra dramatic 3D effect for the logo
-  const logoRotateX = useTransform(smoothY, [0, windowSize.height], [30, -30]);
-  const logoRotateY = useTransform(smoothX, [0, windowSize.width], [-30, 30]);
+  // Extra dramatic 3D effect for the logo (Limited to prevent flying off screen)
+  const logoRotateX = useTransform(smoothY, [0, windowSize.height], [15, -15]);
+  const logoRotateY = useTransform(smoothX, [0, windowSize.width], [-15, 15]);
+
+  // Subtle parallax for left content (Text & Stats)
+  const textRotateX = useTransform(smoothY, [0, windowSize.height], [8, -8]);
+  const textRotateY = useTransform(smoothX, [0, windowSize.width], [-8, 8]);
+  const textTranslateX = useTransform(smoothX, [0, windowSize.width], [-20, 20]);
+  const textTranslateY = useTransform(smoothY, [0, windowSize.height], [-20, 20]);
 
   // Reflective Light (Glare) positioning
   const glareX = useTransform(smoothX, [0, windowSize.width], [100, -100]);
@@ -339,6 +346,44 @@ export default function HeroSection() {
                   />
                 ))}
               </div>
+
+              {/* Futuristic AI Eyes (Top of Logo Box) */}
+              <motion.div 
+                className="absolute top-[18px] flex space-x-4 z-50"
+                style={{ left: "50%", x: "-50%", z: 45 }}
+              >
+                {/* Left Eye */}
+                <div className="relative w-8 h-2.5 bg-[#020617] rounded-full overflow-hidden border border-white/10 shadow-[inset_0_0_6px_#000,0_0_12px_rgba(34,211,238,0.4)]">
+                  {/* Glowing Pupil */}
+                  <motion.div 
+                    className="absolute w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_12px_3px_#22d3ee] top-0"
+                    animate={{ left: ['10%', '65%', '40%', '10%'] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  {/* Blinking Eyelid */}
+                  <motion.div 
+                    className="absolute top-0 left-0 right-0 bg-[#020617] z-10"
+                    animate={{ height: ['0%', '0%', '100%', '0%', '0%'] }}
+                    transition={{ duration: 4, repeat: Infinity, times: [0, 0.45, 0.5, 0.55, 1] }}
+                  />
+                </div>
+                
+                {/* Right Eye */}
+                <div className="relative w-8 h-2.5 bg-[#020617] rounded-full overflow-hidden border border-white/10 shadow-[inset_0_0_6px_#000,0_0_12px_rgba(34,211,238,0.4)]">
+                  {/* Glowing Pupil */}
+                  <motion.div 
+                    className="absolute w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_12px_3px_#22d3ee] top-0"
+                    animate={{ left: ['10%', '65%', '40%', '10%'] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  {/* Blinking Eyelid */}
+                  <motion.div 
+                    className="absolute top-0 left-0 right-0 bg-[#020617] z-10"
+                    animate={{ height: ['0%', '0%', '100%', '0%', '0%'] }}
+                    transition={{ duration: 4, repeat: Infinity, times: [0, 0.45, 0.5, 0.55, 1] }}
+                  />
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* 3D CIRCUIT TRACKS & LASERS (Single Box per Track with Drop Shadow & Radius) */}
