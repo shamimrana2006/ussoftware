@@ -17,7 +17,30 @@
     "contactUs": "Contact Us",
     "trustedBy": "Trusted by",
     "clients": "100+ Clients",
-    "acrossGlobe": "Across the Globe"
+    "acrossGlobe": "Across the Globe",
+    "typingWords": [
+      "Deep Learning",
+      "Web Development",
+      "Cloud Solutions",
+      "AI Automation"
+    ],
+    "stats": {
+      "courses": {
+        "title": "Courses",
+        "value": "50+",
+        "desc": "Vendor Certi."
+      },
+      "students": {
+        "title": "Students",
+        "value": "6,200+",
+        "desc": "Building Skills"
+      },
+      "placement": {
+        "title": "Placement",
+        "value": "92%",
+        "desc": "Career Success"
+      }
+    }
   },
   "services": {
     "badge": "WHAT WE DO",

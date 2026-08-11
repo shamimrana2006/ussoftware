@@ -24,3 +24,42 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .transform-style-flat {
+    transform-style: flat;
+  }
+  .translate-z-\[-100px\] {
+    transform: translateZ(-100px);
+  }
+  .translate-z-\[-20px\] {
+    transform: translateZ(-20px);
+  }
+  .translate-z-\[-10px\] {
+    transform: translateZ(-10px);
+  }
+  .translate-z-\[40px\] {
+    transform: translateZ(40px);
+  }
+  .translate-z-\[50px\] {
+    transform: translateZ(50px);
+  }
+  .translate-z-\[60px\] {
+    transform: translateZ(60px);
+  }
+  .translate-z-\[80px\] {
+    transform: translateZ(80px);
+  }
+  .translate-z-\[100px\] {
+    transform: translateZ(100px);
+  }
+  .translate-z-\[120px\] {
+    transform: translateZ(120px);
+  }
+  .rotate-x-60 {
+    transform: rotateX(60deg);
+  }
+}
