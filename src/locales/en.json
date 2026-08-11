@@ -1,0 +1,45 @@
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "solutions": "Solutions",
+    "company": "Company",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "badge": "🚀 Innovating the Future",
+    "title1": "Your Complete",
+    "title2": "IT Partner",
+    "subtitle": "Delivering smart, scalable, and secure IT solutions to drive your business forward in the digital era.",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "trustedBy": "Trusted by",
+    "clients": "100+ Clients",
+    "acrossGlobe": "Across the Globe"
+  },
+  "services": {
+    "badge": "WHAT WE DO",
+    "title1": "Smart Solutions For",
+    "title2": "Modern Businesses",
+    "subtitle": "We provide end-to-end IT services to help businesses grow, secure, and succeed in a digital world.",
+    "exploreAll": "Explore All Services",
+    "webDev": {
+      "title": "Web Development",
+      "desc": "High performance websites and web applications tailored to your business needs."
+    },
+    "softwareDev": {
+      "title": "Software Development",
+      "desc": "Custom software solutions designed to streamline your operations."
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "desc": "Boost your brand visibility and reach the right audience effectively."
+    },
+    "itConsulting": {
+      "title": "IT Consulting",
+      "desc": "Expert guidance to optimize your IT infrastructure and business strategy."
+    }
+  }
+}
