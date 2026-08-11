@@ -177,7 +177,7 @@ export default function HeroSection() {
                 <Cpu size={14} className="text-[#00a884]" />
                 <span>{t.hero.stats.courses.title}</span>
               </div>
-              <h3 className="text-xl font-black text-[#0b2b46]"><Counter end={50} suffix="+" /></h3>
+              <h3 className="text-xl font-black text-[#0b2b46]"><Counter end={43} suffix="+" /></h3>
               <p className="text-[11px] text-gray-400">{t.hero.stats.courses.desc}</p>
             </div>
             <div className="bg-white border border-[#f97316]/20 rounded-2xl p-3 shadow-sm hover:shadow-md transition-shadow">
@@ -185,7 +185,7 @@ export default function HeroSection() {
                 <Users size={14} className="text-[#f97316]" />
                 <span>{t.hero.stats.students.title}</span>
               </div>
-              <h3 className="text-xl font-black text-[#0b2b46]"><Counter end={6200} suffix="+" /></h3>
+              <h3 className="text-xl font-black text-[#0b2b46]"><Counter end={4700} suffix="+" /></h3>
               <p className="text-[11px] text-gray-400">{t.hero.stats.students.desc}</p>
             </div>
             <div className="bg-white border border-[#3b82f6]/20 rounded-2xl p-3 shadow-sm hover:shadow-md transition-shadow">
@@ -193,7 +193,7 @@ export default function HeroSection() {
                 <LineChart size={14} className="text-[#3b82f6]" />
                 <span>{t.hero.stats.placement.title}</span>
               </div>
-              <h3 className="text-xl font-black text-[#0b2b46]"><Counter end={92} suffix="%" /></h3>
+              <h3 className="text-xl font-black text-[#0b2b46]"><Counter end={70} suffix="%" /></h3>
               <p className="text-[11px] text-gray-400">{t.hero.stats.placement.desc}</p>
             </div>
           </motion.div>
@@ -353,9 +353,9 @@ export default function HeroSection() {
 
               {/* AI Scanner Layer (Attached to the glass layer) */}
               <div className="absolute inset-0 rounded-[28px] overflow-hidden pointer-events-none" style={{ transform: "translateZ(1px)" }}>
-                
+
                 {/* 1. Sweeping Laser & Grid */}
-                <motion.div 
+                <motion.div
                   className="absolute left-0 w-full h-[50%] bg-gradient-to-b from-transparent via-cyan-500/20 to-cyan-400/40 border-b-2 border-cyan-300 z-10 flex flex-col justify-end pointer-events-none"
                   animate={{ top: ['-50%', '110%', '-50%'] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
@@ -363,16 +363,16 @@ export default function HeroSection() {
                   <div className="absolute bottom-0 w-full h-[2px] bg-cyan-100 shadow-[0_0_20px_4px_#22d3ee]"></div>
                   {/* Grid Pattern */}
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] bg-[size:12px_12px] opacity-60"></div>
-                  
+
                   {/* Binary Data running inside scanner */}
                   <div className="absolute bottom-2 left-2 text-[9px] font-mono text-cyan-300 font-bold leading-tight">
-                    <motion.span animate={{ opacity: [1, 0, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>[SYS.SCAN]</motion.span><br/>
+                    <motion.span animate={{ opacity: [1, 0, 1] }} transition={{ duration: 0.5, repeat: Infinity }}>[SYS.SCAN]</motion.span><br />
                     <motion.span animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 0.1, repeat: Infinity }}>101100101</motion.span>
                   </div>
                 </motion.div>
 
                 {/* 2. AI Target HUD (Blinking Target Box) */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-[18%] border border-cyan-400/20 pointer-events-none z-0 flex items-center justify-center"
                   animate={{ opacity: [0.3, 1, 0.3], scale: [0.98, 1.02, 0.98] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -382,7 +382,7 @@ export default function HeroSection() {
                   <div className="absolute top-[-2px] right-[-2px] w-6 h-6 border-t-[3px] border-r-[3px] border-cyan-400"></div>
                   <div className="absolute bottom-[-2px] left-[-2px] w-6 h-6 border-b-[3px] border-l-[3px] border-cyan-400"></div>
                   <div className="absolute bottom-[-2px] right-[-2px] w-6 h-6 border-b-[3px] border-r-[3px] border-cyan-400"></div>
-                  
+
                   {/* AI Status Text */}
                   <div className="absolute top-[-24px] left-0 text-[10px] font-mono font-bold text-cyan-300 tracking-widest bg-[#0b2b46]/90 px-2 py-0.5 rounded-sm border border-cyan-500/50">
                     TARGET: IDENTIFIED
@@ -400,17 +400,17 @@ export default function HeroSection() {
             </motion.div>
 
             {/* 3D CIRCUIT TRACKS & LASERS (Single Box per Track with Drop Shadow & Radius) */}
-            <div 
+            <div
               className="absolute inset-0 pointer-events-none transform-style-3d z-30"
               style={{ transform: "translateZ(20px)" }}
             >
               {/* 1. Web Dev (Emerald Green) */}
-              <motion.div 
-                className="absolute top-[25%] left-[15%] w-[35%] h-[25%] border-t-[2px] border-r-[2px] border-[#10b981]/50 rounded-tr-[25px] drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]" 
-                animate={{ y: [-15, 20, -15], x: [-5, 5, -5] }} 
+              <motion.div
+                className="absolute top-[25%] left-[15%] w-[35%] h-[25%] border-t-[2px] border-r-[2px] border-[#10b981]/50 rounded-tr-[25px] drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+                animate={{ y: [-15, 20, -15], x: [-5, 5, -5] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0 }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute w-3 h-3 rounded-full bg-[#10b981] shadow-[0_0_15px_4px_#10b981]"
                   animate={{ top: ['100%', '0%', '0%', '0%'], left: ['100%', '100%', '0%', '0%'], opacity: [0, 1, 1, 0] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "linear", times: [0, 0.4, 0.9, 1] }}
@@ -419,12 +419,12 @@ export default function HeroSection() {
               </motion.div>
 
               {/* 2. Cyber Security (Rose/Pink) */}
-              <motion.div 
-                className="absolute top-[20%] left-[50%] w-[35%] h-[30%] border-t-[2px] border-l-[2px] border-[#f43f5e]/50 rounded-tl-[25px] drop-shadow-[0_0_8px_rgba(244,63,94,0.8)]" 
-                animate={{ y: [-20, 15, -20] }} 
+              <motion.div
+                className="absolute top-[20%] left-[50%] w-[35%] h-[30%] border-t-[2px] border-l-[2px] border-[#f43f5e]/50 rounded-tl-[25px] drop-shadow-[0_0_8px_rgba(244,63,94,0.8)]"
+                animate={{ y: [-20, 15, -20] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute w-3 h-3 rounded-full bg-[#f43f5e] shadow-[0_0_15px_4px_#f43f5e]"
                   animate={{ top: ['100%', '0%', '0%', '0%'], left: ['0%', '0%', '100%', '100%'], opacity: [0, 1, 1, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear", times: [0, 0.4, 0.9, 1], delay: 0.5 }}
@@ -433,12 +433,12 @@ export default function HeroSection() {
               </motion.div>
 
               {/* 3. Cloud Solutions (Cyan/Aqua) */}
-              <motion.div 
-                className="absolute top-[50%] left-[20%] w-[30%] h-[25%] border-b-[2px] border-r-[2px] border-[#06b6d4]/50 rounded-br-[25px] drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]" 
-                animate={{ y: [15, -15, 15], x: [5, -5, 5] }} 
+              <motion.div
+                className="absolute top-[50%] left-[20%] w-[30%] h-[25%] border-b-[2px] border-r-[2px] border-[#06b6d4]/50 rounded-br-[25px] drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]"
+                animate={{ y: [15, -15, 15], x: [5, -5, 5] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute w-3 h-3 rounded-full bg-[#06b6d4] shadow-[0_0_15px_4px_#06b6d4]"
                   animate={{ top: ['0%', '100%', '100%', '100%'], left: ['100%', '100%', '0%', '0%'], opacity: [0, 1, 1, 0] }}
                   transition={{ duration: 2.8, repeat: Infinity, ease: "linear", times: [0, 0.4, 0.9, 1], delay: 1 }}
@@ -447,12 +447,12 @@ export default function HeroSection() {
               </motion.div>
 
               {/* 4. AI & Machine Learning (Vivid Purple) */}
-              <motion.div 
-                className="absolute top-[50%] left-[50%] w-[40%] h-[2px] bg-[#a855f7]/50 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]" 
-                animate={{ y: [20, -20, 20], scale: [1, 1.05, 1] }} 
+              <motion.div
+                className="absolute top-[50%] left-[50%] w-[40%] h-[2px] bg-[#a855f7]/50 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]"
+                animate={{ y: [20, -20, 20], scale: [1, 1.05, 1] }}
                 transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute w-3 h-3 rounded-full bg-[#a855f7] shadow-[0_0_15px_4px_#a855f7]"
                   animate={{ top: ['0%', '0%'], left: ['0%', '100%'], opacity: [0, 1, 0] }}
                   transition={{ duration: 2.2, repeat: Infinity, ease: "linear", times: [0, 0.9, 1], delay: 0.2 }}
@@ -461,12 +461,12 @@ export default function HeroSection() {
               </motion.div>
 
               {/* 5. Digital Marketing (Yellow/Gold) */}
-              <motion.div 
-                className="absolute top-[50%] left-[50%] w-[30%] h-[25%] border-b-[2px] border-l-[2px] border-[#eab308]/50 rounded-bl-[25px] drop-shadow-[0_0_8px_rgba(234,179,8,0.8)]" 
-                animate={{ y: [-15, 20, -15], rotateZ: [-2, 2, -2] }} 
+              <motion.div
+                className="absolute top-[50%] left-[50%] w-[30%] h-[25%] border-b-[2px] border-l-[2px] border-[#eab308]/50 rounded-bl-[25px] drop-shadow-[0_0_8px_rgba(234,179,8,0.8)]"
+                animate={{ y: [-15, 20, -15], rotateZ: [-2, 2, -2] }}
                 transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute w-3 h-3 rounded-full bg-[#eab308] shadow-[0_0_15px_4px_#eab308]"
                   animate={{ top: ['0%', '100%', '100%', '100%'], left: ['0%', '0%', '100%', '100%'], opacity: [0, 1, 1, 0] }}
                   transition={{ duration: 3.2, repeat: Infinity, ease: "linear", times: [0, 0.4, 0.9, 1], delay: 0.8 }}
@@ -570,10 +570,10 @@ export default function HeroSection() {
 
       {/* Website Roaming AI Bot with Jetpack & Plasma Torch */}
       {isRobotActive && (
-        <motion.div 
+        <motion.div
           className="fixed z-[100] flex flex-col items-center pointer-events-none"
-          animate={{ 
-            x: ['-20vw', '75vw', '35vw', '80vw', '-20vw'], 
+          animate={{
+            x: ['-20vw', '75vw', '35vw', '80vw', '-20vw'],
             y: ['15vh', '35vh', '65vh', '25vh', '15vh'],
             rotateZ: [15, -5, 20, -10, 15]
           }}
@@ -591,7 +591,7 @@ export default function HeroSection() {
           <div className="absolute top-[28px] w-14 h-12 bg-slate-800 rounded-xl shadow-lg border-2 border-slate-700 -z-10"></div>
 
           {/* Head: AI Brain */}
-          <motion.div 
+          <motion.div
             className="relative z-20 text-fuchsia-400 drop-shadow-[0_0_15px_rgba(232,121,249,0.9)]"
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -601,16 +601,16 @@ export default function HeroSection() {
 
           {/* Torso (Silver Armor) */}
           <div className="relative w-12 h-14 bg-gradient-to-b from-gray-200 to-gray-400 rounded-[10px] shadow-lg flex justify-center -mt-2 z-10 border border-gray-100">
-            
+
             {/* Glowing Arc Reactor Chest */}
-            <motion.div 
+            <motion.div
               className="w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_15px_#22d3ee] mt-3 border-2 border-white"
               animate={{ opacity: [0.6, 1, 0.6] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
 
             {/* Left Arm (Holding Plasma Torch) */}
-            <motion.div 
+            <motion.div
               className="absolute top-2 left-[-12px] w-3.5 h-12 bg-gray-300 rounded-full origin-top z-30 shadow-md border border-gray-400 flex flex-col items-center justify-end"
               animate={{ rotateZ: [60, 80, 60] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -620,7 +620,7 @@ export default function HeroSection() {
                 {/* Plasma Torch Tool */}
                 <div className="absolute w-2 h-8 bg-slate-800 rounded-sm transform -rotate-45 -translate-y-2 translate-x-1 border border-slate-600">
                   {/* Laser Beam / Spark */}
-                  <motion.div 
+                  <motion.div
                     className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-1 h-6 bg-yellow-400 rounded-full shadow-[0_0_15px_#facc15]"
                     animate={{ height: [5, 20, 5], opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 0.1, repeat: Infinity }}
@@ -630,7 +630,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Right Arm (Flying Posture) */}
-            <motion.div 
+            <motion.div
               className="absolute top-2 right-[-12px] w-3.5 h-12 bg-gray-300 rounded-full origin-top z-30 shadow-md border border-gray-400"
               animate={{ rotateZ: [-40, -60, -40] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
@@ -643,7 +643,7 @@ export default function HeroSection() {
           {/* Legs */}
           <div className="flex space-x-3 -mt-2 z-0">
             {/* Left Leg */}
-            <motion.div 
+            <motion.div
               className="w-3.5 h-12 bg-gray-300 rounded-b-sm origin-top border-l border-gray-400 relative"
               animate={{ rotateZ: [10, 25, 10] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -651,7 +651,7 @@ export default function HeroSection() {
               <div className="absolute bottom-0 left-[-2px] w-5 h-4 bg-slate-800 rounded-md border-b-2 border-cyan-400 shadow-[0_5px_15px_rgba(34,211,238,0.5)]"></div>
             </motion.div>
             {/* Right Leg */}
-            <motion.div 
+            <motion.div
               className="w-3.5 h-12 bg-gray-300 rounded-b-sm origin-top border-r border-gray-400 relative"
               animate={{ rotateZ: [-10, -25, -10] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
