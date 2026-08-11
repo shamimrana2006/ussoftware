@@ -97,6 +97,8 @@ export default function HeroSection() {
   const smoothX = useSpring(mouseX, { damping: 40, stiffness: 150 });
   const smoothY = useSpring(mouseY, { damping: 40, stiffness: 150 });
 
+  const baseScale = windowSize.width < 1024 ? 0.55 : 0.7;
+
   // Calculate 3D Rotations (Tilt) based on global mouse position
   // Increased range so the left side tracks much better
   const rotateX = useTransform(smoothY, [0, windowSize.height], [20, -20]);
@@ -215,12 +217,12 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Right Content - Full 3D Interactive Zone */}
-        <div className="relative h-[600px] w-full hidden lg:flex items-center justify-center pointer-events-none perspective-[1500px] transform-style-3d">
+        <div className="relative h-[400px] lg:h-[600px] w-full flex items-center justify-center pointer-events-none perspective-[1500px] transform-style-3d overflow-visible">
 
           {/* Elegant 3D Concentric Circle Floor (Podium) matching Image */}
           <motion.div
             className="absolute w-[800px] h-[800px] flex items-center justify-center transform-style-3d"
-            style={{ rotateX: 81, y: 200, z: -200, scale: 0.7 }}
+            style={{ rotateX: 81, y: windowSize.width < 1024 ? 100 : 200, z: -200, scale: baseScale }}
           >
             {/* Deep Shadow Base removed as requested */}
 
@@ -313,7 +315,7 @@ export default function HeroSection() {
 
           {/* Main 3D Container tracking mouse */}
           <motion.div
-            style={{ rotateX, rotateY, scale: 0.7 }}
+            style={{ rotateX, rotateY, scale: baseScale }}
             className="absolute w-full h-full flex items-center justify-center transform-style-3d"
           >
             {/* Central Moderately Extruded Logo Card */}
