@@ -211,6 +211,52 @@ export default function HeroSection() {
 
         {/* RIGHT COMPONENT: Text & CTA (Swapped Order) */}
         <motion.div className="space-y-7 relative z-30 order-1 lg:order-2 lg:pl-10" variants={containerVariants} initial="hidden" animate="visible">
+          
+          {/* Animated Background Elements for Right Side */}
+          <div className="absolute inset-0 pointer-events-none z-[-1] overflow-visible">
+            
+            {/* Spinning React Logo */}
+            <motion.div 
+              animate={{ rotate: 360 }} 
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute top-[5%] right-[-5%] opacity-60 drop-shadow-[0_0_20px_rgba(97,218,251,0.4)]"
+            >
+              <svg viewBox="-11.5 -10.23174 23 20.46348" width="120" height="120">
+                <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+                <g stroke="#61dafb" strokeWidth="1" fill="none">
+                  <ellipse rx="11" ry="4.2"/>
+                  <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                  <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                </g>
+              </svg>
+            </motion.div>
+            
+            {/* Spinning Gemini Logo */}
+            <motion.div 
+              animate={{ rotate: -360 }} 
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              className="absolute bottom-[10%] right-[30%] opacity-80 drop-shadow-[0_0_10px_rgba(66,133,244,0.3)]"
+            >
+              <svg viewBox="0 0 24 24" width="45" height="45">
+                <path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z" fill="none" stroke="url(#gemini_grad)" strokeWidth="1.5"/>
+                <defs>
+                  <linearGradient id="gemini_grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#4285F4"/>
+                    <stop offset="0.33" stopColor="#9B72CB"/>
+                    <stop offset="0.66" stopColor="#D96570"/>
+                    <stop offset="1" stopColor="#F8BC04"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </motion.div>
+            
+            {/* Center Glow */}
+            <motion.div 
+              animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-gradient-to-tr from-[#00a884] to-blue-500 rounded-full blur-[60px]"
+            />
+          </div>
 
           {/* Top Badge */}
           <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#00a884]/10 to-transparent border border-[#00a884]/20 rounded-full px-4 py-1.5 shadow-sm">
