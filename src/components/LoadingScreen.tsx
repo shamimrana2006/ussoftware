@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,8 +53,12 @@ export default function LoadingScreen() {
       {isLoading && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, y: -50, filter: "blur(10px)" }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          exit={{ 
+            opacity: 0, 
+            scale: 1.15,
+            filter: "blur(20px)",
+          }}
+          transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050b14] overflow-hidden"
         >
           {/* Grid Background */}
@@ -95,15 +100,27 @@ export default function LoadingScreen() {
               />
             </div>
 
-            {/* Branding / Text */}
+            {/* Branding / Logo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="mt-8 flex items-center space-x-3"
+              className="mt-8 flex flex-col items-center justify-center space-y-4"
             >
-              <div className="w-2 h-2 rounded-full bg-[#00a884] animate-ping" />
-              <span className="text-gray-400 font-mono text-sm tracking-widest uppercase">Initializing System</span>
+              <div className="flex items-center justify-center bg-white/5 backdrop-blur-md px-6 py-2 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,168,132,0.15)]">
+                <Image 
+                  src="/logo/logo.png" 
+                  alt="US Software Logo" 
+                  width={140} 
+                  height={45} 
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#00a884] animate-ping" />
+                <span className="text-gray-400 font-mono text-[10px] tracking-[0.2em] uppercase opacity-70">System Ready</span>
+              </div>
             </motion.div>
           </div>
         </motion.div>
