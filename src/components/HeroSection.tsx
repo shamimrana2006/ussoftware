@@ -93,7 +93,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] pt-12 lg:pt-20 pb-12 lg:pb-24 flex items-center min-h-[90vh]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] pt-6 sm:pt-12 lg:pt-20 pb-8 sm:pb-12 lg:pb-24 flex items-center min-h-[90vh]">
       {/* Dynamic Background Mesh Gradients */}
       <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-[#00a884]/20 to-transparent rounded-full blur-[100px] pointer-events-none animate-pulse duration-[8000ms]" />
       <div className="absolute bottom-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-gradient-to-tr from-blue-500/15 via-cyan-400/10 to-transparent rounded-full blur-[100px] pointer-events-none" />
@@ -103,10 +103,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid lg:grid-cols-2 gap-16 lg:gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10">
 
         {/* LEFT COMPONENT: AI Video Hub Design */}
-        <div className="relative h-[500px] lg:h-[600px] w-full flex items-center justify-center order-2 lg:order-1">
+        <div className="relative h-[340px] sm:h-[450px] lg:h-[600px] w-full flex items-center justify-center order-2 lg:order-1 mt-6 lg:mt-0">
 
           {/* Orbital Rings Background - Premium Upgrade */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -131,7 +131,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-[5%] left-[5%] lg:left-[10%] z-30 bg-white/5 backdrop-blur-xl border border-white/20 text-slate-800 px-6 py-3 rounded-2xl flex items-center shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+            className="absolute top-0 sm:-top-[5%] left-0 sm:left-[5%] lg:left-[10%] z-30 bg-white/5 backdrop-blur-xl border border-white/20 text-slate-800 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl flex items-center shadow-[0_20px_40px_rgba(0,0,0,0.1)] scale-[0.8] sm:scale-100 origin-top-left"
           >
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mr-4 shadow-lg shadow-purple-500/30">
               <BrainCircuit size={20} className="text-white" />
@@ -145,7 +145,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-[30%] -left-[10%] lg:-left-[15%] z-30 bg-[#0f172a]/80 backdrop-blur-xl border border-cyan-500/30 text-white px-5 py-3 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.2)] flex items-center"
+            className="absolute top-[25%] sm:top-[30%] -left-[5%] sm:-left-[10%] lg:-left-[15%] z-30 bg-[#0f172a]/80 backdrop-blur-xl border border-cyan-500/30 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.2)] flex items-center scale-[0.8] sm:scale-100 origin-left"
           >
             <Braces size={22} className="text-cyan-400 mr-3" />
             <span className="font-mono font-bold text-base tracking-wide">Clean Code</span>
@@ -154,7 +154,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute -bottom-[5%] right-[10%] lg:right-[15%] z-30 bg-white/10 backdrop-blur-xl border border-white/20 text-slate-800 px-6 py-2.5 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex items-center space-x-3"
+            className="absolute -bottom-[5%] right-[5%] sm:right-[10%] lg:right-[15%] z-30 bg-white/10 backdrop-blur-xl border border-white/20 text-slate-800 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex items-center space-x-2 sm:space-x-3 scale-[0.8] sm:scale-100 origin-bottom-right"
           >
             <div className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -164,7 +164,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* 3D Animated Robot Mascot from GLB */}
-          <div className="absolute bottom-[2%] left-[-15%] lg:-left-[25%] z-40 w-64 h-64 lg:w-[400px] lg:h-[400px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)]">
+          <div className="absolute bottom-[2%] -left-[5%] sm:left-[-15%] lg:-left-[25%] z-40 w-48 h-48 sm:w-64 sm:h-64 lg:w-[400px] lg:h-[400px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)]">
             <RobotCanvas />
           </div>
 

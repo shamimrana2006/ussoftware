@@ -101,10 +101,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center transition-all duration-300">
           {/* Logo */}
           <div className="flex items-center cursor-pointer">
-            {/* Mobile Logo */}
-            <img src="/logo/us software logo.png" alt="US Software LTD" className="lg:hidden h-9 w-auto object-contain" />
-            {/* Desktop Logo */}
-            <img src="/logo/logo.png" alt="US Software LTD" className="hidden lg:block h-12 w-auto object-contain" />
+            <img src="/logo/logo.png" alt="US Software LTD" className="h-8 lg:h-12 w-auto object-contain" />
           </div>
 
           {/* Right Side: Nav & CTA */}
@@ -120,22 +117,31 @@ export default function Header() {
               <NavItem href="#">{t.header.contact}</NavItem>
             </nav>
 
-            {/* CTA Button (Premium Style) */}
+            {/* CTA Button (Desktop Style) */}
             <motion.button
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
-              className="hidden md:block bg-[#00a884] text-white px-7 py-2.5 rounded-full font-bold text-sm shadow-[0_4px_15px_rgba(0,168,132,0.25)] hover:shadow-[0_8px_25px_rgba(0,168,132,0.4)] hover:bg-[#009b7a] transition-all duration-300"
+              className="hidden lg:block bg-[#00a884] text-white px-7 py-2.5 rounded-full font-bold text-sm shadow-[0_4px_15px_rgba(0,168,132,0.25)] hover:shadow-[0_8px_25px_rgba(0,168,132,0.4)] hover:bg-[#009b7a] transition-all duration-300"
             >
               {t.header.getQuote}
             </motion.button>
-            {/* Mobile Menu Button */}
-            <motion.button 
-              whileTap={{ scale: 0.9 }}
-              className="lg:hidden text-[#0b2b46] p-2 focus:outline-none bg-black/5 hover:bg-black/10 rounded-full transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
+            
+            {/* Mobile Actions Container */}
+            <div className="flex items-center space-x-2 lg:hidden">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#00a884] text-white px-4 py-1.5 rounded-full font-bold text-[13px] shadow-[0_4px_10px_rgba(0,168,132,0.3)]"
+              >
+                {t.header.getQuote || "Get Quote"}
+              </motion.button>
+              <motion.button 
+                whileTap={{ scale: 0.9 }}
+                className="text-[#0b2b46] p-2 focus:outline-none bg-black/5 hover:bg-black/10 rounded-full transition-colors"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.button>
+            </div>
           </div>
         </div>
 
