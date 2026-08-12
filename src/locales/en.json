@@ -9,21 +9,21 @@
     "getQuote": "Get a Quote"
   },
   "hero": {
-    "badge": "🚀 Master Your Future",
-    "title1": "Premium IT & Skill",
-    "title2": "Training Center",
-    "subtitle": "Empowering the next generation of tech professionals with industry-leading courses and hands-on training.",
-    "ourServices": "Explore Courses",
+    "badge": "🚀 Step Into The Industry",
+    "title1": "Build Real Software.",
+    "title2": "Launch Your Career.",
+    "subtitle": "Don't just learn—build production-grade applications. Work alongside industry experts and gain the practical experience needed to thrive in the global software market.",
+    "ourServices": "Explore Programs",
     "contactUs": "Join Now",
     "trustedBy": "Trusted by",
     "clients": "100+ Clients",
     "acrossGlobe": "Across the Globe",
     "typingWords": [
-      "Web Development",
-      "App Development",
-      "Graphic Design",
-      "Digital Marketing",
-      "Cyber Security"
+      "Software Engineering",
+      "Full-Stack Development",
+      "AI Integration",
+      "Cloud Architecture",
+      "Product Design"
     ],
     "stats": {
       "courses": {

@@ -95,12 +95,7 @@ export default function Header() {
               <Link href="/" className="text-[#00a884] border-b-2 border-[#00a884] pb-1">
                 {t.header.home}
               </Link>
-              <div className="flex items-center space-x-2 px-2 bg-gray-50 rounded-full border border-gray-100">
-                <Link href="/home2" className="hover:text-[#00a884] text-xs font-bold transition-all px-1">H2</Link>
-                <Link href="/home3" className="hover:text-[#00a884] text-xs font-bold transition-all px-1">H3</Link>
-                <Link href="/home4" className="hover:text-[#00a884] text-xs font-bold transition-all px-1">H4</Link>
-                <Link href="/home5" className="hover:text-[#00a884] text-xs font-bold transition-all px-1">H5</Link>
-              </div>
+
               <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.services}</Link>
               <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.solutions}</Link>
               <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.company}</Link>
@@ -138,12 +133,7 @@ export default function Header() {
             >
               <div className="flex flex-col px-6 py-4 space-y-4 text-base font-bold text-gray-700">
                 <Link href="/" className="text-[#00a884]" onClick={() => setIsMobileMenuOpen(false)}>{t.header.home}</Link>
-                <div className="flex space-x-3 py-1">
-                  <Link href="/home2" className="text-xs font-bold bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200" onClick={() => setIsMobileMenuOpen(false)}>H2</Link>
-                  <Link href="/home3" className="text-xs font-bold bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200" onClick={() => setIsMobileMenuOpen(false)}>H3</Link>
-                  <Link href="/home4" className="text-xs font-bold bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200" onClick={() => setIsMobileMenuOpen(false)}>H4</Link>
-                  <Link href="/home5" className="text-xs font-bold bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200" onClick={() => setIsMobileMenuOpen(false)}>H5</Link>
-                </div>
+
                 <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.services}</Link>
                 <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.solutions}</Link>
                 <Link href="#" className="hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{t.header.company}</Link>

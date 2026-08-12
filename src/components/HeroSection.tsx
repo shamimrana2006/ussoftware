@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ShieldCheck, Globe2, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code } from "lucide-react";
+import { ArrowRight, ShieldCheck, Globe2, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
+import RobotCanvas from "./RobotCanvas";
 
 const Typewriter = ({ words }: { words: string[] }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -71,6 +72,16 @@ const Counter = ({ end, suffix = "", duration = 2.5 }: { end: number, suffix?: s
 export default function HeroSection() {
   const { t } = useLanguage();
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handlePlayVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsVideoPlaying(true);
+    }
+  };
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
@@ -94,133 +105,106 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid lg:grid-cols-2 gap-16 lg:gap-12 items-center relative z-10">
 
-        {/* LEFT COMPONENT: Cascading Floating Cards Design */}
-        <div className="relative h-[500px] lg:h-[650px] w-full flex items-center justify-center order-2 lg:order-1 perspective-1000">
+        {/* LEFT COMPONENT: AI Video Hub Design */}
+        <div className="relative h-[500px] lg:h-[600px] w-full flex items-center justify-center order-2 lg:order-1">
 
-          {/* Background Glows for depth */}
-          <motion.div
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00a884]/30 rounded-full blur-[60px]"
-          />
-          <motion.div
-            animate={{ scale: [1, 1.5, 1], opacity: [0.2, 0.4, 0.2] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-[70px]"
-          />
+          {/* Orbital Rings Background - Premium Upgrade */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Inner dashed ring */}
+            <div className="w-[350px] h-[350px] rounded-full border-[1.5px] border-cyan-400/20 border-dashed absolute animate-[spin_40s_linear_infinite]"></div>
+            {/* Middle solid ring */}
+            <div className="w-[500px] h-[500px] rounded-full border border-blue-500/10 absolute"></div>
+            {/* Outer dashed ring */}
+            <div className="w-[700px] h-[700px] rounded-full border border-purple-400/15 border-dashed absolute animate-[spin_60s_linear_infinite_reverse]"></div>
 
-          {/* Central Main Card - Analytics & Progress */}
+            {/* Glowing Orbiting Orbs */}
+            <motion.div animate={{ rotate: 360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} className="absolute w-[500px] h-[500px]">
+              <div className="absolute -top-2 left-1/2 w-4 h-4 bg-purple-400 rounded-full shadow-[0_0_20px_8px_rgba(168,85,247,0.4)]"></div>
+            </motion.div>
+            <motion.div animate={{ rotate: -360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute w-[700px] h-[700px]">
+              <div className="absolute top-[20%] right-[-10px] w-5 h-5 bg-cyan-400 rounded-full shadow-[0_0_20px_8px_rgba(34,211,238,0.4)]"></div>
+              <div className="absolute bottom-10 left-20 w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_15px_5px_rgba(59,130,246,0.5)]"></div>
+            </motion.div>
+          </div>
+
+          {/* Premium Floating Badges */}
           <motion.div
-            initial={{ opacity: 0, y: 50, rotateX: 10 }}
-            animate={{ opacity: 1, y: 0, rotateX: 0 }}
-            transition={{ duration: 1, type: "spring", bounce: 0.4 }}
-            className="absolute z-20 w-[85%] max-w-[400px] bg-white/80 backdrop-blur-2xl rounded-3xl p-6 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] border border-white"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -top-[5%] left-[5%] lg:left-[10%] z-30 bg-white/5 backdrop-blur-xl border border-white/20 text-slate-800 px-6 py-3 rounded-2xl flex items-center shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
           >
-             <div className="flex justify-between items-center mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#00a884] to-[#008f6f] rounded-2xl flex items-center justify-center shadow-lg shadow-[#00a884]/30">
-                    <Activity size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-[#0b2b46] text-lg">Overall Progress</h3>
-                    <p className="text-xs text-gray-500 font-medium">Batch 2024</p>
-                  </div>
-                </div>
-                <div className="bg-green-100 px-3 py-1 rounded-full text-green-600 text-xs font-bold flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-1.5 animate-pulse"></span>
-                  Live
-                </div>
-             </div>
-
-             {/* Circular Progress Rings (Mock SVG) */}
-             <div className="flex justify-around items-center py-4">
-                <div className="relative w-20 h-20 flex items-center justify-center">
-                   <svg className="absolute inset-0 w-full h-full -rotate-90">
-                     <circle cx="40" cy="40" r="36" fill="none" stroke="#f1f5f9" strokeWidth="6" />
-                     <motion.circle cx="40" cy="40" r="36" fill="none" stroke="#00a884" strokeWidth="6" strokeDasharray="226" initial={{ strokeDashoffset: 226 }} animate={{ strokeDashoffset: 45 }} transition={{ duration: 2, delay: 0.5 }} strokeLinecap="round" />
-                   </svg>
-                   <span className="font-bold text-[#0b2b46]">80%</span>
-                </div>
-                <div className="relative w-20 h-20 flex items-center justify-center">
-                   <svg className="absolute inset-0 w-full h-full -rotate-90">
-                     <circle cx="40" cy="40" r="36" fill="none" stroke="#f1f5f9" strokeWidth="6" />
-                     <motion.circle cx="40" cy="40" r="36" fill="none" stroke="#3b82f6" strokeWidth="6" strokeDasharray="226" initial={{ strokeDashoffset: 226 }} animate={{ strokeDashoffset: 20 }} transition={{ duration: 2, delay: 0.7 }} strokeLinecap="round" />
-                   </svg>
-                   <span className="font-bold text-[#0b2b46]">92%</span>
-                </div>
-             </div>
-             
-             <div className="flex justify-around text-xs text-gray-500 font-medium mt-2">
-               <span>Coursework</span>
-               <span>Placements</span>
-             </div>
-          </motion.div>
-
-          {/* Floating Top Right Card - Tech Stack / Code */}
-          <motion.div
-            initial={{ opacity: 0, x: 50, y: -50 }}
-            animate={{ opacity: 1, x: [0, -10, 0], y: [0, 10, 0] }}
-            transition={{ opacity: { duration: 0.8, delay: 0.2 }, y: { duration: 6, repeat: Infinity, ease: "easeInOut" }, x: { duration: 7, repeat: Infinity, ease: "easeInOut" } }}
-            className="absolute top-[10%] right-[0%] lg:-right-[5%] z-10 bg-[#0f172a] rounded-2xl p-5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-white/10 w-[240px]"
-          >
-            <div className="flex items-center space-x-2 mb-4">
-              <Code size={16} className="text-blue-400" />
-              <span className="text-gray-300 text-xs font-mono tracking-wider">Next.js Engine</span>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mr-4 shadow-lg shadow-purple-500/30">
+              <BrainCircuit size={20} className="text-white" />
             </div>
-            <div className="space-y-3">
-              <div className="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
-                <motion.div initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 2, repeat: Infinity }} className="h-full bg-blue-400"></motion.div>
-              </div>
-              <div className="w-4/5 bg-white/10 rounded-full h-1.5 overflow-hidden">
-                <motion.div initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }} className="h-full bg-purple-400"></motion.div>
-              </div>
-              <div className="w-3/5 bg-white/10 rounded-full h-1.5 overflow-hidden">
-                <motion.div initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 1.5, repeat: Infinity, delay: 1 }} className="h-full bg-green-400"></motion.div>
-              </div>
-            </div>
-            <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
-              <span className="text-[10px] text-gray-500 font-mono">Status</span>
-              <span className="text-[10px] text-green-400 font-mono">Compiling...</span>
+            <div>
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Engine</div>
+              <div className="text-lg font-black text-slate-800">AI Powered</div>
             </div>
           </motion.div>
 
-          {/* Floating Bottom Left Card - Mentors */}
           <motion.div
-            initial={{ opacity: 0, x: -50, y: 50 }}
-            animate={{ opacity: 1, x: [0, 10, 0], y: [0, -10, 0] }}
-            transition={{ opacity: { duration: 0.8, delay: 0.4 }, y: { duration: 7, repeat: Infinity, ease: "easeInOut" }, x: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
-            className="absolute bottom-[10%] left-[0%] lg:-left-[5%] z-30 bg-white/95 backdrop-blur-xl rounded-2xl p-5 shadow-[0_30px_60px_-15px_rgba(0,168,132,0.15)] border border-gray-100 w-[220px]"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute top-[30%] -left-[10%] lg:-left-[15%] z-30 bg-[#0f172a]/80 backdrop-blur-xl border border-cyan-500/30 text-white px-5 py-3 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.2)] flex items-center"
           >
-            <div className="flex items-center space-x-3 mb-4">
-               <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                 <Users size={18} className="text-orange-500" />
-               </div>
-               <div>
-                 <p className="text-[#0b2b46] font-bold text-sm">Expert Mentors</p>
-                 <p className="text-gray-500 text-[10px]">1-on-1 Guidance</p>
-               </div>
-            </div>
-            <div className="flex items-center justify-between bg-slate-50 p-2 rounded-lg">
-               <div className="flex -space-x-2">
-                 {["68", "32", "12"].map((num, i) => (
-                    <img key={i} src={`https://i.pravatar.cc/150?img=${num}`} className="w-6 h-6 rounded-full border-2 border-white shadow-sm" alt="mentor"/>
-                 ))}
-               </div>
-               <span className="text-[10px] font-bold text-orange-500 bg-orange-100 px-2 py-0.5 rounded-full">Available</span>
-            </div>
+            <Braces size={22} className="text-cyan-400 mr-3" />
+            <span className="font-mono font-bold text-base tracking-wide">Clean Code</span>
           </motion.div>
 
-          {/* Small Floating Elements */}
           <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-1/4 right-1/4 z-0 w-16 h-16 border-2 border-dashed border-[#00a884]/30 rounded-full"
-          />
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute -bottom-[5%] right-[10%] lg:right-[15%] z-30 bg-white/10 backdrop-blur-xl border border-white/20 text-slate-800 px-6 py-2.5 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex items-center space-x-3"
+          >
+            <div className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </div>
+            <span className="font-bold text-sm tracking-wider">Live Sync Active</span>
+          </motion.div>
+
+          {/* 3D Animated Robot Mascot from GLB */}
+          <div className="absolute bottom-[2%] left-[-15%] lg:-left-[25%] z-40 w-64 h-64 lg:w-[400px] lg:h-[400px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)]">
+            <RobotCanvas />
+          </div>
+
+          {/* Main Dark Glass Video Card */}
           <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            className="absolute bottom-1/4 left-1/4 z-0 w-12 h-12 border-2 border-blue-400/30 rounded-lg"
-          />
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="relative z-20 w-[95%] max-w-[550px] aspect-[16/10] bg-gradient-to-br from-[#0f172a] to-[#020617] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-slate-700/50 overflow-hidden flex"
+          >
+            {/* Actual Video Element */}
+            <video
+              ref={videoRef}
+              poster="/video/thumbnail.jpeg"
+              className="w-full h-full object-cover rounded-[24px]"
+              controls={isVideoPlaying}
+              playsInline
+              onPlay={() => setIsVideoPlaying(true)}
+              onPause={() => setIsVideoPlaying(false)}
+            >
+              <source src="/video/us software video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Custom Play Button Overlay */}
+            {!isVideoPlaying && (
+              <div 
+                className="absolute inset-0 flex items-center justify-center bg-[#0f172a]/40 cursor-pointer group rounded-[24px] z-20"
+                onClick={handlePlayVideo}
+              >
+                <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 shadow-[0_0_40px_rgba(34,211,238,0.3)] group-hover:shadow-[0_0_50px_rgba(34,211,238,0.5)]">
+                  <Play size={36} className="text-white ml-2" fill="currentColor" />
+                </div>
+              </div>
+            )}
+
+            {/* Optional: Add a subtle inner shadow or border overlay over the video if desired */}
+            <div className="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/10 pointer-events-none z-10"></div>
+
+          </motion.div>
 
         </div>
 
@@ -234,9 +218,9 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-black text-[#0b2b46] leading-[1.05] tracking-tight">
-            {t.hero.title1} <br />
-            <span className="relative inline-block mt-2">
+          <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#0b2b46] leading-[1.2] tracking-tight">
+            <span className="whitespace-nowrap inline-block">{t.hero.title1}</span> <br />
+            <span className="relative inline-block mt-2 whitespace-nowrap">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00a884] via-[#00c698] to-[#3b82f6]">
                 {t.hero.title2}
               </span>
