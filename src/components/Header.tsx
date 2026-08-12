@@ -1,14 +1,33 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Phone, Mail, Globe, User, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
+const NavItem = ({ href, active, children }: { href: string, active?: boolean, children: React.ReactNode }) => (
+  <Link href={href} className="relative group px-4 py-2 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] active:scale-[0.96]">
+    <div className="absolute inset-0 bg-black/[0.04] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+    <span className={`relative z-10 font-semibold text-[15px] transition-colors duration-300 ${active ? "text-[#00a884]" : "text-gray-600 group-hover:text-black"}`}>
+      {children}
+    </span>
+    <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2.5px] rounded-t-full transition-all duration-300 ${active ? "w-3/4 bg-[#00a884] opacity-100 shadow-[0_0_8px_rgba(0,168,132,0.5)]" : "w-0 bg-black/20 opacity-0 group-hover:w-1/2 group-hover:opacity-100"}`} />
+  </Link>
+);
+
 export default function Header() {
   const { t, language, toggleLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -78,8 +97,8 @@ export default function Header() {
       </div>
 
       {/* Main Nav (Sticky & Premium) */}
-      <header className="w-full bg-white/85 backdrop-blur-xl sticky top-0 z-50 shadow-sm border-b border-gray-100 transition-all duration-300">
-        <div className="max-w-7xl mx-auto py-3.5 px-4 sm:px-8 flex justify-between items-center">
+      <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/85 backdrop-blur-xl shadow-sm border-b border-gray-200/50 py-2.5" : "bg-white/50 backdrop-blur-md border-b border-transparent py-4"}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center transition-all duration-300">
           {/* Logo */}
           <div className="flex items-center cursor-pointer">
             {/* Mobile Logo */}
@@ -91,34 +110,32 @@ export default function Header() {
           {/* Right Side: Nav & CTA */}
           <div className="flex items-center space-x-4 lg:space-x-10">
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex space-x-8 text-[15px] font-bold text-gray-700">
-              <Link href="/" className="text-[#00a884] border-b-2 border-[#00a884] pb-1">
-                {t.header.home}
-              </Link>
-
-              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.services}</Link>
-              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.solutions}</Link>
-              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.company}</Link>
-              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.portfolio}</Link>
-              <Link href="/canvas" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">Canvas</Link>
-              <Link href="#" className="hover:text-[#00a884] hover:-translate-y-0.5 pb-1 transition-all">{t.header.contact}</Link>
+            <nav className="hidden lg:flex space-x-1 items-center">
+              <NavItem href="/" active>{t.header.home}</NavItem>
+              <NavItem href="#">{t.header.services}</NavItem>
+              <NavItem href="#">{t.header.solutions}</NavItem>
+              <NavItem href="#">{t.header.company}</NavItem>
+              <NavItem href="#">{t.header.portfolio}</NavItem>
+              <NavItem href="/canvas">Canvas</NavItem>
+              <NavItem href="#">{t.header.contact}</NavItem>
             </nav>
 
             {/* CTA Button (Premium Style) */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="hidden md:block bg-gradient-to-r from-[#00a884] to-[#008f6f] text-white px-8 py-2.5 rounded-full font-bold text-sm shadow-[0_5px_15px_rgba(0,168,132,0.3)] hover:shadow-[0_8px_25px_rgba(0,168,132,0.4)] transition-all"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              className="hidden md:block bg-[#00a884] text-white px-7 py-2.5 rounded-full font-bold text-sm shadow-[0_4px_15px_rgba(0,168,132,0.25)] hover:shadow-[0_8px_25px_rgba(0,168,132,0.4)] hover:bg-[#009b7a] transition-all duration-300"
             >
               {t.header.getQuote}
             </motion.button>
             {/* Mobile Menu Button */}
-            <button 
-              className="lg:hidden text-[#0b2b46] p-2 focus:outline-none"
+            <motion.button 
+              whileTap={{ scale: 0.9 }}
+              className="lg:hidden text-[#0b2b46] p-2 focus:outline-none bg-black/5 hover:bg-black/10 rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
           </div>
         </div>
 
