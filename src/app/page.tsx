@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import AboutUsSection from "@/components/AboutUsSection";
-import TechStackSection from "@/components/TechStackSection";
-import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const AboutUsSection = dynamic(() => import("@/components/AboutUsSection"));
+const ServicesSection = dynamic(() => import("@/components/ServicesSection"));
+const TechStackSection = dynamic(() => import("@/components/TechStackSection"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (

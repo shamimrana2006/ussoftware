@@ -4,7 +4,9 @@ import React, { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, ShieldCheck, Globe2, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
-import RobotCanvas from "./RobotCanvas";
+import dynamic from "next/dynamic";
+
+const RobotCanvas = dynamic(() => import("./RobotCanvas"), { ssr: false });
 
 const Typewriter = ({ words }: { words: string[] }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -182,6 +184,7 @@ export default function HeroSection() {
               className="w-full h-full object-cover rounded-[24px]"
               controls={isVideoPlaying}
               playsInline
+              preload="metadata"
               onPlay={() => setIsVideoPlaying(true)}
               onPause={() => setIsVideoPlaying(false)}
             >
