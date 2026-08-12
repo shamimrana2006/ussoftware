@@ -9,20 +9,21 @@
     "getQuote": "Get a Quote"
   },
   "hero": {
-    "badge": "🚀 Innovating the Future",
-    "title1": "Your Complete",
-    "title2": "IT Partner",
-    "subtitle": "Delivering smart, scalable, and secure IT solutions to drive your business forward in the digital era.",
-    "ourServices": "Our Services",
-    "contactUs": "Contact Us",
+    "badge": "🚀 Master Your Future",
+    "title1": "Premium IT & Skill",
+    "title2": "Training Center",
+    "subtitle": "Empowering the next generation of tech professionals with industry-leading courses and hands-on training.",
+    "ourServices": "Explore Courses",
+    "contactUs": "Join Now",
     "trustedBy": "Trusted by",
     "clients": "100+ Clients",
     "acrossGlobe": "Across the Globe",
     "typingWords": [
-      "Deep Learning",
       "Web Development",
-      "Cloud Solutions",
-      "AI Automation"
+      "App Development",
+      "Graphic Design",
+      "Digital Marketing",
+      "Cyber Security"
     ],
     "stats": {
       "courses": {
