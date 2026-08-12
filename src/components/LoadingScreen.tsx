@@ -108,13 +108,10 @@ export default function LoadingScreen() {
               className="mt-8 flex flex-col items-center justify-center space-y-4"
             >
               <div className="flex items-center justify-center bg-white/5 backdrop-blur-md px-6 py-2 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,168,132,0.15)]">
-                <Image 
+                <img 
                   src="/logo/logo.png" 
                   alt="US Software Logo" 
-                  width={140} 
-                  height={45} 
-                  className="object-contain"
-                  priority
+                  className="w-[140px] h-[45px] object-contain"
                 />
               </div>
               <div className="flex items-center space-x-2">
