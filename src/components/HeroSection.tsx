@@ -227,22 +227,22 @@ export default function HeroSection() {
             {/* Deep Shadow Base removed as requested */}
 
             {/* STAIR 1: The Base Thick Foundation */}
-            {Array.from({ length: 10 }).map((_, i) => (
-              <div key={`base-${i}`} className={`absolute inset-[0%] rounded-full bg-[#020617] border border-[#0f172a] ${i === 9 ? 'bg-gradient-to-tr from-[#020617] to-[#0f172a] shadow-[inset_0_0_50px_rgba(0,0,0,0.9)] border-[#1e293b]' : ''}`} style={{ transform: `translateZ(${-100 + (i * 2)}px)` }}></div>
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={`base-${i}`} className={`absolute inset-[0%] rounded-full bg-[#020617] border border-[#0f172a] ${i === 3 ? 'bg-gradient-to-tr from-[#020617] to-[#0f172a] shadow-[inset_0_0_50px_rgba(0,0,0,0.9)] border-[#1e293b]' : ''}`} style={{ transform: `translateZ(${-100 + (i * 6)}px)` }}></div>
             ))}
 
             {/* STAIR 2: Cyan Neon Glowing Step */}
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={`cyan-${i}`} className={`absolute inset-[3%] rounded-full bg-[#083344] border border-[#164e63] ${i === 7 ? 'bg-[#082f49] shadow-[0_0_50px_#06b6d4,inset_0_0_40px_#22d3ee] border-[#22d3ee] border-[2px]' : ''}`} style={{ transform: `translateZ(${-80 + (i * 2)}px)` }}></div>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div key={`cyan-${i}`} className={`absolute inset-[3%] rounded-full bg-[#083344] border border-[#164e63] ${i === 2 ? 'bg-[#082f49] shadow-[0_0_50px_#06b6d4,inset_0_0_40px_#22d3ee] border-[#22d3ee] border-[2px]' : ''}`} style={{ transform: `translateZ(${-76 + (i * 6)}px)` }}></div>
             ))}
 
             {/* INTERLOCKING ROTATING STAIRS */}
 
             {/* STAIR 3: Middle Dark Platform (Slow Clockwise) */}
-            <motion.div animate={{ rotateZ: [0, 360] }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d">
-              {Array.from({ length: 10 }).map((_, i) => (
-                <div key={`mid-${i}`} className={`absolute inset-[6%] rounded-full bg-[#0f172a] border border-[#1e293b] ${i === 9 ? 'bg-gradient-to-br from-[#1e293b] to-[#0f172a] border-[#334155] shadow-[inset_0_0_40px_rgba(0,0,0,0.7)]' : ''}`} style={{ transform: `translateZ(${-65 + (i * 2)}px)` }}>
-                  {i === 9 && (
+            <motion.div animate={{ rotateZ: [0, 360] }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d will-change-transform">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={`mid-${i}`} className={`absolute inset-[6%] rounded-full bg-[#0f172a] border border-[#1e293b] ${i === 3 ? 'bg-gradient-to-br from-[#1e293b] to-[#0f172a] border-[#334155] shadow-[inset_0_0_40px_rgba(0,0,0,0.7)]' : ''}`} style={{ transform: `translateZ(${-58 + (i * 5)}px)` }}>
+                  {i === 3 && (
                     <>
                       <div className="absolute top-[-2px] left-1/4 w-[60px] h-[4px] bg-[#06b6d4]/80 shadow-[0_0_15px_#06b6d4] rotate-[-20deg]"></div>
                       <div className="absolute bottom-[-2px] right-1/4 w-[60px] h-[4px] bg-[#06b6d4]/80 shadow-[0_0_15px_#06b6d4] rotate-[-20deg]"></div>
@@ -253,10 +253,10 @@ export default function HeroSection() {
             </motion.div>
 
             {/* STAIR 4: Purple Neon Step with Visible Nodes (Medium Anti-Clockwise) */}
-            <motion.div animate={{ rotateZ: [0, -360] }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div key={`purple-${i}`} className={`absolute inset-[9%] rounded-full bg-[#3b0764] border border-[#581c87] ${i === 7 ? 'bg-[#2e1065] shadow-[0_0_50px_#a855f7,inset_0_0_40px_#c084fc] border-[#c084fc] border-[2px]' : ''}`} style={{ transform: `translateZ(${-45 + (i * 2)}px)` }}>
-                  {i === 7 && (
+            <motion.div animate={{ rotateZ: [0, -360] }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d will-change-transform">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div key={`purple-${i}`} className={`absolute inset-[9%] rounded-full bg-[#3b0764] border border-[#581c87] ${i === 2 ? 'bg-[#2e1065] shadow-[0_0_50px_#a855f7,inset_0_0_40px_#c084fc] border-[#c084fc] border-[2px]' : ''}`} style={{ transform: `translateZ(${-38 + (i * 5)}px)` }}>
+                  {i === 2 && (
                     <>
                       <div className="absolute top-[-4px] left-1/2 w-[40px] h-[8px] bg-white rounded-full shadow-[0_0_20px_#ffffff,0_0_40px_#c084fc] -translate-x-1/2"></div>
                       <div className="absolute bottom-[-4px] left-1/2 w-[40px] h-[8px] bg-white rounded-full shadow-[0_0_20px_#ffffff,0_0_40px_#c084fc] -translate-x-1/2"></div>
@@ -269,10 +269,10 @@ export default function HeroSection() {
             </motion.div>
 
             {/* STAIR 5: Top Metallic Premium Surface (Fast Clockwise) */}
-            <motion.div animate={{ rotateZ: [0, 360] }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div key={`top-${i}`} className={`absolute inset-[12%] rounded-full bg-[#94a3b8] border border-[#64748b] ${i === 7 ? 'bg-gradient-to-br from-[#ffffff] via-[#f1f5f9] to-[#e2e8f0] shadow-[inset_0_0_50px_rgba(255,255,255,1),0_0_50px_rgba(15,23,42,0.5)] border-2 border-[#cbd5e1]' : ''}`} style={{ transform: `translateZ(${-30 + (i * 2)}px)` }}>
-                  {i === 7 && (
+            <motion.div animate={{ rotateZ: [0, 360] }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d will-change-transform">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div key={`top-${i}`} className={`absolute inset-[12%] rounded-full bg-[#94a3b8] border border-[#64748b] ${i === 2 ? 'bg-gradient-to-br from-[#ffffff] via-[#f1f5f9] to-[#e2e8f0] shadow-[inset_0_0_50px_rgba(255,255,255,1),0_0_50px_rgba(15,23,42,0.5)] border-2 border-[#cbd5e1]' : ''}`} style={{ transform: `translateZ(${-23 + (i * 5)}px)` }}>
+                  {i === 2 && (
                     <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full">
                       {/* Floor Grooves */}
                       <div className="absolute w-[85%] h-[85%] rounded-full border-[2px] border-dashed border-[#94a3b8]/50 shadow-[inset_0_0_20px_rgba(148,163,184,0.1)]"></div>
@@ -285,10 +285,10 @@ export default function HeroSection() {
             </motion.div>
 
             {/* STAIR 6: Giant Glassy Top Pillar (Very Fast Anti-Clockwise) */}
-            <motion.div animate={{ rotateZ: [0, -360] }} transition={{ duration: 10, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d">
-              {Array.from({ length: 20 }).map((_, i) => (
-                <div key={`pillar-${i}`} className={`absolute inset-[15%] rounded-full ${i === 19 ? 'bg-gradient-to-br from-[#cffafe]/90 via-[#06b6d4]/40 to-transparent backdrop-blur-2xl shadow-[inset_0_0_40px_rgba(34,211,238,0.8),0_15px_40px_rgba(6,182,212,0.5)] border-2 border-[#67e8f9]' : 'bg-[#06b6d4]/[0.05] border border-[#22d3ee]/30'}`} style={{ transform: `translateZ(${-15 + (i * 2)}px)` }}>
-                  {i === 19 && (
+            <motion.div animate={{ rotateZ: [0, -360] }} transition={{ duration: 10, repeat: Infinity, ease: "linear" }} className="absolute inset-0 transform-style-3d will-change-transform">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={`pillar-${i}`} className={`absolute inset-[15%] rounded-full ${i === 4 ? 'bg-gradient-to-br from-[#cffafe]/90 via-[#06b6d4]/40 to-transparent backdrop-blur-md shadow-[inset_0_0_40px_rgba(34,211,238,0.8),0_15px_40px_rgba(6,182,212,0.5)] border-2 border-[#67e8f9]' : 'bg-[#06b6d4]/[0.05] border border-[#22d3ee]/30'}`} style={{ transform: `translateZ(${-8 + (i * 8)}px)` }}>
+                  {i === 4 && (
                     <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full">
                       {/* Center Hologram Core Area Moved to Top */}
                       <div className="absolute w-[60%] h-[60%] rounded-full bg-gradient-to-b from-[#f8fafc]/90 to-[#f1f5f9]/90 border-[4px] border-dashed border-[#a855f7] shadow-[0_15px_40px_rgba(168,85,247,0.4)] flex items-center justify-center">
@@ -316,7 +316,7 @@ export default function HeroSection() {
           {/* Main 3D Container tracking mouse */}
           <motion.div
             style={{ rotateX, rotateY, scale: baseScale }}
-            className="absolute w-full h-full flex items-center justify-center transform-style-3d"
+            className="absolute w-full h-full flex items-center justify-center transform-style-3d will-change-transform"
           >
             {/* Central Moderately Extruded Logo Card */}
             <motion.div
@@ -340,13 +340,13 @@ export default function HeroSection() {
 
               {/* 3D Extruded Cropped Logo */}
               <div className="absolute inset-0 flex items-center justify-center transform-style-3d pointer-events-none">
-                {Array.from({ length: 15 }).map((_, i) => (
+                {Array.from({ length: 4 }).map((_, i) => (
                   <img
                     key={`logo-ext-${i}`}
                     src="/logo/us software logo.png"
                     alt="US Logo"
-                    className={`absolute w-[130px] h-[130px] object-cover object-left ${i === 14 ? 'drop-shadow-[0_15px_20px_rgba(0,168,132,0.6)]' : 'brightness-0 invert opacity-[0.4] blur-[0.5px]'}`}
-                    style={{ transform: `translateZ(${8 + i * 2}px)` }}
+                    className={`absolute w-[130px] h-[130px] object-cover object-left ${i === 3 ? 'drop-shadow-[0_15px_20px_rgba(0,168,132,0.6)]' : 'brightness-0 invert opacity-[0.4] blur-[0.5px]'}`}
+                    style={{ transform: `translateZ(${8 + i * 8}px)` }}
                   />
                 ))}
               </div>
@@ -484,10 +484,10 @@ export default function HeroSection() {
               className="absolute left-[0%] top-[20%] z-40 transform-style-3d translate-z-[60px]"
             >
               {/* Elegant Thick Glass Block */}
-              <div className="absolute inset-0 bg-[#00a884]/10 backdrop-blur-xl rounded-2xl border border-[#00a884]/20 translate-z-[-16px] shadow-xl"></div>
-              <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/50 translate-z-[-8px]"></div>
+              <div className="absolute inset-0 bg-[#00a884]/20 rounded-2xl border border-[#00a884]/20 translate-z-[-16px] shadow-xl"></div>
+              <div className="absolute inset-0 bg-white/60 rounded-2xl border border-white/50 translate-z-[-8px]"></div>
 
-              <div className="relative bg-white/90 backdrop-blur-xl border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
+              <div className="relative bg-white/90 backdrop-blur-md border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00a884] to-[#008f6f] flex items-center justify-center shadow-inner">
                   <Globe2 size={24} className="text-white" />
                 </div>
@@ -501,10 +501,10 @@ export default function HeroSection() {
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute left-[5%] top-[70%] z-30 transform-style-3d translate-z-[40px]"
             >
-              <div className="absolute inset-0 bg-blue-500/10 backdrop-blur-xl rounded-2xl border border-blue-500/20 translate-z-[-16px] shadow-xl"></div>
-              <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/50 translate-z-[-8px]"></div>
+              <div className="absolute inset-0 bg-blue-500/20 rounded-2xl border border-blue-500/20 translate-z-[-16px] shadow-xl"></div>
+              <div className="absolute inset-0 bg-white/60 rounded-2xl border border-white/50 translate-z-[-8px]"></div>
 
-              <div className="relative bg-white/90 backdrop-blur-xl border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
+              <div className="relative bg-white/90 backdrop-blur-md border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-inner">
                   <Cloud size={24} className="text-white" />
                 </div>
@@ -518,10 +518,10 @@ export default function HeroSection() {
               transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
               className="absolute right-[0%] top-[15%] z-30 transform-style-3d translate-z-[80px]"
             >
-              <div className="absolute inset-0 bg-red-500/10 backdrop-blur-xl rounded-2xl border border-red-500/20 translate-z-[-16px] shadow-xl"></div>
-              <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/50 translate-z-[-8px]"></div>
+              <div className="absolute inset-0 bg-red-500/20 rounded-2xl border border-red-500/20 translate-z-[-16px] shadow-xl"></div>
+              <div className="absolute inset-0 bg-white/60 rounded-2xl border border-white/50 translate-z-[-8px]"></div>
 
-              <div className="relative bg-white/90 backdrop-blur-xl border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
+              <div className="relative bg-white/90 backdrop-blur-md border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-inner">
                   <ShieldCheck size={24} className="text-white" />
                 </div>
@@ -535,10 +535,10 @@ export default function HeroSection() {
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute right-[-10%] top-[45%] z-50 transform-style-3d translate-z-[120px]"
             >
-              <div className="absolute inset-0 bg-indigo-500/20 backdrop-blur-xl rounded-2xl border border-indigo-500/30 translate-z-[-20px] shadow-[0_20px_40px_rgba(79,70,229,0.3)]"></div>
-              <div className="absolute inset-0 bg-indigo-900/50 backdrop-blur-xl rounded-2xl border border-indigo-700/40 translate-z-[-10px]"></div>
+              <div className="absolute inset-0 bg-indigo-500/30 rounded-2xl border border-indigo-500/30 translate-z-[-20px] shadow-[0_20px_40px_rgba(79,70,229,0.3)]"></div>
+              <div className="absolute inset-0 bg-indigo-900/60 rounded-2xl border border-indigo-700/40 translate-z-[-10px]"></div>
 
-              <div className="relative bg-indigo-950/90 backdrop-blur-2xl border border-indigo-400/50 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-2xl p-3 pr-6 flex items-center space-x-4 overflow-hidden group">
+              <div className="relative bg-indigo-950/90 backdrop-blur-md border border-indigo-400/50 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-2xl p-3 pr-6 flex items-center space-x-4 overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.6)]">
                   <BrainCircuit size={24} className="text-white animate-pulse" />
@@ -553,10 +553,10 @@ export default function HeroSection() {
               transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
               className="absolute right-[5%] top-[70%] z-20 transform-style-3d translate-z-[50px]"
             >
-              <div className="absolute inset-0 bg-orange-500/10 backdrop-blur-xl rounded-2xl border border-orange-500/20 translate-z-[-16px] shadow-xl"></div>
-              <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/50 translate-z-[-8px]"></div>
+              <div className="absolute inset-0 bg-orange-500/20 rounded-2xl border border-orange-500/20 translate-z-[-16px] shadow-xl"></div>
+              <div className="absolute inset-0 bg-white/60 rounded-2xl border border-white/50 translate-z-[-8px]"></div>
 
-              <div className="relative bg-white/90 backdrop-blur-xl border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
+              <div className="relative bg-white/90 backdrop-blur-md border border-white/80 shadow-md rounded-2xl p-3 pr-6 flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center shadow-inner">
                   <Megaphone size={24} className="text-white" />
                 </div>
