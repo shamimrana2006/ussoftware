@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import SectionDivider from "@/components/SectionDivider";
 import dynamic from "next/dynamic";
 
 const AboutUsSection = dynamic(() => import("@/components/AboutUsSection"));
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Header />
       <HeroSection />
+      <SectionDivider />
       <AboutUsSection />
       <ServicesSection />
       <TechStackSection />

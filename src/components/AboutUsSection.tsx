@@ -36,7 +36,7 @@ export default function AboutUsSection() {
   };
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section id="about" className="pt-16 pb-24 bg-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-50 to-transparent -z-10"></div>
       

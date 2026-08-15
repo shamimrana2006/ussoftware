@@ -70,5 +70,23 @@
       "title": "IT Consulting",
       "desc": "Expert guidance to optimize your IT infrastructure and business strategy."
     }
+  },
+  "featuresBar": {
+    "feature1": {
+      "title": "Real-World Projects",
+      "desc": "Build production-grade applications"
+    },
+    "feature2": {
+      "title": "Senior Mentorship",
+      "desc": "1-on-1 guidance from tech leaders"
+    },
+    "feature3": {
+      "title": "Global Certification",
+      "desc": "Industry-recognized credentials"
+    },
+    "feature4": {
+      "title": "Career Placement",
+      "desc": "Direct access to 120+ tech partners"
+    }
   }
 }
