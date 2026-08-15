@@ -411,6 +411,12 @@ export default function HeroSection() {
         </motion.div>
 
       </div>
+
+      {/* Premium Multi-Layer Glowing Bottom Border */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-slate-300 to-transparent pointer-events-none z-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00a884] via-cyan-400 to-transparent opacity-80" />
+        <div className="absolute -top-[2px] left-1/4 right-1/4 h-[4px] bg-gradient-to-r from-transparent via-[#00a884] via-cyan-400 to-transparent blur-[3px] opacity-60" />
+      </div>
     </section>
   );
 }
