@@ -1,12 +1,17 @@
 {
   "header": {
+    "category": "Category",
     "home": "Home",
+    "courses": "Courses",
     "services": "Services",
-    "solutions": "Solutions",
-    "company": "Company",
-    "portfolio": "Portfolio",
+    "projects": "Projects",
+    "mentors": "Mentors",
+    "about": "About",
     "contact": "Contact",
-    "getQuote": "Get a Quote"
+    "certification": "Certification",
+    "canvas": "Canvas",
+    "getCourse": "Get Course",
+    "getQuote": "Get Course"
   },
   "hero": {
     "badge": "🚀 Step Into The Industry",

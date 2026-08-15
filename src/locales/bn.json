@@ -1,12 +1,17 @@
 {
   "header": {
+    "category": "ক্যাটাগরি",
     "home": "হোম",
+    "courses": "কোর্সসমূহ",
     "services": "সার্ভিস সমূহ",
-    "solutions": "সমাধান",
-    "company": "কোম্পানি",
-    "portfolio": "পোর্টফোলিও",
+    "projects": "প্রজেক্টসমূহ",
+    "mentors": "মেন্টরস",
+    "about": "আমাদের সম্পর্কে",
     "contact": "যোগাযোগ",
-    "getQuote": "উদ্ধৃতি পান"
+    "certification": "সার্টিফিকেশন",
+    "canvas": "ক্যানভাস",
+    "getCourse": "কোর্স নিন",
+    "getQuote": "কোর্স নিন"
   },
   "hero": {
     "badge": "🚀 ইন্ডাস্ট্রিতে প্রবেশ করুন",
