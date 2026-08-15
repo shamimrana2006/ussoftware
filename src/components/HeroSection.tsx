@@ -377,35 +377,66 @@ export default function HeroSection() {
             </motion.button>
           </motion.div>
 
-          {/* Stats Bar */}
-          <motion.div variants={itemVariants} className="pt-8 border-t border-gray-200 mt-4 flex flex-wrap gap-x-10 gap-y-4">
-            <div className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <BookOpen size={18} className="text-green-600" />
+          {/* Stats Bar with Stable Fixed Sizing and Hover Glow Expansion */}
+          <motion.div variants={itemVariants} className="pt-8 border-t border-gray-200/80 mt-4 flex flex-wrap gap-3 sm:gap-4">
+            
+            {/* Stat 1: Courses */}
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="group flex items-center space-x-3.5 bg-white/80 hover:bg-white backdrop-blur-xl p-3 px-4 rounded-2xl border border-slate-200/80 hover:border-emerald-500 hover:shadow-[0_12px_28px_rgba(16,185,129,0.18)] transition-all duration-150 cursor-pointer min-w-[150px] sm:min-w-[160px]"
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-150 flex-shrink-0">
+                <BookOpen size={18} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-[#0b2b46] leading-none"><Counter end={43} suffix="+" /></h3>
-                <p className="text-[12px] text-gray-500 font-medium uppercase tracking-wider">{t.hero.stats.courses.title}</p>
+                <h3 className="text-2xl font-black text-[#0b2b46] group-hover:text-emerald-600 leading-none tabular-nums font-mono transition-colors">
+                  <Counter end={43} suffix="+" />
+                </h3>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mt-1 whitespace-nowrap">
+                  {t.hero.stats.courses.title}
+                </p>
               </div>
-            </div>
-            <div className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Users size={18} className="text-orange-500" />
+            </motion.div>
+
+            {/* Stat 2: Students */}
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="group flex items-center space-x-3.5 bg-white/80 hover:bg-white backdrop-blur-xl p-3 px-4 rounded-2xl border border-slate-200/80 hover:border-orange-500 hover:shadow-[0_12px_28px_rgba(249,115,22,0.18)] transition-all duration-150 cursor-pointer min-w-[165px] sm:min-w-[175px]"
+            >
+              <div className="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-150 flex-shrink-0">
+                <Users size={18} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-[#0b2b46] leading-none"><Counter end={4700} suffix="+" /></h3>
-                <p className="text-[12px] text-gray-500 font-medium uppercase tracking-wider">{t.hero.stats.students.title}</p>
+                <h3 className="text-2xl font-black text-[#0b2b46] group-hover:text-orange-500 leading-none tabular-nums font-mono transition-colors">
+                  <Counter end={4700} suffix="+" />
+                </h3>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mt-1 whitespace-nowrap">
+                  {t.hero.stats.students.title}
+                </p>
               </div>
-            </div>
-            <div className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <LineChart size={18} className="text-blue-500" />
+            </motion.div>
+
+            {/* Stat 3: Placement Rate */}
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="group flex items-center space-x-3.5 bg-white/80 hover:bg-white backdrop-blur-xl p-3 px-4 rounded-2xl border border-slate-200/80 hover:border-blue-500 hover:shadow-[0_12px_28px_rgba(59,130,246,0.18)] transition-all duration-150 cursor-pointer min-w-[165px] sm:min-w-[175px]"
+            >
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-150 flex-shrink-0">
+                <LineChart size={18} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-[#0b2b46] leading-none"><Counter end={70} suffix="%" /></h3>
-                <p className="text-[12px] text-gray-500 font-medium uppercase tracking-wider">Placement Rate</p>
+                <h3 className="text-2xl font-black text-[#0b2b46] group-hover:text-blue-600 leading-none tabular-nums font-mono transition-colors">
+                  <Counter end={70} suffix="%" />
+                </h3>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mt-1 whitespace-nowrap">
+                  Placement Rate
+                </p>
               </div>
-            </div>
+            </motion.div>
+
           </motion.div>
 
         </motion.div>
