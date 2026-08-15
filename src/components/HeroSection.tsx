@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ShieldCheck, Globe2, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
+import { ArrowRight, ShieldCheck, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
 import RobotCanvas from "./RobotCanvas";
 
 const Typewriter = ({ words }: { words: string[] }) => {
@@ -212,43 +212,125 @@ export default function HeroSection() {
         {/* RIGHT COMPONENT: Text & CTA (Swapped Order) */}
         <motion.div className="space-y-7 relative z-30 order-1 lg:order-2 lg:pl-10" variants={containerVariants} initial="hidden" animate="visible">
           
-          {/* Animated Background Elements for Right Side */}
+          {/* Animated Background Floating Shapes (Stars, Rounded Squares, Circles, Rings, Diamonds) */}
           <div className="absolute inset-0 pointer-events-none z-[-1] overflow-visible">
-            
-            {/* Spinning Globe Icon */}
+            {/* Center Ambient Glow */}
             <motion.div 
-              animate={{ rotate: 360 }} 
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute top-[5%] right-[-5%] opacity-60 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.12, 0.22, 0.12] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] bg-gradient-to-tr from-[#00a884]/30 via-cyan-400/20 to-blue-500/20 rounded-full blur-[60px]"
+            />
+
+            {/* Floating Shape 1: Sparkle Star (Top Right) */}
+            <motion.div
+              animate={{ y: [0, -18, 0], rotate: [0, 180, 360], scale: [1, 1.15, 1] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-[-8%] right-[5%] drop-shadow-[0_0_12px_rgba(0,168,132,0.4)]"
             >
-              <Globe2 size={120} className="text-blue-500" strokeWidth={1} />
-            </motion.div>
-            
-            {/* Spinning Gemini Logo */}
-            <motion.div 
-              animate={{ rotate: -360 }} 
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              className="absolute bottom-[10%] right-[30%] opacity-80 drop-shadow-[0_0_10px_rgba(66,133,244,0.3)]"
-            >
-              <svg viewBox="0 0 24 24" width="45" height="45">
-                <path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z" fill="none" stroke="url(#gemini_grad)" strokeWidth="1.5"/>
-                <defs>
-                  <linearGradient id="gemini_grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#4285F4"/>
-                    <stop offset="0.33" stopColor="#9B72CB"/>
-                    <stop offset="0.66" stopColor="#D96570"/>
-                    <stop offset="1" stopColor="#F8BC04"/>
-                  </linearGradient>
-                </defs>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#00a884" fillOpacity="0.45" stroke="#00a884" strokeWidth="1.5"/>
               </svg>
             </motion.div>
-            
-            {/* Center Glow */}
-            <motion.div 
-              animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-gradient-to-tr from-[#00a884] to-blue-500 rounded-full blur-[60px]"
-            />
+
+            {/* Floating Shape 2: Rounded Square (Top Right Corner) */}
+            <motion.div
+              animate={{ y: [0, 16, 0], x: [0, -8, 0], rotate: [20, 80, 20] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute top-[10%] right-[-5%] drop-shadow-[0_0_12px_rgba(59,130,246,0.35)]"
+            >
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="6" fill="#3b82f6" fillOpacity="0.25" stroke="#3b82f6" strokeWidth="1.5"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 3: Neon Glowing Ring (Right Center) */}
+            <motion.div
+              animate={{ y: [0, -14, 0], scale: [1, 1.2, 1] }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute top-[36%] right-[-2%] drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]"
+            >
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9.5" stroke="#06b6d4" strokeWidth="2" strokeOpacity="0.55"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 4: Purple Sparkle Star (Center Right) */}
+            <motion.div
+              animate={{ y: [0, 12, 0], rotate: [0, -180, -360], scale: [0.9, 1.25, 0.9] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+              className="absolute top-[52%] right-[18%] drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#a855f7" fillOpacity="0.4" stroke="#a855f7" strokeWidth="1.5"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 5: Glowing Solid Circle Dot (Bottom Right) */}
+            <motion.div
+              animate={{ y: [0, -16, 0], x: [0, 8, 0] }}
+              transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+              className="absolute bottom-[10%] right-[6%] drop-shadow-[0_0_12px_rgba(0,168,132,0.5)]"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8" fill="#00a884" fillOpacity="0.6"/>
+                <circle cx="12" cy="12" r="11" stroke="#00a884" strokeWidth="1" strokeOpacity="0.3"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 6: Rounded Square (Bottom Center) */}
+            <motion.div
+              animate={{ y: [0, 14, 0], rotate: [0, 90, 180], scale: [1, 0.85, 1] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              className="absolute bottom-[-4%] right-[32%] drop-shadow-[0_0_10px_rgba(139,92,246,0.35)]"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="#8b5cf6" fillOpacity="0.25" stroke="#8b5cf6" strokeWidth="1.5"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 7: Tech Plus Marker (Top Middle) */}
+            <motion.div
+              animate={{ y: [0, -10, 0], rotate: [0, 90, 0] }}
+              transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+              className="absolute top-[2%] left-[45%] drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V20M4 12H20" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" strokeOpacity="0.55"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 8: Cyan Diamond (Center Left) */}
+            <motion.div
+              animate={{ y: [0, -14, 0], rotate: [45, 135, 45], scale: [1, 1.15, 1] }}
+              transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+              className="absolute top-[65%] left-[14%] drop-shadow-[0_0_10px_rgba(6,182,212,0.35)]"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="4" transform="rotate(45 12 12)" fill="#06b6d4" fillOpacity="0.25" stroke="#06b6d4" strokeWidth="1.5"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 9: Blue Sparkle Star (Left Middle) */}
+            <motion.div
+              animate={{ y: [0, 16, 0], rotate: [0, 180, 360] }}
+              transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
+              className="absolute top-[38%] left-[-4%] drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#3b82f6" fillOpacity="0.4" stroke="#3b82f6" strokeWidth="1.5"/>
+              </svg>
+            </motion.div>
+
+            {/* Floating Shape 10: Dashed Orbit Ring (Top Left) */}
+            <motion.div
+              animate={{ rotate: 360, scale: [1, 1.08, 1] }}
+              transition={{ rotate: { duration: 18, repeat: Infinity, ease: "linear" }, scale: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+              className="absolute top-[-6%] left-[6%] drop-shadow-[0_0_8px_rgba(0,168,132,0.3)]"
+            >
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#00a884" strokeWidth="1.5" strokeDasharray="4 3" strokeOpacity="0.45"/>
+              </svg>
+            </motion.div>
           </div>
 
           {/* Top Badge */}
