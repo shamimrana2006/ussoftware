@@ -126,13 +126,13 @@ export default function Header() {
 
           {/* Center: Main Navigation Links (Desktop/Laptop) */}
           <nav className="hidden lg:flex space-x-0.5 xl:space-x-1 items-center mx-2">
-            <NavItem href="/" active>{t.header.home}</NavItem>
-            <NavItem href="#courses">{t.header.courses || "Courses"}</NavItem>
-            <NavItem href="#projects">{t.header.projects || "Projects"}</NavItem>
-            <NavItem href="#mentors">{t.header.mentors || "Mentors"}</NavItem>
-            <NavItem href="#about">{t.header.about || "About"}</NavItem>
-            <NavItem href="#contact">{t.header.contact || "Contact"}</NavItem>
-            <NavItem href="#certification">{t.header.certification || "Certification"}</NavItem>
+            <NavItem href="/">{t.header.home}</NavItem>
+            <NavItem href="/courses">{t.header.courses || "Courses"}</NavItem>
+            <NavItem href="/projects">{t.header.projects || "Projects"}</NavItem>
+            <NavItem href="/mentors">{t.header.mentors || "Mentors"}</NavItem>
+            <NavItem href="/about">{t.header.about || "About"}</NavItem>
+            <NavItem href="/contact">{t.header.contact || "Contact"}</NavItem>
+            <NavItem href="/certification">{t.header.certification || "Certification"}</NavItem>
             <NavItem href="/canvas">
               <span className="flex items-center gap-1">
                 {t.header.canvas || "Canvas"}
@@ -177,7 +177,7 @@ export default function Header() {
                       return (
                         <Link
                           key={idx}
-                          href="#courses"
+                          href="/courses"
                           onClick={() => setIsCategoryOpen(false)}
                           className="flex items-center space-x-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                         >
@@ -197,14 +197,16 @@ export default function Header() {
             </div>
 
             {/* CTA Button: Get Course */}
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="bg-[#00a884] hover:bg-[#009473] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,168,132,0.25)] hover:shadow-[0_6px_20px_rgba(0,168,132,0.35)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
-            >
-              <BookOpen size={15} className="hidden sm:inline" />
-              <span>{t.header.getCourse || "Get Course"}</span>
-            </motion.button>
+            <Link href="/courses">
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="bg-[#00a884] hover:bg-[#009473] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,168,132,0.25)] hover:shadow-[0_6px_20px_rgba(0,168,132,0.35)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
+              >
+                <BookOpen size={15} className="hidden sm:inline" />
+                <span>{t.header.getCourse || "Get Course"}</span>
+              </motion.button>
+            </Link>
 
             {/* Mobile Hamburger Menu Toggle */}
             <motion.button 
@@ -256,7 +258,7 @@ export default function Header() {
                           return (
                             <Link
                               key={idx}
-                              href="#courses"
+                              href="/courses"
                               onClick={() => setIsMobileMenuOpen(false)}
                               className="flex items-center space-x-2.5 p-2 rounded-lg hover:bg-white text-xs font-medium text-slate-700 hover:text-[#00a884] transition-colors"
                             >
@@ -271,25 +273,25 @@ export default function Header() {
                 </div>
 
                 {/* Mobile Links */}
-                <Link href="/" className="block py-2 text-[#00a884] font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.home}
                 </Link>
-                <Link href="#courses" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/courses" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.courses || "Courses"}
                 </Link>
-                <Link href="#projects" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/projects" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.projects || "Projects"}
                 </Link>
-                <Link href="#mentors" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/mentors" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.mentors || "Mentors"}
                 </Link>
-                <Link href="#about" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/about" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.about || "About"}
                 </Link>
-                <Link href="#contact" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/contact" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.contact || "Contact"}
                 </Link>
-                <Link href="#certification" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/certification" className="block py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                   {t.header.certification || "Certification"}
                 </Link>
                 <Link href="/canvas" className="flex items-center justify-between py-2 hover:text-[#00a884] transition-colors" onClick={() => setIsMobileMenuOpen(false)}>

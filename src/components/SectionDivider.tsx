@@ -17,7 +17,7 @@ export default function SectionDivider() {
       title: t.featuresBar?.feature1?.title || "Real-World Projects",
       desc: t.featuresBar?.feature1?.desc || "Build production-grade applications",
       accentBg: "group-hover:bg-emerald-500/[0.04]",
-      accentBorder: "group-hover:border-emerald-500/40",
+      accentBorder: "group-hover:border-emerald-400/60 group-hover:ring-1 group-hover:ring-emerald-400/25",
       accentText: "group-hover:text-emerald-600",
       accentBadge: "group-hover:bg-emerald-500/10 group-hover:text-emerald-600 group-hover:border-emerald-500/30",
       iconGlow: "group-hover:shadow-[0_8px_20px_rgba(16,185,129,0.35)]",
@@ -30,7 +30,7 @@ export default function SectionDivider() {
       title: t.featuresBar?.feature2?.title || "Senior Mentorship",
       desc: t.featuresBar?.feature2?.desc || "1-on-1 guidance from tech leaders",
       accentBg: "group-hover:bg-blue-500/[0.04]",
-      accentBorder: "group-hover:border-blue-500/40",
+      accentBorder: "group-hover:border-blue-400/60 group-hover:ring-1 group-hover:ring-blue-400/25",
       accentText: "group-hover:text-blue-600",
       accentBadge: "group-hover:bg-blue-500/10 group-hover:text-blue-600 group-hover:border-blue-500/30",
       iconGlow: "group-hover:shadow-[0_8px_20px_rgba(59,130,246,0.35)]",
@@ -43,7 +43,7 @@ export default function SectionDivider() {
       title: t.featuresBar?.feature3?.title || "Global Certification",
       desc: t.featuresBar?.feature3?.desc || "Industry-recognized credentials",
       accentBg: "group-hover:bg-purple-500/[0.04]",
-      accentBorder: "group-hover:border-purple-500/40",
+      accentBorder: "group-hover:border-purple-400/60 group-hover:ring-1 group-hover:ring-purple-400/25",
       accentText: "group-hover:text-purple-600",
       accentBadge: "group-hover:bg-purple-500/10 group-hover:text-purple-600 group-hover:border-purple-500/30",
       iconGlow: "group-hover:shadow-[0_8px_20px_rgba(168,85,247,0.35)]",
@@ -56,7 +56,7 @@ export default function SectionDivider() {
       title: t.featuresBar?.feature4?.title || "Career Placement",
       desc: t.featuresBar?.feature4?.desc || "Direct access to 120+ tech partners",
       accentBg: "group-hover:bg-orange-500/[0.04]",
-      accentBorder: "group-hover:border-orange-500/40",
+      accentBorder: "group-hover:border-orange-400/60 group-hover:ring-1 group-hover:ring-orange-400/25",
       accentText: "group-hover:text-orange-600",
       accentBadge: "group-hover:bg-orange-500/10 group-hover:text-orange-600 group-hover:border-orange-500/30",
       iconGlow: "group-hover:shadow-[0_8px_20px_rgba(249,115,22,0.35)]",
@@ -84,12 +84,12 @@ export default function SectionDivider() {
                   scale: 1.025,
                   transition: { duration: 0.15, ease: "easeOut" }
                 }}
-                className={`group relative bg-white/95 backdrop-blur-xl rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_22px_45px_rgba(0,0,0,0.12)] ${item.accentBorder} ${item.accentBg} transition-all duration-150 overflow-hidden flex flex-col justify-between cursor-pointer`}
+                className={`group relative bg-white/95 backdrop-blur-xl rounded-2xl p-5 sm:p-6 border border-slate-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_22px_45px_rgba(0,0,0,0.12)] ${item.accentBorder} ${item.accentBg} transition-all duration-150 overflow-hidden flex flex-col justify-between cursor-pointer`}
               >
                 {/* Radial Spotlight Glow on Hover - Fast transition */}
                 <div className={`absolute -top-12 -right-12 w-36 h-36 rounded-full ${item.spotlight} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none`} />
 
-                {/* Diagonal Shimmer Light Sweep on Hover - Fast Snappy Sweep */}
+                {/* Diagonal Shimmer Light Sweep on Hover */}
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-500 ease-out pointer-events-none" />
 
                 <div>

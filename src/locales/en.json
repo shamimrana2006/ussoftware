@@ -88,5 +88,74 @@
       "title": "Career Placement",
       "desc": "Direct access to 120+ tech partners"
     }
+  },
+  "coursesPage": {
+    "badge": "INDUSTRY-GRADE CURRICULUM",
+    "title": "Explore Our Professional Tech Programs",
+    "subtitle": "Practical, project-centric courses designed and taught by senior software engineers.",
+    "searchPlaceholder": "Search courses (e.g. Next.js, AI, Python)...",
+    "allCategories": "All Programs",
+    "enrollModalTitle": "Enroll in Program",
+    "enrollBtn": "Enroll Now",
+    "viewCurriculum": "View Syllabus",
+    "duration": "Duration",
+    "projectsCount": "Live Projects",
+    "level": "Level",
+    "rating": "Rating"
+  },
+  "projectsPage": {
+    "badge": "STUDENT & PRODUCTION SHOWCASE",
+    "title": "Real Software Built by Our Engineers",
+    "subtitle": "Discover enterprise systems, SaaS platforms, and AI applications created by our graduates and engineering team.",
+    "liveDemo": "Live Demo",
+    "sourceCode": "GitHub Code",
+    "techStack": "Tech Stack"
+  },
+  "mentorsPage": {
+    "badge": "ELITE TECH LEADERSHIP",
+    "title": "Learn from Senior Industry Engineers",
+    "subtitle": "Our mentors work at top global technology companies, bringing real-world architecture and practices directly to you.",
+    "bookSession": "Book 1-on-1 Mentorship",
+    "experience": "Experience",
+    "studentsMentored": "Mentees",
+    "becomeMentor": "Become a Mentor",
+    "becomeMentorDesc": "Join our elite engineering mentorship community."
+  },
+  "aboutPage": {
+    "badge": "ABOUT US SOFTWARE LTD",
+    "title": "Empowering Future Tech Leaders",
+    "subtitle": "We bridge the gap between academic theory and real-world software engineering with immersive learning and elite development services.",
+    "ourStory": "Our Journey",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "coreValues": "Core Values"
+  },
+  "contactPage": {
+    "badge": "LET'S TALK",
+    "title": "Get in Touch with Our Team",
+    "subtitle": "Have questions about our programs, corporate training, or custom software solutions? We are here to help.",
+    "formName": "Full Name",
+    "formEmail": "Email Address",
+    "formPhone": "Phone Number",
+    "formSubject": "Subject / Program of Interest",
+    "formMessage": "How can we help you?",
+    "submitBtn": "Send Message",
+    "successMessage": "Thank you! Your message has been sent successfully. Our team will contact you shortly.",
+    "officeHours": "Office Hours",
+    "helpline": "24/7 Helpline"
+  },
+  "certPage": {
+    "badge": "OFFICIAL CREDENTIAL VERIFICATION",
+    "title": "Verify Student Certificates",
+    "subtitle": "Instant verification of credentials, skill badges, and ISO-standard course certifications issued by US Software LTD.",
+    "searchPrompt": "Enter Certificate ID (e.g. US-2026-FS890)",
+    "verifyBtn": "Verify Certificate",
+    "verifiedBadge": "AUTHENTIC & VERIFIED",
+    "issuedTo": "Issued To",
+    "courseName": "Program Completed",
+    "issueDate": "Issue Date",
+    "credentialId": "Credential ID",
+    "grade": "Grade / Distinction",
+    "qrCode": "Scan to Verify Online"
   }
 }
