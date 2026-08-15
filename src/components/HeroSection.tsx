@@ -215,20 +215,13 @@ export default function HeroSection() {
           {/* Animated Background Elements for Right Side */}
           <div className="absolute inset-0 pointer-events-none z-[-1] overflow-visible">
             
-            {/* Spinning React Logo */}
+            {/* Spinning Globe Icon */}
             <motion.div 
               animate={{ rotate: 360 }} 
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute top-[5%] right-[-5%] opacity-60 drop-shadow-[0_0_20px_rgba(97,218,251,0.4)]"
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              className="absolute top-[5%] right-[-5%] opacity-60 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]"
             >
-              <svg viewBox="-11.5 -10.23174 23 20.46348" width="120" height="120">
-                <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
-                <g stroke="#61dafb" strokeWidth="1" fill="none">
-                  <ellipse rx="11" ry="4.2"/>
-                  <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
-                  <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
-                </g>
-              </svg>
+              <Globe2 size={120} className="text-blue-500" strokeWidth={1} />
             </motion.div>
             
             {/* Spinning Gemini Logo */}
