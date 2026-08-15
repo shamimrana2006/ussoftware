@@ -13,7 +13,7 @@ export default function Footer() {
       {/* Decorative Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           {/* Company Info */}

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, Cpu, Wifi, Zap, Activity } from "lucide-react";
 
 export default function LoadingScreen() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [statusIndex, setStatusIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -26,6 +26,18 @@ export default function LoadingScreen() {
 
   useEffect(() => {
     setIsClient(true);
+
+    try {
+      const hasLoaded = sessionStorage.getItem("us_software_initial_loaded");
+      if (hasLoaded) {
+        setIsLoading(false);
+        return;
+      }
+    } catch {
+      // Fallback if sessionStorage is disabled or restricted
+    }
+
+    setIsLoading(true);
     // Prevent background scrolling while loading screen is active
     document.body.style.overflow = "hidden";
 
@@ -77,6 +89,9 @@ export default function LoadingScreen() {
         // Brief satisfying pause at 100%
         setTimeout(() => {
           setIsLoading(false);
+          try {
+            sessionStorage.setItem("us_software_initial_loaded", "true");
+          } catch {}
           document.body.style.overflow = "";
         }, 260);
       }
@@ -90,7 +105,7 @@ export default function LoadingScreen() {
     };
   }, []);
 
-  if (!isClient) return null;
+  if (!isClient || !isLoading) return null;
 
   const CurrentIcon = statusMessages[statusIndex]?.icon || Zap;
 

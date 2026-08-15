@@ -129,7 +129,7 @@ export default function CanvasPage() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#00a884]/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left Content */}
           <motion.div className="space-y-5 relative z-30" variants={containerVariants} initial="hidden" animate="visible">
             <motion.div variants={itemVariants} className="inline-flex items-center space-x-1.5 bg-white border border-[#00a884]/30 rounded-full px-3 py-1 shadow-sm">

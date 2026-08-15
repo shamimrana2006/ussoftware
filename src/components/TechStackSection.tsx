@@ -20,7 +20,7 @@ export default function TechStackSection() {
 
   return (
     <section className="py-20 bg-[#0b2b46] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center mb-12">
+      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 text-center mb-12">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

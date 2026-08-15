@@ -40,7 +40,7 @@ export default function AboutUsSection() {
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-50 to-transparent -z-10"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           {/* Left: Images/Visuals */}

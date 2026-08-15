@@ -53,8 +53,8 @@ export default function Header() {
   return (
     <>
       {/* Top Bar - Dark Theme (Hidden on small screens) */}
-      <div className="hidden lg:block bg-[#111827] py-2.5 px-4 sm:px-8 text-xs text-gray-300 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+      <div className="hidden lg:block bg-[#111827] py-2.5 px-4 sm:px-6 lg:px-10 text-xs text-gray-300 border-b border-gray-800">
+        <div className="max-w-[96rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
           {/* Left: Contact Info in Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 hover:bg-white/10 transition-colors cursor-pointer">
@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Main Sticky Nav Bar */}
       <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-200/60 py-2.5" : "bg-white/75 backdrop-blur-md border-b border-gray-100 py-3 sm:py-3.5"}`}>
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center transition-all duration-300">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300">
           
           {/* Left: Logo */}
           <div className="flex items-center flex-shrink-0">
@@ -228,7 +228,7 @@ export default function Header() {
               transition={{ duration: 0.25, ease: "easeInOut" }}
               className="lg:hidden bg-white/98 backdrop-blur-2xl border-t border-gray-100 overflow-hidden shadow-xl"
             >
-              <div className="max-w-7xl mx-auto px-5 py-4 space-y-2.5 text-[15px] font-semibold text-gray-700">
+              <div className="max-w-[96rem] mx-auto px-4 sm:px-6 py-4 space-y-2.5 text-[15px] font-semibold text-gray-700">
                 
                 {/* Mobile Category Accordion */}
                 <div className="border border-slate-200/80 rounded-xl overflow-hidden bg-slate-50/50 mb-2">

@@ -103,7 +103,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10">
+      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 w-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center relative z-10">
 
         {/* LEFT COMPONENT: AI Video Hub Design */}
         <div className="relative h-[340px] sm:h-[450px] lg:h-[600px] w-full flex items-center justify-center order-2 lg:order-1 mt-6 lg:mt-0">
@@ -159,7 +159,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative z-20 w-[95%] max-w-[550px] aspect-[16/10] bg-gradient-to-br from-[#0f172a] to-[#020617] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-slate-700/50 overflow-hidden flex"
+            className="relative z-20 w-[95%] max-w-[580px] aspect-[16/10] bg-gradient-to-br from-[#0f172a] to-[#020617] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-slate-700/50 overflow-hidden flex"
           >
             {/* Actual Video Element */}
             <video
@@ -326,9 +326,9 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#0b2b46] leading-[1.2] tracking-tight">
-            <span className="whitespace-nowrap inline-block">{t.hero.title1}</span> <br />
-            <span className="relative inline-block mt-2 whitespace-nowrap">
+          <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-black text-[#0b2b46] leading-tight tracking-tight flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span className="inline-block">{t.hero.title1}</span>
+            <span className="relative inline-block">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00a884] via-[#00c698] to-[#3b82f6]">
                 {t.hero.title2}
               </span>
