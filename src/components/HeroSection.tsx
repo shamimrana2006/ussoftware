@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ShieldCheck, Cloud, Megaphone, BrainCircuit, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
+import { ArrowRight, ShieldCheck, Cloud, Megaphone, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
 import RobotCanvas from "./RobotCanvas";
 
 const Typewriter = ({ words }: { words: string[] }) => {
@@ -128,20 +128,6 @@ export default function HeroSection() {
           </div>
 
           {/* Premium Floating Badges */}
-          <motion.div
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 sm:-top-[5%] left-0 sm:left-[5%] lg:left-[10%] z-30 bg-white/5 backdrop-blur-xl border border-white/20 text-slate-800 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl flex items-center shadow-[0_20px_40px_rgba(0,0,0,0.1)] scale-[0.8] sm:scale-100 origin-top-left"
-          >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mr-4 shadow-lg shadow-purple-500/30">
-              <BrainCircuit size={20} className="text-white" />
-            </div>
-            <div>
-              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Engine</div>
-              <div className="text-lg font-black text-slate-800">AI Powered</div>
-            </div>
-          </motion.div>
-
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
