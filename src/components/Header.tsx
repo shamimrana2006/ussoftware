@@ -53,8 +53,8 @@ export default function Header() {
   return (
     <>
       {/* Top Bar - Dark Theme (Hidden on small screens) */}
-      <div className="hidden lg:block bg-[#111827] py-2.5 px-4 sm:px-6 lg:px-10 text-xs text-gray-300 border-b border-gray-800">
-        <div className="max-w-[96rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+      <div className="hidden lg:block bg-[#111827] py-2.5 sm:py-3 text-xs text-gray-300 border-b border-gray-800/80">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
           {/* Left: Contact Info in Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 hover:bg-white/10 transition-colors cursor-pointer">
