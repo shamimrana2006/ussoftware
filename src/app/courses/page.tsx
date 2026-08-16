@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  BookOpen, Clock, Users, Star, ArrowRight, CheckCircle2, 
-  Sparkles, Code2, Cpu, Cloud, Shield, Smartphone, Layers, 
-  Search, ChevronDown, Check, X, Award, Zap, Briefcase, 
-  PlayCircle, Flame, ArrowUpRight, CheckCheck, Compass
+  BookOpen, Clock, Star, ArrowRight, CheckCircle2, 
+  Code2, Cpu, Cloud, Shield, Smartphone, Layers, 
+  Search, X, Zap, Briefcase, 
+  Flame
 } from "lucide-react";
 
 export default function CoursesPage() {
@@ -49,9 +49,9 @@ export default function CoursesPage() {
       projectsCount: 12,
       level: isEn ? "Beginner to Advanced" : "বিগিনার থেকে এডভান্সড",
       badge: isEn ? "Flagship Track" : "ফ্ল্যাগশিপ ট্র্যাক",
-      badgeColor: "bg-emerald-500",
-      accentGrad: "from-emerald-500 via-teal-500 to-cyan-600",
-      hoverBorder: "hover:border-emerald-400/80 hover:shadow-[0_22px_50px_rgba(16,185,129,0.15)]",
+      badgeColor: "bg-[#008744]",
+      accentGrad: "from-[#008744] via-emerald-500 to-[#056839]",
+      hoverBorder: "hover:border-[#008744]/80 hover:shadow-[0_22px_50px_rgba(0,135,68,0.15)]",
       tags: ["Next.js 15", "TypeScript", "Node.js", "PostgreSQL", "Docker", "Redis", "Kafka"],
       price: isEn ? "$280 / ৳25,000" : "৳২৫,০০০",
       syllabus: [
@@ -80,9 +80,9 @@ export default function CoursesPage() {
       projectsCount: 8,
       level: isEn ? "Intermediate to Pro" : "ইন্টারমিডিয়েট থেকে প্রো",
       badge: isEn ? "AI Frontier" : "এআই ফ্রন্টিয়ার",
-      badgeColor: "bg-purple-500",
-      accentGrad: "from-purple-500 via-indigo-500 to-blue-600",
-      hoverBorder: "hover:border-purple-400/80 hover:shadow-[0_22px_50px_rgba(168,85,247,0.15)]",
+      badgeColor: "bg-[#DE1F26]",
+      accentGrad: "from-[#DE1F26] via-rose-500 to-red-700",
+      hoverBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_22px_50px_rgba(222,31,38,0.15)]",
       tags: ["Python", "PyTorch", "LangChain", "Vector DBs", "RAG", "CrewAI", "Fine-Tuning"],
       price: isEn ? "$320 / ৳28,000" : "৳২৮,০০০",
       syllabus: [
@@ -111,9 +111,9 @@ export default function CoursesPage() {
       projectsCount: 10,
       level: isEn ? "Intermediate" : "ইন্টারমিডিয়েট",
       badge: isEn ? "High Placement" : "উচ্চ প্লেসমেন্ট",
-      badgeColor: "bg-cyan-500",
-      accentGrad: "from-cyan-500 via-blue-500 to-indigo-600",
-      hoverBorder: "hover:border-cyan-400/80 hover:shadow-[0_22px_50px_rgba(6,182,212,0.15)]",
+      badgeColor: "bg-[#008744]",
+      accentGrad: "from-[#008744] via-emerald-600 to-teal-800",
+      hoverBorder: "hover:border-[#008744]/80 hover:shadow-[0_22px_50px_rgba(0,135,68,0.15)]",
       tags: ["AWS", "Kubernetes", "Docker", "Terraform", "CI/CD", "Prometheus", "Linux"],
       price: isEn ? "$300 / ৳26,000" : "৳২৬,০০০",
       syllabus: [
@@ -142,9 +142,9 @@ export default function CoursesPage() {
       projectsCount: 9,
       level: isEn ? "Beginner to Pro" : "বিগিনার থেকে প্রো",
       badge: isEn ? "Certified" : "সার্টিফাইড",
-      badgeColor: "bg-blue-500",
-      accentGrad: "from-blue-500 via-indigo-500 to-violet-600",
-      hoverBorder: "hover:border-blue-400/80 hover:shadow-[0_22px_50px_rgba(59,130,246,0.15)]",
+      badgeColor: "bg-[#DE1F26]",
+      accentGrad: "from-[#DE1F26] via-rose-600 to-red-800",
+      hoverBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_22px_50px_rgba(222,31,38,0.15)]",
       tags: ["Flutter", "Dart", "Clean Architecture", "Riverpod", "Firebase", "WebRTC"],
       price: isEn ? "$260 / ৳22,000" : "৳২২,০০০",
       syllabus: [
@@ -173,9 +173,9 @@ export default function CoursesPage() {
       projectsCount: 7,
       level: isEn ? "Intermediate to Advanced" : "ইন্টারমিডিয়েট থেকে এডভান্সড",
       badge: isEn ? "Specialized" : "স্পেশালাইজড",
-      badgeColor: "bg-red-500",
-      accentGrad: "from-red-500 via-rose-500 to-pink-600",
-      hoverBorder: "hover:border-red-400/80 hover:shadow-[0_22px_50px_rgba(239,68,68,0.15)]",
+      badgeColor: "bg-[#008744]",
+      accentGrad: "from-[#008744] via-emerald-600 to-green-800",
+      hoverBorder: "hover:border-[#008744]/80 hover:shadow-[0_22px_50px_rgba(0,135,68,0.15)]",
       tags: ["Kali Linux", "Wireshark", "Burp Suite", "OWASP", "Metasploit", "SOC"],
       price: isEn ? "$330 / ৳29,000" : "৳২৯,০০০",
       syllabus: [
@@ -203,9 +203,9 @@ export default function CoursesPage() {
       projectsCount: 6,
       level: isEn ? "All Levels" : "সকল স্তরের জন্য",
       badge: isEn ? "Creative" : "ক্রিয়েটিভ",
-      badgeColor: "bg-amber-500",
-      accentGrad: "from-amber-500 via-orange-500 to-rose-600",
-      hoverBorder: "hover:border-amber-400/80 hover:shadow-[0_22px_50px_rgba(245,158,11,0.15)]",
+      badgeColor: "bg-[#DE1F26]",
+      accentGrad: "from-[#DE1F26] via-rose-500 to-red-700",
+      hoverBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_22px_50px_rgba(222,31,38,0.15)]",
       tags: ["Figma", "Design Systems", "User Personas", "Prototyping", "Design Tokens"],
       price: isEn ? "$220 / ৳18,000" : "৳১৮,০০০",
       syllabus: [
@@ -232,10 +232,10 @@ export default function CoursesPage() {
       <main className="flex-grow pt-6 pb-24">
         
         {/* COURSES INTERACTIVE 2-COLUMN HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#071726] via-[#0b2b46] to-[#04101c] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
-          {/* Ambient Cyber Beams */}
-          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-emerald-500/20 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-blue-500/15 rounded-full blur-[130px] pointer-events-none" />
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
+          {/* Ambient Beams in Red & Green */}
+          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-[#008744]/20 rounded-full blur-[130px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-[#DE1F26]/15 rounded-full blur-[130px] pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
           <div className="max-w-[96rem] mx-auto relative z-10">
@@ -246,9 +246,9 @@ export default function CoursesPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-[#34d399]"
+                  className="inline-flex items-center space-x-2 bg-[#008744]/15 border border-[#008744]/35 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-emerald-300"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#34d399] animate-ping" />
+                  <span className="w-2 h-2 rounded-full bg-[#008744] animate-ping" />
                   <span>{isEn ? "Live Engineering Cohorts Open" : "লাইভ ইঞ্জিনিয়ারিং ব্যাচে ভর্তি চলছে"}</span>
                 </motion.div>
 
@@ -277,7 +277,7 @@ export default function CoursesPage() {
                   transition={{ delay: 0.22 }}
                   className="max-w-xl"
                 >
-                  <div className="relative flex items-center bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-1.5 shadow-2xl focus-within:border-[#00a884] focus-within:ring-2 focus-within:ring-[#00a884]/40 transition-all">
+                  <div className="relative flex items-center bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-1.5 shadow-2xl focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/40 transition-all">
                     <Search size={20} className="ml-3.5 text-slate-300 flex-shrink-0" />
                     <input
                       type="text"
@@ -287,7 +287,7 @@ export default function CoursesPage() {
                       className="w-full bg-transparent pl-3 pr-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none font-normal"
                     />
                     {searchQuery && (
-                      <button onClick={() => setSearchQuery("")} className="mr-2 text-slate-400 hover:text-white p-1">
+                      <button onClick={() => setSearchQuery("")} className="mr-2 text-slate-400 hover:text-white p-1 cursor-pointer">
                         <X size={18} />
                       </button>
                     )}
@@ -305,11 +305,11 @@ export default function CoursesPage() {
                 >
                   {/* Top Highlight Badge */}
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5">
-                      <Flame size={14} />
-                      <span>{isEn ? "Upcoming Live Batch" : "আসন্ন লাইভ ব্যাচ"}</span>
+                    <span className="text-xs font-mono font-bold text-[#DE1F26] bg-[#DE1F26]/10 px-3 py-1 rounded-full border border-[#DE1F26]/30 flex items-center gap-1.5">
+                      <Flame size={14} className="text-[#DE1F26]" />
+                      <span className="text-rose-300">{isEn ? "Upcoming Live Batch" : "আসন্ন লাইভ ব্যাচ"}</span>
                     </span>
-                    <span className="text-xs text-slate-400 font-mono">Batch #12</span>
+                    <span className="text-xs text-slate-300 font-mono">Batch #12</span>
                   </div>
 
                   <div>
@@ -323,11 +323,11 @@ export default function CoursesPage() {
                   <div className="grid grid-cols-2 gap-3 pt-2">
                     <div className="p-3 bg-black/30 rounded-2xl border border-white/5">
                       <div className="text-[11px] text-slate-400">{isEn ? "Live Project Modules" : "রিয়েল প্রজেক্ট"}</div>
-                      <div className="text-lg font-black text-[#34d399] mt-0.5">12+ Projects</div>
+                      <div className="text-lg font-black text-[#008744] mt-0.5">12+ Projects</div>
                     </div>
                     <div className="p-3 bg-black/30 rounded-2xl border border-white/5">
                       <div className="text-[11px] text-slate-400">{isEn ? "Placement Support" : "প্লেসমেন্ট সাপোর্ট"}</div>
-                      <div className="text-lg font-black text-cyan-300 mt-0.5">120+ Partners</div>
+                      <div className="text-lg font-black text-rose-300 mt-0.5">120+ Partners</div>
                     </div>
                   </div>
 
@@ -341,7 +341,7 @@ export default function CoursesPage() {
                       </div>
                       <span className="font-bold text-slate-300">6,200+ Alumni</span>
                     </div>
-                    <span className="text-amber-400 font-bold font-mono">4.95 ★★★★★</span>
+                    <span className="text-emerald-400 font-bold font-mono">4.95 ★★★★★</span>
                   </div>
                 </motion.div>
               </div>
@@ -362,7 +362,7 @@ export default function CoursesPage() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`flex items-center space-x-2.5 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-150 cursor-pointer ${
                     isActive
-                      ? "bg-[#00a884] text-white shadow-md shadow-[#00a884]/25 ring-2 ring-[#00a884]/30"
+                      ? "bg-[#008744] text-white shadow-md shadow-[#008744]/25 ring-2 ring-[#008744]/30"
                       : "bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200/60"
                   }`}
                 >
@@ -383,7 +383,7 @@ export default function CoursesPage() {
             <div>
               <h2 className="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
                 <span>{isEn ? "Featured Engineering Tracks" : "প্রফেশনাল ইঞ্জিনিয়ারিং ট্র্যাকস"}</span>
-                <span className="text-xs font-mono font-bold px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">
+                <span className="text-xs font-mono font-bold px-2 py-0.5 bg-emerald-50 text-[#008744] border border-emerald-200 rounded-full">
                   {filteredCourses.length}
                 </span>
               </h2>
@@ -423,18 +423,18 @@ export default function CoursesPage() {
                       <span className={`text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full text-white ${course.badgeColor} shadow-sm`}>
                         {course.badge}
                       </span>
-                      <div className="flex items-center space-x-1.5 bg-amber-50 border border-amber-200/80 px-2.5 py-1 rounded-full text-xs font-bold text-amber-700">
-                        <Star size={13} className="fill-amber-500 text-amber-500" />
+                      <div className="flex items-center space-x-1.5 bg-emerald-50 border border-emerald-200/80 px-2.5 py-1 rounded-full text-xs font-bold text-emerald-800">
+                        <Star size={13} className="fill-[#008744] text-[#008744]" />
                         <span>{course.rating}</span>
-                        <span className="text-[10px] text-amber-600/70 font-normal">({course.reviewsCount})</span>
+                        <span className="text-[10px] text-emerald-700/70 font-normal">({course.reviewsCount})</span>
                       </div>
                     </div>
 
                     {/* Title & Subtitle */}
-                    <h3 className="text-xl font-black text-slate-900 group-hover:text-[#0b2b46] transition-colors leading-snug mb-1.5">
+                    <h3 className="text-xl font-black text-slate-900 group-hover:text-[#08121a] transition-colors leading-snug mb-1.5">
                       {course.title}
                     </h3>
-                    <div className="text-xs font-mono font-bold text-[#00a884] mb-3">
+                    <div className="text-xs font-mono font-bold text-[#008744] mb-3">
                       {course.subtitle}
                     </div>
 
@@ -458,11 +458,11 @@ export default function CoursesPage() {
                     {/* Info Metrics */}
                     <div className="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium mb-5">
                       <div className="flex items-center space-x-1.5 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-                        <Clock size={14} className="text-[#00a884]" />
+                        <Clock size={14} className="text-[#008744]" />
                         <span>{course.duration} ({course.hours})</span>
                       </div>
                       <div className="flex items-center space-x-1.5 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-                        <Briefcase size={14} className="text-blue-500" />
+                        <Briefcase size={14} className="text-[#DE1F26]" />
                         <span>{course.projectsCount} {isEn ? "Live Projects" : "প্রজেক্ট"}</span>
                       </div>
                     </div>
@@ -488,7 +488,7 @@ export default function CoursesPage() {
                     <div className="flex items-center space-x-2">
                       <button
                         onClick={() => setSelectedCourseForModal(course)}
-                        className="px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-[#00a884] bg-white hover:bg-slate-100 border border-slate-200 rounded-xl transition-all shadow-sm cursor-pointer"
+                        className="px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-[#008744] bg-white hover:bg-slate-100 border border-slate-200 rounded-xl transition-all shadow-sm cursor-pointer"
                       >
                         {isEn ? "Syllabus" : "সিলেবাস"}
                       </button>
@@ -498,7 +498,7 @@ export default function CoursesPage() {
                           setSelectedCourseForModal(course);
                           setIsEnrollSuccess(false);
                         }}
-                        className="bg-[#00a884] hover:bg-[#009473] text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md shadow-[#00a884]/25 flex items-center space-x-1.5 transition-all cursor-pointer"
+                        className="bg-[#008744] hover:bg-[#007038] text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md shadow-[#008744]/25 flex items-center space-x-1.5 transition-all cursor-pointer"
                       >
                         <span>{isEn ? "Enroll" : "ভর্তি হন"}</span>
                         <ArrowRight size={14} />
@@ -536,7 +536,7 @@ export default function CoursesPage() {
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center space-x-2 text-xs font-bold text-[#00a884] uppercase tracking-wider mb-2">
+                <div className="flex items-center space-x-2 text-xs font-bold text-[#008744] uppercase tracking-wider mb-2">
                   <BookOpen size={15} />
                   <span>{isEn ? "Course Syllabus & Overview" : "কোর্স সিলেবাস ও বিস্তারিত"}</span>
                 </div>
@@ -544,7 +544,7 @@ export default function CoursesPage() {
                 <h3 className="text-2xl font-black text-slate-900 mb-1">
                   {selectedCourseForModal.title}
                 </h3>
-                <div className="text-xs font-mono text-[#00a884] font-bold mb-3">{selectedCourseForModal.subtitle}</div>
+                <div className="text-xs font-mono text-[#008744] font-bold mb-3">{selectedCourseForModal.subtitle}</div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                   {selectedCourseForModal.desc}
                 </p>
@@ -556,7 +556,7 @@ export default function CoursesPage() {
                   </div>
                   {selectedCourseForModal.syllabus.map((mod: any, i: number) => (
                     <div key={i} className="flex items-start space-x-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
-                      <div className="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">
+                      <div className="w-6 h-6 rounded-lg bg-emerald-500/10 text-[#008744] flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">
                         {i + 1}
                       </div>
                       <div>
@@ -568,7 +568,7 @@ export default function CoursesPage() {
                 </div>
 
                 {/* Modal Footer */}
-                <div className="bg-slate-900 text-white p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="bg-[#08121a] text-white p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
                     <div className="text-xs text-slate-400 font-medium">{isEn ? "Investment / Tuition" : "মোট কোর্স ফি"}</div>
                     <div className="text-xl font-black text-white">{selectedCourseForModal.price}</div>
@@ -582,7 +582,7 @@ export default function CoursesPage() {
                   ) : (
                     <button
                       onClick={() => setIsEnrollSuccess(true)}
-                      className="w-full sm:w-auto bg-[#00a884] hover:bg-[#009473] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-[#00a884]/30 flex items-center justify-center space-x-2 transition-all cursor-pointer"
+                      className="w-full sm:w-auto bg-[#008744] hover:bg-[#007038] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-[#008744]/30 flex items-center justify-center space-x-2 transition-all cursor-pointer"
                     >
                       <Zap size={16} />
                       <span>{isEn ? "Proceed to Admission" : "ভর্তি নিশ্চিত করুন"}</span>

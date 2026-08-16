@@ -7,8 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Phone, Mail, MapPin, Clock, Send, CheckCircle2, 
-  Sparkles, MessageSquare, ChevronDown, HelpCircle, 
-  Globe2, ShieldCheck, Headphones, MessageCircle, ArrowRight
+  MessageSquare, ChevronDown, HelpCircle, 
+  Headphones, MessageCircle, ArrowRight
 } from "lucide-react";
 
 export default function ContactPage() {
@@ -63,9 +63,9 @@ export default function ContactPage() {
       <main className="flex-grow pt-6 pb-24">
         
         {/* CONTACT CONCIERGE 2-COLUMN HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#061828] via-[#0b2b46] to-[#04121e] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
-          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-emerald-500/15 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-blue-500/15 rounded-full blur-[130px] pointer-events-none" />
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
+          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-[#008744]/20 rounded-full blur-[130px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-[#DE1F26]/15 rounded-full blur-[130px] pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
           <div className="max-w-[96rem] mx-auto relative z-10">
@@ -76,9 +76,9 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-[#34d399]"
+                  className="inline-flex items-center space-x-2 bg-[#008744]/15 border border-[#008744]/35 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-emerald-300"
                 >
-                  <Headphones size={14} className="text-[#34d399]" />
+                  <Headphones size={14} className="text-[#DE1F26]" />
                   <span>{t.contactPage?.badge || "LET'S TALK"}</span>
                 </motion.div>
 
@@ -105,9 +105,9 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.22 }}
-                  className="inline-flex items-center space-x-2.5 bg-emerald-500/10 border border-emerald-500/30 px-4 py-2.5 rounded-full text-xs font-bold text-emerald-400"
+                  className="inline-flex items-center space-x-2.5 bg-[#008744]/15 border border-[#008744]/35 px-4 py-2.5 rounded-full text-xs font-bold text-emerald-300"
                 >
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#008744] animate-ping" />
                   <span>{isEn ? "🟢 Concierge Online — Average response in 15 mins" : "🟢 অনলাইন ডেস্ক — ১৫ মিনিটের মধ্যে রেসপন্স"}</span>
                 </motion.div>
               </div>
@@ -130,10 +130,10 @@ export default function ContactPage() {
                       href="https://wa.me/8801800000000"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3.5 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 rounded-2xl flex items-center justify-between transition-all group"
+                      className="p-3.5 bg-[#008744]/20 hover:bg-[#008744]/30 border border-[#008744]/40 rounded-2xl flex items-center justify-between transition-all group"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center">
                           <MessageCircle size={20} />
                         </div>
                         <div>
@@ -146,20 +146,20 @@ export default function ContactPage() {
 
                     <div className="p-3.5 bg-black/30 rounded-2xl border border-white/5 flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-xl bg-[#DE1F26]/20 text-[#DE1F26] flex items-center justify-center">
                           <Phone size={18} />
                         </div>
                         <div>
                           <div className="text-xs font-bold text-white">{isEn ? "Admissions Hotline" : "ভর্তি সংক্রান্ত হেল্পলাইন"}</div>
-                          <div className="text-[11px] text-slate-300 font-mono">+880 1700-000000</div>
+                          <div className="text-[11px] text-rose-300 font-mono">+880 1700-000000</div>
                         </div>
                       </div>
-                      <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-md font-mono">9 AM - 8 PM</span>
+                      <span className="text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded-md font-mono">9 AM - 8 PM</span>
                     </div>
                   </div>
 
                   <div className="pt-2 text-center text-xs text-slate-300 font-mono flex items-center justify-center gap-1.5">
-                    <MapPin size={13} className="text-purple-400" />
+                    <MapPin size={13} className="text-[#008744]" />
                     <span>Level 7, Innovation Tower, Panthapath, Dhaka</span>
                   </div>
                 </motion.div>
@@ -179,24 +179,24 @@ export default function ContactPage() {
               {/* WhatsApp & Helpline Card */}
               <motion.div
                 whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(16,185,129,0.15)] hover:border-emerald-400/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
+                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(0,135,68,0.15)] hover:border-[#008744]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#00a884] flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#008744] flex items-center justify-center flex-shrink-0">
                   <MessageCircle size={24} />
                 </div>
                 <div>
                   <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{t.contactPage?.helpline || "24/7 Helpline & WhatsApp"}</div>
                   <div className="text-lg font-black text-slate-900 mt-1">+880 1800-000000</div>
-                  <div className="text-xs text-[#00a884] font-semibold mt-0.5">+880 1700-000000 (Admissions Desk)</div>
+                  <div className="text-xs text-[#008744] font-semibold mt-0.5">+880 1700-000000 (Admissions Desk)</div>
                 </div>
               </motion.div>
 
               {/* Email Support Card */}
               <motion.div
                 whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(59,130,246,0.15)] hover:border-blue-400/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
+                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(222,31,38,0.15)] hover:border-[#DE1F26]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-rose-500/10 text-[#DE1F26] flex items-center justify-center flex-shrink-0">
                   <Mail size={22} />
                 </div>
                 <div>
@@ -209,9 +209,9 @@ export default function ContactPage() {
               {/* Physical Office Card */}
               <motion.div
                 whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(168,85,247,0.15)] hover:border-purple-400/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
+                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(0,135,68,0.15)] hover:border-[#008744]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#008744] flex items-center justify-center flex-shrink-0">
                   <MapPin size={22} />
                 </div>
                 <div>
@@ -226,9 +226,9 @@ export default function ContactPage() {
               {/* Working Hours Card */}
               <motion.div
                 whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(245,158,11,0.15)] hover:border-amber-400/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
+                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(222,31,38,0.15)] hover:border-[#DE1F26]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-rose-500/10 text-[#DE1F26] flex items-center justify-center flex-shrink-0">
                   <Clock size={22} />
                 </div>
                 <div>
@@ -252,7 +252,7 @@ export default function ContactPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
-                    <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-6">
+                    <div className="w-20 h-20 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 size={40} />
                     </div>
                     <h3 className="text-2xl font-black text-slate-900 mb-3">
@@ -266,7 +266,7 @@ export default function ContactPage() {
                         setIsSubmitted(false);
                         setFormData({ name: "", email: "", phone: "", subject: "Full-Stack Development", message: "" });
                       }}
-                      className="bg-[#00a884] text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md cursor-pointer"
+                      className="bg-[#008744] hover:bg-[#007038] text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md cursor-pointer"
                     >
                       {isEn ? "Send Another Message" : "আরেকটি বার্তা পাঠান"}
                     </button>
@@ -274,7 +274,7 @@ export default function ContactPage() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
-                      <div className="flex items-center space-x-2 text-xs font-bold text-[#00a884] uppercase tracking-wider mb-1">
+                      <div className="flex items-center space-x-2 text-xs font-bold text-[#008744] uppercase tracking-wider mb-1">
                         <MessageSquare size={14} />
                         <span>{isEn ? "Direct Concierge Form" : "ইনকোয়ারি ফর্ম"}</span>
                       </div>
@@ -294,7 +294,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder={isEn ? "e.g. John Doe" : "আপনার নাম"}
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00a884] focus:border-transparent focus:bg-white transition-all font-normal"
+                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal"
                         />
                       </div>
 
@@ -308,7 +308,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="name@example.com"
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00a884] focus:border-transparent focus:bg-white transition-all font-normal"
+                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal"
                         />
                       </div>
                     </div>
@@ -323,7 +323,7 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+880 1..."
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00a884] focus:border-transparent focus:bg-white transition-all font-normal"
+                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal"
                         />
                       </div>
 
@@ -334,7 +334,7 @@ export default function ContactPage() {
                         <select
                           value={formData.subject}
                           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00a884] focus:border-transparent focus:bg-white transition-all font-normal cursor-pointer"
+                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal cursor-pointer"
                         >
                           <option value="Full-Stack Web Development">{isEn ? "Enterprise Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব ডেভেলপমেন্ট"}</option>
                           <option value="Generative AI & LLMs">{isEn ? "Generative AI & LLMs" : "জেনারেটিভ এআই ও এলএলএম"}</option>
@@ -356,14 +356,14 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder={isEn ? "Tell us about your requirements or learning goals..." : "আপনার প্রশ্ন বা প্রয়োজনীয় তথ্য লিখুন..."}
-                        className="w-full bg-slate-50 border border-slate-200/90 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00a884] focus:border-transparent focus:bg-white transition-all font-normal resize-none"
+                        className="w-full bg-slate-50 border border-slate-200/90 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal resize-none"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[#00a884] hover:bg-[#009473] text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-[#00a884]/25 flex items-center justify-center space-x-2 transition-all cursor-pointer disabled:opacity-70"
+                      className="w-full bg-[#008744] hover:bg-[#007038] text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-[#008744]/25 flex items-center justify-center space-x-2 transition-all cursor-pointer disabled:opacity-70"
                     >
                       {isSubmitting ? (
                         <span>{isEn ? "Sending Message..." : "পাঠানো হচ্ছে..."}</span>
@@ -386,7 +386,7 @@ export default function ContactPage() {
         {/* FAQ ACCORDION */}
         <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 mt-16 sm:mt-24">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center space-x-1.5 text-xs font-bold text-[#00a884] uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center space-x-1.5 text-xs font-bold text-[#008744] uppercase tracking-wider mb-2">
               <HelpCircle size={14} />
               <span>{isEn ? "Common Questions" : "সাধারণ প্রশ্নোত্তর"}</span>
             </div>
@@ -401,14 +401,14 @@ export default function ContactPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:border-[#00a884]/50 transition-all"
+                  className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:border-[#008744]/50 transition-all"
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between font-bold text-slate-800 text-sm sm:text-base cursor-pointer hover:text-[#00a884] transition-colors"
+                    className="w-full p-5 text-left flex items-center justify-between font-bold text-slate-800 text-sm sm:text-base cursor-pointer hover:text-[#008744] transition-colors"
                   >
                     <span>{faq.q}</span>
-                    <ChevronDown size={18} className={`text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180 text-[#00a884]" : ""}`} />
+                    <ChevronDown size={18} className={`text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180 text-[#008744]" : ""}`} />
                   </button>
 
                   <AnimatePresence>

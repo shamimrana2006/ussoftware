@@ -19,22 +19,26 @@ export default function TechStackSection() {
   const isEn = language === 'en';
 
   return (
-    <section className="py-20 bg-[#0b2b46] overflow-hidden">
-      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 text-center mb-12">
+    <section className="py-20 bg-[#08121a] overflow-hidden relative">
+      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 text-center mb-12 relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-extrabold text-white mb-4"
         >
-          {isEn ? "Technologies We Use" : "আমাদের ব্যবহৃত প্রযুক্তি"}
+          {isEn ? (
+            <span>Technologies <span className="text-[#008744]">We Use</span></span>
+          ) : (
+            <span>আমাদের ব্যবহৃত <span className="text-[#008744]">প্রযুক্তি</span></span>
+          )}
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-gray-400 max-w-2xl mx-auto"
+          className="text-slate-400 max-w-2xl mx-auto font-normal"
         >
           {isEn 
             ? "We leverage the latest and most powerful technologies to build robust, scalable, and secure applications."
@@ -47,7 +51,7 @@ export default function TechStackSection() {
         <div className="py-8 animate-marquee whitespace-nowrap flex items-center group-hover:[animation-play-state:paused]">
           {[...techLogos, ...techLogos].map((tech, index) => (
             <div key={index} className="mx-10 flex flex-col items-center justify-center min-w-[100px]">
-              <div className="w-20 h-20 bg-white/5 rounded-2xl flex items-center justify-center p-4 hover:bg-white/10 transition-colors cursor-pointer border border-white/10 mb-3">
+              <div className="w-20 h-20 bg-white/5 rounded-2xl flex items-center justify-center p-4 hover:bg-white/10 hover:border-[#008744]/50 hover:shadow-[0_0_20px_rgba(0,135,68,0.3)] transition-all cursor-pointer border border-white/10 mb-3">
                 <img src={tech.url} alt={tech.name} className="w-12 h-12 object-contain filter drop-shadow-md" />
               </div>
               <span className="text-gray-300 font-medium text-sm">{tech.name}</span>
@@ -56,8 +60,8 @@ export default function TechStackSection() {
         </div>
         
         {/* Gradient Edges for smooth fade out */}
-        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#0b2b46] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#0b2b46] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#08121a] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#08121a] to-transparent z-10 pointer-events-none"></div>
       </div>
     </section>
   );

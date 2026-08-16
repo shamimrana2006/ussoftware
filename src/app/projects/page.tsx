@@ -7,8 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Code2, ExternalLink, Sparkles, Layers, Cpu, Smartphone, 
-  Cloud, Shield, CheckCircle2, X, Star, Users, ArrowUpRight, Zap, Eye,
-  Terminal, Activity, GitBranch, Radio
+  Cloud, X, Star, Zap, Eye,
+  Terminal, Activity, Radio
 } from "lucide-react";
 
 const GithubIcon = ({ size = 16, className = "" }: { size?: number, className?: string }) => (
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
     title: isEn ? "NexusAI — Enterprise Autonomous Workflow Orchestration" : "নেক্সাস এআই — এন্টারপ্রাইজ স্বয়ংক্রিয় ওয়ার্কফ্লো প্ল্যাটফর্ম",
     desc: isEn ? "A distributed multi-agent system executing automated financial audits, code analysis, and document intelligence using LangChain, Qdrant vector memory, and streaming WebSockets." : "একটি মাল্টি-এজেন্ট প্ল্যাটফর্ম যা জটিল ডাটা পাইপলাইন, কোড জেনারেশন ও ফিন্যান্সিয়াল এনালাইসিস স্বয়ংক্রিয়ভাবে সম্পাদন করে।",
     badge: isEn ? "Flagship Production System" : "ফ্ল্যাগশিপ প্রোডাকশন সিস্টেম",
-    badgeColor: "bg-purple-600",
+    badgeColor: "bg-[#DE1F26]",
     authors: isEn ? "Built by AI Fellowship Cohort 4" : "এআই ফেলোশিপ ব্যাচ ৪ এর শিক্ষার্থী",
     stars: 245,
     users: "18,500+ Active Users",
@@ -58,9 +58,9 @@ export default function ProjectsPage() {
       title: isEn ? "CloudPulse Observability" : "ক্লাউডপাল্স অবজারভেবিলিটি",
       desc: isEn ? "Multi-cloud Kubernetes cluster telemetry, automated pod auto-scaler, and sub-second Prometheus anomaly detection." : "কুবারনেটিস ক্লাস্টারের জন্য রিয়েল-টাইম সার্ভার মনিটরিং, অ্যানোমালি ডিটেকশন ও স্বয়ংক্রিয় অটো-স্কেলিং প্ল্যাটফর্ম।",
       badge: "Cloud SaaS",
-      badgeColor: "bg-cyan-500",
-      color: "from-cyan-500 to-blue-600",
-      accentBorder: "hover:border-cyan-400/80 hover:shadow-[0_20px_50px_rgba(6,182,212,0.18)]",
+      badgeColor: "bg-[#008744]",
+      color: "from-[#008744] to-emerald-800",
+      accentBorder: "hover:border-[#008744]/80 hover:shadow-[0_20px_50px_rgba(0,135,68,0.18)]",
       authors: isEn ? "DevOps Platform Team" : "ডেভঅপ্স ইঞ্জিনিয়ারিং টিম",
       stars: 120,
       techStack: ["Go", "Kubernetes", "Prometheus", "Grafana", "Terraform", "React"],
@@ -74,9 +74,9 @@ export default function ProjectsPage() {
       title: isEn ? "PaySphere Global Escrow" : "পে-স্ফিয়ার গ্লোবাল এসক্রো",
       desc: isEn ? "High-concurrency multi-currency payment engine with automated double-entry ledger and fraud prevention." : "মাল্টি-কারেন্সি পেআউট, অটোমেটেড ইনভয়েস ও ফ্রড ডিটেকশন সমন্বিত একটি হাই-স্পিড পেমেন্ট প্রসেসিং গেটওয়ে।",
       badge: "FinTech Pro",
-      badgeColor: "bg-emerald-500",
-      color: "from-emerald-500 to-teal-700",
-      accentBorder: "hover:border-emerald-400/80 hover:shadow-[0_20px_50px_rgba(16,185,129,0.18)]",
+      badgeColor: "bg-[#DE1F26]",
+      color: "from-[#DE1F26] to-rose-800",
+      accentBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_20px_50px_rgba(222,31,38,0.18)]",
       authors: isEn ? "Full-Stack Cohort 7" : "ফুল-স্ট্যাক ব্যাচ ৭",
       stars: 210,
       techStack: ["Next.js 15", "Node.js", "PostgreSQL", "Prisma", "Redis", "Stripe API"],
@@ -90,9 +90,9 @@ export default function ProjectsPage() {
       title: isEn ? "MedLink Telemedicine" : "মেডলিংক টেলিমেডিসিন",
       desc: isEn ? "Cross-platform encrypted WebRTC consultation and digital prescription delivery on iOS and Android." : "ডাক্তার ও রোগীদের মধ্যে সরাসরি এনক্রিপ্টেড ভিডিও কনসালটেশন ও ডিজিটাল প্রেসক্রিপশন ডেলিভারি অ্যাপ।",
       badge: "Mobile App",
-      badgeColor: "bg-blue-500",
-      color: "from-blue-500 to-indigo-600",
-      accentBorder: "hover:border-blue-400/80 hover:shadow-[0_20px_50px_rgba(59,130,246,0.18)]",
+      badgeColor: "bg-[#008744]",
+      color: "from-[#008744] to-teal-800",
+      accentBorder: "hover:border-[#008744]/80 hover:shadow-[0_20px_50px_rgba(0,135,68,0.18)]",
       authors: isEn ? "Mobile Fellowship Cohort 2" : "মোবাইল ফেলোশিপ ব্যাচ ২",
       stars: 185,
       techStack: ["Flutter", "Dart", "WebRTC", "Firebase", "Riverpod", "Node.js"],
@@ -106,9 +106,9 @@ export default function ProjectsPage() {
       title: isEn ? "CodeArena Cloud IDE" : "কোড এরিনা ক্লাউড কম্পাইলার",
       desc: isEn ? "In-browser collaborative code editor with real-time cursor sync and instant compilation in 20+ languages." : "ব্রাউজারে রিয়েল-টাইম কোড শেয়ারিং, ২০+ ভাষায় ইনস্ট্যান্ট কম্পাইলেশন ও এআই অ্যাসিস্ট্যান্ট প্ল্যাটফর্ম।",
       badge: "Developer Tool",
-      badgeColor: "bg-amber-500",
-      color: "from-amber-500 to-orange-600",
-      accentBorder: "hover:border-orange-400/80 hover:shadow-[0_20px_50px_rgba(249,115,22,0.18)]",
+      badgeColor: "bg-[#DE1F26]",
+      color: "from-[#DE1F26] to-rose-700",
+      accentBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_20px_50px_rgba(222,31,38,0.18)]",
       authors: isEn ? "Open Source Team" : "ওপেন সোর্স কোর টিম",
       stars: 310,
       techStack: ["Next.js", "Monaco Editor", "Docker Sandbox", "WebSockets", "Go", "Redis"],
@@ -129,9 +129,9 @@ export default function ProjectsPage() {
       <main className="flex-grow pt-6 pb-24">
         
         {/* PROJECTS INTERACTIVE TERMINAL HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#07131e] via-[#092237] to-[#040e18] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
-          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-purple-500/20 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-cyan-500/15 rounded-full blur-[130px] pointer-events-none" />
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
+          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-[#008744]/20 rounded-full blur-[130px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-[#DE1F26]/15 rounded-full blur-[130px] pointer-events-none" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none" />
 
           <div className="max-w-[96rem] mx-auto relative z-10">
@@ -142,9 +142,9 @@ export default function ProjectsPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-[#38bdf8]"
+                  className="inline-flex items-center space-x-2 bg-[#008744]/15 border border-[#008744]/35 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-emerald-300"
                 >
-                  <Terminal size={14} className="text-[#34d399]" />
+                  <Terminal size={14} className="text-[#DE1F26]" />
                   <span>{t.projectsPage?.badge || "STUDENT & PRODUCTION SHOWCASE"}</span>
                 </motion.div>
 
@@ -174,11 +174,11 @@ export default function ProjectsPage() {
                   className="flex flex-wrap items-center gap-3 text-xs font-mono"
                 >
                   <div className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center space-x-2 text-emerald-300">
-                    <Radio size={14} className="animate-pulse" />
+                    <Radio size={14} className="animate-pulse text-[#008744]" />
                     <span>120+ Active Deployments</span>
                   </div>
-                  <div className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center space-x-2 text-cyan-300">
-                    <Zap size={14} />
+                  <div className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center space-x-2 text-rose-300">
+                    <Zap size={14} className="text-[#DE1F26]" />
                     <span>100K+ RPS Throughput</span>
                   </div>
                 </motion.div>
@@ -190,31 +190,31 @@ export default function ProjectsPage() {
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="bg-[#0b1622]/95 backdrop-blur-2xl rounded-3xl p-6 border border-slate-700/80 shadow-2xl space-y-4 font-mono text-xs text-slate-300 relative overflow-hidden"
+                  className="bg-[#08121a]/95 backdrop-blur-2xl rounded-3xl p-6 border border-slate-700/80 shadow-2xl space-y-4 font-mono text-xs text-slate-300 relative overflow-hidden"
                 >
                   {/* Terminal Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-slate-700/60">
                     <div className="flex items-center space-x-2">
-                      <span className="w-3 h-3 rounded-full bg-rose-500 inline-block" />
+                      <span className="w-3 h-3 rounded-full bg-[#DE1F26] inline-block" />
                       <span className="w-3 h-3 rounded-full bg-amber-500 inline-block" />
-                      <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block" />
+                      <span className="w-3 h-3 rounded-full bg-[#008744] inline-block" />
                     </div>
                     <span className="text-[11px] text-slate-400 font-sans font-bold">us-software-production ~ bash</span>
-                    <span className="text-[10px] text-emerald-400">● LIVE</span>
+                    <span className="text-[10px] text-[#008744] font-bold">● LIVE</span>
                   </div>
 
                   {/* Terminal Logs */}
                   <div className="space-y-2.5 pt-1 text-[11px] sm:text-xs">
                     <div className="text-slate-400">
-                      <span className="text-[#34d399] font-bold">$</span> git push origin main --tags
+                      <span className="text-[#008744] font-bold">$</span> git push origin main --tags
                     </div>
-                    <div className="text-cyan-400">
+                    <div className="text-rose-300">
                       &gt; Compiling Next.js 15 Turbopack bundle...
                     </div>
-                    <div className="text-purple-400">
+                    <div className="text-emerald-300">
                       &gt; Initializing Qdrant vector embeddings (1536 dim)...
                     </div>
-                    <div className="text-emerald-400 font-bold flex items-center gap-1.5">
+                    <div className="text-[#008744] font-bold flex items-center gap-1.5">
                       <span>✓</span>
                       <span>Deployment verified across 4 AWS clusters (45ms)</span>
                     </div>
@@ -241,11 +241,11 @@ export default function ProjectsPage() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-150 cursor-pointer ${
                     isActive
-                      ? "bg-[#0b2b46] text-white shadow-md shadow-[#0b2b46]/25 ring-2 ring-[#00a884]/40"
+                      ? "bg-[#08121a] text-white shadow-md shadow-[#08121a]/25 ring-2 ring-[#008744]/40"
                       : "bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200/60"
                   }`}
                 >
-                  <Icon size={16} className={isActive ? "text-[#34d399]" : "text-slate-500"} />
+                  <Icon size={16} className={isActive ? "text-[#008744]" : "text-slate-500"} />
                   <span>{cat.name}</span>
                 </button>
               );
@@ -263,20 +263,20 @@ export default function ProjectsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -6, transition: { duration: 0.15 } }}
-              className="bg-gradient-to-br from-slate-900 via-[#0f1f2e] to-[#0a1724] text-white rounded-3xl p-8 sm:p-10 border border-slate-700/80 shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-purple-400/80 hover:shadow-[0_24px_60px_rgba(168,85,247,0.2)] transition-all duration-150 relative overflow-hidden"
+              className="bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white rounded-3xl p-8 sm:p-10 border border-slate-700/80 shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:border-[#DE1F26]/80 hover:shadow-[0_24px_60px_rgba(222,31,38,0.2)] transition-all duration-150 relative overflow-hidden"
             >
               {/* Background ambient glow */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-96 h-96 bg-[#008744]/15 rounded-full blur-3xl pointer-events-none" />
               
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 {/* Left info 7 cols */}
                 <div className="lg:col-span-7">
                   <div className="flex items-center space-x-3 mb-4">
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full text-white bg-purple-600 shadow-sm">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full text-white bg-[#DE1F26] shadow-sm">
                       {flagshipProject.badge}
                     </span>
-                    <span className="text-xs text-purple-300 font-mono font-bold flex items-center gap-1">
-                      <Star size={13} className="fill-purple-400 text-purple-400" />
+                    <span className="text-xs text-rose-300 font-mono font-bold flex items-center gap-1">
+                      <Star size={13} className="fill-[#DE1F26] text-[#DE1F26]" />
                       <span>{flagshipProject.stars} Stars</span>
                     </span>
                   </div>
@@ -284,7 +284,7 @@ export default function ProjectsPage() {
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3 leading-tight tracking-tight">
                     {flagshipProject.title}
                   </h2>
-                  <div className="text-xs font-mono text-[#34d399] font-bold mb-4">{flagshipProject.authors}</div>
+                  <div className="text-xs font-mono text-[#008744] font-bold mb-4">{flagshipProject.authors}</div>
                   
                   <p className="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
                     {flagshipProject.desc}
@@ -303,7 +303,7 @@ export default function ProjectsPage() {
                   <div className="flex flex-wrap items-center gap-3">
                     <button
                       onClick={() => setSelectedProject(flagshipProject)}
-                      className="bg-[#00a884] hover:bg-[#009473] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-lg shadow-[#00a884]/30 flex items-center space-x-2 transition-all cursor-pointer"
+                      className="bg-[#008744] hover:bg-[#007038] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-lg shadow-[#008744]/30 flex items-center space-x-2 transition-all cursor-pointer"
                     >
                       <Eye size={15} />
                       <span>{isEn ? "Read Architecture Study" : "কেস স্টাডি দেখুন"}</span>
@@ -322,7 +322,7 @@ export default function ProjectsPage() {
 
                 {/* Right Metrics Display 5 cols */}
                 <div className="lg:col-span-5 bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 space-y-4">
-                  <div className="text-xs font-mono font-bold text-purple-300 uppercase tracking-wider flex items-center justify-between">
+                  <div className="text-xs font-mono font-bold text-emerald-300 uppercase tracking-wider flex items-center justify-between">
                     <span>Telemetry Metrics</span>
                     <Activity size={14} />
                   </div>
@@ -335,11 +335,11 @@ export default function ProjectsPage() {
                   <div className="grid grid-cols-2 gap-3">
                     <div className="p-3.5 bg-black/40 rounded-xl border border-white/5">
                       <div className="text-[10px] text-slate-400 font-mono">Vector Latency</div>
-                      <div className="text-lg font-black text-[#34d399] mt-0.5">{flagshipProject.latency}</div>
+                      <div className="text-lg font-black text-[#008744] mt-0.5">{flagshipProject.latency}</div>
                     </div>
                     <div className="p-3.5 bg-black/40 rounded-xl border border-white/5">
                       <div className="text-[10px] text-slate-400 font-mono">Uptime SLA</div>
-                      <div className="text-lg font-black text-cyan-300 mt-0.5">{flagshipProject.reliability}</div>
+                      <div className="text-lg font-black text-rose-300 mt-0.5">{flagshipProject.reliability}</div>
                     </div>
                   </div>
                 </div>
@@ -365,15 +365,15 @@ export default function ProjectsPage() {
                       {project.badge}
                     </span>
                     <div className="flex items-center space-x-1 text-xs font-mono font-bold text-slate-500">
-                      <Star size={13} className="text-amber-400 fill-amber-400" />
+                      <Star size={13} className="text-[#DE1F26] fill-[#DE1F26]" />
                       <span>{project.stars}</span>
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-black text-slate-900 group-hover:text-[#0b2b46] transition-colors mb-1">
+                  <h3 className="text-xl font-black text-slate-900 group-hover:text-[#08121a] transition-colors mb-1">
                     {project.title}
                   </h3>
-                  <div className="text-xs font-mono font-bold text-[#00a884] mb-3">{project.authors}</div>
+                  <div className="text-xs font-mono font-bold text-[#008744] mb-3">{project.authors}</div>
 
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-5 font-normal">
                     {project.desc}
@@ -392,7 +392,7 @@ export default function ProjectsPage() {
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="text-xs font-bold text-slate-700 hover:text-[#00a884] flex items-center space-x-1.5 transition-colors cursor-pointer"
+                    className="text-xs font-bold text-slate-700 hover:text-[#008744] flex items-center space-x-1.5 transition-colors cursor-pointer"
                   >
                     <Eye size={15} />
                     <span>{isEn ? "Case Study" : "কেস স্টাডি"}</span>
@@ -412,7 +412,7 @@ export default function ProjectsPage() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#00a884] hover:bg-[#009473] text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-md shadow-[#00a884]/20 flex items-center space-x-1.5 transition-all"
+                      className="bg-[#008744] hover:bg-[#007038] text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-md shadow-[#008744]/20 flex items-center space-x-1.5 transition-all"
                     >
                       <span>{isEn ? "Live Demo" : "লাইভ ডেমো"}</span>
                       <ExternalLink size={13} />
@@ -450,7 +450,7 @@ export default function ProjectsPage() {
                   <X size={18} />
                 </button>
 
-                <div className="flex items-center space-x-2 text-xs font-bold text-[#00a884] uppercase tracking-wider mb-2">
+                <div className="flex items-center space-x-2 text-xs font-bold text-[#008744] uppercase tracking-wider mb-2">
                   <Sparkles size={15} />
                   <span>{isEn ? "Architecture & Production Case Study" : "আর্কিটেকচার ও কেস স্টাডি"}</span>
                 </div>
@@ -471,7 +471,7 @@ export default function ProjectsPage() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.techStack.map((tech: string, i: number) => (
-                      <span key={i} className="bg-[#00a884]/10 text-[#00a884] text-xs font-bold px-3 py-1 rounded-xl border border-[#00a884]/20">
+                      <span key={i} className="bg-[#008744]/10 text-[#008744] text-xs font-bold px-3 py-1 rounded-xl border border-[#008744]/20">
                         {tech}
                       </span>
                     ))}
@@ -493,7 +493,7 @@ export default function ProjectsPage() {
                     href={selectedProject.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-[#00a884] hover:bg-[#009473] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-[#00a884]/25 transition-all"
+                    className="flex items-center space-x-2 bg-[#008744] hover:bg-[#009473] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-[#008744]/25 transition-all"
                   >
                     <span>{isEn ? "Open Live Application" : "লাইভ অ্যাপ দেখুন"}</span>
                     <ExternalLink size={15} />

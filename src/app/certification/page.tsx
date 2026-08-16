@@ -7,8 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Award, ShieldCheck, CheckCircle2, Search, QrCode, 
-  Sparkles, Download, Share2, ExternalLink, Lock, 
-  FileCheck, Shield, Check, X, Building, KeyRound, Cpu
+  Download, Share2, Lock, 
+  FileCheck, Shield, Check, Building
 } from "lucide-react";
 
 export default function CertificationPage() {
@@ -95,9 +95,9 @@ export default function CertificationPage() {
       <main className="flex-grow pt-6 pb-24">
         
         {/* CERTIFICATION CRYPTOGRAPHIC VAULT 2-COLUMN HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#061828] via-[#0b2b46] to-[#04121e] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
-          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-emerald-500/15 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-amber-500/15 rounded-full blur-[130px] pointer-events-none" />
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
+          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-[#008744]/20 rounded-full blur-[130px] pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-[#DE1F26]/15 rounded-full blur-[130px] pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
           <div className="max-w-[96rem] mx-auto relative z-10">
@@ -108,9 +108,9 @@ export default function CertificationPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center space-x-2 bg-amber-400/10 border border-amber-400/30 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-amber-300"
+                  className="inline-flex items-center space-x-2 bg-[#008744]/15 border border-[#008744]/35 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-emerald-300"
                 >
-                  <ShieldCheck size={14} className="text-amber-400" />
+                  <ShieldCheck size={14} className="text-[#DE1F26]" />
                   <span>{t.certPage?.badge || "OFFICIAL CREDENTIAL VERIFICATION"}</span>
                 </motion.div>
 
@@ -153,7 +153,7 @@ export default function CertificationPage() {
                     <button
                       type="submit"
                       disabled={isSearching}
-                      className="bg-[#00a884] hover:bg-[#009473] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-[#00a884]/30 flex items-center justify-center space-x-2 transition-all cursor-pointer whitespace-nowrap"
+                      className="bg-[#008744] hover:bg-[#007038] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-[#008744]/30 flex items-center justify-center space-x-2 transition-all cursor-pointer whitespace-nowrap"
                     >
                       <ShieldCheck size={16} />
                       <span>{isSearching ? (isEn ? "Verifying..." : "যাচাই হচ্ছে...") : (t.certPage?.verifyBtn || "Verify Certificate")}</span>
@@ -171,7 +171,7 @@ export default function CertificationPage() {
                           setCertId(id);
                           setSearchedCert(sampleCertificates[id]);
                         }}
-                        className="bg-white/10 hover:bg-white/20 text-[#34d399] px-2.5 py-1 rounded-lg border border-white/10 transition-colors cursor-pointer"
+                        className="bg-white/10 hover:bg-white/20 text-emerald-300 hover:text-white px-2.5 py-1 rounded-lg border border-white/10 transition-colors cursor-pointer"
                       >
                         {id}
                       </button>
@@ -180,7 +180,7 @@ export default function CertificationPage() {
                 </motion.div>
               </div>
 
-              {/* Right Column: Hologram Security Badge Visualizer (5 Cols) */}
+              {/* Right Column: Cryptographic Ledger Visualizer (5 Cols) */}
               <div className="lg:col-span-5">
                 <motion.div
                   initial={{ opacity: 0, x: 30 }}
@@ -189,13 +189,13 @@ export default function CertificationPage() {
                   className="bg-white/10 backdrop-blur-2xl rounded-3xl p-7 border border-white/20 shadow-2xl space-y-4 relative overflow-hidden"
                 >
                   <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                    <span className="text-xs font-mono font-bold text-amber-400">Cryptographic Ledger Vault</span>
-                    <span className="text-[10px] text-emerald-400 font-mono">● SHA-256 SECURED</span>
+                    <span className="text-xs font-mono font-bold text-emerald-400">Cryptographic Ledger Vault</span>
+                    <span className="text-[10px] text-rose-400 font-mono">● SHA-256 SECURED</span>
                   </div>
 
                   <div className="p-4 bg-black/40 rounded-2xl border border-white/5 space-y-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-xl bg-[#008744]/20 text-[#008744] flex items-center justify-center">
                         <Award size={26} />
                       </div>
                       <div>
@@ -209,7 +209,7 @@ export default function CertificationPage() {
                   </div>
 
                   <div className="pt-2 text-center text-xs text-slate-300 font-mono flex items-center justify-center gap-2">
-                    <CheckCircle2 size={14} className="text-[#34d399]" />
+                    <CheckCircle2 size={14} className="text-[#008744]" />
                     <span>Instant Employer Verification via QR & Web</span>
                   </div>
                 </motion.div>
@@ -230,11 +230,11 @@ export default function CertificationPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-emerald-500/40 shadow-[0_24px_60px_rgba(0,0,0,0.12)] relative overflow-hidden"
+                  className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-[#008744]/40 shadow-[0_24px_60px_rgba(0,0,0,0.12)] relative overflow-hidden"
                 >
                   {/* Decorative background watermark */}
-                  <div className="absolute top-0 right-0 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-                  <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-500 via-amber-400 to-teal-500" />
+                  <div className="absolute top-0 right-0 w-72 h-72 bg-[#008744]/5 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 left-0 right-0 h-2.5 bg-gradient-to-r from-[#008744] via-[#DE1F26] to-[#008744]" />
 
                   {/* Header of Certificate */}
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
@@ -242,7 +242,7 @@ export default function CertificationPage() {
                       <img src="/logo/logo.png" alt="US Software LTD" className="h-8 sm:h-10 w-auto object-contain" />
                       <div>
                         <div className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">OFFICIAL DIGITAL CREDENTIAL</div>
-                        <div className="text-xs font-bold text-emerald-600 flex items-center space-x-1">
+                        <div className="text-xs font-bold text-[#008744] flex items-center space-x-1">
                           <CheckCircle2 size={13} />
                           <span>{t.certPage?.verifiedBadge || "AUTHENTIC & VERIFIED"}</span>
                         </div>
@@ -260,7 +260,7 @@ export default function CertificationPage() {
 
                       <button
                         onClick={() => window.print()}
-                        className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#00a884] hover:bg-[#009473] text-white text-xs font-bold shadow-md shadow-[#00a884]/20 transition-all cursor-pointer"
+                        className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold shadow-md shadow-[#008744]/20 transition-all cursor-pointer"
                       >
                         <Download size={14} />
                         <span>{isEn ? "Download PDF" : "ডাউনলোড"}</span>
@@ -270,7 +270,7 @@ export default function CertificationPage() {
 
                   {/* Certificate Body */}
                   <div className="py-8 sm:py-12 text-center relative">
-                    <div className="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center mx-auto mb-4 border border-amber-500/20 shadow-sm">
+                    <div className="w-16 h-16 rounded-2xl bg-[#DE1F26]/10 text-[#DE1F26] flex items-center justify-center mx-auto mb-4 border border-[#DE1F26]/20 shadow-sm">
                       <Award size={32} />
                     </div>
 
@@ -284,11 +284,11 @@ export default function CertificationPage() {
                     </h2>
 
                     <div className="text-xs text-slate-500 font-medium mb-1">{t.certPage?.courseName || "For successfully completing the comprehensive program in"}</div>
-                    <h3 className="text-lg sm:text-xl font-bold text-[#0b2b46] max-w-2xl mx-auto mb-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#08121a] max-w-2xl mx-auto mb-4">
                       {searchedCert.course}
                     </h3>
 
-                    <div className="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 font-bold text-xs px-4 py-1.5 rounded-full border border-emerald-200 mb-8">
+                    <div className="inline-flex items-center space-x-2 bg-emerald-50 text-[#008744] font-bold text-xs px-4 py-1.5 rounded-full border border-emerald-200 mb-8">
                       <Check size={14} />
                       <span>{searchedCert.grade}</span>
                     </div>
@@ -309,7 +309,7 @@ export default function CertificationPage() {
                       </div>
                       <div>
                         <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Status</div>
-                        <div className="font-bold text-emerald-600 mt-0.5 flex items-center gap-1">
+                        <div className="font-bold text-[#008744] mt-0.5 flex items-center gap-1">
                           <CheckCircle2 size={12} />
                           <span>{searchedCert.status}</span>
                         </div>
@@ -320,11 +320,11 @@ export default function CertificationPage() {
                   {/* Footer Security Stamp */}
                   <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
                     <div className="flex items-center space-x-2">
-                      <Lock size={14} className="text-[#00a884]" />
+                      <Lock size={14} className="text-[#008744]" />
                       <span className="truncate max-w-xs sm:max-w-md">Cryptographic Hash: {searchedCert.credentialHash}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-slate-600 font-bold font-sans">
-                      <Shield size={14} className="text-blue-500" />
+                      <Shield size={14} className="text-[#DE1F26]" />
                       <span>ISO 9001:2015 Standard</span>
                     </div>
                   </div>
@@ -336,7 +336,7 @@ export default function CertificationPage() {
           </div>
         </section>
 
-        {/* RECOGNITION STANDARDS */}
+        {/* RECOGNITION STANDARDS IN RED & GREEN */}
         <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 mt-16 sm:mt-24">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
@@ -350,9 +350,9 @@ export default function CertificationPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <motion.div
               whileHover={{ y: -6, transition: { duration: 0.15 } }}
-              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:border-emerald-400/80 hover:shadow-[0_20px_45px_rgba(16,185,129,0.15)] transition-all duration-150 cursor-pointer"
+              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:border-[#008744]/80 hover:shadow-[0_20px_45px_rgba(0,135,68,0.15)] transition-all duration-150 cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#00a884] flex items-center justify-center mb-4 font-black">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#008744] flex items-center justify-center mb-4 font-black">
                 <FileCheck size={24} />
               </div>
               <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-1.5">
@@ -365,9 +365,9 @@ export default function CertificationPage() {
 
             <motion.div
               whileHover={{ y: -6, transition: { duration: 0.15 } }}
-              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:border-blue-400/80 hover:shadow-[0_20px_45px_rgba(59,130,246,0.15)] transition-all duration-150 cursor-pointer"
+              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:border-[#DE1F26]/80 hover:shadow-[0_20px_45px_rgba(222,31,38,0.15)] transition-all duration-150 cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center mb-4 font-black">
+              <div className="w-12 h-12 rounded-2xl bg-rose-500/10 text-[#DE1F26] flex items-center justify-center mb-4 font-black">
                 <Building size={24} />
               </div>
               <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-1.5">
@@ -380,9 +380,9 @@ export default function CertificationPage() {
 
             <motion.div
               whileHover={{ y: -6, transition: { duration: 0.15 } }}
-              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:border-purple-400/80 hover:shadow-[0_20px_45px_rgba(168,85,247,0.15)] transition-all duration-150 cursor-pointer"
+              className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:border-[#008744]/80 hover:shadow-[0_20px_45px_rgba(0,135,68,0.15)] transition-all duration-150 cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-4 font-black">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#008744] flex items-center justify-center mb-4 font-black">
                 <QrCode size={24} />
               </div>
               <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-1.5">

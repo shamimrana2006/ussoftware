@@ -43,7 +43,7 @@ export default function LoadingScreen() {
 
     let animationFrameId: number;
     const startTime = performance.now();
-    const duration = 1800; // 1.8s optimal duration: snappy, responsive, never feels frozen
+    const duration = 1800; // 1.8s optimal duration
 
     const updateProgress = (currentTime: number) => {
       const elapsed = currentTime - startTime;
@@ -52,16 +52,12 @@ export default function LoadingScreen() {
       // Multi-stage fluid progression for natural pacing
       let curvedProgress: number;
       if (rawProgress < 0.3) {
-        // Fast initial boot (0% -> 38%)
         curvedProgress = (rawProgress / 0.3) * 0.38;
       } else if (rawProgress < 0.7) {
-        // Steady asset load (38% -> 76%)
         curvedProgress = 0.38 + ((rawProgress - 0.3) / 0.4) * 0.38;
       } else if (rawProgress < 0.92) {
-        // Smooth transition (76% -> 95%)
         curvedProgress = 0.76 + ((rawProgress - 0.7) / 0.22) * 0.19;
       } else {
-        // Decisive finish to 100%
         curvedProgress = 0.95 + ((rawProgress - 0.92) / 0.08) * 0.05;
       }
 
@@ -86,7 +82,6 @@ export default function LoadingScreen() {
       if (rawProgress < 1) {
         animationFrameId = requestAnimationFrame(updateProgress);
       } else {
-        // Brief satisfying pause at 100%
         setTimeout(() => {
           setIsLoading(false);
           try {
@@ -120,9 +115,9 @@ export default function LoadingScreen() {
             y: -20,
             transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
           }}
-          className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#040810] select-none overflow-hidden p-6"
+          className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050b10] select-none overflow-hidden p-6"
         >
-          {/* Angled 3D Perspective Animated Cyber Grid */}
+          {/* Angled 3D Perspective Animated Cyber Grid with Red & Green Lines */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none [perspective:900px] flex items-center justify-center">
             <motion.div
               initial={{ 
@@ -149,10 +144,10 @@ export default function LoadingScreen() {
               className="absolute w-[200vw] h-[200vh] origin-center animate-grid-move"
               style={{
                 backgroundImage: `
-                  linear-gradient(rgba(0, 168, 132, 0.18) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(0, 168, 132, 0.18) 1px, transparent 1px),
-                  linear-gradient(rgba(6, 182, 212, 0.10) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(6, 182, 212, 0.10) 1px, transparent 1px)
+                  linear-gradient(rgba(0, 135, 68, 0.18) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(0, 135, 68, 0.18) 1px, transparent 1px),
+                  linear-gradient(rgba(222, 31, 38, 0.12) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(222, 31, 38, 0.12) 1px, transparent 1px)
                 `,
                 backgroundSize: "60px 60px, 60px 60px, 300px 300px, 300px 300px",
                 transformStyle: "preserve-3d",
@@ -161,31 +156,31 @@ export default function LoadingScreen() {
           </div>
 
           {/* Vignette & Soft Gradient Fade for Seamless Cyber Vibe */}
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#040810]/70 to-[#040810] pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#040810] via-transparent to-[#040810] pointer-events-none opacity-80" />
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#050b10]/70 to-[#050b10] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050b10] via-transparent to-[#050b10] pointer-events-none opacity-80" />
 
-          {/* Central Ambient Glow */}
-          <div className="absolute w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-gradient-to-tr from-[#00a884]/15 via-cyan-500/10 to-transparent rounded-full blur-[90px] pointer-events-none animate-pulse" />
+          {/* Central Ambient Glow in Red & Green */}
+          <div className="absolute w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-gradient-to-tr from-[#DE1F26]/15 via-[#008744]/15 to-transparent rounded-full blur-[90px] pointer-events-none animate-pulse" />
 
           {/* MAIN CENTER CONTAINER */}
           <div className="relative z-10 flex flex-col items-center justify-center max-w-lg w-full">
-            {/* Clean Logo (No background circle rings) */}
+            {/* Clean Logo Card */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="flex items-center justify-center mb-6"
             >
-              <div className="bg-[#07131e]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,168,132,0.18)]">
+              <div className="bg-[#081520]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,135,68,0.25)]">
                 <img
                   src="/logo/logo.png"
                   alt="US Software Logo"
-                  className="w-[120px] sm:w-[145px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,168,132,0.35)]"
+                  className="w-[120px] sm:w-[145px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,135,68,0.4)]"
                 />
               </div>
             </motion.div>
 
-            {/* INFINITY (∞) ANIMATION */}
+            {/* INFINITY (∞) ANIMATION IN BRAND RED & GREEN */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ 
@@ -200,14 +195,14 @@ export default function LoadingScreen() {
             >
               <svg
                 viewBox="0 0 240 120"
-                className="w-full h-full overflow-visible drop-shadow-[0_0_18px_rgba(0,168,132,0.5)]"
+                className="w-full h-full overflow-visible drop-shadow-[0_0_18px_rgba(0,135,68,0.5)]"
               >
                 <defs>
-                  {/* Neon Infinity Gradient */}
+                  {/* Neon Infinity Gradient Red to Green */}
                   <linearGradient id="infinityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#00a884" />
-                    <stop offset="50%" stopColor="#06b6d4" />
-                    <stop offset="100%" stopColor="#3b82f6" />
+                    <stop offset="0%" stopColor="#DE1F26" />
+                    <stop offset="50%" stopColor="#EF4444" />
+                    <stop offset="100%" stopColor="#008744" />
                   </linearGradient>
 
                   {/* Laser Tip Glow Filter */}
@@ -247,11 +242,11 @@ export default function LoadingScreen() {
                   }}
                 />
 
-                {/* Second Counter-Flow Neon Trail for Rich Continuous Movement */}
+                {/* Second Counter-Flow Trail in Brand Green */}
                 <motion.path
                   d={infinityPath}
                   fill="none"
-                  stroke="#00ffff"
+                  stroke="#10B981"
                   strokeWidth="3.5"
                   strokeLinecap="round"
                   strokeDasharray="60 360"
@@ -266,8 +261,8 @@ export default function LoadingScreen() {
                   opacity={0.85}
                 />
 
-                {/* Orbiting Energy Light Dot 1 */}
-                <circle r="4" fill="#ffffff" filter="url(#neonGlow)">
+                {/* Orbiting Energy Light Dot 1 (Red) */}
+                <circle r="4" fill="#DE1F26" filter="url(#neonGlow)">
                   <animateMotion
                     path={infinityPath}
                     dur="2.2s"
@@ -278,8 +273,8 @@ export default function LoadingScreen() {
                   />
                 </circle>
 
-                {/* Orbiting Energy Light Dot 2 (Opposite Phase) */}
-                <circle r="3.5" fill="#00a884" filter="url(#neonGlow)">
+                {/* Orbiting Energy Light Dot 2 (Green - Opposite Phase) */}
+                <circle r="4" fill="#008744" filter="url(#neonGlow)">
                   <animateMotion
                     path={infinityPath}
                     dur="2.2s"
@@ -299,17 +294,17 @@ export default function LoadingScreen() {
               >
                 {progress}
               </motion.span>
-              <span className="text-xl sm:text-2xl font-mono text-[#00a884] font-bold">
+              <span className="text-xl sm:text-2xl font-mono text-[#008744] font-bold">
                 %
               </span>
             </div>
 
-            {/* PROGRESS BAR */}
+            {/* PROGRESS BAR IN RED TO GREEN */}
             <div className="w-64 sm:w-80 md:w-96 mt-3 flex flex-col items-center">
               <div className="w-full h-2 bg-white/5 border border-white/10 rounded-full overflow-hidden relative p-[1px]">
                 {/* Progress Track */}
                 <motion.div
-                  className="h-full bg-gradient-to-r from-[#00a884] via-emerald-400 to-cyan-400 rounded-full relative"
+                  className="h-full bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744] rounded-full relative"
                   style={{ width: `${progress}%` }}
                   transition={{ ease: "easeOut", duration: 0.1 }}
                 >
@@ -320,16 +315,16 @@ export default function LoadingScreen() {
 
               {/* Progress Stage Markers */}
               <div className="w-full flex justify-between items-center mt-2 px-1 text-[9px] font-mono tracking-wider">
-                <span className={progress >= 25 ? "text-emerald-400 font-bold" : "text-gray-600"}>BOOT</span>
-                <span className={progress >= 50 ? "text-emerald-400 font-bold" : "text-gray-600"}>ASSETS</span>
+                <span className={progress >= 25 ? "text-rose-400 font-bold" : "text-gray-600"}>BOOT</span>
+                <span className={progress >= 50 ? "text-red-400 font-bold" : "text-gray-600"}>ASSETS</span>
                 <span className={progress >= 75 ? "text-emerald-400 font-bold" : "text-gray-600"}>RENDER</span>
-                <span className={progress >= 100 ? "text-cyan-400 font-bold" : "text-gray-600"}>READY</span>
+                <span className={progress >= 100 ? "text-[#008744] font-bold" : "text-gray-600"}>READY</span>
               </div>
             </div>
 
             {/* DYNAMIC STATUS BADGE */}
             <div className="mt-5 flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-md shadow-[0_2px_15px_rgba(0,0,0,0.4)]">
-              <CurrentIcon className="w-3.5 h-3.5 text-[#00a884] animate-spin-slow" />
+              <CurrentIcon className="w-3.5 h-3.5 text-[#008744] animate-spin-slow" />
               <span className="text-[11px] font-mono tracking-wider text-gray-300 uppercase">
                 {statusMessages[statusIndex]?.text}
               </span>

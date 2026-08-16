@@ -12,75 +12,75 @@ export default function SectionDivider() {
   const features = [
     {
       icon: Code2,
-      color: "from-emerald-500 to-teal-600",
+      color: "from-emerald-500 to-green-700",
       badge: isEn ? "Practical" : "প্র্যাকটিক্যাল",
       title: t.featuresBar?.feature1?.title || "Real-World Projects",
       desc: t.featuresBar?.feature1?.desc || "Build production-grade applications",
-      lineGrad: "from-transparent via-emerald-400 via-[#00f5a0] to-transparent",
-      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(16,185,129,0.14)]",
+      lineGrad: "from-transparent via-emerald-400 via-[#008744] to-transparent",
+      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(0,135,68,0.16)]",
       accentBg: "group-hover:bg-emerald-500/[0.02]",
-      accentText: "group-hover:text-emerald-600",
-      accentCheck: "group-hover:text-emerald-600",
-      accentBadge: "group-hover:bg-emerald-500/10 group-hover:text-emerald-600 group-hover:border-emerald-500/30",
-      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(16,185,129,0.35)]",
+      accentText: "group-hover:text-[#008744]",
+      accentCheck: "group-hover:text-[#008744]",
+      accentBadge: "group-hover:bg-emerald-500/10 group-hover:text-[#008744] group-hover:border-emerald-500/30",
+      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(0,135,68,0.35)]",
       spotlight: "bg-emerald-500/10",
     },
     {
       icon: Users,
-      color: "from-blue-500 to-indigo-600",
+      color: "from-[#DE1F26] to-rose-700",
       badge: isEn ? "1-on-1" : "১-অন-১",
       title: t.featuresBar?.feature2?.title || "Senior Mentorship",
       desc: t.featuresBar?.feature2?.desc || "1-on-1 guidance from tech leaders",
-      lineGrad: "from-transparent via-blue-400 via-[#00c6ff] to-transparent",
-      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(59,130,246,0.14)]",
-      accentBg: "group-hover:bg-blue-500/[0.02]",
-      accentText: "group-hover:text-blue-600",
-      accentCheck: "group-hover:text-blue-600",
-      accentBadge: "group-hover:bg-blue-500/10 group-hover:text-blue-600 group-hover:border-blue-500/30",
-      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(59,130,246,0.35)]",
-      spotlight: "bg-blue-500/10",
+      lineGrad: "from-transparent via-red-400 via-[#DE1F26] to-transparent",
+      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(222,31,38,0.16)]",
+      accentBg: "group-hover:bg-red-500/[0.02]",
+      accentText: "group-hover:text-[#DE1F26]",
+      accentCheck: "group-hover:text-[#DE1F26]",
+      accentBadge: "group-hover:bg-red-500/10 group-hover:text-[#DE1F26] group-hover:border-red-500/30",
+      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(222,31,38,0.35)]",
+      spotlight: "bg-red-500/10",
     },
     {
       icon: Award,
-      color: "from-purple-500 to-pink-600",
+      color: "from-[#008744] to-teal-800",
       badge: isEn ? "Verified" : "ভেরিফাইড",
       title: t.featuresBar?.feature3?.title || "Global Certification",
       desc: t.featuresBar?.feature3?.desc || "Industry-recognized credentials",
-      lineGrad: "from-transparent via-purple-400 via-[#d946ef] to-transparent",
-      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(168,85,247,0.14)]",
-      accentBg: "group-hover:bg-purple-500/[0.02]",
-      accentText: "group-hover:text-purple-600",
-      accentCheck: "group-hover:text-purple-600",
-      accentBadge: "group-hover:bg-purple-500/10 group-hover:text-purple-600 group-hover:border-purple-500/30",
-      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(168,85,247,0.35)]",
-      spotlight: "bg-purple-500/10",
+      lineGrad: "from-transparent via-emerald-400 via-[#008744] to-transparent",
+      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(0,135,68,0.16)]",
+      accentBg: "group-hover:bg-emerald-500/[0.02]",
+      accentText: "group-hover:text-[#008744]",
+      accentCheck: "group-hover:text-[#008744]",
+      accentBadge: "group-hover:bg-emerald-500/10 group-hover:text-[#008744] group-hover:border-emerald-500/30",
+      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(0,135,68,0.35)]",
+      spotlight: "bg-emerald-500/10",
     },
     {
       icon: Briefcase,
-      color: "from-amber-500 to-orange-600",
+      color: "from-rose-500 to-[#DE1F26]",
       badge: isEn ? "Career" : "ক্যারিয়ার",
       title: t.featuresBar?.feature4?.title || "Career Placement",
       desc: t.featuresBar?.feature4?.desc || "Direct access to 120+ tech partners",
-      lineGrad: "from-transparent via-amber-400 via-[#ff7e5f] to-transparent",
-      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(249,115,22,0.14)]",
-      accentBg: "group-hover:bg-orange-500/[0.02]",
-      accentText: "group-hover:text-orange-600",
-      accentCheck: "group-hover:text-orange-600",
-      accentBadge: "group-hover:bg-orange-500/10 group-hover:text-orange-600 group-hover:border-orange-500/30",
-      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(249,115,22,0.35)]",
-      spotlight: "bg-orange-500/10",
+      lineGrad: "from-transparent via-rose-400 via-[#DE1F26] to-transparent",
+      hoverShadow: "group-hover:shadow-[0_16px_35px_rgba(222,31,38,0.16)]",
+      accentBg: "group-hover:bg-red-500/[0.02]",
+      accentText: "group-hover:text-[#DE1F26]",
+      accentCheck: "group-hover:text-[#DE1F26]",
+      accentBadge: "group-hover:bg-red-500/10 group-hover:text-[#DE1F26] group-hover:border-red-500/30",
+      iconGlow: "group-hover:shadow-[0_8px_20px_rgba(222,31,38,0.35)]",
+      spotlight: "bg-red-500/10",
     },
   ];
 
   const lineAnimationVariants: Variants = {
     rest: { 
       scaleX: 0, 
-      opacity: 0,
+      opacity: 0, 
       transition: { duration: 0.2, ease: "easeOut" } 
     },
     hover: { 
       scaleX: 1, 
-      opacity: 1,
+      opacity: 1, 
       transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } 
     }
   };
@@ -113,14 +113,14 @@ export default function SectionDivider() {
                 <motion.div
                   variants={lineAnimationVariants}
                   style={{ transformOrigin: "center" }}
-                  className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${item.lineGrad} z-20 pointer-events-none`}
+                  className={`absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r ${item.lineGrad} z-20 pointer-events-none`}
                 />
 
                 {/* 2. BOTTOM BORDER: EXPANDS FROM CENTER WITH 0 OPACITY FADED EDGES */}
                 <motion.div
                   variants={lineAnimationVariants}
                   style={{ transformOrigin: "center" }}
-                  className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r ${item.lineGrad} z-20 pointer-events-none`}
+                  className={`absolute bottom-0 left-0 right-0 h-[2.5px] bg-gradient-to-r ${item.lineGrad} z-20 pointer-events-none`}
                 />
 
                 {/* Subtle Radial Spotlight Glow on Hover */}
@@ -156,7 +156,7 @@ export default function SectionDivider() {
 
                 {/* Bottom Active Status Accent */}
                 <div className="pt-3 mt-4 border-t border-slate-100/90 flex items-center justify-between text-[11px] font-medium text-slate-400 relative z-10">
-                  <span className={`flex items-center gap-1.5 text-emerald-600 ${item.accentCheck} font-semibold transition-colors duration-150`}>
+                  <span className={`flex items-center gap-1.5 text-[#008744] ${item.accentCheck} font-semibold transition-colors duration-150`}>
                     <CheckCircle2 size={13} className="group-hover:scale-110 transition-transform duration-150" />
                     <span>{isEn ? "Included" : "অন্তর্ভুক্ত"}</span>
                   </span>

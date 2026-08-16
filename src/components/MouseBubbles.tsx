@@ -15,7 +15,7 @@ interface Bubble {
   duration?: number;
 }
 
-const colors = ["#00a884", "#3b82f6", "#f97316", "#a855f7", "#ec4899", "#fbbf24"];
+const colors = ["#DE1F26", "#008744", "#EF4444", "#10B981", "#B91C1C", "#056839"];
 
 export default function MouseBubbles() {
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
@@ -87,7 +87,7 @@ export default function MouseBubbles() {
         {bubbles.map((b) => (
           <motion.div
             key={b.id}
-            initial={{ opacity: 0.5, x: b.x, y: b.y, scale: b.burst ? 1.5 : 1 }}
+            initial={{ opacity: 0.6, x: b.x, y: b.y, scale: b.burst ? 1.5 : 1 }}
             animate={{
               opacity: 0,
               x: b.targetX,
@@ -102,7 +102,7 @@ export default function MouseBubbles() {
               height: b.size,
               backgroundColor: b.color,
               borderRadius: "50%",
-              boxShadow: `0 0 10px ${b.color}80`,
+              boxShadow: `0 0 10px ${b.color}90`,
             }}
           />
         ))}

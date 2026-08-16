@@ -98,7 +98,8 @@ export default function RobotCanvas() {
       <Canvas camera={{ position: [0, 0, 4.5], fov: 45 }}>
         <ambientLight intensity={1.6} />
         <directionalLight position={[10, 10, 5]} intensity={2.4} />
-        <directionalLight position={[-10, 10, -5]} intensity={1.4} color="#00a884" />
+        <directionalLight position={[-10, 10, -5]} intensity={1.5} color="#008744" />
+        <directionalLight position={[5, -10, -5]} intensity={1.0} color="#DE1F26" />
         <Environment preset="city" />
 
         {/* Smooth Drag & Rotate OrbitControls */}
