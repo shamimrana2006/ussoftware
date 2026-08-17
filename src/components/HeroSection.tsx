@@ -75,24 +75,17 @@ const Counter = ({ end, suffix = "", duration = 2.5 }: { end: number, suffix?: s
 };
 
 const heroBackgroundBubbles = [
-  { id: 1, left: "4%", bottom: "12%", size: 8, color: "#DE1F26", duration: 6.5, delay: 0, xOffset: 12 },
-  { id: 2, left: "10%", bottom: "6%", size: 12, color: "#008744", duration: 7.8, delay: 1.5, xOffset: -14 },
-  { id: 3, left: "7%", bottom: "28%", size: 10, color: "#EF4444", duration: 8.2, delay: 2.8, xOffset: 16 },
-  { id: 4, left: "16%", bottom: "18%", size: 6, color: "#10B981", duration: 6.0, delay: 0.8, xOffset: -10 },
-  { id: 5, left: "2%", bottom: "38%", size: 14, color: "#DE1F26", duration: 9.0, delay: 3.5, xOffset: 18 },
-  { id: 6, left: "14%", bottom: "45%", size: 7, color: "#008744", duration: 7.2, delay: 2.0, xOffset: -12 },
-  { id: 7, left: "22%", bottom: "10%", size: 11, color: "#EF4444", duration: 8.0, delay: 4.2, xOffset: 10 },
-  { id: 8, left: "28%", bottom: "25%", size: 8, color: "#10B981", duration: 6.8, delay: 1.8, xOffset: -8 },
-  { id: 9, left: "34%", bottom: "14%", size: 13, color: "#DE1F26", duration: 7.5, delay: 0.4, xOffset: 15 },
-  { id: 10, left: "42%", bottom: "8%", size: 7, color: "#008744", duration: 8.5, delay: 3.2, xOffset: -14 },
-  { id: 11, left: "50%", bottom: "18%", size: 10, color: "#EF4444", duration: 7.0, delay: 1.2, xOffset: 12 },
-  { id: 12, left: "62%", bottom: "10%", size: 8, color: "#10B981", duration: 9.2, delay: 2.6, xOffset: -10 },
-  { id: 13, left: "72%", bottom: "22%", size: 12, color: "#DE1F26", duration: 6.6, delay: 0.6, xOffset: 16 },
-  { id: 14, left: "80%", bottom: "12%", size: 7, color: "#008744", duration: 8.2, delay: 3.8, xOffset: -12 },
-  { id: 15, left: "88%", bottom: "20%", size: 11, color: "#EF4444", duration: 7.8, delay: 1.4, xOffset: 14 },
-  { id: 16, left: "94%", bottom: "8%", size: 6, color: "#10B981", duration: 8.6, delay: 2.4, xOffset: -10 },
-  { id: 17, left: "9%", bottom: "55%", size: 9, color: "#DE1F26", duration: 6.8, delay: 4.8, xOffset: 10 },
-  { id: 18, left: "20%", bottom: "60%", size: 12, color: "#008744", duration: 7.4, delay: 5.2, xOffset: -14 },
+  // Lower & mid floating bubbles
+  { id: 1, left: "7%", bottom: "15%", size: 8, color: "#DE1F26", duration: 13, delay: 0, xOffset: 12 },
+  { id: 2, left: "15%", bottom: "25%", size: 10, color: "#008744", duration: 15, delay: 3, xOffset: -10 },
+  { id: 3, left: "35%", bottom: "20%", size: 7, color: "#EF4444", duration: 14, delay: 1.5, xOffset: 14 },
+  { id: 4, left: "65%", bottom: "18%", size: 9, color: "#10B981", duration: 16, delay: 5, xOffset: -12 },
+  { id: 5, left: "85%", bottom: "22%", size: 8, color: "#DE1F26", duration: 13.5, delay: 2.5, xOffset: 10 },
+  
+  // Upper area floating bubbles (clearly visible in top region)
+  { id: 6, left: "10%", bottom: "70%", size: 11, color: "#DE1F26", duration: 10.5, delay: 0.5, xOffset: 15 },
+  { id: 7, left: "24%", bottom: "76%", size: 9, color: "#008744", duration: 12, delay: 4, xOffset: -12 },
+  { id: 8, left: "80%", bottom: "72%", size: 10, color: "#10B981", duration: 11.5, delay: 2, xOffset: 10 },
 ];
 
 export default function HeroSection() {
@@ -123,12 +116,71 @@ export default function HeroSection() {
       style={{ fontFamily: "var(--font-baloo), var(--font-hind), sans-serif" }}
       className="relative overflow-hidden bg-gradient-to-br from-[#fcfdfd] via-[#f5f9f7] to-[#edf4f0] pt-6 sm:pt-12 lg:pt-20 pb-8 sm:pb-12 lg:pb-24 flex items-center min-h-[90vh]"
     >
-      {/* Dynamic Background Mesh Gradients in Red & Green */}
-      <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-[#008744]/18 to-transparent rounded-full blur-[100px] pointer-events-none animate-pulse duration-[8000ms]" />
-      <div className="absolute bottom-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-gradient-to-tr from-[#DE1F26]/12 via-rose-500/8 to-transparent rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-[20%] left-[40%] w-[30vw] h-[30vw] bg-[#008744]/8 rounded-full blur-[120px] pointer-events-none mix-blend-multiply" />
+      {/* Dynamic Soft Background Mesh Gradients in Red & Green (Low Opacity) */}
+      <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-[#008744]/10 to-transparent rounded-full blur-[130px] pointer-events-none animate-pulse duration-[9000ms]" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-gradient-to-tr from-[#DE1F26]/7 via-rose-500/5 to-transparent rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-[20%] left-[40%] w-[30vw] h-[30vw] bg-[#008744]/5 rounded-full blur-[140px] pointer-events-none mix-blend-multiply" />
 
-      {/* Ambient Rising Glowing Bubbles in Background */}
+      {/* Animated Subtle Flowing Cyber Wave Lines (3 Harmonious Layers) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
+        <svg className="w-full h-full min-h-[600px] opacity-25" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="heroWaveRed" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#DE1F26" stopOpacity="0" />
+              <stop offset="25%" stopColor="#DE1F26" stopOpacity="0.45" />
+              <stop offset="70%" stopColor="#008744" stopOpacity="0.45" />
+              <stop offset="100%" stopColor="#008744" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="heroWaveGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#008744" stopOpacity="0" />
+              <stop offset="35%" stopColor="#008744" stopOpacity="0.4" />
+              <stop offset="75%" stopColor="#DE1F26" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#DE1F26" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="heroWaveTop" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#008744" stopOpacity="0" />
+              <stop offset="30%" stopColor="#DE1F26" stopOpacity="0.35" />
+              <stop offset="70%" stopColor="#008744" stopOpacity="0.35" />
+              <stop offset="100%" stopColor="#DE1F26" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+
+          {/* Wave 1: Upper flowing arc */}
+          <motion.path
+            d="M-80,140 C300,60 580,240 880,120 C1180,20 1360,180 1520,100"
+            stroke="url(#heroWaveTop)"
+            strokeWidth="1.2"
+            fill="none"
+            strokeDasharray="5 7"
+            animate={{ strokeDashoffset: [0, -120] }}
+            transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+          />
+
+          {/* Wave 2: Middle sweeping wave */}
+          <motion.path
+            d="M-80,240 C220,120 420,380 720,260 C1020,140 1220,350 1520,230"
+            stroke="url(#heroWaveRed)"
+            strokeWidth="1.5"
+            fill="none"
+            strokeDasharray="6 8"
+            animate={{ strokeDashoffset: [0, -140] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          />
+
+          {/* Wave 3: Lower undulating wave */}
+          <motion.path
+            d="M-80,380 C280,480 540,210 840,350 C1140,490 1280,230 1520,340"
+            stroke="url(#heroWaveGreen)"
+            strokeWidth="1.3"
+            fill="none"
+            strokeDasharray="4 6"
+            animate={{ strokeDashoffset: [0, 100] }}
+            transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
+          />
+        </svg>
+      </div>
+
+      {/* Ambient Rising Glowing Bubbles (With Distinct Upper Floating Bubbles) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         {heroBackgroundBubbles.map((bubble) => (
           <motion.div
@@ -140,13 +192,13 @@ export default function HeroSection() {
               height: bubble.size,
               backgroundColor: bubble.color,
               borderRadius: "50%",
-              boxShadow: `0 0 12px ${bubble.color}95`,
+              boxShadow: `0 0 12px ${bubble.color}75`,
             }}
             animate={{
-              y: [0, -140, -320],
+              y: [0, -100, -220],
               x: [0, bubble.xOffset, -bubble.xOffset, bubble.xOffset * 0.5, 0],
-              opacity: [0, 0.75, 0.9, 0.45, 0],
-              scale: [0.4, 1.25, 1, 0.85, 0.3],
+              opacity: [0, 0.45, 0.6, 0.25, 0],
+              scale: [0.5, 1.15, 0.95, 0.75, 0.3],
             }}
             transition={{
               duration: bubble.duration,
@@ -159,9 +211,9 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(8,18,26,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(8,18,26,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+      {/* Subtle Grid Pattern Overlay */}
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(8,18,26,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(8,18,26,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 w-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center relative z-10">
 
@@ -286,23 +338,23 @@ export default function HeroSection() {
         {/* RIGHT COMPONENT: Text & CTA */}
         <motion.div className="space-y-7 relative z-30 order-1 lg:order-2 lg:pl-10" variants={containerVariants} initial="hidden" animate="visible">
           
-          {/* Animated Background Floating Shapes in Red & Green */}
+          {/* Animated Background Floating Shapes in Red & Green (Low Opacity & Clean) */}
           <div className="absolute inset-0 pointer-events-none z-[-1] overflow-visible">
             {/* Center Ambient Glow */}
             <motion.div 
-              animate={{ scale: [1, 1.2, 1], opacity: [0.12, 0.22, 0.12] }}
+              animate={{ scale: [1, 1.2, 1], opacity: [0.04, 0.08, 0.04] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] bg-gradient-to-tr from-[#008744]/30 via-[#DE1F26]/20 to-transparent rounded-full blur-[60px]"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] bg-gradient-to-tr from-[#008744]/20 via-[#DE1F26]/12 to-transparent rounded-full blur-[60px]"
             />
 
             {/* Floating Shape 1: Sparkle Star (Top Right of Title) */}
             <motion.div
               animate={{ y: [0, -14, 0], rotate: [0, 180, 360], scale: [1, 1.15, 1] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[-3%] right-[18%] sm:right-[22%] drop-shadow-[0_0_12px_rgba(0,135,68,0.4)]"
+              className="absolute top-[-3%] right-[18%] sm:right-[22%]"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#008744" fillOpacity="0.45" stroke="#008744" strokeWidth="1.5"/>
+                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#008744" fillOpacity="0.18" stroke="#008744" strokeWidth="1.5" strokeOpacity="0.28"/>
               </svg>
             </motion.div>
 
@@ -310,10 +362,10 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, 12, 0], x: [0, -6, 0], rotate: [20, 80, 20] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-[8%] right-[8%] sm:right-[12%] drop-shadow-[0_0_12px_rgba(222,31,38,0.35)]"
+              className="absolute top-[8%] right-[8%] sm:right-[12%]"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <rect x="2" y="2" width="20" height="20" rx="6" fill="#DE1F26" fillOpacity="0.25" stroke="#DE1F26" strokeWidth="1.5"/>
+                <rect x="2" y="2" width="20" height="20" rx="6" fill="#DE1F26" fillOpacity="0.1" stroke="#DE1F26" strokeWidth="1.5" strokeOpacity="0.2"/>
               </svg>
             </motion.div>
 
@@ -321,10 +373,10 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -10, 0], scale: [1, 1.15, 1] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute top-[26%] right-[4%] sm:right-[8%] drop-shadow-[0_0_10px_rgba(0,135,68,0.4)]"
+              className="absolute top-[26%] right-[4%] sm:right-[8%]"
             >
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="9.5" stroke="#008744" strokeWidth="2" strokeOpacity="0.55"/>
+                <circle cx="12" cy="12" r="9.5" stroke="#008744" strokeWidth="1.5" strokeOpacity="0.22"/>
               </svg>
             </motion.div>
 
@@ -332,10 +384,10 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, 10, 0], rotate: [0, -180, -360], scale: [0.9, 1.2, 0.9] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-              className="absolute top-[42%] right-[10%] sm:right-[14%] drop-shadow-[0_0_10px_rgba(222,31,38,0.4)]"
+              className="absolute top-[42%] right-[10%] sm:right-[14%]"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#DE1F26" fillOpacity="0.4" stroke="#DE1F26" strokeWidth="1.5"/>
+                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#DE1F26" fillOpacity="0.15" stroke="#DE1F26" strokeWidth="1.5" strokeOpacity="0.22"/>
               </svg>
             </motion.div>
 
@@ -343,11 +395,11 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -12, 0], x: [0, 6, 0] }}
               transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="absolute top-[60%] right-[10%] sm:right-[14%] drop-shadow-[0_0_12px_rgba(0,135,68,0.5)]"
+              className="absolute top-[60%] right-[10%] sm:right-[14%]"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="8" fill="#008744" fillOpacity="0.6"/>
-                <circle cx="12" cy="12" r="11" stroke="#008744" strokeWidth="1" strokeOpacity="0.3"/>
+                <circle cx="12" cy="12" r="8" fill="#008744" fillOpacity="0.25"/>
+                <circle cx="12" cy="12" r="11" stroke="#008744" strokeWidth="1" strokeOpacity="0.15"/>
               </svg>
             </motion.div>
 
@@ -355,10 +407,10 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -12, 0], rotate: [45, 135, 45], scale: [1, 1.15, 1] }}
               transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-              className="absolute top-[56%] left-[2%] drop-shadow-[0_0_10px_rgba(222,31,38,0.35)]"
+              className="absolute top-[56%] left-[2%]"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="3" width="18" height="18" rx="4" transform="rotate(45 12 12)" fill="#DE1F26" fillOpacity="0.25" stroke="#DE1F26" strokeWidth="1.5"/>
+                <rect x="3" y="3" width="18" height="18" rx="4" transform="rotate(45 12 12)" fill="#DE1F26" fillOpacity="0.1" stroke="#DE1F26" strokeWidth="1.5" strokeOpacity="0.2"/>
               </svg>
             </motion.div>
 
@@ -366,10 +418,10 @@ export default function HeroSection() {
             <motion.div
               animate={{ rotate: 360, scale: [1, 1.08, 1] }}
               transition={{ rotate: { duration: 18, repeat: Infinity, ease: "linear" }, scale: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
-              className="absolute top-[-3%] left-[1%] drop-shadow-[0_0_8px_rgba(0,135,68,0.3)]"
+              className="absolute top-[-3%] left-[1%]"
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="#008744" strokeWidth="1.5" strokeDasharray="4 3" strokeOpacity="0.45"/>
+                <circle cx="12" cy="12" r="10" stroke="#008744" strokeWidth="1.5" strokeDasharray="4 3" strokeOpacity="0.2"/>
               </svg>
             </motion.div>
           </div>
