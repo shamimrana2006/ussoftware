@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Hind_Siliguri } from "next/font/google";
+import { Geist, Geist_Mono, Hind_Siliguri, Baloo_Da_2 } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -14,6 +14,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const balooDa2 = Baloo_Da_2({
+  weight: ['400', '500', '600', '700', '800'],
+  variable: "--font-baloo",
+  subsets: ["bengali", "latin"],
+  display: "swap",
 });
 
 const hindSiliguri = Hind_Siliguri({
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${balooDa2.variable} ${hindSiliguri.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans" style={{ fontFamily: "var(--font-hind), sans-serif" }}>
         <LoadingScreen />

@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ShieldCheck, Cloud, Megaphone, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play } from "lucide-react";
+import { ArrowRight, ShieldCheck, Cloud, Megaphone, Rocket, Cpu, Users, LineChart, Activity, Zap, CheckCircle2, BookOpen, Award, MonitorPlay, Video, Briefcase, GraduationCap, Code, Network, PenTool, Lock, Pause, Volume2, Maximize, Bot, Braces, Play, Star, Sparkles } from "lucide-react";
 import RobotCanvas from "./RobotCanvas";
 import Link from "next/link";
 
@@ -35,14 +35,18 @@ const Typewriter = ({ words }: { words: string[] }) => {
   }, [currentText, isDeleting, currentWordIndex, words]);
 
   return (
-    <div className="inline-flex items-center bg-white/70 backdrop-blur-md border border-[#008744]/25 rounded-full px-4 py-1.5 shadow-[0_4px_15px_rgba(0,135,68,0.1)] min-w-[260px]">
-      <Cpu size={16} className="text-[#008744] mr-2" />
-      <span className="text-[#08121a] font-mono font-bold text-[15px]">{currentText}</span>
-      <motion.span
-        animate={{ opacity: [1, 0] }}
-        transition={{ repeat: Infinity, duration: 0.8 }}
-        className="w-[8px] h-[18px] bg-gradient-to-b from-[#DE1F26] to-[#008744] inline-block ml-1.5 rounded-full"
-      />
+    <div className="inline-flex items-center w-[290px] sm:w-[320px] h-[42px] bg-white/85 backdrop-blur-md border border-[#008744]/25 rounded-full px-4 shadow-[0_4px_15px_rgba(0,135,68,0.08)] select-none">
+      <Cpu size={16} className="text-[#008744] mr-2.5 flex-shrink-0" />
+      <div className="flex items-center min-w-0 flex-1">
+        <span className="text-[#08121a] font-normal text-[15px] sm:text-[16px] tracking-wide whitespace-nowrap overflow-hidden">
+          {currentText}
+        </span>
+        <motion.span
+          animate={{ opacity: [1, 0] }}
+          transition={{ repeat: Infinity, duration: 0.8 }}
+          className="w-[2.5px] h-[16px] bg-gradient-to-b from-[#DE1F26] to-[#008744] inline-block ml-1 flex-shrink-0 rounded-full"
+        />
+      </div>
     </div>
   );
 };
@@ -70,8 +74,29 @@ const Counter = ({ end, suffix = "", duration = 2.5 }: { end: number, suffix?: s
   return <span>{formattedCount}{suffix}</span>;
 };
 
+const heroBackgroundBubbles = [
+  { id: 1, left: "4%", bottom: "12%", size: 8, color: "#DE1F26", duration: 6.5, delay: 0, xOffset: 12 },
+  { id: 2, left: "10%", bottom: "6%", size: 12, color: "#008744", duration: 7.8, delay: 1.5, xOffset: -14 },
+  { id: 3, left: "7%", bottom: "28%", size: 10, color: "#EF4444", duration: 8.2, delay: 2.8, xOffset: 16 },
+  { id: 4, left: "16%", bottom: "18%", size: 6, color: "#10B981", duration: 6.0, delay: 0.8, xOffset: -10 },
+  { id: 5, left: "2%", bottom: "38%", size: 14, color: "#DE1F26", duration: 9.0, delay: 3.5, xOffset: 18 },
+  { id: 6, left: "14%", bottom: "45%", size: 7, color: "#008744", duration: 7.2, delay: 2.0, xOffset: -12 },
+  { id: 7, left: "22%", bottom: "10%", size: 11, color: "#EF4444", duration: 8.0, delay: 4.2, xOffset: 10 },
+  { id: 8, left: "28%", bottom: "25%", size: 8, color: "#10B981", duration: 6.8, delay: 1.8, xOffset: -8 },
+  { id: 9, left: "34%", bottom: "14%", size: 13, color: "#DE1F26", duration: 7.5, delay: 0.4, xOffset: 15 },
+  { id: 10, left: "42%", bottom: "8%", size: 7, color: "#008744", duration: 8.5, delay: 3.2, xOffset: -14 },
+  { id: 11, left: "50%", bottom: "18%", size: 10, color: "#EF4444", duration: 7.0, delay: 1.2, xOffset: 12 },
+  { id: 12, left: "62%", bottom: "10%", size: 8, color: "#10B981", duration: 9.2, delay: 2.6, xOffset: -10 },
+  { id: 13, left: "72%", bottom: "22%", size: 12, color: "#DE1F26", duration: 6.6, delay: 0.6, xOffset: 16 },
+  { id: 14, left: "80%", bottom: "12%", size: 7, color: "#008744", duration: 8.2, delay: 3.8, xOffset: -12 },
+  { id: 15, left: "88%", bottom: "20%", size: 11, color: "#EF4444", duration: 7.8, delay: 1.4, xOffset: 14 },
+  { id: 16, left: "94%", bottom: "8%", size: 6, color: "#10B981", duration: 8.6, delay: 2.4, xOffset: -10 },
+  { id: 17, left: "9%", bottom: "55%", size: 9, color: "#DE1F26", duration: 6.8, delay: 4.8, xOffset: 10 },
+  { id: 18, left: "20%", bottom: "60%", size: 12, color: "#008744", duration: 7.4, delay: 5.2, xOffset: -14 },
+];
+
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -94,11 +119,45 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#fcfdfd] via-[#f5f9f7] to-[#edf4f0] pt-6 sm:pt-12 lg:pt-20 pb-8 sm:pb-12 lg:pb-24 flex items-center min-h-[90vh]">
+    <section 
+      style={{ fontFamily: "var(--font-baloo), var(--font-hind), sans-serif" }}
+      className="relative overflow-hidden bg-gradient-to-br from-[#fcfdfd] via-[#f5f9f7] to-[#edf4f0] pt-6 sm:pt-12 lg:pt-20 pb-8 sm:pb-12 lg:pb-24 flex items-center min-h-[90vh]"
+    >
       {/* Dynamic Background Mesh Gradients in Red & Green */}
       <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-[#008744]/18 to-transparent rounded-full blur-[100px] pointer-events-none animate-pulse duration-[8000ms]" />
       <div className="absolute bottom-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-gradient-to-tr from-[#DE1F26]/12 via-rose-500/8 to-transparent rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-[20%] left-[40%] w-[30vw] h-[30vw] bg-[#008744]/8 rounded-full blur-[120px] pointer-events-none mix-blend-multiply" />
+
+      {/* Ambient Rising Glowing Bubbles in Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        {heroBackgroundBubbles.map((bubble) => (
+          <motion.div
+            key={bubble.id}
+            style={{
+              left: bubble.left,
+              bottom: bubble.bottom,
+              width: bubble.size,
+              height: bubble.size,
+              backgroundColor: bubble.color,
+              borderRadius: "50%",
+              boxShadow: `0 0 12px ${bubble.color}95`,
+            }}
+            animate={{
+              y: [0, -140, -320],
+              x: [0, bubble.xOffset, -bubble.xOffset, bubble.xOffset * 0.5, 0],
+              opacity: [0, 0.75, 0.9, 0.45, 0],
+              scale: [0.4, 1.25, 1, 0.85, 0.3],
+            }}
+            transition={{
+              duration: bubble.duration,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: bubble.delay,
+            }}
+            className="absolute pointer-events-none"
+          />
+        ))}
+      </div>
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none"></div>
@@ -109,88 +168,118 @@ export default function HeroSection() {
         {/* LEFT COMPONENT: AI Video Hub Design */}
         <div className="relative h-[340px] sm:h-[450px] lg:h-[600px] w-full flex items-center justify-center order-2 lg:order-1 mt-6 lg:mt-0">
 
-          {/* Orbital Rings Background - Red & Green Cyber Aesthetics */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            {/* Inner dashed ring */}
-            <div className="w-[350px] h-[350px] rounded-full border-[1.5px] border-[#008744]/25 border-dashed absolute animate-[spin_40s_linear_infinite]"></div>
-            {/* Middle solid ring */}
-            <div className="w-[500px] h-[500px] rounded-full border border-[#DE1F26]/15 absolute"></div>
-            {/* Outer dashed ring */}
-            <div className="w-[700px] h-[700px] rounded-full border border-[#008744]/20 border-dashed absolute animate-[spin_60s_linear_infinite_reverse]"></div>
+          {/* Centralized Video Hub Container */}
+          <div className="relative w-[95%] max-w-[580px] aspect-[16/10] flex items-center justify-center">
 
-            {/* Glowing Orbiting Orbs in Brand Red & Green */}
-            <motion.div animate={{ rotate: 360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} className="absolute w-[500px] h-[500px]">
-              <div className="absolute -top-2 left-1/2 w-4 h-4 bg-[#DE1F26] rounded-full shadow-[0_0_20px_8px_rgba(222,31,38,0.5)]"></div>
-            </motion.div>
-            <motion.div animate={{ rotate: -360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute w-[700px] h-[700px]">
-              <div className="absolute top-[20%] right-[-10px] w-5 h-5 bg-[#008744] rounded-full shadow-[0_0_20px_8px_rgba(0,135,68,0.5)]"></div>
-              <div className="absolute bottom-10 left-20 w-3 h-3 bg-[#DE1F26] rounded-full shadow-[0_0_15px_5px_rgba(222,31,38,0.5)]"></div>
-            </motion.div>
-          </div>
+            {/* Modern Layered Tech Aura & Glass Backplate */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
+              {/* Ambient Vibrant Glow Dispersions in Red & Green */}
+              <div className="absolute -top-12 -left-10 w-64 h-64 bg-[#DE1F26]/16 rounded-full blur-[65px] animate-pulse duration-[6000ms]" />
+              <div className="absolute -bottom-12 -right-10 w-72 h-72 bg-[#008744]/20 rounded-full blur-[70px] animate-pulse duration-[7000ms]" />
 
-          {/* Premium Floating Badges */}
-          <motion.div
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-[25%] sm:top-[30%] -left-[5%] sm:-left-[10%] lg:-left-[15%] z-30 bg-[#08121a]/85 backdrop-blur-xl border border-[#DE1F26]/40 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.25)] flex items-center scale-[0.8] sm:scale-100 origin-left"
-          >
-            <Braces size={22} className="text-[#DE1F26] mr-3" />
-            <span className="font-mono font-bold text-base tracking-wide">Clean Code</span>
-          </motion.div>
+              {/* Layered 3D Frosted Glass Back-Plate behind Video */}
+              <div className="w-full h-full bg-gradient-to-tr from-white/70 via-slate-50/50 to-emerald-50/40 rounded-[28px] border border-slate-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-md rotate-[-2.5deg] -translate-y-2 -translate-x-1.5 absolute">
+                {/* Subtle top edge brand highlight */}
+                <div className="absolute inset-x-8 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#DE1F26]/35 to-transparent"></div>
+                <div className="absolute inset-x-8 bottom-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#008744]/35 to-transparent"></div>
+              </div>
 
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute -bottom-[5%] right-[5%] sm:right-[10%] lg:right-[15%] z-30 bg-white/85 backdrop-blur-xl border border-[#008744]/30 text-slate-800 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex items-center space-x-2 sm:space-x-3 scale-[0.8] sm:scale-100 origin-bottom-right"
-          >
-            <div className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#008744] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#008744]"></span>
-            </div>
-            <span className="font-bold text-sm tracking-wider text-slate-900">Live Sync Active</span>
-          </motion.div>
-
-          {/* 3D Animated Robot Mascot from GLB */}
-          <div className="absolute bottom-[2%] -left-[5%] sm:left-[-15%] lg:-left-[25%] z-40 w-48 h-48 sm:w-64 sm:h-64 lg:w-[400px] lg:h-[400px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)]">
-            <RobotCanvas />
-          </div>
-
-          {/* Main Dark Glass Video Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative z-20 w-[95%] max-w-[580px] aspect-[16/10] bg-gradient-to-br from-[#08121a] to-[#04090e] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.35)] border border-slate-700/50 overflow-hidden flex"
-          >
-            {/* Actual Video Element */}
-            <video
-              ref={videoRef}
-              poster="/video/thumbnail.jpeg"
-              className="w-full h-full object-cover rounded-[24px]"
-              controls={isVideoPlaying}
-              playsInline
-              preload="metadata"
-              onPlay={() => setIsVideoPlaying(true)}
-              onPause={() => setIsVideoPlaying(false)}
-            >
-              <source src="/video/us software video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Custom Play Button Overlay */}
-            {!isVideoPlaying && (
-              <div 
-                className="absolute inset-0 flex items-center justify-center bg-[#08121a]/40 cursor-pointer group rounded-[24px] z-20"
-                onClick={handlePlayVideo}
-              >
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/25 group-hover:scale-110 group-hover:bg-[#008744]/20 transition-all duration-300 shadow-[0_0_40px_rgba(0,135,68,0.4)] group-hover:shadow-[0_0_50px_rgba(222,31,38,0.5)]">
-                  <Play size={36} className="text-white ml-2" fill="currentColor" />
+              {/* Tech Corner Crosshair Markers */}
+              <div className="w-[104%] h-[104%] absolute flex flex-col justify-between p-1 select-none pointer-events-none">
+                <div className="flex justify-between items-center text-xs font-mono">
+                  <span className="text-[#DE1F26]/40 font-bold">＋</span>
+                  <span className="text-[#008744]/40 font-bold">＋</span>
+                </div>
+                <div className="flex justify-between items-center text-xs font-mono">
+                  <span className="text-[#008744]/40 font-bold">＋</span>
+                  <span className="text-[#DE1F26]/40 font-bold">＋</span>
                 </div>
               </div>
-            )}
 
-            <div className="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/10 pointer-events-none z-10"></div>
-          </motion.div>
+              {/* Subtle Tech Dot Matrix Grid (Top Right) */}
+              <div className="absolute -top-4 -right-4 grid grid-cols-4 gap-1.5 opacity-25">
+                {[...Array(16)].map((_, i) => (
+                  <div key={i} className="w-1 h-1 rounded-full bg-[#008744]" />
+                ))}
+              </div>
+
+              {/* Subtle Tech Dot Matrix Grid (Bottom Left) */}
+              <div className="absolute -bottom-4 -left-4 grid grid-cols-4 gap-1.5 opacity-25">
+                {[...Array(16)].map((_, i) => (
+                  <div key={i} className="w-1 h-1 rounded-full bg-[#DE1F26]" />
+                ))}
+              </div>
+            </div>
+
+            {/* 3D Animated Robot Mascot from GLB */}
+            <div className="absolute -bottom-16 sm:-bottom-20 lg:-bottom-24 -left-16 sm:-left-24 lg:-left-36 z-40 w-44 h-44 sm:w-56 sm:h-56 lg:w-[350px] lg:h-[350px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)] pointer-events-none">
+              <RobotCanvas />
+            </div>
+
+            {/* Card 1: Right-Side Floating Feature (Shifted Outward) */}
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              whileHover={{ scale: 1.05, y: -3 }}
+              className="absolute -top-6 sm:-top-8 -right-10 sm:-right-16 lg:-right-24 z-30 bg-white/95 backdrop-blur-xl border border-[#DE1F26]/30 p-2.5 sm:p-3 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.12)] flex items-center gap-3 scale-[0.85] sm:scale-95 lg:scale-100 origin-top-right cursor-default transition-shadow hover:shadow-[0_20px_45px_rgba(222,31,38,0.2)]"
+            >
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#DE1F26] to-rose-500 text-white flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(222,31,38,0.35)]">
+                <Award size={22} />
+              </div>
+              <div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={11} className="text-amber-400 fill-amber-400" />
+                  ))}
+                  <span className="text-[11px] font-bold text-slate-800 ml-1">4.9/5</span>
+                </div>
+                <p className="text-xs sm:text-[13px] font-bold text-slate-900 mt-0.5 tracking-tight">
+                  {language === 'bn' ? 'বাস্তব প্রজেক্ট ও পোর্টফোলিও' : '100% Job-Ready Projects'}
+                </p>
+                <p className="text-[10px] text-slate-500 font-medium">
+                  {language === 'bn' ? '৫০+ রিয়েল-ওয়ার্ল্ড প্রজেক্টস' : '50+ Practical Deliverables'}
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Main Dark Glass Video Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="relative z-20 w-full h-full bg-gradient-to-br from-[#08121a] to-[#04090e] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.35)] border border-slate-700/50 overflow-hidden flex"
+            >
+              {/* Actual Video Element */}
+              <video
+                ref={videoRef}
+                poster="/video/thumbnail.jpeg"
+                className="w-full h-full object-cover rounded-[24px]"
+                controls={isVideoPlaying}
+                playsInline
+                preload="metadata"
+                onPlay={() => setIsVideoPlaying(true)}
+                onPause={() => setIsVideoPlaying(false)}
+              >
+                <source src="/video/us software video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              {/* Custom Play Button Overlay */}
+              {!isVideoPlaying && (
+                <div 
+                  className="absolute inset-0 flex items-center justify-center bg-[#08121a]/40 cursor-pointer group rounded-[24px] z-20"
+                  onClick={handlePlayVideo}
+                >
+                  <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/25 group-hover:scale-110 group-hover:bg-[#008744]/20 transition-all duration-300 shadow-[0_0_40px_rgba(0,135,68,0.4)] group-hover:shadow-[0_0_50px_rgba(222,31,38,0.5)]">
+                    <Play size={36} className="text-white ml-2" fill="currentColor" />
+                  </div>
+                </div>
+              )}
+
+              <div className="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/10 pointer-events-none z-10"></div>
+            </motion.div>
+
+          </div>
 
         </div>
 
@@ -206,80 +295,80 @@ export default function HeroSection() {
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] bg-gradient-to-tr from-[#008744]/30 via-[#DE1F26]/20 to-transparent rounded-full blur-[60px]"
             />
 
-            {/* Floating Shape 1: Sparkle Star (Top Right) */}
+            {/* Floating Shape 1: Sparkle Star (Top Right of Title) */}
             <motion.div
-              animate={{ y: [0, -18, 0], rotate: [0, 180, 360], scale: [1, 1.15, 1] }}
+              animate={{ y: [0, -14, 0], rotate: [0, 180, 360], scale: [1, 1.15, 1] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[-8%] right-[5%] drop-shadow-[0_0_12px_rgba(0,135,68,0.4)]"
+              className="absolute top-[-3%] right-[18%] sm:right-[22%] drop-shadow-[0_0_12px_rgba(0,135,68,0.4)]"
             >
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#008744" fillOpacity="0.45" stroke="#008744" strokeWidth="1.5"/>
               </svg>
             </motion.div>
 
-            {/* Floating Shape 2: Red Rounded Square */}
+            {/* Floating Shape 2: Red Rounded Square (Beside Title Line 1) */}
             <motion.div
-              animate={{ y: [0, 16, 0], x: [0, -8, 0], rotate: [20, 80, 20] }}
+              animate={{ y: [0, 12, 0], x: [0, -6, 0], rotate: [20, 80, 20] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-[10%] right-[-5%] drop-shadow-[0_0_12px_rgba(222,31,38,0.35)]"
+              className="absolute top-[8%] right-[8%] sm:right-[12%] drop-shadow-[0_0_12px_rgba(222,31,38,0.35)]"
             >
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <rect x="2" y="2" width="20" height="20" rx="6" fill="#DE1F26" fillOpacity="0.25" stroke="#DE1F26" strokeWidth="1.5"/>
               </svg>
             </motion.div>
 
-            {/* Floating Shape 3: Neon Green Ring */}
+            {/* Floating Shape 3: Neon Green Ring (Beside Title Line 2) */}
             <motion.div
-              animate={{ y: [0, -14, 0], scale: [1, 1.2, 1] }}
+              animate={{ y: [0, -10, 0], scale: [1, 1.15, 1] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute top-[36%] right-[-2%] drop-shadow-[0_0_10px_rgba(0,135,68,0.4)]"
+              className="absolute top-[26%] right-[4%] sm:right-[8%] drop-shadow-[0_0_10px_rgba(0,135,68,0.4)]"
             >
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="9.5" stroke="#008744" strokeWidth="2" strokeOpacity="0.55"/>
               </svg>
             </motion.div>
 
-            {/* Floating Shape 4: Red Sparkle Star */}
+            {/* Floating Shape 4: Red Sparkle Star (Beside Subtitle) */}
             <motion.div
-              animate={{ y: [0, 12, 0], rotate: [0, -180, -360], scale: [0.9, 1.25, 0.9] }}
+              animate={{ y: [0, 10, 0], rotate: [0, -180, -360], scale: [0.9, 1.2, 0.9] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-              className="absolute top-[52%] right-[18%] drop-shadow-[0_0_10px_rgba(222,31,38,0.4)]"
+              className="absolute top-[42%] right-[10%] sm:right-[14%] drop-shadow-[0_0_10px_rgba(222,31,38,0.4)]"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#DE1F26" fillOpacity="0.4" stroke="#DE1F26" strokeWidth="1.5"/>
               </svg>
             </motion.div>
 
-            {/* Floating Shape 5: Green Solid Dot */}
+            {/* Floating Shape 5: Green Solid Dot (Near Action Buttons) */}
             <motion.div
-              animate={{ y: [0, -16, 0], x: [0, 8, 0] }}
+              animate={{ y: [0, -12, 0], x: [0, 6, 0] }}
               transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="absolute bottom-[10%] right-[6%] drop-shadow-[0_0_12px_rgba(0,135,68,0.5)]"
+              className="absolute top-[60%] right-[10%] sm:right-[14%] drop-shadow-[0_0_12px_rgba(0,135,68,0.5)]"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="8" fill="#008744" fillOpacity="0.6"/>
                 <circle cx="12" cy="12" r="11" stroke="#008744" strokeWidth="1" strokeOpacity="0.3"/>
               </svg>
             </motion.div>
 
-            {/* Floating Shape 6: Red Diamond */}
+            {/* Floating Shape 6: Red Diamond (Near Left Content) */}
             <motion.div
-              animate={{ y: [0, -14, 0], rotate: [45, 135, 45], scale: [1, 1.15, 1] }}
+              animate={{ y: [0, -12, 0], rotate: [45, 135, 45], scale: [1, 1.15, 1] }}
               transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-              className="absolute top-[65%] left-[14%] drop-shadow-[0_0_10px_rgba(222,31,38,0.35)]"
+              className="absolute top-[56%] left-[2%] drop-shadow-[0_0_10px_rgba(222,31,38,0.35)]"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="3" width="18" height="18" rx="4" transform="rotate(45 12 12)" fill="#DE1F26" fillOpacity="0.25" stroke="#DE1F26" strokeWidth="1.5"/>
               </svg>
             </motion.div>
 
-            {/* Floating Shape 7: Green Dashed Orbit */}
+            {/* Floating Shape 7: Green Dashed Orbit (Near Top Badge) */}
             <motion.div
               animate={{ rotate: 360, scale: [1, 1.08, 1] }}
               transition={{ rotate: { duration: 18, repeat: Infinity, ease: "linear" }, scale: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
-              className="absolute top-[-6%] left-[6%] drop-shadow-[0_0_8px_rgba(0,135,68,0.3)]"
+              className="absolute top-[-3%] left-[1%] drop-shadow-[0_0_8px_rgba(0,135,68,0.3)]"
             >
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="12" r="10" stroke="#008744" strokeWidth="1.5" strokeDasharray="4 3" strokeOpacity="0.45"/>
               </svg>
             </motion.div>
@@ -288,13 +377,13 @@ export default function HeroSection() {
           {/* Top Badge in Red & Green Accent */}
           <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#008744]/10 via-[#DE1F26]/10 to-transparent border border-[#008744]/25 rounded-full px-4 py-1.5 shadow-sm">
             <Rocket size={14} className="text-[#DE1F26]" />
-            <span className="text-xs font-bold text-[#08121a] uppercase tracking-wider">{t.hero.badge}</span>
+            <span className="text-xs font-normal text-[#08121a] uppercase tracking-wider">{t.hero.badge}</span>
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-black text-[#08121a] leading-tight tracking-tight flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="inline-block">{t.hero.title1}</span>
-            <span className="relative inline-block">
+          <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[#08121a] leading-tight tracking-tight flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span className="inline-block font-bold">{t.hero.title1}</span>
+            <span className="relative inline-block font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744]">
                 {t.hero.title2}
               </span>
@@ -302,7 +391,7 @@ export default function HeroSection() {
                 <motion.path
                   d="M2,10 Q100,0 198,8"
                   stroke="currentColor"
-                  strokeWidth="4"
+                  strokeWidth="3.5"
                   fill="none"
                   strokeLinecap="round"
                   initial={{ pathLength: 0, opacity: 0 }}
@@ -319,7 +408,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Subtitle */}
-          <motion.p variants={itemVariants} className="text-gray-600 font-medium text-[17px] max-w-lg leading-relaxed">
+          <motion.p variants={itemVariants} className="text-gray-600 font-normal text-[16px] sm:text-[17px] max-w-lg leading-relaxed">
             {t.hero.subtitle}
           </motion.p>
 
@@ -329,7 +418,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="group relative bg-[#08121a] hover:bg-[#DE1F26] text-white px-8 py-3.5 rounded-full font-bold flex items-center space-x-2 shadow-[0_10px_20px_rgba(8,18,26,0.2)] hover:shadow-[0_10px_25px_rgba(222,31,38,0.35)] transition-all overflow-hidden cursor-pointer"
+                className="group relative bg-[#08121a] hover:bg-[#DE1F26] text-white px-8 py-3.5 rounded-full font-normal sm:font-medium flex items-center space-x-2 shadow-[0_10px_20px_rgba(8,18,26,0.18)] hover:shadow-[0_10px_25px_rgba(222,31,38,0.35)] transition-all overflow-hidden cursor-pointer tracking-wide"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 <span className="relative z-10">{t.hero.ourServices}</span>
@@ -341,7 +430,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-white text-[#08121a] border-2 border-gray-200 hover:border-[#008744] hover:text-[#008744] px-8 py-3.5 rounded-full font-bold flex items-center space-x-2 shadow-sm hover:shadow-[0_8px_20px_rgba(0,135,68,0.15)] transition-all cursor-pointer"
+                className="bg-white text-[#08121a] border-2 border-gray-200 hover:border-[#008744] hover:text-[#008744] px-8 py-3.5 rounded-full font-normal sm:font-medium flex items-center space-x-2 shadow-sm hover:shadow-[0_8px_20px_rgba(0,135,68,0.15)] transition-all cursor-pointer tracking-wide"
               >
                 <span>{t.hero.contactUs}</span>
               </motion.button>
@@ -361,10 +450,10 @@ export default function HeroSection() {
                 <BookOpen size={18} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-[#08121a] group-hover:text-[#008744] leading-none tabular-nums font-mono transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#08121a] group-hover:text-[#008744] leading-none tabular-nums tracking-tight transition-colors">
                   <Counter end={43} suffix="+" />
                 </h3>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mt-1 whitespace-nowrap">
+                <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wider mt-1 whitespace-nowrap">
                   {t.hero.stats.courses.title}
                 </p>
               </div>
@@ -380,10 +469,10 @@ export default function HeroSection() {
                 <Users size={18} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-[#08121a] group-hover:text-[#DE1F26] leading-none tabular-nums font-mono transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#08121a] group-hover:text-[#DE1F26] leading-none tabular-nums tracking-tight transition-colors">
                   <Counter end={4700} suffix="+" />
                 </h3>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mt-1 whitespace-nowrap">
+                <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wider mt-1 whitespace-nowrap">
                   {t.hero.stats.students.title}
                 </p>
               </div>
@@ -399,11 +488,11 @@ export default function HeroSection() {
                 <LineChart size={18} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-[#08121a] group-hover:text-[#008744] leading-none tabular-nums font-mono transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#08121a] group-hover:text-[#008744] leading-none tabular-nums tracking-tight transition-colors">
                   <Counter end={70} suffix="%" />
                 </h3>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mt-1 whitespace-nowrap">
-                  Placement Rate
+                <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wider mt-1 whitespace-nowrap">
+                  {t.hero.stats?.placement?.title || "Placement Rate"}
                 </p>
               </div>
             </motion.div>
