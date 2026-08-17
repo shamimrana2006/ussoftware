@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useRef, useEffect, useState } from "react";
+import React, { Suspense, useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, useAnimations, Float, Environment, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
@@ -9,9 +9,9 @@ function RobotModel() {
   const { scene, animations } = useGLTF("/glb file/futuristic_flying_animated_robot_-_low_poly.glb");
   const { actions } = useAnimations(animations, group);
 
-  // Interaction states
-  const [isReacting, setIsReacting] = useState(false);
-  const [reactionProgress, setReactionProgress] = useState(0);
+  // High-performance interaction refs (no React re-renders in useFrame loop)
+  const isReactingRef = useRef(false);
+  const reactionProgressRef = useRef(0);
 
   // Play built-in idle animation smoothly
   useEffect(() => {
@@ -30,8 +30,8 @@ function RobotModel() {
   // Click handler: natural cheerful double bounce & playful head tilt
   const handleClick = (e: any) => {
     e.stopPropagation();
-    setIsReacting(true);
-    setReactionProgress(1); // 1 down to 0
+    isReactingRef.current = true;
+    reactionProgressRef.current = 1;
 
     if (actions) {
       const names = Object.keys(actions);
@@ -44,15 +44,15 @@ function RobotModel() {
     }
   };
 
-  // Animation Loop: Natural, smooth physical movements
+  // Pure WebGL animation loop without React state overhead
   useFrame((state, delta) => {
     if (!group.current) return;
 
-    if (isReacting && reactionProgress > 0) {
-      setReactionProgress((prev) => Math.max(0, prev - delta * 1.5));
-      const p = 1 - reactionProgress; // 0 to 1
+    if (isReactingRef.current && reactionProgressRef.current > 0) {
+      reactionProgressRef.current = Math.max(0, reactionProgressRef.current - delta * 1.5);
+      const p = 1 - reactionProgressRef.current; // 0 to 1
 
-      // Joyful natural double bounce (realistic physics curve)
+      // Joyful natural double bounce
       const bounceHeight = Math.sin(p * Math.PI) * 0.16 + Math.sin(p * Math.PI * 2) * 0.06;
       // Gentle playful head-tilt
       const wiggleZ = Math.sin(p * Math.PI * 3) * 0.09;
@@ -63,8 +63,8 @@ function RobotModel() {
       group.current.rotation.z = THREE.MathUtils.damp(group.current.rotation.z, wiggleZ, 8, delta);
       group.current.rotation.x = THREE.MathUtils.damp(group.current.rotation.x, nodX, 8, delta);
 
-      if (reactionProgress <= 0.02) {
-        setIsReacting(false);
+      if (reactionProgressRef.current <= 0.02) {
+        isReactingRef.current = false;
         if (actions) {
           const names = Object.keys(actions);
           if (names.length > 0) {
@@ -95,7 +95,11 @@ useGLTF.preload("/glb file/futuristic_flying_animated_robot_-_low_poly.glb");
 export default function RobotCanvas() {
   return (
     <div className="w-full h-full select-none cursor-grab active:cursor-grabbing">
-      <Canvas camera={{ position: [0, 0, 4.5], fov: 45 }}>
+      <Canvas 
+        dpr={[1, 1.5]}
+        gl={{ powerPreference: "high-performance", antialias: true, alpha: true, stencil: false }}
+        camera={{ position: [0, 0, 4.5], fov: 45 }}
+      >
         <ambientLight intensity={1.6} />
         <directionalLight position={[10, 10, 5]} intensity={2.4} />
         <directionalLight position={[-10, 10, -5]} intensity={1.5} color="#008744" />
