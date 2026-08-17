@@ -1,7 +1,7 @@
 "use client";
 import React, { Suspense, useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, useAnimations, Float, Environment, OrbitControls } from "@react-three/drei";
+import { useGLTF, useAnimations, Float, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
 function RobotModel() {
@@ -100,11 +100,14 @@ export default function RobotCanvas() {
         gl={{ powerPreference: "high-performance", antialias: true, alpha: true, stencil: false }}
         camera={{ position: [0, 0, 4.5], fov: 45 }}
       >
-        <ambientLight intensity={1.6} />
-        <directionalLight position={[10, 10, 5]} intensity={2.4} />
-        <directionalLight position={[-10, 10, -5]} intensity={1.5} color="#008744" />
-        <directionalLight position={[5, -10, -5]} intensity={1.0} color="#DE1F26" />
-        <Environment preset="city" />
+        {/* High-Fidelity Local Studio Lighting (Zero External Network Dependencies / No 429 Errors) */}
+        <ambientLight intensity={1.8} />
+        <hemisphereLight args={["#ffffff", "#0f172a", 1.2]} />
+        <directionalLight position={[10, 12, 6]} intensity={2.6} />
+        <directionalLight position={[-10, 8, -6]} intensity={1.8} color="#008744" />
+        <directionalLight position={[6, -8, -6]} intensity={1.2} color="#DE1F26" />
+        <pointLight position={[0, 4, 3]} intensity={1.5} color="#ffffff" />
+        <pointLight position={[-3, -2, 2]} intensity={1.0} color="#008744" />
 
         {/* Smooth Drag & Rotate OrbitControls */}
         <OrbitControls

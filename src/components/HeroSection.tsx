@@ -4,6 +4,14 @@ import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants, Transition } from "framer-motion";
 import { ArrowRight, Rocket, Cpu, Users, LineChart, BookOpen, Award, Play, Star } from "lucide-react";
+import { 
+  RiTerminalBoxLine, 
+  RiSparklingFill, 
+  RiCodeSSlashLine, 
+  RiCpuLine, 
+  RiDatabase2Line, 
+  RiStackLine 
+} from "react-icons/ri";
 import RobotCanvas from "./RobotCanvas";
 import Link from "next/link";
 
@@ -95,7 +103,8 @@ const heroBackgroundBubbles = [
 
 interface FloatingShapeItem {
   id: string;
-  type: string;
+  icon: React.ComponentType<{ size?: number | string; className?: string; style?: React.CSSProperties }>;
+  color: string;
   style: React.CSSProperties;
   size: number;
   opacity: number;
@@ -103,183 +112,80 @@ interface FloatingShapeItem {
   transition: Transition;
 }
 
-// Ambient Floating Decorative Cyber Shapes across Hero Section (Inward Centered with Large Focal Elements)
+// Ambient Floating Decorative Icons from Icon Library (Inward Centered with Large Focal Elements)
 const heroFloatingShapes: FloatingShapeItem[] = [
-  // 1. [BIG SHAPE 1] Large Red Cyber Square (Upper Center Area)
+  // 1. [BIG SHAPE 1] Large Terminal / Square Code Box (Upper Center Area)
   {
-    id: "center-square-big",
-    type: "square-red",
-    style: { top: "14%", left: "50%" },
-    size: 60,
-    opacity: 0.22,
-    animate: { y: [0, 14, 0], x: [0, -6, 0], rotate: [12, 65, 12] },
+    id: "center-terminal-big",
+    icon: RiTerminalBoxLine,
+    color: "#DE1F26",
+    style: { top: "13%", left: "51%" },
+    size: 58,
+    opacity: 0.28,
+    animate: { y: [0, 14, 0], x: [0, -6, 0], rotate: [12, 55, 12] },
     transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
   },
 
-  // 2. [BIG SHAPE 2] Large Green Sparkle Star (Top-Right of Content)
+  // 2. [BIG SHAPE 2] Large AI Sparkle (Top-Right Area above Title)
   {
-    id: "tr-star-big",
-    type: "sparkle-green",
-    style: { top: "6%", right: "12%" },
-    size: 54,
-    opacity: 0.25,
-    animate: { y: [0, -14, 0], rotate: [0, 180, 360], scale: [1, 1.1, 1] },
+    id: "tr-sparkle-big",
+    icon: RiSparklingFill,
+    color: "#008744",
+    style: { top: "6%", right: "13%" },
+    size: 52,
+    opacity: 0.30,
+    animate: { y: [0, -14, 0], rotate: [0, 180, 360], scale: [1, 1.12, 1] },
     transition: { duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
   },
 
-  // 3. [BIG SHAPE 3] Large Green Cyber Orbit Ring (Lower-Left of Video/Mascot)
+  // 3. [BIG SHAPE 3] Large Full-Stack Layer (Lower-Left Area near Video)
   {
-    id: "bl-orbit-big",
-    type: "orbit-green",
-    style: { bottom: "10%", left: "7%" },
-    size: 52,
-    opacity: 0.22,
-    animate: { rotate: 360, scale: [1, 1.08, 1] },
-    transition: { rotate: { duration: 22, repeat: Infinity, ease: "linear" }, scale: { duration: 6, repeat: Infinity, ease: "easeInOut" } },
+    id: "bl-stack-big",
+    icon: RiStackLine,
+    color: "#008744",
+    style: { bottom: "10%", left: "8%" },
+    size: 50,
+    opacity: 0.28,
+    animate: { y: [0, 12, 0], rotate: [0, -35, 0], scale: [1, 1.08, 1] },
+    transition: { duration: 8.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 },
   },
 
-  // 4. [ACCENT] Soft Red Sparkle Star (Center-Bottom / Under CTA)
+  // 4. [ACCENT 1] Code Slash (Center-Bottom / Under CTA)
   {
-    id: "cb-star-small",
-    type: "sparkle-red",
-    style: { bottom: "24%", left: "47%" },
-    size: 24,
-    opacity: 0.22,
-    animate: { y: [0, -10, 0], rotate: [0, -180, -360], scale: [0.9, 1.15, 0.9] },
+    id: "cb-code-accent",
+    icon: RiCodeSSlashLine,
+    color: "#DE1F26",
+    style: { bottom: "23%", left: "47%" },
+    size: 28,
+    opacity: 0.28,
+    animate: { y: [0, -10, 0], rotate: [-15, 15, -15], scale: [0.9, 1.15, 0.9] },
     transition: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 },
   },
 
-  // 5. [ACCENT] Soft Green Cyber Dot (Middle-Right / Beside Text)
+  // 5. [ACCENT 2] CPU / AI Core (Middle-Right / Beside Text)
   {
-    id: "mr-dot",
-    type: "dot-green",
-    style: { top: "42%", right: "8%" },
-    size: 16,
-    opacity: 0.24,
-    animate: { y: [0, -10, 0], scale: [1, 1.25, 1] },
+    id: "mr-cpu-accent",
+    icon: RiCpuLine,
+    color: "#008744",
+    style: { top: "43%", right: "9%" },
+    size: 26,
+    opacity: 0.28,
+    animate: { y: [0, -10, 0], scale: [1, 1.2, 1] },
     transition: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.7 },
   },
 
-  // 6. [ACCENT] Soft Red Diamond (Bottom-Right / Under Stats Cards)
+  // 6. [ACCENT 3] Database (Bottom-Right / Under Stats)
   {
-    id: "br-diamond",
-    type: "diamond-red",
+    id: "br-db-accent",
+    icon: RiDatabase2Line,
+    color: "#DE1F26",
     style: { bottom: "8%", right: "16%" },
-    size: 24,
-    opacity: 0.20,
-    animate: { y: [0, -10, 0], rotate: [45, 135, 45], scale: [1, 1.12, 1] },
-    transition: { duration: 6.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 },
+    size: 28,
+    opacity: 0.26,
+    animate: { y: [0, -10, 0], scale: [1, 1.15, 1] },
+    transition: { duration: 6.8, repeat: Infinity, ease: "easeInOut", delay: 0.4 },
   },
 ];
-
-const renderShapeIcon = (type: string, size: number, opacity: number) => {
-  switch (type) {
-    case "sparkle-green":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z"
-            fill="#008744"
-            fillOpacity={opacity * 0.65}
-            stroke="#008744"
-            strokeWidth={1.4}
-            strokeOpacity={opacity}
-          />
-        </svg>
-      );
-    case "sparkle-red":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z"
-            fill="#DE1F26"
-            fillOpacity={opacity * 0.65}
-            stroke="#DE1F26"
-            strokeWidth={1.4}
-            strokeOpacity={opacity}
-          />
-        </svg>
-      );
-    case "square-red":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <rect
-            x="2"
-            y="2"
-            width="20"
-            height="20"
-            rx="5.5"
-            fill="#DE1F26"
-            fillOpacity={opacity * 0.55}
-            stroke="#DE1F26"
-            strokeWidth={1.4}
-            strokeOpacity={opacity}
-          />
-        </svg>
-      );
-    case "ring-green":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <circle
-            cx="12"
-            cy="12"
-            r="9.5"
-            stroke="#008744"
-            strokeWidth={1.4}
-            strokeOpacity={opacity}
-          />
-        </svg>
-      );
-    case "diamond-red":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <rect
-            x="3"
-            y="3"
-            width="18"
-            height="18"
-            rx="4"
-            transform="rotate(45 12 12)"
-            fill="#DE1F26"
-            fillOpacity={opacity * 0.6}
-            stroke="#DE1F26"
-            strokeWidth={1.4}
-            strokeOpacity={opacity}
-          />
-        </svg>
-      );
-    case "orbit-green":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="#008744"
-            strokeWidth={1.4}
-            strokeDasharray="4 3"
-            strokeOpacity={opacity}
-          />
-        </svg>
-      );
-    case "dot-green":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="7" fill="#008744" fillOpacity={opacity * 0.8} />
-          <circle cx="12" cy="12" r="10.5" stroke="#008744" strokeWidth={1} strokeOpacity={opacity * 0.5} />
-        </svg>
-      );
-    case "dot-red":
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="6" fill="#DE1F26" fillOpacity={opacity * 0.8} />
-          <circle cx="12" cy="12" r="9.5" stroke="#DE1F26" strokeWidth={1} strokeOpacity={opacity * 0.5} />
-        </svg>
-      );
-    default:
-      return null;
-  }
-};
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
@@ -307,7 +213,7 @@ export default function HeroSection() {
   return (
     <section
       style={{ fontFamily: "var(--font-baloo), var(--font-hind), sans-serif" }}
-      className="relative overflow-hidden bg-gradient-to-br from-[#fcfdfd] via-[#f5f9f7] to-[#edf4f0] pt-6 sm:pt-12 lg:pt-20 pb-8 sm:pb-12 lg:pb-24 flex items-center min-h-[90vh]"
+      className="relative overflow-hidden bg-gradient-to-br from-[#fcfdfd] via-[#f5f9f7] to-[#edf4f0] pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-28 lg:pb-36 flex items-center"
     >
       {/* Dynamic Soft Background Mesh Gradients in Red & Green (Low Opacity) */}
       <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-[#008744]/10 to-transparent rounded-full blur-[130px] pointer-events-none animate-pulse duration-[9000ms]" />
@@ -404,23 +310,28 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Dynamic Ambient Floating Cyber Shapes in Brand Colors (Centered content alignment) */}
+      {/* Dynamic Ambient Floating Cyber Icons from Remix Icons Library (Centered content alignment) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex justify-center">
         <div className="relative w-full max-w-[88rem] h-full px-4 sm:px-6 lg:px-10">
-          {heroFloatingShapes.map((shape) => (
-            <motion.div
-              key={shape.id}
-              style={{
-                position: "absolute",
-                ...shape.style,
-              }}
-              animate={shape.animate}
-              transition={shape.transition}
-              className="pointer-events-none transform-gpu select-none"
-            >
-              {renderShapeIcon(shape.type, shape.size, shape.opacity)}
-            </motion.div>
-          ))}
+          {heroFloatingShapes.map((shape) => {
+            const IconComp = shape.icon;
+            return (
+              <motion.div
+                key={shape.id}
+                style={{
+                  position: "absolute",
+                  ...shape.style,
+                  color: shape.color,
+                  opacity: shape.opacity,
+                }}
+                animate={shape.animate}
+                transition={shape.transition}
+                className="pointer-events-none transform-gpu select-none"
+              >
+                <IconComp size={shape.size} />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
@@ -431,10 +342,10 @@ export default function HeroSection() {
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-14 items-center relative z-10">
 
         {/* LEFT COMPONENT: AI Video Hub Design (Equal 50/50 Column) */}
-        <div className="relative h-[340px] sm:h-[440px] lg:h-[580px] w-full flex items-center justify-center order-2 lg:order-1 mt-6 lg:mt-0">
+        <div className="relative h-[280px] sm:h-[360px] lg:h-[450px] w-full flex items-center justify-center order-2 lg:order-1 mt-4 lg:mt-0">
 
           {/* Centralized Video Hub Container */}
-          <div className="relative w-full max-w-[530px] xl:max-w-[580px] aspect-[16/10] flex items-center justify-center">
+          <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-[16/10] flex items-center justify-center">
 
             {/* Modern Layered Tech Aura & Glass Backplate */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
@@ -549,7 +460,7 @@ export default function HeroSection() {
         </div>
 
         {/* RIGHT COMPONENT: Text & CTA (Equal 50/50 Column) */}
-        <motion.div className="space-y-6 sm:space-y-7 relative z-30 order-1 lg:order-2 lg:pl-4 xl:pl-8" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="space-y-4 sm:space-y-5 relative z-30 order-1 lg:order-2 lg:pl-4 xl:pl-6" variants={containerVariants} initial="hidden" animate="visible">
 
           {/* Subtle Ambient Glow */}
           <div className="absolute inset-0 pointer-events-none z-[-1] overflow-visible">
@@ -561,23 +472,23 @@ export default function HeroSection() {
           </div>
 
           {/* Top Badge in Red & Green Accent */}
-          <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#008744]/10 via-[#DE1F26]/10 to-transparent border border-[#008744]/25 rounded-full px-3.5 py-1 shadow-sm">
-            <Rocket size={13} className="text-[#DE1F26]" />
-            <span className="text-[11px] sm:text-xs font-medium text-[#08121a] uppercase tracking-wider">{t.hero.badge}</span>
+          <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#008744]/10 via-[#DE1F26]/10 to-transparent border border-[#008744]/25 rounded-full px-3 py-0.5 shadow-xs">
+            <Rocket size={12} className="text-[#DE1F26]" />
+            <span className="text-[10px] sm:text-xs font-semibold text-[#08121a] uppercase tracking-wider">{t.hero.badge}</span>
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 variants={itemVariants} className="text-2xl sm:text-3xl lg:text-[30px] xl:text-[36px] 2xl:text-[40px] font-bold text-[#08121a] leading-tight tracking-tight flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+          <motion.h1 variants={itemVariants} className="text-xl sm:text-2xl lg:text-[26px] xl:text-[30px] font-bold text-[#08121a] leading-tight tracking-tight flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span className="inline-block font-bold whitespace-nowrap">{t.hero.title1}</span>
             <span className="relative inline-block font-bold whitespace-nowrap">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744]">
                 {t.hero.title2}
               </span>
-              <svg className="absolute w-full h-[10px] bottom-[-3px] left-0 text-[#008744]/40" viewBox="0 0 200 12" preserveAspectRatio="none">
+              <svg className="absolute w-full h-[8px] bottom-[-2px] left-0 text-[#008744]/40" viewBox="0 0 200 12" preserveAspectRatio="none">
                 <motion.path
                   d="M2,10 Q100,0 198,8"
                   stroke="currentColor"
-                  strokeWidth="3.5"
+                  strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                   initial={{ pathLength: 0, opacity: 0 }}
@@ -594,21 +505,21 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Subtitle */}
-          <motion.p variants={itemVariants} className="text-gray-600 font-normal text-[14px] sm:text-[15px] max-w-lg leading-relaxed">
+          <motion.p variants={itemVariants} className="text-gray-600 font-normal text-[13px] sm:text-[14px] max-w-lg leading-relaxed">
             {t.hero.subtitle}
           </motion.p>
 
           {/* Action Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-3.5 pt-1">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 pt-0.5">
             <Link href="/courses">
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="group relative bg-[#08121a] hover:bg-[#DE1F26] text-white px-7 py-3 rounded-full text-sm sm:text-base font-medium flex items-center space-x-2 shadow-[0_8px_18px_rgba(8,18,26,0.18)] hover:shadow-[0_10px_22px_rgba(222,31,38,0.32)] transition-all overflow-hidden cursor-pointer tracking-wide"
+                className="group relative bg-[#08121a] hover:bg-[#DE1F26] text-white px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium flex items-center space-x-1.5 shadow-[0_6px_14px_rgba(8,18,26,0.15)] hover:shadow-[0_8px_18px_rgba(222,31,38,0.28)] transition-all overflow-hidden cursor-pointer tracking-wide"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 <span className="relative z-10">{t.hero.ourServices}</span>
-                <ArrowRight size={16} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={14} className="relative z-10 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </Link>
 
@@ -616,7 +527,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-white text-[#08121a] border-2 border-gray-200 hover:border-[#008744] hover:text-[#008744] px-7 py-3 rounded-full text-sm sm:text-base font-medium flex items-center space-x-2 shadow-sm hover:shadow-[0_8px_18px_rgba(0,135,68,0.12)] transition-all cursor-pointer tracking-wide"
+                className="bg-white text-[#08121a] border border-gray-300 hover:border-[#008744] hover:text-[#008744] px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium flex items-center space-x-1.5 shadow-2xs hover:shadow-[0_6px_14px_rgba(0,135,68,0.1)] transition-all cursor-pointer tracking-wide"
               >
                 <span>{t.hero.contactUs}</span>
               </motion.button>
@@ -624,7 +535,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Stats Bar with Red and Green Balanced Accents */}
-          <motion.div variants={itemVariants} className="pt-6 border-t border-gray-200/80 mt-2 flex flex-wrap gap-2.5 sm:gap-3.5">
+          <motion.div variants={itemVariants} className="pt-4 border-t border-gray-200/80 mt-1 flex flex-wrap gap-2 sm:gap-3">
 
             {/* Stat 1: Courses (Green) */}
             <motion.div

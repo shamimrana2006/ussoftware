@@ -66,7 +66,7 @@ const NavItem = ({ href, active, children }: NavItemProps) => {
             borderRadius: squircleFluidRadius,
           }}
           transition={{ type: "spring", stiffness: 340, damping: 22, mass: 0.8 }}
-          className="absolute inset-0 bg-gradient-to-b from-white via-slate-100/90 to-slate-200/95 border border-slate-300/80 shadow-[0_8px_22px_-3px_rgba(0,0,0,0.12),0_3px_8px_-2px_rgba(0,0,0,0.06),inset_0_2px_2px_rgba(255,255,255,1),inset_0_-2px_3px_rgba(0,0,0,0.1)] backdrop-blur-2xl overflow-hidden -z-0"
+          className="absolute inset-0 bg-gradient-to-b from-white/95 via-slate-100/80 to-slate-200/70 border border-slate-200/90 shadow-[inset_0_2px_3px_rgba(255,255,255,1),inset_0_-1px_2px_rgba(255,255,255,0.9)] backdrop-blur-2xl overflow-hidden -z-0"
         >
           {/* 1. Fluid Liquid Ripple Wave Internal Displacement Layer */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-25" preserveAspectRatio="none" viewBox="0 0 100 40">
@@ -116,7 +116,7 @@ const NavItem = ({ href, active, children }: NavItemProps) => {
             className="absolute inset-y-0 w-3/4 bg-gradient-to-r from-transparent via-white/90 to-transparent skew-x-[-25deg] pointer-events-none"
           />
 
-          {/* 5. Bottom Light Concentration Focus Arc */}
+          {/* 5. Bottom Light Concentration Focus Arc (White Glass Glow) */}
           <div className="absolute bottom-[2px] left-4 right-4 h-[1.5px] rounded-full bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_8px_rgba(255,255,255,1)] pointer-events-none" />
         </motion.div>
       )}
@@ -137,7 +137,7 @@ const NavItem = ({ href, active, children }: NavItemProps) => {
           }}
           exit={{ opacity: 0, scale: 0.92 }}
           transition={{ type: "spring", stiffness: 320, damping: 20, mass: 0.8 }}
-          className="absolute inset-0 bg-white/75 backdrop-blur-xl border border-slate-200/90 shadow-[0_4px_16px_rgba(0,0,0,0.06),inset_0_1.5px_1px_white] overflow-hidden -z-0 pointer-events-none"
+          className="absolute inset-0 bg-white/75 backdrop-blur-xl border border-slate-200/80 shadow-[inset_0_1.5px_1px_white] overflow-hidden -z-0 pointer-events-none"
         >
           {/* Specular highlight on hover droplet */}
           <div className="absolute top-1 left-3 w-3 h-1 rounded-full bg-white shadow-[0_0_4px_white]" />
@@ -153,8 +153,8 @@ const NavItem = ({ href, active, children }: NavItemProps) => {
         }}
         transition={{ type: "spring", stiffness: 380, damping: 22 }}
         className={`relative z-10 text-[13.5px] xl:text-[14px] transition-colors duration-200 ${active
-            ? "text-[#08121a] font-black tracking-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]"
-            : "text-slate-600 font-semibold group-hover:text-[#08121a]"
+          ? "text-[#08121a] font-black tracking-tight"
+          : "text-slate-600 font-semibold group-hover:text-[#08121a]"
           }`}
       >
         {children}
@@ -313,8 +313,8 @@ export default function Header() {
               <span className="flex items-center gap-1">
                 <span>{t.header.canvas || "Canvas"}</span>
                 <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-lg border ${isLinkActive("/canvas")
-                    ? "bg-[#DE1F26] text-white border-[#DE1F26]"
-                    : "bg-[#DE1F26]/10 text-[#DE1F26] border-[#DE1F26]/25 group-hover:bg-[#DE1F26] group-hover:text-white"
+                  ? "bg-[#DE1F26] text-white border-[#DE1F26]"
+                  : "bg-[#DE1F26]/10 text-[#DE1F26] border-[#DE1F26]/25 group-hover:bg-[#DE1F26] group-hover:text-white"
                   } transition-colors`}>
                   3D
                 </span>
@@ -330,8 +330,8 @@ export default function Header() {
               <button
                 onClick={() => setIsCategoryOpen(!isCategoryOpen)}
                 className={`flex items-center space-x-1.5 px-3 py-1.5 sm:py-2 rounded-xl border transition-all duration-200 text-xs sm:text-sm font-semibold shadow-sm cursor-pointer whitespace-nowrap ${isCategoryOpen
-                    ? "bg-[#008744]/10 border-[#008744] text-[#008744]"
-                    : "bg-slate-50 hover:bg-slate-100 border-slate-200/80 text-slate-700 hover:border-slate-300"
+                  ? "bg-[#008744]/10 border-[#008744] text-[#008744]"
+                  : "bg-slate-50 hover:bg-slate-100 border-slate-200/80 text-slate-700 hover:border-slate-300"
                   }`}
               >
                 <LayoutGrid size={15} className="text-[#008744]" />
@@ -461,8 +461,8 @@ export default function Header() {
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${active
-                          ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
-                          : "text-slate-600 hover:text-[#08121a] hover:bg-slate-50"
+                        ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
+                        : "text-slate-600 hover:text-[#08121a] hover:bg-slate-50"
                         }`}
                     >
                       <span>{item.label}</span>
@@ -478,8 +478,8 @@ export default function Header() {
                   href="/canvas"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${isLinkActive("/canvas")
-                      ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
-                      : "text-slate-600 hover:text-[#DE1F26] hover:bg-slate-50"
+                    ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
+                    : "text-slate-600 hover:text-[#DE1F26] hover:bg-slate-50"
                     }`}
                 >
                   <span className="flex items-center gap-2">
