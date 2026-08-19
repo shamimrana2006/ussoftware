@@ -582,8 +582,8 @@ function CoursesContent() {
           {/* MAIN LAYOUT: LEFT SIDEBAR (SEARCH + CATEGORIES) & RIGHT CONTENT (CONTROLS + COURSE GRID) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             
-            {/* LEFT SIDEBAR: Search & Categories (4 cols on lg, 3 on xl) */}
-            <div className="lg:col-span-4 xl:col-span-3 space-y-4">
+            {/* LEFT SIDEBAR: Search & Categories (Sticky on Desktop) */}
+            <div className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 space-y-4 max-h-[calc(100vh-7rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20">
               
               {/* Search Input Box */}
               <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/20 transition-all">
