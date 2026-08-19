@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Hind_Siliguri, Baloo_Da_2 } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -9,32 +9,85 @@ import LoadingScreen from "@/components/LoadingScreen";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const balooDa2 = Baloo_Da_2({
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-baloo",
   subsets: ["bengali", "latin"],
   display: "swap",
 });
 
 const hindSiliguri = Hind_Siliguri({
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-hind",
   subsets: ["bengali", "latin"],
+  display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#f8fafc",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
-  title: "US Software LTD | Your Complete IT Partner",
-  description: "We deliver smart, scalable, and secure IT solutions to drive your business forward.",
+  title: {
+    default: "US Software LTD | Your Complete IT & Tech Education Partner",
+    template: "%s | US Software LTD",
+  },
+  description:
+    "Empowering engineers and businesses with enterprise software engineering, scalable cloud systems, and industry-grade IT academy programs.",
+  keywords: [
+    "US Software LTD",
+    "Software Engineering Bangladesh",
+    "Full-Stack Development",
+    "Next.js",
+    "React",
+    "AI Training",
+    "IT Training Dhaka",
+    "DevOps Cloud",
+  ],
+  authors: [{ name: "US Software LTD" }],
+  creator: "US Software LTD",
+  publisher: "US Software LTD",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
-    icon: "/logo/us software logo.png"
-  }
+    icon: "/logo/us software logo.png",
+    shortcut: "/logo/us software logo.png",
+    apple: "/logo/us software logo.png",
+  },
+  openGraph: {
+    title: "US Software LTD | Your Complete IT Partner",
+    description:
+      "Enterprise software solutions & premier tech academy. Build production-grade skills with 1-on-1 industry mentorship.",
+    url: "https://ussoftwareltd.com",
+    siteName: "US Software LTD",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "US Software LTD | Your Complete IT Partner",
+    description:
+      "We deliver smart, scalable, and secure IT solutions and industry-grade training.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -45,17 +98,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${balooDa2.variable} ${hindSiliguri.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${balooDa2.variable} ${hindSiliguri.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans" style={{ fontFamily: "var(--font-hind), sans-serif" }}>
+      <body
+        className="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-900 selection:bg-[#008744]/20 selection:text-[#008744] antialiased"
+        style={{ fontFamily: "var(--font-hind), sans-serif" }}
+      >
         <LoadingScreen />
         <SmoothScroll>
           <LanguageProvider>
             <MouseBubbles />
-            {children}
+            <div className="flex-1 flex flex-col min-h-screen">
+              {children}
+            </div>
           </LanguageProvider>
         </SmoothScroll>
       </body>
     </html>
   );
 }
+

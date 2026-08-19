@@ -4,10 +4,10 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Sparkles, Star, Clock, Users, BookOpen, 
+import {
+  Sparkles, Star, Clock, Users, BookOpen,
   ArrowRight, MessageCircle, CheckCircle2,
-  Code2, Cpu, Cloud, Smartphone, Shield, 
+  Code2, Cpu, Cloud, Smartphone, Shield,
   Palette, Megaphone, Database, Award, Layers,
   Play, X, Zap
 } from "lucide-react";
@@ -182,7 +182,7 @@ export default function HomeCoursesSection() {
       <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#DE1F26]/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        
+
         {/* 1. TOP ELEGANT HEADER */}
         <div className="text-center max-w-2xl mx-auto mb-6">
           <motion.div
@@ -195,7 +195,7 @@ export default function HomeCoursesSection() {
             <span>{isEn ? "FLAGSHIP TECH CURRICULUM" : "শীর্ষস্থানীয় প্রফেশনাল প্রোগ্রামসমূহ"}</span>
           </motion.div>
 
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -213,14 +213,14 @@ export default function HomeCoursesSection() {
             )}
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.12 }}
             className="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed"
           >
-            {isEn 
+            {isEn
               ? "Architected by senior engineers from global tech companies. Hands-on production codebases, 1-on-1 code reviews, and direct hiring placement."
               : "আন্তর্জাতিক সফটওয়্যার ইন্ডাস্ট্রির লিড ইঞ্জিনিয়ারদের সরাসরি তত্ত্বাবধানে প্রস্তুত করা বাস্তবমুখী ও ক্যারিয়ার-উপযোগী সিলেবাস।"}
           </motion.p>
@@ -268,11 +268,10 @@ export default function HomeCoursesSection() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer ${
-                  isActive
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer ${isActive
                     ? "bg-[#08121a] text-white shadow-sm scale-105"
                     : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-[#08121a]"
-                }`}
+                  }`}
               >
                 <Icon size={12} className={isActive ? "text-[#008744]" : "text-slate-400"} />
                 <span>{cat.label}</span>
@@ -282,7 +281,7 @@ export default function HomeCoursesSection() {
         </motion.div>
 
         {/* 4. WORLD-CLASS PREMIUM COURSE CARDS (4-Column Layout) */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 mb-10"
         >
@@ -298,7 +297,7 @@ export default function HomeCoursesSection() {
                 className="bg-white rounded-xl border border-slate-200/90 shadow-[0_3px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(0,135,68,0.1)] hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between overflow-hidden group relative"
               >
                 {/* ANIMATED ROUNDED CORNER GRADIENT BORDER */}
-                <div 
+                <div
                   className="absolute -inset-[1.5px] rounded-[14px] pointer-events-none z-20 transition-all duration-500 opacity-0 group-hover:opacity-100 p-[2px]"
                   style={{
                     background: course.accentColor === "#DE1F26"
@@ -313,7 +312,7 @@ export default function HomeCoursesSection() {
 
                 <div>
                   {/* Cinematic Video Thumbnail Area (Compact Height) */}
-                  <div 
+                  <div
                     onClick={() => setSelectedVideoCourse(course)}
                     className="relative h-32 sm:h-36 w-full overflow-hidden cursor-pointer group/thumb"
                   >
@@ -385,7 +384,7 @@ export default function HomeCoursesSection() {
                       </div>
 
                       <Link
-                        href={`/courses?track=${course.id}`}
+                        href={`/courses?course=${course.id}`}
                         className="inline-flex items-center gap-1 bg-[#08121a] hover:bg-[#008744] text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-2xs transition-colors group/btn"
                       >
                         <span>{isEn ? "Syllabus" : "সিলেবাস"}</span>
@@ -461,7 +460,7 @@ export default function HomeCoursesSection() {
                 </div>
 
                 <Link
-                  href={`/courses?track=${selectedVideoCourse.id}`}
+                  href={`/courses?course=${selectedVideoCourse.id}`}
                   onClick={() => setSelectedVideoCourse(null)}
                   className="inline-flex items-center gap-2 bg-[#008744] hover:bg-[#007038] text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-md transition-colors"
                 >
