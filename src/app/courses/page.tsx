@@ -31,18 +31,18 @@ function CoursesContent() {
   const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
 
   const categories = [
-    { id: "all", label: isEn ? "All Categories" : "সকল ক্যাটাগরি", icon: Layers, color: "text-[#008744]" },
-    { id: "ai", label: isEn ? "AI and Automation" : "এআই ও অটোমেশন", icon: Cpu, color: "text-[#DE1F26]" },
-    { id: "design", label: isEn ? "Art & Design" : "আর্ট ও ডিজাইন", icon: Palette, color: "text-amber-500" },
-    { id: "programming", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2, color: "text-[#008744]" },
-    { id: "language", label: isEn ? "Language Skills" : "ভাষা দক্ষতা", icon: Globe2, color: "text-blue-600" },
-    { id: "marketing", label: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: TrendingUp, color: "text-[#DE1F26]" },
-    { id: "media", label: isEn ? "Media & Film" : "মিডিয়া ও ফিল্ম", icon: Video, color: "text-purple-600" },
-    { id: "networking", label: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার", icon: Server, color: "text-cyan-600" },
-    { id: "management", label: isEn ? "Management" : "ম্যানেজমেন্ট", icon: Briefcase, color: "text-indigo-600" },
-    { id: "database", label: isEn ? "Database" : "ডাটাবেস", icon: Database, color: "text-[#008744]" },
-    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, color: "text-[#DE1F26]" },
-    { id: "cybersecurity", label: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি", icon: ShieldCheck, color: "text-[#008744]" },
+    { id: "all", label: isEn ? "All Categories" : "সকল ক্যাটাগরি", icon: Layers, iconColor: "text-[#008744]" },
+    { id: "ai", label: isEn ? "AI and Automation" : "এআই ও অটোমেশন", icon: Cpu, iconColor: "text-[#DE1F26]" },
+    { id: "design", label: isEn ? "Art & Design" : "আর্ট ও ডিজাইন", icon: Palette, iconColor: "text-amber-500" },
+    { id: "programming", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2, iconColor: "text-[#008744]" },
+    { id: "language", label: isEn ? "Language Skills" : "ভাষা দক্ষতা", icon: Globe2, iconColor: "text-blue-600" },
+    { id: "marketing", label: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
+    { id: "media", label: isEn ? "Media & Film" : "মিডিয়া ও ফিল্ম", icon: Video, iconColor: "text-purple-600" },
+    { id: "networking", label: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার", icon: Server, iconColor: "text-cyan-600" },
+    { id: "management", label: isEn ? "Management" : "ম্যানেজমেন্ট", icon: Briefcase, iconColor: "text-indigo-600" },
+    { id: "database", label: isEn ? "Database" : "ডাটাবেস", icon: Database, iconColor: "text-[#008744]" },
+    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-[#DE1F26]" },
+    { id: "cybersecurity", label: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি", icon: ShieldCheck, iconColor: "text-[#008744]" },
   ];
 
   const allCourses = useMemo(() => [
@@ -586,9 +586,9 @@ function CoursesContent() {
             <div className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 space-y-4 max-h-[calc(100vh-7rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20">
               
               {/* Search Input Box */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/20 transition-all">
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/15 transition-all">
                 <div className="relative flex items-center">
-                  <Search size={16} className="text-slate-400 ml-2.5 flex-shrink-0" />
+                  <Search size={15} className="text-slate-400 ml-2.5 flex-shrink-0" />
                   <input
                     type="text"
                     value={searchQuery}
@@ -626,15 +626,15 @@ function CoursesContent() {
                         onClick={() => setActiveCategory(cat.id)}
                         className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs transition-all text-left cursor-pointer group ${
                           isChecked 
-                            ? "bg-emerald-50/90 text-[#008744] font-extrabold border border-emerald-200/80 shadow-2xs" 
+                            ? "bg-emerald-50/90 text-[#008744] font-bold border border-emerald-200 shadow-2xs" 
                             : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium"
                         }`}
                       >
                         <div className="flex items-center gap-2.5 truncate">
-                          {/* Custom Styled Rounded Checkbox */}
+                          {/* Custom Checkbox */}
                           <div className={`w-4 h-4 rounded-md border flex items-center justify-center flex-shrink-0 transition-all ${
                             isChecked 
-                              ? "bg-[#008744] border-[#008744] text-white shadow-2xs" 
+                              ? "bg-[#008744] border-[#008744] text-white" 
                               : "border-slate-300 bg-white group-hover:border-slate-400"
                           }`}>
                             {isChecked && <Check size={11} className="stroke-[3]" />}
@@ -643,8 +643,8 @@ function CoursesContent() {
                           <span className="truncate">{cat.label}</span>
                         </div>
 
-                        {/* Distinct Category Icon */}
-                        <IconComponent size={14} className={`flex-shrink-0 ${isChecked ? "text-[#008744]" : cat.color}`} />
+                        {/* Distinct Thematic Icon */}
+                        <IconComponent size={13} className={`flex-shrink-0 ${isChecked ? "text-[#008744]" : cat.iconColor}`} />
                       </button>
                     );
                   })}
@@ -653,7 +653,7 @@ function CoursesContent() {
 
             </div>
 
-            {/* RIGHT AREA: TOP CONTROLS & COURSE CARDS GRID (8 cols on lg, 9 on xl) */}
+            {/* RIGHT AREA: TOP CONTROLS & COURSE CARDS GRID */}
             <div className="lg:col-span-8 xl:col-span-9 space-y-6">
               
               {/* Top Filter / Control Bar */}
@@ -661,22 +661,22 @@ function CoursesContent() {
                 
                 {/* Left: Count & Mode Tabs */}
                 <div className="flex items-center flex-wrap gap-3 w-full sm:w-auto">
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
-                    <Sparkles size={14} className="text-[#DE1F26]" />
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
+                    <Sparkles size={13} className="text-[#DE1F26]" />
                     <span>
                       <strong className="text-[#008744] font-black">{filteredCourses.length}</strong> {isEn ? "courses found" : "টি কোর্স পাওয়া গেছে"}
                     </span>
                   </div>
 
                   {/* Mode Pills: All, Online, Offline (Brand Styled) */}
-                  <div className="flex items-center gap-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200/60">
+                  <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
                     {(["all", "online", "offline"] as const).map((mode) => (
                       <button
                         key={mode}
                         onClick={() => setSelectedMode(mode)}
                         className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${
                           selectedMode === mode
-                            ? "bg-gradient-to-r from-[#008744] to-emerald-600 text-white shadow-xs"
+                            ? "bg-[#008744] text-white shadow-2xs"
                             : "text-slate-600 hover:text-slate-900"
                         }`}
                       >
@@ -692,7 +692,7 @@ function CoursesContent() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-white border border-slate-200 text-slate-700 text-xs font-bold px-3 py-2 rounded-xl outline-none cursor-pointer hover:border-emerald-400 shadow-2xs transition-colors"
+                    className="bg-white border border-slate-200 text-slate-700 text-xs font-semibold px-3 py-2 rounded-xl outline-none cursor-pointer hover:border-emerald-300 shadow-2xs transition-colors"
                   >
                     <option value="default">{isEn ? "⇅ Sort By: Default" : "⇅ বাছাই: ডিফল্ট"}</option>
                     <option value="price-low">{isEn ? "Price: Low to High" : "মূল্য: কম থেকে বেশি"}</option>
@@ -700,7 +700,7 @@ function CoursesContent() {
                   </select>
 
                   {/* Grid / List icons */}
-                  <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200/60">
+                  <div className="flex items-center bg-slate-100 p-1 rounded-xl">
                     <button
                       onClick={() => setViewMode("grid")}
                       className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
@@ -751,10 +751,10 @@ function CoursesContent() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3 }}
-                        whileHover={{ y: -5 }}
-                        className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-300 shadow-2xs hover:shadow-[0_12px_30px_rgba(0,135,68,0.08)] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+                        whileHover={{ y: -4 }}
+                        className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-200 shadow-2xs hover:shadow-[0_10px_25px_rgba(0,135,68,0.06)] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
                       >
-                        {/* TOP THUMBNAIL BANNER WITH CENTER HOVER PLAY BUTTON */}
+                        {/* TOP THUMBNAIL BANNER */}
                         <div 
                           onClick={() => setSelectedVideoCourse(course)}
                           className={`relative h-44 sm:h-48 bg-gradient-to-br ${course.bgGradient} overflow-hidden p-4 sm:p-5 flex flex-col justify-between text-white cursor-pointer group/thumb`}
@@ -764,13 +764,13 @@ function CoursesContent() {
                           <img 
                             src={course.image} 
                             alt={course.title}
-                            className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover/thumb:opacity-40 group-hover/thumb:scale-108 transition-all duration-500" 
+                            className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover/thumb:opacity-40 group-hover/thumb:scale-105 transition-all duration-500" 
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#08121a]/90 via-black/40 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                           {/* Top Badges: Mode & Star Rating */}
                           <div className="flex items-center justify-between relative z-10 pointer-events-none">
-                            <span className={`text-[10px] font-black px-2.5 py-0.5 rounded-lg uppercase tracking-wider shadow-xs ${
+                            <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider shadow-xs ${
                               course.modeType === "offline" 
                                 ? "bg-[#008744] text-white" 
                                 : "bg-[#DE1F26] text-white"
@@ -778,16 +778,16 @@ function CoursesContent() {
                               {course.mode}
                             </span>
 
-                            <span className="bg-white/95 text-slate-900 text-[11px] font-black px-2 py-0.5 rounded-lg shadow-xs flex items-center gap-1">
+                            <span className="bg-white/95 text-slate-900 text-[11px] font-extrabold px-2 py-0.5 rounded-md shadow-xs flex items-center gap-1">
                               <Star size={11} className="fill-[#F59E0B] text-[#F59E0B]" />
                               <span>{course.rating}</span>
                             </span>
                           </div>
 
-                          {/* CENTER VIDEO PLAY BUTTON WITH GLOWING HOVER EFFECT */}
+                          {/* CENTER VIDEO PLAY BUTTON */}
                           <div className="absolute inset-0 flex items-center justify-center z-20">
-                            <div className="w-12 h-12 rounded-full bg-white/25 group-hover/thumb:bg-[#DE1F26] backdrop-blur-md border border-white/50 group-hover/thumb:border-[#DE1F26] text-white flex items-center justify-center shadow-lg transition-all duration-300 group-hover/thumb:scale-115 group-hover/thumb:shadow-[0_0_25px_rgba(222,31,38,0.6)] pl-0.5">
-                              <Play size={18} className="fill-white" />
+                            <div className="w-11 h-11 rounded-full bg-white/25 group-hover/thumb:bg-[#008744] text-white backdrop-blur-md border border-white/50 shadow-lg transition-all duration-300 group-hover/thumb:scale-110 pl-0.5 flex items-center justify-center">
+                              <Play size={16} className="fill-white" />
                             </div>
                           </div>
 
@@ -796,26 +796,23 @@ function CoursesContent() {
                             <h4 className="text-sm sm:text-base font-black leading-tight tracking-tight max-w-[75%] drop-shadow-md text-white">
                               {course.bannerTitle}
                             </h4>
-                            <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center text-lg flex-shrink-0 shadow-inner group-hover/thumb:scale-110 transition-transform">
+                            <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center text-lg flex-shrink-0 shadow-inner group-hover/thumb:scale-105 transition-transform">
                               {course.illustration}
                             </div>
                           </div>
-
-                          {/* Subtle Background Glow Overlay */}
-                          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:14px_14px] pointer-events-none" />
                         </div>
 
                         {/* CARD BODY CONTENT */}
                         <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                           <div>
-                            {/* Distinct Category Tag */}
-                            <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#008744] bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 rounded-md mb-2">
+                            {/* Category Tag */}
+                            <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#008744] bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md mb-2">
                               <CatIcon size={12} className="text-[#008744]" />
                               <span>{course.categoryLabel}</span>
                             </div>
 
                             {/* Course Title */}
-                            <h3 className="font-extrabold text-slate-900 text-sm sm:text-[15px] leading-snug line-clamp-2 mb-2.5 group-hover:text-[#008744] transition-colors min-h-[2.5rem]">
+                            <h3 className="font-extrabold text-slate-900 text-sm sm:text-[14.5px] leading-snug line-clamp-2 mb-2.5 group-hover:text-[#008744] transition-colors min-h-[2.4rem]">
                               {course.title}
                             </h3>
 
@@ -856,7 +853,7 @@ function CoursesContent() {
                             <div className="flex items-center gap-2">
                               <button
                                 onClick={() => setSelectedCourseForModal(course)}
-                                className="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#008744] to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-md shadow-emerald-700/15 transition-all cursor-pointer group/btn"
+                                className="flex-1 py-2.5 px-3 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
                               >
                                 <BookOpen size={13} />
                                 <span>{isEn ? "Details" : "বিস্তারিত"}</span>
@@ -911,7 +908,7 @@ function CoursesContent() {
                   <X size={18} />
                 </button>
 
-                <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#008744] bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-md uppercase tracking-wider mb-2">
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#008744] bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-md uppercase tracking-wider mb-2">
                   <BookOpen size={12} />
                   <span>{selectedCourseForModal.categoryLabel}</span>
                 </div>
@@ -927,14 +924,14 @@ function CoursesContent() {
                 <div className="grid grid-cols-2 gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-100 mb-6 text-xs">
                   <div>
                     <span className="text-slate-400 block font-medium">{isEn ? "Duration" : "সময়সীমা"}</span>
-                    <span className="font-extrabold text-slate-800 text-sm flex items-center gap-1 mt-0.5">
+                    <span className="font-bold text-slate-800 text-sm flex items-center gap-1 mt-0.5">
                       <Calendar size={13} className="text-[#008744]" />
                       {selectedCourseForModal.duration}
                     </span>
                   </div>
                   <div>
                     <span className="text-slate-400 block font-medium">{isEn ? "Delivery Mode" : "মাধ্যম"}</span>
-                    <span className="font-extrabold text-slate-800 text-sm flex items-center gap-1 mt-0.5">
+                    <span className="font-bold text-slate-800 text-sm flex items-center gap-1 mt-0.5">
                       <span className={`w-2 h-2 rounded-full ${selectedCourseForModal.modeType === "offline" ? "bg-[#008744]" : "bg-[#DE1F26]"}`} />
                       {selectedCourseForModal.mode}
                     </span>
@@ -951,7 +948,7 @@ function CoursesContent() {
                     href={`https://wa.me/880171234578?text=Hello%2C%20I%20want%20to%20enroll%20in%20${encodeURIComponent(selectedCourseForModal.title)}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-gradient-to-r from-[#008744] to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-6 py-3 rounded-xl font-extrabold text-xs shadow-md shadow-emerald-700/20 transition-all flex items-center gap-2"
+                    className="bg-[#008744] hover:bg-[#007038] text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all flex items-center gap-2"
                   >
                     <MessageCircle size={15} />
                     <span>{isEn ? "Enroll via WhatsApp" : "হোয়াটসঅ্যাপে ভর্তি হন"}</span>
@@ -981,7 +978,7 @@ function CoursesContent() {
               >
                 <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 text-white">
                   <div className="flex items-center gap-2.5">
-                    <Play size={16} className="text-[#DE1F26] fill-[#DE1F26]" />
+                    <Play size={15} className="text-[#008744] fill-[#008744]" />
                     <span className="font-bold text-xs sm:text-sm truncate max-w-[280px] sm:max-w-md">
                       {selectedVideoCourse.title}
                     </span>
@@ -1014,7 +1011,7 @@ function CoursesContent() {
                     href={`https://wa.me/880171234578?text=Hello%2C%20I%20want%20to%20enroll%20in%20${encodeURIComponent(selectedVideoCourse.title)}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-[#008744] hover:bg-emerald-600 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all flex items-center gap-1.5"
+                    className="bg-[#008744] hover:bg-[#007038] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all flex items-center gap-1.5"
                   >
                     <MessageCircle size={14} />
                     <span>{isEn ? "Enroll Now" : "ভর্তি নিশ্চিত করুন"}</span>
