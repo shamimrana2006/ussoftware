@@ -137,19 +137,31 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${spaceGrotesk.variable} ${sora.variable} ${poppins.variable} ${urbanist.variable} ${balooDa2.variable} ${hindSiliguri.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (!sessionStorage.getItem('us_software_initial_loaded')) {
+                  document.documentElement.classList.add('app-loading');
+                }
+              } catch(e) {}
+            `,
+          }}
+        />
+      </head>
       <body
         className="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-900 selection:bg-[#008744]/20 selection:text-[#008744] antialiased"
         style={{ fontFamily: "var(--font-hind), sans-serif" }}
       >
-        <LoadingScreen />
-        <SmoothScroll>
-          <LanguageProvider>
-            <MouseBubbles />
-            <div className="flex-1 flex flex-col min-h-screen">
+        <LoadingScreen>
+          <SmoothScroll>
+            <LanguageProvider>
+              <MouseBubbles />
               {children}
-            </div>
-          </LanguageProvider>
-        </SmoothScroll>
+            </LanguageProvider>
+          </SmoothScroll>
+        </LoadingScreen>
       </body>
     </html>
   );

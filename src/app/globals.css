@@ -28,6 +28,23 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Pre-hydration Instant Loading Screen Shield (prevents any millisecond flash of homepage content) */
+html.app-loading {
+  background-color: #050b10 !important;
+  overflow: hidden !important;
+}
+
+html.app-loading body {
+  background-color: #050b10 !important;
+  overflow: hidden !important;
+}
+
+html.app-loading #app-content-wrapper {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

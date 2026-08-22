@@ -4,8 +4,29 @@ import React, { useEffect, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, Cpu, Wifi, Zap, Activity } from "lucide-react";
 
-export default function LoadingScreen() {
-  const [isLoading, setIsLoading] = useState(false);
+export default function LoadingScreen({ children }: { children?: React.ReactNode }) {
+  const [isAlreadyLoaded, setIsAlreadyLoaded] = useState(() => {
+    if (typeof window !== "undefined") {
+      try {
+        return !!sessionStorage.getItem("us_software_initial_loaded");
+      } catch {
+        return false;
+      }
+    }
+    return false;
+  });
+
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window !== "undefined") {
+      try {
+        return !sessionStorage.getItem("us_software_initial_loaded");
+      } catch {
+        return false;
+      }
+    }
+    return false;
+  });
+
   const [progress, setProgress] = useState(0);
   const [statusIndex, setStatusIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -27,16 +48,19 @@ export default function LoadingScreen() {
   useEffect(() => {
     setIsClient(true);
 
+    let hasLoaded = false;
     try {
-      const hasLoaded = sessionStorage.getItem("us_software_initial_loaded");
-      if (hasLoaded) {
-        setIsLoading(false);
-        return;
-      }
-    } catch {
-      // Fallback if sessionStorage is disabled or restricted
+      hasLoaded = !!sessionStorage.getItem("us_software_initial_loaded");
+    } catch {}
+
+    if (hasLoaded) {
+      setIsAlreadyLoaded(true);
+      setIsLoading(false);
+      document.documentElement.classList.remove("app-loading");
+      return;
     }
 
+    setIsAlreadyLoaded(false);
     setIsLoading(true);
     // Prevent background scrolling while loading screen is active
     document.body.style.overflow = "hidden";
@@ -84,10 +108,11 @@ export default function LoadingScreen() {
       } else {
         setTimeout(() => {
           setIsLoading(false);
+          document.documentElement.classList.remove("app-loading");
+          document.body.style.overflow = "";
           try {
             sessionStorage.setItem("us_software_initial_loaded", "true");
           } catch {}
-          document.body.style.overflow = "";
         }, 260);
       }
     };
@@ -96,27 +121,27 @@ export default function LoadingScreen() {
 
     return () => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      document.documentElement.classList.remove("app-loading");
       document.body.style.overflow = "";
     };
   }, []);
 
-  if (!isClient || !isLoading) return null;
-
   const CurrentIcon = statusMessages[statusIndex]?.icon || Zap;
 
   return (
-    <AnimatePresence mode="wait">
-      {isLoading && (
-        <motion.div
-          key="loader-container"
-          initial={{ opacity: 1 }}
-          exit={{
-            opacity: 0,
-            y: -20,
-            transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
-          }}
-          className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050b10] select-none overflow-hidden p-6"
-        >
+    <>
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <motion.div
+            key="loader-container"
+            initial={{ opacity: 1 }}
+            exit={{
+              opacity: 0,
+              y: -20,
+              transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
+            }}
+            className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050b10] select-none overflow-hidden p-6"
+          >
           {/* Angled 3D Perspective Animated Cyber Grid with Red & Green Lines */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none [perspective:900px] flex items-center justify-center">
             <motion.div
@@ -333,5 +358,18 @@ export default function LoadingScreen() {
         </motion.div>
       )}
     </AnimatePresence>
+
+    {children && (
+      <motion.div
+        id="app-content-wrapper"
+        initial={isAlreadyLoaded ? false : { opacity: 0, y: 30 }}
+        animate={!isLoading ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+        className="flex-1 flex flex-col min-h-screen"
+      >
+        {children}
+      </motion.div>
+    )}
+  </>
   );
 }
