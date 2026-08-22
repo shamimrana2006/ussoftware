@@ -72,10 +72,17 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
         <motion.div
           layoutId="hyperRealisticWaterDroplet"
           transition={{
-            type: "spring",
-            stiffness: 700,
-            damping: 35,
-            mass: 0.35,
+            layout: {
+              type: "spring",
+              stiffness: 700,
+              damping: 35,
+              mass: 0.35,
+            },
+            scaleX: { duration: 0.35, ease: "easeOut" },
+            scaleY: { duration: 0.35, ease: "easeOut" },
+            x: { type: "spring", stiffness: 700, damping: 35 },
+            y: { type: "spring", stiffness: 700, damping: 35 },
+            borderRadius: { duration: 0.2 },
           }}
           animate={{
             x: mouseOffset.x,

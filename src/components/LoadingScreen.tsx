@@ -5,31 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, Cpu, Wifi, Zap, Activity } from "lucide-react";
 
 export default function LoadingScreen({ children }: { children?: React.ReactNode }) {
-  const [isAlreadyLoaded, setIsAlreadyLoaded] = useState(() => {
-    if (typeof window !== "undefined") {
-      try {
-        return !!sessionStorage.getItem("us_software_initial_loaded");
-      } catch {
-        return false;
-      }
-    }
-    return false;
-  });
-
-  const [isLoading, setIsLoading] = useState(() => {
-    if (typeof window !== "undefined") {
-      try {
-        return !sessionStorage.getItem("us_software_initial_loaded");
-      } catch {
-        return false;
-      }
-    }
-    return false;
-  });
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const [progress, setProgress] = useState(0);
   const [statusIndex, setStatusIndex] = useState(0);
-  const [isClient, setIsClient] = useState(false);
 
   const statusMessages = useMemo(
     () => [
@@ -54,15 +33,12 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
     } catch {}
 
     if (hasLoaded) {
-      setIsAlreadyLoaded(true);
       setIsLoading(false);
       document.documentElement.classList.remove("app-loading");
       return;
     }
 
-    setIsAlreadyLoaded(false);
     setIsLoading(true);
-    // Prevent background scrolling while loading screen is active
     document.body.style.overflow = "hidden";
 
     let animationFrameId: number;
@@ -131,7 +107,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && (
+        {isClient && isLoading && (
           <motion.div
             key="loader-container"
             initial={{ opacity: 1 }}
@@ -142,234 +118,226 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
             }}
             className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050b10] select-none overflow-hidden p-6"
           >
-          {/* Angled 3D Perspective Animated Cyber Grid with Red & Green Lines */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none [perspective:900px] flex items-center justify-center">
-            <motion.div
-              initial={{ 
-                opacity: 0, 
-                rotateX: 75, 
-                rotateZ: -20, 
-                scale: 1.9,
-                y: 80 
-              }}
-              animate={{ 
-                opacity: 0.85, 
-                rotateX: [60, 54, 60], 
-                rotateZ: [-18, -12, -18], 
-                scale: [1.65, 1.75, 1.65],
-                y: 0 
-              }}
-              transition={{ 
-                opacity: { duration: 1, ease: "easeOut" },
-                y: { duration: 1.2, ease: "easeOut" },
-                rotateX: { duration: 10, repeat: Infinity, ease: "easeInOut" },
-                rotateZ: { duration: 12, repeat: Infinity, ease: "easeInOut" },
-                scale: { duration: 10, repeat: Infinity, ease: "easeInOut" },
-              }}
-              className="absolute w-[200vw] h-[200vh] origin-center animate-grid-move"
-              style={{
-                backgroundImage: `
-                  linear-gradient(rgba(0, 135, 68, 0.18) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(0, 135, 68, 0.18) 1px, transparent 1px),
-                  linear-gradient(rgba(222, 31, 38, 0.12) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(222, 31, 38, 0.12) 1px, transparent 1px)
-                `,
-                backgroundSize: "60px 60px, 60px 60px, 300px 300px, 300px 300px",
-                transformStyle: "preserve-3d",
-              }}
-            />
-          </div>
-
-          {/* Vignette & Soft Gradient Fade for Seamless Cyber Vibe */}
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#050b10]/70 to-[#050b10] pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050b10] via-transparent to-[#050b10] pointer-events-none opacity-80" />
-
-          {/* Central Ambient Glow in Red & Green */}
-          <div className="absolute w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-gradient-to-tr from-[#DE1F26]/15 via-[#008744]/15 to-transparent rounded-full blur-[90px] pointer-events-none animate-pulse" />
-
-          {/* MAIN CENTER CONTAINER */}
-          <div className="relative z-10 flex flex-col items-center justify-center max-w-lg w-full">
-            {/* Clean Logo Card */}
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center justify-center mb-6"
-            >
-              <div className="bg-[#081520]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,135,68,0.25)]">
-                <img
-                  src="/logo/logo.png"
-                  alt="US Software Logo"
-                  className="w-[120px] sm:w-[145px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,135,68,0.4)]"
-                />
-              </div>
-            </motion.div>
-
-            {/* INFINITY (∞) ANIMATION IN BRAND RED & GREEN */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ 
-                opacity: 1, 
-                scale: [0.97, 1.03, 0.97],
-              }}
-              transition={{ 
-                opacity: { duration: 0.6 },
-                scale: { duration: 3.5, repeat: Infinity, ease: "easeInOut" }
-              }}
-              className="relative w-48 sm:w-60 md:w-64 h-24 sm:h-28 flex items-center justify-center my-1"
-            >
-              <svg
-                viewBox="0 0 240 120"
-                className="w-full h-full overflow-visible drop-shadow-[0_0_18px_rgba(0,135,68,0.5)]"
-              >
-                <defs>
-                  {/* Neon Infinity Gradient Red to Green */}
-                  <linearGradient id="infinityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#DE1F26" />
-                    <stop offset="50%" stopColor="#EF4444" />
-                    <stop offset="100%" stopColor="#008744" />
-                  </linearGradient>
-
-                  {/* Laser Tip Glow Filter */}
-                  <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="3.5" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                {/* Base Dim Track */}
-                <path
-                  d={infinityPath}
-                  fill="none"
-                  stroke="rgba(255, 255, 255, 0.08)"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                />
-
-                {/* Glowing Active Neon Loop Stroke */}
-                <motion.path
-                  d={infinityPath}
-                  fill="none"
-                  stroke="url(#infinityGrad)"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                  strokeDasharray="140 280"
-                  animate={{
-                    strokeDashoffset: [0, -420],
-                  }}
-                  transition={{
-                    duration: 2.2,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                />
-
-                {/* Second Counter-Flow Trail in Brand Green */}
-                <motion.path
-                  d={infinityPath}
-                  fill="none"
-                  stroke="#10B981"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  strokeDasharray="60 360"
-                  animate={{
-                    strokeDashoffset: [-210, -630],
-                  }}
-                  transition={{
-                    duration: 2.2,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                  opacity={0.85}
-                />
-
-                {/* Orbiting Energy Light Dot 1 (Red) */}
-                <circle r="4" fill="#DE1F26" filter="url(#neonGlow)">
-                  <animateMotion
-                    path={infinityPath}
-                    dur="2.2s"
-                    repeatCount="indefinite"
-                    keyPoints="0;1"
-                    keyTimes="0;1"
-                    calcMode="linear"
-                  />
-                </circle>
-
-                {/* Orbiting Energy Light Dot 2 (Green - Opposite Phase) */}
-                <circle r="4" fill="#008744" filter="url(#neonGlow)">
-                  <animateMotion
-                    path={infinityPath}
-                    dur="2.2s"
-                    repeatCount="indefinite"
-                    keyPoints="0.5;1;0.5"
-                    keyTimes="0;0.5;1"
-                    calcMode="linear"
-                  />
-                </circle>
-              </svg>
-            </motion.div>
-
-            {/* Glowing Digital Percentage Counter */}
-            <div className="flex items-baseline justify-center space-x-1 my-1">
-              <motion.span
-                className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 font-mono"
-              >
-                {progress}
-              </motion.span>
-              <span className="text-xl sm:text-2xl font-mono text-[#008744] font-bold">
-                %
-              </span>
+            {/* Angled 3D Perspective Animated Cyber Grid with Red & Green Lines */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none [perspective:900px] flex items-center justify-center">
+              <motion.div
+                initial={{ 
+                  opacity: 0, 
+                  rotateX: 75, 
+                  rotateZ: -20, 
+                  scale: 1.9,
+                  y: 80 
+                }}
+                animate={{ 
+                  opacity: 0.85, 
+                  rotateX: [60, 54, 60], 
+                  rotateZ: [-18, -12, -18], 
+                  scale: [1.65, 1.75, 1.65],
+                  y: 0 
+                }}
+                transition={{ 
+                  opacity: { duration: 1, ease: "easeOut" },
+                  y: { duration: 1.2, ease: "easeOut" },
+                  rotateX: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+                  rotateZ: { duration: 12, repeat: Infinity, ease: "easeInOut" },
+                  scale: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+                }}
+                className="absolute w-[200vw] h-[200vh] origin-center animate-grid-move"
+                style={{
+                  backgroundImage: `
+                    linear-gradient(rgba(0, 135, 68, 0.18) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 135, 68, 0.18) 1px, transparent 1px),
+                    linear-gradient(rgba(222, 31, 38, 0.12) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(222, 31, 38, 0.12) 1px, transparent 1px)
+                  `,
+                  backgroundSize: "60px 60px, 60px 60px, 300px 300px, 300px 300px",
+                  transformStyle: "preserve-3d",
+                }}
+              />
             </div>
 
-            {/* PROGRESS BAR IN RED TO GREEN */}
-            <div className="w-64 sm:w-80 md:w-96 mt-3 flex flex-col items-center">
-              <div className="w-full h-2 bg-white/5 border border-white/10 rounded-full overflow-hidden relative p-[1px]">
-                {/* Progress Track */}
-                <motion.div
-                  className="h-full bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744] rounded-full relative"
-                  style={{ width: `${progress}%` }}
-                  transition={{ ease: "easeOut", duration: 0.1 }}
+            {/* Vignette & Soft Gradient Fade for Seamless Cyber Vibe */}
+            <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#050b10]/70 to-[#050b10] pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050b10] via-transparent to-[#050b10] pointer-events-none opacity-80" />
+
+            {/* Central Ambient Glow in Red & Green */}
+            <div className="absolute w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-gradient-to-tr from-[#DE1F26]/15 via-[#008744]/15 to-transparent rounded-full blur-[90px] pointer-events-none animate-pulse" />
+
+            {/* MAIN CENTER CONTAINER */}
+            <div className="relative z-10 flex flex-col items-center justify-center max-w-lg w-full">
+              {/* Clean Logo Card */}
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center justify-center mb-6"
+              >
+                <div className="bg-[#081520]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,135,68,0.25)]">
+                  <img
+                    src="/logo/logo.png"
+                    alt="US Software Logo"
+                    className="w-[120px] sm:w-[145px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,135,68,0.4)]"
+                  />
+                </div>
+              </motion.div>
+
+              {/* INFINITY (∞) ANIMATION IN BRAND RED & GREEN */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: [0.97, 1.03, 0.97],
+                }}
+                transition={{ 
+                  opacity: { duration: 0.6 },
+                  scale: { duration: 3.5, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="relative w-48 sm:w-60 md:w-64 h-24 sm:h-28 flex items-center justify-center my-1"
+              >
+                <svg
+                  viewBox="0 0 240 120"
+                  className="w-full h-full overflow-visible drop-shadow-[0_0_18px_rgba(0,135,68,0.5)]"
                 >
-                  {/* Glowing Laser Scan on top of the bar */}
-                  <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.7)_50%,transparent_100%)] animate-shimmer" />
-                </motion.div>
+                  <defs>
+                    {/* Neon Infinity Gradient Red to Green */}
+                    <linearGradient id="infinityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#DE1F26" />
+                      <stop offset="50%" stopColor="#EF4444" />
+                      <stop offset="100%" stopColor="#008744" />
+                    </linearGradient>
+
+                    {/* Laser Tip Glow Filter */}
+                    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="3.5" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  {/* Base Dim Track */}
+                  <path
+                    d={infinityPath}
+                    fill="none"
+                    stroke="rgba(255, 255, 255, 0.08)"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                  />
+
+                  {/* Glowing Active Neon Loop Stroke */}
+                  <motion.path
+                    d={infinityPath}
+                    fill="none"
+                    stroke="url(#infinityGrad)"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    strokeDasharray="140 280"
+                    animate={{
+                      strokeDashoffset: [0, -420],
+                    }}
+                    transition={{
+                      duration: 2.2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+
+                  {/* Second Counter-Flow Trail in Brand Green */}
+                  <motion.path
+                    d={infinityPath}
+                    fill="none"
+                    stroke="#10B981"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    strokeDasharray="60 360"
+                    animate={{
+                      strokeDashoffset: [-210, -630],
+                    }}
+                    transition={{
+                      duration: 2.2,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    opacity={0.85}
+                  />
+
+                  {/* Orbiting Energy Light Dot 1 (Red) */}
+                  <circle r="4" fill="#DE1F26" filter="url(#neonGlow)">
+                    <animateMotion
+                      path={infinityPath}
+                      dur="2.2s"
+                      repeatCount="indefinite"
+                      keyPoints="0;1"
+                      keyTimes="0;1"
+                      calcMode="linear"
+                    />
+                  </circle>
+
+                  {/* Orbiting Energy Light Dot 2 (Green - Opposite Phase) */}
+                  <circle r="4" fill="#008744" filter="url(#neonGlow)">
+                    <animateMotion
+                      path={infinityPath}
+                      dur="2.2s"
+                      repeatCount="indefinite"
+                      keyPoints="0.5;1;0.5"
+                      keyTimes="0;0.5;1"
+                      calcMode="linear"
+                    />
+                  </circle>
+                </svg>
+              </motion.div>
+
+              {/* Glowing Digital Percentage Counter */}
+              <div className="flex items-baseline justify-center space-x-1 my-1">
+                <motion.span
+                  className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 font-mono"
+                >
+                  {progress}
+                </motion.span>
+                <span className="text-xl sm:text-2xl font-mono text-[#008744] font-bold">
+                  %
+                </span>
               </div>
 
-              {/* Progress Stage Markers */}
-              <div className="w-full flex justify-between items-center mt-2 px-1 text-[9px] font-mono tracking-wider">
-                <span className={progress >= 25 ? "text-rose-400 font-bold" : "text-gray-600"}>BOOT</span>
-                <span className={progress >= 50 ? "text-red-400 font-bold" : "text-gray-600"}>ASSETS</span>
-                <span className={progress >= 75 ? "text-emerald-400 font-bold" : "text-gray-600"}>RENDER</span>
-                <span className={progress >= 100 ? "text-[#008744] font-bold" : "text-gray-600"}>READY</span>
+              {/* PROGRESS BAR IN RED TO GREEN */}
+              <div className="w-64 sm:w-80 md:w-96 mt-3 flex flex-col items-center">
+                <div className="w-full h-2 bg-white/5 border border-white/10 rounded-full overflow-hidden relative p-[1px]">
+                  {/* Progress Track */}
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744] rounded-full relative"
+                    style={{ width: `${progress}%` }}
+                    transition={{ ease: "easeOut", duration: 0.1 }}
+                  >
+                    {/* Glowing Laser Scan on top of the bar */}
+                    <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.7)_50%,transparent_100%)] animate-shimmer" />
+                  </motion.div>
+                </div>
+
+                {/* Progress Stage Markers */}
+                <div className="w-full flex justify-between items-center mt-2 px-1 text-[9px] font-mono tracking-wider">
+                  <span className={progress >= 25 ? "text-rose-400 font-bold" : "text-gray-600"}>BOOT</span>
+                  <span className={progress >= 50 ? "text-red-400 font-bold" : "text-gray-600"}>ASSETS</span>
+                  <span className={progress >= 75 ? "text-emerald-400 font-bold" : "text-gray-600"}>RENDER</span>
+                  <span className={progress >= 100 ? "text-[#008744] font-bold" : "text-gray-600"}>READY</span>
+                </div>
+              </div>
+
+              {/* DYNAMIC STATUS BADGE */}
+              <div className="mt-5 flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-md shadow-[0_2px_15px_rgba(0,0,0,0.4)]">
+                <CurrentIcon className="w-3.5 h-3.5 text-[#008744] animate-spin-slow" />
+                <span className="text-[11px] font-mono tracking-wider text-gray-300 uppercase">
+                  {statusMessages[statusIndex]?.text}
+                </span>
               </div>
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-            {/* DYNAMIC STATUS BADGE */}
-            <div className="mt-5 flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-md shadow-[0_2px_15px_rgba(0,0,0,0.4)]">
-              <CurrentIcon className="w-3.5 h-3.5 text-[#008744] animate-spin-slow" />
-              <span className="text-[11px] font-mono tracking-wider text-gray-300 uppercase">
-                {statusMessages[statusIndex]?.text}
-              </span>
-            </div>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-
-    {children && (
-      <motion.div
-        id="app-content-wrapper"
-        initial={isAlreadyLoaded ? false : { opacity: 0, y: 30 }}
-        animate={!isLoading ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-        className="flex-1 flex flex-col min-h-screen"
-      >
+      <div id="app-content-wrapper" className="flex-1 flex flex-col min-h-screen">
         {children}
-      </motion.div>
-    )}
-  </>
+      </div>
+    </>
   );
 }

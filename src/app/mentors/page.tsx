@@ -1,444 +1,335 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Star, Award, CheckCircle2, 
-  Calendar, X, 
-  Clock
+  Search, Sparkles, Briefcase, CheckSquare,
+  ChevronRight, ChevronDown, ChevronUp, Users
 } from "lucide-react";
-
-const LinkedinIcon = ({ size = 15, className = "" }: { size?: number, className?: string }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect width="4" height="12" x="2" y="9" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
+import { mentorsData } from "@/data/mentorsData";
 
 export default function MentorsPage() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const isEn = language === "en";
 
+  const [searchQuery, setSearchQuery] = useState("");
   const [activeSpecialty, setActiveSpecialty] = useState("all");
-  const [selectedMentorForBooking, setSelectedMentorForBooking] = useState<any>(null);
-  const [bookingStep, setBookingStep] = useState(1);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const specialties = [
-    { id: "all", name: isEn ? "All Faculty" : "সকল মেন্টর" },
-    { id: "arch", name: isEn ? "System Architecture" : "সিস্টেম আর্কিটেকচার" },
-    { id: "ai", name: isEn ? "AI & LLM Research" : "এআই ও এলএলএম রিসার্চ" },
-    { id: "devops", name: isEn ? "Cloud & DevOps" : "ক্লাউড ও ডেভঅপ্স" },
-    { id: "security", name: isEn ? "Cyber Security" : "সাইবার সিকিউরিটি" },
-    { id: "mobile", name: isEn ? "Mobile & UX" : "মোবাইল ও ইউএক্স" },
+    { id: "all", name: isEn ? "All Mentors" : "সকল মেন্টর" },
+    { id: "web", name: isEn ? "Web Development" : "ওয়েব ডেভেলপমেন্ট" },
+    { id: "marketing", name: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং" },
+    { id: "graphic", name: isEn ? "Graphic Design" : "গ্রাফিক ডিজাইন" },
+    { id: "ux", name: isEn ? "UX/UI Design" : "ইউএক্স/ইউআই ডিজাইন" },
+    { id: "ai", name: isEn ? "AI & Automation" : "এআই ও অটোমেশন" },
+    { id: "cloud", name: isEn ? "Cloud & DevOps" : "ক্লাউড ও ডেভঅপ্স" },
   ];
 
-  const mentors = [
+  // Filter Mentors
+  const filteredMentors = useMemo(() => {
+    return mentorsData.filter((m) => {
+      const matchesSpecialty = activeSpecialty === "all" || m.specialty === activeSpecialty;
+      const q = searchQuery.toLowerCase().trim();
+      const matchesSearch = 
+        !q ||
+        m.name.toLowerCase().includes(q) ||
+        m.nameBn.toLowerCase().includes(q) ||
+        m.role.toLowerCase().includes(q) ||
+        m.roleBn.toLowerCase().includes(q) ||
+        m.workExperiences.some((exp) => exp.toLowerCase().includes(q)) ||
+        m.workExperiencesBn.some((exp) => exp.toLowerCase().includes(q)) ||
+        m.skills.some((s) => s.toLowerCase().includes(q));
+      return matchesSpecialty && matchesSearch;
+    });
+  }, [activeSpecialty, searchQuery]);
+
+  const faqs = [
     {
-      id: "tanvir-hasan",
-      name: isEn ? "Tanvir Hasan" : "তানভীর হাসান",
-      role: isEn ? "Principal Software Architect" : "প্রিন্সিপাল সফটওয়্যার আর্কিটেক্ট",
-      companyBadge: "Ex-Grab • Lead Architect",
-      companyColor: "bg-emerald-50 text-[#008744] border-emerald-200",
-      specialty: "arch",
-      experience: isEn ? "11+ Years Experience" : "১১+ বছর অভিজ্ঞতা",
-      mentees: "850+ Mentees",
-      rating: 4.98,
-      nextSlot: isEn ? "Next Slot: Today 7:00 PM" : "পরবর্তী স্লট: আজ সন্ধ্যা ৭টা",
-      bio: isEn ? "Specializes in high-throughput distributed microservices, Event-Driven Architecture, PostgreSQL query optimization, and Next.js at scale." : "ডিস্ট্রিবিউটেড মাইক্রোসার্ভিসেস, ইভেন্ট-ড্রিভেন আর্কিটেকচার ও হাই-কনকারেন্সি ডাটাবেস অপ্টিমাইজেশনে বিশেষজ্ঞ।",
-      accentGrad: "from-[#008744] to-emerald-700",
-      hoverBorder: "hover:border-[#008744]/80 hover:shadow-[0_24px_50px_rgba(0,135,68,0.15)]",
-      skills: ["System Architecture", "Next.js", "Go", "PostgreSQL", "Kafka", "Redis"],
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400",
+      q: isEn ? "How do 1-on-1 mentorship sessions work at US Software?" : "ইউএস সফটওয়্যারে ১-অন-১ মেন্টরশিপ কীভাবে পরিচালিত হয়?",
+      a: isEn 
+        ? "Sessions are conducted live via Google Meet or Zoom screen-sharing for 45 minutes. You can share your codebase, review portfolio projects, or conduct mock interview rounds." 
+        : "সেশনগুলো গুগল মিট বা জুমের মাধ্যমে লাইভ স্ক্রিন-শেয়ারিংয়ের মাধ্যমে ৪৫ মিনিট অনুষ্ঠিত হয়। আপনি কোড রিভিউ, প্রজেক্ট পোর্টফোলিও মূল্যায়ন কিংবা ইন্টারভিউ মক সেশন নিতে পারেন।"
     },
     {
-      id: "ariful-islam",
-      name: isEn ? "Dr. Ariful Islam" : "ড. আরিফুল ইসলাম",
-      role: isEn ? "Senior AI Research Scientist" : "সিনিয়র এআই রিসার্চ সায়েন্টিস্ট",
-      companyBadge: "PhD in ML • AI Research Lead",
-      companyColor: "bg-rose-50 text-[#DE1F26] border-rose-200",
-      specialty: "ai",
-      experience: isEn ? "9+ Years Experience" : "৯+ বছর অভিজ্ঞতা",
-      mentees: "620+ Mentees",
-      rating: 4.99,
-      nextSlot: isEn ? "Next Slot: Tomorrow 5:00 PM" : "পরবর্তী স্লট: আগামীকাল বিকাল ৫টা",
-      bio: isEn ? "Pioneering research in autonomous LLM multi-agent frameworks, RAG pipeline evaluation, model fine-tuning, and PyTorch production deployments." : "জেনারেটিভ এআই, অটোনোমাস মাল্টি-এজেন্ট ফ্রেমওয়ার্ক ও লার্জ ল্যাঙ্গুয়েজ মডেল গবেষণায় বিশেষজ্ঞ।",
-      accentGrad: "from-[#DE1F26] to-rose-700",
-      hoverBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_24px_50px_rgba(222,31,38,0.15)]",
-      skills: ["Generative AI", "PyTorch", "LangChain", "Vector DBs", "Model Fine-Tuning", "Python"],
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+      q: isEn ? "Can I schedule recurring sessions with the department heads?" : "আমি কি ডিপার্টমেন্ট হেডদের সাথে নিয়মিত সেশন নিতে পারব?",
+      a: isEn 
+        ? "Yes! Students enrolled in our Career Bootcamps receive dedicated 1-on-1 mentorship pairing throughout their course duration." 
+        : "হ্যাঁ! আমাদের প্রফেশনাল বুটক্যাম্পে ভর্তি থাকা শিক্ষার্থীরা কোর্স চলাকালীন নিয়মিত মেন্টরশিপ পেয়ে থাকেন।"
     },
     {
-      id: "rakib-mahmud",
-      name: isEn ? "Rakib Mahmud" : "রাকিব মাহমুদ",
-      role: isEn ? "Head of Cloud & Platform DevOps" : "হেড অব ক্লাউড ও প্ল্যাটফর্ম ডেভঅপ্স",
-      companyBadge: "AWS Solutions Architect Pro",
-      companyColor: "bg-emerald-50 text-[#008744] border-emerald-200",
-      specialty: "devops",
-      experience: isEn ? "8+ Years Experience" : "৮+ বছর অভিজ্ঞতা",
-      mentees: "490+ Mentees",
-      rating: 4.94,
-      nextSlot: isEn ? "Next Slot: Saturday 8:00 PM" : "পরবর্তী স্লট: শনিবার রাত ৮টা",
-      bio: isEn ? "Expert in orchestrating multi-region Kubernetes clusters, GitOps pipelines with ArgoCD, Terraform automation, and 24/7 observability." : "এডব্লিউএস ক্লাউড, কুবারনেটিস ক্লাস্টার অর্কেস্ট্রেশন ও অটোমেটেড সিআই/সিডি পাইপলাইনে দক্ষ।",
-      accentGrad: "from-[#008744] to-teal-800",
-      hoverBorder: "hover:border-[#008744]/80 hover:shadow-[0_24px_50px_rgba(0,135,68,0.15)]",
-      skills: ["AWS", "Kubernetes", "Docker", "Terraform", "CI/CD", "Prometheus", "Linux"],
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+      q: isEn ? "What should I prepare before joining the session?" : "সেশনে যুক্ত হওয়ার আগে কী কী প্রস্তুতি নেওয়া প্রয়োজন?",
+      a: isEn 
+        ? "We recommend preparing your specific questions, portfolio or GitHub repository links beforehand to maximize your 45-minute consultation." 
+        : "আপনার নির্দিষ্ট প্রশ্নমালা, পোর্টফোলিও বা গিটহাব লিংক আগে থেকেই প্রস্তুত রাখার পরামর্শ দেওয়া হচ্ছে।"
     },
     {
-      id: "faisal-ahmed",
-      name: isEn ? "Faisal Ahmed" : "ফয়সাল আহমেদ",
-      role: isEn ? "Cyber Security & Red Team Lead" : "সাইবার সিকিউরিটি ও রেড টিম লিড",
-      companyBadge: "CEH • OSCP Certified Consultant",
-      companyColor: "bg-rose-50 text-[#DE1F26] border-rose-200",
-      specialty: "security",
-      experience: isEn ? "10+ Years Experience" : "১০+ বছর অভিজ্ঞতা",
-      mentees: "380+ Mentees",
-      rating: 4.96,
-      nextSlot: isEn ? "Next Slot: Monday 6:00 PM" : "পরবর্তী স্লট: সোমবার সন্ধ্যা ৬টা",
-      bio: isEn ? "Specialized in ethical hacking, vulnerability assessments, zero-trust cloud security frameworks, and defensive security postures." : "এথিক্যাল হ্যাকিং, পেনিট্রেশন টেস্টিং ও এন্টারপ্রাইজ সিকিউরিটি আর্কিটেকচারে বিশেষজ্ঞ।",
-      accentGrad: "from-[#DE1F26] to-red-700",
-      hoverBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_24px_50px_rgba(222,31,38,0.15)]",
-      skills: ["Ethical Hacking", "OWASP", "Penetration Testing", "SOC Operations", "Threat Intelligence"],
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: "shamim-reza",
-      name: isEn ? "Shamim Reza" : "শামীম রেজা",
-      role: isEn ? "Staff Mobile Engineer" : "স্টাফ মোবাইল ইঞ্জিনিয়ার",
-      companyBadge: "10M+ App Downloads on Stores",
-      companyColor: "bg-emerald-50 text-[#008744] border-emerald-200",
-      specialty: "mobile",
-      experience: isEn ? "7+ Years Experience" : "৭+ বছর অভিজ্ঞতা",
-      mentees: "540+ Mentees",
-      rating: 4.91,
-      nextSlot: isEn ? "Next Slot: Sunday 7:00 PM" : "পরবর্তী স্লট: রবিবার সন্ধ্যা ৭টা",
-      bio: isEn ? "Architecting high-performance mobile apps with Flutter, Clean Architecture, WebRTC video engines, and seamless offline synchronization." : "ফ্লাটার, ক্লিন আর্কিটেকচার ও হাই-পারফরম্যান্স মোবাইল অ্যাপ্লিকেশন তৈরিতে বিশেষজ্ঞ।",
-      accentGrad: "from-[#008744] to-green-700",
-      hoverBorder: "hover:border-[#008744]/80 hover:shadow-[0_24px_50px_rgba(0,135,68,0.15)]",
-      skills: ["Flutter", "Dart", "Clean Architecture", "Firebase", "WebRTC", "GraphQL"],
-      avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-    },
-    {
-      id: "nabila-chowdhury",
-      name: isEn ? "Nabila Chowdhury" : "নাবিলা চৌধুরী",
-      role: isEn ? "Lead Product Designer & Strategist" : "লিড প্রোডাক্ট ডিজাইনার ও স্ট্র্যাটেজিস্ট",
-      companyBadge: "Ex-FinTech Lead • Design Systems",
-      companyColor: "bg-rose-50 text-[#DE1F26] border-rose-200",
-      specialty: "mobile",
-      experience: isEn ? "6+ Years Experience" : "৬+ বছর অভিজ্ঞতা",
-      mentees: "420+ Mentees",
-      rating: 4.93,
-      nextSlot: isEn ? "Next Slot: Thursday 6:00 PM" : "পরবর্তী স্লট: বৃহস্পতিবার সন্ধ্যা ৬টা",
-      bio: isEn ? "Specializes in scalable enterprise design systems in Figma, micro-animations, user journey psychology, and developer design token handoffs." : "ফিগমা ডিজাইন সিস্টেম, ইউজার সাইকোলজি ও ইন্টারেক্টিভ প্রোটোটাইপিংয়ে অভিজ্ঞ।",
-      accentGrad: "from-[#DE1F26] to-rose-600",
-      hoverBorder: "hover:border-[#DE1F26]/80 hover:shadow-[0_24px_50px_rgba(222,31,38,0.15)]",
-      skills: ["Figma", "Design Systems", "User Research", "Prototyping", "Design Tokens"],
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      q: isEn ? "How can I contact the mentorship desk on WhatsApp?" : "মেন্টরশিপ ডেস্কের সাথে হোয়াটসঅ্যাপে যোগাযোগের উপায় কী?",
+      a: isEn 
+        ? "Click any WhatsApp button on the mentor cards to instantly open a direct chat with our academic advising team." 
+        : "যেকোনো মেন্টর কার্ডের হোয়াটসঅ্যাপ বাটনে ক্লিক করে সরাসরি আমাদের একাডেমিক টিমের সাথে চ্যাট করতে পারেন।"
     }
   ];
 
-  const filteredMentors = mentors.filter(
-    (m) => activeSpecialty === "all" || m.specialty === activeSpecialty
-  );
-
   return (
-    <div className="min-h-screen bg-[#f8fafc] flex flex-col">
+    <div className="min-h-screen bg-[#f8fafc] flex flex-col select-none font-sans">
       <Header />
 
-      <main className="flex-grow pt-6 pb-24">
+      <main className="flex-grow">
         
-        {/* MENTORS EXECUTIVE 2-COLUMN HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
-          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-[#008744]/20 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-[#DE1F26]/15 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+        {/* ========================================================================= */}
+        {/* 1. HERO SECTION: MATCHING SCREENSHOT EXACTLY                              */}
+        {/* ========================================================================= */}
+        <section className="relative pt-12 pb-10 sm:pt-16 sm:pb-14 bg-gradient-to-b from-[#eaf8f4] via-[#f5fcf9] to-[#f8fafc] border-b border-slate-200/60 overflow-hidden text-center">
+          {/* Subtle Grid Pattern */}
+          <div className="absolute inset-0 bg-[radial-gradient(#008744_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.04] pointer-events-none" />
+          <div className="absolute top-0 right-1/3 w-96 h-96 bg-[#008744]/8 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#2ed199]/10 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="max-w-[96rem] mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
-              {/* Left Column (7 Cols) */}
-              <div className="lg:col-span-7">
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center space-x-2 bg-[#008744]/15 border border-[#008744]/35 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-emerald-300"
-                >
-                  <Award size={14} className="text-[#DE1F26]" />
-                  <span>{t.mentorsPage?.badge || "ELITE TECH LEADERSHIP"}</span>
-                </motion.div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+            
+            {/* Top Pill Badge: Expert Instructors */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="inline-flex items-center gap-1.5 bg-[#d8f4ea] border border-[#a4e6cf] px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-bold text-[#008744] mb-3 shadow-2xs"
+            >
+              <Sparkles size={12} className="text-[#008744]" />
+              <span>{isEn ? "Expert Instructors" : "এক্সপার্ট ইন্সট্রাক্টরবৃন্দ"}</span>
+            </motion.div>
 
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 }}
-                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-tight mb-6"
-                >
-                  {t.mentorsPage?.title || "Learn from Senior Industry Engineers"}
-                </motion.h1>
+            {/* Main Heading: Our Mentors */}
+            <motion.h1
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.06 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3"
+            >
+              {isEn ? (
+                <>
+                  Our <span className="text-[#0d9488] sm:text-[#008744]">Mentors</span>
+                </>
+              ) : (
+                <>
+                  আমাদের <span className="text-[#0d9488] sm:text-[#008744]">মেন্টরবৃন্দ</span>
+                </>
+              )}
+            </motion.h1>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 }}
-                  className="text-base sm:text-lg text-slate-300 max-w-xl mb-8 leading-relaxed font-normal"
-                >
-                  {t.mentorsPage?.subtitle || "Our mentors work at top global technology companies, bringing real-world architecture and practices directly to you."}
-                </motion.p>
+            {/* Subtitle from Screenshot */}
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.12 }}
+              className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-normal"
+            >
+              {isEn
+                ? "Behind the leading IT skill development platform, masterminds of industry leaders are working. From the management to the expert mentors, highly skilled people are dedicated to your skill advancement."
+                : "দেশের শীর্ষস্থানীয় আইটি স্কিল ডেভেলপমেন্ট প্ল্যাটফর্মের পেছনে কাজ করছেন অভিজ্ঞ ইন্ডাস্ট্রি লিডারগণ। ব্যবস্থাপনা থেকে শুরু করে বিশেষজ্ঞ মেন্টর পর্যন্ত প্রতিটি সদস্য আপনার দক্ষতা বৃদ্ধির জন্য নিবেদিত।"}
+            </motion.p>
 
-                {/* Faculty Highlight Chips */}
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.22 }}
-                  className="flex flex-wrap items-center gap-3 text-xs font-mono"
-                >
-                  <div className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center space-x-2 text-emerald-300">
-                    <CheckCircle2 size={14} className="text-[#008744]" />
-                    <span>1-on-1 Code Reviews</span>
-                  </div>
-                  <div className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center space-x-2 text-rose-300">
-                    <Star size={14} className="fill-[#DE1F26] text-[#DE1F26]" />
-                    <span>4.98★ Average Mentee Rating</span>
-                  </div>
-                </motion.div>
-              </div>
+            {/* Specialty Category Filter Pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.18 }}
+              className="flex flex-wrap items-center justify-center gap-2 mt-7"
+            >
+              {specialties.map((spec) => {
+                const isActive = activeSpecialty === spec.id;
+                return (
+                  <button
+                    key={spec.id}
+                    onClick={() => setActiveSpecialty(spec.id)}
+                    className={`px-4 py-1.5 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer ${
+                      isActive
+                        ? "bg-[#008744] text-white shadow-md shadow-[#008744]/20 scale-105"
+                        : "bg-white hover:bg-slate-100 text-slate-700 border border-slate-200/80 shadow-2xs"
+                    }`}
+                  >
+                    {spec.name}
+                  </button>
+                );
+              })}
+            </motion.div>
 
-              {/* Right Column: Interactive Faculty Cluster (5 Cols) */}
-              <div className="lg:col-span-5">
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="bg-white/10 backdrop-blur-2xl rounded-3xl p-7 border border-white/20 shadow-2xl space-y-4 relative overflow-hidden"
-                >
-                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                    <span className="text-xs font-mono font-bold text-emerald-400">Executive Faculty Council</span>
-                    <span className="text-[10px] text-[#008744] font-mono">● SLOTS ACTIVE</span>
-                  </div>
+          </div>
+        </section>
 
-                  {/* Faculty Avatars Preview List */}
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 p-2.5 bg-black/30 rounded-2xl border border-white/5">
-                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Mentor" className="w-10 h-10 rounded-xl object-cover" />
-                      <div className="flex-grow">
-                        <div className="text-xs font-bold text-white">Tanvir Hasan</div>
-                        <div className="text-[11px] text-emerald-400 font-mono">Ex-Grab • Principal Architect</div>
-                      </div>
-                      <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-md font-mono">Available</span>
-                    </div>
+        {/* ========================================================================= */}
+        {/* 2. MENTOR CARDS GRID (EXACT 2-COLUMN LAYOUT WITH HOVER BLACK FADE & DETAILS)*/}
+        {/* ========================================================================= */}
+        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14">
+          
+          {/* Quick Search & Count Header */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-700 bg-white border border-slate-200/80 px-3.5 py-2 rounded-xl shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#008744] animate-pulse"></span>
+              <span>
+                <strong className="text-[#008744] font-black">{filteredMentors.length}</strong> {isEn ? "Expert Mentors" : "জন অভিজ্ঞ মেন্টর"}
+              </span>
+            </div>
 
-                    <div className="flex items-center space-x-3 p-2.5 bg-black/30 rounded-2xl border border-white/5">
-                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Mentor" className="w-10 h-10 rounded-xl object-cover" />
-                      <div className="flex-grow">
-                        <div className="text-xs font-bold text-white">Dr. Ariful Islam</div>
-                        <div className="text-[11px] text-rose-400 font-mono">PhD AI • Senior Researcher</div>
-                      </div>
-                      <span className="text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded-md font-mono">Available</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 text-center text-xs text-slate-300 font-mono">
-                    Direct access to mock interviews & system design reviews
-                  </div>
-                </motion.div>
-              </div>
-
+            {/* Live Search */}
+            <div className="relative flex items-center w-full sm:w-72 bg-white rounded-xl border border-slate-200/90 px-3 py-2 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/15 transition-all">
+              <Search size={14} className="text-slate-400 mr-2 flex-shrink-0" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder={isEn ? "Search mentor, role, or experience..." : "নাম বা অভিজ্ঞতা দিয়ে খুঁজুন..."}
+                className="w-full text-xs text-slate-800 placeholder-slate-400 outline-none bg-transparent font-medium"
+              />
+              {searchQuery && (
+                <button onClick={() => setSearchQuery("")} className="text-slate-400 hover:text-slate-600 cursor-pointer">
+                  <span className="text-xs font-bold">✕</span>
+                </button>
+              )}
             </div>
           </div>
-        </section>
 
-        {/* SPECIALTY FILTER BAR */}
-        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 -mt-7 relative z-20">
-          <div className="bg-white/95 backdrop-blur-2xl p-2 sm:p-3 rounded-2xl border border-slate-200 shadow-[0_12px_35px_rgba(0,0,0,0.06)] flex items-center overflow-x-auto no-scrollbar gap-2 sm:gap-3">
-            {specialties.map((spec) => {
-              const isActive = activeSpecialty === spec.id;
-              return (
-                <button
-                  key={spec.id}
-                  onClick={() => setActiveSpecialty(spec.id)}
-                  className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-150 cursor-pointer ${
-                    isActive
-                      ? "bg-[#008744] text-white shadow-md shadow-[#008744]/25 ring-2 ring-[#008744]/30"
-                      : "bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200/60"
-                  }`}
-                >
-                  {spec.name}
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* MENTORS 3D PROFILE CARDS */}
-        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {/* Cards Grid: 2 Columns */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {filteredMentors.map((mentor, idx) => (
               <motion.div
                 key={mentor.id}
-                initial={{ opacity: 0, y: 25 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: idx * 0.05, ease: "easeOut" }}
-                whileHover={{ y: -8, scale: 1.018, transition: { duration: 0.15, ease: "easeOut" } }}
-                className={`group bg-white rounded-3xl p-7 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_50px_rgba(0,0,0,0.12)] ${mentor.hoverBorder} transition-all duration-150 flex flex-col justify-between cursor-pointer`}
+                transition={{ duration: 0.35, delay: idx * 0.05 }}
+                className="bg-[#edf9f6] hover:bg-[#e7f7f3] border border-[#aeead9] rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_rgba(13,148,136,0.04)] hover:shadow-[0_16px_36px_rgba(13,148,136,0.1)] transition-all duration-200 flex flex-col justify-between"
               >
-                <div>
-                  {/* Top Avatar & Social Row */}
-                  <div className="flex items-start justify-between mb-5">
-                    <div className="relative">
-                      <div className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${mentor.accentGrad} opacity-30 group-hover:opacity-75 blur-sm transition-opacity duration-300`} />
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6 items-start">
+                  
+                  {/* Left: Mentor Photo with 15% Black Fade-in & Scale-Up / Lift Animation on Hover */}
+                  <div className="sm:col-span-5 flex-shrink-0">
+                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-slate-200 to-slate-300 border border-slate-300/70 shadow-xs aspect-[4/5] sm:aspect-square group/img">
                       <img
                         src={mentor.avatar}
-                        alt={mentor.name}
-                        className="w-16 h-16 rounded-2xl object-cover border-2 border-white shadow-md relative z-10"
+                        alt={isEn ? mentor.name : mentor.nameBn}
+                        className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-110 group-hover/img:-translate-y-2"
                       />
+                      
+                      {/* Compact Black Gradient Fade ONLY on bottom 30% behind button */}
+                      <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                      {/* "View Details >" Link Button sliding in on hover */}
+                      <Link
+                        href={`/mentors/${mentor.id}`}
+                        className="absolute bottom-3 left-1/2 -translate-x-1/2 translate-y-3 opacity-0 group-hover/img:translate-y-0 group-hover/img:opacity-100 bg-white hover:bg-slate-50 text-slate-900 font-black text-xs px-3.5 py-1.5 rounded-lg shadow-lg border border-white/80 flex items-center gap-1 whitespace-nowrap cursor-pointer transition-all duration-300 hover:scale-105 z-10"
+                      >
+                        <span>{isEn ? "View Details" : "View Details"}</span>
+                        <ChevronRight size={13} className="text-[#008744] stroke-[2.5]" />
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Right: Info & Experience Column */}
+                  <div className="sm:col-span-7 flex flex-col justify-between">
+                    
+                    {/* Name (Clickable to Details Page) */}
+                    <Link
+                      href={`/mentors/${mentor.id}`}
+                      className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-snug hover:text-[#008744] transition-colors block"
+                    >
+                      {isEn ? mentor.name : mentor.nameBn}
+                    </Link>
+
+                    {/* Department / Role in Cyan / Emerald Accent */}
+                    <div className="text-xs sm:text-[13px] font-bold text-[#0d9488] sm:text-[#008744] mt-0.5 mb-2.5">
+                      {isEn ? mentor.role : mentor.roleBn}
                     </div>
 
-                    <div className="flex items-center space-x-2">
-                      <div className="flex items-center space-x-1 bg-emerald-50 border border-emerald-200/80 px-2.5 py-1 rounded-full text-xs font-bold text-emerald-800">
-                        <Star size={13} className="fill-[#008744] text-[#008744]" />
-                        <span>{mentor.rating}</span>
+                    {/* Training Experience with Green Check */}
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 mb-3.5">
+                      <CheckSquare size={14} className="text-[#008744] fill-[#008744]/10 flex-shrink-0" />
+                      <span>{isEn ? mentor.trainingExp : mentor.trainingExpBn}</span>
+                    </div>
+
+                    {/* Work Experience Section with Orange Bullet Indicator */}
+                    <div className="mt-0.5">
+                      <div className="flex items-center gap-2 text-xs font-black text-slate-900 mb-2">
+                        <span className="w-2 h-2 rounded-full bg-[#ea580c] inline-block"></span>
+                        <span>{isEn ? "Work Experience" : "Work Experience"}</span>
                       </div>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-xl bg-slate-100 hover:bg-emerald-50 text-slate-600 hover:text-[#008744] transition-colors">
-                        <LinkedinIcon size={14} />
-                      </a>
+
+                      <ul className="space-y-1.5">
+                        {(isEn ? mentor.workExperiences : mentor.workExperiencesBn).slice(0, 3).map((exp, expIdx) => (
+                          <li key={expIdx} className="flex items-start gap-2 text-xs text-slate-700 leading-relaxed font-medium">
+                            <Briefcase size={14} className="text-[#ea580c] mt-0.5 flex-shrink-0" />
+                            <span>{exp}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
 
-                  {/* Company Tag */}
-                  <span className={`inline-block text-[11px] font-bold px-2.5 py-1 rounded-lg border mb-3 ${mentor.companyColor}`}>
-                    {mentor.companyBadge}
-                  </span>
-
-                  {/* Name & Role */}
-                  <h3 className="text-xl font-black text-slate-900 group-hover:text-[#08121a] transition-colors leading-snug">
-                    {mentor.name}
-                  </h3>
-                  <div className="text-xs font-bold text-[#008744] mb-3">{mentor.role}</div>
-
-                  <p className="text-slate-600 text-xs sm:text-[13px] leading-relaxed line-clamp-3 mb-5 font-normal">
-                    {mentor.bio}
-                  </p>
-
-                  {/* Next Slot Chip */}
-                  <div className="flex items-center space-x-1.5 text-xs font-medium text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 mb-5">
-                    <Clock size={13} className="text-[#008744]" />
-                    <span>{mentor.nextSlot}</span>
-                  </div>
-
-                  {/* Skill Badges */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {mentor.skills.map((skill, i) => (
-                      <span key={i} className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-lg border border-slate-200/40">
-                        {skill}
-                      </span>
-                    ))}
                   </div>
                 </div>
 
-                {/* Footer Booking Action */}
-                <div className="pt-5 mt-6 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs text-slate-500 font-medium">{mentor.mentees}</span>
-
-                  <button
-                    onClick={() => {
-                      setSelectedMentorForBooking(mentor);
-                      setBookingStep(1);
-                    }}
-                    className="bg-[#008744] hover:bg-[#007038] text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md shadow-[#008744]/20 flex items-center space-x-1.5 transition-all cursor-pointer"
-                  >
-                    <Calendar size={14} />
-                    <span>{isEn ? "Book 1-on-1" : "সেশন বুক করুন"}</span>
-                  </button>
-                </div>
               </motion.div>
             ))}
           </div>
         </section>
 
-        {/* 1-ON-1 BOOKING MODAL */}
-        <AnimatePresence>
-          {selectedMentorForBooking && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-              onClick={() => setSelectedMentorForBooking(null)}
-            >
-              <motion.div
-                initial={{ scale: 0.95, y: 20 }}
-                animate={{ scale: 1, y: 0 }}
-                exit={{ scale: 0.95, y: 20 }}
-                transition={{ duration: 0.18 }}
-                onClick={(e) => e.stopPropagation()}
-                className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative"
-              >
-                <button
-                  onClick={() => setSelectedMentorForBooking(null)}
-                  className="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors cursor-pointer"
+        {/* ========================================================================= */}
+        {/* 3. FAQ ACCORDION SECTION                                                 */}
+        {/* ========================================================================= */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-200/70">
+          <div className="text-center mb-8">
+            <span className="text-xs font-bold text-[#008744] uppercase tracking-wider block mb-1">
+              {isEn ? "GOT QUESTIONS?" : "সচরাচর জিজ্ঞাসিত প্রশ্ন"}
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              {isEn ? "Mentorship FAQs" : "মেন্টরশিপ সংক্রান্ত প্রশ্নোত্তর"}
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs transition-all"
                 >
-                  <X size={18} />
-                </button>
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors"
+                  >
+                    <span className="font-extrabold text-sm text-slate-900">
+                      {faq.q}
+                    </span>
+                    {isOpen ? (
+                      <ChevronUp size={16} className="text-[#008744] flex-shrink-0" />
+                    ) : (
+                      <ChevronDown size={16} className="text-slate-400 flex-shrink-0" />
+                    )}
+                  </button>
 
-                {bookingStep === 1 ? (
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <img src={selectedMentorForBooking.avatar} alt={selectedMentorForBooking.name} className="w-14 h-14 rounded-2xl object-cover" />
-                      <div>
-                        <h3 className="text-lg font-black text-slate-900">{selectedMentorForBooking.name}</h3>
-                        <div className="text-xs font-bold text-[#008744]">{selectedMentorForBooking.role}</div>
-                      </div>
-                    </div>
-
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                      {isEn ? "Select Session Topic" : "সেশনের বিষয় নির্বাচন করুন"}
-                    </div>
-                    <div className="space-y-2 mb-6 text-xs font-bold">
-                      <button className="w-full text-left p-3 rounded-xl border border-[#008744] bg-emerald-50 text-emerald-800 flex items-center justify-between">
-                        <span>{isEn ? "Architecture & Code Review (45 Mins)" : "আর্কিটেকচার ও কোড রিভিউ (৪৫ মিনিট)"}</span>
-                        <CheckCircle2 size={16} className="text-[#008744]" />
-                      </button>
-                      <button className="w-full text-left p-3 rounded-xl border border-slate-200 hover:border-slate-300 text-slate-700 flex items-center justify-between">
-                        <span>{isEn ? "Career Guidance & Mock Interview (45 Mins)" : "ক্যারিয়ার গাইডেন্স ও মক ইন্টারভিউ (৪৫ মিনিট)"}</span>
-                      </button>
-                    </div>
-
-                    <button
-                      onClick={() => setBookingStep(2)}
-                      className="w-full bg-[#008744] hover:bg-[#007038] text-white py-3 rounded-xl font-bold text-sm shadow-md shadow-[#008744]/25 flex items-center justify-center space-x-2 transition-all cursor-pointer"
-                    >
-                      <Calendar size={16} />
-                      <span>{isEn ? "Confirm 1-on-1 Slot" : "সেশন কনফার্ম করুন"}</span>
-                    </button>
-                  </div>
-                ) : (
-                  <div className="text-center py-6">
-                    <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle2 size={28} />
-                    </div>
-                    <h3 className="text-xl font-black text-slate-900 mb-2">
-                      {isEn ? "Session Confirmed!" : "সেশন কনফার্ম হয়েছে!"}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
-                      {isEn ? `Your 1-on-1 mentorship session with ${selectedMentorForBooking.name} has been booked. Meeting link sent to your email.` : `${selectedMentorForBooking.name}-এর সাথে আপনার মেন্টরশিপ সেশন বুক করা হয়েছে। মিটিংস লিংক আপনার ইমেইলে পাঠানো হয়েছে।`}
-                    </p>
-                    <button
-                      onClick={() => setSelectedMentorForBooking(null)}
-                      className="bg-slate-900 text-white px-6 py-2.5 rounded-xl font-bold text-xs cursor-pointer"
-                    >
-                      {isEn ? "Done" : "ঠিক আছে"}
-                    </button>
-                  </div>
-                )}
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.18 }}
+                      >
+                        <div className="px-5 pb-4 text-xs sm:text-[13px] text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                          {faq.a}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
       </main>
 
