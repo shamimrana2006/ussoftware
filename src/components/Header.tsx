@@ -51,7 +51,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative group px-3.5 xl:px-4 py-2 flex items-center justify-center transition-all duration-200 whitespace-nowrap rounded-xl select-none"
+      className="relative group px-4 xl:px-4.5 py-2.5 flex items-center justify-center transition-all duration-200 whitespace-nowrap rounded-xl select-none"
     >
       {/* 3D Liquid Water Droplet Capsule with Rounded Squircle Base (Active Item) */}
       {active && (
@@ -146,7 +146,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
         </motion.div>
       )}
 
-      {/* Typography with gentle fluid wave reaction */}
+      {/* Typography with gentle fluid wave reaction and reflective lighting */}
       <motion.span
         animate={{
           x: mouseOffset.x * 0.25,
@@ -154,12 +154,34 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
           skewX: -mouseOffset.x * 0.2
         }}
         transition={{ type: "spring", stiffness: 380, damping: 22 }}
-        className={`relative z-10 text-[13.5px] xl:text-[14px] transition-colors duration-200 ${active
-          ? "text-[#08121a] font-black tracking-tight"
-          : "text-slate-600 font-semibold group-hover:text-[#08121a]"
+        className={`relative z-10 text-[14px] xl:text-[15px] transition-all duration-200 select-none ${active
+          ? "font-extrabold tracking-tight"
+          : "text-slate-700 font-semibold group-hover:text-[#008744]"
           }`}
       >
-        {children}
+        {active ? (
+          <span className="relative inline-flex items-center overflow-hidden py-0.5">
+            {/* Luminous brand green matching website */}
+            <span className="text-[#008744] drop-shadow-[0_1px_3px_rgba(0,135,68,0.22)] font-black tracking-tight">
+              {children}
+            </span>
+            {/* Reflective light sheen beam sweeping over text */}
+            <motion.span
+              animate={{
+                x: ["-140%", "240%"],
+              }}
+              transition={{
+                duration: 2.2,
+                repeat: Infinity,
+                repeatDelay: 1.8,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="absolute inset-y-0 w-2/3 bg-gradient-to-r from-transparent via-white to-transparent skew-x-[-22deg] pointer-events-none mix-blend-overlay"
+            />
+          </span>
+        ) : (
+          children
+        )}
       </motion.span>
     </Link>
   );
@@ -257,60 +279,60 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar - Dark Theme (Hidden on small screens) */}
-      <div className="hidden lg:block bg-[#08121a] py-2.5 sm:py-3 text-xs text-gray-300 border-b border-gray-800/80">
+      {/* Top Bar - Dark Blue Gradient Theme with luminous center and reduced padding */}
+      <div className="hidden lg:block bg-gradient-to-r from-[#06111d] via-[#0d2a47] to-[#06111d] py-1.5 sm:py-2 text-xs text-gray-200 border-b border-blue-950/70 shadow-xs">
         <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-          {/* Left: Contact Info in Pills */}
+          {/* Left: Contact Info in Pills (Larger & clearer) */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <div className="flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 hover:bg-white/10 transition-colors cursor-pointer">
-              <Phone size={14} className="text-[#008744]" />
-              <span className="font-medium">+880 1712-34578</span>
+            <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
+              <Phone size={14} className="text-emerald-400" />
+              <span className="font-semibold text-xs sm:text-[13px] text-gray-100">+880 1712-34578</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 hover:bg-white/10 transition-colors cursor-pointer">
-              <Mail size={14} className="text-[#DE1F26]" />
-              <span className="font-medium">info@ussoftwareltd.com</span>
+            <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
+              <Mail size={14} className="text-rose-400" />
+              <span className="font-semibold text-xs sm:text-[13px] text-gray-100">info@ussoftwareltd.com</span>
             </div>
           </div>
 
-          {/* Right: Socials & Auth */}
+          {/* Right: Socials & Auth (Larger & bolder) */}
           <div className="flex items-center space-x-4">
-            {/* Social Icons in Circles */}
-            <div className="flex items-center space-x-2">
-              <a href="#" className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#DE1F26] transition-colors group" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-gray-300 group-hover:text-white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            {/* Social Icons in Circles (Larger) */}
+            <div className="flex items-center space-x-2.5">
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#DE1F26] transition-all flex items-center justify-center group shadow-xs hover:scale-105" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" className="text-gray-200 group-hover:text-white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
-              <a href="#" className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#DE1F26] transition-colors group" aria-label="YouTube">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-gray-300 group-hover:text-white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#DE1F26] transition-all flex items-center justify-center group shadow-xs hover:scale-105" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" className="text-gray-200 group-hover:text-white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
               </a>
-              <a href="#" className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#008744] transition-colors group" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="text-gray-300 group-hover:text-white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#008744] transition-all flex items-center justify-center group shadow-xs hover:scale-105" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" className="text-gray-200 group-hover:text-white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
-              <a href="#" className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#DE1F26] transition-colors group" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-300 group-hover:text-white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#DE1F26] transition-all group shadow-xs hover:scale-105" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-200 group-hover:text-white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
             </div>
 
-            {/* Login / Register */}
-            <div className="flex items-center space-x-2">
-              <button className="flex items-center space-x-1.5 bg-transparent hover:bg-white/10 text-gray-200 px-3 py-1.5 rounded-full transition-colors border border-transparent hover:border-white/10 cursor-pointer">
-                <User size={14} className="text-gray-400" />
-                <span className="font-medium">Login</span>
+            {/* Login / Register (Bigger & more prominent) */}
+            <div className="flex items-center space-x-2.5">
+              <button className="flex items-center space-x-1.5 bg-transparent hover:bg-white/10 text-gray-100 px-3.5 py-1.5 rounded-full transition-colors border border-transparent hover:border-white/15 cursor-pointer text-xs sm:text-[13px] font-semibold">
+                <User size={14} className="text-gray-300" />
+                <span>Login</span>
               </button>
-              <button className="bg-[#008744] hover:bg-[#007038] text-white px-4 py-1.5 rounded-full font-bold shadow-md transition-colors cursor-pointer">
+              <button className="bg-[#008744] hover:bg-[#007038] text-white px-4.5 py-1.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all cursor-pointer text-xs sm:text-[13px]">
                 Register
               </button>
             </div>
 
-            <div className="h-5 w-[1px] bg-gray-700 mx-1 hidden sm:block"></div>
+            <div className="h-5 w-[1px] bg-blue-800/60 mx-1 hidden sm:block"></div>
 
             {/* Language Switcher Pill (Top Bar only) */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center space-x-1.5 cursor-pointer bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/20 px-3 py-1.5 rounded-full transition-all duration-200 group select-none shadow-sm"
+              className="flex items-center space-x-1.5 cursor-pointer bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/25 px-3.5 py-1.5 rounded-full transition-all duration-200 group select-none shadow-xs"
               title="Change Language / ভাষা পরিবর্তন"
             >
-              <Globe size={13} className="text-[#008744] group-hover:rotate-45 transition-transform duration-300" />
-              <span className="font-bold text-[11px] text-gray-200 group-hover:text-white transition-colors">
+              <Globe size={13} className="text-emerald-400 group-hover:rotate-45 transition-transform duration-300" />
+              <span className="font-bold text-xs text-gray-100 group-hover:text-white transition-colors">
                 {language === "en" ? "EN" : "বাংলা"}
               </span>
             </button>
@@ -344,25 +366,25 @@ export default function Header() {
           </nav>
 
           {/* Right Side: US Universe Dropdown + Get Course CTA Button */}
-          <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <div className="flex items-center space-x-2.5 sm:space-x-3.5 flex-shrink-0">
 
             {/* US Universe Dropdown (Desktop & Tablet) - CLICK ONLY */}
             <div className="relative hidden md:block" ref={universeRef}>
               <button
                 onClick={() => setIsUniverseOpen(!isUniverseOpen)}
-                className={`group relative flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border transition-all duration-150 text-xs font-semibold cursor-pointer whitespace-nowrap select-none ${isUniverseOpen
+                className={`group relative flex items-center space-x-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border transition-all duration-150 text-xs sm:text-sm font-bold cursor-pointer whitespace-nowrap select-none ${isUniverseOpen
                   ? "bg-slate-100/90 border-slate-300 text-[#DE1F26] shadow-xs"
-                  : "bg-transparent hover:bg-slate-100/70 border-slate-200/70 hover:border-slate-300 text-slate-700 hover:text-slate-900"
+                  : "bg-transparent hover:bg-slate-100/70 border-slate-200/80 hover:border-slate-300 text-slate-700 hover:text-slate-900"
                   }`}
               >
                 <Orbit
-                  size={14}
+                  size={15}
                   className={`text-[#DE1F26] transition-transform duration-300 ${isUniverseOpen ? "rotate-180" : "group-hover:rotate-45"
                     }`}
                 />
-                <span className="font-semibold">{language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe"}</span>
+                <span className="font-bold">{language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe"}</span>
                 <ChevronDown
-                  size={12}
+                  size={13}
                   className={`text-slate-400 transition-transform duration-150 ${isUniverseOpen ? "rotate-180 text-[#DE1F26]" : ""
                     }`}
                 />
@@ -405,14 +427,14 @@ export default function Header() {
               </AnimatePresence>
             </div>
 
-            {/* CTA Button: Get Course */}
+            {/* CTA Button: Get Course (Bigger & bolder) */}
             <Link href="/courses">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] hover:shadow-[0_6px_20px_rgba(0,135,68,0.45)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
+                className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-extrabold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] hover:shadow-[0_6px_20px_rgba(0,135,68,0.45)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
               >
-                <BookOpen size={15} className="hidden sm:inline" />
+                <BookOpen size={16} className="hidden sm:inline" />
                 <span>{t.header.getCourse || "Get Course"}</span>
               </motion.button>
             </Link>
@@ -500,13 +522,13 @@ export default function Header() {
                         }
                       }}
                       className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${active
-                        ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
-                        : "text-slate-600 hover:text-[#08121a] hover:bg-slate-50"
+                        ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-[0_4px_16px_rgba(0,135,68,0.08),inset_0_1.5px_1px_white] border border-emerald-200/80"
+                        : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
                         }`}
                     >
-                      <span>{item.label}</span>
+                      <span className={active ? "text-[#008744] font-bold" : ""}>{item.label}</span>
                       {active && (
-                        <span className="w-2 h-2 rounded-full bg-[#08121a]" />
+                        <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
                       )}
                     </Link>
                   );
