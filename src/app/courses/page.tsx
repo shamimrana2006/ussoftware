@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, Suspense } from "react";
+import React, { useState, useMemo, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,8 +13,8 @@ import {
   Palette, Megaphone, Database, Award, Layers,
   Search, Filter, LayoutGrid, ListFilter,
   AlignJustify, X, Zap, Check, Bot, Globe2,
-  TrendingUp, Video, Server, Briefcase, GraduationCap,
-  Calendar, DollarSign, Play
+  TrendingUp, TrendingDown, Video, Server, Briefcase, GraduationCap,
+  Calendar, DollarSign, Play, ChevronDown, ArrowUpDown
 } from "lucide-react";
 
 function CoursesContent() {
@@ -26,9 +26,22 @@ function CoursesContent() {
   const [selectedMode, setSelectedMode] = useState<"all" | "online" | "offline">("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("default");
+  const [isSortOpen, setIsSortOpen] = useState(false);
+  const sortRef = useRef<HTMLDivElement>(null);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [selectedCourseForModal, setSelectedCourseForModal] = useState<any>(null);
   const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
+
+  // Close sort dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
+        setIsSortOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const categories = [
     { id: "all", label: isEn ? "All Categories" : "সকল ক্যাটাগরি", icon: Layers, iconColor: "text-[#008744]" },
@@ -695,7 +708,7 @@ function CoursesContent() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             
             {/* LEFT SIDEBAR: Search & Categories (Sticky on Desktop) */}
-            <div className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 space-y-4 max-h-[calc(100vh-7rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20">
+            <div className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-[74px] space-y-4 max-h-[calc(100vh-6.5rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20 shadow-[0_-24px_0_0_#f8fafc]">
               
               {/* Search Input Box */}
               <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/15 transition-all">
@@ -768,94 +781,188 @@ function CoursesContent() {
             {/* RIGHT AREA: TOP CONTROLS & COURSE CARDS GRID */}
             <div className="lg:col-span-8 xl:col-span-9 space-y-6">
               
-              {/* Top Filter / Control Bar */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4">
-                
-                {/* Left: Count & Mode Tabs */}
-                <div className="flex items-center flex-wrap gap-3 w-full sm:w-auto">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
-                    <Sparkles size={13} className="text-[#DE1F26]" />
-                    <span>
-                      <strong className="text-[#008744] font-black">{filteredCourses.length}</strong> {isEn ? "courses found" : "টি কোর্স পাওয়া গেছে"}
-                    </span>
+              {/* 1. Top Filter / Control Bar (Sticky on Scroll with Upward Gap Seal) */}
+              <div className="sticky top-[58px] sm:top-[64px] lg:top-[66px] z-30 bg-[#f8fafc] pt-2 pb-2 shadow-[0_-24px_0_0_#f8fafc]">
+                <div className="bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4">
+                  
+                  {/* Left: Count & Mode Tabs */}
+                  <div className="flex items-center flex-wrap gap-3 w-full sm:w-auto">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
+                      <Sparkles size={13} className="text-[#DE1F26]" />
+                      <span>
+                        <strong className="text-[#008744] font-black">{filteredCourses.length}</strong> {isEn ? "courses found" : "টি কোর্স পাওয়া গেছে"}
+                      </span>
+                    </div>
+
+                    {/* Mode Pills: All, Online, Offline (Brand Styled) */}
+                    <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
+                      {(["all", "online", "offline"] as const).map((mode) => (
+                        <button
+                          key={mode}
+                          onClick={() => setSelectedMode(mode)}
+                          className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${
+                            selectedMode === mode
+                              ? "bg-[#008744] text-white shadow-2xs"
+                              : "text-slate-600 hover:text-slate-900"
+                          }`}
+                        >
+                          {mode === "all" ? (isEn ? "All" : "সকল") : mode === "online" ? (isEn ? "Online" : "অনলাইন") : (isEn ? "Offline" : "অফলাইন")}
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Mode Pills: All, Online, Offline (Brand Styled) */}
-                  <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
-                    {(["all", "online", "offline"] as const).map((mode) => (
+                  {/* Right: Sort By Dropdown & View Mode Toggle */}
+                  <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
+                    {/* Custom Styled Sort Dropdown */}
+                    <div className="relative" ref={sortRef}>
                       <button
-                        key={mode}
-                        onClick={() => setSelectedMode(mode)}
-                        className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${
-                          selectedMode === mode
-                            ? "bg-[#008744] text-white shadow-2xs"
-                            : "text-slate-600 hover:text-slate-900"
+                        type="button"
+                        onClick={() => setIsSortOpen(!isSortOpen)}
+                        className={`flex items-center gap-2 bg-white border text-xs font-semibold px-3.5 py-2 rounded-xl transition-all cursor-pointer select-none shadow-2xs ${
+                          isSortOpen 
+                            ? "border-[#008744] ring-2 ring-[#008744]/15 text-[#008744]" 
+                            : "border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900"
                         }`}
                       >
-                        {mode === "all" ? (isEn ? "All" : "সকল") : mode === "online" ? (isEn ? "Online" : "অনলাইন") : (isEn ? "Offline" : "অফলাইন")}
+                        <ArrowUpDown size={13} className={isSortOpen ? "text-[#008744]" : "text-slate-400"} />
+                        <span className="font-bold">
+                          {sortBy === "default" 
+                            ? (isEn ? "Sort: Default" : "বাছাই: ডিফল্ট") 
+                            : sortBy === "price-low" 
+                              ? (isEn ? "Price: Low to High" : "মূল্য: কম-বেশি") 
+                              : (isEn ? "Price: High to Low" : "মূল্য: বেশি-কম")}
+                        </span>
+                        <ChevronDown size={13} className={`text-slate-400 transition-transform duration-200 ${isSortOpen ? "rotate-180 text-[#008744]" : ""}`} />
                       </button>
-                    ))}
+
+                      {/* Floating Dropdown Menu */}
+                      <AnimatePresence>
+                        {isSortOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 6, scale: 0.96 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 4, scale: 0.96 }}
+                            transition={{ duration: 0.15, ease: "easeOut" }}
+                            className="absolute right-0 top-full mt-1.5 w-60 bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.12)] border border-slate-200/90 p-1.5 z-50 overflow-hidden"
+                          >
+                            <div className="px-2.5 py-1.5 text-[10px] font-black uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1 flex items-center justify-between">
+                              <span>{isEn ? "Sort Courses" : "কোর্স সাজান"}</span>
+                              <Sparkles size={11} className="text-[#DE1F26]" />
+                            </div>
+
+                            <div className="space-y-0.5">
+                              {[
+                                {
+                                  id: "default",
+                                  label: isEn ? "Default Sorting" : "ডিফল্ট বাছাই",
+                                  icon: ArrowUpDown,
+                                  badge: isEn ? "Featured" : "ফিচার্ড",
+                                  badgeColor: "bg-emerald-50 text-[#008744]",
+                                },
+                                {
+                                  id: "price-low",
+                                  label: isEn ? "Price: Low to High" : "মূল্য: কম থেকে বেশি",
+                                  icon: TrendingDown,
+                                  badge: isEn ? "Lowest" : "সর্বনিম্ন",
+                                  badgeColor: "bg-blue-50 text-blue-600",
+                                },
+                                {
+                                  id: "price-high",
+                                  label: isEn ? "Price: High to Low" : "মূল্য: বেশি থেকে কম",
+                                  icon: TrendingUp,
+                                  badge: isEn ? "Premium" : "প্রিমিয়াম",
+                                  badgeColor: "bg-amber-50 text-amber-600",
+                                },
+                              ].map((opt) => {
+                                const Icon = opt.icon;
+                                const isSelected = sortBy === opt.id;
+                                return (
+                                  <button
+                                    key={opt.id}
+                                    type="button"
+                                    onClick={() => {
+                                      setSortBy(opt.id);
+                                      setIsSortOpen(false);
+                                    }}
+                                    className={`w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-xs transition-all cursor-pointer text-left group ${
+                                      isSelected
+                                        ? "bg-emerald-50 text-[#008744] font-bold shadow-2xs"
+                                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900 font-medium"
+                                    }`}
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <div className={`w-6 h-6 rounded-lg flex items-center justify-center transition-colors ${
+                                        isSelected ? "bg-[#008744] text-white" : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
+                                      }`}>
+                                        <Icon size={12} />
+                                      </div>
+                                      <span>{opt.label}</span>
+                                    </div>
+
+                                    {isSelected ? (
+                                      <Check size={14} className="text-[#008744] stroke-[2.5]" />
+                                    ) : (
+                                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${opt.badgeColor}`}>
+                                        {opt.badge}
+                                      </span>
+                                    )}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Grid / List icons */}
+                    <div className="flex items-center bg-slate-100 p-1 rounded-xl">
+                      <button
+                        onClick={() => setViewMode("grid")}
+                        className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
+                          viewMode === "grid" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
+                        }`}
+                        title="Grid View"
+                      >
+                        <LayoutGrid size={14} />
+                      </button>
+                      <button
+                        onClick={() => setViewMode("list")}
+                        className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
+                          viewMode === "list" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
+                        }`}
+                        title="List View"
+                      >
+                        <AlignJustify size={14} />
+                      </button>
+                    </div>
                   </div>
+
                 </div>
-
-                {/* Right: Sort By Dropdown & View Mode Toggle */}
-                <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
-                  {/* Sort dropdown */}
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-white border border-slate-200 text-slate-700 text-xs font-semibold px-3 py-2 rounded-xl outline-none cursor-pointer hover:border-emerald-300 shadow-2xs transition-colors"
-                  >
-                    <option value="default">{isEn ? "⇅ Sort By: Default" : "⇅ বাছাই: ডিফল্ট"}</option>
-                    <option value="price-low">{isEn ? "Price: Low to High" : "মূল্য: কম থেকে বেশি"}</option>
-                    <option value="price-high">{isEn ? "Price: High to Low" : "মূল্য: বেশি থেকে কম"}</option>
-                  </select>
-
-                  {/* Grid / List icons */}
-                  <div className="flex items-center bg-slate-100 p-1 rounded-xl">
-                    <button
-                      onClick={() => setViewMode("grid")}
-                      className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
-                        viewMode === "grid" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
-                      }`}
-                      title="Grid View"
-                    >
-                      <LayoutGrid size={14} />
-                    </button>
-                    <button
-                      onClick={() => setViewMode("list")}
-                      className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
-                        viewMode === "list" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
-                      }`}
-                      title="List View"
-                    >
-                      <AlignJustify size={14} />
-                    </button>
-                  </div>
-                </div>
-
               </div>
 
-              {/* Course Cards Grid */}
-              {filteredCourses.length === 0 ? (
-                <div className="bg-white rounded-2xl border border-slate-200/90 p-12 text-center shadow-2xs">
-                  <Search size={36} className="mx-auto text-slate-300 mb-3" />
-                  <h3 className="font-bold text-slate-800 text-sm sm:text-base">
-                    {isEn ? "No courses match your filter" : "কোনো কোর্স পাওয়া যায়নি"}
-                  </h3>
-                  <p className="text-xs text-slate-500 mt-1">
-                    {isEn ? "Try changing your search term or category filter." : "অনুগ্রহ করে অন্য কোনো ক্যাটাগরি বা কি-ওয়ার্ড দিয়ে খুঁজুন।"}
-                  </p>
-                </div>
-              ) : (
-                <div className={
-                  viewMode === "grid"
-                    ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6"
-                    : "grid grid-cols-1 gap-4"
-                }>
-                  {filteredCourses.map((course) => {
-                    const CatIcon = course.catIcon;
-                    return (
+              {/* 2. Course Cards Grid Container */}
+              <div className="relative z-10">
+                {filteredCourses.length === 0 ? (
+                  <div className="bg-white rounded-2xl border border-slate-200/90 p-12 text-center shadow-2xs">
+                    <Search size={36} className="mx-auto text-slate-300 mb-3" />
+                    <h3 className="font-bold text-slate-800 text-sm sm:text-base">
+                      {isEn ? "No courses match your filter" : "কোনো কোর্স পাওয়া যায়নি"}
+                    </h3>
+                    <p className="text-xs text-slate-500 mt-1">
+                      {isEn ? "Try changing your search term or category filter." : "অনুগ্রহ করে অন্য কোনো ক্যাটাগরি বা কি-ওয়ার্ড দিয়ে খুঁজুন।"}
+                    </p>
+                  </div>
+                ) : (
+                  <div className={
+                    viewMode === "grid"
+                      ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6"
+                      : "grid grid-cols-1 gap-4"
+                  }>
+                    {filteredCourses.map((course) => {
+                      const CatIcon = course.catIcon;
+                      return (
                       <motion.div
                         key={course.id}
                         id={`course-card-${course.id}`}
@@ -995,6 +1102,8 @@ function CoursesContent() {
           </div>
 
         </div>
+
+      </div>
 
         {/* DETAILS MODAL */}
         <AnimatePresence>

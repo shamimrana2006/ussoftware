@@ -70,42 +70,27 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
       {/* 3D Liquid Water Droplet Capsule with Rounded Squircle Base (Active Item) */}
       {active && (
         <motion.div
-          key={`droplet-${rippleKey}`}
           layoutId="hyperRealisticWaterDroplet"
-          initial={rippleKey > 0 ? { scaleX: 0.95, scaleY: 1.05 } : false}
+          transition={{
+            type: "spring",
+            stiffness: 700,
+            damping: 35,
+            mass: 0.35,
+          }}
           animate={{
             x: mouseOffset.x,
             y: mouseOffset.y,
             scaleX: rippleKey > 0
-              ? [1, 1.22, 0.86, 1.1, 0.96, 1]
+              ? [1, 1.15, 0.92, 1.04, 1]
               : isHovered
                 ? 1 + Math.abs(mouseOffset.x) * 0.015
                 : 1,
             scaleY: rippleKey > 0
-              ? [1, 0.82, 1.18, 0.92, 1.04, 1]
+              ? [1, 0.88, 1.12, 0.96, 1]
               : isHovered
                 ? 1 + Math.abs(mouseOffset.y) * 0.015
                 : 1,
-            skewX: rippleKey > 0
-              ? [0, -6, 6, -2, 2, 0]
-              : -mouseOffset.x * 0.65,
-            skewY: -mouseOffset.y * 0.45,
-            rotateZ: rippleKey > 0
-              ? [0, -3, 3, -1, 1, 0]
-              : mouseOffset.x * 0.5,
-            borderRadius: rippleKey > 0
-              ? [
-                squircleFluidRadius,
-                "24px 6px 22px 8px",
-                "6px 24px 8px 22px",
-                "18px 10px 16px 12px",
-                squircleFluidRadius
-              ]
-              : squircleFluidRadius,
-          }}
-          transition={{
-            duration: rippleKey > 0 ? 0.7 : 0.4,
-            ease: "easeOut",
+            borderRadius: squircleFluidRadius,
           }}
           className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-slate-100/70 border border-slate-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.07),0_1.5px_4px_rgba(0,0,0,0.04),inset_0_2px_2px_rgba(255,255,255,1),inset_0_-1px_2px_rgba(0,0,0,0.04)] backdrop-blur-2xl overflow-hidden -z-0"
         >
