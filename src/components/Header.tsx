@@ -68,7 +68,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
             borderRadius: squircleFluidRadius,
           }}
           transition={{ type: "spring", stiffness: 340, damping: 22, mass: 0.8 }}
-          className="absolute inset-0 bg-gradient-to-b from-white/95 via-slate-100/80 to-slate-200/70 border border-slate-200/90 shadow-[inset_0_2px_3px_rgba(255,255,255,1),inset_0_-1px_2px_rgba(255,255,255,0.9)] backdrop-blur-2xl overflow-hidden -z-0"
+          className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-slate-100/70 border border-slate-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.07),0_1.5px_4px_rgba(0,0,0,0.04),inset_0_2px_2px_rgba(255,255,255,1),inset_0_-1px_2px_rgba(0,0,0,0.04)] backdrop-blur-2xl overflow-hidden -z-0"
         >
           {/* 1. Fluid Liquid Ripple Wave Internal Displacement Layer */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-25" preserveAspectRatio="none" viewBox="0 0 100 40">
@@ -90,7 +90,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
               y: -mouseOffset.y * 0.4,
               scaleX: isHovered ? 1 + mouseOffset.x * 0.02 : 1
             }}
-            className="absolute top-[2px] left-2 right-2 h-[40%] rounded-t-[12px] bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"
+            className="absolute top-[1.5px] left-2 right-2 h-[45%] rounded-t-[12px] bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"
           />
 
           {/* 3. Distinct 3D Specular Light Reflection Dots */}
@@ -139,7 +139,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
           }}
           exit={{ opacity: 0, scale: 0.92 }}
           transition={{ type: "spring", stiffness: 320, damping: 20, mass: 0.8 }}
-          className="absolute inset-0 bg-white/75 backdrop-blur-xl border border-slate-200/80 shadow-[inset_0_1.5px_1px_white] overflow-hidden -z-0 pointer-events-none"
+          className="absolute inset-0 bg-white/70 backdrop-blur-xl border border-slate-200/80 shadow-[0_4px_12px_rgba(0,0,0,0.04),inset_0_1.5px_1px_white] overflow-hidden -z-0 pointer-events-none"
         >
           {/* Specular highlight on hover droplet */}
           <div className="absolute top-1 left-3 w-3 h-1 rounded-full bg-white shadow-[0_0_4px_white]" />
