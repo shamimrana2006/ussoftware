@@ -242,37 +242,45 @@ export default function HomeCategoriesSection() {
                     ))}
                   </div>
 
-                  {/* Animated Slow Circular Border Fill Button with Gray background and Downward rotating arrow */}
-                  <div className="relative w-8 h-8 flex items-center justify-center ml-2 flex-shrink-0">
-                    {/* SVG Circular Border that slowly fills up around the button on hover */}
-                    <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 36 36">
+                  {/* Animated Slow Circular Border Fill Button (Z-Index Top & Always Visible) */}
+                  <div className="relative w-9 h-9 flex items-center justify-center ml-2 flex-shrink-0">
+                    {/* SVG Circular Border with Z-INDEX TOP, Sleek Thin Stroke, and Radiant Gradient */}
+                    <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none z-20" viewBox="0 0 36 36">
+                      <defs>
+                        <linearGradient id={`btn-grad-${cat.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#008744" />
+                          <stop offset="50%" stopColor={cat.accent || "#10B981"} />
+                          <stop offset="100%" stopColor="#06b6d4" />
+                        </linearGradient>
+                      </defs>
                       {/* Background track circle */}
                       <circle
                         cx="18"
                         cy="18"
-                        r="15"
+                        r="16"
                         fill="none"
                         stroke="#e2e8f0"
-                        strokeWidth="1.8"
+                        strokeWidth="1"
                       />
-                      {/* Animated progressive fill stroke */}
+                      {/* Animated progressive fill stroke (Ultra-Thin & Radiant Gradient) */}
                       <circle
                         cx="18"
                         cy="18"
-                        r="15"
+                        r="16"
                         fill="none"
-                        stroke={cat.accent || "#008744"}
-                        strokeWidth="2"
-                        strokeDasharray="94.2"
-                        strokeDashoffset="94.2"
+                        stroke={`url(#btn-grad-${cat.id})`}
+                        strokeWidth="1.2"
+                        strokeDasharray="100.5"
+                        strokeDashoffset="100.5"
                         strokeLinecap="round"
                         className="transition-all duration-700 ease-out group-hover:[stroke-dashoffset:0]"
                       />
                     </svg>
 
+                    {/* Button Link */}
                     <Link 
                       href={`/courses?category=${cat.id}`}
-                      className="w-6.5 h-6.5 rounded-full bg-slate-100 text-slate-700 group-hover:bg-slate-200/90 group-hover:text-slate-900 flex items-center justify-center transition-all duration-300 z-10 shadow-2xs group-hover:scale-115"
+                      className="w-6.5 h-6.5 rounded-full bg-slate-100 text-slate-700 group-hover:bg-slate-200/90 group-hover:text-slate-900 flex items-center justify-center transition-all duration-300 z-10 shadow-2xs group-hover:scale-110"
                       aria-label={`Explore ${cat.title}`}
                     >
                       <ArrowUpRight 

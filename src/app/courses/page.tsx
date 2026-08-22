@@ -576,6 +576,118 @@ function CoursesContent() {
     <div className="min-h-screen bg-[#f8fafc] flex flex-col">
       <Header />
 
+      {/* COURSES PAGE HERO SECTION */}
+      <section className="relative pt-8 pb-10 sm:pt-12 sm:pb-14 bg-gradient-to-b from-white via-slate-50/60 to-[#f8fafc] border-b border-slate-200/70 overflow-hidden select-none">
+        {/* Ambient background glows & grid */}
+        <div className="absolute inset-0 bg-[radial-gradient(#08121a_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] pointer-events-none" />
+        <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#008744]/6 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-24 right-1/4 w-96 h-96 bg-[#DE1F26]/6 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Top Pill Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#008744]/10 to-[#DE1F26]/10 border border-[#008744]/25 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest text-[#08121a] mb-4 shadow-2xs"
+            >
+              <Sparkles size={13} className="text-[#008744] animate-pulse" />
+              <span>{isEn ? "INDUSTRY-ACCREDITED TECH PROGRAMS" : "আন্তর্জাতিক মানসম্পন্ন প্রফেশনাল কোর্সসমূহ"}</span>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.08 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08121a] tracking-tight leading-[1.18] mb-4"
+            >
+              {isEn ? (
+                <>
+                  Master In-Demand <span className="text-[#008744]">Tech Skills</span> & Launch Your <span className="text-[#DE1F26]">Global Career</span>
+                </>
+              ) : (
+                <>
+                  ক্যারিয়ার শুরু করুন <span className="text-[#008744]">ইন-ডিমান্ড টেকনোলজিতে</span> — প্রফেশনাল <span className="text-[#DE1F26]">কোর্স প্রোগ্রাম</span>
+                </>
+              )}
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.14 }}
+              className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
+            >
+              {isEn
+                ? "Explore 24+ industry-aligned engineering bootcamps, hands-on live project tracks, and 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready."
+                : "২৪+ প্রফেশনাল লাইভ কোর্স, এন্টারপ্রাইজ প্রজেক্ট ও শীর্ষ ইঞ্জিনিয়ারদের মেন্টরশিপের মাধ্যমে আন্তর্জাতিক জব মার্কেট ও ফ্রিল্যান্সিংয়ের জন্য প্রস্তুত হোন।"}
+            </motion.p>
+
+            {/* Quick Filter Pill Tags (Popular Topics) */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-wrap items-center justify-center gap-2 mb-6"
+            >
+              <span className="text-[11px] font-bold text-slate-500 mr-1 hidden sm:inline-block">
+                {isEn ? "Popular Topics:" : "জনপ্রিয় টপিকস:"}
+              </span>
+              {[
+                { label: isEn ? "All" : "সকল", cat: "all" },
+                { label: isEn ? "AI & Automation" : "এআই ও অটোমেশন", cat: "ai" },
+                { label: isEn ? "Programming" : "প্রোগ্রামিং", cat: "programming" },
+                { label: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি", cat: "cybersecurity" },
+                { label: isEn ? "Art & Design" : "ডিজাইন", cat: "design" },
+                { label: isEn ? "DevOps & Cloud" : "ক্লাউড ডেভঅপ্স", cat: "networking" },
+              ].map((topic, tIdx) => (
+                <button
+                  key={tIdx}
+                  onClick={() => {
+                    setActiveCategory(topic.cat);
+                  }}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-2xs border ${
+                    activeCategory === topic.cat
+                      ? "bg-[#08121a] text-white border-slate-800 shadow-xs scale-105"
+                      : "bg-white hover:bg-slate-100/90 text-slate-700 border-slate-200/80 hover:border-slate-300"
+                  }`}
+                >
+                  {topic.label}
+                </button>
+              ))}
+            </motion.div>
+
+            {/* 4 Feature Badges / Trust Metrics */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.26 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-3xl mx-auto pt-5 border-t border-slate-200/60"
+            >
+              <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
+                <BookOpen size={14} className="text-[#008744] flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800">{isEn ? "24+ Live Tracks" : "২৪+ লাইভ ট্র্যাক"}</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
+                <Star size={14} className="text-amber-500 fill-amber-500 flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800">{isEn ? "4.9/5 Rating" : "৪.৯/৫ রেটিং"}</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
+                <TrendingUp size={14} className="text-[#DE1F26] flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800">{isEn ? "94% Placement Rate" : "৯৪% প্লেসমেন্ট রেট"}</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
+                <Award size={14} className="text-[#008744] flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800">{isEn ? "ISO Verified" : "আইএসও ভেরিফায়েড"}</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <main className="flex-grow py-8 sm:py-12 select-none">
         <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10">
           

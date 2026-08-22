@@ -148,8 +148,51 @@ export default function HomeBenefitsSection() {
                 <div>
                   {/* Top Bar: Icon + Number */}
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className={`w-11 h-11 rounded-xl border flex items-center justify-center ${benefit.iconBg} transition-transform group-hover:scale-105`}>
-                      <Icon size={20} />
+                    {/* Animated Progressive Gradient Border around Icon Container */}
+                    <div className="relative w-11 h-11 flex items-center justify-center flex-shrink-0">
+                      {/* SVG Rounded Rect Border Animation on Hover */}
+                      <svg className="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 44 44">
+                        <defs>
+                          <linearGradient id={`benefit-icon-grad-${idx}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#008744" />
+                            <stop offset="50%" stopColor={idx % 2 === 1 ? "#DE1F26" : "#10B981"} />
+                            <stop offset="100%" stopColor="#06b6d4" />
+                          </linearGradient>
+                        </defs>
+                        {/* Background track */}
+                        <rect
+                          x="1.5"
+                          y="1.5"
+                          width="41"
+                          height="41"
+                          rx="11"
+                          ry="11"
+                          fill="none"
+                          stroke="#e2e8f0"
+                          strokeWidth="1"
+                        />
+                        {/* Progressive Animated Stroke Fill (Ultra Thin & Sharp) */}
+                        <rect
+                          x="1.5"
+                          y="1.5"
+                          width="41"
+                          height="41"
+                          rx="11"
+                          ry="11"
+                          fill="none"
+                          stroke={`url(#benefit-icon-grad-${idx})`}
+                          strokeWidth="1.2"
+                          strokeDasharray="150"
+                          strokeDashoffset="150"
+                          strokeLinecap="round"
+                          className="transition-all duration-700 ease-out group-hover:[stroke-dashoffset:0]"
+                        />
+                      </svg>
+
+                      {/* Icon Base Container */}
+                      <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${benefit.iconBg} transition-transform group-hover:scale-105 z-10 shadow-2xs`}>
+                        <Icon size={20} />
+                      </div>
                     </div>
 
                     <span className="inline-block text-sm font-black text-slate-300 group-hover:text-[#008744] group-hover:scale-150 group-hover:-rotate-12 transition-all duration-300 origin-center select-none font-mono">

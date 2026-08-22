@@ -135,13 +135,13 @@ export default function HomeTrainingSection() {
                 className="group relative bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-slate-300 hover:scale-104 hover:-translate-y-1.5 transition-all duration-300 z-10 flex flex-col justify-between cursor-pointer overflow-hidden"
               >
                 {/* Dual Border Indicator Lines on Hover */}
-                {/* 1. Left Border: Bottom to Top increment (Prominent 3.5px) */}
+                {/* 1. Left Border: Bottom to Top increment (Slim 2px) */}
                 <div 
-                  className={`absolute left-0 bottom-0 top-0 w-[3.5px] bg-gradient-to-t ${item.gradient} scale-y-0 group-hover:scale-y-100 transition-transform duration-350 ease-out origin-bottom rounded-l-full z-20`}
+                  className={`absolute left-0 bottom-0 top-0 w-[2px] bg-gradient-to-t ${item.gradient} scale-y-0 group-hover:scale-y-100 transition-transform duration-350 ease-out origin-bottom rounded-l-full z-20`}
                 />
-                {/* 2. Right Border: Top to Bottom increment (Ultra Slow & Smooth 1.5px) */}
+                {/* 2. Right Border: Top to Bottom increment (Ultra Slim & Smooth 1px) */}
                 <div 
-                  className={`absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b ${item.gradient} scale-y-0 group-hover:scale-y-100 transition-transform duration-[2000ms] ease-in-out origin-top rounded-r-full z-20 opacity-80`}
+                  className={`absolute right-0 top-0 bottom-0 w-[1px] bg-gradient-to-b ${item.gradient} scale-y-0 group-hover:scale-y-100 transition-transform duration-[2000ms] ease-in-out origin-top rounded-r-full z-20 opacity-70`}
                 />
 
                 <div>
