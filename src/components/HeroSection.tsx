@@ -5,7 +5,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants, Transition } from "framer-motion";
 import { ArrowRight, Rocket, Cpu, Users, LineChart, BookOpen, Award, Play, Star } from "lucide-react";
 import {
-  RiGeminiFill,
   RiCodeSSlashLine,
   RiCpuLine,
   RiDatabase2Line,
@@ -13,6 +12,19 @@ import {
 } from "react-icons/ri";
 import RobotCanvas from "./RobotCanvas";
 import Link from "next/link";
+
+const SparkleIcon = ({ size = 24, className, style }: { size?: number | string; className?: string; style?: React.CSSProperties }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}
+  >
+    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+  </svg>
+);
 
 const Typewriter = ({ words }: { words: string[] }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -113,28 +125,28 @@ interface FloatingShapeItem {
 
 // Ambient Floating Decorative Icons from Icon Library (Inward Centered with Large Focal Elements)
 const heroFloatingShapes: FloatingShapeItem[] = [
-  // 1. [BIG SHAPE 1] Gemini Icon (Upper Center Area)
+  // 1. [SHAPE 1] Sparkle Star (Upper Center Area)
   {
-    id: "center-gemini-big",
-    icon: RiGeminiFill,
+    id: "center-sparkle-star",
+    icon: SparkleIcon,
     color: "#DE1F26",
     style: { top: "13%", left: "51%" },
-    size: 58,
-    opacity: 0.28,
-    animate: { y: [0, 14, 0], x: [0, -6, 0], rotate: [12, 55, 12] },
-    transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+    size: 38,
+    opacity: 0.24,
+    animate: { y: [0, 12, 0], x: [0, -5, 0], rotate: [0, 360, 0], scale: [0.9, 1.12, 0.9] },
+    transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
   },
 
-  // 2. [BIG SHAPE 2] Gemini Icon (Top-Right Area above Title)
+  // 2. [SHAPE 2] Sparkle Star (Top-Right Area above Title)
   {
-    id: "tr-gemini-big",
-    icon: RiGeminiFill,
+    id: "tr-sparkle-star",
+    icon: SparkleIcon,
     color: "#008744",
     style: { top: "6%", right: "13%" },
-    size: 52,
-    opacity: 0.30,
-    animate: { y: [0, -14, 0], rotate: [0, 180, 360], scale: [1, 1.12, 1] },
-    transition: { duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+    size: 36,
+    opacity: 0.24,
+    animate: { y: [0, -12, 0], rotate: [0, 360, 0], scale: [1, 1.15, 1] },
+    transition: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
   },
 
   // 3. [BIG SHAPE 3] Large Full-Stack Layer (Lower-Left Area near Video)
