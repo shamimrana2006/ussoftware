@@ -33,12 +33,15 @@ const Typewriter = ({ words }: { words: string[] }) => {
 
   useEffect(() => {
     const word = words[currentWordIndex] || "";
-    const typingSpeed = isDeleting ? 40 : 120;
+    // Snappy, smooth typing cadence (65ms typing, 25ms deleting, with natural breath pauses)
+    const typingSpeed = isDeleting ? 28 : 65;
 
     const timeout = setTimeout(() => {
       if (!isDeleting && currentText === word) {
-        setTimeout(() => setIsDeleting(true), 2500);
+        // Natural pause when full word is completed
+        setTimeout(() => setIsDeleting(true), 2200);
       } else if (isDeleting && currentText === "") {
+        // Brief natural breath before starting next word
         setIsDeleting(false);
         setCurrentWordIndex((prev) => (prev + 1) % words.length);
       } else {
@@ -54,16 +57,18 @@ const Typewriter = ({ words }: { words: string[] }) => {
   }, [currentText, isDeleting, currentWordIndex, words]);
 
   return (
-    <div className="inline-flex items-center w-[290px] sm:w-[320px] h-[42px] bg-white/85 backdrop-blur-md border border-[#008744]/25 rounded-full px-4 shadow-[0_4px_15px_rgba(0,135,68,0.08)] select-none transform-gpu">
-      <Cpu size={16} className="text-[#008744] mr-2.5 flex-shrink-0" />
-      <div className="flex items-center min-w-0 flex-1">
-        <span className="text-[#08121a] font-normal text-[15px] sm:text-[16px] tracking-wide whitespace-nowrap overflow-hidden">
+    <div className="inline-flex items-center h-[40px] bg-white/90 backdrop-blur-md border border-[#008744]/25 rounded-full px-3.5 shadow-[0_2px_12px_rgba(0,135,68,0.06)] select-none transition-all duration-150">
+      <div className="w-5 h-5 rounded-md bg-[#008744]/10 flex items-center justify-center mr-2 flex-shrink-0">
+        <Cpu size={13} className="text-[#008744]" />
+      </div>
+      <div className="flex items-center whitespace-nowrap">
+        <span className="text-[#08121a] font-medium text-[14px] sm:text-[15px] tracking-wide whitespace-nowrap leading-none subpixel-antialiased">
           {currentText}
         </span>
         <motion.span
-          animate={{ opacity: [1, 0] }}
-          transition={{ repeat: Infinity, duration: 0.8 }}
-          className="w-[2.5px] h-[16px] bg-gradient-to-b from-[#DE1F26] to-[#008744] inline-block ml-1 flex-shrink-0 rounded-full"
+          animate={{ opacity: [1, 0, 1] }}
+          transition={{ duration: 0.75, repeat: Infinity, ease: "easeInOut" }}
+          className="w-[2px] h-[13px] bg-gradient-to-b from-[#DE1F26] to-[#008744] inline-block ml-1 -translate-y-[1.5px] flex-shrink-0 rounded-full"
         />
       </div>
     </div>

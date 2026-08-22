@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
-import { Phone, Mail, Globe, User, Menu, X, LayoutGrid, ChevronDown, BookOpen, Code, Cpu, Cloud, Layers, Sparkles, Box } from "lucide-react";
+import { Phone, Mail, Globe, User, Menu, X, LayoutGrid, ChevronDown, BookOpen, Code, Cpu, Cloud, Layers, Sparkles, Box, Orbit, Bot, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -168,10 +168,10 @@ export default function Header() {
   const pathname = usePathname();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-  const [isMobileCategoryOpen, setIsMobileCategoryOpen] = useState(false);
+  const [isUniverseOpen, setIsUniverseOpen] = useState(false);
+  const [isMobileUniverseOpen, setIsMobileUniverseOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const categoryRef = useRef<HTMLDivElement>(null);
+  const universeRef = useRef<HTMLDivElement>(null);
 
   const isLinkActive = (href: string) => {
     if (href === "/") {
@@ -188,11 +188,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close category dropdown on outside click
+  // Close universe dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (categoryRef.current && !categoryRef.current.contains(event.target as Node)) {
-        setIsCategoryOpen(false);
+      if (universeRef.current && !universeRef.current.contains(event.target as Node)) {
+        setIsUniverseOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -204,12 +204,31 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  const categories = [
-    { title: language === "bn" ? "ওয়েব ও ফুল-স্ট্যাক" : "Web & Full-Stack", icon: Code, color: "text-[#008744]", desc: "React, Next.js, Node.js" },
-    { title: language === "bn" ? "সফটওয়্যার ইঞ্জিনিয়ারিং" : "Software Engineering", icon: Cpu, color: "text-[#DE1F26]", desc: "Data Structures & Architecture" },
-    { title: language === "bn" ? "এআই ও ডাটা সায়েন্স" : "AI & Machine Learning", icon: Sparkles, color: "text-[#008744]", desc: "LLMs, Python, Neural Networks" },
-    { title: language === "bn" ? "ক্লাউড ও ডেভঅপ্স" : "Cloud & DevOps", icon: Cloud, color: "text-[#DE1F26]", desc: "AWS, Docker, Kubernetes" },
-    { title: language === "bn" ? "ইউআই/ইউএক্স ডিজাইন" : "UI/UX & Product Design", icon: Layers, color: "text-[#008744]", desc: "Figma, Design Systems" },
+  const universePages = [
+    {
+      title: language === "bn" ? "৩ডি সাইবার ক্যানভাস" : "3D Cyber Canvas",
+      href: "/canvas",
+      icon: Box,
+      iconColor: "text-[#008744]",
+      iconBg: "bg-emerald-50/80 text-[#008744] group-hover:bg-emerald-100",
+      desc: language === "bn" ? "ইন্টারঅ্যাক্টিভ ৩ডি টেক হাব" : "Interactive 3D Tech Lab",
+    },
+    {
+      title: language === "bn" ? "এআই নিউরাল ইউনিভার্স" : "AI Neural Universe",
+      href: "/canvas?universe=ai",
+      icon: Sparkles,
+      iconColor: "text-[#DE1F26]",
+      iconBg: "bg-rose-50/80 text-[#DE1F26] group-hover:bg-rose-100",
+      desc: language === "bn" ? "জেনারেটিভ এআই ম্যাট্রিক্স" : "Generative AI & Neural Matrix",
+    },
+    {
+      title: language === "bn" ? "কোয়ান্টাম রিয়েলম ৩ডি" : "Quantum Realm 3D",
+      href: "/canvas?universe=quantum",
+      icon: Orbit,
+      iconColor: "text-cyan-600",
+      iconBg: "bg-cyan-50/80 text-cyan-600 group-hover:bg-cyan-100",
+      desc: language === "bn" ? "সাব-অ্যাটমিক পার্টিকল কসমস" : "Subatomic Particle Space",
+    },
   ];
 
   const navLinks = [
@@ -307,70 +326,65 @@ export default function Header() {
                 {item.label}
               </NavItem>
             ))}
-
-            {/* 3D Canvas Special Link */}
-            <NavItem href="/canvas" active={isLinkActive("/canvas")}>
-              <span className="flex items-center gap-1">
-                <span>{t.header.canvas || "Canvas"}</span>
-                <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-lg border ${isLinkActive("/canvas")
-                  ? "bg-[#DE1F26] text-white border-[#DE1F26]"
-                  : "bg-[#DE1F26]/10 text-[#DE1F26] border-[#DE1F26]/25 group-hover:bg-[#DE1F26] group-hover:text-white"
-                  } transition-colors`}>
-                  3D
-                </span>
-              </span>
-            </NavItem>
           </nav>
 
-          {/* Right Side: Category Dropdown & Get Course CTA Button */}
+          {/* Right Side: US Universe Dropdown + Get Course CTA Button */}
           <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
 
-            {/* Category Dropdown (Desktop & Tablet) */}
-            <div className="relative hidden md:block" ref={categoryRef}>
+            {/* US Universe Dropdown (Desktop & Tablet) - CLICK ONLY */}
+            <div className="relative hidden md:block" ref={universeRef}>
               <button
-                onClick={() => setIsCategoryOpen(!isCategoryOpen)}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 sm:py-2 rounded-xl border transition-all duration-200 text-xs sm:text-sm font-semibold shadow-sm cursor-pointer whitespace-nowrap ${isCategoryOpen
-                  ? "bg-[#008744]/10 border-[#008744] text-[#008744]"
-                  : "bg-slate-50 hover:bg-slate-100 border-slate-200/80 text-slate-700 hover:border-slate-300"
+                onClick={() => setIsUniverseOpen(!isUniverseOpen)}
+                className={`group relative flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border transition-all duration-150 text-xs font-semibold cursor-pointer whitespace-nowrap select-none ${isUniverseOpen
+                  ? "bg-slate-100/90 border-slate-300 text-[#DE1F26] shadow-xs"
+                  : "bg-transparent hover:bg-slate-100/70 border-slate-200/70 hover:border-slate-300 text-slate-700 hover:text-slate-900"
                   }`}
               >
-                <LayoutGrid size={15} className="text-[#008744]" />
-                <span>{t.header.category || "Category"}</span>
-                <ChevronDown size={13} className={`text-slate-400 transition-transform duration-200 ${isCategoryOpen ? "rotate-180 text-[#008744]" : ""}`} />
+                <Orbit
+                  size={14}
+                  className={`text-[#DE1F26] transition-transform duration-300 ${isUniverseOpen ? "rotate-180" : "group-hover:rotate-45"
+                    }`}
+                />
+                <span className="font-semibold">{language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe"}</span>
+                <ChevronDown
+                  size={12}
+                  className={`text-slate-400 transition-transform duration-150 ${isUniverseOpen ? "rotate-180 text-[#DE1F26]" : ""
+                    }`}
+                />
               </button>
 
-              {/* Category Dropdown Menu */}
+              {/* Ultra-Simple Compact US Universe Dropdown Menu */}
               <AnimatePresence>
-                {isCategoryOpen && (
+                {isUniverseOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                    initial={{ opacity: 0, y: 6, scale: 0.96 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 6, scale: 0.96 }}
-                    transition={{ duration: 0.18, ease: "easeOut" }}
-                    className="absolute top-full right-0 mt-2 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-slate-200/80 p-2 z-50 overflow-hidden"
+                    exit={{ opacity: 0, y: 4, scale: 0.96 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    className="absolute top-full right-0 mt-1.5 w-56 sm:w-60 bg-white/95 backdrop-blur-xl rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-slate-200/80 p-1.5 z-50 overflow-hidden"
                   >
-                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1.5">
-                      {language === "bn" ? "শীর্ষ ক্যাটাগরি" : "Top Categories"}
+                    <div className="space-y-0.5">
+                      {universePages.map((item, idx) => {
+                        const Icon = item.icon;
+                        return (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            onClick={() => setIsUniverseOpen(false)}
+                            className="flex items-center space-x-2.5 px-2.5 py-2 rounded-lg transition-colors duration-150 group hover:bg-slate-100/80"
+                          >
+                            <div
+                              className={`w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 ${item.iconBg}`}
+                            >
+                              <Icon size={14} className={item.iconColor} />
+                            </div>
+                            <span className="text-xs font-semibold text-slate-700 group-hover:text-[#DE1F26] transition-colors truncate">
+                              {item.title}
+                            </span>
+                          </Link>
+                        );
+                      })}
                     </div>
-                    {categories.map((cat, idx) => {
-                      const Icon = cat.icon;
-                      return (
-                        <Link
-                          key={idx}
-                          href="/courses"
-                          onClick={() => setIsCategoryOpen(false)}
-                          className="flex items-center space-x-3 p-2.5 rounded-xl hover:bg-emerald-50/60 transition-colors group"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-[#008744]/10 transition-colors">
-                            <Icon size={16} className={cat.color} />
-                          </div>
-                          <div>
-                            <div className="text-sm font-bold text-slate-800 group-hover:text-[#008744] transition-colors">{cat.title}</div>
-                            <div className="text-[11px] text-slate-400">{cat.desc}</div>
-                          </div>
-                        </Link>
-                      );
-                    })}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -412,38 +426,43 @@ export default function Header() {
             >
               <div className="max-w-[96rem] mx-auto px-4 sm:px-6 py-4 space-y-1.5 text-[15px] font-semibold text-gray-700">
 
-                {/* Mobile Category Accordion */}
-                <div className="border border-slate-200/80 rounded-xl overflow-hidden bg-slate-50/50 mb-2">
+                {/* Mobile US Universe Accordion */}
+                <div className="border border-slate-200/70 rounded-xl overflow-hidden bg-transparent mb-2">
                   <button
-                    onClick={() => setIsMobileCategoryOpen(!isMobileCategoryOpen)}
-                    className="w-full flex items-center justify-between px-3.5 py-2.5 text-sm font-bold text-slate-800 hover:text-[#008744]"
+                    onClick={() => setIsMobileUniverseOpen(!isMobileUniverseOpen)}
+                    className="w-full flex items-center justify-between px-3.5 py-2.5 text-sm font-semibold text-slate-800 hover:text-[#DE1F26]"
                   >
                     <span className="flex items-center space-x-2">
-                      <LayoutGrid size={16} className="text-[#008744]" />
-                      <span>{t.header.category || "Category"}</span>
+                      <Orbit size={16} className="text-[#DE1F26]" />
+                      <span>{language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe"}</span>
                     </span>
-                    <ChevronDown size={14} className={`text-slate-400 transition-transform duration-200 ${isMobileCategoryOpen ? "rotate-180 text-[#008744]" : ""}`} />
+                    <ChevronDown size={14} className={`text-slate-400 transition-transform duration-200 ${isMobileUniverseOpen ? "rotate-180 text-[#DE1F26]" : ""}`} />
                   </button>
 
                   <AnimatePresence>
-                    {isMobileCategoryOpen && (
+                    {isMobileUniverseOpen && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="px-3 pb-2.5 space-y-1.5 border-t border-slate-100 pt-2"
+                        className="px-2 pb-2 space-y-1 border-t border-slate-100 pt-1.5"
                       >
-                        {categories.map((cat, idx) => {
-                          const Icon = cat.icon;
+                        {universePages.map((item, idx) => {
+                          const Icon = item.icon;
                           return (
                             <Link
                               key={idx}
-                              href="/courses"
+                              href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="flex items-center space-x-2.5 p-2 rounded-lg hover:bg-emerald-50/50 text-xs font-medium text-slate-700 hover:text-[#008744] transition-colors"
+                              className="flex items-center justify-between p-2 rounded-lg bg-transparent hover:bg-slate-50 text-xs font-medium text-slate-700 transition-colors border border-transparent hover:border-slate-200/80"
                             >
-                              <Icon size={14} className={cat.color} />
-                              <span>{cat.title}</span>
+                              <div className="flex items-center space-x-2 min-w-0">
+                                <div className={`w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 ${item.iconBg}`}>
+                                  <Icon size={13} className={item.iconColor} />
+                                </div>
+                                <span className="truncate text-xs font-medium">{item.title}</span>
+                              </div>
+                              <ArrowRight size={12} className="text-slate-300" />
                             </Link>
                           );
                         })}
@@ -472,24 +491,6 @@ export default function Header() {
                     </Link>
                   );
                 })}
-
-                {/* Mobile Canvas 3D Link */}
-                <Link
-                  href="/canvas"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${isLinkActive("/canvas")
-                    ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
-                    : "text-slate-600 hover:text-[#DE1F26] hover:bg-slate-50"
-                    }`}
-                >
-                  <span className="flex items-center gap-2">
-                    <Box size={16} className={isLinkActive("/canvas") ? "text-[#08121a]" : "text-[#DE1F26]"} />
-                    <span>{t.header.canvas || "Canvas"}</span>
-                  </span>
-                  <span className="text-[10px] bg-gradient-to-r from-[#DE1F26] to-[#008744] text-white font-bold px-2 py-0.5 rounded-full">
-                    3D Hub
-                  </span>
-                </Link>
 
                 {/* Mobile Bottom CTA & Contacts */}
                 <div className="pt-3 mt-2 border-t border-gray-100 flex flex-col space-y-2.5">
