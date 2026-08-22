@@ -18,10 +18,24 @@ import {
 } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const { language } = useLanguage();
+  const pathname = usePathname();
   const isEn = language === "en";
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      const lenis = typeof window !== "undefined" ? (window as any).__lenis : null;
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 0.5, immediate: false });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
 
   const footerRef = useRef<HTMLElement>(null);
   const [email, setEmail] = useState("");
@@ -73,7 +87,12 @@ export default function Footer() {
 
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const lenis = (window as any).__lenis;
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 0.5, immediate: false });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   };
 
@@ -270,7 +289,7 @@ export default function Footer() {
           
           {/* Column 1: Brand Logo, Description & Magnetic Social Icons (4 cols on lg) */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-flex items-center space-x-2 group">
+            <Link href="/" onClick={handleHomeClick} className="inline-flex items-center space-x-2 group">
               <img
                 src="/logo/logo.png"
                 alt="US Software LTD"

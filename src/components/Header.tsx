@@ -10,10 +10,11 @@ import Link from "next/link";
 interface NavItemProps {
   href: string;
   active: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   children: React.ReactNode;
 }
 
-const NavItem = ({ href, active, children }: NavItemProps) => {
+const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -46,6 +47,7 @@ const NavItem = ({ href, active, children }: NavItemProps) => {
   return (
     <Link
       href={href}
+      onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -241,6 +243,18 @@ export default function Header() {
     { href: "/certification", label: t.header.certification || "Certification" },
   ];
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      const lenis = typeof window !== "undefined" ? (window as any).__lenis : null;
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 0.5, immediate: false });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <>
       {/* Top Bar - Dark Theme (Hidden on small screens) */}
@@ -308,9 +322,9 @@ export default function Header() {
       <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-200/70 py-2.5" : "bg-white/85 backdrop-blur-md border-b border-gray-100 py-3 sm:py-3.5"}`}>
         <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300">
 
-          {/* Left: Logo */}
+          {/* Left: Logo (Scrolls to top on click) */}
           <div className="flex items-center flex-shrink-0">
-            <Link href="/" className="flex items-center cursor-pointer">
+            <Link href="/" onClick={handleHomeClick} className="flex items-center cursor-pointer">
               <img src="/logo/logo.png" alt="US Software LTD" className="h-7 sm:h-8 lg:h-10 w-auto object-contain" />
             </Link>
           </div>
@@ -322,6 +336,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 active={isLinkActive(item.href)}
+                onClick={item.href === "/" ? handleHomeClick : undefined}
               >
                 {item.label}
               </NavItem>
@@ -478,7 +493,12 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        setIsMobileMenuOpen(false);
+                        if (item.href === "/") {
+                          handleHomeClick(e);
+                        }
+                      }}
                       className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${active
                         ? "bg-gradient-to-b from-white to-slate-100 text-[#08121a] font-extrabold shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1.5px_1px_white] border border-slate-300/80"
                         : "text-slate-600 hover:text-[#08121a] hover:bg-slate-50"
