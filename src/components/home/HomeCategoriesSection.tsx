@@ -161,7 +161,7 @@ export default function HomeCategoriesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.08 }}
-                className="group relative bg-slate-50/70 hover:bg-white rounded-xl p-5 sm:p-5.5 border border-slate-200/80 hover:border-slate-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:scale-104 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+                className="group relative bg-slate-50/70 hover:bg-white rounded-xl p-5 sm:p-5.5 border border-slate-200/80 hover:border-slate-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:scale-104 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
               >
                 {/* ANIMATED ROUNDED CONTINUOUS LEFT & BOTTOM GRADIENT BORDER WITH CORNER CURVE */}
                 <div 
@@ -242,7 +242,7 @@ export default function HomeCategoriesSection() {
                     ))}
                   </div>
 
-                  {/* Animated Slow Circular Border Fill Button */}
+                  {/* Animated Slow Circular Border Fill Button with Gray background and Downward rotating arrow */}
                   <div className="relative w-8 h-8 flex items-center justify-center ml-2 flex-shrink-0">
                     {/* SVG Circular Border that slowly fills up around the button on hover */}
                     <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 36 36">
@@ -266,16 +266,19 @@ export default function HomeCategoriesSection() {
                         strokeDasharray="94.2"
                         strokeDashoffset="94.2"
                         strokeLinecap="round"
-                        className="transition-all duration-800 ease-out group-hover:[stroke-dashoffset:0]"
+                        className="transition-all duration-700 ease-out group-hover:[stroke-dashoffset:0]"
                       />
                     </svg>
 
                     <Link 
                       href={`/courses?category=${cat.id}`}
-                      className="w-6.5 h-6.5 rounded-full bg-slate-100 group-hover:bg-[#008744] text-slate-700 group-hover:text-white flex items-center justify-center transition-all duration-400 z-10 shadow-2xs group-hover:scale-105"
+                      className="w-6.5 h-6.5 rounded-full bg-slate-100 text-slate-700 group-hover:bg-slate-200/90 group-hover:text-slate-900 flex items-center justify-center transition-all duration-300 z-10 shadow-2xs group-hover:scale-115"
                       aria-label={`Explore ${cat.title}`}
                     >
-                      <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                      <ArrowUpRight 
+                        size={13} 
+                        className="transition-transform duration-300 ease-out group-hover:rotate-90" 
+                      />
                     </Link>
                   </div>
                 </div>

@@ -17,6 +17,8 @@ interface NavItemProps {
 const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [rippleKey, setRippleKey] = useState(0);
+  const [clickPoint, setClickPoint] = useState({ x: 50, y: 20 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -34,6 +36,17 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
     setMouseOffset({ x: 0, y: 0 });
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+    setClickPoint({ x: clickX, y: clickY });
+    setRippleKey((prev) => prev + 1);
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   // Base neutral shape is a handsome rounded square / squircle (14px)
   // When hovering, corners warp into organic liquid waves
   const baseR = 14;
@@ -47,7 +60,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
   return (
     <Link
       href={href}
-      onClick={onClick}
+      onClick={handleClick}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -56,30 +69,123 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
       {/* 3D Liquid Water Droplet Capsule with Rounded Squircle Base (Active Item) */}
       {active && (
         <motion.div
+          key={`droplet-${rippleKey}`}
           layoutId="hyperRealisticWaterDroplet"
+          initial={rippleKey > 0 ? { scaleX: 0.95, scaleY: 1.05 } : false}
           animate={{
             x: mouseOffset.x,
             y: mouseOffset.y,
-            scaleX: isHovered ? 1 + Math.abs(mouseOffset.x) * 0.015 : 1,
-            scaleY: isHovered ? 1 + Math.abs(mouseOffset.y) * 0.015 : 1,
-            skewX: -mouseOffset.x * 0.65,
-            skewY: mouseOffset.y * 0.45,
-            rotateZ: mouseOffset.x * 0.5,
-            borderRadius: squircleFluidRadius,
+            scaleX: rippleKey > 0
+              ? [1, 1.22, 0.86, 1.1, 0.96, 1]
+              : isHovered
+                ? 1 + Math.abs(mouseOffset.x) * 0.015
+                : 1,
+            scaleY: rippleKey > 0
+              ? [1, 0.82, 1.18, 0.92, 1.04, 1]
+              : isHovered
+                ? 1 + Math.abs(mouseOffset.y) * 0.015
+                : 1,
+            skewX: rippleKey > 0
+              ? [0, -6, 6, -2, 2, 0]
+              : -mouseOffset.x * 0.65,
+            skewY: -mouseOffset.y * 0.45,
+            rotateZ: rippleKey > 0
+              ? [0, -3, 3, -1, 1, 0]
+              : mouseOffset.x * 0.5,
+            borderRadius: rippleKey > 0
+              ? [
+                squircleFluidRadius,
+                "24px 6px 22px 8px",
+                "6px 24px 8px 22px",
+                "18px 10px 16px 12px",
+                squircleFluidRadius
+              ]
+              : squircleFluidRadius,
           }}
-          transition={{ type: "spring", stiffness: 340, damping: 22, mass: 0.8 }}
+          transition={{
+            duration: rippleKey > 0 ? 0.7 : 0.4,
+            ease: "easeOut",
+          }}
           className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-slate-100/70 border border-slate-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.07),0_1.5px_4px_rgba(0,0,0,0.04),inset_0_2px_2px_rgba(255,255,255,1),inset_0_-1px_2px_rgba(0,0,0,0.04)] backdrop-blur-2xl overflow-hidden -z-0"
         >
+          {/* Primary High-Visibility Crystal Water Ripple Wavefront */}
+          {rippleKey > 0 && (
+            <motion.span
+              key={`wave1-${rippleKey}`}
+              initial={{ scale: 0.1, opacity: 1 }}
+              animate={{ scale: [0.1, 2.5, 4.6], opacity: [1, 0.6, 0] }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="absolute rounded-full border-2 border-cyan-300 bg-gradient-to-r from-cyan-400/35 via-white/60 to-emerald-300/35 shadow-[0_0_22px_rgba(6,182,212,0.9),inset_0_0_12px_white] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+              style={{
+                left: clickPoint.x,
+                top: clickPoint.y,
+                width: 36,
+                height: 36,
+              }}
+            />
+          )}
+
+          {/* Secondary Pure White Luminous Core Shockwave */}
+          {rippleKey > 0 && (
+            <motion.span
+              key={`wave2-${rippleKey}`}
+              initial={{ scale: 0.1, opacity: 1 }}
+              animate={{ scale: [0.1, 1.8, 3.2], opacity: [1, 0.7, 0] }}
+              transition={{ duration: 0.55, delay: 0.05, ease: "easeOut" }}
+              className="absolute rounded-full border-2 border-white bg-white/70 shadow-[0_0_16px_white,0_0_24px_rgba(6,182,212,0.6)] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+              style={{
+                left: clickPoint.x,
+                top: clickPoint.y,
+                width: 26,
+                height: 26,
+              }}
+            />
+          )}
+
+          {/* Micro Water Splashes / Droplets bursting out */}
+          {rippleKey > 0 && (
+            <>
+              <motion.span
+                key={`splash1-${rippleKey}`}
+                initial={{ y: 0, x: 0, scale: 0, opacity: 0 }}
+                animate={{
+                  y: [0, -18, 0],
+                  x: [0, -12, -16],
+                  scale: [0, 1.3, 0],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="absolute w-2.5 h-2.5 rounded-full bg-cyan-100 border border-white shadow-[0_0_10px_rgba(6,182,212,0.9),0_0_4px_white] pointer-events-none"
+                style={{ left: clickPoint.x, top: clickPoint.y }}
+              />
+              <motion.span
+                key={`splash2-${rippleKey}`}
+                initial={{ y: 0, x: 0, scale: 0, opacity: 0 }}
+                animate={{
+                  y: [0, -22, 0],
+                  x: [0, 12, 18],
+                  scale: [0, 1.5, 0],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{ duration: 0.55, delay: 0.03, ease: "easeOut" }}
+                className="absolute w-2.5 h-2.5 rounded-full bg-white border border-cyan-200 shadow-[0_0_12px_rgba(6,182,212,0.9),0_0_4px_white] pointer-events-none"
+                style={{ left: clickPoint.x, top: clickPoint.y }}
+              />
+            </>
+          )}
+
           {/* 1. Fluid Liquid Ripple Wave Internal Displacement Layer */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-25" preserveAspectRatio="none" viewBox="0 0 100 40">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30" preserveAspectRatio="none" viewBox="0 0 100 40">
             <motion.path
               animate={{
-                d: isHovered
-                  ? `M 0,20 Q ${25 + mouseOffset.x * 0.8},${14 + mouseOffset.y * 0.6} ${50 + mouseOffset.x * 0.4},20 T 100,20 L 100,40 L 0,40 Z`
-                  : "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z"
+                d: rippleKey > 0
+                  ? `M 0,20 Q ${25 + mouseOffset.x * 0.8},${8 + mouseOffset.y * 0.6} ${50 + mouseOffset.x * 0.4},26 T 100,20 L 100,40 L 0,40 Z`
+                  : isHovered
+                    ? `M 0,20 Q ${25 + mouseOffset.x * 0.8},${14 + mouseOffset.y * 0.6} ${50 + mouseOffset.x * 0.4},20 T 100,20 L 100,40 L 0,40 Z`
+                    : "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z"
               }}
-              transition={{ type: "spring", stiffness: 280, damping: 18 }}
-              fill="rgba(255,255,255,0.75)"
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              fill="rgba(255,255,255,0.85)"
             />
           </svg>
 
