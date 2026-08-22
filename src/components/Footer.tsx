@@ -15,13 +15,15 @@ import {
   Zap,
   Heart,
   Send,
+  Globe,
 } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
-  const { language } = useLanguage();
+  const { language, setLanguage, toggleLanguage } = useLanguage();
   const pathname = usePathname();
   const isEn = language === "en";
 
@@ -339,15 +341,14 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
-                href="https://youtube.com"
+                href="https://youtube.com/@ussoftwareltd"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#DE1F26] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(222,31,38,0.4)]"
+                className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#FF0000] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(255,0,0,0.4)]"
                 aria-label="YouTube"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z" />
-                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.943-.997 1.687-1.94 1.94C17.82 19.9 12 19.9 12 19.9s-5.82 0-7.603-.458c-.943-.253-1.686-.997-1.94-1.94C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.943.997-1.687 1.94-1.94C6.18 4.1 12 4.1 12 4.1s5.82 0 7.603.458c.943.253 1.686.997 1.94 1.94zM10 15.5l6-3.5-6-3.5v7z" />
                 </svg>
               </motion.a>
 
@@ -355,10 +356,10 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/ussoftwareltd"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#0077B5] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(0,119,181,0.4)]"
+                className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#0A66C2] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(10,102,194,0.4)]"
                 aria-label="LinkedIn"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
@@ -372,13 +373,30 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
+                href="https://instagram.com/ussoftwareltd"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#E1306C] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(225,48,108,0.4)]"
+                aria-label="Instagram"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </motion.a>
+
+              <motion.a
+                whileHover={{ y: -4, scale: 1.15 }}
+                whileTap={{ scale: 0.92 }}
+                transition={{ duration: 0.12, ease: "easeOut" }}
                 href="https://wa.me/880171234578"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#25D366] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(37,211,102,0.4)]"
                 aria-label="WhatsApp"
               >
-                <Phone size={13} />
+                <FaWhatsapp size={14} />
               </motion.a>
             </div>
           </div>
@@ -501,13 +519,60 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 3. BOTTOM MINIMALIST COPYRIGHT BAR */}
-        <div className="pt-10 mt-10 border-t border-slate-200/80 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
-          <p>
-            &copy; {new Date().getFullYear()}{" "}
-            <span className="text-slate-800 font-bold">US Software LTD</span>.{" "}
-            {isEn ? "All rights reserved." : "সর্বস্বত্ব সংরক্ষিত।"}
-          </p>
+        {/* 3. BOTTOM MINIMALIST COPYRIGHT & UTILITY BAR */}
+        <div className="pt-8 mt-10 border-t border-slate-200/80 flex flex-col lg:flex-row justify-between items-center gap-5 text-xs text-slate-500 font-medium">
+          
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
+            <p>
+              &copy; {new Date().getFullYear()}{" "}
+              <span className="text-slate-800 font-bold">US Software LTD</span>.{" "}
+              {isEn ? "All rights reserved." : "সর্বস্বত্ব সংরক্ষিত।"}
+            </p>
+
+            <div className="hidden sm:block text-slate-300">•</div>
+
+            {/* Interactive Smooth Language Switcher */}
+            <div className="inline-flex items-center space-x-2 bg-slate-100/90 border border-slate-200/90 rounded-full p-1 shadow-2xs">
+              <div className="flex items-center space-x-1 pl-2 pr-1 text-slate-500">
+                <Globe size={13} className="text-[#008744]" />
+                <span className="text-[11px] font-bold text-slate-600">
+                  {isEn ? "Language" : "ভাষা"}:
+                </span>
+              </div>
+              
+              <div className="relative flex items-center bg-slate-200/80 p-0.5 rounded-full text-xs font-bold">
+                {/* Sliding indicator */}
+                <motion.div
+                  layout
+                  transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                  className={`absolute top-0.5 bottom-0.5 rounded-full bg-white shadow-xs ${
+                    language === "en" ? "left-0.5 w-10" : "left-[43px] w-12"
+                  }`}
+                />
+                
+                <button
+                  type="button"
+                  onClick={() => setLanguage("en")}
+                  className={`relative z-10 w-10 py-1 rounded-full text-[11px] font-black transition-colors cursor-pointer text-center ${
+                    language === "en" ? "text-[#008744]" : "text-slate-500 hover:text-slate-800"
+                  }`}
+                  aria-label="Switch to English"
+                >
+                  EN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLanguage("bn")}
+                  className={`relative z-10 w-12 py-1 rounded-full text-[11px] font-black transition-colors cursor-pointer text-center ${
+                    language === "bn" ? "text-[#008744]" : "text-slate-500 hover:text-slate-800"
+                  }`}
+                  aria-label="বাংলা ভাষায় পরিবর্তন করুন"
+                >
+                  বাংলা
+                </button>
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-slate-500 font-medium">
             <Link href="/about" className="hover:text-[#008744] transition-colors">

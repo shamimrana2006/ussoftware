@@ -6,20 +6,20 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Phone, Mail, MapPin, Clock, Send, CheckCircle2, 
-  MessageSquare, ChevronDown, HelpCircle, 
-  Headphones, MessageCircle, ArrowRight
+  Phone, Mail, MapPin, Send, CheckCircle2, 
+  ChevronDown, HelpCircle, 
+  MessageCircle, ArrowRight, Sparkles,
+  ExternalLink, Compass, Building2, Star
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactPage() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const isEn = language === "en";
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    subject: "Full-Stack Development",
     message: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -34,401 +34,610 @@ export default function ContactPage() {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 800);
+    }, 600);
   };
+
+  const socialLinks = [
+    {
+      name: "Facebook",
+      url: "https://facebook.com/ussoftwareltd",
+      hoverClass: "hover:bg-[#1877F2] hover:text-white text-slate-600",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+        </svg>
+      )
+    },
+    {
+      name: "YouTube",
+      url: "https://youtube.com/@ussoftwareltd",
+      hoverClass: "hover:bg-[#FF0000] hover:text-white text-slate-600",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path fillRule="evenodd" clipRule="evenodd" d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.943-.997 1.687-1.94 1.94C17.82 19.9 12 19.9 12 19.9s-5.82 0-7.603-.458c-.943-.253-1.686-.997-1.94-1.94C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.943.997-1.687 1.94-1.94C6.18 4.1 12 4.1 12 4.1s5.82 0 7.603.458c.943.253 1.686.997 1.94 1.94zM10 15.5l6-3.5-6-3.5v7z" />
+        </svg>
+      )
+    },
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/company/ussoftwareltd",
+      hoverClass: "hover:bg-[#0A66C2] hover:text-white text-slate-600",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      )
+    },
+    {
+      name: "WhatsApp",
+      url: "https://wa.me/8801712345678",
+      hoverClass: "hover:bg-[#008744] hover:text-white text-slate-600",
+      icon: <FaWhatsapp size={15} />
+    }
+  ];
 
   const faqs = [
     {
-      q: isEn ? "How do I enroll in a course?" : "কোর্সে কীভাবে ভর্তি হব?",
-      a: isEn ? "You can click 'Enroll Now' on any course page or submit the contact form above. Our academic advisor will contact you within 24 hours to guide you through admission and schedule." : "যেকোনো কোর্স পেইজ থেকে 'ভর্তি হন' বাটনে ক্লিক করুন অথবা ফর্মটি পূরণ করুন। আমাদের প্রতিনিধি ২৪ ঘণ্টার মধ্যে যোগাযোগ করে সম্পূর্ণ প্রক্রিয়া বুঝিয়ে দেবেন।"
+      q: isEn ? "How do I apply or book a counseling session?" : "কোর্সে কীভাবে ভর্তি হব বা কাউন্সিলিং সেশন বুক করব?",
+      a: isEn 
+        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1712-34578). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites, and schedules." 
+        : "এই পেইজের ফর্মটি পূরণ করুন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে (+৮৮০ ১৭১২-৩৪৫৭৮) মেসেজ দিন। আমাদের সিনিয়র কাউন্সিলর ১৫ মিনিটের মধ্যে যোগাযোগ করে সম্পূর্ণ ভর্তি গাইডলাইন ও সময়সূচি জানিয়ে দেবেন।"
     },
     {
-      q: isEn ? "Are classes live or pre-recorded?" : "ক্লাসগুলো কি লাইভ হয় নাকি রেকর্ডেড?",
-      a: isEn ? "All our masterclasses are 100% interactive live sessions with senior industry engineers. You also get lifetime access to all recorded sessions, code repositories, and LMS resources." : "আমাদের সবগুলো ক্লাস ১০০% ইন্টারেক্টিভ লাইভ সেশন। এছাড়া প্রতিটি ক্লাসের হাই-কোয়ালিটি রেকর্ডিং এবং প্রজেক্ট সোর্স কোডের আজীবন এক্সেস পাবেন।"
+      q: isEn ? "Are courses held online, offline, or hybrid?" : "ক্লাসগুলো কি সরাসরি অফলাইনে হয় নাকি অনলাইনে?",
+      a: isEn 
+        ? "We provide both interactive offline batches at our Panthapath Dhaka Campus and 100% live online interactive batches. All students get lifetime LMS recordings and repository access." 
+        : "আমাদের পান্থপথ ঢাকা ক্যাম্পাসে সরাসরি অফলাইন ক্লাস এবং দূরবর্তী শিক্ষার্থীদের জন্য ১০০% লাইভ অনলাইন ক্লাসের ব্যবস্থা রয়েছে। সব ক্লাসের রেকর্ডিং ও সোর্স কোড লাইফটাইম অ্যাক্সেস পাবেন।"
     },
     {
-      q: isEn ? "Do you offer job placement support?" : "কোর্স শেষে কি চাকরির নিশ্চয়তা বা ইন্টার্নশিপ সুবিধা আছে?",
-      a: isEn ? "Yes! We have an active hiring network with 120+ top tech companies. Top performers get direct interview referrals, resume optimization, and paid internship opportunities." : "হ্যাঁ! আমাদের ১২০+ শীর্ষ সফটওয়্যার কোম্পানির সাথে প্লেসমেন্ট পার্টনারশিপ রয়েছে। কোর্স সফলভাবে সম্পন্নকারীদের সরাসরি ইন্টারভিউ রেফারেল ও ইন্টার্নশিপ প্রদান করা হয়।"
-    },
-    {
-      q: isEn ? "Can I pay in installments?" : "কোর্স ফি কি কিস্তিতে দেওয়ার সুবিধা আছে?",
-      a: isEn ? "Yes, we offer flexible 2 to 3-month installment plans with zero extra charges for all our professional programs." : "হ্যাঁ, যেকোনো প্রফেশনাল প্রোগ্রামে ২ থেকে ৩ মাসের সহজ কিস্তিতে ফি পরিশোধের সুযোগ রয়েছে।"
+      q: isEn ? "How does the job placement & internship assistance work?" : "প্লেসমেন্ট সাপোর্ট ও ইন্টার্নশিপ সুবিধা কীভাবে কাজ করে?",
+      a: isEn 
+        ? "We partner with 120+ software companies. Graduates completing capstone enterprise projects receive direct interview referrals, resume optimization, and mock technical defense coaching." 
+        : "১২০+ শীর্ষ সফটওয়্যার পার্টনার প্রতিষ্ঠানের সাথে আমাদের সরাসরি প্লেসমেন্ট নেটওয়ার্ক রয়েছে। সফল শিক্ষার্থীদের সরাসরি ইন্টারভিউ রেফারেল ও পেইড ইন্টার্নশিপ সুযোগ প্রদান করা হয়।"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] flex flex-col">
+    <div className="min-h-screen bg-[#f8fafc] flex flex-col font-sans">
       <Header />
 
-      <main className="flex-grow pt-6 pb-24">
-        
-        {/* CONTACT CONCIERGE 2-COLUMN HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#08121a] via-[#0b1e19] to-[#050b10] text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-10 border-b border-slate-800">
-          <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-[#008744]/20 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-[36rem] h-[36rem] bg-[#DE1F26]/15 rounded-full blur-[130px] pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+      {/* ========================================================================= */}
+      {/* 1. HERO SECTION: BRAND ACCENTED & COMPACT                                 */}
+      {/* ========================================================================= */}
+      <section className="relative pt-8 pb-10 sm:pt-12 sm:pb-14 bg-gradient-to-b from-white via-slate-50/60 to-[#f8fafc] border-b border-slate-200/70 overflow-hidden select-none">
+        <div className="absolute inset-0 bg-[radial-gradient(#08121a_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] pointer-events-none" />
+        <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#008744]/6 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-24 right-1/4 w-96 h-96 bg-[#DE1F26]/6 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="max-w-[96rem] mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
-              {/* Left Column (7 Cols) */}
-              <div className="lg:col-span-7">
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center space-x-2 bg-[#008744]/15 border border-[#008744]/35 rounded-full px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-emerald-300"
-                >
-                  <Headphones size={14} className="text-[#DE1F26]" />
-                  <span>{t.contactPage?.badge || "LET'S TALK"}</span>
-                </motion.div>
-
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 }}
-                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-tight mb-6"
-                >
-                  {t.contactPage?.title || "Get in Touch with Our Team"}
-                </motion.h1>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 }}
-                  className="text-base sm:text-lg text-slate-300 max-w-xl mb-8 leading-relaxed font-normal"
-                >
-                  {t.contactPage?.subtitle || "Have questions about our programs, corporate training, or custom software solutions? We are here to help."}
-                </motion.p>
-
-                {/* Live Status Chip */}
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.22 }}
-                  className="inline-flex items-center space-x-2.5 bg-[#008744]/15 border border-[#008744]/35 px-4 py-2.5 rounded-full text-xs font-bold text-emerald-300"
-                >
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#008744] animate-ping" />
-                  <span>{isEn ? "🟢 Concierge Online — Average response in 15 mins" : "🟢 অনলাইন ডেস্ক — ১৫ মিনিটের মধ্যে রেসপন্স"}</span>
-                </motion.div>
-              </div>
-
-              {/* Right Column: Direct Quick Connect Card (5 Cols) */}
-              <div className="lg:col-span-5">
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="bg-white/10 backdrop-blur-2xl rounded-3xl p-7 border border-white/20 shadow-2xl space-y-4 relative overflow-hidden"
-                >
-                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                    <span className="text-xs font-mono font-bold text-emerald-400">Direct Support Hotline</span>
-                    <span className="text-[10px] text-slate-300 font-mono">DHAKA HQ</span>
-                  </div>
-
-                  <div className="space-y-3">
-                    <a
-                      href="https://wa.me/8801800000000"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3.5 bg-[#008744]/20 hover:bg-[#008744]/30 border border-[#008744]/40 rounded-2xl flex items-center justify-between transition-all group"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center">
-                          <MessageCircle size={20} />
-                        </div>
-                        <div>
-                          <div className="text-xs font-bold text-white">{isEn ? "Instant WhatsApp Chat" : "ইনস্ট্যান্ট হোয়াটসঅ্যাপ চ্যাট"}</div>
-                          <div className="text-[11px] text-emerald-300 font-mono">+880 1800-000000</div>
-                        </div>
-                      </div>
-                      <ArrowRight size={16} className="text-emerald-400 group-hover:translate-x-1 transition-transform" />
-                    </a>
-
-                    <div className="p-3.5 bg-black/30 rounded-2xl border border-white/5 flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#DE1F26]/20 text-[#DE1F26] flex items-center justify-center">
-                          <Phone size={18} />
-                        </div>
-                        <div>
-                          <div className="text-xs font-bold text-white">{isEn ? "Admissions Hotline" : "ভর্তি সংক্রান্ত হেল্পলাইন"}</div>
-                          <div className="text-[11px] text-rose-300 font-mono">+880 1700-000000</div>
-                        </div>
-                      </div>
-                      <span className="text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded-md font-mono">9 AM - 8 PM</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 text-center text-xs text-slate-300 font-mono flex items-center justify-center gap-1.5">
-                    <MapPin size={13} className="text-[#008744]" />
-                    <span>Level 7, Innovation Tower, Panthapath, Dhaka</span>
-                  </div>
-                </motion.div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* MAIN CONTACT CHANNELS & FORM */}
-        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 -mt-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
             
-            {/* LEFT 5 COLS: CONTACT CHANNELS */}
-            <div className="lg:col-span-5 space-y-4">
+            {/* Top Pill Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#008744]/10 to-[#DE1F26]/10 border border-[#008744]/25 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest text-[#08121a] mb-4 shadow-2xs"
+            >
+              <Sparkles size={13} className="text-[#008744] animate-pulse" />
+              <span>{isEn ? "US SOFTWARE LIMITED • ADMISSIONS & INQUIRY HUB" : "ইউএস সফটওয়্যার লিমিটেড • যোগাযোগ ও তথ্যকেন্দ্র"}</span>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.08 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-black text-[#08121a] tracking-tight leading-[1.18] mb-4"
+            >
+              {isEn ? (
+                <>
+                  Connect with <span className="text-[#008744]">US Software</span> & Elevate Your <span className="text-[#DE1F26]">Tech Career</span>
+                </>
+              ) : (
+                <>
+                  আপনার স্বপ্নের <span className="text-[#008744]">টেক ক্যারিয়ার</span> গড়তে আমাদের সাথে <span className="text-[#DE1F26]">যোগাযোগ করুন</span>
+                </>
+              )}
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.14 }}
+              className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
+            >
+              {isEn
+                ? "Visit our Panthapath campus, send an inquiry through our direct concierge form, or connect with our lead engineering counselors."
+                : "আমাদের ঢাকা ক্যাম্পাসে সরাসরি চলে আসুন, ফর্মের মাধ্যমে তথ্য পাঠান অথবা আমাদের সিনিয়র ইঞ্জিনিয়ারদের সাথে সরাসরি কথা বলুন।"}
+            </motion.p>
+
+            {/* 4 Trust & Direct Action Pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.22 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-3xl mx-auto pt-5 border-t border-slate-200/60"
+            >
+              <a
+                href="https://wa.me/8801712345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-white/90 hover:bg-emerald-50/80 backdrop-blur-sm border border-slate-200/80 hover:border-emerald-300 rounded-xl py-2.5 px-3 shadow-2xs transition-all group cursor-pointer"
+              >
+                <FaWhatsapp size={15} className="text-[#008744] flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800 group-hover:text-[#008744] transition-colors">{isEn ? "WhatsApp Desk" : "হোয়াটসঅ্যাপ হেল্পলাইন"}</span>
+              </a>
+
+              <a
+                href="tel:+8801712345678"
+                className="flex items-center justify-center gap-2 bg-white/90 hover:bg-red-50/80 backdrop-blur-sm border border-slate-200/80 hover:border-red-300 rounded-xl py-2.5 px-3 shadow-2xs transition-all group cursor-pointer"
+              >
+                <Phone size={14} className="text-[#DE1F26] flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800 group-hover:text-[#DE1F26] transition-colors">{isEn ? "Admissions Hotline" : "ভর্তি সংক্রান্ত হেল্পলাইন"}</span>
+              </a>
+
+              <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
+                <Building2 size={14} className="text-[#008744] flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800">{isEn ? "Panthapath, Dhaka" : "পান্থপথ, ঢাকা"}</span>
+              </div>
+
+              <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
+                <Star size={14} className="text-amber-500 fill-amber-500 flex-shrink-0" />
+                <span className="text-xs font-bold text-slate-800">{isEn ? "4.9/5 Rating" : "৪.৯/৫ রেটিং"}</span>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. MAIN CONTACT SECTION: MASTER CARD                                      */}
+      {/* ========================================================================= */}
+      <main className="flex-grow py-12 sm:py-16 select-none">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 space-y-14 sm:space-y-16">
+          
+          {/* THE MASTER CARD (WITH US SOFTWARE GREEN & RED BRAND ACCENTS) */}
+          <div className="max-w-5xl mx-auto rounded-[36px] sm:rounded-[48px] bg-white border border-slate-100 p-8 sm:p-12 lg:p-16 shadow-[0_12px_35px_rgba(0,0,0,0.03)] relative overflow-hidden">
+            
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               
-              {/* WhatsApp & Helpline Card */}
-              <motion.div
-                whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(0,135,68,0.15)] hover:border-[#008744]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#008744] flex items-center justify-center flex-shrink-0">
-                  <MessageCircle size={24} />
-                </div>
-                <div>
-                  <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{t.contactPage?.helpline || "24/7 Helpline & WhatsApp"}</div>
-                  <div className="text-lg font-black text-slate-900 mt-1">+880 1800-000000</div>
-                  <div className="text-xs text-[#008744] font-semibold mt-0.5">+880 1700-000000 (Admissions Desk)</div>
-                </div>
-              </motion.div>
-
-              {/* Email Support Card */}
-              <motion.div
-                whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(222,31,38,0.15)] hover:border-[#DE1F26]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-rose-500/10 text-[#DE1F26] flex items-center justify-center flex-shrink-0">
-                  <Mail size={22} />
-                </div>
-                <div>
-                  <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{isEn ? "Official Email Inquiries" : "অফিসিয়াল ইমেইল"}</div>
-                  <div className="text-lg font-black text-slate-900 mt-1">contact@ussoftwareltd.com</div>
-                  <div className="text-xs text-slate-500 font-medium">support@ussoftwareltd.com</div>
-                </div>
-              </motion.div>
-
-              {/* Physical Office Card */}
-              <motion.div
-                whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(0,135,68,0.15)] hover:border-[#008744]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-[#008744] flex items-center justify-center flex-shrink-0">
-                  <MapPin size={22} />
-                </div>
-                <div>
-                  <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{isEn ? "Innovation Hub & Office" : "অফিস ও ইনোভেশন ল্যাব"}</div>
-                  <div className="text-lg font-black text-slate-900 mt-1">Dhaka, Bangladesh</div>
-                  <div className="text-xs text-slate-500 leading-relaxed mt-0.5 font-normal">
-                    {isEn ? "Level 7, Innovation Tower, Panthapath, Dhaka-1205" : "লেভেল ৭, ইনোভেশন টাওয়ার, পান্থপথ, ঢাকা-১২০৫"}
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Working Hours Card */}
-              <motion.div
-                whileHover={{ y: -5, scale: 1.01, transition: { duration: 0.15 } }}
-                className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_6px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_45px_rgba(222,31,38,0.15)] hover:border-[#DE1F26]/80 transition-all duration-150 flex items-start space-x-4 cursor-pointer"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-rose-500/10 text-[#DE1F26] flex items-center justify-center flex-shrink-0">
-                  <Clock size={22} />
-                </div>
-                <div>
-                  <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{t.contactPage?.officeHours || "Office Hours"}</div>
-                  <div className="text-lg font-black text-slate-900 mt-1">
-                    {isEn ? "Saturday – Thursday" : "শনিবার – বৃহস্পতিবার"}
-                  </div>
-                  <div className="text-xs text-slate-500 font-medium">9:00 AM – 8:00 PM (GMT+6)</div>
-                </div>
-              </motion.div>
-
-            </div>
-
-            {/* RIGHT 7 COLS: INTERACTIVE FORM */}
-            <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-[0_12px_35px_rgba(0,0,0,0.06)] relative overflow-hidden">
+              {/* LEFT SIDE: "Let's talk" + FORM INPUTS (6 COLS) */}
+              <div className="lg:col-span-6 flex flex-col justify-between">
                 
+                {/* Title in US Software Green */}
+                <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#008744] tracking-tight leading-none mb-3 flex items-center gap-2">
+                  <span>{isEn ? "Let's talk" : "কথা বলুন আমাদের সাথে"}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#DE1F26] inline-block animate-pulse" />
+                </h1>
+
+                {/* Subtitle */}
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-md font-normal mb-8">
+                  {isEn 
+                    ? "To request a course roadmap, admission info, or custom software solutions, contact us directly or fill out the form and we will get back to you promptly."
+                    : "কোর্সে ভর্তি, ক্যারিয়ার পরামর্শ বা সফটওয়্যার ডেভেলপমেন্ট সেবা সংক্রান্ত তথ্যের জন্য ফর্মটি পূরণ করুন, আমরা দ্রুত যোগাযোগ করব।"}
+                </p>
+
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
+                    className="py-10 text-center bg-[#f4f6fa] rounded-3xl p-6 border border-emerald-100"
                   >
-                    <div className="w-20 h-20 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle2 size={40} />
+                    <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#008744] flex items-center justify-center mx-auto mb-3 shadow-inner">
+                      <CheckCircle2 size={30} />
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-3">
+                    <h3 className="text-lg font-black text-slate-900 mb-1">
                       {isEn ? "Message Received!" : "বার্তাটি সফলভাবে পৌঁছেছে!"}
                     </h3>
-                    <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed mb-8 font-normal">
-                      {t.contactPage?.successMessage || "Thank you! Your message has been sent successfully. Our team will contact you shortly."}
+                    <p className="text-xs text-slate-500 mb-5 font-normal">
+                      {isEn ? "Our counseling team will get back to you promptly." : "আমাদের প্রতিনিধি খুব দ্রুত আপনার সাথে যোগাযোগ করবেন।"}
                     </p>
                     <button
                       onClick={() => {
                         setIsSubmitted(false);
-                        setFormData({ name: "", email: "", phone: "", subject: "Full-Stack Development", message: "" });
+                        setFormData({ name: "", email: "", message: "" });
                       }}
-                      className="bg-[#008744] hover:bg-[#007038] text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md cursor-pointer"
+                      className="bg-[#008744] hover:bg-[#007038] text-white px-6 py-2.5 rounded-full font-bold text-xs shadow-md transition-all cursor-pointer"
                     >
                       {isEn ? "Send Another Message" : "আরেকটি বার্তা পাঠান"}
                     </button>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                    
+                    {/* Your Name */}
                     <div>
-                      <div className="flex items-center space-x-2 text-xs font-bold text-[#008744] uppercase tracking-wider mb-1">
-                        <MessageSquare size={14} />
-                        <span>{isEn ? "Direct Concierge Form" : "ইনকোয়ারি ফর্ম"}</span>
-                      </div>
-                      <h2 className="text-2xl font-black text-slate-900">
-                        {isEn ? "Send Us a Direct Message" : "সরাসরি বার্তা পাঠান"}
-                      </h2>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 pl-1">
+                        {isEn ? "Your Name" : "আপনার নাম"}
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="John Doe"
+                        className="w-full bg-[#f4f6fa] hover:bg-[#edf1f7] focus:bg-white border border-transparent focus:border-[#008744]/40 focus:ring-4 focus:ring-[#008744]/10 rounded-[20px] px-5 py-3.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none transition-all font-medium shadow-2xs"
+                      />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                          {t.contactPage?.formName || "Full Name"} *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder={isEn ? "e.g. John Doe" : "আপনার নাম"}
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                          {t.contactPage?.formEmail || "Email Address"} *
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="name@example.com"
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                          {t.contactPage?.formPhone || "Phone Number"}
-                        </label>
-                        <input
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+880 1..."
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                          {t.contactPage?.formSubject || "Subject / Track of Interest"}
-                        </label>
-                        <select
-                          value={formData.subject}
-                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal cursor-pointer"
-                        >
-                          <option value="Full-Stack Web Development">{isEn ? "Enterprise Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব ডেভেলপমেন্ট"}</option>
-                          <option value="Generative AI & LLMs">{isEn ? "Generative AI & LLMs" : "জেনারেটিভ এআই ও এলএলএম"}</option>
-                          <option value="DevOps & Cloud Architecture">{isEn ? "Cloud & DevOps Architecture" : "ডেভঅপ্স ও ক্লাউড আর্কিটেকচার"}</option>
-                          <option value="Cross-Platform Mobile Apps">{isEn ? "Cross-Platform Mobile Apps" : "মোবাইল অ্যাপস"}</option>
-                          <option value="Corporate Software Solutions">{isEn ? "Corporate Custom Software" : "কর্পোরেট সফটওয়্যার সলিউশন"}</option>
-                          <option value="Other">{isEn ? "Other Inquiry" : "অন্যান্য তথ্য"}</option>
-                        </select>
-                      </div>
-                    </div>
-
+                    {/* Your Email */}
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                        {t.contactPage?.formMessage || "How can we help you?"} *
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 pl-1">
+                        {isEn ? "Your Email" : "আপনার ইমেইল"}
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="john@example.com"
+                        className="w-full bg-[#f4f6fa] hover:bg-[#edf1f7] focus:bg-white border border-transparent focus:border-[#008744]/40 focus:ring-4 focus:ring-[#008744]/10 rounded-[20px] px-5 py-3.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none transition-all font-medium shadow-2xs"
+                      />
+                    </div>
+
+                    {/* Your Message */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5 pl-1">
+                        {isEn ? "Your Message" : "আপনার বার্তা"}
                       </label>
                       <textarea
                         required
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder={isEn ? "Tell us about your requirements or learning goals..." : "আপনার প্রশ্ন বা প্রয়োজনীয় তথ্য লিখুন..."}
-                        className="w-full bg-slate-50 border border-slate-200/90 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#008744] focus:border-transparent focus:bg-white transition-all font-normal resize-none"
+                        placeholder={isEn ? "Type something if you want..." : "আপনার প্রশ্ন বা বার্তা লিখুন..."}
+                        className="w-full bg-[#f4f6fa] hover:bg-[#edf1f7] focus:bg-white border border-transparent focus:border-[#008744]/40 focus:ring-4 focus:ring-[#008744]/10 rounded-[22px] p-5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none transition-all font-normal resize-none shadow-2xs"
                       />
                     </div>
 
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-[#008744] hover:bg-[#007038] text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-[#008744]/25 flex items-center justify-center space-x-2 transition-all cursor-pointer disabled:opacity-70"
-                    >
-                      {isSubmitting ? (
-                        <span>{isEn ? "Sending Message..." : "পাঠানো হচ্ছে..."}</span>
-                      ) : (
-                        <>
-                          <Send size={16} />
-                          <span>{t.contactPage?.submitBtn || "Send Message"}</span>
-                        </>
-                      )}
-                    </button>
+                    {/* Submit Button in US Software Green */}
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] active:scale-[0.98] text-white px-8 py-3.5 rounded-full font-bold text-xs sm:text-sm shadow-[0_10px_25px_rgba(0,135,68,0.35)] hover:shadow-[0_12px_30px_rgba(0,135,68,0.45)] transition-all cursor-pointer disabled:opacity-70 flex items-center justify-center space-x-2"
+                      >
+                        {isSubmitting ? (
+                          <span>{isEn ? "Sending..." : "পাঠানো হচ্ছে..."}</span>
+                        ) : (
+                          <span>{isEn ? "Send Message" : "Send Message"}</span>
+                        )}
+                      </button>
+                    </div>
+
                   </form>
                 )}
 
               </div>
-            </div>
 
-          </div>
-        </section>
-
-        {/* FAQ ACCORDION */}
-        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 mt-16 sm:mt-24">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center space-x-1.5 text-xs font-bold text-[#008744] uppercase tracking-wider mb-2">
-              <HelpCircle size={14} />
-              <span>{isEn ? "Common Questions" : "সাধারণ প্রশ্নোত্তর"}</span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 mb-3">
-              {isEn ? "Frequently Asked Questions" : "সচরাচর জিজ্ঞাসিত প্রশ্নাবলী"}
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-3">
-            {faqs.map((faq, idx) => {
-              const isOpen = openFaq === idx;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:border-[#008744]/50 transition-all"
-                >
-                  <button
-                    onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between font-bold text-slate-800 text-sm sm:text-base cursor-pointer hover:text-[#008744] transition-colors"
+              {/* RIGHT SIDE: 3D ANIMATED ILLUSTRATION IN US SOFTWARE BRAND COLORS (6 COLS) */}
+              <div className="lg:col-span-6 flex flex-col justify-between items-center lg:items-start pl-0 lg:pl-4 space-y-8">
+                
+                {/* 3D ILLUSTRATION COMPONENT IN US SOFTWARE COLORS */}
+                <div className="relative w-full max-w-[340px] sm:max-w-[380px] h-[220px] sm:h-[240px] mx-auto flex items-center justify-center select-none pointer-events-none">
+                  
+                  {/* Floating Notification Bell Icon in Emerald Green (Top Left) */}
+                  <motion.div
+                    animate={{ 
+                      y: [-4, 6, -4],
+                      rotate: [-8, 8, -8]
+                    }}
+                    transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute top-2 left-8 w-11 h-11 rounded-full bg-[#008744] text-white flex items-center justify-center shadow-[0_8px_20px_rgba(0,135,68,0.4)] z-30"
                   >
-                    <span>{faq.q}</span>
-                    <ChevronDown size={18} className={`text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180 text-[#008744]" : ""}`} />
-                  </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                    </svg>
+                  </motion.div>
 
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal border-t border-slate-100 pt-3"
-                      >
-                        {faq.a}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Floating Red Chat Bubble Icon in US Software Red (Middle Left) */}
+                  <motion.div
+                    animate={{ 
+                      y: [6, -6, 6],
+                      scale: [0.96, 1.04, 0.96]
+                    }}
+                    transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                    className="absolute top-16 left-0 w-11 h-11 rounded-2xl bg-[#DE1F26] text-white flex items-center justify-center shadow-[0_8px_20px_rgba(222,31,38,0.4)] z-30"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                  </motion.div>
+
+                  {/* Floating Red Paper Plane in US Software Red (Top Right) */}
+                  <motion.div
+                    animate={{ 
+                      y: [4, -8, 4],
+                      x: [-2, 4, -2],
+                      rotate: [10, 22, 10]
+                    }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute top-1 right-4 text-[#DE1F26] z-30"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="m21.426 11.074-18-8A1 1 0 0 0 2.08 4.373l3.528 7.054a1 1 0 0 1 0 .894L2.08 19.375a1 1 0 0 0 1.346 1.3l18-8a1 1 0 0 0 0-1.601z"/>
+                    </svg>
+                  </motion.div>
+
+                  {/* Floating Confetti: US Software Red Dot (Top) */}
+                  <motion.div
+                    animate={{ y: [-3, 3, -3] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                    className="absolute top-4 left-36 w-3 h-3 rounded-full bg-[#DE1F26]"
+                  />
+
+                  {/* Floating Confetti: Amber Dot (Bottom Left) */}
+                  <motion.div
+                    animate={{ scale: [0.9, 1.2, 0.9] }}
+                    transition={{ duration: 3.5, repeat: Infinity }}
+                    className="absolute bottom-6 left-12 w-4 h-4 rounded-full bg-[#f59e0b]"
+                  />
+
+                  {/* Floating Confetti: US Software Green Dot (Right) */}
+                  <motion.div
+                    animate={{ y: [3, -4, 3] }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                    className="absolute top-12 right-0 w-3 h-3 rounded-full bg-[#008744]"
+                  />
+
+                  {/* Floating Confetti: Green Ring Donut (Right) */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                    className="absolute bottom-10 right-4 w-5 h-5 rounded-full border-[3px] border-[#008744]"
+                  />
+
+                  {/* Floating Confetti: Red Accent Dot (Bottom Right) */}
+                  <div className="absolute bottom-6 right-12 w-2.5 h-2.5 rounded-full bg-[#DE1F26]" />
+
+                  {/* MAIN 3D ENVELOPE WITH LETTER IN US SOFTWARE GREEN (CENTER) */}
+                  <motion.div
+                    animate={{ 
+                      y: [-4, 4, -4]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative flex flex-col items-center z-20"
+                  >
+                    {/* White Emerging Letter */}
+                    <motion.div
+                      animate={{ y: [-3, 1, -3] }}
+                      transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+                      className="w-40 sm:w-44 h-26 bg-white/95 rounded-2xl shadow-lg border border-slate-100 p-3 space-y-2 -mb-8 z-10"
+                    >
+                      <div className="w-20 h-1.5 rounded-full bg-[#008744]/70" />
+                      <div className="w-full h-1 rounded-full bg-slate-200" />
+                      <div className="w-4/5 h-1 rounded-full bg-slate-200" />
+                      <div className="w-2/3 h-1 rounded-full bg-slate-200" />
+                    </motion.div>
+
+                    {/* US Software Green Open Envelope Box */}
+                    <div className="w-48 sm:w-52 h-26 sm:h-28 rounded-2xl bg-gradient-to-tr from-[#008744] via-emerald-600 to-[#007038] shadow-[0_15px_35px_rgba(0,135,68,0.35)] relative overflow-hidden flex items-center justify-center text-white border border-[#007038]">
+                      {/* V-Shape Envelope Flap */}
+                      <div className="absolute top-0 inset-x-0 h-12 bg-[#007038] [clip-path:polygon(0_0,100%_0,50%_100%)] opacity-90" />
+                    </div>
+                  </motion.div>
+
                 </div>
-              );
-            })}
-          </div>
-        </section>
 
+                {/* CONTACT DETAILS LIST (US SOFTWARE BRAND ACCENTS) */}
+                <div className="space-y-3.5 text-xs sm:text-sm text-slate-600 w-full pl-2">
+                  <div className="flex items-center space-x-3 text-slate-700">
+                    <MapPin size={16} className="text-[#008744] flex-shrink-0" />
+                    <span className="font-semibold text-slate-700">Panthapath, Dhanmondi, Dhaka, Bangladesh</span>
+                  </div>
+
+                  <div className="flex items-center space-x-3 text-slate-700">
+                    <Phone size={16} className="text-[#DE1F26] flex-shrink-0" />
+                    <span className="font-semibold text-slate-700">{isEn ? "Open to Connect • +880 1712-34578" : "যোগাযোগের জন্য উন্মুক্ত • +৮৮০ ১৭১২-৩৪৫৭৮"}</span>
+                  </div>
+
+                  <div className="flex items-center space-x-3 text-slate-700">
+                    <Mail size={16} className="text-[#008744] flex-shrink-0" />
+                    <span className="font-semibold text-slate-700 font-mono">info@ussoftwareltd.com</span>
+                  </div>
+                </div>
+
+                {/* SOCIAL MEDIA CIRCULAR ICONS (BOTTOM RIGHT) */}
+                <div className="flex items-center space-x-3 pl-2 pt-1">
+                  {socialLinks.map((social, sIdx) => (
+                    <a
+                      key={sIdx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={social.name}
+                      className={`w-9 h-9 rounded-full bg-[#edf2f7] flex items-center justify-center transition-all duration-200 shadow-2xs hover:scale-110 cursor-pointer ${social.hoverClass}`}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* ========================================================================= */}
+          {/* 3. ROW: GOOGLE MAP (LEFT COLUMN) & FAQ ACCORDION (RIGHT COLUMN)           */}
+          {/* ========================================================================= */}
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+            
+            {/* LEFT COLUMN: GOOGLE MAP & LOCATION (6 COLS) */}
+            <div className="lg:col-span-6 rounded-[32px] sm:rounded-[36px] bg-white border border-slate-100 p-5 sm:p-6 shadow-[0_12px_35px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-4">
+              
+              {/* Map Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+                <div className="flex items-center space-x-2.5">
+                  <div className="w-8 h-8 rounded-xl bg-emerald-50 text-[#008744] flex items-center justify-center border border-emerald-100">
+                    <Building2 size={16} />
+                  </div>
+                  <div>
+                    <h3 className="text-xs sm:text-sm font-black text-slate-900 leading-tight">
+                      {isEn ? "U S Software Limited Campus" : "ইউএস সফটওয়্যার লিমিটেড ক্যাম্পাস"}
+                    </h3>
+                    <p className="text-[11px] text-slate-500 font-normal">
+                      {isEn ? "Panthapath, Dhanmondi, Dhaka" : "পান্থপথ, ধানমন্ডি, ঢাকা"}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Social Channels */}
+                <div className="flex items-center space-x-1.5 self-start sm:self-auto">
+                  {socialLinks.map((social, sIdx) => (
+                    <a
+                      key={sIdx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={social.name}
+                      className={`w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center transition-all shadow-2xs hover:scale-105 ${social.hoverClass}`}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Embedded Google Map iframe */}
+              <div className="w-full h-[260px] sm:h-[280px] rounded-2xl overflow-hidden relative border border-slate-200">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26029.645132847898!2d90.36776395155285!3d23.741634842481364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bb51884d03%3A0xa8faf6fd1f993941!2sU%20S%20Software%20Limited!5e0!3m2!1sen!2sbd!4v1787391961224!5m2!1sen!2sbd" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="w-full h-full absolute inset-0"
+                  title="U S Software Limited Google Map Location"
+                />
+
+                {/* Floating Overlay Badge on Map */}
+                <div className="absolute top-2.5 left-2.5 right-2.5 sm:right-auto bg-white/95 backdrop-blur-md rounded-xl p-2.5 border border-slate-200/90 shadow-[0_4px_15px_rgba(0,0,0,0.08)] pointer-events-auto">
+                  <div className="flex items-center space-x-1 text-[#008744] font-bold text-[11px]">
+                    <Building2 size={12} className="text-[#DE1F26]" />
+                    <span>U S Software Limited</span>
+                  </div>
+                  <p className="text-[10px] text-slate-500 font-medium">
+                    {isEn ? "Level 7, Innovation Tower" : "লেভেল ৭, ইনোভেশন টাওয়ার"}
+                  </p>
+                </div>
+              </div>
+
+              {/* Map Bottom Footer Actions */}
+              <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                <div className="flex items-center space-x-2">
+                  <MapPin size={15} className="text-[#008744] flex-shrink-0" />
+                  <span className="text-[11px] font-semibold text-slate-700">
+                    {isEn ? "Panthapath, Dhaka-1205" : "পান্থপথ, ধানমন্ডি, ঢাকা"}
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="https://wa.me/8801712345678"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-1 bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200/80 px-3 py-1.5 rounded-xl text-[11px] font-bold transition-colors shadow-2xs cursor-pointer"
+                  >
+                    <FaWhatsapp size={13} />
+                    <span>{isEn ? "Location Chat" : "হোয়াটসঅ্যাপ"}</span>
+                  </a>
+
+                  <a
+                    href="https://maps.google.com/?cid=12176461947230493057"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-1 bg-[#008744] hover:bg-[#007038] text-white px-3 py-1.5 rounded-xl text-[11px] font-bold transition-colors shadow-2xs cursor-pointer"
+                  >
+                    <span>{isEn ? "Directions" : "ম্যাপে যান"}</span>
+                    <ArrowRight size={12} />
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            {/* RIGHT COLUMN: FAQ ACCORDION (6 COLS) */}
+            <div className="lg:col-span-6 rounded-[32px] sm:rounded-[36px] bg-white border border-slate-100 p-5 sm:p-6 shadow-[0_12px_35px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-4">
+              
+              {/* FAQ Header */}
+              <div className="pb-3 border-b border-slate-100 flex items-center justify-between">
+                <div>
+                  <div className="inline-flex items-center space-x-1 text-[11px] font-extrabold text-[#008744] uppercase tracking-wider mb-0.5">
+                    <HelpCircle size={12} />
+                    <span>{isEn ? "GOT QUESTIONS?" : "সাধারণ জিজ্ঞাসা"}</span>
+                  </div>
+                  <h3 className="text-xs sm:text-sm font-black text-slate-900">
+                    {isEn ? "Frequently Asked Questions" : "সচরাচর জিজ্ঞাসিত প্রশ্নাবলী"}
+                  </h3>
+                </div>
+                <span className="text-[10px] font-extrabold text-[#008744] bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">
+                  {faqs.length} {isEn ? "FAQs" : "প্রশ্ন"}
+                </span>
+              </div>
+
+              {/* Accordion Questions List */}
+              <div className="space-y-2.5 flex-grow">
+                {faqs.map((faq, idx) => {
+                  const isOpen = openFaq === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className="bg-slate-50/70 rounded-2xl border border-slate-200/70 overflow-hidden transition-all hover:border-[#008744]/40"
+                    >
+                      <button
+                        onClick={() => setOpenFaq(isOpen ? null : idx)}
+                        className="w-full p-3 text-left flex items-center justify-between font-bold text-slate-800 text-xs cursor-pointer hover:text-[#008744] transition-colors"
+                      >
+                        <span className="pr-2">{faq.q}</span>
+                        <ChevronDown size={14} className={`text-slate-400 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180 text-[#008744]" : ""}`} />
+                      </button>
+
+                      <AnimatePresence>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="px-3 pb-3 text-[11px] text-slate-600 leading-relaxed font-normal border-t border-slate-200/50 pt-2 bg-white/60"
+                          >
+                            {faq.a}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom Support Callout */}
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span>{isEn ? "Need custom help?" : "আরও কিছু জানতে চান?"}</span>
+                <a 
+                  href="https://wa.me/8801712345678" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#008744] hover:underline inline-flex items-center gap-1"
+                >
+                  <FaWhatsapp size={12} />
+                  <span>{isEn ? "Live Chat Counselor" : "কাউন্সিলর চ্যাট"}</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </main>
 
       <Footer />
