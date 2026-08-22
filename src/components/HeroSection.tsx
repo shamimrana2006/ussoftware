@@ -4,13 +4,12 @@ import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants, Transition } from "framer-motion";
 import { ArrowRight, Rocket, Cpu, Users, LineChart, BookOpen, Award, Play, Star } from "lucide-react";
-import { 
-  RiTerminalBoxLine, 
-  RiSparklingFill, 
-  RiCodeSSlashLine, 
-  RiCpuLine, 
-  RiDatabase2Line, 
-  RiStackLine 
+import {
+  RiGeminiFill,
+  RiCodeSSlashLine,
+  RiCpuLine,
+  RiDatabase2Line,
+  RiStackLine
 } from "react-icons/ri";
 import RobotCanvas from "./RobotCanvas";
 import Link from "next/link";
@@ -114,10 +113,10 @@ interface FloatingShapeItem {
 
 // Ambient Floating Decorative Icons from Icon Library (Inward Centered with Large Focal Elements)
 const heroFloatingShapes: FloatingShapeItem[] = [
-  // 1. [BIG SHAPE 1] Large Terminal / Square Code Box (Upper Center Area)
+  // 1. [BIG SHAPE 1] Gemini Icon (Upper Center Area)
   {
-    id: "center-terminal-big",
-    icon: RiTerminalBoxLine,
+    id: "center-gemini-big",
+    icon: RiGeminiFill,
     color: "#DE1F26",
     style: { top: "13%", left: "51%" },
     size: 58,
@@ -126,10 +125,10 @@ const heroFloatingShapes: FloatingShapeItem[] = [
     transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
   },
 
-  // 2. [BIG SHAPE 2] Large AI Sparkle (Top-Right Area above Title)
+  // 2. [BIG SHAPE 2] Gemini Icon (Top-Right Area above Title)
   {
-    id: "tr-sparkle-big",
-    icon: RiSparklingFill,
+    id: "tr-gemini-big",
+    icon: RiGeminiFill,
     color: "#008744",
     style: { top: "6%", right: "13%" },
     size: 52,
