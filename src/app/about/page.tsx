@@ -228,44 +228,32 @@ export default function AboutPage() {
     }
   ];
 
-  const leaders = [
-    {
-      name: isEn ? "Engr. M. A. Rahman" : "ইঞ্জি. এম. এ. রহমান",
-      role: isEn ? "Chairman & Chief Advisor" : "চেয়ারম্যান ও প্রধান উপদেষ্টা",
-      qualification: "M.Sc. in CSE (BUET), 26+ Years in Enterprise Telecom & IT",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600",
-      quote: isEn
-        ? "Since 2000, our single-minded mission has been to build an internationally competitive tech ecosystem that propels Bangladesh into a global digital leader."
-        : "২০০০ সাল থেকে আমাদের একমাত্র ব্রত হলো একটি আন্তর্জাতিক মানের প্রযুক্তি ইকোসিস্টেম গড়ে তোলা যা বাংলাদেশকে বিশ্বমঞ্চে টেক লিডার হিসেবে প্রতিষ্ঠিত করবে।",
-      bio: isEn
-        ? "Pioneered national software initiatives and enterprise cloud architectures. Leads US Software's strategic growth and international university partnerships since inception in 2000."
-        : "২০০০ সাল থেকে জাতীয় আইটি প্রজেক্ট ও এন্টারপ্রাইজ ক্লাউড আর্কিটেকচারের পথিকৃৎ। ইউএস সফটওয়্যারের আন্তর্জাতিক পার্টনারশিপের নেতৃত্ব দিচ্ছেন।"
-    },
-    {
-      name: isEn ? "Mohammad Shafiul Alam" : "মোহাম্মদ শফিউল আলম",
-      role: isEn ? "Managing Director & CEO" : "ব্যবস্থাপনা পরিচালক (MD) ও সিইও",
-      qualification: "B.Sc. in Software Eng., Ex-Tech Lead at Global FinTech",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600",
-      quote: isEn
-        ? "We don't teach from theoretical slides. Every student builds production-grade software that solves real client pain points."
-        : "আমরা থিওরিটিক্যাল স্লাইড থেকে পড়াই না। প্রতিটি শিক্ষার্থী এমন সফটওয়্যার বানায় যা বাস্তব ক্লায়েন্ট সমস্যার সমাধান করে।",
-      bio: isEn
-        ? "Over 16 years of executive leadership in software product engineering, tech mentorship, and job placement pipelines across North America and South Asia."
-        : "সফটওয়্যার প্রোডাক্ট ইঞ্জিনিয়ারিং, মেন্টরশিপ ও আন্তর্জাতিক রিমোট জব প্লেসমেন্টে ১৬ বছরেরও বেশি অভিজ্ঞতাসম্পন্ন লিডার।"
-    },
-    {
-      name: isEn ? "Dr. Ariful Islam" : "ড. আরিফুল ইসলাম",
-      role: isEn ? "Chief Technology Officer (CTO)" : "চিফ টেকনোলজি অফিসার (CTO)",
-      qualification: "Ph.D. in Artificial Intelligence & Distributed Systems",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600",
-      quote: isEn
-        ? "Empowering youth with cutting-edge Generative AI and Cloud engineering ensures our graduates lead the next decade of tech disruption."
-        : "জেনারেটিভ এআই ও ক্লাউড ইঞ্জিনিয়ারিংয়ে শিক্ষার্থীদের দক্ষ করে তোলাই আগামী দশকের জন্য তাদের প্রস্তুত করার চাবিকাঠি।",
-      bio: isEn
-        ? "Renowned AI scientist and author of 15+ peer-reviewed IEEE papers on autonomous agents, LLM architectures, and computer vision systems."
-        : "খ্যাতনামা এআই বিজ্ঞানী এবং অটোনোমাস এজেন্টস ও এলএলএম আর্কিটেকচারের ওপর ১৫+ আইইইই গবেষণা পেপারের লেখক।"
-    }
-  ];
+  const founder = {
+    name: isEn ? "Mohammad Shafiul Alam" : "মোহাম্মদ শফিউল আলম",
+    role: isEn ? "Founder, Owner & Managing Director" : "প্রতিষ্ঠাতা, ওনার ও ব্যবস্থাপনা পরিচালক",
+    qualification: isEn ? "B.Sc. in Software Engineering • 26+ Years in Enterprise Tech & IT Leadership" : "বি.এস.সি ইন সফটওয়্যার ইঞ্জিনিয়ারিং • ২৬+ বছরের আইটি ও এন্টারপ্রাইজ টেক লিডারশিপ",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+    quote: isEn
+      ? "Since 2000, our journey has been driven by one relentless conviction: to transform ambitious young minds into world-class software engineers who build the future with confidence."
+      : "২০০০ সাল থেকে আমাদের একমাত্র লক্ষ্য ও অঙ্গীকার—বাংলাদেশের প্রতিভাবান তরুণদের আন্তর্জাতিক মানের দক্ষ সফটওয়্যার ইঞ্জিনিয়ার হিসেবে গড়ে তুলে বিশ্বমঞ্চে প্রতিষ্ঠিত করা।",
+    speechParagraphs: [
+      isEn
+        ? "When we founded US Software Limited over 26 years ago, technology was merely an emerging promise in Bangladesh. Today, we stand proud as an ecosystem that has nurtured over 5,800+ top software developers, cloud architects, and AI practitioners who are leading digital transformations across Fortune 500 companies and tech hubs globally."
+        : "২৬ বছর আগে যখন আমরা ইউএস সফটওয়্যার লিমিটেডের যাত্রা শুরু করেছিলাম, তখন প্রযুক্তি ছিল এক অপার সম্ভাবনাময় দিগন্ত। আজ আমরা গর্বিত যে আমাদের একাডেমি থেকে ৫,৮০০+ দক্ষ সফটওয়্যার ডেভেলপার, ক্লাউড আর্কিটেক্ট ও এআই এক্সপার্ট তৈরি হয়ে বিশ্বমানের টেক কোম্পানিতে সফলতার সাথে কাজ করছেন।",
+      isEn
+        ? "We believe true education is never confined to theoretical lectures. At US Software, every learner works on real client microservices, architectures live systems, and receives intensive 1-on-1 guidance from experienced industry seniors. This is the cornerstone of our 100% production realism."
+        : "আমরা বিশ্বাস করি তাত্ত্বিক পড়াশোনা কখনো একজন পরিপূর্ণ ইঞ্জিনিয়ার তৈরি করতে পারে না। ইউএস সফটওয়্যারে প্রতিটি শিক্ষার্থী সরাসরি লাইভ ক্লায়েন্ট প্রজেক্ট, এন্টারপ্রাইজ মাইক্রোসার্ভিসেস ও অভিজ্ঞ সিনিয়রদের ১-অন-১ মেন্টরশিপে কাজ করে নিজেদের প্রস্তুত করে।",
+      isEn
+        ? "As we navigate the Generative AI and Cloud computing revolution towards 2030, my personal commitment to every student remains absolute: we will continue to provide the highest standard of infrastructure, industry connections, and lifelong career mentorship."
+        : "২০৩০ সালের ভিশন ও চতুর্থ শিল্পবিপ্লবের এই যুগে প্রতিটি শিক্ষার্থীর প্রতি আমার ব্যক্তিগত প্রতিশ্রুতি—আমরা বিশ্বমানের আধুনিক ল্যাব, ইন্ডাস্ট্রি নেটওয়ার্ক ও আজীবন ক্যারিয়ার সাপোর্ট প্রদান করে আপনাদের স্বপ্ন পূরণে পাশে থাকব।"
+    ],
+    stats: [
+      { label: isEn ? "Years Legacy" : "বছরের অভিজ্ঞতা", value: "26+" },
+      { label: isEn ? "Engineers Mentored" : "গ্র্যাজুয়েট শিক্ষার্থী", value: "5,800+" },
+      { label: isEn ? "Enterprise Deployments" : "ক্লায়েন্ট প্রজেক্ট", value: "150+" },
+      { label: isEn ? "Placement Success" : "প্লেসমেন্ট রেট", value: "92%" },
+    ]
+  };
 
   const campusFacilities = [
     {
@@ -934,67 +922,203 @@ export default function AboutPage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 5. EXECUTIVE LEADERSHIP (LIGHT CARDS)                                     */}
+        {/* 5. OWNER & FOUNDER'S MESSAGE (ULTRA-PREMIUM EXECUTIVE AURORA SHOWCASE)    */}
         {/* ========================================================================= */}
-        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-16 border-t border-slate-200/80">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold text-[#008744] uppercase tracking-wider block mb-1">
-              {isEn ? "EXECUTIVE LEADERSHIP" : "ব্যবস্থাপনা ও পরিচালনা পরিষদ"}
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
-              {isEn ? "Message from Leadership" : "নেতৃত্বের বার্তা ও পরিচিতি"}
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
-              {isEn ? "Guiding 26+ years of tech mentorship and software excellence" : "২০০০ সাল থেকে ইউএস সফটওয়্যার লিমিটেডের দূরদর্শী নেতৃত্ব ও দিকনির্দেশকবৃন্দ"}
-            </p>
-          </div>
+        <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24 border-t border-slate-200/80 relative">
+          
+          <div className="relative bg-gradient-to-br from-white/95 via-[#f6fcf9]/95 to-[#eaf7f2]/90 backdrop-blur-2xl border-2 border-emerald-300/80 rounded-[40px] p-6 sm:p-10 lg:p-16 shadow-[0_30px_90px_rgba(0,135,68,0.12)] overflow-hidden">
+            
+            {/* Multi-Layer Animated Aurora Background Colors */}
+            <motion.div
+              animate={{
+                x: [0, 60, -30, 0],
+                y: [0, -50, 30, 0],
+                scale: [1, 1.2, 0.95, 1],
+              }}
+              transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+              className="absolute -top-32 -right-32 w-[480px] h-[480px] bg-gradient-to-br from-emerald-400/25 via-[#10b981]/20 to-teal-300/15 rounded-full blur-3xl pointer-events-none -z-10"
+            />
+            <motion.div
+              animate={{
+                x: [0, -50, 40, 0],
+                y: [0, 60, -40, 0],
+                scale: [1.1, 0.9, 1.15, 1.1],
+              }}
+              transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
+              className="absolute -bottom-32 -left-32 w-[480px] h-[480px] bg-gradient-to-tr from-[#008744]/20 via-teal-400/20 to-cyan-300/15 rounded-full blur-3xl pointer-events-none -z-10"
+            />
+            <motion.div
+              animate={{
+                opacity: [0.3, 0.7, 0.3],
+                scale: [0.95, 1.08, 0.95],
+              }}
+              transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-200/25 rounded-full blur-3xl pointer-events-none -z-10"
+            />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {leaders.map((ldr, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#008744]/40 transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
+            {/* Subtle Tech Cyber-Grid Pattern Overlay */}
+            <div className="absolute inset-0 bg-[radial-gradient(#008744_1.2px,transparent_1.2px)] [background-size:26px_26px] opacity-[0.045] pointer-events-none -z-10" />
+
+            {/* Watermark Background Typography */}
+            <div className="absolute right-4 -bottom-8 select-none pointer-events-none text-slate-900/[0.025] font-black text-8xl sm:text-9xl lg:text-[180px] tracking-tighter leading-none -z-10">
+              FOUNDER
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+
+              {/* Left 5 Cols: 3D Perspective Glass Portrait & Verified Founder Card */}
+              <div className="lg:col-span-5 flex flex-col items-center [perspective:1200px]">
+                <motion.div
+                  whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                  className="relative w-full max-w-md bg-white/95 backdrop-blur-xl rounded-[32px] p-6 sm:p-8 border-2 border-emerald-300 shadow-[0_20px_50px_rgba(0,135,68,0.14)] group"
+                >
+                  
+                  {/* Top Holographic Verified Seal Badge */}
+                  <div className="absolute -top-4 right-6 bg-gradient-to-r from-[#008744] via-[#10b981] to-[#047857] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-lg shadow-[#008744]/30 flex items-center gap-1.5 border border-emerald-200/50">
+                    <ShieldCheck size={15} className="text-emerald-200 animate-pulse" />
+                    <span>{isEn ? "Founder & Owner" : "প্রতিষ্ঠাতা ও ওনার"}</span>
+                  </div>
+
+                  {/* Portrait Image Frame with Animated Glowing Rim */}
+                  <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden mb-6 border-2 border-emerald-200/90 shadow-md group-hover:border-[#008744] transition-colors duration-300">
                     <img
-                      src={ldr.avatar}
-                      alt={ldr.name}
-                      className="w-16 h-16 rounded-2xl object-cover border-2 border-[#008744]/30 shadow-md"
+                      src={founder.avatar}
+                      alt={founder.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    <div>
-                      <h3 className="text-base sm:text-lg font-black text-slate-900 leading-snug">{ldr.name}</h3>
-                      <div className="text-xs font-bold text-[#008744] mt-0.5">{ldr.role}</div>
-                      <div className="text-[10px] text-slate-500 font-medium">{ldr.qualification}</div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
+                    
+                    {/* Active Leadership Glowing Status Pill */}
+                    <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 bg-slate-950/60 backdrop-blur-md border border-emerald-400/40 text-emerald-300 px-3 py-1 rounded-full text-[10px] font-black tracking-wide uppercase">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                      <span>{isEn ? "Executive Desk" : "নির্বাহী ডেস্ক"}</span>
+                    </div>
+
+                    {/* Overlay Name in Photo with Premium Typography */}
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <div className="text-xl sm:text-2xl font-black leading-tight drop-shadow-md tracking-tight">
+                        {founder.name}
+                      </div>
+                      <div className="text-xs font-bold text-emerald-300 mt-1 drop-shadow-sm flex items-center gap-1.5">
+                        <Award size={13} className="text-emerald-400" />
+                        <span>{founder.role}</span>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/70 mb-4 relative">
-                    <Quote size={16} className="text-[#008744] mb-1 opacity-70" />
-                    <p className="text-xs text-slate-700 italic leading-relaxed">
-                      "{ldr.quote}"
-                    </p>
+                  {/* Credentials & Background */}
+                  <p className="text-xs text-slate-600 font-semibold leading-relaxed mb-5 text-center bg-slate-50 border border-slate-200/80 rounded-xl p-2.5">
+                    {founder.qualification}
+                  </p>
+
+                  {/* 4 Interactive Stat Showcase Pills */}
+                  <div className="grid grid-cols-2 gap-2.5 pt-2">
+                    {founder.stats.map((st, i) => (
+                      <motion.div
+                        key={i}
+                        whileHover={{ scale: 1.03, y: -2 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                        className="bg-gradient-to-b from-white to-[#f4fbf8] border border-emerald-200/90 hover:border-[#008744] hover:shadow-md rounded-2xl p-3 text-center transition-all cursor-pointer"
+                      >
+                        <div className="text-lg sm:text-xl font-black text-[#008744] tracking-tight">{st.value}</div>
+                        <div className="text-[10px] sm:text-[11px] font-bold text-slate-600 mt-0.5">{st.label}</div>
+                      </motion.div>
+                    ))}
                   </div>
 
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                    {ldr.bio}
-                  </p>
+                  {/* Direct Contact Desk CTAs */}
+                  <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <a
+                      href="https://wa.me/8801712345678"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 bg-gradient-to-r from-[#edf9f5] to-[#e1f5ee] hover:from-[#008744] hover:to-[#047857] text-[#008744] hover:text-white border border-[#bce8d9] hover:border-transparent px-4 py-3 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-2xs hover:shadow-md cursor-pointer group/btn"
+                    >
+                      <FaWhatsapp size={16} className="text-[#25D366] group-hover/btn:text-white transition-colors" />
+                      <span>{isEn ? "Direct Office Desk" : "অফিসিয়াল ডেস্ক"}</span>
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-3 rounded-2xl bg-slate-100 hover:bg-[#0A66C2] hover:text-white text-slate-700 transition-all shadow-2xs hover:shadow-md cursor-pointer"
+                      title="LinkedIn Executive Profile"
+                    >
+                      <FaLinkedinIn size={16} />
+                    </a>
+                  </div>
+
+                </motion.div>
+              </div>
+
+              {/* Right 7 Cols: Owner's Message & Luxury Executive Statement */}
+              <div className="lg:col-span-7 space-y-6">
+                
+                {/* Section Pill */}
+                <div className="inline-flex items-center gap-2 bg-[#008744]/10 border border-[#008744]/30 px-4 py-1.5 rounded-full text-xs font-black text-[#008744] shadow-2xs">
+                  <Sparkles size={14} className="text-[#008744] animate-spin" style={{ animationDuration: '4s' }} />
+                  <span>{isEn ? "OWNER & FOUNDER'S STATEMENT" : "প্রতিষ্ঠাতা ও ওনারের বার্তা"}</span>
                 </div>
 
-                <div className="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span className="font-semibold">US Software Limited (Est. 2000)</span>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-2 rounded-xl bg-slate-100 hover:bg-[#0A66C2] hover:text-white text-slate-600 transition-colors"
-                    title="LinkedIn"
-                  >
-                    <FaLinkedinIn size={12} />
-                  </a>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                  {isEn ? (
+                    <>
+                      Building <span className="bg-gradient-to-r from-[#008744] via-[#10b981] to-[#047857] bg-clip-text text-transparent">Global Engineers</span> Since 2000
+                    </>
+                  ) : (
+                    <>
+                      ২০০০ সাল থেকে <span className="bg-gradient-to-r from-[#008744] via-[#10b981] to-[#047857] bg-clip-text text-transparent">আন্তর্জাতিক মানের দক্ষ ইঞ্জিনিয়ার</span> গড়ার প্রত্যয়
+                    </>
+                  )}
+                </h2>
+
+                {/* Luxury Vision Quote Box */}
+                <div className="relative bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-7 border-2 border-emerald-200/90 shadow-[0_10px_30px_rgba(0,135,68,0.06)] relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100/50 rounded-full blur-2xl pointer-events-none" />
+                  
+                  <div className="flex items-start gap-3 relative z-10">
+                    <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-[#008744] flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
+                      <Quote size={20} className="stroke-[2.5]" />
+                    </div>
+                    <p className="text-sm sm:text-base text-slate-800 font-bold italic leading-relaxed">
+                      "{founder.quote}"
+                    </p>
+                  </div>
                 </div>
+
+                {/* Detailed Paragraphs */}
+                <div className="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                  {founder.speechParagraphs.map((para, pIdx) => (
+                    <p key={pIdx} className="relative pl-4 border-l-2 border-emerald-200/90">
+                      {para}
+                    </p>
+                  ))}
+                </div>
+
+                {/* Signature, Corporate Seal & Authenticity Footer */}
+                <div className="pt-6 border-t-2 border-emerald-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div>
+                    <div className="font-serif italic text-2xl sm:text-3xl text-slate-900 font-black tracking-wide">
+                      Mohammad Shafiul Alam
+                    </div>
+                    <div className="text-xs font-bold text-[#008744] mt-0.5 flex items-center gap-1.5">
+                      <ShieldCheck size={14} />
+                      <span>{isEn ? "Founder, Owner & Managing Director" : "প্রতিষ্ঠাতা, ওনার ও ব্যবস্থাপনা পরিচালক"}</span>
+                    </div>
+                    <div className="text-[11px] text-slate-500 font-medium">
+                      US Software Limited • Registered Since 2000
+                    </div>
+                  </div>
+
+                  <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-emerald-100/90 to-teal-100/80 border-2 border-emerald-300 px-5 py-2.5 rounded-2xl text-xs font-black text-[#008744] shadow-sm">
+                    <Award size={18} className="text-[#008744]" />
+                    <span>{isEn ? "26+ Years of Proven Legacy" : "২৬+ বছরের গৌরবময় ঐতিহ্য"}</span>
+                  </div>
+                </div>
+
               </div>
-            ))}
+
+            </div>
           </div>
         </section>
 
