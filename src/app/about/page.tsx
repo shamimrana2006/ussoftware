@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -18,6 +18,153 @@ import {
   Monitor, Cpu
 } from "lucide-react";
 import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+
+// Reusable Smooth Typewriter Effect with Looping Sentences
+function TypewriterText({
+  texts,
+  typingSpeed = 35,
+  deletingSpeed = 18,
+  pauseDelay = 2600,
+  className = "",
+  cursorColor = "text-emerald-500",
+}: {
+  texts: string[];
+  typingSpeed?: number;
+  deletingSpeed?: number;
+  pauseDelay?: number;
+  className?: string;
+  cursorColor?: string;
+}) {
+  const [textIndex, setTextIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    setTextIndex(0);
+    setCurrentText("");
+    setIsDeleting(false);
+  }, [texts]);
+
+  useEffect(() => {
+    if (!texts || texts.length === 0) return;
+    const activeText = texts[textIndex % texts.length] || "";
+
+    let timer: NodeJS.Timeout;
+
+    if (!isDeleting) {
+      if (currentText.length < activeText.length) {
+        timer = setTimeout(() => {
+          setCurrentText(activeText.slice(0, currentText.length + 1));
+        }, typingSpeed);
+      } else {
+        timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, pauseDelay);
+      }
+    } else {
+      if (currentText.length > 0) {
+        timer = setTimeout(() => {
+          setCurrentText(activeText.slice(0, currentText.length - 1));
+        }, deletingSpeed);
+      } else {
+        setIsDeleting(false);
+        setTextIndex((prev) => (prev + 1) % texts.length);
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, textIndex, texts, typingSpeed, deletingSpeed, pauseDelay]);
+
+  return (
+    <span className={className}>
+      {currentText}
+      <motion.span
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ repeat: Infinity, duration: 0.8, ease: "easeInOut" }}
+        className={`inline-block font-black ml-0.5 ${cursorColor}`}
+      >
+        |
+      </motion.span>
+    </span>
+  );
+}
+
+// Reusable Smooth Incrementing Number Counter with Looping Animation
+function AnimatedCounter({
+  target,
+  duration = 1800,
+  pauseDelay = 3800,
+  prefix = "",
+  suffix = "",
+  formatWithCommas = false,
+  className = "",
+}: {
+  target: number;
+  duration?: number;
+  pauseDelay?: number;
+  prefix?: string;
+  suffix?: string;
+  formatWithCommas?: boolean;
+  className?: string;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let animationFrameId: number;
+    let timeoutId: NodeJS.Timeout;
+    let startTime: number | null = null;
+    let isRunning = true;
+
+    const runCountAnimation = () => {
+      startTime = null;
+
+      const step = (timestamp: number) => {
+        if (!isRunning) return;
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        
+        // Smooth easeOutCubic curve
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentVal = Math.floor(easeProgress * target);
+        
+        setCount(currentVal);
+
+        if (progress < 1) {
+          animationFrameId = requestAnimationFrame(step);
+        } else {
+          setCount(target);
+          // Wait pauseDelay then repeat smoothly
+          timeoutId = setTimeout(() => {
+            if (isRunning) {
+              setCount(0);
+              runCountAnimation();
+            }
+          }, pauseDelay);
+        }
+      };
+
+      animationFrameId = requestAnimationFrame(step);
+    };
+
+    runCountAnimation();
+
+    return () => {
+      isRunning = false;
+      cancelAnimationFrame(animationFrameId);
+      clearTimeout(timeoutId);
+    };
+  }, [target, duration, pauseDelay]);
+
+  const displayCount = formatWithCommas
+    ? count.toLocaleString()
+    : count.toString();
+
+  return (
+    <span className={className}>
+      {prefix}{displayCount}{suffix}
+    </span>
+  );
+}
 
 export default function AboutPage() {
   const { language } = useLanguage();
@@ -165,54 +312,113 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center justify-between">
               
               {/* ========================================================================= */}
-              {/* LEFT COLUMN: EFFORTLESS HEADLINE & CTA (CLEAN FLOATING TEXT)             */}
+              {/* LEFT COLUMN: BOLD, ANIMATED & ULTRA-PREMIUM HEADLINE & CTA               */}
               {/* ========================================================================= */}
               <motion.div 
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.7 }}
-                className="lg:col-span-5 space-y-4 text-left pointer-events-auto max-w-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-5 space-y-4 text-left pointer-events-auto max-w-xl"
               >
                 
-                {/* Headline: US Software [avatars] software solutions for your career and business */}
-                <h1 className="tracking-tight leading-[1.08]">
-                  <span className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#253858] inline-flex items-center gap-2 flex-wrap">
-                    <span>{isEn ? "US Software" : "ইউএস সফটওয়্যার"}</span>
-                    {/* Avatar Pill Asset */}
-                    <img
+                {/* Top Glowing Heritage Badge */}
+                <motion.div 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md border border-emerald-300/80 text-[#008744] px-4 py-1.5 rounded-full text-xs font-black shadow-xs"
+                >
+                  <Sparkles size={13} className="text-[#DE1F26] animate-pulse" />
+                  <span>{isEn ? "26+ YEARS OF ENTERPRISE & IT LEADERSHIP" : "২০০০ সাল থেকে প্রযুক্তি উদ্ভাবন ও অগ্রযাত্রা"}</span>
+                </motion.div>
+
+                {/* Animated Ultra-Premium Headline */}
+                <h1 className="tracking-tight leading-[1.05] space-y-1.5">
+                  {/* Line 1: Next-Gen Software Solutions */}
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[56px] font-black text-slate-900 tracking-tight"
+                  >
+                    {isEn ? "Next-Gen Software" : "নেক্সট-জেন সফটওয়্যার"}
+                  </motion.div>
+
+                  {/* Line 2: & AI Innovations (with Premium Gradient) */}
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[56px] font-black bg-gradient-to-r from-[#008744] via-[#059669] to-[#0284c7] bg-clip-text text-transparent tracking-tight drop-shadow-xs"
+                  >
+                    {isEn ? "& AI Innovations" : "ও এআই ইনোভেশন"}
+                  </motion.div>
+
+                  {/* Line 3: Empowering Global Careers */}
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[56px] font-bold text-slate-400 tracking-tight"
+                  >
+                    {isEn ? "for Global Careers" : "উন্নত ক্যারিয়ার"}
+                  </motion.div>
+
+                  {/* Line 4: with US Software + Avatars Pill */}
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[56px] font-black text-[#0f172a] tracking-tight flex items-center gap-3 flex-wrap"
+                  >
+                    <span>{isEn ? "with US Software" : "ও ইউএস সফটওয়্যার"}</span>
+                    {/* Floating Avatar Pill Asset */}
+                    <motion.img
                       src="/images/hero-avatars-pill.png"
                       alt="Student Avatars"
-                      className="inline-block h-7 sm:h-8 object-contain align-middle rounded-full shadow-2xs"
+                      animate={{ y: [0, -4, 0] }}
+                      transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                      className="inline-block h-8 sm:h-9 object-contain align-middle rounded-full shadow-xs border border-white"
                     />
-                  </span>
-                  <div className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#253858]">
-                    {isEn ? "software solutions" : "সফটওয়্যার সলিউশন"}
-                  </div>
-                  <div className="text-3xl sm:text-4xl lg:text-[42px] font-normal text-[#899bb1]">
-                    {isEn ? "for your career" : "আপনার ক্যারিয়ার"}
-                  </div>
-                  <div className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#253858]">
-                    {isEn ? "and business" : "ও বিজনেসের জন্য"}
-                  </div>
+                  </motion.div>
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-xs sm:text-[13px] text-[#64748b] font-normal leading-relaxed">
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed max-w-lg pt-1"
+                >
                   {isEn
-                    ? "Professional software engineering, AI development, and digital skill training for your career and business with US Software."
-                    : "প্রফেশনাল সফটওয়্যার ইঞ্জিনিয়ারিং, এআই ও আইটি ক্যারিয়ার প্রশিক্ষণ। রিয়েল প্রজেক্ট ও ১-অন-১ মেন্টরশিপের মাধ্যমে আপনার ক্যারিয়ার গড়ে তুলুন।"}
-                </p>
+                    ? "We engineer high-performance software systems and empower tech leaders through real-world client labs and 1-on-1 industry mentorship."
+                    : "আমরা তৈরি করি হাই-পারফরম্যান্স সফটওয়্যার সলিউশন এবং রিয়েল-ওয়ার্ল্ড ক্লায়েন্ট প্রজেক্ট ও ১-অন-১ মেন্টরশিপের মাধ্যমে আন্তর্জাতিক মানের দক্ষ আইটি প্রফেশনাল গড়ে তুলি।"}
+                </motion.p>
 
-                {/* Green Pill CTA Button */}
-                <div className="pt-1">
+                {/* Clean, Elegant & Ultra-Premium CTA Buttons */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="pt-2 flex items-center gap-3.5 flex-wrap"
+                >
+                  {/* Primary Lush Emerald Button */}
                   <Link
                     href="/courses"
-                    className="inline-flex items-center gap-2 bg-[#188c59] hover:bg-[#137349] text-white px-6 sm:px-7 py-3 rounded-full font-bold text-xs sm:text-sm shadow-[0_6px_20px_rgba(24,140,89,0.3)] transition-all cursor-pointer hover:scale-105"
+                    className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#008744] to-[#007038] hover:from-[#007038] hover:to-[#005a2d] text-white px-7 sm:px-8 py-3.5 rounded-full font-black text-sm sm:text-[15px] shadow-[0_8px_25px_rgba(0,135,68,0.35)] hover:shadow-[0_12px_32px_rgba(0,135,68,0.45)] transition-all cursor-pointer hover:scale-105 active:scale-98 group"
                   >
                     <span>{isEn ? "Get a quote" : "কোর্সগুলো দেখুন"}</span>
-                    <ArrowRight size={14} />
+                    <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-200" />
                   </Link>
-                </div>
+
+                  {/* Secondary White Glass Contact Button */}
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 bg-white/95 hover:bg-white text-slate-800 border border-slate-200/90 hover:border-slate-300 px-6 sm:px-7 py-3.5 rounded-full font-bold text-sm sm:text-[15px] shadow-2xs hover:shadow-md transition-all cursor-pointer hover:scale-105 active:scale-98"
+                  >
+                    <span>{isEn ? "Contact Us" : "যোগাযোগ করুন"}</span>
+                  </Link>
+                </motion.div>
 
               </motion.div>
 
@@ -271,141 +477,403 @@ export default function AboutPage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 2. DEDICATED SEPARATE MISSION & VISION SECTIONS                           */}
+        {/* 2. DEDICATED REDESIGNED MISSION & VISION SHOWCASES                        */}
         {/* ========================================================================= */}
-        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20 space-y-12">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24 space-y-16">
 
-          {/* SECTION A: OUR MISSION (LIGHT MINT PRECISION CARD) */}
-          <div className="bg-[#edf9f6] border-2 border-[#aeead9] rounded-3xl p-8 sm:p-12 shadow-xs relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* ========================================================================= */}
+          {/* SECTION A: OUR MISSION (MASSIVE TITLE & LUSH EMERALD CYBER-GLASS)         */}
+          {/* ========================================================================= */}
+          <div className="relative bg-gradient-to-br from-[#f0fdf4] via-white to-[#ecfdf5] border-2 border-emerald-300/80 rounded-[36px] p-8 sm:p-12 lg:p-14 shadow-[0_20px_60px_rgba(0,135,68,0.08)] overflow-hidden">
+            {/* Background Watermark Outline Typography */}
+            <div className="absolute right-4 -bottom-6 select-none pointer-events-none text-slate-900/[0.03] font-black text-8xl sm:text-9xl lg:text-[180px] tracking-tighter leading-none">
+              MISSION
+            </div>
 
-              {/* Left 7 Cols */}
-              <div className="lg:col-span-7 space-y-4">
-                <div className="inline-flex items-center gap-1.5 bg-[#008744]/15 border border-[#008744]/30 px-3.5 py-1 rounded-full text-xs font-bold text-[#008744]">
-                  <Target size={14} className="text-[#008744]" />
-                  <span>{isEn ? "OUR MISSION" : "আমাদের মিশন"}</span>
+            {/* Glowing Corner Aura */}
+            <div className="absolute -top-24 -left-24 w-80 h-80 bg-emerald-400/15 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+
+              {/* Left 7 Cols: Mission Content */}
+              <div className="lg:col-span-7 space-y-6">
+                
+                {/* Massive Section Title */}
+                <div>
+                  <div className="inline-flex items-center gap-2 bg-[#008744]/10 border border-[#008744]/30 px-4 py-1.5 rounded-full text-xs font-black text-[#008744] mb-3">
+                    <Target size={15} className="text-[#008744]" />
+                    <span>{isEn ? "CORE PURPOSE & PURPOSE" : "মূল উদ্দেশ্য ও অঙ্গীকার"}</span>
+                  </div>
+
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.08]">
+                    <span className="text-[#008744] block sm:inline mr-3">{isEn ? "OUR" : "আমাদের"}</span>
+                    <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
+                      {isEn ? "MISSION" : "মিশন"}
+                    </span>
+                  </h2>
+
+                  <p className="text-base sm:text-lg font-bold text-slate-700 mt-2">
+                    {isEn
+                      ? "Empowering Youth with Production-Grade Engineering Skills"
+                      : "প্র্যাকটিক্যাল আইটি ট্রেনিংয়ের মাধ্যমে বিশ্বমানের দক্ষ জনশক্তি গড়ে তোলা"}
+                  </p>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight">
-                  {isEn
-                    ? "Empowering Youth with Production-Grade Engineering Skills"
-                    : "প্র্যাকটিক্যাল আইটি ট্রেনিংয়ের মাধ্যমে দক্ষ জনশক্তি গড়ে তোলা"}
-                </h2>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed font-normal">
                   {isEn
                     ? "To empower individuals with practical, industry-grade technology training, real client project mastery, and dedicated 1-on-1 mentorship — bridging the divide between academic theory and high-paying global IT careers."
                     : "আমাদের মিশন হলো শিক্ষার্থীদের তাত্ত্বিক পড়াশোনার গণ্ডি পেরিয়ে রিয়েল ক্লায়েন্ট প্রজেক্ট ও ১-অন-১ মেন্টরশিপের মাধ্যমে আন্তর্জাতিক মানের দক্ষ ইঞ্জিনিয়ার হিসেবে প্রস্তুত করা, যাতে তারা গ্লোবাল মার্কেটে শীর্ষ পদে ক্যারিয়ার গড়তে পারেন।"}
                 </p>
 
-                {/* 4 Mission Checkpoints */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#008744] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "100% Practical Client Labs" : "১০০% প্র্যাকটিক্যাল ক্লায়েন্ট ল্যাব"}</span>
-                  </div>
+                {/* 4 Animated Mission Checkpoints Cards with Pure Smooth Hover Gradient (No Scale Up) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-emerald-200/90 hover:border-[#008744] hover:shadow-[0_8px_25px_rgba(0,135,68,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Emerald -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#008744]/20 via-emerald-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#008744] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "1-on-1 Senior Mentorship" : "১-অন-১ এক্সপার্ট মেন্টরশিপ"}</span>
-                  </div>
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-emerald-100/80 text-[#008744] flex items-center justify-center flex-shrink-0 group-hover:bg-[#008744] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <CheckCircle2 size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#005a2d] transition-colors">{isEn ? "100% Practical Client Labs" : "১০০% প্র্যাকটিক্যাল ক্লায়েন্ট ল্যাব"}</span>
+                  </motion.div>
 
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#008744] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "Direct Job Placement Pipeline" : "সরাসরি জব প্লেসমেন্ট সাপোর্ট"}</span>
-                  </div>
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-emerald-200/90 hover:border-[#008744] hover:shadow-[0_8px_25px_rgba(0,135,68,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Emerald -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#008744]/20 via-emerald-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#008744] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "NSDA & Global Standards" : "এনএসডিএ ও আন্তর্জাতিক কারিকুলাম"}</span>
-                  </div>
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-emerald-100/80 text-[#008744] flex items-center justify-center flex-shrink-0 group-hover:bg-[#008744] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Users size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#005a2d] transition-colors">{isEn ? "1-on-1 Senior Mentorship" : "১-অন-১ এক্সপার্ট মেন্টরশিপ"}</span>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-emerald-200/90 hover:border-[#008744] hover:shadow-[0_8px_25px_rgba(0,135,68,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Emerald -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#008744]/20 via-emerald-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-emerald-100/80 text-[#008744] flex items-center justify-center flex-shrink-0 group-hover:bg-[#008744] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Rocket size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#005a2d] transition-colors">{isEn ? "Direct Job Placement Pipeline" : "সরাসরি জব প্লেসমেন্ট সাপোর্ট"}</span>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-emerald-200/90 hover:border-[#008744] hover:shadow-[0_8px_25px_rgba(0,135,68,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Emerald -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#008744]/20 via-emerald-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-emerald-100/80 text-[#008744] flex items-center justify-center flex-shrink-0 group-hover:bg-[#008744] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Award size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#005a2d] transition-colors">{isEn ? "NSDA & Global ISO Standard" : "এনএসডিএ ও আন্তর্জাতিক কারিকুলাম"}</span>
+                  </motion.div>
                 </div>
+
               </div>
 
-              {/* Right 5 Cols: Visual Badge Graphic */}
-              <div className="lg:col-span-5 flex justify-center">
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#aeead9] shadow-sm text-center max-w-sm w-full">
-                  <div className="w-16 h-16 rounded-2xl bg-[#008744] text-white flex items-center justify-center mx-auto mb-4 shadow-md shadow-[#008744]/25">
-                    <Target size={30} />
+              {/* Right 5 Cols: Animated 3D Perspective Stat Showcase */}
+              <div className="lg:col-span-5 flex justify-center [perspective:1200px]">
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                    rotateX: [0, 5, 0],
+                    rotateY: [0, -6, 0]
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 6,
+                    ease: "easeInOut"
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    rotateX: 0,
+                    rotateY: 0,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="bg-white/95 backdrop-blur-xl rounded-[32px] p-8 sm:p-10 border-2 border-emerald-200 shadow-[0_25px_60px_rgba(0,135,68,0.18)] text-center max-w-sm w-full relative [transform-style:preserve-3d] group cursor-pointer"
+                >
+                  {/* 3D Floating Corner Glow Rings */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-200/60 rounded-full blur-2xl -z-10 animate-pulse" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-200/40 rounded-full blur-2xl -z-10" />
+
+                  {/* 3D Floating Orbit Icon Sphere */}
+                  <div className="relative w-24 h-24 mx-auto mb-6 [transform:translateZ(40px)]">
+                    {/* Pulsing Rotating Orbit Rings */}
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+                      className="absolute -inset-3 rounded-full border-2 border-dashed border-emerald-400/60 pointer-events-none"
+                    />
+                    <motion.div
+                      animate={{ rotate: -360 }}
+                      transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+                      className="absolute -inset-1.5 rounded-full border border-emerald-300/40 pointer-events-none"
+                    />
+                    <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#008744] via-[#10b981] to-[#047857] text-white flex items-center justify-center shadow-[0_12px_30px_rgba(0,135,68,0.4)] group-hover:scale-110 transition-transform duration-300">
+                      <Target size={44} className="stroke-[2.5] drop-shadow-md" />
+                    </div>
                   </div>
-                  <div className="text-3xl font-black text-slate-900 mb-1">100%</div>
-                  <div className="text-xs font-extrabold text-[#008744] uppercase tracking-wider mb-2">
-                    {isEn ? "Production Realism" : "প্র্যাকটিক্যাল কোডিং ফোকাস"}
+
+                  {/* 3D Depth Metric Value with Smooth Repeating Increment Animation */}
+                  <div className="[transform:translateZ(35px)] space-y-2">
+                    <div className="text-5xl font-black text-slate-900 tracking-tight leading-none">
+                      <AnimatedCounter target={100} suffix="%" duration={1800} pauseDelay={3800} />
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100/90 text-[#008744] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-2xs">
+                      <Sparkles size={13} className="text-emerald-600 animate-spin" style={{ animationDuration: '3s' }} />
+                      <span>{isEn ? "Production Realism" : "প্র্যাকটিক্যাল কোডিং ফোকাস"}</span>
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                    {isEn
-                      ? "Zero dummy projects. Every student builds enterprise microservices with real-time architecture standards."
-                      : "কোনো ডামি প্রজেক্ট নয়, প্রতিটি শিক্ষার্থী তৈরি করে লাইভ স্কেলেবল সিস্টেম।"}
-                  </p>
-                </div>
+
+                  {/* Animated Smooth Repeating Typewriter Description */}
+                  <div className="min-h-[72px] sm:min-h-[80px] flex items-center justify-center mt-4 [transform:translateZ(20px)]">
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                      <TypewriterText
+                        texts={
+                          isEn
+                            ? [
+                                "Zero dummy projects. Every student builds enterprise microservices with real-time architecture standards.",
+                                "100% practical live coding labs with dedicated 1-on-1 industry mentorship.",
+                                "Direct corporate job placement pipeline connecting talent to global tech careers."
+                              ]
+                            : [
+                                "কোনো ডামি প্রজেক্ট নয়, প্রতিটি শিক্ষার্থী তৈরি করে লাইভ স্কেলেবল সিস্টেম ও প্রোডাকশন প্রজেক্ট।",
+                                "১০০% লাইভ কোডিং ল্যাব এবং ডেডিকেটেড ১-অন-১ এক্সপার্ট মেন্টরশিপ।",
+                                "সরাসরি ইন্ডাস্ট্রি জব প্লেসমেন্ট সাপোর্ট ও আন্তর্জাতিক ক্যারিয়ারের নিশ্চয়তা।"
+                              ]
+                        }
+                        typingSpeed={30}
+                        deletingSpeed={15}
+                        pauseDelay={2800}
+                        cursorColor="text-emerald-500"
+                      />
+                    </p>
+                  </div>
+
+                  {/* Floating 3D Badge */}
+                  <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-2 text-xs font-black text-[#008744] [transform:translateZ(30px)]">
+                    <CheckCircle2 size={15} />
+                    <span>{isEn ? "ISO 9001:2015 Verified Quality" : "আইএসও সার্টিফাইড আন্তর্জাতিক মান"}</span>
+                  </div>
+                </motion.div>
               </div>
 
             </div>
           </div>
 
-          {/* SECTION B: OUR VISION 2030 (LIGHT AMBER CARD) */}
-          <div className="bg-[#fff7f5] border-2 border-[#fed7aa] rounded-3xl p-8 sm:p-12 shadow-xs relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* ========================================================================= */}
+          {/* SECTION B: OUR VISION 2030 (MASSIVE TITLE & SUNSET CORAL CYBER-GLASS)      */}
+          {/* ========================================================================= */}
+          <div className="relative bg-gradient-to-br from-[#fff7ed] via-white to-[#fef2f2] border-2 border-orange-200/90 rounded-[36px] p-8 sm:p-12 lg:p-14 shadow-[0_20px_60px_rgba(234,88,12,0.08)] overflow-hidden">
+            {/* Background Watermark Outline Typography */}
+            <div className="absolute left-4 -bottom-6 select-none pointer-events-none text-slate-900/[0.03] font-black text-8xl sm:text-9xl lg:text-[180px] tracking-tighter leading-none">
+              VISION
+            </div>
 
-              {/* Left 5 Cols: Visual Vision Target Graphic */}
-              <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
-                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#fed7aa] shadow-sm text-center max-w-sm w-full">
-                  <div className="w-16 h-16 rounded-2xl bg-[#ea580c] text-white flex items-center justify-center mx-auto mb-4 shadow-md shadow-[#ea580c]/25">
-                    <Compass size={30} />
+            {/* Glowing Corner Aura */}
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-orange-400/15 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+
+              {/* Left 5 Cols: Animated 3D Perspective Stat Showcase */}
+              <div className="lg:col-span-5 flex justify-center order-2 lg:order-1 [perspective:1200px]">
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                    rotateX: [0, -5, 0],
+                    rotateY: [0, 6, 0]
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 6.5,
+                    ease: "easeInOut"
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    rotateX: 0,
+                    rotateY: 0,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="bg-white/95 backdrop-blur-xl rounded-[32px] p-8 sm:p-10 border-2 border-orange-200 shadow-[0_25px_60px_rgba(234,88,12,0.18)] text-center max-w-sm w-full relative [transform-style:preserve-3d] group cursor-pointer"
+                >
+                  {/* 3D Floating Corner Glow Rings */}
+                  <div className="absolute top-0 left-0 w-40 h-40 bg-orange-200/60 rounded-full blur-2xl -z-10 animate-pulse" />
+                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-amber-200/40 rounded-full blur-2xl -z-10" />
+
+                  {/* 3D Floating Orbit Icon Sphere */}
+                  <div className="relative w-24 h-24 mx-auto mb-6 [transform:translateZ(40px)]">
+                    {/* Pulsing Rotating Orbit Rings */}
+                    <motion.div
+                      animate={{ rotate: -360 }}
+                      transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+                      className="absolute -inset-3 rounded-full border-2 border-dashed border-orange-400/60 pointer-events-none"
+                    />
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+                      className="absolute -inset-1.5 rounded-full border border-orange-300/40 pointer-events-none"
+                    />
+                    <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#ea580c] via-[#f97316] to-[#c2410c] text-white flex items-center justify-center shadow-[0_12px_30px_rgba(234,88,12,0.4)] group-hover:scale-110 transition-transform duration-300">
+                      <Compass size={44} className="stroke-[2.5] drop-shadow-md" />
+                    </div>
                   </div>
-                  <div className="text-3xl font-black text-slate-900 mb-1">50,000+</div>
-                  <div className="text-xs font-extrabold text-[#ea580c] uppercase tracking-wider mb-2">
-                    {isEn ? "Engineers by 2030" : "২০৩০ সালের লক্ষ্যমাত্রা"}
+
+                  {/* 3D Depth Metric Value with Smooth Repeating Increment Animation */}
+                  <div className="[transform:translateZ(35px)] space-y-2">
+                    <div className="text-5xl font-black text-slate-900 tracking-tight leading-none">
+                      <AnimatedCounter target={50000} suffix="+" formatWithCommas={true} duration={2000} pauseDelay={3800} />
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 bg-orange-100/90 text-[#ea580c] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-2xs">
+                      <Rocket size={13} className="text-[#ea580c] animate-bounce" />
+                      <span>{isEn ? "Engineers by 2030" : "২০৩০ সালের লক্ষ্যমাত্রা"}</span>
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                    {isEn
-                      ? "Creating South Asia's most competent talent ecosystem in Artificial Intelligence, Cloud DevOps, and Full-Stack Engineering."
-                      : "দক্ষিণ এশিয়ার শীর্ষস্থানীয় সফটওয়্যার ও এআই ট্যালেন্ট পাইপলাইন তৈরি করা।"}
-                  </p>
-                </div>
+
+                  {/* Animated Smooth Repeating Typewriter Description */}
+                  <div className="min-h-[72px] sm:min-h-[80px] flex items-center justify-center mt-4 [transform:translateZ(20px)]">
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                      <TypewriterText
+                        texts={
+                          isEn
+                            ? [
+                                "Creating South Asia's most competent talent ecosystem in Artificial Intelligence, Cloud DevOps, and Full-Stack Engineering.",
+                                "Empowering 50,000+ elite engineers, AI specialists, and tech entrepreneurs by 2030.",
+                                "Accelerating remote Silicon Valley placement and tech startup incubation."
+                              ]
+                            : [
+                                "দক্ষিণ এশিয়ার শীর্ষস্থানীয় সফটওয়্যার, এআই ও ক্লাউড কম্পিউটিং ট্যালেন্ট পাইপলাইন তৈরি করা।",
+                                "২০৩০ সালের মধ্যে ৫০,০০০+ আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ার ও এআই লিডার তৈরি করা।",
+                                "সিলিকন ভ্যালি রিমোট ক্যারিয়ার ও বিশ্বমানের টেক ইকোসিস্টেম গড়ে তোলা।"
+                              ]
+                        }
+                        typingSpeed={30}
+                        deletingSpeed={15}
+                        pauseDelay={2800}
+                        cursorColor="text-orange-500"
+                      />
+                    </p>
+                  </div>
+
+                  {/* Floating 3D Badge */}
+                  <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-2 text-xs font-black text-[#ea580c] [transform:translateZ(30px)]">
+                    <Globe size={15} />
+                    <span>{isEn ? "Global Remote Career Acceleration" : "আন্তর্জাতিক রিমোট ক্যারিয়ার অগ্রগতি"}</span>
+                  </div>
+                </motion.div>
               </div>
 
               {/* Right 7 Cols: Vision Content */}
-              <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
-                <div className="inline-flex items-center gap-1.5 bg-[#ea580c]/15 border border-[#ea580c]/30 px-3.5 py-1 rounded-full text-xs font-bold text-[#ea580c]">
-                  <Compass size={14} className="text-[#ea580c]" />
-                  <span>{isEn ? "OUR VISION 2030" : "আমাদের ভিশন ২০৩০"}</span>
+              <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
+                
+                {/* Massive Section Title */}
+                <div>
+                  <div className="inline-flex items-center gap-2 bg-[#ea580c]/10 border border-[#ea580c]/30 px-4 py-1.5 rounded-full text-xs font-black text-[#ea580c] mb-3">
+                    <Compass size={15} className="text-[#ea580c]" />
+                    <span>{isEn ? "FUTURE ROADMAP & GOALS" : "ভবিষ্যৎ লক্ষ্য ও রোডম্যাপ"}</span>
+                  </div>
+
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.08]">
+                    <span className="text-[#ea580c] block sm:inline mr-3">{isEn ? "OUR" : "আমাদের"}</span>
+                    <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
+                      {isEn ? "VISION 2030" : "ভিশন ২০৩০"}
+                    </span>
+                  </h2>
+
+                  <p className="text-base sm:text-lg font-bold text-slate-700 mt-2">
+                    {isEn
+                      ? "Leading South Asia's Digital Disruption & Global Remote Economy"
+                      : "২০৩০ সালের মধ্যে দক্ষিণ এশিয়ার শীর্ষ টেক পাওয়ারহাউজ হওয়া"}
+                  </p>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight">
-                  {isEn
-                    ? "Leading South Asia's Digital Disruption & Global Remote Economy"
-                    : "২০৩০ সালের মধ্যে দক্ষিণ এশিয়ার শীর্ষ টেক পাওয়ারহাউজ হওয়া"}
-                </h2>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed font-normal">
                   {isEn
                     ? "To stand as South Asia's premier digital innovation and skill development powerhouse, producing 50,000+ elite engineers, AI specialists, and tech entrepreneurs by 2030."
                     : "আমাদের ভিশন হলো ২০৩০ সালের মধ্যে ৫০,০০০+ আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ার, এআই বিশেষজ্ঞ ও টেক উদ্যোক্তা তৈরি করে বিশ্বমানের ডিজিটাল লিডার হিসেবে বাংলাদেশকে প্রতিষ্ঠিত করা।"}
                 </p>
 
-                {/* 4 Vision Milestones */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#ea580c] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "Global AI & Cloud R&D Hub" : "গ্লোবাল এআই ও ক্লাউড গবেষণা ল্যাব"}</span>
-                  </div>
+                {/* 4 Animated Vision Milestone Cards with Pure Smooth Hover Gradient (No Scale Up) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-orange-200/90 hover:border-[#ea580c] hover:shadow-[0_8px_25px_rgba(234,88,12,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Orange -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#ea580c]/20 via-orange-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#ea580c] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "Silicon Valley Remote Placement" : "সিলিকন ভ্যালি রিমোট প্লেসমেন্ট"}</span>
-                  </div>
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-orange-100/80 text-[#ea580c] flex items-center justify-center flex-shrink-0 group-hover:bg-[#ea580c] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Cpu size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#9a3412] transition-colors">{isEn ? "Global AI & Cloud R&D Hub" : "গ্লোবাল এআই ও ক্লাউড ল্যাব"}</span>
+                  </motion.div>
 
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#ea580c] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "Nationwide Zero Skill-Gap" : "দক্ষতা বৈষম্যহীন ডিজিটাল বাংলাদেশ"}</span>
-                  </div>
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-orange-200/90 hover:border-[#ea580c] hover:shadow-[0_8px_25px_rgba(234,88,12,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Orange -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#ea580c]/20 via-orange-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                  <div className="flex items-start gap-2 text-xs font-bold text-slate-800 bg-white/90 border border-slate-200/80 p-3 rounded-xl shadow-2xs">
-                    <CheckCircle2 size={16} className="text-[#ea580c] flex-shrink-0 mt-0.5" />
-                    <span>{isEn ? "Tech Entrepreneurship Hub" : "টেক উদ্যোক্তা ইনকিউবেশন হাব"}</span>
-                  </div>
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-orange-100/80 text-[#ea580c] flex items-center justify-center flex-shrink-0 group-hover:bg-[#ea580c] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Globe size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#9a3412] transition-colors">{isEn ? "Silicon Valley Remote Placement" : "সিলিকন ভ্যালি রিমোট ক্যারিয়ার"}</span>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-orange-200/90 hover:border-[#ea580c] hover:shadow-[0_8px_25px_rgba(234,88,12,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Orange -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#ea580c]/20 via-orange-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-orange-100/80 text-[#ea580c] flex items-center justify-center flex-shrink-0 group-hover:bg-[#ea580c] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Zap size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#9a3412] transition-colors">{isEn ? "Nationwide Zero Skill-Gap" : "দক্ষতা বৈষম্যহীন বাংলাদেশ"}</span>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    whileTap={{ scale: 0.99 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative flex items-center gap-3.5 text-xs sm:text-sm font-bold text-slate-800 bg-white/95 backdrop-blur-xs border border-orange-200/90 hover:border-[#ea580c] hover:shadow-[0_8px_25px_rgba(234,88,12,0.15)] p-4 rounded-2xl transition-all cursor-pointer group select-none overflow-hidden"
+                  >
+                    {/* Reversed Pure Hover Gradient Fill: Left Solid Orange -> Right Transparent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#ea580c]/20 via-orange-100/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                    <div className="relative z-10 w-9 h-9 rounded-xl bg-orange-100/80 text-[#ea580c] flex items-center justify-center flex-shrink-0 group-hover:bg-[#ea580c] group-hover:text-white group-hover:rotate-12 transition-all duration-300 shadow-2xs">
+                      <Rocket size={19} />
+                    </div>
+                    <span className="relative z-10 font-bold text-slate-900 group-hover:text-[#9a3412] transition-colors">{isEn ? "Tech Incubation Ecosystem" : "উদ্যোক্তা ইনকিউবেশন হাব"}</span>
+                  </motion.div>
                 </div>
+
               </div>
 
             </div>
