@@ -14,7 +14,7 @@ import {
   Search, Filter, LayoutGrid, ListFilter,
   AlignJustify, X, Zap, Check, Bot, Globe2,
   TrendingUp, TrendingDown, Video, Server, Briefcase, GraduationCap,
-  Calendar, DollarSign, Play, ChevronDown, ArrowUpDown
+  Calendar, DollarSign, Play, ChevronDown, ChevronUp, ArrowUpDown
 } from "lucide-react";
 
 function CoursesContent() {
@@ -29,6 +29,7 @@ function CoursesContent() {
   const [isSortOpen, setIsSortOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [expandedRowId, setExpandedRowId] = useState<string | null>(null);
   const [selectedCourseForModal, setSelectedCourseForModal] = useState<any>(null);
   const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
 
@@ -942,7 +943,7 @@ function CoursesContent() {
                 </div>
               </div>
 
-              {/* 2. Course Cards Grid Container */}
+              {/* 2. Course Cards Container */}
               <div className="relative z-10">
                 {filteredCourses.length === 0 ? (
                   <div className="bg-white rounded-2xl border border-slate-200/90 p-12 text-center shadow-2xs">
@@ -954,148 +955,368 @@ function CoursesContent() {
                       {isEn ? "Try changing your search term or category filter." : "অনুগ্রহ করে অন্য কোনো ক্যাটাগরি বা কি-ওয়ার্ড দিয়ে খুঁজুন।"}
                     </p>
                   </div>
-                ) : (
-                  <div className={
-                    viewMode === "grid"
-                      ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6"
-                      : "grid grid-cols-1 gap-4"
-                  }>
+                ) : viewMode === "grid" ? (
+                  /* ========================================================================= */
+                  /* 1. GRID VIEW: 3-COLUMN RICH VISUAL CARDS                                  */
+                  /* ========================================================================= */
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
                     {filteredCourses.map((course) => {
                       const CatIcon = course.catIcon;
                       return (
-                      <motion.div
-                        key={course.id}
-                        id={`course-card-${course.id}`}
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3 }}
-                        whileHover={{ y: -4 }}
-                        className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-200 shadow-2xs hover:shadow-[0_10px_25px_rgba(0,135,68,0.06)] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
-                      >
-                        {/* TOP THUMBNAIL BANNER */}
-                        <div 
-                          onClick={() => setSelectedVideoCourse(course)}
-                          className={`relative h-44 sm:h-48 bg-gradient-to-br ${course.bgGradient} overflow-hidden p-4 sm:p-5 flex flex-col justify-between text-white cursor-pointer group/thumb`}
-                          title={isEn ? "Click to watch video preview" : "ভিডিও সিলেবাস দেখতে ক্লিক করুন"}
+                        <motion.div
+                          key={course.id}
+                          id={`course-card-${course.id}`}
+                          initial={{ opacity: 0, y: 15 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3 }}
+                          whileHover={{ y: -4 }}
+                          className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-200 shadow-2xs hover:shadow-[0_10px_25px_rgba(0,135,68,0.06)] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
                         >
-                          {/* Background Image with Zoom on hover */}
-                          <img 
-                            src={course.image} 
-                            alt={course.title}
-                            className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover/thumb:opacity-40 group-hover/thumb:scale-105 transition-all duration-500" 
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                          {/* TOP THUMBNAIL BANNER */}
+                          <div 
+                            onClick={() => setSelectedVideoCourse(course)}
+                            className={`relative h-44 sm:h-48 bg-gradient-to-br ${course.bgGradient} overflow-hidden p-4 sm:p-5 flex flex-col justify-between text-white cursor-pointer group/thumb`}
+                            title={isEn ? "Click to watch video preview" : "ভিডিও সিলেবাস দেখতে ক্লিক করুন"}
+                          >
+                            {/* Background Image with Zoom on hover */}
+                            <img 
+                              src={course.image} 
+                              alt={course.title}
+                              className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover/thumb:opacity-40 group-hover/thumb:scale-105 transition-all duration-500" 
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-                          {/* Top Badges: Mode & Star Rating */}
-                          <div className="flex items-center justify-between relative z-10 pointer-events-none">
-                            <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider shadow-xs ${
-                              course.modeType === "offline" 
-                                ? "bg-[#008744] text-white" 
-                                : "bg-[#DE1F26] text-white"
-                            }`}>
-                              {course.mode}
-                            </span>
+                            {/* Top Badges: Mode & Star Rating */}
+                            <div className="flex items-center justify-between relative z-10 pointer-events-none">
+                              <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider shadow-xs ${
+                                course.modeType === "offline" 
+                                  ? "bg-[#008744] text-white" 
+                                  : "bg-[#DE1F26] text-white"
+                              }`}>
+                                {course.mode}
+                              </span>
 
-                            <span className="bg-white/95 text-slate-900 text-[11px] font-extrabold px-2 py-0.5 rounded-md shadow-xs flex items-center gap-1">
-                              <Star size={11} className="fill-[#F59E0B] text-[#F59E0B]" />
-                              <span>{course.rating}</span>
-                            </span>
-                          </div>
-
-                          {/* CENTER VIDEO PLAY BUTTON */}
-                          <div className="absolute inset-0 flex items-center justify-center z-20">
-                            <div className="w-11 h-11 rounded-full bg-white/25 group-hover/thumb:bg-[#008744] text-white backdrop-blur-md border border-white/50 shadow-lg transition-all duration-300 group-hover/thumb:scale-110 pl-0.5 flex items-center justify-center">
-                              <Play size={16} className="fill-white" />
-                            </div>
-                          </div>
-
-                          {/* Poster Title & Graphic Art */}
-                          <div className="relative z-10 flex items-center justify-between gap-3 pointer-events-none">
-                            <h4 className="text-sm sm:text-base font-black leading-tight tracking-tight max-w-[75%] drop-shadow-md text-white">
-                              {course.bannerTitle}
-                            </h4>
-                            <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center text-lg flex-shrink-0 shadow-inner group-hover/thumb:scale-105 transition-transform">
-                              {course.illustration}
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* CARD BODY CONTENT */}
-                        <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                          <div>
-                            {/* Category Tag */}
-                            <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#008744] bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md mb-2">
-                              <CatIcon size={12} className="text-[#008744]" />
-                              <span>{course.categoryLabel}</span>
+                              <span className="bg-white/95 text-slate-900 text-[11px] font-extrabold px-2 py-0.5 rounded-md shadow-xs flex items-center gap-1">
+                                <Star size={11} className="fill-[#F59E0B] text-[#F59E0B]" />
+                                <span>{course.rating}</span>
+                              </span>
                             </div>
 
-                            {/* Course Title */}
-                            <h3 className="font-extrabold text-slate-900 text-sm sm:text-[14.5px] leading-snug line-clamp-2 mb-2.5 group-hover:text-[#008744] transition-colors min-h-[2.4rem]">
-                              {course.title}
-                            </h3>
-
-                            {/* Metadata Row (Duration & Enrolled) */}
-                            <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 font-semibold">
-                              <div className="flex items-center gap-1">
-                                <Calendar size={13} className="text-[#008744]" />
-                                <span>{course.duration}</span>
+                            {/* CENTER VIDEO PLAY BUTTON */}
+                            <div className="absolute inset-0 flex items-center justify-center z-20">
+                              <div className="w-11 h-11 rounded-full bg-white/25 group-hover/thumb:bg-[#008744] text-white backdrop-blur-md border border-white/50 shadow-lg transition-all duration-300 group-hover/thumb:scale-110 pl-0.5 flex items-center justify-center">
+                                <Play size={16} className="fill-white" />
                               </div>
-                              <div className="flex items-center gap-1">
-                                <Users size={13} className="text-[#DE1F26]" />
-                                <span>{course.enrolled}</span>
+                            </div>
+
+                            {/* Poster Title & Graphic Art */}
+                            <div className="relative z-10 flex items-center justify-between gap-3 pointer-events-none">
+                              <h4 className="text-sm sm:text-base font-black leading-tight tracking-tight max-w-[75%] drop-shadow-md text-white">
+                                {course.bannerTitle}
+                              </h4>
+                              <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center text-lg flex-shrink-0 shadow-inner group-hover/thumb:scale-105 transition-transform">
+                                {course.illustration}
                               </div>
                             </div>
                           </div>
 
-                          {/* Price & Rating Row */}
-                          <div>
-                            <div className="pt-3 border-t border-slate-100 flex items-center justify-between mb-4">
-                              <div>
-                                <span className="text-[10px] text-slate-400 block font-bold uppercase tracking-wider">
-                                  {isEn ? "Course Fee" : "কোর্স ফি"}
-                                </span>
-                                <span className="text-lg sm:text-xl font-black text-[#008744]">
+                          {/* CARD BODY CONTENT */}
+                          <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                            <div>
+                              {/* Category Tag */}
+                              <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#008744] bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md mb-2">
+                                <CatIcon size={12} className="text-[#008744]" />
+                                <span>{course.categoryLabel}</span>
+                              </div>
+
+                              {/* Course Title */}
+                              <h3 className="font-extrabold text-slate-900 text-sm sm:text-[14.5px] leading-snug line-clamp-2 mb-2.5 group-hover:text-[#008744] transition-colors min-h-[2.4rem]">
+                                {course.title}
+                              </h3>
+
+                              {/* Metadata Row (Duration & Enrolled) */}
+                              <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 font-semibold">
+                                <div className="flex items-center gap-1">
+                                  <Calendar size={13} className="text-[#008744]" />
+                                  <span>{course.duration}</span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                  <Users size={13} className="text-[#DE1F26]" />
+                                  <span>{course.enrolled}</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Price & Rating Row */}
+                            <div>
+                              <div className="pt-3 border-t border-slate-100 flex items-center justify-between mb-4">
+                                <div>
+                                  <span className="text-[10px] text-slate-400 block font-bold uppercase tracking-wider">
+                                    {isEn ? "Course Fee" : "কোর্স ফি"}
+                                  </span>
+                                  <span className="text-lg sm:text-xl font-black text-[#008744]">
+                                    {course.fee}
+                                  </span>
+                                </div>
+
+                                {/* 5 Stars */}
+                                <div className="flex items-center text-[#F59E0B]">
+                                  {[...Array(5)].map((_, i) => (
+                                    <Star key={i} size={13} className="fill-[#F59E0B]" />
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Action Buttons Row */}
+                              <div className="flex items-center gap-2">
+                                <button
+                                  onClick={() => setSelectedCourseForModal(course)}
+                                  className="flex-1 py-2.5 px-3 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+                                >
+                                  <BookOpen size={13} />
+                                  <span>{isEn ? "Details" : "বিস্তারিত"}</span>
+                                </button>
+
+                                <a
+                                  href={`https://wa.me/880171234578?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20course.`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="flex-1 py-2.5 px-3 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-200 text-[#008744] hover:text-[#007038] text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-colors"
+                                >
+                                  <MessageCircle size={13} className="text-[#008744]" />
+                                  <span>{isEn ? "Enroll" : "ভর্তি হন"}</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  /* ========================================================================= */
+                  /* 2. LIST/ROW VIEW: COMPACT SIMPLE EXPANDABLE ROWS WITH SMALL BUTTONS       */
+                  /* ========================================================================= */
+                  <div className="space-y-3">
+                    {filteredCourses.map((course) => {
+                      const CatIcon = course.catIcon;
+                      const isExpanded = expandedRowId === course.id;
+
+                      return (
+                        <motion.div
+                          key={course.id}
+                          layout
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
+                            isExpanded 
+                              ? "border-emerald-400 shadow-md ring-2 ring-emerald-500/10" 
+                              : "border-slate-200/90 hover:border-emerald-300 shadow-2xs hover:shadow-sm"
+                          }`}
+                        >
+                          {/* COMPACT MAIN ROW BAR */}
+                          <div 
+                            onClick={() => setExpandedRowId(isExpanded ? null : course.id)}
+                            className="p-3.5 sm:p-4 flex flex-col md:flex-row md:items-center justify-between gap-3.5 sm:gap-4 cursor-pointer select-none group"
+                          >
+                            {/* Left: Icon, Mode Badge & Course Title */}
+                            <div className="flex items-center gap-3 min-w-0 flex-1">
+                              {/* Category Icon Box */}
+                              <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200/70 text-[#008744] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                                <CatIcon size={18} />
+                              </div>
+
+                              {/* Title & Metadata */}
+                              <div className="min-w-0 flex-1">
+                                <div className="flex items-center gap-2 flex-wrap mb-1">
+                                  {/* Mode Badge */}
+                                  <span className={`text-[9.5px] font-extrabold px-2 py-0.5 rounded-md uppercase tracking-wider ${
+                                    course.modeType === "offline" 
+                                      ? "bg-[#008744] text-white" 
+                                      : "bg-[#DE1F26] text-white"
+                                  }`}>
+                                    {course.mode}
+                                  </span>
+                                  {/* Category Label */}
+                                  <span className="text-[11px] font-bold text-slate-500 hidden sm:inline">
+                                    {course.categoryLabel}
+                                  </span>
+                                </div>
+
+                                {/* Title */}
+                                <h3 className="font-extrabold text-slate-900 text-sm sm:text-[15px] truncate group-hover:text-[#008744] transition-colors">
+                                  {course.title}
+                                </h3>
+                              </div>
+                            </div>
+
+                            {/* Center-Right: Meta Chips & Price */}
+                            <div className="flex items-center justify-between md:justify-end gap-4 sm:gap-6 flex-shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-slate-100">
+                              {/* Meta Details */}
+                              <div className="flex items-center gap-3 text-xs font-semibold text-slate-500">
+                                <div className="flex items-center gap-1">
+                                  <Calendar size={12} className="text-[#008744]" />
+                                  <span className="hidden sm:inline">{course.duration}</span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                  <Star size={12} className="fill-[#F59E0B] text-[#F59E0B]" />
+                                  <span>{course.rating}</span>
+                                </div>
+                              </div>
+
+                              {/* Price */}
+                              <div className="text-right">
+                                <span className="text-base sm:text-lg font-black text-[#008744] block leading-none">
                                   {course.fee}
                                 </span>
                               </div>
 
-                              {/* 5 Stars */}
-                              <div className="flex items-center text-[#F59E0B]">
-                                {[...Array(5)].map((_, i) => (
-                                  <Star key={i} size={13} className="fill-[#F59E0B]" />
-                                ))}
+                              {/* Small Compact Action Buttons */}
+                              <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                                {/* Small Video Preview Button */}
+                                <button
+                                  type="button"
+                                  onClick={() => setSelectedVideoCourse(course)}
+                                  className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-[#008744] text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
+                                  title={isEn ? "Watch preview video" : "ভিডিও প্রিভিউ"}
+                                >
+                                  <Play size={12} className="fill-current text-[#DE1F26]" />
+                                  <span className="hidden lg:inline">{isEn ? "Preview" : "ভিডিও"}</span>
+                                </button>
+
+                                {/* Small Enroll Button */}
+                                <a
+                                  href={`https://wa.me/880171234578?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20course.`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="px-2.5 sm:px-3 py-1.5 rounded-lg bg-white hover:bg-emerald-50 border border-emerald-300 text-[#008744] hover:text-[#007038] text-xs font-bold flex items-center gap-1 transition-colors"
+                                >
+                                  <MessageCircle size={12} />
+                                  <span>{isEn ? "Enroll" : "ভর্তি"}</span>
+                                </a>
+
+                                {/* Small Expand / Collapse Toggle Button */}
+                                <button
+                                  type="button"
+                                  onClick={() => setExpandedRowId(isExpanded ? null : course.id)}
+                                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 transition-all cursor-pointer ${
+                                    isExpanded 
+                                      ? "bg-slate-800 text-white" 
+                                      : "bg-[#008744] hover:bg-[#007038] text-white shadow-2xs"
+                                  }`}
+                                >
+                                  <span>{isExpanded ? (isEn ? "Close" : "বন্ধ") : (isEn ? "Details" : "বিস্তারিত")}</span>
+                                  {isExpanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+                                </button>
                               </div>
                             </div>
-
-                            {/* Action Buttons Row */}
-                            <div className="flex items-center gap-2">
-                              <button
-                                onClick={() => setSelectedCourseForModal(course)}
-                                className="flex-1 py-2.5 px-3 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
-                              >
-                                <BookOpen size={13} />
-                                <span>{isEn ? "Details" : "বিস্তারিত"}</span>
-                              </button>
-
-                              <a
-                                href={`https://wa.me/880171234578?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20course.`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex-1 py-2.5 px-3 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-200 text-[#008744] hover:text-[#007038] text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-colors"
-                              >
-                                <MessageCircle size={13} className="text-[#008744]" />
-                                <span>{isEn ? "Enroll" : "ভর্তি হন"}</span>
-                              </a>
-                            </div>
                           </div>
-                        </div>
 
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              )}
+                          {/* EXPANDABLE ACCORDION DRAWER (OPENS WHEN CLICKED) */}
+                          <AnimatePresence>
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.25, ease: "easeInOut" }}
+                                className="border-t border-slate-100 bg-slate-50/60 p-4 sm:p-6"
+                              >
+                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+                                  
+                                  {/* Left: Thumbnail & Video Trigger */}
+                                  <div 
+                                    onClick={() => setSelectedVideoCourse(course)}
+                                    className={`lg:col-span-4 relative h-32 sm:h-36 rounded-xl bg-gradient-to-br ${course.bgGradient} overflow-hidden p-3.5 flex flex-col justify-between text-white cursor-pointer group/vid shadow-xs`}
+                                  >
+                                    <img 
+                                      src={course.image} 
+                                      alt={course.title}
+                                      className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover/vid:opacity-45 group-hover/vid:scale-105 transition-all duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-black/40" />
+
+                                    <div className="relative z-10 flex justify-between items-center text-xs font-bold">
+                                      <span className="bg-black/50 px-2 py-0.5 rounded-md backdrop-blur-xs">
+                                        {course.mode}
+                                      </span>
+                                      <span>★ {course.rating}</span>
+                                    </div>
+
+                                    {/* Play Button */}
+                                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                                      <div className="w-10 h-10 rounded-full bg-[#008744] text-white flex items-center justify-center shadow-lg group-hover/vid:scale-110 transition-transform pl-0.5">
+                                        <Play size={15} className="fill-white" />
+                                      </div>
+                                    </div>
+
+                                    <div className="relative z-10 text-xs font-bold truncate">
+                                      {course.bannerTitle}
+                                    </div>
+                                  </div>
+
+                                  {/* Right: Description & Comprehensive Details */}
+                                  <div className="lg:col-span-8 space-y-3">
+                                    <div>
+                                      <h4 className="font-extrabold text-slate-900 text-sm sm:text-base mb-1">
+                                        {course.title}
+                                      </h4>
+                                      <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+                                        {course.desc}
+                                      </p>
+                                    </div>
+
+                                    {/* Key Highlights Tags */}
+                                    <div className="flex items-center gap-2 flex-wrap text-[11px] font-bold text-slate-700">
+                                      <span className="bg-white border border-slate-200 px-2.5 py-1 rounded-lg flex items-center gap-1 text-[#008744]">
+                                        <Calendar size={12} /> {course.duration}
+                                      </span>
+                                      <span className="bg-white border border-slate-200 px-2.5 py-1 rounded-lg flex items-center gap-1 text-[#DE1F26]">
+                                        <Users size={12} /> {course.enrolled}
+                                      </span>
+                                      <span className="bg-white border border-slate-200 px-2.5 py-1 rounded-lg flex items-center gap-1 text-blue-600">
+                                        <Award size={12} /> {isEn ? "ISO Verified Certificate" : "আইএসও ভেরিফাইড সার্টিফিকেট"}
+                                      </span>
+                                      <span className="bg-white border border-slate-200 px-2.5 py-1 rounded-lg flex items-center gap-1 text-purple-600">
+                                        <CheckCircle2 size={12} /> {isEn ? "1-on-1 Mentorship" : "১-অন-১ মেন্টরশিপ সাপোর্ট"}
+                                      </span>
+                                    </div>
+
+                                    {/* Expanded Action Buttons */}
+                                    <div className="pt-2 flex items-center gap-2.5 flex-wrap">
+                                      <button
+                                        type="button"
+                                        onClick={() => setSelectedCourseForModal(course)}
+                                        className="px-4 py-2 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+                                      >
+                                        <BookOpen size={13} />
+                                        <span>{isEn ? "View Complete Curriculum & Syllabus" : "সম্পূর্ণ কারিকুলাম ও সিলেবাস দেখুন"}</span>
+                                      </button>
+
+                                      <a
+                                        href={`https://wa.me/880171234578?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20course.`}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="px-4 py-2 rounded-xl bg-white hover:bg-emerald-50 border border-emerald-300 text-[#008744] hover:text-[#007038] text-xs font-bold flex items-center gap-1.5 shadow-xs transition-colors"
+                                      >
+                                        <MessageCircle size={13} />
+                                        <span>{isEn ? "Enroll via WhatsApp" : "হোয়াটসঅ্যাপে সরাসরি ভর্তি হন"}</span>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                )}
 
             </div>
 

@@ -33,15 +33,12 @@ const Typewriter = ({ words }: { words: string[] }) => {
 
   useEffect(() => {
     const word = words[currentWordIndex] || "";
-    // Snappy, smooth typing cadence (65ms typing, 25ms deleting, with natural breath pauses)
     const typingSpeed = isDeleting ? 28 : 65;
 
     const timeout = setTimeout(() => {
       if (!isDeleting && currentText === word) {
-        // Natural pause when full word is completed
         setTimeout(() => setIsDeleting(true), 2200);
       } else if (isDeleting && currentText === "") {
-        // Brief natural breath before starting next word
         setIsDeleting(false);
         setCurrentWordIndex((prev) => (prev + 1) % words.length);
       } else {
@@ -102,16 +99,12 @@ const Counter = ({ end, suffix = "", duration = 2.0 }: { end: number, suffix?: s
   return <span>{formattedCount}{suffix}</span>;
 };
 
-// Ambient Rising Glowing Bubbles
 const heroBackgroundBubbles = [
-  // Lower & mid floating bubbles
   { id: 1, left: "7%", bottom: "15%", size: 8, color: "#DE1F26", duration: 13, delay: 0, xOffset: 12 },
   { id: 2, left: "15%", bottom: "25%", size: 10, color: "#008744", duration: 15, delay: 3, xOffset: -10 },
   { id: 3, left: "35%", bottom: "20%", size: 7, color: "#EF4444", duration: 14, delay: 1.5, xOffset: 14 },
   { id: 4, left: "65%", bottom: "18%", size: 9, color: "#10B981", duration: 16, delay: 5, xOffset: -12 },
   { id: 5, left: "85%", bottom: "22%", size: 8, color: "#DE1F26", duration: 13.5, delay: 2.5, xOffset: 10 },
-
-  // Upper area floating bubbles (clearly visible in top region)
   { id: 6, left: "10%", bottom: "70%", size: 11, color: "#DE1F26", duration: 10.5, delay: 0.5, xOffset: 15 },
   { id: 7, left: "24%", bottom: "76%", size: 9, color: "#008744", duration: 12, delay: 4, xOffset: -12 },
   { id: 8, left: "80%", bottom: "72%", size: 10, color: "#10B981", duration: 11.5, delay: 2, xOffset: 10 },
@@ -128,9 +121,7 @@ interface FloatingShapeItem {
   transition: Transition;
 }
 
-// Ambient Floating Decorative Icons from Icon Library (Inward Centered with Large Focal Elements)
 const heroFloatingShapes: FloatingShapeItem[] = [
-  // 1. [SHAPE 1] Sparkle Star (Upper Center Area)
   {
     id: "center-sparkle-star",
     icon: SparkleIcon,
@@ -141,8 +132,6 @@ const heroFloatingShapes: FloatingShapeItem[] = [
     animate: { y: [0, 12, 0], x: [0, -5, 0], rotate: [0, 360, 0], scale: [0.9, 1.12, 0.9] },
     transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
   },
-
-  // 2. [SHAPE 2] Sparkle Star (Top-Right Area above Title)
   {
     id: "tr-sparkle-star",
     icon: SparkleIcon,
@@ -153,8 +142,6 @@ const heroFloatingShapes: FloatingShapeItem[] = [
     animate: { y: [0, -12, 0], rotate: [0, 360, 0], scale: [1, 1.15, 1] },
     transition: { duration: 9, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
   },
-
-  // 3. [BIG SHAPE 3] Large Full-Stack Layer (Lower-Left Area near Video)
   {
     id: "bl-stack-big",
     icon: RiStackLine,
@@ -165,8 +152,6 @@ const heroFloatingShapes: FloatingShapeItem[] = [
     animate: { y: [0, 12, 0], rotate: [0, -35, 0], scale: [1, 1.08, 1] },
     transition: { duration: 8.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 },
   },
-
-  // 4. [ACCENT 1] Code Slash (Center-Bottom / Under CTA)
   {
     id: "cb-code-accent",
     icon: RiCodeSSlashLine,
@@ -177,8 +162,6 @@ const heroFloatingShapes: FloatingShapeItem[] = [
     animate: { y: [0, -10, 0], rotate: [-15, 15, -15], scale: [0.9, 1.15, 0.9] },
     transition: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 },
   },
-
-  // 5. [ACCENT 2] CPU / AI Core (Middle-Right / Beside Text)
   {
     id: "mr-cpu-accent",
     icon: RiCpuLine,
@@ -189,8 +172,6 @@ const heroFloatingShapes: FloatingShapeItem[] = [
     animate: { y: [0, -10, 0], scale: [1, 1.2, 1] },
     transition: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.7 },
   },
-
-  // 6. [ACCENT 3] Database (Bottom-Right / Under Stats)
   {
     id: "br-db-accent",
     icon: RiDatabase2Line,
@@ -231,12 +212,11 @@ export default function HeroSection() {
       style={{ fontFamily: "var(--font-baloo), var(--font-hind), sans-serif" }}
       className="relative overflow-hidden bg-gradient-to-br from-[#fcfdfd] via-[#f5f9f7] to-[#edf4f0] pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-28 lg:pb-36 flex items-center"
     >
-      {/* Dynamic Soft Background Mesh Gradients in Red & Green (Low Opacity) */}
       <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-[#008744]/10 to-transparent rounded-full blur-[130px] pointer-events-none animate-pulse duration-[9000ms]" />
       <div className="absolute bottom-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-gradient-to-tr from-[#DE1F26]/7 via-rose-500/5 to-transparent rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute top-[20%] left-[40%] w-[30vw] h-[30vw] bg-[#008744]/5 rounded-full blur-[140px] pointer-events-none mix-blend-multiply" />
 
-      {/* Animated Subtle Flowing Cyber Wave Lines (3 Harmonious Layers) */}
+      {/* Waves */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
         <svg className="w-full h-full min-h-[600px] opacity-25" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
           <defs>
@@ -260,7 +240,6 @@ export default function HeroSection() {
             </linearGradient>
           </defs>
 
-          {/* Wave 1: Upper flowing arc */}
           <motion.path
             d="M-80,140 C300,60 580,240 880,120 C1180,20 1360,180 1520,100"
             stroke="url(#heroWaveTop)"
@@ -270,8 +249,6 @@ export default function HeroSection() {
             animate={{ strokeDashoffset: [0, -120] }}
             transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
           />
-
-          {/* Wave 2: Middle sweeping wave */}
           <motion.path
             d="M-80,240 C220,120 420,380 720,260 C1020,140 1220,350 1520,230"
             stroke="url(#heroWaveRed)"
@@ -281,8 +258,6 @@ export default function HeroSection() {
             animate={{ strokeDashoffset: [0, -140] }}
             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           />
-
-          {/* Wave 3: Lower undulating wave */}
           <motion.path
             d="M-80,380 C280,480 540,210 840,350 C1140,490 1280,230 1520,340"
             stroke="url(#heroWaveGreen)"
@@ -295,7 +270,7 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      {/* Ambient Rising Glowing Bubbles (With Distinct Upper Floating Bubbles) */}
+      {/* Floating Bubbles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         {heroBackgroundBubbles.map((bubble) => (
           <motion.div
@@ -326,7 +301,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Dynamic Ambient Floating Cyber Icons from Remix Icons Library (Centered content alignment) */}
+      {/* Floating Shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex justify-center">
         <div className="relative w-full max-w-[88rem] h-full px-4 sm:px-6 lg:px-10">
           {heroFloatingShapes.map((shape) => {
@@ -351,64 +326,30 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Subtle Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] pointer-events-none"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(8,18,26,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(8,18,26,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-14 items-center relative z-10">
 
-        {/* LEFT COMPONENT: AI Video Hub Design (Equal 50/50 Column) */}
+        {/* LEFT COMPONENT: AI Video Hub */}
         <div className="relative h-[280px] sm:h-[360px] lg:h-[450px] w-full flex items-center justify-center order-2 lg:order-1 mt-4 lg:mt-0">
-
-          {/* Centralized Video Hub Container */}
           <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-[16/10] flex items-center justify-center">
-
-            {/* Modern Layered Tech Aura & Glass Backplate */}
+            
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
-              {/* Ambient Vibrant Glow Dispersions in Red & Green */}
               <div className="absolute -top-12 -left-10 w-64 h-64 bg-[#DE1F26]/16 rounded-full blur-[65px] animate-pulse duration-[6000ms] transform-gpu" />
               <div className="absolute -bottom-12 -right-10 w-72 h-72 bg-[#008744]/20 rounded-full blur-[70px] animate-pulse duration-[7000ms] transform-gpu" />
-
-              {/* Layered 3D Frosted Glass Back-Plate behind Video */}
               <div className="w-full h-full bg-gradient-to-tr from-white/70 via-slate-50/50 to-emerald-50/40 rounded-[28px] border border-slate-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-md rotate-[-2.5deg] -translate-y-2 -translate-x-1.5 absolute transform-gpu">
-                {/* Subtle top edge brand highlight */}
                 <div className="absolute inset-x-8 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#DE1F26]/35 to-transparent"></div>
                 <div className="absolute inset-x-8 bottom-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#008744]/35 to-transparent"></div>
               </div>
-
-              {/* Tech Corner Crosshair Markers */}
-              <div className="w-[104%] h-[104%] absolute flex flex-col justify-between p-1 select-none pointer-events-none">
-                <div className="flex justify-between items-center text-xs font-mono">
-                  <span className="text-[#DE1F26]/40 font-bold">＋</span>
-                  <span className="text-[#008744]/40 font-bold">＋</span>
-                </div>
-                <div className="flex justify-between items-center text-xs font-mono">
-                  <span className="text-[#008744]/40 font-bold">＋</span>
-                  <span className="text-[#DE1F26]/40 font-bold">＋</span>
-                </div>
-              </div>
-
-              {/* Subtle Tech Dot Matrix Grid (Top Right) */}
-              <div className="absolute -top-4 -right-4 grid grid-cols-4 gap-1.5 opacity-25">
-                {[...Array(16)].map((_, i) => (
-                  <div key={i} className="w-1 h-1 rounded-full bg-[#008744]" />
-                ))}
-              </div>
-
-              {/* Subtle Tech Dot Matrix Grid (Bottom Left) */}
-              <div className="absolute -bottom-4 -left-4 grid grid-cols-4 gap-1.5 opacity-25">
-                {[...Array(16)].map((_, i) => (
-                  <div key={i} className="w-1 h-1 rounded-full bg-[#DE1F26]" />
-                ))}
-              </div>
             </div>
 
-            {/* 3D Animated Robot Mascot from GLB */}
+            {/* 3D Animated Robot Mascot */}
             <div className="absolute -bottom-16 sm:-bottom-20 lg:-bottom-24 -left-16 sm:-left-24 lg:-left-36 z-40 w-44 h-44 sm:w-56 sm:h-56 lg:w-[350px] lg:h-[350px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)] pointer-events-none transform-gpu">
               <RobotCanvas />
             </div>
 
-            {/* Card 1: Right-Side Floating Feature */}
+            {/* Floating Review Badge */}
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
@@ -434,14 +375,13 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Main Dark Glass Video Card */}
+            {/* Video Player */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
               className="relative z-20 w-full h-full bg-gradient-to-br from-[#08121a] to-[#04090e] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.35)] border border-slate-700/50 overflow-hidden flex transform-gpu"
             >
-              {/* Actual Video Element */}
               <video
                 ref={videoRef}
                 poster="/video/thumbnail.jpeg"
@@ -456,7 +396,6 @@ export default function HeroSection() {
                 Your browser does not support the video tag.
               </video>
 
-              {/* Custom Play Button Overlay */}
               {!isVideoPlaying && (
                 <div
                   className="absolute inset-0 flex items-center justify-center bg-[#08121a]/40 cursor-pointer group rounded-[24px] z-20"
@@ -472,13 +411,11 @@ export default function HeroSection() {
             </motion.div>
 
           </div>
-
         </div>
 
-        {/* RIGHT COMPONENT: Text & CTA (Equal 50/50 Column) */}
+        {/* RIGHT COMPONENT: Text & CTA */}
         <motion.div className="space-y-4 sm:space-y-5 relative z-30 order-1 lg:order-2 lg:pl-4 xl:pl-6" variants={containerVariants} initial="hidden" animate="visible">
-
-          {/* Subtle Ambient Glow */}
+          
           <div className="absolute inset-0 pointer-events-none z-[-1] overflow-visible">
             <motion.div
               animate={{ scale: [1, 1.2, 1], opacity: [0.04, 0.08, 0.04] }}
@@ -487,13 +424,11 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Top Badge in Red & Green Accent */}
           <motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#008744]/10 via-[#DE1F26]/10 to-transparent border border-[#008744]/25 rounded-full px-3 py-0.5 shadow-xs">
             <Rocket size={12} className="text-[#DE1F26]" />
             <span className="text-[10px] sm:text-xs font-semibold text-[#08121a] uppercase tracking-wider">{t.hero.badge}</span>
           </motion.div>
 
-          {/* Main Headline */}
           <motion.h1 variants={itemVariants} className="text-xl sm:text-2xl lg:text-[26px] xl:text-[30px] font-bold text-[#08121a] leading-tight tracking-tight flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span className="inline-block font-bold whitespace-nowrap">{t.hero.title1}</span>
             <span className="relative inline-block font-bold whitespace-nowrap">
@@ -515,17 +450,14 @@ export default function HeroSection() {
             </span>
           </motion.h1>
 
-          {/* Typewriter */}
           <motion.div variants={itemVariants}>
             <Typewriter words={t.hero.typingWords} />
           </motion.div>
 
-          {/* Subtitle */}
           <motion.p variants={itemVariants} className="text-gray-600 font-normal text-[13px] sm:text-[14px] max-w-lg leading-relaxed">
             {t.hero.subtitle}
           </motion.p>
 
-          {/* Action Buttons */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-3 pt-0.5">
             <Link href="/courses">
               <motion.button
@@ -550,10 +482,9 @@ export default function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Stats Bar with Red and Green Balanced Accents */}
+          {/* Stats Bar */}
           <motion.div variants={itemVariants} className="pt-4 border-t border-gray-200/80 mt-1 flex flex-wrap gap-2 sm:gap-3">
-
-            {/* Stat 1: Courses (Green) */}
+            
             <motion.div
               whileHover={{ scale: 1.04, y: -2 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
@@ -572,7 +503,6 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Stat 2: Students (Red) */}
             <motion.div
               whileHover={{ scale: 1.04, y: -2 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
@@ -591,7 +521,6 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Stat 3: Placement Rate (Green) */}
             <motion.div
               whileHover={{ scale: 1.04, y: -2 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
@@ -616,7 +545,6 @@ export default function HeroSection() {
 
       </div>
 
-      {/* Premium Multi-Layer Glowing Bottom Border in Green & Red */}
       <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-slate-300 to-transparent pointer-events-none z-20">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#008744] via-[#DE1F26] to-transparent opacity-80" />
         <div className="absolute -top-[2px] left-1/4 right-1/4 h-[4px] bg-gradient-to-r from-transparent via-[#008744] via-[#DE1F26] to-transparent blur-[3px] opacity-60" />
