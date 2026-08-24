@@ -416,15 +416,32 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Login / Register (Bigger & more prominent) */}
-            <div className="flex items-center space-x-2.5">
-              <button className="flex items-center space-x-1.5 bg-transparent hover:bg-white/10 text-gray-100 px-3.5 py-1.5 rounded-full transition-colors border border-transparent hover:border-white/15 cursor-pointer text-xs sm:text-[13px] font-semibold">
-                <User size={14} className="text-gray-300" />
-                <span>Login</span>
-              </button>
-              <button className="bg-[#008744] hover:bg-[#007038] text-white px-4.5 py-1.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all cursor-pointer text-xs sm:text-[13px]">
-                Register
-              </button>
+            {/* Login / Register Links with Active Page Highlighting */}
+            <div className="flex items-center space-x-2">
+              <Link
+                href="/login"
+                className={`flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full transition-all cursor-pointer text-xs sm:text-[13px] ${
+                  pathname === "/login"
+                    ? "bg-[#008744] text-white font-black shadow-md ring-2 ring-emerald-400/40"
+                    : "bg-transparent hover:bg-white/10 text-gray-200 hover:text-white border border-transparent hover:border-white/15 font-semibold"
+                }`}
+              >
+                <User size={14} className={pathname === "/login" ? "text-white" : "text-gray-300"} />
+                <span>{language === "bn" ? "লগইন" : "Login"}</span>
+              </Link>
+
+              <Link
+                href="/register"
+                className={`px-4 py-1.5 rounded-full transition-all cursor-pointer text-xs sm:text-[13px] ${
+                  pathname === "/register"
+                    ? "bg-[#008744] text-white font-black shadow-md ring-2 ring-emerald-400/40"
+                    : pathname === "/login"
+                    ? "bg-white/10 hover:bg-white/20 text-gray-200 hover:text-white border border-white/15 font-semibold"
+                    : "bg-[#008744] hover:bg-[#007038] text-white font-bold shadow-md"
+                }`}
+              >
+                {language === "bn" ? "রেজিস্টার" : "Register"}
+              </Link>
             </div>
 
             <div className="h-5 w-[1px] bg-blue-800/60 mx-1 hidden sm:block"></div>
@@ -649,6 +666,29 @@ export default function Header() {
                       <Globe size={13} className="text-[#008744]" />
                       <span>{language === "en" ? "English" : "বাংলা"}</span>
                     </button>
+                  </div>
+
+                  {/* Mobile Login & Register Actions */}
+                  <div className="grid grid-cols-2 gap-2 pt-1">
+                    <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                      <button className={`w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5 cursor-pointer transition-all ${
+                        pathname === "/login"
+                          ? "bg-[#008744] text-white shadow-md"
+                          : "bg-slate-100 hover:bg-slate-200 text-slate-800"
+                      }`}>
+                        <User size={14} className={pathname === "/login" ? "text-white" : "text-[#008744]"} />
+                        <span>{language === "bn" ? "লগইন" : "Login"}</span>
+                      </button>
+                    </Link>
+                    <Link href="/register" onClick={() => setIsMobileMenuOpen(false)}>
+                      <button className={`w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5 cursor-pointer transition-all ${
+                        pathname === "/register"
+                          ? "bg-[#008744] text-white shadow-md ring-2 ring-emerald-300"
+                          : "bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200"
+                      }`}>
+                        <span>{language === "bn" ? "রেজিস্টার" : "Register"}</span>
+                      </button>
+                    </Link>
                   </div>
 
                   <Link href="/courses" onClick={() => setIsMobileMenuOpen(false)}>

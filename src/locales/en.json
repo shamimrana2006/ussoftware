@@ -182,5 +182,37 @@
       "projects": "Client Projects & Portfolio",
       "contact": "24/7 Helpline & Office"
     }
+  },
+  "loginPage": {
+    "title": "Sign in with email",
+    "subtitle": "Access your US Software LTD learning dashboard, 1-on-1 mentorship, and course certificates.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password?",
+    "submitBtn": "Get Started",
+    "orSignInWith": "Or sign in with",
+    "dontHaveAccount": "Don't have an account?",
+    "signUpLink": "Sign up",
+    "loginSuccess": "Welcome back! Redirecting to dashboard..."
+  },
+  "registerPage": {
+    "title": "Create your account",
+    "subtitle": "Join 5,800+ engineers and start your IT career journey with US Software LTD.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Create a strong password",
+    "termsAgree": "I agree to US Software LTD Terms of Service and Privacy Policy.",
+    "submitBtn": "Create Account",
+    "orRegisterWith": "Or register with",
+    "alreadyHaveAccount": "Already have an account?",
+    "signInLink": "Sign in",
+    "registerSuccess": "Account created successfully! Welcome aboard."
   }
 }
