@@ -329,7 +329,7 @@ export default function Header() {
 
   const universePages = [
     {
-      title: language === "bn" ? "৩ডি সাইবার ক্যানভাস" : "3D Cyber Canvas",
+      title: language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe",
       href: "/canvas",
       icon: Box,
       iconColor: "text-[#008744]",

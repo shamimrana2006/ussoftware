@@ -3,17 +3,25 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Certificate3DCanvas, { CertificateData } from "@/components/Certificate3DCanvas";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Award, ShieldCheck, CheckCircle2, Search, QrCode, 
-  Share2, Lock, FileCheck, Shield, Building, Sparkles, 
+  Lock, FileCheck, Shield, Building, Sparkles, 
   Mail, Phone, Hash, User, Copy, RefreshCw, 
-  Printer, RotateCcw, ExternalLink, Check
+  Printer, RotateCcw, Check
 } from "lucide-react";
 
-interface SampleStudentRecord extends CertificateData {
+export interface SampleStudentRecord {
+  id: string;
+  name: string;
+  course: string;
+  issueDate: string;
+  grade: string;
+  credentialHash: string;
+  instructor: string;
+  director: string;
+  status?: string;
   email: string;
   phone: string;
   rollNo: string;
@@ -29,7 +37,7 @@ const SparkleStar = ({ size = 24, className, style }: { size?: number; className
 );
 
 export default function CertificationPage() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const isEn = language === "en";
 
   // Form Inputs for Search Card
@@ -39,9 +47,7 @@ export default function CertificationPage() {
 
   const [isSearching, setIsSearching] = useState(false);
   const [searchStep, setSearchStep] = useState<string>("");
-  const [copiedLink, setCopiedLink] = useState(false);
   const [copiedHash, setCopiedHash] = useState(false);
-  const [showQrModal, setShowQrModal] = useState(false);
 
   // Active verified certificate state (null by default for clean initial empty state, or loaded on search)
   const [searchedCert, setSearchedCert] = useState<SampleStudentRecord | null>(null);
@@ -151,7 +157,6 @@ export default function CertificationPage() {
         setSearchedCert(matched);
       } else {
         // Dynamic Fallback Record Generator for any entered query
-        let queryLabel = certId.toUpperCase() || email || mobileInput;
         let dynamicName = "Verified Graduate";
         if (email.includes("@")) {
           const parts = email.split("@")[0];
@@ -181,27 +186,13 @@ export default function CertificationPage() {
     }, 600);
   };
 
-  // 1-Click Quick Demo Search Trigger
-  const loadDemoStudent = (student: SampleStudentRecord) => {
-    setMobileInput(student.phone);
-    setEmailInput(student.email);
-    setStudentIdInput(student.id);
-    setSearchedCert(student);
-  };
+
 
   const handleResetSearch = () => {
     setMobileInput("");
     setEmailInput("");
     setStudentIdInput("");
     setSearchedCert(null);
-  };
-
-  const copyShareLink = () => {
-    if (typeof window !== "undefined") {
-      navigator.clipboard.writeText(window.location.href);
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2200);
-    }
   };
 
   const copyHash = () => {
@@ -211,8 +202,6 @@ export default function CertificationPage() {
       setTimeout(() => setCopiedHash(false), 2200);
     }
   };
-
-
 
   return (
     <div className="min-h-screen bg-[#fcfdfd] text-slate-900 flex flex-col font-sans">
@@ -282,7 +271,7 @@ export default function CertificationPage() {
             </motion.p>
 
             {/* ========================================================================= */}
-            {/* 3-FIELD UNIFIED SEARCH CONSOLE CARD (MATCHING USER SCREENSHOT DESIGN)      */}
+            {/* 3-FIELD UNIFIED SEARCH CONSOLE CARD                                        */}
             {/* ========================================================================= */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -397,27 +386,7 @@ export default function CertificationPage() {
 
               </form>
 
-              {/* Sample Test Chips for Instant Demo */}
-              <div className="flex flex-wrap items-center justify-start gap-2 mt-4 pt-3 border-t border-slate-100/80 text-xs font-mono">
-                <span className="text-slate-400 font-sans font-bold text-[11px]">
-                  {isEn ? "Quick Demo:" : "নমুনা টেস্ট:"}
-                </span>
 
-                {studentDatabase.map((student) => (
-                  <button
-                    key={student.id}
-                    type="button"
-                    onClick={() => loadDemoStudent(student)}
-                    className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-all cursor-pointer ${
-                      searchedCert?.id === student.id
-                        ? "bg-[#008744] text-white border-[#008744]"
-                        : "bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200"
-                    }`}
-                  >
-                    {student.id} ({student.name.split(" ")[0]})
-                  </button>
-                ))}
-              </div>
 
               {/* Searching Live Step Indicator */}
               <AnimatePresence>
@@ -442,7 +411,7 @@ export default function CertificationPage() {
 
 
         {/* ========================================================================= */}
-        {/* CERTIFICATE RESULTS SECTION (EXACT LAYOUT MATCHING USER SCREENSHOT)       */}
+        {/* CERTIFICATE RESULTS SECTION (CLEAN ROW FORMAT + ONLY PDF DOWNLOAD BUTTON)  */}
         {/* ========================================================================= */}
         <section className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
           
@@ -486,83 +455,76 @@ export default function CertificationPage() {
                 </div>
               )}
 
-              {/* STATE B: ACTIVE SEARCH RESULT RECORD DISPLAY */}
+              {/* STATE B: ACTIVE SEARCH RESULT RECORD DISPLAY IN ROW FORMAT */}
               {searchedCert && (
                 <motion.div
                   key={searchedCert.id}
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="space-y-6"
+                  className="bg-white rounded-2xl border border-emerald-100/80 shadow-xs p-5 sm:p-6"
                 >
-                  
-                  {/* Top Bar Actions & Verification Badge */}
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
-                    <div>
-                      <div className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">
-                        {isEn ? "VERIFIED ACADEMIC RECORD" : "যাচাইকৃত একাডেমিক তথ্য"}
+                  {/* Main Row Layout */}
+                  <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+                    
+                    {/* Left: Icon & Student Details */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#008744] flex items-center justify-center shrink-0 border border-emerald-100 font-bold">
+                        <Award size={26} />
                       </div>
-                      <div className="text-base font-extrabold text-slate-900 flex items-center space-x-2 mt-0.5">
-                        <span>{searchedCert.name}</span>
-                        <span className="text-xs font-mono font-semibold text-slate-500">({searchedCert.rollNo})</span>
+
+                      <div className="space-y-1.5">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <h3 className="text-lg font-black text-slate-900 tracking-tight">{searchedCert.name}</h3>
+                          <span className="text-xs font-mono font-bold text-slate-400">({searchedCert.rollNo})</span>
+                          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#008744] bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                            <CheckCircle2 size={12} />
+                            <span>{searchedCert.status}</span>
+                          </span>
+                        </div>
+
+                        <p className="text-sm font-extrabold text-[#008744]">
+                          {searchedCert.course}
+                        </p>
+
+                        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs text-slate-500 font-medium pt-0.5">
+                          <div><span className="font-mono text-slate-400 font-bold">ID:</span> <span className="font-mono font-bold text-slate-800">{searchedCert.id}</span></div>
+                          <div><span className="font-mono text-slate-400 font-bold">Issue Date:</span> <span className="font-bold text-slate-800">{searchedCert.issueDate}</span></div>
+                          <div><span className="font-mono text-slate-400 font-bold">Grade:</span> <span className="font-bold text-amber-600">{searchedCert.grade}</span></div>
+                          {searchedCert.duration && (
+                            <div><span className="font-mono text-slate-400 font-bold">Duration:</span> <span className="font-bold text-slate-800">{searchedCert.duration}</span></div>
+                          )}
+                        </div>
+
+                        {/* Verified Skill Badges */}
+                        {searchedCert.skills && searchedCert.skills.length > 0 && (
+                          <div className="flex flex-wrap items-center gap-1.5 pt-2">
+                            {searchedCert.skills.map((skill, idx) => (
+                              <span key={idx} className="text-[10px] font-bold bg-slate-50 text-slate-700 px-2.5 py-0.5 rounded-md border border-slate-200/80">
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-2">
-                      <button
-                        onClick={copyShareLink}
-                        className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all cursor-pointer active:scale-95"
-                      >
-                        <Share2 size={14} />
-                        <span>{copiedLink ? (isEn ? "Link Copied!" : "কপি হয়েছে!") : (isEn ? "Share Link" : "শেয়ার")}</span>
-                      </button>
-
-                      <button
-                        onClick={() => setShowQrModal(true)}
-                        className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all cursor-pointer active:scale-95"
-                      >
-                        <QrCode size={14} />
-                        <span>{isEn ? "QR Code" : "কিউআর কোড"}</span>
-                      </button>
-
+                    {/* Right: ONLY PDF Download Button */}
+                    <div className="w-full lg:w-auto flex items-center justify-end shrink-0 pt-2 lg:pt-0">
                       <button
                         onClick={() => window.print()}
-                        className="flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold shadow-md shadow-[#008744]/20 transition-all cursor-pointer active:scale-95"
+                        className="w-full sm:w-auto bg-[#008744] hover:bg-[#007038] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md shadow-[#008744]/20 flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-95 whitespace-nowrap"
                       >
-                        <Printer size={14} />
-                        <span>{isEn ? "Download PDF / Print" : "ডাউনলোড / প্রিন্ট"}</span>
+                        <Printer size={16} />
+                        <span>{isEn ? "Download PDF / Print" : "ডাউনলোড পিডিএফ / প্রিন্ট"}</span>
                       </button>
                     </div>
+
                   </div>
 
-                  {/* Interactive 3D Certificate Preview Canvas */}
-                  <div className="w-full bg-slate-50/50 rounded-2xl border border-slate-100 p-2 sm:p-4">
-                    <Certificate3DCanvas data={searchedCert} />
-                  </div>
-
-                  {/* Student Ledger Metadata Grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-200/80 text-xs">
-                    <div>
-                      <div className="text-[10px] font-bold text-slate-400 uppercase font-mono">{isEn ? "CERTIFICATE ID" : "সার্টিফিকেট আইডি"}</div>
-                      <div className="font-extrabold text-[#008744] font-mono mt-0.5">{searchedCert.id}</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-bold text-slate-400 uppercase font-mono">{isEn ? "PROGRAM" : "প্রোগ্রাম"}</div>
-                      <div className="font-bold text-slate-800 line-clamp-1 mt-0.5">{searchedCert.course}</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-bold text-slate-400 uppercase font-mono">{isEn ? "ISSUE DATE" : "ইস্যু তারিখ"}</div>
-                      <div className="font-bold text-slate-800 mt-0.5">{searchedCert.issueDate}</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-bold text-slate-400 uppercase font-mono">{isEn ? "GRADE ACHIEVED" : "অর্জিত গ্রেড"}</div>
-                      <div className="font-bold text-amber-600 mt-0.5">{searchedCert.grade}</div>
-                    </div>
-                  </div>
-
-                  {/* Ledger Hash Footer */}
-                  <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-500">
-                    <div className="flex items-center space-x-2 bg-slate-100 px-3.5 py-2 rounded-xl border border-slate-200/80 w-full sm:w-auto">
+                  {/* Cryptographic Ledger Hash Footer */}
+                  <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-500">
+                    <div className="flex items-center space-x-2 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200/80 w-full sm:w-auto">
                       <Lock size={14} className="text-[#008744] shrink-0" />
                       <span className="truncate max-w-xs sm:max-w-md font-bold text-slate-700">Hash: {searchedCert.credentialHash}</span>
                       <button
@@ -670,72 +632,7 @@ export default function CertificationPage() {
           </div>
         </section>
 
-
-
       </main>
-
-      {/* ========================================================================= */}
-      {/* QR CODE PREVIEW MODAL                                                    */}
-      {/* ========================================================================= */}
-      <AnimatePresence>
-        {showQrModal && searchedCert && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center relative shadow-2xl border border-slate-100"
-            >
-              <button
-                onClick={() => setShowQrModal(false)}
-                className="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-sm font-bold p-1 cursor-pointer"
-              >
-                ✕
-              </button>
-
-              <div className="w-12 h-12 bg-emerald-50 text-[#008744] rounded-2xl flex items-center justify-center mx-auto mb-3">
-                <QrCode size={24} />
-              </div>
-
-              <h3 className="text-lg font-bold text-slate-900 mb-1">
-                {isEn ? "Digital Verification QR Code" : "ডিজিটাল ভেরিফিকেশন কিউআর কোড"}
-              </h3>
-              <p className="text-xs text-slate-500 mb-4">
-                {isEn ? "Scan with any smartphone camera to inspect official student transcript." : "স্মার্টফোন ক্যামেরা দিয়ে স্ক্যান করে তথ্য পরীক্ষা করুন।"}
-              </p>
-
-              <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 inline-block mb-4">
-                <div className="w-44 h-44 bg-white p-3 rounded-xl shadow-inner border border-slate-200 flex flex-col items-center justify-center text-center">
-                  <div className="w-full h-full border-2 border-slate-900 p-1 flex flex-col justify-between">
-                    <div className="flex justify-between">
-                      <div className="w-8 h-8 border-4 border-slate-900 bg-slate-900 p-1"><div className="w-full h-full bg-white" /></div>
-                      <div className="w-8 h-8 border-4 border-slate-900 bg-slate-900 p-1"><div className="w-full h-full bg-white" /></div>
-                    </div>
-                    <div className="text-[9px] font-mono font-bold text-[#008744] my-auto">
-                      {searchedCert.id}
-                    </div>
-                    <div className="flex justify-between">
-                      <div className="w-8 h-8 border-4 border-slate-900 bg-slate-900 p-1"><div className="w-full h-full bg-white" /></div>
-                      <div className="w-4 h-4 bg-slate-900 self-end" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-[11px] font-mono font-bold text-slate-600 bg-slate-100 py-1.5 px-3 rounded-xl mb-4">
-                ID: {searchedCert.id}
-              </div>
-
-              <button
-                onClick={() => setShowQrModal(false)}
-                className="w-full bg-[#008744] hover:bg-[#007038] text-white py-2.5 rounded-xl font-bold text-xs shadow-md transition-all cursor-pointer"
-              >
-                {isEn ? "Close" : "বন্ধ করুন"}
-              </button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
       <Footer />
     </div>
