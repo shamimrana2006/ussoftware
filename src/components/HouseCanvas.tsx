@@ -1,10 +1,11 @@
 "use client";
 
-import React, { Suspense, useRef, useMemo, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { Suspense, useRef, useMemo, useState, useEffect } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Float, OrbitControls, Center, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
-import { Copy, Check, Sliders, RefreshCw, X } from "lucide-react";
+import { Copy, Check, Sliders, RefreshCw, X, Box, Layers, Maximize2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Live Coordinate Tracker Component inside Three.js Canvas
 function CoordinateTracker({
@@ -41,13 +42,31 @@ function CoordinateTracker({
   return null;
 }
 
+// Camera Controller Component to automatically adjust camera position per model
+function CameraController({ activeModel }: { activeModel: string }) {
+  const { camera } = useThree();
+
+  useEffect(() => {
+    if (activeModel.includes("Home2")) {
+      camera.position.set(5.193, 2.478, -2.471);
+    } else {
+      camera.position.set(5.595, 0.7, -0.319);
+    }
+    camera.updateProjectionMatrix();
+  }, [activeModel, camera]);
+
+  return null;
+}
+
 function HouseModel({
+  modelPath = "/glb file/Home.glb",
   defaultAngle = 0.52,
   scale = 1.95,
   metalness = 0.88,
   roughness = 0.16,
   enableSway = true
 }: {
+  modelPath?: string;
   defaultAngle?: number;
   scale?: number;
   metalness?: number;
@@ -55,9 +74,9 @@ function HouseModel({
   enableSway?: boolean;
 }) {
   const groupRef = useRef<THREE.Group>(null);
-  const { scene } = useGLTF("/glb file/Home.glb");
+  const { scene } = useGLTF(modelPath);
 
-  // Dynamic Live Metallic Shader Setup
+  // Dynamic Live Metallic Shader Setup with Smooth Material Opacity Fade-In
   const preparedScene = useMemo(() => {
     const cloned = scene.clone(true);
     cloned.traverse((child) => {
@@ -69,6 +88,8 @@ function HouseModel({
           const mat = (mesh.material as THREE.MeshStandardMaterial).clone();
           mat.metalness = metalness;
           mat.roughness = roughness;
+          mat.transparent = true;
+          mat.opacity = 0; // Starts transparent for smooth fade in
           mat.needsUpdate = true;
           mesh.material = mat;
         }
@@ -77,13 +98,26 @@ function HouseModel({
     return cloned;
   }, [scene, metalness, roughness]);
 
-  useFrame((state) => {
+  // Smooth Fade-In Opacity + Sway Animation on every frame
+  useFrame((state, delta) => {
     const time = state.clock.elapsedTime;
-    if (groupRef.current && enableSway) {
-      // Gentle vertical floating breath
-      groupRef.current.position.y = Math.sin(time * 1.2) * 0.02;
-      // Gentle horizontal sway around the exact 3/4 isometric angle
-      groupRef.current.rotation.y = defaultAngle + Math.sin(time * 0.75) * 0.045;
+    if (groupRef.current) {
+      if (enableSway) {
+        // Gentle vertical floating breath
+        groupRef.current.position.y = Math.sin(time * 1.2) * 0.02;
+        // Gentle horizontal sway around the exact 3/4 isometric angle
+        groupRef.current.rotation.y = defaultAngle + Math.sin(time * 0.75) * 0.045;
+      }
+
+      // Smooth 3D Material Opacity Fade-In
+      groupRef.current.traverse((child) => {
+        if ((child as THREE.Mesh).isMesh) {
+          const mat = (child as THREE.Mesh).material as THREE.MeshStandardMaterial;
+          if (mat && mat.opacity < 1) {
+            mat.opacity = Math.min(1, mat.opacity + delta * 2.8);
+          }
+        }
+      });
     }
   });
 
@@ -100,27 +134,69 @@ function HouseModel({
   );
 }
 
+// Preload both GLB models
 useGLTF.preload("/glb file/Home.glb");
+useGLTF.preload("/glb file/Home2.glb");
 
 interface HouseCanvasProps {
   className?: string;
+  posX?: number;
+  posY?: number;
 }
 
-export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
-  // Visual reference matched angle and positioning
+export default function HouseCanvas({
+  className = "",
+  posX = 0.90,
+  posY = -0.65
+}: HouseCanvasProps) {
   const defaultAngleRad = 0.52;
-  const posX = -0.05;
-  const posY = -0.80;
-  const modelScale = 1.95;
+
+  // Responsive PosX handling (Desktop: posX = 0.90 on right, Mobile: 0)
+  const [responsivePosX, setResponsivePosX] = useState(posX);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        if (window.innerWidth < 1024) {
+          setResponsivePosX(0);
+        } else {
+          setResponsivePosX(posX);
+        }
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [posX]);
+
+  // Active GLB Model State
+  const [activeModel, setActiveModel] = useState<string>("/glb file/Home.glb");
+
+  // Auto switch between Home 1 and Home 2 every 3 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveModel((prev) =>
+        prev.includes("Home2") ? "/glb file/Home.glb" : "/glb file/Home2.glb"
+      );
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Model-specific custom scales (Home.glb default = 1.95, Home2.glb default = 0.015)
+  const [home1Scale, setHome1Scale] = useState<number>(1.95);
+  const [home2Scale, setHome2Scale] = useState<number>(0.015);
+
+  const isHome2 = activeModel.includes("Home2");
+  const currentScale = isHome2 ? home2Scale : home1Scale;
 
   // Real-time Coordinate State (Set to user chosen default)
   const [coords, setCoords] = useState({
-    camX: 1.653,
-    camY: 0.98,
-    camZ: 5.329,
-    rotX: -0.218,
-    rotY: 0.302,
-    rotZ: 0.066
+    camX: 5.595,
+    camY: 0.7,
+    camZ: -0.319,
+    rotX: -2.31,
+    rotY: 1.486,
+    rotZ: 2.312
   });
 
   // Interactive Live Metal Controls State (Set to user chosen default)
@@ -134,7 +210,7 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const dataString = `Camera Position: [${coords.camX}, ${coords.camY}, ${coords.camZ}]\nCamera Rotation: [${coords.rotX}, ${coords.rotY}, ${coords.rotZ}]\nMetalness: ${metalness}\nRoughness: ${roughness}\nLight Intensity: ${lightIntensity}`;
+    const dataString = `Active Model: ${activeModel}\nModel Scale: ${currentScale}\nCamera Position: [${coords.camX}, ${coords.camY}, ${coords.camZ}]\nCamera Rotation: [${coords.rotX}, ${coords.rotY}, ${coords.rotZ}]\nMetalness: ${metalness}\nRoughness: ${roughness}\nLight Intensity: ${lightIntensity}`;
     navigator.clipboard.writeText(dataString);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -144,13 +220,24 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
     setMetalness(0.88);
     setRoughness(0.16);
     setLightIntensity(5.5);
+    setHome1Scale(1.95);
+    setHome2Scale(0.015);
   };
 
   return (
-    <div className={`relative w-full h-full select-none ${className}`}>
-      {/* 3D WebGL Canvas matched to perspective */}
-      <div className="w-full h-full cursor-grab active:cursor-grabbing transform-gpu translate-y-16 sm:translate-y-20 lg:translate-y-24">
-        <Canvas
+    <div className={`relative w-full h-full select-none overflow-visible ${className}`}>
+
+      {/* 3D WebGL Canvas with Smooth Left Fade Motion Transition */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeModel}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 50 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full h-full cursor-grab active:cursor-grabbing transform-gpu overflow-visible"
+        >
+          <Canvas
           dpr={[1, 2]}
           gl={{
             powerPreference: "high-performance",
@@ -164,8 +251,9 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
             fov: 38
           }}
         >
-          {/* Live Coordinate Tracker */}
+          {/* Live Coordinate & Camera Controller */}
           <CoordinateTracker onValuesUpdate={setCoords} />
+          <CameraController activeModel={activeModel} />
 
           {/* Dynamic Studio Lighting with Live Intensity */}
           <ambientLight intensity={1.6} />
@@ -200,7 +288,7 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
           <pointLight position={[-2.5, 3.5, 2.5]} intensity={2.0} color="#fef08a" />
           <pointLight position={[2.5, 1.2, -2.5]} intensity={1.4} color="#67e8f9" />
 
-          {/* Professional Damped Momentum Drag System (UNCHANGED) */}
+          {/* Professional Damped Momentum Drag System */}
           <OrbitControls
             enableZoom={false}
             enablePan={false}
@@ -208,8 +296,8 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
             dampingFactor={0.06}
             rotateSpeed={0.8}
             autoRotate={false}
-            target={[posX, posY + 0.60, 0]}
-            minPolarAngle={Math.PI / 3.4}
+            target={[responsivePosX, 0.35, 0]}
+            minPolarAngle={Math.PI / 6.0}
             maxPolarAngle={Math.PI / 2.05}
           />
 
@@ -220,29 +308,22 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
               floatIntensity={0.10}
               floatingRange={[-0.02, 0.02]}
             >
-              <group position={[posX, posY, 0]}>
+              <group position={[responsivePosX, posY, 0]}>
                 <HouseModel
+                  key={activeModel}
+                  modelPath={activeModel}
                   defaultAngle={defaultAngleRad}
-                  scale={modelScale}
+                  scale={currentScale}
                   metalness={metalness}
                   roughness={roughness}
                   enableSway={true}
                 />
               </group>
             </Float>
-
-            {/* Soft Ambient Ground Contact Shadow */}
-            <ContactShadows
-              position={[posX, posY - 0.03, 0]}
-              opacity={0.5}
-              scale={9.8}
-              blur={2.4}
-              far={4.0}
-              color="#0f172a"
-            />
           </Suspense>
         </Canvas>
-      </div>
+      </motion.div>
+    </AnimatePresence>
 
       {/* FLOATING 3D & METAL CONTROLLER POPUP (MINIMIZED AS A SMALL BUTTON BY DEFAULT) */}
       {!isOpen ? (
@@ -265,7 +346,7 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
                 3D & Metal Controls
               </span>
             </div>
-            
+
             <div className="flex items-center gap-1.5">
               <button
                 type="button"
@@ -284,6 +365,42 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
                 title="Minimize / Close"
               >
                 <X size={13} />
+              </button>
+            </div>
+          </div>
+
+          {/* Model Switcher inside Popup */}
+          <div className="mb-3 bg-slate-950/60 p-2 rounded-xl border border-slate-800/80 text-xs">
+            <div className="text-slate-300 text-[11px] font-bold mb-1.5 flex items-center justify-between">
+              <span>GLB Model (মডেল সুইচার):</span>
+              <span className="text-emerald-400 font-mono font-bold">
+                {isHome2 ? "Home2.glb" : "Home.glb"}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-1.5">
+              <button
+                type="button"
+                onClick={() => setActiveModel("/glb file/Home.glb")}
+                className={`py-1.5 px-2 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeModel === "/glb file/Home.glb"
+                  ? "bg-[#008744] text-white border border-emerald-400/40 shadow-sm"
+                  : "bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60"
+                  }`}
+              >
+                <Box size={13} />
+                <span>Home 1</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveModel("/glb file/Home2.glb")}
+                className={`py-1.5 px-2 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeModel === "/glb file/Home2.glb"
+                  ? "bg-[#008744] text-white border border-emerald-400/40 shadow-sm"
+                  : "bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700/60"
+                  }`}
+              >
+                <Box size={13} />
+                <span>Home 2</span>
               </button>
             </div>
           </div>
@@ -309,8 +426,30 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
             </div>
           </div>
 
-          {/* LIVE METAL CONTROLLER SLIDERS */}
+          {/* LIVE CONTROLLER SLIDERS */}
           <div className="space-y-2.5 mb-3.5 bg-slate-950/40 p-2.5 rounded-xl border border-slate-800/60 text-xs">
+
+            {/* Model Scale Slider */}
+            <div>
+              <div className="flex items-center justify-between text-[11px] font-bold mb-1">
+                <span className="text-slate-300">Model Scale (মডেল স্কেল/সাইজ):</span>
+                <span className="text-purple-400 font-mono font-black">{isHome2 ? currentScale.toFixed(3) : currentScale.toFixed(2)}</span>
+              </div>
+              <input
+                type="range"
+                min={isHome2 ? "0.005" : "0.5"}
+                max={isHome2 ? "0.2" : "3.5"}
+                step={isHome2 ? "0.005" : "0.01"}
+                value={currentScale}
+                onChange={(e) => {
+                  const val = parseFloat(e.target.value);
+                  if (isHome2) setHome2Scale(val);
+                  else setHome1Scale(val);
+                }}
+                className="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#a855f7]"
+              />
+            </div>
+
             {/* Metalness Slider */}
             <div>
               <div className="flex items-center justify-between text-[11px] font-bold mb-1">
@@ -367,11 +506,10 @@ export default function HouseCanvas({ className = "" }: HouseCanvasProps) {
           <button
             type="button"
             onClick={handleCopy}
-            className={`w-full py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md ${
-              copied
-                ? "bg-emerald-600 text-white shadow-emerald-500/20"
-                : "bg-[#008744] hover:bg-[#007038] text-white active:scale-98"
-            }`}
+            className={`w-full py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md ${copied
+              ? "bg-emerald-600 text-white shadow-emerald-500/20"
+              : "bg-[#008744] hover:bg-[#007038] text-white active:scale-98"
+              }`}
           >
             {copied ? (
               <>
