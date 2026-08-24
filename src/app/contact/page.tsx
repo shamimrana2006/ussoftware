@@ -202,7 +202,7 @@ export default function ContactPage() {
         <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 space-y-14 sm:space-y-16">
           
           {/* THE MASTER CARD (WITH US SOFTWARE GREEN & RED BRAND ACCENTS) */}
-          <div className="max-w-5xl mx-auto rounded-[36px] sm:rounded-[48px] bg-white border border-slate-100 p-8 sm:p-12 lg:p-16 shadow-[0_12px_35px_rgba(0,0,0,0.03)] relative overflow-hidden">
+          <div className="max-w-5xl mx-auto rounded-[36px] sm:rounded-[44px] bg-white border border-slate-100 p-6 sm:p-10 lg:p-12 shadow-[0_12px_35px_rgba(0,0,0,0.03)] relative overflow-hidden">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               
@@ -248,75 +248,61 @@ export default function ContactPage() {
                     </button>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                    
-                    {/* Your Name */}
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5 pl-1">
-                        {isEn ? "Your Name" : "আপনার নাম"}
-                      </label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="John Doe"
-                        className="w-full bg-[#f4f6fa] hover:bg-[#edf1f7] focus:bg-white border border-transparent focus:border-[#008744]/40 focus:ring-4 focus:ring-[#008744]/10 rounded-[20px] px-5 py-3.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none transition-all font-medium shadow-2xs"
+                        placeholder={isEn ? "Your Name *" : "আপনার নাম *"}
+                        className="w-full bg-[#f4f6fa] text-slate-900 text-sm font-semibold rounded-2xl px-5 py-4 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008744]/30 border border-transparent focus:border-[#008744] transition-all placeholder:text-slate-400"
                       />
                     </div>
 
-                    {/* Your Email */}
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5 pl-1">
-                        {isEn ? "Your Email" : "আপনার ইমেইল"}
-                      </label>
                       <input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@example.com"
-                        className="w-full bg-[#f4f6fa] hover:bg-[#edf1f7] focus:bg-white border border-transparent focus:border-[#008744]/40 focus:ring-4 focus:ring-[#008744]/10 rounded-[20px] px-5 py-3.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none transition-all font-medium shadow-2xs"
+                        placeholder={isEn ? "Your Email Address *" : "আপনার ইমেইল এড্রেস *"}
+                        className="w-full bg-[#f4f6fa] text-slate-900 text-sm font-semibold rounded-2xl px-5 py-4 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008744]/30 border border-transparent focus:border-[#008744] transition-all placeholder:text-slate-400"
                       />
                     </div>
 
-                    {/* Your Message */}
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1.5 pl-1">
-                        {isEn ? "Your Message" : "আপনার বার্তা"}
-                      </label>
                       <textarea
                         required
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder={isEn ? "Type something if you want..." : "আপনার প্রশ্ন বা বার্তা লিখুন..."}
-                        className="w-full bg-[#f4f6fa] hover:bg-[#edf1f7] focus:bg-white border border-transparent focus:border-[#008744]/40 focus:ring-4 focus:ring-[#008744]/10 rounded-[22px] p-5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 outline-none transition-all font-normal resize-none shadow-2xs"
+                        placeholder={isEn ? "How can we help you? *" : "কীভাবে আপনাকে সাহায্য করতে পারি? *"}
+                        className="w-full bg-[#f4f6fa] text-slate-900 text-sm font-semibold rounded-2xl px-5 py-4 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#008744]/30 border border-transparent focus:border-[#008744] transition-all placeholder:text-slate-400 resize-none"
                       />
                     </div>
 
-                    {/* Submit Button in US Software Green */}
-                    <div className="pt-2">
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] active:scale-[0.98] text-white px-8 py-3.5 rounded-full font-bold text-xs sm:text-sm shadow-[0_10px_25px_rgba(0,135,68,0.35)] hover:shadow-[0_12px_30px_rgba(0,135,68,0.45)] transition-all cursor-pointer disabled:opacity-70 flex items-center justify-center space-x-2"
-                      >
-                        {isSubmitting ? (
-                          <span>{isEn ? "Sending..." : "পাঠানো হচ্ছে..."}</span>
-                        ) : (
-                          <span>{isEn ? "Send Message" : "Send Message"}</span>
-                        )}
-                      </button>
-                    </div>
-
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#008744] hover:bg-[#007038] active:scale-[0.99] text-white font-extrabold text-sm sm:text-base py-4 rounded-2xl shadow-[0_8px_20px_rgba(0,135,68,0.25)] transition-all cursor-pointer flex items-center justify-center space-x-2"
+                    >
+                      {isSubmitting ? (
+                        <span>{isEn ? "Sending Message..." : "বার্তা পাঠানো হচ্ছে..."}</span>
+                      ) : (
+                        <>
+                          <span>{isEn ? "Send Message" : "বার্তা পাঠান"}</span>
+                          <Send size={16} />
+                        </>
+                      )}
+                    </button>
                   </form>
                 )}
 
               </div>
 
               {/* RIGHT SIDE: 3D ANIMATED ILLUSTRATION IN US SOFTWARE BRAND COLORS (6 COLS) */}
-              <div className="lg:col-span-6 flex flex-col justify-between items-center lg:items-start pl-0 lg:pl-4 space-y-8">
+              <div className="lg:col-span-6 flex flex-col justify-between items-center lg:items-start pl-0 lg:pl-4 space-y-6">
                 
                 {/* 3D ILLUSTRATION COMPONENT IN US SOFTWARE COLORS */}
                 <div className="relative w-full max-w-[340px] sm:max-w-[380px] h-[220px] sm:h-[240px] mx-auto flex items-center justify-center select-none pointer-events-none">
@@ -426,25 +412,25 @@ export default function ContactPage() {
                 </div>
 
                 {/* CONTACT DETAILS LIST (US SOFTWARE BRAND ACCENTS) */}
-                <div className="space-y-3.5 text-xs sm:text-sm text-slate-600 w-full pl-2">
-                  <div className="flex items-center space-x-3 text-slate-700">
-                    <MapPin size={16} className="text-[#008744] flex-shrink-0" />
-                    <span className="font-semibold text-slate-700">Panthapath, Dhanmondi, Dhaka, Bangladesh</span>
+                <div className="space-y-4 text-sm sm:text-base text-slate-700 w-full pl-2 font-medium">
+                  <div className="flex items-center space-x-3.5">
+                    <MapPin size={18} className="text-[#008744] flex-shrink-0" />
+                    <span className="font-bold text-slate-800">Panthapath, Dhanmondi, Dhaka, Bangladesh</span>
                   </div>
 
-                  <div className="flex items-center space-x-3 text-slate-700">
-                    <Phone size={16} className="text-[#DE1F26] flex-shrink-0" />
-                    <span className="font-semibold text-slate-700">{isEn ? "Open to Connect • +880 1712-34578" : "যোগাযোগের জন্য উন্মুক্ত • +৮৮০ ১৭১২-৩৪৫৭৮"}</span>
+                  <div className="flex items-center space-x-3.5">
+                    <Phone size={18} className="text-[#DE1F26] flex-shrink-0" />
+                    <span className="font-bold text-slate-800">{isEn ? "Open to Connect • +880 1712-34578" : "যোগাযোগের জন্য উন্মুক্ত • +৮৮০ ১৭১২-৩৪৫৭৮"}</span>
                   </div>
 
-                  <div className="flex items-center space-x-3 text-slate-700">
-                    <Mail size={16} className="text-[#008744] flex-shrink-0" />
-                    <span className="font-semibold text-slate-700 font-mono">info@ussoftwareltd.com</span>
+                  <div className="flex items-center space-x-3.5">
+                    <Mail size={18} className="text-[#008744] flex-shrink-0" />
+                    <span className="font-bold text-slate-800 font-mono">info@ussoftwareltd.com</span>
                   </div>
                 </div>
 
                 {/* SOCIAL MEDIA CIRCULAR ICONS (BOTTOM RIGHT) */}
-                <div className="flex items-center space-x-3 pl-2 pt-1">
+                <div className="flex items-center space-x-3 pl-2 pt-2">
                   {socialLinks.map((social, sIdx) => (
                     <a
                       key={sIdx}
@@ -452,7 +438,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       title={social.name}
-                      className={`w-9 h-9 rounded-full bg-[#edf2f7] flex items-center justify-center transition-all duration-200 shadow-2xs hover:scale-110 cursor-pointer ${social.hoverClass}`}
+                      className={`w-10 h-10 rounded-full bg-[#edf2f7] flex items-center justify-center transition-all duration-200 shadow-2xs hover:scale-110 cursor-pointer ${social.hoverClass}`}
                     >
                       {social.icon}
                     </a>
@@ -468,29 +454,29 @@ export default function ContactPage() {
           {/* ========================================================================= */}
           {/* 3. ROW: GOOGLE MAP (LEFT COLUMN) & FAQ ACCORDION (RIGHT COLUMN)           */}
           {/* ========================================================================= */}
-          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
             {/* LEFT COLUMN: GOOGLE MAP & LOCATION (6 COLS) */}
-            <div className="lg:col-span-6 rounded-[32px] sm:rounded-[36px] bg-white border border-slate-100 p-5 sm:p-6 shadow-[0_12px_35px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-4">
+            <div className="lg:col-span-6 rounded-[36px] bg-white border border-slate-100 p-6 sm:p-8 lg:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.04)] flex flex-col justify-between space-y-6">
               
               {/* Map Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
-                <div className="flex items-center space-x-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-50 text-[#008744] flex items-center justify-center border border-emerald-100">
-                    <Building2 size={16} />
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-[#008744] flex items-center justify-center border border-emerald-100 shadow-xs">
+                    <Building2 size={20} />
                   </div>
                   <div>
-                    <h3 className="text-xs sm:text-sm font-black text-slate-900 leading-tight">
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
                       {isEn ? "U S Software Limited Campus" : "ইউএস সফটওয়্যার লিমিটেড ক্যাম্পাস"}
                     </h3>
-                    <p className="text-[11px] text-slate-500 font-normal">
+                    <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
                       {isEn ? "Panthapath, Dhanmondi, Dhaka" : "পান্থপথ, ধানমন্ডি, ঢাকা"}
                     </p>
                   </div>
                 </div>
 
                 {/* Social Channels */}
-                <div className="flex items-center space-x-1.5 self-start sm:self-auto">
+                <div className="flex items-center space-x-2 self-start sm:self-auto">
                   {socialLinks.map((social, sIdx) => (
                     <a
                       key={sIdx}
@@ -498,7 +484,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       title={social.name}
-                      className={`w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center transition-all shadow-2xs hover:scale-105 ${social.hoverClass}`}
+                      className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition-all shadow-2xs hover:scale-105 ${social.hoverClass}`}
                     >
                       {social.icon}
                     </a>
@@ -507,7 +493,7 @@ export default function ContactPage() {
               </div>
 
               {/* Embedded Google Map iframe */}
-              <div className="w-full h-[260px] sm:h-[280px] rounded-2xl overflow-hidden relative border border-slate-200">
+              <div className="w-full h-[320px] sm:h-[360px] rounded-3xl overflow-hidden relative border border-slate-200 shadow-inner">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26029.645132847898!2d90.36776395155285!3d23.741634842481364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bb51884d03%3A0xa8faf6fd1f993941!2sU%20S%20Software%20Limited!5e0!3m2!1sen!2sbd!4v1787391961224!5m2!1sen!2sbd" 
                   width="100%" 
@@ -521,34 +507,34 @@ export default function ContactPage() {
                 />
 
                 {/* Floating Overlay Badge on Map */}
-                <div className="absolute top-2.5 left-2.5 right-2.5 sm:right-auto bg-white/95 backdrop-blur-md rounded-xl p-2.5 border border-slate-200/90 shadow-[0_4px_15px_rgba(0,0,0,0.08)] pointer-events-auto">
-                  <div className="flex items-center space-x-1 text-[#008744] font-bold text-[11px]">
-                    <Building2 size={12} className="text-[#DE1F26]" />
+                <div className="absolute top-3 left-3 right-3 sm:right-auto bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.1)] pointer-events-auto">
+                  <div className="flex items-center space-x-1.5 text-[#008744] font-extrabold text-xs sm:text-sm">
+                    <Building2 size={15} className="text-[#DE1F26]" />
                     <span>U S Software Limited</span>
                   </div>
-                  <p className="text-[10px] text-slate-500 font-medium">
+                  <p className="text-xs text-slate-500 font-medium mt-0.5">
                     {isEn ? "Level 7, Innovation Tower" : "লেভেল ৭, ইনোভেশন টাওয়ার"}
                   </p>
                 </div>
               </div>
 
               {/* Map Bottom Footer Actions */}
-              <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center space-x-2">
-                  <MapPin size={15} className="text-[#008744] flex-shrink-0" />
-                  <span className="text-[11px] font-semibold text-slate-700">
+                  <MapPin size={17} className="text-[#008744] flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-bold text-slate-800">
                     {isEn ? "Panthapath, Dhaka-1205" : "পান্থপথ, ধানমন্ডি, ঢাকা"}
                   </span>
                 </div>
 
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2.5">
                   <a
                     href="https://wa.me/8801712345678"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-1 bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200/80 px-3 py-1.5 rounded-xl text-[11px] font-bold transition-colors shadow-2xs cursor-pointer"
+                    className="inline-flex items-center justify-center space-x-1.5 bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"
                   >
-                    <FaWhatsapp size={13} />
+                    <FaWhatsapp size={15} />
                     <span>{isEn ? "Location Chat" : "হোয়াটসঅ্যাপ"}</span>
                   </a>
 
@@ -556,10 +542,10 @@ export default function ContactPage() {
                     href="https://maps.google.com/?cid=12176461947230493057"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-1 bg-[#008744] hover:bg-[#007038] text-white px-3 py-1.5 rounded-xl text-[11px] font-bold transition-colors shadow-2xs cursor-pointer"
+                    className="inline-flex items-center justify-center space-x-1.5 bg-[#008744] hover:bg-[#007038] text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"
                   >
                     <span>{isEn ? "Directions" : "ম্যাপে যান"}</span>
-                    <ArrowRight size={12} />
+                    <ArrowRight size={14} />
                   </a>
                 </div>
               </div>
@@ -567,39 +553,39 @@ export default function ContactPage() {
             </div>
 
             {/* RIGHT COLUMN: FAQ ACCORDION (6 COLS) */}
-            <div className="lg:col-span-6 rounded-[32px] sm:rounded-[36px] bg-white border border-slate-100 p-5 sm:p-6 shadow-[0_12px_35px_rgba(0,0,0,0.03)] flex flex-col justify-between space-y-4">
+            <div className="lg:col-span-6 rounded-[36px] bg-white border border-slate-100 p-6 sm:p-8 lg:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.04)] flex flex-col justify-between space-y-6">
               
               {/* FAQ Header */}
-              <div className="pb-3 border-b border-slate-100 flex items-center justify-between">
+              <div className="pb-4 border-b border-slate-100 flex items-center justify-between">
                 <div>
-                  <div className="inline-flex items-center space-x-1 text-[11px] font-extrabold text-[#008744] uppercase tracking-wider mb-0.5">
-                    <HelpCircle size={12} />
+                  <div className="inline-flex items-center space-x-1.5 text-xs font-extrabold text-[#008744] uppercase tracking-wider mb-1">
+                    <HelpCircle size={14} />
                     <span>{isEn ? "GOT QUESTIONS?" : "সাধারণ জিজ্ঞাসা"}</span>
                   </div>
-                  <h3 className="text-xs sm:text-sm font-black text-slate-900">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-black text-slate-900">
                     {isEn ? "Frequently Asked Questions" : "সচরাচর জিজ্ঞাসিত প্রশ্নাবলী"}
                   </h3>
                 </div>
-                <span className="text-[10px] font-extrabold text-[#008744] bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">
+                <span className="text-xs font-extrabold text-[#008744] bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
                   {faqs.length} {isEn ? "FAQs" : "প্রশ্ন"}
                 </span>
               </div>
 
               {/* Accordion Questions List */}
-              <div className="space-y-2.5 flex-grow">
+              <div className="space-y-3.5 flex-grow">
                 {faqs.map((faq, idx) => {
                   const isOpen = openFaq === idx;
                   return (
                     <div
                       key={idx}
-                      className="bg-slate-50/70 rounded-2xl border border-slate-200/70 overflow-hidden transition-all hover:border-[#008744]/40"
+                      className="bg-slate-50/80 rounded-2xl border border-slate-200/80 overflow-hidden transition-all hover:border-[#008744]/50 shadow-2xs"
                     >
                       <button
                         onClick={() => setOpenFaq(isOpen ? null : idx)}
-                        className="w-full p-3 text-left flex items-center justify-between font-bold text-slate-800 text-xs cursor-pointer hover:text-[#008744] transition-colors"
+                        className="w-full p-4.5 sm:p-5 text-left flex items-center justify-between font-extrabold text-slate-900 text-base sm:text-lg cursor-pointer hover:text-[#008744] transition-colors"
                       >
-                        <span className="pr-2">{faq.q}</span>
-                        <ChevronDown size={14} className={`text-slate-400 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180 text-[#008744]" : ""}`} />
+                        <span className="pr-3 leading-snug">{faq.q}</span>
+                        <ChevronDown size={20} className={`text-slate-400 transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180 text-[#008744]" : ""}`} />
                       </button>
 
                       <AnimatePresence>
@@ -608,7 +594,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="px-3 pb-3 text-[11px] text-slate-600 leading-relaxed font-normal border-t border-slate-200/50 pt-2 bg-white/60"
+                            className="px-5 pb-5 pt-3 text-sm sm:text-base text-slate-700 leading-relaxed font-normal border-t border-slate-200/60 bg-white/90"
                           >
                             {faq.a}
                           </motion.div>
@@ -620,15 +606,15 @@ export default function ContactPage() {
               </div>
 
               {/* Bottom Support Callout */}
-              <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-600">
                 <span>{isEn ? "Need custom help?" : "আরও কিছু জানতে চান?"}</span>
                 <a 
                   href="https://wa.me/8801712345678" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="font-bold text-[#008744] hover:underline inline-flex items-center gap-1"
+                  className="font-extrabold text-[#008744] hover:underline inline-flex items-center gap-1.5"
                 >
-                  <FaWhatsapp size={12} />
+                  <FaWhatsapp size={16} />
                   <span>{isEn ? "Live Chat Counselor" : "কাউন্সিলর চ্যাট"}</span>
                 </a>
               </div>

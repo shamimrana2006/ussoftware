@@ -145,10 +145,12 @@
     "helpline": "24/7 Helpline"
   },
   "certPage": {
-    "badge": "OFFICIAL CREDENTIAL VERIFICATION",
+    "badge": "OFFICIAL CREDENTIAL VERIFICATION PORTAL",
     "title": "Verify Student Certificates",
-    "subtitle": "Instant verification of credentials, skill badges, and ISO-standard course certifications issued by US Software LTD.",
-    "searchPrompt": "Enter Certificate ID (e.g. US-2026-FS890)",
+    "subtitle": "Instant verification of credentials, skill badges, and ISO 9001:2015 course certifications issued by US Software LTD.",
+    "searchPromptCert": "Enter Certificate ID (e.g. USL-2025-0587)",
+    "searchPromptEmail": "Enter Student Email (e.g. shamim@gmail.com)",
+    "searchPromptPhone": "Enter Student Phone Number (e.g. 01712345678)",
     "verifyBtn": "Verify Certificate",
     "verifiedBadge": "AUTHENTIC & VERIFIED",
     "issuedTo": "Issued To",
@@ -156,6 +158,9 @@
     "issueDate": "Issue Date",
     "credentialId": "Credential ID",
     "grade": "Grade / Distinction",
-    "qrCode": "Scan to Verify Online"
+    "qrCode": "Scan to Verify Online",
+    "tabCert": "Certificate ID",
+    "tabEmail": "Student Email",
+    "tabPhone": "Phone Number"
   }
 }
