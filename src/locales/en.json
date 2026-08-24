@@ -162,5 +162,25 @@
     "tabCert": "Certificate ID",
     "tabEmail": "Student Email",
     "tabPhone": "Phone Number"
+  },
+  "notFound": {
+    "badge": "404 ERROR • PAGE NOT FOUND",
+    "title": "Oops! Lost in Cyberspace",
+    "subtitle": "The page you are looking for might have been removed, renamed, or is temporarily unavailable. Let's get you back on track!",
+    "backHome": "Back to Home",
+    "exploreCourses": "Explore Courses",
+    "contactSupport": "Contact Support",
+    "quickNavTitle": "Popular Destinations",
+    "quickNavDesc": "Jump directly to one of our key sections:",
+    "searchPlaceholder": "Search pages or courses...",
+    "robotHint": "🤖 Click on me! I'm scanning for missing signals...",
+    "links": {
+      "courses": "IT & Engineering Courses",
+      "services": "Enterprise Software Services",
+      "mentors": "Industry Mentors",
+      "certification": "Certificate Verification",
+      "projects": "Client Projects & Portfolio",
+      "contact": "24/7 Helpline & Office"
+    }
   }
 }
