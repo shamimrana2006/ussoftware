@@ -253,7 +253,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
           skewX: -mouseOffset.x * 0.2
         }}
         transition={{ type: "spring", stiffness: 380, damping: 22 }}
-        className={`relative z-10 text-[14px] xl:text-[15px] transition-all duration-200 select-none ${active
+        className={`relative z-10 text-[15px] xl:text-[16px] transition-all duration-200 select-none ${active
           ? "font-extrabold tracking-tight"
           : "text-slate-700 font-semibold group-hover:text-[#008744]"
           }`}
@@ -357,7 +357,7 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: t.header.home },
     { href: "/courses", label: t.header.courses || "Courses" },
-    { href: "/projects", label: t.header.projects || "Projects" },
+    { href: "/projects", label: t.header.projects || "Success Story" },
     { href: "/mentors", label: t.header.mentors || "Mentors" },
     { href: "/about", label: t.header.about || "About" },
     { href: "/contact", label: t.header.contact || "Contact" },
@@ -416,47 +416,7 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Login / Register Links with Active Page Highlighting */}
-            <div className="flex items-center space-x-2">
-              <Link
-                href="/login"
-                className={`flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full transition-all cursor-pointer text-xs sm:text-[13px] ${
-                  pathname === "/login"
-                    ? "bg-[#008744] text-white font-black shadow-md ring-2 ring-emerald-400/40"
-                    : "bg-transparent hover:bg-white/10 text-gray-200 hover:text-white border border-transparent hover:border-white/15 font-semibold"
-                }`}
-              >
-                <User size={14} className={pathname === "/login" ? "text-white" : "text-gray-300"} />
-                <span>{language === "bn" ? "লগইন" : "Login"}</span>
-              </Link>
 
-              <Link
-                href="/register"
-                className={`px-4 py-1.5 rounded-full transition-all cursor-pointer text-xs sm:text-[13px] ${
-                  pathname === "/register"
-                    ? "bg-[#008744] text-white font-black shadow-md ring-2 ring-emerald-400/40"
-                    : pathname === "/login"
-                    ? "bg-white/10 hover:bg-white/20 text-gray-200 hover:text-white border border-white/15 font-semibold"
-                    : "bg-[#008744] hover:bg-[#007038] text-white font-bold shadow-md"
-                }`}
-              >
-                {language === "bn" ? "রেজিস্টার" : "Register"}
-              </Link>
-            </div>
-
-            <div className="h-5 w-[1px] bg-blue-800/60 mx-1 hidden sm:block"></div>
-
-            {/* Language Switcher Pill (Top Bar only) */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1.5 cursor-pointer bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/25 px-3.5 py-1.5 rounded-full transition-all duration-200 group select-none shadow-xs"
-              title="Change Language / ভাষা পরিবর্তন"
-            >
-              <Globe size={13} className="text-emerald-400 group-hover:rotate-45 transition-transform duration-300" />
-              <span className="font-bold text-xs text-gray-100 group-hover:text-white transition-colors">
-                {language === "en" ? "EN" : "বাংলা"}
-              </span>
-            </button>
           </div>
         </div>
       </div>
@@ -468,7 +428,7 @@ export default function Header() {
           {/* Left: Logo (Scrolls to top on click) */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" onClick={handleHomeClick} className="flex items-center cursor-pointer">
-              <img src="/logo/logo.png" alt="US Software LTD" className="h-7 sm:h-8 lg:h-10 w-auto object-contain" />
+              <img src="/logo/logo.png" alt="US Software LTD" className="h-10 sm:h-12 lg:h-[52px] xl:h-[58px] w-auto object-contain transition-transform duration-200 hover:scale-105" />
             </Link>
           </div>
 
@@ -489,64 +449,15 @@ export default function Header() {
           {/* Right Side: US Universe Dropdown + Get Course CTA Button */}
           <div className="flex items-center space-x-2.5 sm:space-x-3.5 flex-shrink-0">
 
-            {/* US Universe Dropdown (Desktop & Tablet) - CLICK ONLY */}
-            <div className="relative hidden md:block" ref={universeRef}>
-              <button
-                onClick={() => setIsUniverseOpen(!isUniverseOpen)}
-                className={`group relative flex items-center space-x-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border transition-all duration-150 text-xs sm:text-sm font-bold cursor-pointer whitespace-nowrap select-none ${isUniverseOpen
-                  ? "bg-slate-100/90 border-slate-300 text-[#DE1F26] shadow-xs"
-                  : "bg-transparent hover:bg-slate-100/70 border-slate-200/80 hover:border-slate-300 text-slate-700 hover:text-slate-900"
-                  }`}
-              >
-                <Orbit
-                  size={15}
-                  className={`text-[#DE1F26] transition-transform duration-300 ${isUniverseOpen ? "rotate-180" : "group-hover:rotate-45"
-                    }`}
-                />
-                <span className="font-bold">{language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe"}</span>
-                <ChevronDown
-                  size={13}
-                  className={`text-slate-400 transition-transform duration-150 ${isUniverseOpen ? "rotate-180 text-[#DE1F26]" : ""
-                    }`}
-                />
-              </button>
-
-              {/* Ultra-Simple Compact US Universe Dropdown Menu */}
-              <AnimatePresence>
-                {isUniverseOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6, scale: 0.96 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.96 }}
-                    transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="absolute top-full right-0 mt-1.5 w-56 sm:w-60 bg-white/95 backdrop-blur-xl rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-slate-200/80 p-1.5 z-50 overflow-hidden"
-                  >
-                    <div className="space-y-0.5">
-                      {universePages.map((item, idx) => {
-                        const Icon = item.icon;
-                        return (
-                          <Link
-                            key={idx}
-                            href={item.href}
-                            onClick={() => setIsUniverseOpen(false)}
-                            className="flex items-center space-x-2.5 px-2.5 py-2 rounded-lg transition-colors duration-150 group hover:bg-slate-100/80"
-                          >
-                            <div
-                              className={`w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105 ${item.iconBg}`}
-                            >
-                              <Icon size={14} className={item.iconColor} />
-                            </div>
-                            <span className="text-xs font-semibold text-slate-700 group-hover:text-[#DE1F26] transition-colors truncate">
-                              {item.title}
-                            </span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            {/* Language Switcher in place of US Universe */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-slate-200/80 hover:border-slate-300 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm shadow-2xs transition-all duration-150 cursor-pointer select-none"
+              title="Change Language / ভাষা পরিবর্তন"
+            >
+              <Globe size={15} className="text-[#008744]" />
+              <span>{language === "en" ? "EN / বাংলা" : "বাংলা / EN"}</span>
+            </button>
 
             {/* CTA Button: Get Course (Bigger & bolder) */}
             <Link href="/courses">
@@ -584,50 +495,7 @@ export default function Header() {
             >
               <div className="max-w-[96rem] mx-auto px-4 sm:px-6 py-4 space-y-1.5 text-[15px] font-semibold text-gray-700">
 
-                {/* Mobile US Universe Accordion */}
-                <div className="border border-slate-200/70 rounded-xl overflow-hidden bg-transparent mb-2">
-                  <button
-                    onClick={() => setIsMobileUniverseOpen(!isMobileUniverseOpen)}
-                    className="w-full flex items-center justify-between px-3.5 py-2.5 text-sm font-semibold text-slate-800 hover:text-[#DE1F26]"
-                  >
-                    <span className="flex items-center space-x-2">
-                      <Orbit size={16} className="text-[#DE1F26]" />
-                      <span>{language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe"}</span>
-                    </span>
-                    <ChevronDown size={14} className={`text-slate-400 transition-transform duration-200 ${isMobileUniverseOpen ? "rotate-180 text-[#DE1F26]" : ""}`} />
-                  </button>
 
-                  <AnimatePresence>
-                    {isMobileUniverseOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="px-2 pb-2 space-y-1 border-t border-slate-100 pt-1.5"
-                      >
-                        {universePages.map((item, idx) => {
-                          const Icon = item.icon;
-                          return (
-                            <Link
-                              key={idx}
-                              href={item.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className="flex items-center justify-between p-2 rounded-lg bg-transparent hover:bg-slate-50 text-xs font-medium text-slate-700 transition-colors border border-transparent hover:border-slate-200/80"
-                            >
-                              <div className="flex items-center space-x-2 min-w-0">
-                                <div className={`w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 ${item.iconBg}`}>
-                                  <Icon size={13} className={item.iconColor} />
-                                </div>
-                                <span className="truncate text-xs font-medium">{item.title}</span>
-                              </div>
-                              <ArrowRight size={12} className="text-slate-300" />
-                            </Link>
-                          );
-                        })}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
 
                 {/* Mobile Navigation Links with 3D Water Droplet Squircle */}
                 {navLinks.map((item) => {
@@ -668,28 +536,7 @@ export default function Header() {
                     </button>
                   </div>
 
-                  {/* Mobile Login & Register Actions */}
-                  <div className="grid grid-cols-2 gap-2 pt-1">
-                    <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
-                      <button className={`w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5 cursor-pointer transition-all ${
-                        pathname === "/login"
-                          ? "bg-[#008744] text-white shadow-md"
-                          : "bg-slate-100 hover:bg-slate-200 text-slate-800"
-                      }`}>
-                        <User size={14} className={pathname === "/login" ? "text-white" : "text-[#008744]"} />
-                        <span>{language === "bn" ? "লগইন" : "Login"}</span>
-                      </button>
-                    </Link>
-                    <Link href="/register" onClick={() => setIsMobileMenuOpen(false)}>
-                      <button className={`w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5 cursor-pointer transition-all ${
-                        pathname === "/register"
-                          ? "bg-[#008744] text-white shadow-md ring-2 ring-emerald-300"
-                          : "bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200"
-                      }`}>
-                        <span>{language === "bn" ? "রেজিস্টার" : "Register"}</span>
-                      </button>
-                    </Link>
-                  </div>
+
 
                   <Link href="/courses" onClick={() => setIsMobileMenuOpen(false)}>
                     <button className="w-full bg-gradient-to-r from-[#008744] to-[#056839] text-white py-3 rounded-xl font-bold text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] flex items-center justify-center space-x-2 cursor-pointer">

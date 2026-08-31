@@ -7,7 +7,6 @@ import dynamic from "next/dynamic";
 const HomeCoursesSection = dynamic(() => import("@/components/home/HomeCoursesSection"));
 const HomeCategoriesSection = dynamic(() => import("@/components/home/HomeCategoriesSection"));
 const HomeBenefitsSection = dynamic(() => import("@/components/home/HomeBenefitsSection"));
-const HomeCareerSection = dynamic(() => import("@/components/home/HomeCareerSection"));
 const HomeTrainingSection = dynamic(() => import("@/components/home/HomeTrainingSection"));
 const HomePartnersSection = dynamic(() => import("@/components/home/HomePartnersSection"));
 const HomeSuccessSection = dynamic(() => import("@/components/home/HomeSuccessSection"));
@@ -37,10 +36,7 @@ export default function Home() {
       {/* 4. BENEFITS SECTION: Why Choose Us */}
       <HomeBenefitsSection />
 
-      {/* 5. CAREER SECTION: Explore IT Career Paths */}
-      <HomeCareerSection />
-
-      {/* 6. TRAINING METHODOLOGY SECTION: Our Training Methodology */}
+      {/* 5. TRAINING METHODOLOGY SECTION: Our Training Methodology */}
       <HomeTrainingSection />
 
       {/* 7. PARTNERS SECTION: Our Industry Partners */}

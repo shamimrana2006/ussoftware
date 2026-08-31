@@ -228,69 +228,6 @@ export default function HomeBenefitsSection() {
           })}
         </div>
 
-        {/* TRUST STATS & CTA STRIP WITH INFINITE ANIMATIONS */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="relative bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col lg:flex-row items-center justify-between gap-6 overflow-hidden"
-        >
-          {/* Infinite Ambient Light Beam Sweep */}
-          <motion.div 
-            animate={{ x: ["-100%", "200%"] }}
-            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-emerald-500/[0.07] to-transparent pointer-events-none skew-x-12"
-          />
-
-          {/* 4 Animated Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 w-full lg:w-auto flex-1 relative z-10">
-            {stats.map((stat, sIdx) => (
-              <div key={sIdx} className="text-center sm:text-left flex flex-col items-center sm:items-start">
-                <div className="flex items-center gap-1.5 mb-1">
-                  <motion.span 
-                    animate={{ scale: [1, 1.25, 1], opacity: [0.7, 1, 0.7] }}
-                    transition={{ repeat: Infinity, duration: 2, delay: sIdx * 0.3 }}
-                    className={`w-2 h-2 rounded-full ${sIdx % 2 === 0 ? "bg-[#008744]" : "bg-[#DE1F26]"}`}
-                  />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                    {sIdx === 0 ? "Verified" : sIdx === 1 ? "Network" : sIdx === 2 ? "Support" : "Alumni"}
-                  </span>
-                </div>
-
-                <motion.p 
-                  animate={{ y: [0, -3, 0] }}
-                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: sIdx * 0.4 }}
-                  className="text-2xl sm:text-3xl font-black text-[#08121a] tracking-tight"
-                >
-                  <span className={sIdx % 2 === 0 ? "text-[#008744]" : "text-[#DE1F26]"}>
-                    {stat.value}
-                  </span>
-                </motion.p>
-                <p className="text-xs text-slate-500 font-medium mt-0.5">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Animated Action Link */}
-          <div className="flex items-center gap-3 w-full sm:w-auto justify-end relative z-10">
-            <Link
-              href="/courses"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#008744] to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-extrabold text-xs sm:text-sm px-7 py-3.5 rounded-xl shadow-md shadow-emerald-700/20 hover:shadow-lg transition-all group"
-            >
-              <span>{isEn ? "Explore Programs" : "কোর্সগুলো দেখুন"}</span>
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-              >
-                <ArrowRight size={15} />
-              </motion.div>
-            </Link>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

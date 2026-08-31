@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, createContext, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, Cpu, Wifi, Zap, Activity } from "lucide-react";
 
+export const LoadingContext = createContext<{ isLoaded: boolean }>({ isLoaded: true });
+export const useLoading = () => useContext(LoadingContext);
+
 export default function LoadingScreen({ children }: { children?: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(false);
+  const [isFinishedLoading, setIsFinishedLoading] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [progress, setProgress] = useState(0);
   const [statusIndex, setStatusIndex] = useState(0);
@@ -34,6 +38,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
 
     if (hasLoaded) {
       setIsLoading(false);
+      setIsFinishedLoading(true);
       document.documentElement.classList.remove("app-loading");
       return;
     }
@@ -84,6 +89,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
       } else {
         setTimeout(() => {
           setIsLoading(false);
+          setIsFinishedLoading(true);
           document.documentElement.classList.remove("app-loading");
           document.body.style.overflow = "";
           try {
@@ -176,7 +182,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
                   <img
                     src="/logo/logo.png"
                     alt="US Software Logo"
-                    className="w-[120px] sm:w-[145px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,135,68,0.4)]"
+                    className="w-[160px] sm:w-[190px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,135,68,0.4)]"
                   />
                 </div>
               </motion.div>
@@ -335,9 +341,16 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
         )}
       </AnimatePresence>
 
-      <div id="app-content-wrapper" className="flex-1 flex flex-col min-h-screen">
-        {children}
-      </div>
+      <LoadingContext.Provider value={{ isLoaded: isFinishedLoading }}>
+        <div 
+          id="app-content-wrapper" 
+          className={`flex-1 flex flex-col min-h-screen transition-opacity duration-500 ${
+            !isFinishedLoading ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
+          {isFinishedLoading && children}
+        </div>
+      </LoadingContext.Provider>
     </>
   );
 }

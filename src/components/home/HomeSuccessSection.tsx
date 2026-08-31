@@ -48,6 +48,45 @@ export default function HomeSuccessSection() {
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
       salaryBoost: isEn ? "Direct Placement" : "সরাসরি প্লেসমেন্ট",
       rating: 5
+    },
+    {
+      id: 4,
+      name: isEn ? "Tariqul Islam" : "তারিকুল ইসলাম",
+      role: isEn ? "Mobile App Engineer" : "মোবাইল অ্যাপ ইঞ্জিনিয়ার",
+      company: "Pathao R&D",
+      track: isEn ? "Cross-Platform Flutter & iOS" : "ফ্লাটার ও আইওএস ডেভেলপমেন্ট",
+      story: isEn 
+        ? "The hands-on mobile app projects and state management labs prepared me for high-scale app architecture. I joined Pathao right after finishing the capstone project!"
+        : "ফ্লাটার ও স্টেট ম্যানেজমেন্টের বাস্তবমুখী প্রজেক্টগুলোর কারণে পাঠাও-এর আরএন্ডডি টিমে মোবাইল অ্যাপ ইঞ্জিনিয়ার হিসেবে কাজের সুযোগ পেয়েছি।",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+      salaryBoost: isEn ? "+120% Salary Boost" : "১২০% স্যালারি বৃদ্ধি",
+      rating: 5
+    },
+    {
+      id: 5,
+      name: isEn ? "Farhana Akhtar" : "ফারহানা আক্তার",
+      role: isEn ? "Cyber Security SOC Analyst" : "সাইবার সিকিউরিটি বিশ্লেষক",
+      company: "TigerIT Bangladesh",
+      track: isEn ? "Ethical Hacking & SOC Security" : "ইথিক্যাল হ্যাকিং ও সিকিউরিটি",
+      story: isEn 
+        ? "SIEM configuration and penetration testing labs gave me real industry exposure. The mentors guided me through vendor certifications step-by-step."
+        : "সিকিউরিটি অপারেশন সেন্টার (SOC) ও পেনটেস্টিং ল্যাবগুলোর ট্রেনিং আমার সিকিউরিটি ক্যারিয়ারের মূল ভিত্তি গড়ে দিয়েছে।",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+      salaryBoost: isEn ? "Certified Security Analyst" : "সার্টিফাইড সিকিউরিটি অ্যানালিস্ট",
+      rating: 5
+    },
+    {
+      id: 6,
+      name: isEn ? "Asif Mahmud" : "আসিফ মাহমুদ",
+      role: isEn ? "Senior UI/UX Designer" : "সিনিয়র ইউআই/ইউএক্স ডিজাইনার",
+      company: "Kaz Software",
+      track: isEn ? "Design Systems & Product Design" : "ডিজাইন সিস্টেমস ও প্রোডাক্ট ডিজাইন",
+      story: isEn 
+        ? "Building design systems and interactive Figma prototypes under senior leads boosted my portfolio. Now I handle US client design projects remotely!"
+        : "ডিজাইন সিস্টেমস ও ইউজার রিসার্চের রিয়েল প্রজেক্টগুলো আমার পোর্টফোলিওকে সমৃদ্ধ করেছে। আন্তর্জাতিক ক্লায়েন্টদের সাথে রিমোট কাজ করছি।",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=200",
+      salaryBoost: isEn ? "Remote US Client Role" : "রিমোট ইউএস ক্যারিয়ার",
+      rating: 5
     }
   ];
 

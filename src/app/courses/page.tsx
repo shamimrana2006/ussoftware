@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
@@ -16,6 +17,7 @@ import {
   TrendingUp, TrendingDown, Video, Server, Briefcase, GraduationCap,
   Calendar, DollarSign, Play, ChevronDown, ChevronUp, ArrowUpDown
 } from "lucide-react";
+import { COMPANY_STATS } from "@/data/companyStats";
 
 function CoursesContent() {
   const { language } = useLanguage();
@@ -46,24 +48,22 @@ function CoursesContent() {
 
   const categories = [
     { id: "all", label: isEn ? "All Categories" : "সকল ক্যাটাগরি", icon: Layers, iconColor: "text-[#008744]" },
-    { id: "ai", label: isEn ? "AI and Automation" : "এআই ও অটোমেশন", icon: Cpu, iconColor: "text-[#DE1F26]" },
-    { id: "design", label: isEn ? "Art & Design" : "আর্ট ও ডিজাইন", icon: Palette, iconColor: "text-amber-500" },
-    { id: "programming", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2, iconColor: "text-[#008744]" },
-    { id: "language", label: isEn ? "Language Skills" : "ভাষা দক্ষতা", icon: Globe2, iconColor: "text-blue-600" },
-    { id: "marketing", label: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
-    { id: "media", label: isEn ? "Media & Film" : "মিডিয়া ও ফিল্ম", icon: Video, iconColor: "text-purple-600" },
-    { id: "networking", label: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার", icon: Server, iconColor: "text-cyan-600" },
-    { id: "management", label: isEn ? "Management" : "ম্যানেজমেন্ট", icon: Briefcase, iconColor: "text-indigo-600" },
-    { id: "database", label: isEn ? "Database" : "ডাটাবেস", icon: Database, iconColor: "text-[#008744]" },
-    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-[#DE1F26]" },
-    { id: "cybersecurity", label: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি", icon: ShieldCheck, iconColor: "text-[#008744]" },
+    { id: "web", label: isEn ? "Full-Stack Web Engineering" : "ফুল-স্ট্যাক ওয়েব ইঞ্জিনিয়ারিং", icon: Code2, iconColor: "text-[#008744]" },
+    { id: "ai", label: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং", icon: Cpu, iconColor: "text-[#DE1F26]" },
+    { id: "cloud", label: isEn ? "DevOps & Cloud Architecture" : "ডেভঅপ্স ও ক্লাউড আর্কিটেকচার", icon: Cloud, iconColor: "text-blue-600" },
+    { id: "mobile", label: isEn ? "Mobile App Engineering" : "মোবাইল অ্যাপ ইঞ্জিনিয়ারিং", icon: Smartphone, iconColor: "text-purple-600" },
+    { id: "cyber", label: isEn ? "Cyber Security & Ethical Hacking" : "সাইবার সিকিউরিটি ও এথিক্যাল হ্যাকিং", icon: ShieldCheck, iconColor: "text-amber-600" },
+    { id: "uiux", label: isEn ? "Product Design (UI/UX)" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স)", icon: Palette, iconColor: "text-emerald-600" },
+    { id: "marketing", label: isEn ? "Digital Marketing & Growth" : "ডিজিটাল মার্কেটিং ও গ্রোথ", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
+    { id: "database", label: isEn ? "Database Systems" : "ডাটাবেস আর্কিটেকচার", icon: Database, iconColor: "text-[#008744]" },
+    { id: "diploma", label: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ", icon: GraduationCap, iconColor: "text-[#DE1F26]" },
   ];
 
   const allCourses = useMemo(() => [
     {
       id: "ai-prompt",
       category: "ai",
-      categoryLabel: isEn ? "AI and Automation" : "এআই ও অটোমেশন",
+      categoryLabel: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং",
       catIcon: Cpu,
       title: isEn ? "Generative AI & Prompt Engineering" : "জেনারেটিভ এআই ও প্রম্পট ইঞ্জিনিয়ারিং",
       mode: "Offline",
@@ -85,7 +85,7 @@ function CoursesContent() {
     {
       id: "ai-agentic",
       category: "ai",
-      categoryLabel: isEn ? "AI and Automation" : "এআই ও অটোমেশন",
+      categoryLabel: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং",
       catIcon: Bot,
       title: isEn ? "Agentic AI & Business Automation" : "এজেন্টিক এআই ও বিজনেস অটোমেশন",
       mode: "Online",
@@ -106,8 +106,8 @@ function CoursesContent() {
     },
     {
       id: "mern-stack",
-      category: "programming",
-      categoryLabel: isEn ? "Programming" : "প্রোগ্রামিং",
+      category: "web",
+      categoryLabel: isEn ? "Full-Stack Web Engineering" : "ফুল-স্ট্যাক ওয়েব ইঞ্জিনিয়ারিং",
       catIcon: Code2,
       title: isEn ? "Mastering MERN Stack Web Development" : "মাস্টারিং মার্ন স্ট্যাক ওয়েব ডেভেলপমেন্ট",
       mode: "Offline",
@@ -128,8 +128,8 @@ function CoursesContent() {
     },
     {
       id: "fs-nextjs",
-      category: "programming",
-      categoryLabel: isEn ? "Programming" : "প্রোগ্রামিং",
+      category: "web",
+      categoryLabel: isEn ? "Full-Stack Web Engineering" : "ফুল-স্ট্যাক ওয়েব ইঞ্জিনিয়ারিং",
       catIcon: Code2,
       title: isEn ? "Enterprise Full-Stack Next.js 15 & TypeScript" : "এন্টারপ্রাইজ ফুল-স্ট্যাক নেক্সট.জেএস ১৫ ও টাইপস্ক্রিপ্ট",
       mode: "Offline",
@@ -150,8 +150,8 @@ function CoursesContent() {
     },
     {
       id: "ielts-prep",
-      category: "language",
-      categoryLabel: isEn ? "Language Skills" : "ভাষা দক্ষতা",
+      category: "diploma",
+      categoryLabel: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
       catIcon: Globe2,
       title: isEn ? "IELTS Complete Preparation Masterclass" : "আইইএলটিএস কমপ্লিট প্রিপারেশন মাস্টারক্লাস",
       mode: "Offline",
@@ -172,8 +172,8 @@ function CoursesContent() {
     },
     {
       id: "graphic-design",
-      category: "design",
-      categoryLabel: isEn ? "Art & Design" : "আর্ট ও ডিজাইন",
+      category: "uiux",
+      categoryLabel: isEn ? "Product Design (UI/UX)" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স)",
       catIcon: Palette,
       title: isEn ? "Professional Graphic & Brand Design" : "প্রফেশনাল গ্রাফিক ও ব্র্যান্ড ডিজাইন",
       mode: "Offline",
@@ -195,7 +195,7 @@ function CoursesContent() {
     {
       id: "digital-mkt",
       category: "marketing",
-      categoryLabel: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং",
+      categoryLabel: isEn ? "Digital Marketing & Growth" : "ডিজিটাল মার্কেটিং ও গ্রোথ",
       catIcon: TrendingUp,
       title: isEn ? "Digital Marketing & Growth Hacking 360°" : "ডিজিটাল মার্কেটিং ও গ্রোথ হ্যাকিং ৩৬০°",
       mode: "Offline",
@@ -216,8 +216,8 @@ function CoursesContent() {
     },
     {
       id: "python-ml",
-      category: "programming",
-      categoryLabel: isEn ? "Programming" : "প্রোগ্রামিং",
+      category: "ai",
+      categoryLabel: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং",
       catIcon: Code2,
       title: isEn ? "Python, Django & Machine Learning Bootcamp" : "পাইথন, জ্যাঙ্গো ও মেশিন লার্নিং বুটক্যাম্প",
       mode: "Online",
@@ -238,8 +238,8 @@ function CoursesContent() {
     },
     {
       id: "video-editing",
-      category: "media",
-      categoryLabel: isEn ? "Media & Film" : "মিডিয়া ও ফিল্ম",
+      category: "uiux",
+      categoryLabel: isEn ? "Product Design (UI/UX)" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স)",
       catIcon: Video,
       title: isEn ? "Professional Video Editing & Motion Graphics" : "ভিডিও এডিটিং ও মোশন গ্রাফিক্স",
       mode: "Offline",
@@ -260,8 +260,8 @@ function CoursesContent() {
     },
     {
       id: "devops-aws",
-      category: "networking",
-      categoryLabel: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার",
+      category: "cloud",
+      categoryLabel: isEn ? "DevOps & Cloud Architecture" : "ডেভঅপ্স ও ক্লাউড আর্কিটেকচার",
       catIcon: Server,
       title: isEn ? "Cloud DevOps, Docker & Kubernetes Engineering" : "ক্লাউড ডেভঅপ্স, ডকার ও কুবারনেটিস",
       mode: "Online",
@@ -282,8 +282,8 @@ function CoursesContent() {
     },
     {
       id: "cyber-sec",
-      category: "cybersecurity",
-      categoryLabel: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি",
+      category: "cyber",
+      categoryLabel: isEn ? "Cyber Security & Ethical Hacking" : "সাইবার সিকিউরিটি ও এথিক্যাল হ্যাকিং",
       catIcon: ShieldCheck,
       title: isEn ? "Ethical Hacking & Defensive Cybersecurity" : "এথিক্যাল হ্যাকিং ও ডিফেন্সিভ সিকিউরিটি",
       mode: "Offline",
@@ -304,8 +304,8 @@ function CoursesContent() {
     },
     {
       id: "spoken-english",
-      category: "language",
-      categoryLabel: isEn ? "Language Skills" : "ভাষা দক্ষতা",
+      category: "diploma",
+      categoryLabel: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
       catIcon: Globe2,
       title: isEn ? "Spoken English & Corporate Communication" : "স্পোকেন ইংলিশ ও কর্পোরেট কমিউনিকেশন",
       mode: "Online",
@@ -326,8 +326,8 @@ function CoursesContent() {
     },
     {
       id: "uiux-figma",
-      category: "design",
-      categoryLabel: isEn ? "Art & Design" : "আর্ট ও ডিজাইন",
+      category: "uiux",
+      categoryLabel: isEn ? "Product Design (UI/UX)" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স)",
       catIcon: Palette,
       title: isEn ? "Advanced UI/UX & Figma Design Systems" : "এডভান্সড ইউআই/ইউএক্স ও ফিগমা সিস্টেমস",
       mode: "Online",
@@ -348,8 +348,8 @@ function CoursesContent() {
     },
     {
       id: "mobile-flutter",
-      category: "programming",
-      categoryLabel: isEn ? "Programming" : "প্রোগ্রামিং",
+      category: "mobile",
+      categoryLabel: isEn ? "Mobile App Engineering" : "মোবাইল অ্যাপ ইঞ্জিনিয়ারিং",
       catIcon: Smartphone,
       title: isEn ? "Cross-Platform Flutter & Dart App Development" : "ফ্লাটার ও ডার্ট মোবাইল অ্যাপ ডেভেলপমেন্ট",
       mode: "Offline",
@@ -371,7 +371,7 @@ function CoursesContent() {
     {
       id: "postgres-db",
       category: "database",
-      categoryLabel: isEn ? "Database" : "ডাটাবেস",
+      categoryLabel: isEn ? "Database Systems" : "ডাটাবেস আর্কিটেকচার",
       catIcon: Database,
       title: isEn ? "PostgreSQL & Database Architecture Masterclass" : "পোস্টগ্রেসকিউএল ও ডাটাবেস আর্কিটেকচার",
       mode: "Online",
@@ -392,8 +392,8 @@ function CoursesContent() {
     },
     {
       id: "agile-scrum",
-      category: "management",
-      categoryLabel: isEn ? "Management" : "ম্যানেজমেন্ট",
+      category: "marketing",
+      categoryLabel: isEn ? "Digital Marketing & Growth" : "ডিজিটাল মার্কেটিং ও গ্রোথ",
       catIcon: Briefcase,
       title: isEn ? "Agile Project Management & Scrum Master" : "অ্যাজাইল প্রজেক্ট ম্যানেজমেন্ট ও স্ক্রাম",
       mode: "Online",
@@ -415,9 +415,9 @@ function CoursesContent() {
     {
       id: "diploma-se",
       category: "diploma",
-      categoryLabel: isEn ? "Diploma" : "ডিপ্লোমা",
+      categoryLabel: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
       catIcon: GraduationCap,
-      title: isEn ? "1-Year Professional Diploma in Software Engineering" : "১ বছর মেয়াদী ডিপ্লোমা ইন সফটওয়্যার ইঞ্জিনিয়ারিং",
+      title: isEn ? "1-Year Diploma Course in Software Engineering" : "১ বছর মেয়াদী ডিপ্লোমা ইন সফটওয়্যার ইঞ্জিনিয়ারিং",
       mode: "Offline",
       modeType: "offline",
       rating: 5,
@@ -432,12 +432,12 @@ function CoursesContent() {
       videoUrl: "https://www.youtube.com/embed/wm5gMKuwSYk?autoplay=1",
       desc: isEn 
         ? "Complete engineering curriculum: Algorithms, Full-Stack Next.js, Cloud DevOps, AI Agents & Placement."
-        : "কম্পিউটার সায়েন্স ফান্ডামেন্টালস, ফুল-স্ট্যাক ও ক্লাউড সহ ১ বছরের সমন্বিত প্রফেশনাল ডিপ্লোমা।"
+        : "কম্পিউটার সায়েন্স ফান্ডামেন্টালস, ফুল-স্ট্যাক ও ক্লাউড সহ ১ বছরের সমন্বিত ডিপ্লোমা কোর্স।"
     },
     {
       id: "linux-sysadmin",
-      category: "networking",
-      categoryLabel: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার",
+      category: "cloud",
+      categoryLabel: isEn ? "DevOps & Cloud Architecture" : "ডেভঅপ্স ও ক্লাউড আর্কিটেকচার",
       catIcon: Server,
       title: isEn ? "Linux System Administration & Server Management" : "লিনাক্স সিস্টেম অ্যাডমিনিস্ট্রেশন",
       mode: "Offline",
@@ -458,8 +458,8 @@ function CoursesContent() {
     },
     {
       id: "3d-blender",
-      category: "media",
-      categoryLabel: isEn ? "Media & Film" : "মিডিয়া ও ফিল্ম",
+      category: "uiux",
+      categoryLabel: isEn ? "Product Design (UI/UX)" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স)",
       catIcon: Video,
       title: isEn ? "3D Animation, Blender & Visual Effects" : "৩ডি অ্যানিমেশন ও ব্লেন্ডার ভিএফএক্স",
       mode: "Offline",
@@ -480,8 +480,8 @@ function CoursesContent() {
     },
     {
       id: "soc-analyst",
-      category: "cybersecurity",
-      categoryLabel: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি",
+      category: "cyber",
+      categoryLabel: isEn ? "Cyber Security & Ethical Hacking" : "সাইবার সিকিউরিটি ও এথিক্যাল হ্যাকিং",
       catIcon: ShieldCheck,
       title: isEn ? "SOC Analyst & Blue Team Network Defense" : "এসওসি অ্যানালিস্ট ও ব্লু টিম নেটওয়ার্ক ডিফেন্স",
       mode: "Online",
@@ -503,7 +503,7 @@ function CoursesContent() {
     {
       id: "seo-ads",
       category: "marketing",
-      categoryLabel: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং",
+      categoryLabel: isEn ? "Digital Marketing & Growth" : "ডিজিটাল মার্কেটিং ও গ্রোথ",
       catIcon: TrendingUp,
       title: isEn ? "Technical SEO, Meta Ads & Sales Funnels" : "টেকনিক্যাল এসইও ও মেটা অ্যাডস",
       mode: "Online",
@@ -524,8 +524,8 @@ function CoursesContent() {
     },
     {
       id: "product-mgmt",
-      category: "management",
-      categoryLabel: isEn ? "Management" : "ম্যানেজমেন্ট",
+      category: "marketing",
+      categoryLabel: isEn ? "Digital Marketing & Growth" : "ডিজিটাল মার্কেটিং ও গ্রোথ",
       catIcon: Briefcase,
       title: isEn ? "Product Management for Tech Leaders" : "প্রোডাক্ট ম্যানেজমেন্ট ফর টেক লিডারস",
       mode: "Online",
@@ -543,26 +543,82 @@ function CoursesContent() {
       desc: isEn 
         ? "PRDs, product roadmaps, metrics (AARRR), user interviews, wireframing, and Go-to-Market strategies."
         : "সফটওয়্যার প্রোডাক্টের রোডম্যাপ, ইউজার জার্নি ও সফল মার্কেট লঞ্চ স্ট্র্যাটেজি।"
+    },
+    {
+      id: "diploma-fullstack",
+      category: "diploma",
+      categoryLabel: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
+      catIcon: GraduationCap,
+      title: isEn ? "Diploma in Full-Stack Software Engineering" : "ডিপ্লোমা ইন ফুল-স্ট্যাক সফটওয়্যার ইঞ্জিনিয়ারিং",
+      mode: "Offline",
+      modeType: "offline",
+      rating: 5,
+      duration: isEn ? "6 Months" : "৬ মাস",
+      enrolled: isEn ? "150+ Enrolled" : "১৫০+ শিক্ষার্থী",
+      fee: "35000৳",
+      rawFee: 35000,
+      bannerTitle: "DIPLOMA IN FULL-STACK ENG.",
+      bgGradient: "from-[#08121a] via-[#008744] to-[#08121a]",
+      illustration: "🎓",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      desc: isEn 
+        ? "A comprehensive 6-month intensive diploma track covering modern web development, cloud architecture, system design, and live industrial projects."
+        : "পলিটেকনিক ও সফটওয়্যার আগ্রহীদের জন্য ৬ মাসের নিবিড় ডিপ্লোমা কোর্স প্রোগ্রাম।"
+    },
+    {
+      id: "diploma-cyber-cloud",
+      category: "diploma",
+      categoryLabel: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
+      catIcon: GraduationCap,
+      title: isEn ? "Diploma in Cyber Security & Enterprise Cloud Ops" : "ডিপ্লোমা ইন সাইবার সিকিউরিটি ও ক্লাউড অপ্স",
+      mode: "Offline",
+      modeType: "offline",
+      rating: 5,
+      duration: isEn ? "6 Months" : "৬ মাস",
+      enrolled: isEn ? "120+ Enrolled" : "১২০+ শিক্ষার্থী",
+      fee: "38000৳",
+      rawFee: 38000,
+      bannerTitle: "DIPLOMA IN CYBER & CLOUD",
+      bgGradient: "from-[#0f172a] via-[#DE1F26] to-[#0f172a]",
+      illustration: "🛡️",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      desc: isEn 
+        ? "Master network defense, SOC operations, penetration testing, AWS cloud infrastructure, and DevOps automation in 6 months."
+        : "নেটওয়ার্ক ডিফেন্স, এসওসি অপারেশন ও ক্লাউড সিকিউরিটির ওপর ৬ মাসের ডিপ্লোমা কোর্স।"
+    },
+    {
+      id: "diploma-ai-data",
+      category: "diploma",
+      categoryLabel: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
+      catIcon: GraduationCap,
+      title: isEn ? "Diploma in AI Engineering & Applied Data Science" : "ডিপ্লোমা ইন এআই ইঞ্জিনিয়ারিং ও ডাটা সাইন্স",
+      mode: "Offline",
+      modeType: "offline",
+      rating: 5,
+      duration: isEn ? "6 Months" : "৬ মাস",
+      enrolled: isEn ? "90+ Enrolled" : "৯০+ শিক্ষার্থী",
+      fee: "40000৳",
+      rawFee: 40000,
+      bannerTitle: "DIPLOMA IN AI & DATA SCIENCE",
+      bgGradient: "from-[#1e1b4b] via-[#4338ca] to-[#1e1b4b]",
+      illustration: "🤖",
+      image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&q=80&w=600",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      desc: isEn 
+        ? "Build production AI agents, fine-tune open-source LLMs, manage vector search databases, and master data analytics."
+        : "এআই সিস্টেমস, এলএলএম ফাইন-টিউনিং ও ডাটা সাইন্সের ওপর ৬ মাসের স্পেশালাইজড ডিপ্লোমা।"
     }
   ], [isEn]);
 
   // Handle URL query parameters from homepage navigation
   useEffect(() => {
-    const courseId = searchParams.get("course") || searchParams.get("track");
     const categoryParam = searchParams.get("category");
-
     if (categoryParam) {
       setActiveCategory(categoryParam);
     }
-
-    if (courseId) {
-      const match = allCourses.find((c) => c.id === courseId);
-      if (match) {
-        setSelectedCourseForModal(match);
-        setActiveCategory(match.category);
-      }
-    }
-  }, [searchParams, allCourses]);
+  }, [searchParams]);
 
   // Filtering & Sorting
   const filteredCourses = useMemo(() => {
@@ -636,8 +692,8 @@ function CoursesContent() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
             >
               {isEn
-                ? "Explore 24+ industry-aligned engineering bootcamps, hands-on live project tracks, and 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready."
-                : "২৪+ প্রফেশনাল লাইভ কোর্স, এন্টারপ্রাইজ প্রজেক্ট ও শীর্ষ ইঞ্জিনিয়ারদের মেন্টরশিপের মাধ্যমে আন্তর্জাতিক জব মার্কেট ও ফ্রিল্যান্সিংয়ের জন্য প্রস্তুত হোন।"}
+                ? `Explore ${COMPANY_STATS.coursesCountFormatted} industry-aligned engineering bootcamps, hands-on live project tracks, and 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready.`
+                : `${COMPANY_STATS.coursesCountBn} প্রফেশনাল লাইভ কোর্স, এন্টারপ্রাইজ প্রজেক্ট ও শীর্ষ ইঞ্জিনিয়ারদের মেন্টরশিপের মাধ্যমে আন্তর্জাতিক জব মার্কেট ও ফ্রিল্যান্সিংয়ের জন্য প্রস্তুত হোন।`}
             </motion.p>
 
             {/* Quick Filter Pill Tags (Popular Topics) */}
@@ -652,11 +708,11 @@ function CoursesContent() {
               </span>
               {[
                 { label: isEn ? "All" : "সকল", cat: "all" },
-                { label: isEn ? "AI & Automation" : "এআই ও অটোমেশন", cat: "ai" },
-                { label: isEn ? "Programming" : "প্রোগ্রামিং", cat: "programming" },
-                { label: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি", cat: "cybersecurity" },
-                { label: isEn ? "Art & Design" : "ডিজাইন", cat: "design" },
-                { label: isEn ? "DevOps & Cloud" : "ক্লাউড ডেভঅপ্স", cat: "networking" },
+                { label: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং", cat: "ai" },
+                { label: isEn ? "Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব", cat: "web" },
+                { label: isEn ? "Cyber Security" : "সাইবার সিকিউরিটি", cat: "cyber" },
+                { label: isEn ? "UI/UX Design" : "ইউআই/ইউএক্স ডিজাইন", cat: "uiux" },
+                { label: isEn ? "DevOps & Cloud" : "ক্লাউড ডেভঅপ্স", cat: "cloud" },
               ].map((topic, tIdx) => (
                 <button
                   key={tIdx}
@@ -683,7 +739,7 @@ function CoursesContent() {
             >
               <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <BookOpen size={14} className="text-[#008744] flex-shrink-0" />
-                <span className="text-xs font-bold text-slate-800">{isEn ? "24+ Live Tracks" : "২৪+ লাইভ ট্র্যাক"}</span>
+                <span className="text-xs font-bold text-slate-800">{isEn ? `${COMPANY_STATS.coursesCountFormatted} Live Tracks` : `${COMPANY_STATS.coursesCountBn} লাইভ ট্র্যাক`}</span>
               </div>
               <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <Star size={14} className="text-amber-500 fill-amber-500 flex-shrink-0" />
@@ -691,7 +747,7 @@ function CoursesContent() {
               </div>
               <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <TrendingUp size={14} className="text-[#DE1F26] flex-shrink-0" />
-                <span className="text-xs font-bold text-slate-800">{isEn ? "94% Placement Rate" : "৯৪% প্লেসমেন্ট রেট"}</span>
+                <span className="text-xs font-bold text-slate-800">{isEn ? `${COMPANY_STATS.placementRateFormatted} Placement Rate` : `${COMPANY_STATS.placementRateBn} প্লেসমেন্ট রেট`}</span>
               </div>
               <div className="flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <Award size={14} className="text-[#008744] flex-shrink-0" />
@@ -945,6 +1001,7 @@ function CoursesContent() {
 
               {/* 2. Course Cards Container */}
               <div className="relative z-10">
+
                 {filteredCourses.length === 0 ? (
                   <div className="bg-white rounded-2xl border border-slate-200/90 p-12 text-center shadow-2xs">
                     <Search size={36} className="mx-auto text-slate-300 mb-3" />
@@ -962,6 +1019,7 @@ function CoursesContent() {
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
                     {filteredCourses.map((course) => {
                       const CatIcon = course.catIcon;
+
                       return (
                         <motion.div
                           key={course.id}
@@ -1070,13 +1128,13 @@ function CoursesContent() {
 
                               {/* Action Buttons Row */}
                               <div className="flex items-center gap-2">
-                                <button
-                                  onClick={() => setSelectedCourseForModal(course)}
+                                <Link
+                                  href={`/courses/${course.id}`}
                                   className="flex-1 py-2.5 px-3 rounded-xl bg-[#008744] hover:bg-[#007038] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
                                 >
                                   <BookOpen size={13} />
                                   <span>{isEn ? "Details" : "বিস্তারিত"}</span>
-                                </button>
+                                </Link>
 
                                 <a
                                   href={`https://wa.me/880171234578?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20course.`}

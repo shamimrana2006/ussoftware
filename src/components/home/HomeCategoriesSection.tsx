@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { 
   Code2, Cpu, Cloud, Shield, Smartphone, Palette, 
-  ArrowUpRight, Database, Terminal, Layers
+  ArrowUpRight, Database, Terminal, Layers, GraduationCap
 } from "lucide-react";
 
 export default function HomeCategoriesSection() {
@@ -97,6 +97,20 @@ export default function HomeCategoriesSection() {
       iconBg: "bg-emerald-50 border-emerald-200/70",
       accent: "#059669",
       skills: ["Figma", "Design Systems", "Prototyping", "UX Research"]
+    },
+    {
+      id: "diploma",
+      title: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
+      desc: isEn 
+        ? "Comprehensive 6-month diploma engineering tracks designed for polytechnic learners & tech career seekers."
+        : "পলিটেকনিক শিক্ষার্থী ও উচ্চাভিলাষী ইঞ্জিনিয়ারদের জন্য ৬ মাসের ইন্ডাস্ট্রি-স্ট্যান্ডার্ড ডিপ্লোমা ট্র্যাক।",
+      icon: GraduationCap,
+      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
+      gradient: "from-red-500/10 via-rose-500/5 to-transparent",
+      iconColor: "text-[#DE1F26]",
+      iconBg: "bg-red-50 border-red-200/70",
+      accent: "#DE1F26",
+      skills: ["Full-Stack", "Cyber & Cloud", "AI & Data Science"]
     }
   ];
 

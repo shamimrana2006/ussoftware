@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import HouseCanvas from "@/components/HouseCanvas";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -18,6 +17,7 @@ import {
   Monitor, Cpu
 } from "lucide-react";
 import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import { COMPANY_STATS } from "@/data/companyStats";
 
 // Reusable Smooth Typewriter Effect with Looping Sentences
 function TypewriterText({
@@ -222,9 +222,9 @@ export default function AboutPage() {
       badge: "AI & 26th Year",
       title: isEn ? "26+ Years of Excellence & AI Hub" : "২৬+ বছরের গৌরব ও এআই টেক হাব",
       desc: isEn
-        ? "Over 5,800+ engineers graduated, 150+ live client deployments, and South Asia's leading Generative AI & Cloud engineering talent pipeline."
-        : "২৬ বছরের সফল অগ্রযাত্রা, ৫,৮০০+ গ্র্যাজুয়েট ও দক্ষিণ এশিয়ার অন্যতম শীর্ষ এআই ও ক্লাউড টেক ইকোসিস্টেম।",
-      highlight: isEn ? "92% Placement Rate Across 14+ Global Hubs" : "৯২% প্লেসমেন্ট রেট সহ দক্ষিণ এশিয়ার শীর্ষ টেক হাব"
+        ? "Over 27,000+ engineers graduated, 150+ live client deployments, and South Asia's leading Generative AI & Cloud engineering talent pipeline."
+        : "২৬ বছরের সফল অগ্রযাত্রা, ২৭,০০০+ গ্র্যাজুয়েট ও দক্ষিণ এশিয়ার অন্যতম শীর্ষ এআই ও ক্লাউড টেক ইকোসিস্টেম।",
+      highlight: isEn ? `${COMPANY_STATS.placementRateFormatted} Placement Rate Across 14+ Global Hubs` : `${COMPANY_STATS.placementRateBn} প্লেসমেন্ট রেট সহ দক্ষিণ এশিয়ার শীর্ষ টেক হাব`
     }
   ];
 
@@ -241,17 +241,17 @@ export default function AboutPage() {
         ? "True prosperity is built on empowering people. We are committed to expanding learning horizons, supporting youth employment, and bridging the gap between ambition and achievement — so everyone can move forward with shared purpose and limitless potential."
         : "মানুষের ক্ষমতায়নের মাধ্যমেই প্রকৃত সাফল্য অর্জিত হয়। আমরা তরুণদের কর্মসংস্থান সৃষ্টি, কারিগরি দক্ষতা বৃদ্ধি এবং লক্ষ্য ও অর্জনের মধ্যবর্তী দূরত্ব ঘুচাতে অঙ্গীকারবদ্ধ।",
       isEn
-        ? "When we established US Software over 26 years ago, technology was an emerging frontier in Bangladesh. Today, we stand proud as an ecosystem that has nurtured over 5,800+ top software developers, cloud architects, and AI practitioners leading digital transformations across global tech hubs."
-        : "২৬ বছর আগে যখন আমরা ইউএস সফটওয়্যারের যাত্রা শুরু করেছিলাম, তখন প্রযুক্তি ছিল এক অপার সম্ভাবনাময় দিগন্ত। আজ আমরা গর্বিত যে আমাদের একাডেমি থেকে ৫,৮০০+ দক্ষ সফটওয়্যার ডেভেলপার, ক্লাউড আর্কিটেক্ট ও এআই এক্সপার্ট তৈরি হয়ে বিশ্বমানের টেক কোম্পানিতে সফলতার সাথে কাজ করছেন।",
+        ? "When we established US Software over 26 years ago, technology was an emerging frontier in Bangladesh. Today, we stand proud as an ecosystem that has nurtured over 27,000+ top software developers, cloud architects, and AI practitioners leading digital transformations across global tech hubs."
+        : "২৬ বছর আগে যখন আমরা ইউএস সফটওয়্যারের যাত্রা শুরু করেছিলাম, তখন প্রযুক্তি ছিল এক অপার সম্ভাবনাময় দিগন্ত। আজ আমরা গর্বিত যে আমাদের একাডেমি থেকে ২৭,০০০+ দক্ষ সফটওয়্যার ডেভেলপার, ক্লাউড আর্কিটেক্ট ও এআই এক্সপার্ট তৈরি হয়ে বিশ্বমানের টেক কোম্পানিতে সফলতার সাথে কাজ করছেন।",
       isEn
         ? "At US Software, every learner works on real client microservices, architectures live systems, and receives intensive 1-on-1 guidance from experienced industry seniors."
         : "ইউএস সফটওয়্যারে প্রতিটি শিক্ষার্থী সরাসরি লাইভ ক্লায়েন্ট প্রজেক্ট, এন্টারপ্রাইজ মাইক্রোসার্ভিসেস ও অভিজ্ঞ সিনিয়রদের ১-অন-১ মেন্টরশিপে কাজ করে নিজেদের প্রস্তুত করে।"
     ],
     stats: [
-      { label: isEn ? "Years Legacy" : "বছরের অভিজ্ঞতা", value: "26+" },
-      { label: isEn ? "Engineers Mentored" : "গ্র্যাজুয়েট শিক্ষার্থী", value: "5,800+" },
-      { label: isEn ? "Enterprise Deployments" : "ক্লায়েন্ট প্রজেক্ট", value: "150+" },
-      { label: isEn ? "Placement Success" : "প্লেসমেন্ট রেট", value: "92%" },
+      { label: isEn ? "Years Legacy" : "বছরের অভিজ্ঞতা", value: isEn ? COMPANY_STATS.yearsLegacyFormatted : COMPANY_STATS.yearsLegacyBn },
+      { label: isEn ? "Engineers Mentored" : "গ্র্যাজুয়েট শিক্ষার্থী", value: isEn ? COMPANY_STATS.studentsCountFormatted : COMPANY_STATS.studentsCountBn },
+      { label: isEn ? "Enterprise Deployments" : "ক্লায়েন্ট প্রজেক্ট", value: isEn ? COMPANY_STATS.enterpriseDeploymentsFormatted : COMPANY_STATS.enterpriseDeploymentsBn },
+      { label: isEn ? "Placement Success" : "প্লেসমেন্ট সেকসেস", value: isEn ? COMPANY_STATS.placementRateFormatted : COMPANY_STATS.placementRateBn },
     ]
   };
 
@@ -293,8 +293,8 @@ export default function AboutPage() {
           {/* Subtle Ambient Sky Orb */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#eaf4f0]/60 blur-3xl pointer-events-none rounded-full" />
 
-          <div className="w-full max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 overflow-visible">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center justify-between overflow-visible">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 overflow-visible">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-between overflow-visible">
 
               {/* ========================================================================= */}
               {/* LEFT COLUMN: NEW ULTRA-PREMIUM DESIGN, ANIMATIONS, TEXT & BADGES          */}
@@ -303,44 +303,44 @@ export default function AboutPage() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="lg:col-span-6 space-y-6 text-left pointer-events-auto max-w-xl"
+                className="lg:col-span-6 space-y-4 text-left pointer-events-auto w-full"
               >
                 
-                {/* 1. Dual Glowing Micro-Badge */}
+                {/* 1. Micro-Badge */}
                 <motion.div 
-                  initial={{ opacity: 0, y: -12 }}
+                  initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="inline-flex items-center gap-2.5 bg-white/90 backdrop-blur-xl border border-emerald-400/50 text-[#008744] px-4 py-2 rounded-full text-xs font-black shadow-[0_4px_20px_rgba(0,135,68,0.12)] hover:border-emerald-500 transition-colors"
+                  className="inline-flex items-center gap-2 bg-emerald-50/90 border border-emerald-300/60 text-[#008744] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-2xs hover:border-emerald-400 transition-colors"
                 >
-                  <span className="relative flex h-2.5 w-2.5">
+                  <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#008744]"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#008744]"></span>
                   </span>
-                  <span className="tracking-wide uppercase text-[11px] font-extrabold text-slate-800">
+                  <span className="tracking-wide uppercase text-[11px] font-bold text-slate-800">
                     {isEn ? "🚀 26+ Years Enterprise IT & AI Leadership" : "🚀 ২৬+ বছরের এন্টারপ্রাইজ আইটি ও এআই লিডারশিপ"}
                   </span>
-                  <Sparkles size={13} className="text-[#DE1F26] animate-pulse" />
+                  <Sparkles size={12} className="text-[#DE1F26] animate-pulse" />
                 </motion.div>
 
-                {/* 2. Brand-New Animated Headline */}
-                <h1 className="tracking-tight leading-[1.06] space-y-2">
-                  {/* Line 1: Architecting Tomorrow's */}
+                {/* 2. Main Title & Subtitle with Distinct Hierarchy */}
+                <h1 className="tracking-tight leading-tight space-y-1.5">
+                  {/* TITLE (Main Big Impact Headline) */}
                   <motion.div 
-                    initial={{ opacity: 0, x: -25 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.15 }}
-                    className="text-4xl sm:text-5xl lg:text-[44px] xl:text-[52px] font-black text-slate-900 tracking-tight"
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="text-3xl sm:text-4xl lg:text-[44px] font-black text-slate-900 tracking-tight leading-[1.1]"
                   >
                     {isEn ? "Architecting Tomorrow's" : "ভবিষ্যতের সফটওয়্যার"}
                   </motion.div>
 
-                  {/* Line 2: Next-Gen Systems (Smooth Looping Typewriter) */}
+                  {/* Animated Typewriter Highlight */}
                   <motion.div 
-                    initial={{ opacity: 0, x: -25 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.25 }}
-                    className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[48px] font-black bg-gradient-to-r from-[#008744] via-[#059669] to-[#0284c7] bg-clip-text text-transparent tracking-tight drop-shadow-sm flex items-center min-h-[1.15em]"
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-3xl sm:text-4xl lg:text-[44px] font-black bg-gradient-to-r from-[#008744] via-[#059669] to-[#0284c7] bg-clip-text text-transparent tracking-tight leading-[1.1] flex items-center min-h-[1.25em]"
                   >
                     <TypewriterText
                       texts={isEn ? [
@@ -362,124 +362,180 @@ export default function AboutPage() {
                     />
                   </motion.div>
 
-                  {/* Line 3: Empowering Global Leaders */}
+                  {/* SUBTITLE (Distinct Secondary Text Size) */}
                   <motion.div 
-                    initial={{ opacity: 0, x: -25 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.35 }}
-                    className="text-4xl sm:text-5xl lg:text-[44px] xl:text-[52px] font-bold text-slate-400 tracking-tight"
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="text-xl sm:text-2xl lg:text-[26px] font-bold text-slate-500 tracking-tight pt-1"
                   >
                     {isEn ? "& Global Tech Leaders" : "গ্লোবাল আইটি লিডারশিপ"}
                   </motion.div>
 
-                  {/* Line 4: with US Software Ltd. + Student Avatars */}
                   <motion.div 
-                    initial={{ opacity: 0, x: -25 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.45 }}
-                    className="text-4xl sm:text-5xl lg:text-[44px] xl:text-[52px] font-black text-[#0f172a] tracking-tight flex items-center gap-3 flex-wrap"
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="text-xl sm:text-2xl lg:text-[26px] font-bold text-slate-800 tracking-tight flex items-center gap-2 flex-wrap"
                   >
                     <span>{isEn ? "with US Software" : "ইউএস সফটওয়্যার লিমিটেড-এ"}</span>
                     <motion.div 
-                      animate={{ y: [0, -5, 0] }}
+                      animate={{ y: [0, -3, 0] }}
                       transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-                      className="inline-flex items-center gap-1.5 bg-emerald-50/90 border border-emerald-200/90 px-3 py-1 rounded-full shadow-xs"
+                      className="inline-flex items-center gap-1.5 bg-emerald-50/90 border border-emerald-200/90 px-2.5 py-0.5 rounded-full shadow-2xs"
                     >
                       <img
                         src="/images/hero-avatars-pill.png"
                         alt="Avatars"
-                        className="h-6 object-contain align-middle"
+                        className="h-4.5 object-contain align-middle"
                       />
-                      <span className="text-[11px] font-black text-[#008744] font-mono">2500+ Grads</span>
+                      <span className="text-[10px] sm:text-[11px] font-bold text-[#008744] font-mono">2500+ Grads</span>
                     </motion.div>
                   </motion.div>
                 </h1>
 
-                {/* 3. New Engaging Subtitle */}
+                {/* 3. Description Body Text (Distinct Body Paragraph) */}
                 <motion.p 
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.55 }}
-                  className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed max-w-lg pt-1"
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-lg pt-1"
                 >
                   {isEn
                     ? "From high-scale cloud platforms to cutting-edge AI labs — we engineer enterprise software systems and empower global tech leaders through 1-on-1 industry mentorship."
                     : "হাই-স্কেল ক্লাউড প্ল্যাটফর্ম থেকে অত্যাধুনিক এআই সিস্টেম — আমরা তৈরি করি এন্টারপ্রাইজ লেভেলের সফটওয়্যার সলিউশন এবং ১-অন-১ ইন্ডাস্ট্রি মেন্টরশিপের মাধ্যমে গড়ে তুলি আগামী দিনের গ্লোবাল টেক লিডার।"}
                 </motion.p>
 
-                {/* 4. Mini Tech Feature Chips */}
+                {/* 4. Mini Feature Chips */}
                 <motion.div 
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.65 }}
-                  className="flex items-center gap-2.5 flex-wrap pt-1"
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="flex items-center gap-2 flex-wrap pt-0.5"
                 >
-                  <span className="inline-flex items-center gap-1.5 bg-white/80 border border-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-bold shadow-2xs">
-                    <Check size={13} className="text-[#008744]" />
+                  <span className="inline-flex items-center gap-1.5 bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-semibold shadow-2xs">
+                    <Check size={12} className="text-[#008744]" />
                     <span>{isEn ? "Enterprise Client Labs" : "এন্টারপ্রাইজ ক্লায়েন্ট ল্যাব"}</span>
                   </span>
-                  <span className="inline-flex items-center gap-1.5 bg-white/80 border border-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-bold shadow-2xs">
-                    <Check size={13} className="text-[#008744]" />
+                  <span className="inline-flex items-center gap-1.5 bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-semibold shadow-2xs">
+                    <Check size={12} className="text-[#008744]" />
                     <span>{isEn ? "1-on-1 Mentorship" : "১-অন-১ ইন্ডাস্ট্রি মেন্টরশিপ"}</span>
                   </span>
-                  <span className="inline-flex items-center gap-1.5 bg-white/80 border border-slate-200 text-slate-700 px-3 py-1 rounded-lg text-xs font-bold shadow-2xs">
-                    <Check size={13} className="text-[#008744]" />
+                  <span className="inline-flex items-center gap-1.5 bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-semibold shadow-2xs">
+                    <Check size={12} className="text-[#008744]" />
                     <span>{isEn ? "Global Career Hub" : "গ্লোবাল ক্যারিয়ার হাব"}</span>
                   </span>
                 </motion.div>
 
-                {/* 5. Clean, Modern & Elegant CTA Buttons */}
+                {/* 5. CTA Buttons */}
                 <motion.div 
-                  initial={{ opacity: 0, y: 18 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.75 }}
-                  className="pt-3 flex items-center gap-3.5 flex-wrap"
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                  className="pt-2 flex items-center gap-3 flex-wrap"
                 >
-                  {/* Primary Solid Emerald Button */}
                   <Link
                     href="/courses"
-                    className="inline-flex items-center gap-2.5 bg-[#008744] hover:bg-[#007038] text-white px-7.5 py-3.5 rounded-xl font-extrabold text-sm sm:text-[15px] shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer group"
+                    className="inline-flex items-center gap-2 bg-[#008744] hover:bg-[#007038] text-white px-5 sm:px-6 py-2.5 rounded-lg font-bold text-xs sm:text-sm shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer group"
                   >
                     <span>{isEn ? "Explore Solutions & Courses" : "কোর্স ও সলিউশনগুলো দেখুন"}</span>
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
 
-                  {/* Secondary White Minimal Glass Button */}
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 hover:border-slate-300 px-7 py-3.5 rounded-xl font-bold text-sm sm:text-[15px] shadow-2xs transition-all duration-200 cursor-pointer"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/90 hover:border-slate-300 px-5 sm:px-6 py-2.5 rounded-lg font-semibold text-xs sm:text-sm shadow-2xs transition-all duration-200 cursor-pointer"
                   >
                     <span>{isEn ? "Contact Mentors" : "মেন্টরদের সাথে কথা বলুন"}</span>
                   </Link>
                 </motion.div>
 
-                {/* 6. Rating & Trust Footnote */}
+                {/* 6. Rating Footnote */}
                 <motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.85 }}
-                  className="pt-2 flex items-center gap-3 text-xs font-bold text-slate-500"
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className="pt-1 flex items-center gap-2.5 text-[11px] sm:text-xs font-semibold text-slate-500"
                 >
-                  <div className="flex items-center gap-1 text-amber-400">
-                    <Star size={14} className="fill-amber-400 text-amber-400" />
-                    <Star size={14} className="fill-amber-400 text-amber-400" />
-                    <Star size={14} className="fill-amber-400 text-amber-400" />
-                    <Star size={14} className="fill-amber-400 text-amber-400" />
-                    <Star size={14} className="fill-amber-400 text-amber-400" />
+                  <div className="flex items-center gap-0.5 text-amber-400">
+                    <Star size={13} className="fill-amber-400 text-amber-400" />
+                    <Star size={13} className="fill-amber-400 text-amber-400" />
+                    <Star size={13} className="fill-amber-400 text-amber-400" />
+                    <Star size={13} className="fill-amber-400 text-amber-400" />
+                    <Star size={13} className="fill-amber-400 text-amber-400" />
                   </div>
                   <span>{isEn ? "4.9/5 Rating by 2,500+ Tech Leaders" : "৪.৯/৫ রেটিং (২,৫০০+ সফল শিক্ষার্থী ও গ্র্যাজুয়েট)"}</span>
                 </motion.div>
 
               </motion.div>
 
-              {/* RIGHT COLUMN: DEDICATED 3D HOUSE CANVAS CONTAINER (6 COLS) */}
+              {/* RIGHT COLUMN: 2-COLUMN SHOWCASE (COL 1: 2 STACKED IMAGES, COL 2: FULL IMAGE) */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="lg:col-span-6 w-full h-[550px] sm:h-[650px] lg:h-[750px] relative pointer-events-auto overflow-visible"
+                className="lg:col-span-6 w-full relative pointer-events-auto grid grid-cols-1 sm:grid-cols-2 gap-2.5"
               >
-                <HouseCanvas className="w-full h-full overflow-visible" posX={0} posY={-0.65} />
+                {/* Column 1: 2 Stacked Images */}
+                <div className="flex flex-col gap-2.5 h-full">
+                  {/* Image 1: 1-on-1 Mentorship */}
+                  <motion.div
+                    whileHover={{ y: -2, scale: 1.005 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative group rounded-xl overflow-hidden shadow-sm border border-slate-200/80 bg-white flex-1 min-h-[175px] sm:min-h-[210px]"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
+                      alt="1-on-1 Mentorship"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-3.5">
+                      <span className="text-white text-xs sm:text-sm font-bold tracking-tight">
+                        {isEn ? "1-on-1 Senior Mentorship" : "১-অন-১ এক্সপার্ট মেন্টরশিপ"}
+                      </span>
+                    </div>
+                  </motion.div>
+
+                  {/* Image 2: Production Code & Architecture */}
+                  <motion.div
+                    whileHover={{ y: -2, scale: 1.005 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative group rounded-xl overflow-hidden shadow-sm border border-slate-200/80 bg-white flex-1 min-h-[175px] sm:min-h-[210px]"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800"
+                      alt="Production Code & Architecture"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-3.5">
+                      <span className="text-white text-xs sm:text-sm font-bold tracking-tight">
+                        {isEn ? "Real-World Projects & Code" : "রিয়েল-ওয়ার্ল্ড প্রজেক্টস ও কোডিং"}
+                      </span>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Column 2: Full-Height Featured Image */}
+                <motion.div
+                  whileHover={{ y: -2, scale: 1.005 }}
+                  transition={{ duration: 0.2 }}
+                  className="relative group rounded-xl overflow-hidden shadow-md border border-slate-200/80 bg-white h-full min-h-[360px] sm:min-h-[430px]"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000"
+                    alt="High-Performance AI & Cloud Labs"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex flex-col justify-end p-4 sm:p-5">
+                    <span className="inline-flex items-center gap-1.5 bg-[#008744]/90 backdrop-blur-md text-white text-xs font-bold px-2.5 py-0.5 rounded-full w-fit mb-1.5 shadow-sm">
+                      <Sparkles size={12} />
+                      {isEn ? "AI & Cloud Engineering Hub" : "এআই ও ক্লাউড ইঞ্জিনিয়ারিং হাব"}
+                    </span>
+                    <h3 className="text-white text-base sm:text-lg font-bold tracking-tight">
+                      {isEn ? "State-of-the-Art Software Labs" : "স্টেট-অফ-দ্য-আর্ট সফটওয়্যার ল্যাব"}
+                    </h3>
+                  </div>
+                </motion.div>
               </motion.div>
 
             </div>

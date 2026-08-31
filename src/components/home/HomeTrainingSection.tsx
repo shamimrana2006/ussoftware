@@ -117,11 +117,8 @@ export default function HomeTrainingSection() {
           </motion.p>
         </div>
 
-        {/* 4-PHASE PROGRESSION GRID: Scale up on hover + Animated Serial Numbers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative">
-          
-          {/* Connecting Line behind items on desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-10 right-10 h-0.5 bg-gradient-to-r from-[#008744] via-slate-300 to-[#DE1F26] -z-0 transform -translate-y-10 opacity-30" />
+        {/* 4-PHASE PROGRESSION GRID: 2x2 Layout (2 per row) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 relative max-w-4xl mx-auto">
 
           {methodologySteps.map((item, idx) => {
             const Icon = item.icon;
@@ -132,7 +129,7 @@ export default function HomeTrainingSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="group relative bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-slate-300 hover:scale-104 hover:-translate-y-1.5 transition-all duration-300 z-10 flex flex-col justify-between cursor-pointer overflow-hidden"
+                className="group relative bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)] hover:border-slate-300 transition-all duration-300 z-10 flex flex-col justify-between cursor-pointer overflow-hidden"
               >
                 {/* Dual Border Indicator Lines on Hover */}
                 {/* 1. Left Border: Bottom to Top increment (Slim 2px) */}
@@ -147,7 +144,7 @@ export default function HomeTrainingSection() {
                 <div>
                   {/* Step Number & Icon Header */}
                   <div className="flex items-center justify-between mb-4">
-                    {/* Animated Step Serial Number */}
+                    {/* Animated Step Serial Number: Rotates and Scales Up on Hover */}
                     <div className="relative flex items-center gap-1.5">
                       <motion.span 
                         animate={{ 
@@ -159,7 +156,7 @@ export default function HomeTrainingSection() {
                           repeat: Infinity, 
                           ease: "easeInOut" 
                         }}
-                        className="inline-block text-2xl sm:text-3xl font-black font-mono tracking-tight text-slate-300 group-hover:text-[#008744] group-hover:scale-110 transition-all duration-300 select-none"
+                        className="inline-block text-2xl sm:text-3xl font-black font-mono tracking-tight text-slate-300 group-hover:text-[#008744] group-hover:scale-125 group-hover:-rotate-12 transition-all duration-300 transform-gpu origin-center select-none"
                       >
                         {item.step}
                       </motion.span>

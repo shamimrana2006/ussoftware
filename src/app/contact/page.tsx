@@ -182,7 +182,7 @@ export default function ContactPage() {
 
               <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <Building2 size={14} className="text-[#008744] flex-shrink-0" />
-                <span className="text-xs font-bold text-slate-800">{isEn ? "Panthapath, Dhaka" : "পান্থপথ, ঢাকা"}</span>
+                <span className="text-xs font-bold text-slate-800">{isEn ? "Metro Shopping Mall, Dhaka" : "মেট্রো শপিং মল, ধানমন্ডি"}</span>
               </div>
 
               <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
@@ -415,7 +415,7 @@ export default function ContactPage() {
                 <div className="space-y-4 text-sm sm:text-base text-slate-700 w-full pl-2 font-medium">
                   <div className="flex items-center space-x-3.5">
                     <MapPin size={18} className="text-[#008744] flex-shrink-0" />
-                    <span className="font-bold text-slate-800">Panthapath, Dhanmondi, Dhaka, Bangladesh</span>
+                    <span className="font-bold text-slate-800">Metro Shopping Mall, Mirpur Road, Dhanmondi, Dhaka 1205</span>
                   </div>
 
                   <div className="flex items-center space-x-3.5">
@@ -470,7 +470,7 @@ export default function ContactPage() {
                       {isEn ? "U S Software Limited Campus" : "ইউএস সফটওয়্যার লিমিটেড ক্যাম্পাস"}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-                      {isEn ? "Panthapath, Dhanmondi, Dhaka" : "পান্থপথ, ধানমন্ডি, ঢাকা"}
+                      {isEn ? "Metro Shopping Mall, Mirpur Road, Dhanmondi" : "মেট্রো শপিং মল, মিরপুর রোড, ধানমন্ডি"}
                     </p>
                   </div>
                 </div>
@@ -495,7 +495,7 @@ export default function ContactPage() {
               {/* Embedded Google Map iframe */}
               <div className="w-full h-[320px] sm:h-[360px] rounded-3xl overflow-hidden relative border border-slate-200 shadow-inner">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26029.645132847898!2d90.36776395155285!3d23.741634842481364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bb51884d03%3A0xa8faf6fd1f993941!2sU%20S%20Software%20Limited!5e0!3m2!1sen!2sbd!4v1787391961224!5m2!1sen!2sbd" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9026348123284!2d90.3746903759082!3d23.752379578668478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ad9fa517b1%3A0x35432872356d26a0!2sMetro%20Shopping%20Mall!5e0!3m2!1sen!2sbd!4v1787392500000!5m2!1sen!2sbd" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -503,7 +503,7 @@ export default function ContactPage() {
                   loading="lazy" 
                   referrerPolicy="strict-origin-when-cross-origin"
                   className="w-full h-full absolute inset-0"
-                  title="U S Software Limited Google Map Location"
+                  title="U S Software Limited Metro Shopping Mall Location"
                 />
 
                 {/* Floating Overlay Badge on Map */}
@@ -513,7 +513,7 @@ export default function ContactPage() {
                     <span>U S Software Limited</span>
                   </div>
                   <p className="text-xs text-slate-500 font-medium mt-0.5">
-                    {isEn ? "Level 7, Innovation Tower" : "লেভেল ৭, ইনোভেশন টাওয়ার"}
+                    {isEn ? "Metro Shopping Mall, Dhanmondi" : "মেট্রো শপিং মল, ধানমন্ডি"}
                   </p>
                 </div>
               </div>
@@ -523,7 +523,7 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-2">
                   <MapPin size={17} className="text-[#008744] flex-shrink-0" />
                   <span className="text-xs sm:text-sm font-bold text-slate-800">
-                    {isEn ? "Panthapath, Dhaka-1205" : "পান্থপথ, ধানমন্ডি, ঢাকা"}
+                    {isEn ? "Metro Shopping Mall, Dhanmondi, Dhaka-1205" : "মেট্রো শপিং মল, ধানমন্ডি, ঢাকা-১২০৫"}
                   </span>
                 </div>
 
@@ -539,7 +539,7 @@ export default function ContactPage() {
                   </a>
 
                   <a
-                    href="https://maps.google.com/?cid=12176461947230493057"
+                    href="https://maps.app.goo.gl/GuULRR3xP9ZaJs8E9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-1.5 bg-[#008744] hover:bg-[#007038] text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"

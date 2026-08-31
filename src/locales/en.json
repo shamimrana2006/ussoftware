@@ -4,7 +4,7 @@
     "home": "Home",
     "courses": "Courses",
     "services": "Services",
-    "projects": "Projects",
+    "projects": "Success Story",
     "mentors": "Mentors",
     "about": "About",
     "contact": "Contact",
@@ -15,8 +15,8 @@
   },
   "hero": {
     "badge": "Step Into The Industry",
-    "title1": "Empower Your Future With",
-    "title2": "IT Skills",
+    "title1": "Empower Your Future",
+    "title2": "US Software LTD",
     "subtitle": "Don't just learn—build production-grade applications. Work alongside industry experts and gain the practical experience needed to thrive in the global software market.",
     "ourServices": "Explore Programs",
     "contactUs": "Join Now",
@@ -38,12 +38,12 @@
       },
       "students": {
         "title": "Students",
-        "value": "6,200+",
+        "value": "27,000+",
         "desc": "Building Skills"
       },
       "placement": {
         "title": "Placement",
-        "value": "92%",
+        "value": "70%",
         "desc": "Career Success"
       }
     }

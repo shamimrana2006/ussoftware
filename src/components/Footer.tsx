@@ -128,163 +128,6 @@ export default function Footer() {
         className="absolute bottom-10 left-10 w-96 h-96 bg-[#DE1F26]/8 rounded-full blur-[120px] pointer-events-none" 
       />
       <div className="absolute inset-0 bg-[radial-gradient(#0087440d_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-
-      {/* 1. TOP CUTE & COMPACT 3D HANGING/SWINGING CARD WITH INFINITE FLOAT */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10 [perspective:1400px]">
-        <motion.div
-          animate={{
-            y: [0, -6, 0],
-          }}
-          transition={{
-            duration: 4.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{
-            rotateX,
-            rotateY,
-            x: cardTranslateX,
-            transformStyle: "preserve-3d",
-          }}
-          className="relative rounded-[28px] p-[2px] overflow-hidden group/card shadow-[0_16px_40px_rgba(0,135,68,0.16)] hover:shadow-[0_22px_55px_rgba(0,135,68,0.30)] transition-shadow duration-300"
-        >
-          {/* CONTINUOUS INFINITE SHIMMER LIGHT BEAM */}
-          <motion.div
-            animate={{
-              x: ["-100%", "200%"],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 pointer-events-none z-20"
-          />
-
-          {/* ANIMATED GLOWING BORDER */}
-          <div className="absolute inset-0 rounded-[28px] bg-gradient-to-r from-[#008744] via-emerald-300 via-[#DE1F26] to-[#008744] bg-[length:200%_200%] opacity-40 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none" />
-          
-          {/* Static Border Fallback */}
-          <div className="absolute inset-0 rounded-[28px] border border-white/35 group-hover/card:opacity-0 transition-opacity pointer-events-none" />
-
-          {/* Card Inner Content */}
-          <div className="relative rounded-[26px] bg-gradient-to-r from-[#008744] via-[#056839] to-[#034d28] text-white py-5 px-6 sm:py-6 sm:px-8 overflow-hidden">
-            {/* Ambient Corner Soft Glows */}
-            <div className="absolute -top-10 -right-10 w-44 h-44 bg-white/15 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute -bottom-8 -left-8 w-36 h-36 bg-[#DE1F26]/20 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
-
-            <div
-              style={{ transform: "translateZ(25px)", transformStyle: "preserve-3d" }}
-              className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6"
-            >
-              {/* Left Side: Super Cute Friendly Mascot & Speech Bubble */}
-              <div
-                style={{ transform: "translateZ(40px)", transformStyle: "preserve-3d" }}
-                className="flex items-center space-x-3.5 flex-shrink-0"
-              >
-                {/* Cute Floating Bot Mascot */}
-                <motion.div
-                  animate={{
-                    y: [-3, 3, -3],
-                    rotate: [-2, 2, -2],
-                  }}
-                  transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
-                  whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
-                  className="relative w-14 h-14 rounded-2xl bg-gradient-to-tr from-white via-slate-100 to-emerald-100 p-1 shadow-lg flex items-center justify-center flex-shrink-0 cursor-pointer"
-                >
-                  {/* Little Antenna Dot */}
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yellow-300 animate-ping opacity-80" />
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yellow-400" />
-
-                  {/* Robot Screen Face */}
-                  <div className="w-full h-full bg-[#081520] rounded-xl flex flex-col items-center justify-center p-1 relative overflow-hidden">
-                    {/* Glowing Eyes */}
-                    <div className="flex space-x-2">
-                      <motion.div
-                        animate={{ scaleY: [1, 1, 0.1, 1] }}
-                        transition={{ duration: 3.2, repeat: Infinity, times: [0, 0.85, 0.9, 1] }}
-                        className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"
-                      />
-                      <motion.div
-                        animate={{ scaleY: [1, 1, 0.1, 1] }}
-                        transition={{ duration: 3.2, repeat: Infinity, times: [0, 0.85, 0.9, 1] }}
-                        className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"
-                      />
-                    </div>
-                    {/* Tiny Smile */}
-                    <div className="w-2.5 h-1 border-b-2 border-emerald-400/80 rounded-full mt-1" />
-                  </div>
-                </motion.div>
-
-                {/* Cute Text & Pill Tag */}
-                <div>
-                  <div className="inline-flex items-center space-x-1 bg-white/20 border border-white/30 text-emerald-100 px-2 py-0.5 rounded-full text-[10px] font-bold">
-                    <Sparkles size={10} className="text-yellow-300" />
-                    <span>{isEn ? "STAY SMART" : "স্মার্ট থাকুন"}</span>
-                  </div>
-                  <h3 className="text-base sm:text-lg font-black text-white tracking-tight mt-0.5 flex items-center gap-1.5">
-                    <span>{isEn ? "Join 6,200+ Developers" : "৬,২০০+ ডেভেলপারদের সাথে যুক্ত হন"}</span>
-                    <motion.span
-                      animate={{ rotate: [0, 20, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      ✨
-                    </motion.span>
-                  </h3>
-                  <p className="text-[11px] text-emerald-100 font-medium">
-                    {isEn ? "Get tech insights & exclusive perks" : "টেক টিপস ও স্কলারশিপ আপডেট পান"}
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Side: Cute Compact Pill Input Bar */}
-              <div
-                style={{ transform: "translateZ(30px)" }}
-                className="w-full sm:w-auto flex-1 max-w-sm"
-              >
-                {isSubscribed ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="flex items-center justify-center space-x-1.5 bg-white/25 border border-white/40 text-white px-3.5 py-2 rounded-full backdrop-blur-md font-bold text-xs shadow-xs"
-                  >
-                    <CheckCircle2 size={14} className="text-emerald-300" />
-                    <span>{isEn ? "Welcome aboard! 🎉" : "যুক্ত হওয়ার জন্য ধন্যবাদ! 🎉"}</span>
-                  </motion.div>
-                ) : (
-                  <form
-                    onSubmit={handleSubscribe}
-                    className="relative flex items-center bg-white/20 hover:bg-white/25 focus-within:bg-white/30 border border-white/35 rounded-full p-1 backdrop-blur-md shadow-inner transition-all"
-                  >
-                    <div className="pl-3 pr-1.5 text-white/80 flex items-center pointer-events-none">
-                      <Mail size={14} />
-                    </div>
-
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder={isEn ? "Your email..." : "আপনার ইমেইল..."}
-                      required
-                      className="w-full bg-transparent text-white placeholder-white/70 text-xs font-medium outline-none pr-20"
-                    />
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="absolute right-1 top-1 bottom-1 bg-white hover:bg-emerald-50 text-[#008744] hover:text-[#056839] px-3.5 sm:px-4 rounded-full font-black text-[11px] shadow-sm transition-all flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95"
-                    >
-                      <span>{isSubmitting ? "..." : isEn ? "Join" : "যুক্ত হন"}</span>
-                    </button>
-                  </form>
-                )}
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
       {/* 2. MAIN 5-COLUMN FOOTER SECTION WITH LIVELY MICRO-ANIMATIONS */}
       <div className="max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-10 pt-16 pb-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
@@ -295,7 +138,7 @@ export default function Footer() {
               <img
                 src="/logo/logo.png"
                 alt="US Software LTD"
-                className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-11 sm:h-13 lg:h-14 xl:h-[60px] w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
 
@@ -513,7 +356,7 @@ export default function Footer() {
 
               <li className="flex items-start space-x-2 pt-1 text-slate-500 text-[11px] leading-relaxed">
                 <MapPin size={13} className="text-slate-400 shrink-0 mt-0.5" />
-                <span>Level 7, Innovation Tower, Panthapath, Dhaka</span>
+                <span>Metro Shopping Mall, Mirpur Road, Dhanmondi, Dhaka 1205</span>
               </li>
             </ul>
           </div>

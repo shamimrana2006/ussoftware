@@ -226,33 +226,6 @@ export default function HomeCoursesSection() {
           </motion.p>
         </div>
 
-        {/* 2. STATS PILL ROW */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 mb-6"
-        >
-          <div className="bg-white border border-slate-200/80 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-2xs text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#008744] animate-pulse" />
-            <span className="font-extrabold text-[#08121a]">50+</span>
-            <span className="text-slate-500">{isEn ? "Courses" : "কোর্স"}</span>
-          </div>
-
-          <div className="bg-white border border-slate-200/80 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-2xs text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-            <span className="font-extrabold text-[#08121a]">6,200+</span>
-            <span className="text-slate-500">{isEn ? "Students" : "শিক্ষার্থী"}</span>
-          </div>
-
-          <div className="bg-white border border-slate-200/80 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-2xs text-[11px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#DE1F26] animate-pulse" />
-            <span className="font-extrabold text-emerald-700">92%</span>
-            <span className="text-slate-500">{isEn ? "Placed" : "সাফল্য"}</span>
-          </div>
-        </motion.div>
-
         {/* 3. SLEEK CATEGORY TABS */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -384,10 +357,10 @@ export default function HomeCoursesSection() {
                       </div>
 
                       <Link
-                        href={`/courses?course=${course.id}`}
+                        href={`/courses/${course.id}`}
                         className="inline-flex items-center gap-1 bg-[#08121a] hover:bg-[#008744] text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-2xs transition-colors group/btn"
                       >
-                        <span>{isEn ? "Syllabus" : "সিলেবাস"}</span>
+                        <span>{isEn ? "Details" : "বিস্তারিত"}</span>
                         <ArrowRight size={11} className="group-hover/btn:translate-x-0.5 transition-transform" />
                       </Link>
                     </div>

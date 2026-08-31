@@ -12,6 +12,7 @@ import {
   Code2, Cpu, Smartphone, Cloud, Layers
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { COMPANY_STATS } from "@/data/companyStats";
 
 const GithubIcon = ({ size = 15, className = "" }: { size?: number, className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -304,7 +305,7 @@ export default function ProjectsPage() {
               <div className="bg-white/95 backdrop-blur-xs p-3 sm:p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs text-center">
                 <div className="flex items-center justify-center gap-1.5 text-xs sm:text-sm font-black text-slate-900 mb-0.5">
                   <Users size={14} className="text-[#008744]" />
-                  <span>4,200+</span>
+                  <span>{isEn ? COMPANY_STATS.studentsCountFormatted : COMPANY_STATS.studentsCountBn}</span>
                 </div>
                 <div className="text-[10px] sm:text-[11px] font-semibold text-slate-500">{isEn ? "Successful Students" : "সফল শিক্ষার্থী"}</div>
               </div>
@@ -312,7 +313,7 @@ export default function ProjectsPage() {
               <div className="bg-white/95 backdrop-blur-xs p-3 sm:p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs text-center">
                 <div className="flex items-center justify-center gap-1.5 text-xs sm:text-sm font-black text-[#008744] mb-0.5">
                   <Award size={14} className="text-[#008744]" />
-                  <span>92%</span>
+                  <span>{isEn ? COMPANY_STATS.placementRateFormatted : COMPANY_STATS.placementRateBn}</span>
                 </div>
                 <div className="text-[10px] sm:text-[11px] font-semibold text-slate-500">{isEn ? "Placement Rate" : "প্লেসমেন্ট রেট"}</div>
               </div>

@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants, Transition } from "framer-motion";
-import { ArrowRight, Rocket, Cpu, Users, LineChart, BookOpen, Award, Play, Star } from "lucide-react";
+import { ArrowRight, Rocket, Cpu, Users, LineChart, BookOpen, Play } from "lucide-react";
 import {
   RiCodeSSlashLine,
   RiCpuLine,
@@ -12,6 +12,7 @@ import {
 } from "react-icons/ri";
 import RobotCanvas from "./RobotCanvas";
 import Link from "next/link";
+import { COMPANY_STATS } from "@/data/companyStats";
 
 const SparkleIcon = ({ size = 24, className, style }: { size?: number | string; className?: string; style?: React.CSSProperties }) => (
   <svg
@@ -329,11 +330,11 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] pointer-events-none"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(8,18,26,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(8,18,26,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
-      <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-14 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center relative z-10">
 
         {/* LEFT COMPONENT: AI Video Hub */}
         <div className="relative h-[280px] sm:h-[360px] lg:h-[450px] w-full flex items-center justify-center order-2 lg:order-1 mt-4 lg:mt-0">
-          <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-[16/10] flex items-center justify-center">
+          <div className="relative w-full max-w-[520px] aspect-[16/10] flex items-center justify-center">
             
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
               <div className="absolute -top-12 -left-10 w-64 h-64 bg-[#DE1F26]/16 rounded-full blur-[65px] animate-pulse duration-[6000ms] transform-gpu" />
@@ -349,31 +350,7 @@ export default function HeroSection() {
               <RobotCanvas />
             </div>
 
-            {/* Floating Review Badge */}
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-              whileHover={{ scale: 1.05, y: -3 }}
-              className="absolute -top-6 sm:-top-8 -right-4 sm:-right-8 lg:-right-10 z-30 bg-white/95 backdrop-blur-xl border border-[#DE1F26]/30 p-2.5 sm:p-3 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.12)] flex items-center gap-3 scale-[0.85] sm:scale-95 lg:scale-100 origin-top-right cursor-default transition-shadow hover:shadow-[0_20px_45px_rgba(222,31,38,0.2)] transform-gpu"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#DE1F26] to-rose-500 text-white flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(222,31,38,0.35)]">
-                <Award size={22} />
-              </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={11} className="text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="text-[11px] font-bold text-slate-800 ml-1">4.9/5</span>
-                </div>
-                <p className="text-xs sm:text-[13px] font-bold text-slate-900 mt-0.5 tracking-tight">
-                  {language === 'bn' ? 'বাস্তব প্রজেক্ট ও পোর্টফোলিও' : '100% Job-Ready Projects'}
-                </p>
-                <p className="text-[10px] text-slate-500 font-medium">
-                  {language === 'bn' ? '৫০+ রিয়েল-ওয়ার্ল্ড প্রজেক্টস' : '50+ Practical Deliverables'}
-                </p>
-              </div>
-            </motion.div>
+
 
             {/* Video Player */}
             <motion.div
@@ -429,25 +406,32 @@ export default function HeroSection() {
             <span className="text-[10px] sm:text-xs font-semibold text-[#08121a] uppercase tracking-wider">{t.hero.badge}</span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="text-xl sm:text-2xl lg:text-[26px] xl:text-[30px] font-bold text-[#08121a] leading-tight tracking-tight flex flex-wrap items-baseline gap-x-2 gap-y-1">
-            <span className="inline-block font-bold whitespace-nowrap">{t.hero.title1}</span>
-            <span className="relative inline-block font-bold whitespace-nowrap">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744]">
-                {t.hero.title2}
-              </span>
-              <svg className="absolute w-full h-[8px] bottom-[-2px] left-0 text-[#008744]/40" viewBox="0 0 200 12" preserveAspectRatio="none">
-                <motion.path
-                  d="M2,10 Q100,0 198,8"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
-                />
-              </svg>
+          <motion.h1 variants={itemVariants} className="font-semibold text-[#08121a] leading-tight tracking-tight space-y-0 max-w-full">
+            <span className="block text-3xl sm:text-4xl md:text-[40px] lg:text-[46px] xl:text-[52px] font-semibold text-[#08121a] tracking-tight leading-tight whitespace-nowrap">
+              {t.hero.title1}
             </span>
+            <div className="flex items-center gap-2 sm:gap-2.5 whitespace-nowrap mt-0.5 sm:mt-1">
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-[28px] xl:text-[34px] font-semibold text-[#08121a]">
+                With
+              </span>
+              <span className="relative inline-block text-lg sm:text-xl md:text-2xl lg:text-[28px] xl:text-[34px] font-bold tracking-tight leading-none whitespace-nowrap">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744]">
+                  {t.hero.title2}
+                </span>
+                <svg className="absolute w-full h-[7px] sm:h-[10px] bottom-[-2px] sm:bottom-[-4px] left-0 text-[#008744]/50" viewBox="0 0 200 12" preserveAspectRatio="none">
+                  <motion.path
+                    d="M2,10 Q100,0 198,8"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    fill="none"
+                    strokeLinecap="round"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{ pathLength: 1, opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+                  />
+                </svg>
+              </span>
+            </div>
           </motion.h1>
 
           <motion.div variants={itemVariants}>
@@ -495,7 +479,7 @@ export default function HeroSection() {
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#08121a] group-hover:text-[#008744] leading-none tabular-nums tracking-tight transition-colors">
-                  <Counter end={43} suffix="+" />
+                  <Counter end={COMPANY_STATS.coursesCount} suffix="+" />
                 </h3>
                 <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider mt-1 whitespace-nowrap">
                   {t.hero.stats.courses.title}
@@ -513,7 +497,7 @@ export default function HeroSection() {
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#08121a] group-hover:text-[#DE1F26] leading-none tabular-nums tracking-tight transition-colors">
-                  <Counter end={4700} suffix="+" />
+                  <Counter end={COMPANY_STATS.studentsCount} suffix="+" />
                 </h3>
                 <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider mt-1 whitespace-nowrap">
                   {t.hero.stats.students.title}
@@ -531,7 +515,7 @@ export default function HeroSection() {
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#08121a] group-hover:text-[#008744] leading-none tabular-nums tracking-tight transition-colors">
-                  <Counter end={70} suffix="%" />
+                  <Counter end={COMPANY_STATS.placementRate} suffix="%" />
                 </h3>
                 <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider mt-1 whitespace-nowrap">
                   {t.hero.stats?.placement?.title || "Placement Rate"}

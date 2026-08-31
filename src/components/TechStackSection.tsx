@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -21,7 +20,7 @@ export default function TechStackSection() {
   return (
     <section className="py-20 bg-[#08121a] overflow-hidden relative">
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 text-center mb-12 relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -33,14 +32,14 @@ export default function TechStackSection() {
             <span>আমাদের ব্যবহৃত <span className="text-[#008744]">প্রযুক্তি</span></span>
           )}
         </motion.h2>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
           className="text-slate-400 max-w-2xl mx-auto font-normal"
         >
-          {isEn 
+          {isEn
             ? "We leverage the latest and most powerful technologies to build robust, scalable, and secure applications."
             : "আমরা আধুনিক এবং শক্তিশালী প্রযুক্তি ব্যবহার করে সেরা মানের অ্যাপ্লিকেশন তৈরি করি।"}
         </motion.p>
@@ -58,7 +57,7 @@ export default function TechStackSection() {
             </div>
           ))}
         </div>
-        
+
         {/* Gradient Edges for smooth fade out */}
         <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#08121a] to-transparent z-10 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#08121a] to-transparent z-10 pointer-events-none"></div>
@@ -66,3 +65,6 @@ export default function TechStackSection() {
     </section>
   );
 }
+
+
+

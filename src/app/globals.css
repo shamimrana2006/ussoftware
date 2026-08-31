@@ -22,10 +22,23 @@
 }
 
 html {
+  font-size: 17px;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 17.5px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 /* Pre-hydration Instant Loading Screen Shield (prevents any millisecond flash of homepage content) */

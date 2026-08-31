@@ -188,7 +188,7 @@ export default function CanvasPage() {
 
                   <div className="absolute inset-0 flex items-center justify-center transform-style-3d pointer-events-none">
                     {Array.from({ length: 4 }).map((_, i) => (
-                      <img key={`logo-ext-${i}`} src="/logo/us software logo.png" alt="US Logo" className={`absolute w-[130px] h-[130px] object-cover object-left ${i === 3 ? 'drop-shadow-[0_15px_20px_rgba(0,135,68,0.6)]' : 'brightness-0 invert opacity-[0.4] blur-[0.5px]'}`} style={{ transform: `translateZ(${8 + i * 8}px)` }} />
+                      <img key={`logo-ext-${i}`} src="/logo/us software logo.png" alt="US Logo" className={`absolute w-[165px] h-[165px] object-cover object-left ${i === 3 ? 'drop-shadow-[0_15px_20px_rgba(0,135,68,0.6)]' : 'brightness-0 invert opacity-[0.4] blur-[0.5px]'}`} style={{ transform: `translateZ(${8 + i * 8}px)` }} />
                     ))}
                   </div>
 
