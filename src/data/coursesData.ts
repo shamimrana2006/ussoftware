@@ -931,7 +931,7 @@ export const coursesData: CourseDetail[] = [
     originalFee: "25000৳",
     duration: { en: "3 Months", bn: "৩ মাস" },
     classesCount: { en: "24 Classes", bn: "২৪ টি ক্লাস" },
-    image: "/images/course thumbnail/diploma in full stack.png",
+    image: "/images/course thumbnail/wordpress.jpg",
     videoUrl: "https://www.youtube.com/embed/wm5gMKuwSYk?autoplay=1",
     whatsappLink: "https://wa.me/8801995852964?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%22Professional%20WordPress%20Development%22%20%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A6%9F%E0%A6%BF%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4",
     instructor: {
@@ -1631,7 +1631,7 @@ export const coursesData: CourseDetail[] = [
     originalFee: "15000৳",
     duration: { en: "3 Months", bn: "৩ মাস" },
     classesCount: { en: "24 Classes", bn: "২৪ টি ক্লাস" },
-    image: "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    image: "/images/course thumbnail/wordpress.jpg",
     videoUrl: "https://www.youtube.com/embed/wm5gMKuwSYk?autoplay=1",
     whatsappLink: "https://wa.me/8801995852964?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%22Professional%20WordPress%20Development%20(Online)%22%20%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A6%9F%E0%A6%BF%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4",
     instructor: {
