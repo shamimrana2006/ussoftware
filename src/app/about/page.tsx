@@ -260,19 +260,19 @@ export default function AboutPage() {
       title: isEn ? "High-Performance AI & Cloud Labs" : "হাই-পারফরম্যান্স এআই ও ক্লাউড ল্যাব",
       desc: isEn ? "Equipped with dedicated workstation GPUs, dual-monitor desks, and multi-cloud Kubernetes sandbox servers." : "ডেডিকেটেড জিপিইউ ওয়ার্কস্টেশন, ডুয়াল-মনিটর সেটআপ ও কুবারনেটিস ক্লাউড সার্ভার সমন্বিত আধুনিক ল্যাব।",
       icon: Cpu,
-      img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600"
+      img: "/images/about/about-lab-session.png"
     },
     {
       title: isEn ? "Collaborative Open Studio & Coworking" : "ওপেন কো-ওয়ার্কিং স্টুডিও ও ব্রেনস্টর্মিং জোন",
       desc: isEn ? "Spacious interactive open spaces designed for sprint planning, agile standups, and peer code reviews." : "স্প্রিন্ট প্ল্যানিং, এজাইল স্ট্যান্ডআপ ও পিয়ার কোড রিভিউয়ের জন্য উন্মুক্ত কোলাবোরেটিভ জোন।",
       icon: Users,
-      img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600"
+      img: "/images/about/about-students-1.png"
     },
     {
       title: isEn ? "Audio-Visual Masterclass Studio" : "অডিও-ভিজ্যুয়াল মাস্টারক্লাস স্টুডিও",
       desc: isEn ? "Studio-grade acoustics and 4K live streaming broadcast setups for global webinars and mentor keynotes." : "আন্তর্জাতিক ওয়েবিনার ও লাইভ মেন্টরশিপের জন্য ৪কে লাইভ ব্রডকাস্ট অডিও-ভিজ্যুয়াল স্টুডিও।",
       icon: Monitor,
-      img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600"
+      img: "/images/about/about-students-2.png"
     }
   ];
 
@@ -478,63 +478,44 @@ export default function AboutPage() {
               >
                 {/* Column 1: 2 Stacked Images */}
                 <div className="flex flex-col gap-2.5 h-full">
-                  {/* Image 1: 1-on-1 Mentorship */}
+                  {/* Image 1: Students and Mentors */}
                   <motion.div
                     whileHover={{ y: -2, scale: 1.005 }}
                     transition={{ duration: 0.2 }}
                     className="relative group rounded-xl overflow-hidden shadow-sm border border-slate-200/80 bg-white flex-1 min-h-[175px] sm:min-h-[210px]"
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
-                      alt="1-on-1 Mentorship"
+                      src="/images/about/about-students-1.png"
+                      alt="US Software Students and Mentors"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-3.5">
-                      <span className="text-white text-xs sm:text-sm font-bold tracking-tight">
-                        {isEn ? "1-on-1 Senior Mentorship" : "১-অন-১ এক্সপার্ট মেন্টরশিপ"}
-                      </span>
-                    </div>
                   </motion.div>
 
-                  {/* Image 2: Production Code & Architecture */}
+                  {/* Image 2: Live Lab Session */}
                   <motion.div
                     whileHover={{ y: -2, scale: 1.005 }}
                     transition={{ duration: 0.2 }}
                     className="relative group rounded-xl overflow-hidden shadow-sm border border-slate-200/80 bg-white flex-1 min-h-[175px] sm:min-h-[210px]"
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800"
-                      alt="Production Code & Architecture"
+                      src="/images/about/about-lab-session.png"
+                      alt="US Software Live Lab Session"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-3.5">
-                      <span className="text-white text-xs sm:text-sm font-bold tracking-tight">
-                        {isEn ? "Real-World Projects & Code" : "রিয়েল-ওয়ার্ল্ড প্রজেক্টস ও কোডিং"}
-                      </span>
-                    </div>
                   </motion.div>
                 </div>
 
-                {/* Column 2: Full-Height Featured Image */}
+                {/* Column 2: Full-Height Featured Image - Mentorship & Leadership Team */}
                 <motion.div
                   whileHover={{ y: -2, scale: 1.005 }}
                   transition={{ duration: 0.2 }}
                   className="relative group rounded-xl overflow-hidden shadow-md border border-slate-200/80 bg-white h-full min-h-[360px] sm:min-h-[430px]"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000"
-                    alt="High-Performance AI & Cloud Labs"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src="/images/about/about-mentors-focus.png"
+                    alt="US Software Leadership & Mentors"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex flex-col justify-end p-4 sm:p-5">
-                    <span className="inline-flex items-center gap-1.5 bg-[#008744]/90 backdrop-blur-md text-white text-xs font-bold px-2.5 py-0.5 rounded-full w-fit mb-1.5 shadow-sm">
-                      <Sparkles size={12} />
-                      {isEn ? "AI & Cloud Engineering Hub" : "এআই ও ক্লাউড ইঞ্জিনিয়ারিং হাব"}
-                    </span>
-                    <h3 className="text-white text-base sm:text-lg font-bold tracking-tight">
-                      {isEn ? "State-of-the-Art Software Labs" : "স্টেট-অফ-দ্য-আর্ট সফটওয়্যার ল্যাব"}
-                    </h3>
-                  </div>
                 </motion.div>
               </motion.div>
 
