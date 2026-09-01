@@ -154,7 +154,7 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
-                href="https://facebook.com"
+                href="https://www.facebook.com/ussltraining"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#1877F2] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(24,119,242,0.4)]"
@@ -184,7 +184,7 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
-                href="https://youtube.com/@ussoftwareltd"
+                href="https://www.youtube.com/@USSoftwar"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#FF0000] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(255,0,0,0.4)]"
@@ -199,7 +199,7 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
-                href="https://linkedin.com/company/ussoftwareltd"
+                href="https://www.linkedin.com/in/us-software-08a1a2431/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#0A66C2] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(10,102,194,0.4)]"
@@ -233,7 +233,7 @@ export default function Footer() {
                 whileHover={{ y: -4, scale: 1.15 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ duration: 0.12, ease: "easeOut" }}
-                href="https://wa.me/880171234578"
+                href="https://wa.me/8801995852964"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-slate-900 hover:bg-[#25D366] text-white flex items-center justify-center transition-colors duration-150 cursor-pointer shadow-xs hover:shadow-[0_6px_16px_rgba(37,211,102,0.4)]"
@@ -337,8 +337,8 @@ export default function Footer() {
                 <div className="w-6 h-6 rounded-lg bg-emerald-50 text-[#008744] flex items-center justify-center flex-shrink-0">
                   <Phone size={13} />
                 </div>
-                <a href="tel:+880171234578" className="hover:text-[#008744] font-semibold transition-colors">
-                  +880 1712-34578
+                <a href="tel:+880 1995-852964" className="hover:text-[#008744] font-semibold transition-colors">
+                  +880 1995-852964
                 </a>
               </li>
 

@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       role: isEn ? "Frontend Engineer at Brain Station 23" : "ফ্রন্টএন্ড ইঞ্জিনিয়ার, ব্রেন স্টেশন ২৩",
       course: isEn ? "Full-Stack Web Development" : "ফুল-স্ট্যাক ওয়েব ডেভেলপমেন্ট",
       thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/nvWl7GkpHCU",
       badge: isEn ? "Success Story" : "সাফল্যের গল্প",
       duration: "4:35 Min",
       highlight: isEn ? "Landed full-time job within 2 months of graduation" : "কোর্স শেষ হওয়ার ২ মাসের মধ্যেই ফুল-টাইম চাকরি লাভ"
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
       role: isEn ? "Software Engineer at Shohoz" : "সফটওয়্যার ইঞ্জিনিয়ার, সহজ",
       course: isEn ? "MERN Stack Mastery" : "মার্ন স্ট্যাক মাস্টারক্লাস",
       thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/nvWl7GkpHCU",
       badge: isEn ? "Success Story" : "সাফল্যের গল্প",
       duration: "5:12 Min",
       highlight: isEn ? "Transitioned from non-CS background to senior engineer" : "নন-সিএস ব্যাকগ্রাউন্ড থেকে সফল ইঞ্জিনিয়ার"
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       role: isEn ? "React Developer at Optimizely" : "রিঅ্যাক্ট ডেভেলপার, অপটিমাইজলি",
       course: isEn ? "Enterprise Next.js & TypeScript" : "এন্টারপ্রাইজ নেক্সট.জেএস ও টাইপস্ক্রিপ্ট",
       thumbnail: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/nvWl7GkpHCU",
       badge: isEn ? "Success Story" : "সাফল্যের গল্প",
       duration: "6:20 Min",
       highlight: isEn ? "Built 5 enterprise production applications" : "৫টি লাইভ এন্টারপ্রাইজ প্রজেক্ট তৈরি করেছেন"
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
       role: isEn ? "Product Designer at Pathao" : "প্রোডাক্ট ডিজাইনার, পাঠাও",
       course: isEn ? "UI/UX & Design Systems" : "ইউআই/ইউএক্স ও ডিজাইন সিস্টেম",
       thumbnail: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/nvWl7GkpHCU",
       badge: isEn ? "Success Story" : "সাফল্যের গল্প",
       duration: "3:50 Min",
       highlight: isEn ? "Top Rated UI Designer on Dribbble & Upwork" : "টপ রেটেড ডিজাইনার অন ড্রিবল ও আপওয়ার্ক"
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
       role: isEn ? "DevOps Engineer at Grameenphone" : "ডেভঅপ্স ইঞ্জিনিয়ার, গ্রামীণফোন",
       course: isEn ? "Cloud Architecture & Kubernetes" : "ক্লাউড আর্কিটেকচার ও কুবারনেটিস",
       thumbnail: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/nvWl7GkpHCU",
       badge: isEn ? "Success Story" : "সাফল্যের গল্প",
       duration: "4:45 Min",
       highlight: isEn ? "Received 3 job offers during internship phase" : "ইন্টার্ন চলাকালীন ৩টি ফুল-টাইম অফার লাভ"
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
       role: isEn ? "Top Rated Plus Freelancer on Upwork" : "টপ রেটেড প্লাস ফ্রিল্যান্সার, আপওয়ার্ক",
       course: isEn ? "Full-Stack Web Development" : "ফুল-স্ট্যাক ওয়েব ডেভেলপমেন্ট",
       thumbnail: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/nvWl7GkpHCU",
       badge: isEn ? "Success Story" : "সাফল্যের গল্প",
       duration: "5:40 Min",
       highlight: isEn ? "Earned $30,000+ within first 12 months" : "প্রথম ১২ মাসে $৩০,০০০+ আয় অর্জন"
@@ -609,7 +609,7 @@ export default function ProjectsPage() {
                 </Link>
 
                 <a
-                  href="https://wa.me/8801712345678?text=Hello%2C%20I%20want%20to%20learn%20about%20your%20courses%20and%20placement"
+                  href="https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20learn%20about%20your%20courses%20and%20placement"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-white hover:bg-emerald-50 text-slate-800 border border-slate-200/90 px-6 py-3 rounded-xl font-bold text-xs shadow-2xs flex items-center gap-2 transition-colors cursor-pointer"

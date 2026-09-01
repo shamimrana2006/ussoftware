@@ -1189,7 +1189,7 @@ export default function AboutPage() {
                 </Link>
 
                 <a
-                  href="https://wa.me/8801712345678?text=Hello%2C%20I%20want%20to%20learn%20more%20about%20US%20Software"
+                  href="https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20learn%20more%20about%20US%20Software"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-white hover:bg-emerald-50 text-slate-800 border border-slate-200/90 px-6 py-3.5 rounded-xl font-bold text-xs shadow-2xs flex items-center gap-2 transition-colors cursor-pointer"

@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import SmoothScroll from "@/components/SmoothScroll";
 import MouseBubbles from "@/components/MouseBubbles";
 import LoadingScreen from "@/components/LoadingScreen";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -159,6 +160,7 @@ export default function RootLayout({
             <LanguageProvider>
               <MouseBubbles />
               {children}
+              <FloatingWhatsApp />
             </LanguageProvider>
           </SmoothScroll>
         </LoadingScreen>

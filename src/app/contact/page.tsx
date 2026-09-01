@@ -40,7 +40,7 @@ export default function ContactPage() {
   const socialLinks = [
     {
       name: "Facebook",
-      url: "https://facebook.com/ussoftwareltd",
+      url: "https://www.facebook.com/ussltraining",
       hoverClass: "hover:bg-[#1877F2] hover:text-white text-slate-600",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -50,7 +50,7 @@ export default function ContactPage() {
     },
     {
       name: "YouTube",
-      url: "https://youtube.com/@ussoftwareltd",
+      url: "https://www.youtube.com/@USSoftwar",
       hoverClass: "hover:bg-[#FF0000] hover:text-white text-slate-600",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -60,7 +60,7 @@ export default function ContactPage() {
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/company/ussoftwareltd",
+      url: "https://www.linkedin.com/in/us-software-08a1a2431/",
       hoverClass: "hover:bg-[#0A66C2] hover:text-white text-slate-600",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -72,7 +72,7 @@ export default function ContactPage() {
     },
     {
       name: "WhatsApp",
-      url: "https://wa.me/8801712345678",
+      url: "https://wa.me/8801995852964",
       hoverClass: "hover:bg-[#008744] hover:text-white text-slate-600",
       icon: <FaWhatsapp size={15} />
     }
@@ -82,7 +82,7 @@ export default function ContactPage() {
     {
       q: isEn ? "How do I apply or book a counseling session?" : "কোর্সে কীভাবে ভর্তি হব বা কাউন্সিলিং সেশন বুক করব?",
       a: isEn 
-        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1712-34578). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites, and schedules." 
+        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1995-852964). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites, and schedules." 
         : "এই পেইজের ফর্মটি পূরণ করুন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে (+৮৮০ ১৭১২-৩৪৫৭৮) মেসেজ দিন। আমাদের সিনিয়র কাউন্সিলর ১৫ মিনিটের মধ্যে যোগাযোগ করে সম্পূর্ণ ভর্তি গাইডলাইন ও সময়সূচি জানিয়ে দেবেন।"
     },
     {
@@ -163,7 +163,7 @@ export default function ContactPage() {
               className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-3xl mx-auto pt-5 border-t border-slate-200/60"
             >
               <a
-                href="https://wa.me/8801712345678"
+                href="https://wa.me/8801995852964"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-white/90 hover:bg-emerald-50/80 backdrop-blur-sm border border-slate-200/80 hover:border-emerald-300 rounded-xl py-2.5 px-3 shadow-2xs transition-all group cursor-pointer"
@@ -173,7 +173,7 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="tel:+8801712345678"
+                href="tel:+880 1995-852964"
                 className="flex items-center justify-center gap-2 bg-white/90 hover:bg-red-50/80 backdrop-blur-sm border border-slate-200/80 hover:border-red-300 rounded-xl py-2.5 px-3 shadow-2xs transition-all group cursor-pointer"
               >
                 <Phone size={14} className="text-[#DE1F26] flex-shrink-0" />
@@ -420,7 +420,7 @@ export default function ContactPage() {
 
                   <div className="flex items-center space-x-3.5">
                     <Phone size={18} className="text-[#DE1F26] flex-shrink-0" />
-                    <span className="font-bold text-slate-800">{isEn ? "Open to Connect • +880 1712-34578" : "যোগাযোগের জন্য উন্মুক্ত • +৮৮০ ১৭১২-৩৪৫৭৮"}</span>
+                    <span className="font-bold text-slate-800">{isEn ? "Open to Connect • +880 1995-852964" : "যোগাযোগের জন্য উন্মুক্ত • +৮৮০ ১৭১২-৩৪৫৭৮"}</span>
                   </div>
 
                   <div className="flex items-center space-x-3.5">
@@ -529,7 +529,7 @@ export default function ContactPage() {
 
                 <div className="flex items-center space-x-2.5">
                   <a
-                    href="https://wa.me/8801712345678"
+                    href="https://wa.me/8801995852964"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-1.5 bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"
@@ -609,7 +609,7 @@ export default function ContactPage() {
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-600">
                 <span>{isEn ? "Need custom help?" : "আরও কিছু জানতে চান?"}</span>
                 <a 
-                  href="https://wa.me/8801712345678" 
+                  href="https://wa.me/8801995852964" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="font-extrabold text-[#008744] hover:underline inline-flex items-center gap-1.5"

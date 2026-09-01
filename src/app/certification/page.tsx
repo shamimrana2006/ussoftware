@@ -58,7 +58,7 @@ export default function CertificationPage() {
       id: "USL-2025-0587",
       name: "Md. Shamim Rana",
       email: "shamim.rana@gmail.com",
-      phone: "01712345678",
+      phone: "01995-852964",
       rollNo: "US-REG-88412",
       course: isEn ? "Graphic Design & Motion Graphics Masterclass" : "গ্রাফিক ডিজাইন ও মোশন গ্রাফিক্স মাস্টারক্লাস",
       issueDate: "20 May 2025",
@@ -298,7 +298,7 @@ export default function CertificationPage() {
                         type="text"
                         value={mobileInput}
                         onChange={(e) => setMobileInput(e.target.value)}
-                        placeholder={isEn ? "e.g. 01712345678" : "যেমন: 01712345678"}
+                        placeholder={isEn ? "e.g. 01995-852964" : "যেমন: 01995-852964"}
                         className="w-full bg-slate-50/80 text-slate-900 placeholder-slate-400 pl-10 pr-3 py-3 rounded-xl border border-slate-200 focus:border-[#008744] focus:bg-white focus:outline-none text-xs sm:text-sm font-medium transition-all"
                       />
                     </div>

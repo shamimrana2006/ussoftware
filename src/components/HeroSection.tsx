@@ -189,12 +189,12 @@ export default function HeroSection() {
   const { t, language } = useLanguage();
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayVideo = () => {
     if (videoRef.current) {
       videoRef.current.play();
-      setIsVideoPlaying(true);
+      setIsPlaying(true);
     }
   };
 
@@ -333,58 +333,63 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center relative z-10">
 
         {/* LEFT COMPONENT: AI Video Hub */}
-        <div className="relative h-[280px] sm:h-[360px] lg:h-[450px] w-full flex items-center justify-center order-2 lg:order-1 mt-4 lg:mt-0">
-          <div className="relative w-full max-w-[520px] aspect-[16/10] flex items-center justify-center">
+        <div className="relative w-full flex items-center justify-center order-2 lg:order-1 mt-4 lg:mt-0">
+          <div className="relative w-full max-w-[550px] aspect-video flex items-center justify-center">
             
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
               <div className="absolute -top-12 -left-10 w-64 h-64 bg-[#DE1F26]/16 rounded-full blur-[65px] animate-pulse duration-[6000ms] transform-gpu" />
               <div className="absolute -bottom-12 -right-10 w-72 h-72 bg-[#008744]/20 rounded-full blur-[70px] animate-pulse duration-[7000ms] transform-gpu" />
-              <div className="w-full h-full bg-gradient-to-tr from-white/70 via-slate-50/50 to-emerald-50/40 rounded-[28px] border border-slate-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-md rotate-[-2.5deg] -translate-y-2 -translate-x-1.5 absolute transform-gpu">
+              <div className="w-full h-full bg-gradient-to-tr from-white/70 via-slate-50/50 to-emerald-50/40 rounded-[24px] sm:rounded-[28px] border border-slate-200/80 shadow-[0_20px_50px_rgba(0,0,0,0.06)] backdrop-blur-md rotate-[-2.5deg] -translate-y-2 -translate-x-1.5 absolute transform-gpu">
                 <div className="absolute inset-x-8 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#DE1F26]/35 to-transparent"></div>
                 <div className="absolute inset-x-8 bottom-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#008744]/35 to-transparent"></div>
               </div>
             </div>
 
             {/* 3D Animated Robot Mascot */}
-            <div className="absolute -bottom-16 sm:-bottom-20 lg:-bottom-24 -left-16 sm:-left-24 lg:-left-36 z-40 w-44 h-44 sm:w-56 sm:h-56 lg:w-[350px] lg:h-[350px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)] pointer-events-none transform-gpu">
+            <div className="absolute -bottom-14 sm:-bottom-18 lg:-bottom-22 -left-14 sm:-left-20 lg:-left-32 z-40 w-36 h-36 sm:w-48 sm:h-48 lg:w-[320px] lg:h-[320px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)] pointer-events-none transform-gpu">
               <RobotCanvas />
             </div>
 
-
-
-            {/* Video Player */}
+            {/* Video Player (Local Clean HTML5 Video - Zero Ads & Zero Pause Suggestions) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="relative z-20 w-full h-full bg-gradient-to-br from-[#08121a] to-[#04090e] rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.35)] border border-slate-700/50 overflow-hidden flex transform-gpu"
+              className="relative z-20 w-full h-full aspect-video bg-black rounded-[20px] sm:rounded-[24px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] border border-slate-700/60 overflow-hidden flex items-center justify-center transform-gpu group cursor-pointer"
+              onClick={() => {
+                if (!isPlaying) {
+                  handlePlayVideo();
+                }
+              }}
             >
               <video
                 ref={videoRef}
-                poster="/video/thumbnail.jpeg"
-                className="w-full h-full object-cover rounded-[24px]"
-                controls={isVideoPlaying}
+                poster="/video/bannar.jpg"
+                className="w-full h-full object-cover rounded-[20px] sm:rounded-[24px]"
+                controls={isPlaying}
                 playsInline
                 preload="metadata"
-                onPlay={() => setIsVideoPlaying(true)}
-                onPause={() => setIsVideoPlaying(false)}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => {
+                  // Keep controls accessible when paused
+                }}
+                onEnded={() => setIsPlaying(false)}
               >
-                <source src="/video/us software video.mp4" type="video/mp4" />
+                <source src="/video/us%20software.mp4" type="video/mp4" />
+                <source src="/video/us software.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
-              {!isVideoPlaying && (
-                <div
-                  className="absolute inset-0 flex items-center justify-center bg-[#08121a]/40 cursor-pointer group rounded-[24px] z-20"
-                  onClick={handlePlayVideo}
-                >
-                  <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/25 group-hover:scale-110 group-hover:bg-[#008744]/20 transition-all duration-300 shadow-[0_0_40px_rgba(0,135,68,0.4)] group-hover:shadow-[0_0_50px_rgba(222,31,38,0.5)]">
-                    <Play size={36} className="text-white ml-2" fill="currentColor" />
+              {/* Clean Glass Play Button on HD Banner (disappears once playing starts) */}
+              {!isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                  <div className="w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-white/90 group-hover:bg-[#008744] text-[#008744] group-hover:text-white backdrop-blur-md border border-white/60 shadow-2xl transition-all duration-300 transform scale-95 group-hover:scale-110 flex items-center justify-center pl-0.5">
+                    <Play size={26} className="fill-current" />
                   </div>
                 </div>
               )}
 
-              <div className="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/10 pointer-events-none z-10"></div>
+              <div className="absolute inset-0 rounded-[20px] sm:rounded-[24px] ring-1 ring-inset ring-white/10 pointer-events-none z-10"></div>
             </motion.div>
 
           </div>

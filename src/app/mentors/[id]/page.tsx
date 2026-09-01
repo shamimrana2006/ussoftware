@@ -102,7 +102,7 @@ export default function MentorDetailsPage({ params }: { params: Promise<{ id: st
                   )}
 
                   <a
-                    href={`https://wa.me/8801712345678?text=Hello%2C%20I%20want%20to%20consult%20with%20mentor%20${encodeURIComponent(mentor.name)}`}
+                    href={`https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20consult%20with%20mentor%20${encodeURIComponent(mentor.name)}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] border border-[#25D366]/30 text-xs font-bold transition-colors shadow-2xs text-center whitespace-nowrap"
@@ -338,7 +338,7 @@ export default function MentorDetailsPage({ params }: { params: Promise<{ id: st
                   </button>
 
                   <a
-                    href={`https://wa.me/8801712345678?text=Hello%2C%20I%20want%20to%20book%20a%20mentorship%20session%20with%20${encodeURIComponent(mentor.name)}`}
+                    href={`https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20book%20a%20mentorship%20session%20with%20${encodeURIComponent(mentor.name)}`}
                     target="_blank"
                     rel="noreferrer"
                     className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-2xs"
@@ -405,7 +405,7 @@ export default function MentorDetailsPage({ params }: { params: Promise<{ id: st
 
                 <div className="flex items-center gap-2.5">
                   <a
-                    href={`https://wa.me/8801712345678?text=Hello%2C%20I%20just%20booked%20a%20session%20with%20${encodeURIComponent(mentor.name)}`}
+                    href={`https://wa.me/8801995852964?text=Hello%2C%20I%20just%20booked%20a%20session%20with%20${encodeURIComponent(mentor.name)}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex-1 bg-[#25D366] hover:bg-[#20ba59] text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-xs"

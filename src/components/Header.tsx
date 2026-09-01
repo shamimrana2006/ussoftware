@@ -385,7 +385,7 @@ export default function Header() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
               <Phone size={14} className="text-emerald-400" />
-              <span className="font-semibold text-xs sm:text-[13px] text-gray-100">+880 1712-34578</span>
+              <span className="font-semibold text-xs sm:text-[13px] text-gray-100">+880 1995-852964</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
               <Mail size={14} className="text-rose-400" />
@@ -397,21 +397,21 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             {/* Social Icons in Circles (Larger) */}
             <div className="flex items-center space-x-2.5">
-              <a href="https://facebook.com/ussoftwareltd" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Facebook">
+              <a href="https://www.facebook.com/ussltraining" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
-              <a href="https://youtube.com/@ussoftwareltd" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF0000] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="YouTube">
+              <a href="https://www.youtube.com/@USSoftwar" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF0000] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="YouTube">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" clipRule="evenodd" d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.943-.997 1.687-1.94 1.94C17.82 19.9 12 19.9 12 19.9s-5.82 0-7.603-.458c-.943-.253-1.686-.997-1.94-1.94C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.943.997-1.687 1.94-1.94C6.18 4.1 12 4.1 12 4.1s5.82 0 7.603.458c.943.253 1.686.997 1.94 1.94zM10 15.5l6-3.5-6-3.5v7z" />
                 </svg>
               </a>
-              <a href="https://linkedin.com/company/ussoftwareltd" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#0A66C2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/us-software-08a1a2431/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#0A66C2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
               <a href="https://instagram.com/ussoftwareltd" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#E1306C] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
-              <a href="https://wa.me/8801712345678" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#25D366] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="WhatsApp">
+              <a href="https://wa.me/8801995852964" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#25D366] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="WhatsApp">
                 <FaWhatsapp size={14} />
               </a>
             </div>
@@ -422,13 +422,13 @@ export default function Header() {
       </div>
 
       {/* Main Sticky Nav Bar */}
-      <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-200/70 py-2.5" : "bg-white/85 backdrop-blur-md border-b border-gray-100 py-3 sm:py-3.5"}`}>
-        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300">
+      <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-200/70 py-2 sm:py-2.5" : "bg-white/85 backdrop-blur-md border-b border-gray-100 py-2 sm:py-3.5"}`}>
+        <div className="max-w-[96rem] mx-auto px-3 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300">
 
-          {/* Left: Logo (Scrolls to top on click) */}
+          {/* Left: Logo (Responsive: Compact on mobile, full size on desktop) */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" onClick={handleHomeClick} className="flex items-center cursor-pointer">
-              <img src="/logo/logo.png" alt="US Software LTD" className="h-10 sm:h-12 lg:h-[52px] xl:h-[58px] w-auto object-contain transition-transform duration-200 hover:scale-105" />
+              <img src="/logo/logo.png" alt="US Software LTD" className="h-7 sm:h-10 lg:h-[50px] xl:h-[56px] max-w-[130px] sm:max-w-none w-auto object-contain transition-transform duration-200 hover:scale-105" />
             </Link>
           </div>
 
@@ -446,27 +446,58 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Side: US Universe Dropdown + Get Course CTA Button */}
-          <div className="flex items-center space-x-2.5 sm:space-x-3.5 flex-shrink-0">
+          {/* Right Side: Language Switcher + CTA Button + Mobile Hamburger */}
+          <div className="flex items-center space-x-1.5 sm:space-x-3 flex-shrink-0">
 
-            {/* Language Switcher in place of US Universe */}
-            <button
+            {/* Language Segmented Switch */}
+            <div
               onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-slate-200/80 hover:border-slate-300 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm shadow-2xs transition-all duration-150 cursor-pointer select-none"
-              title="Change Language / ভাষা পরিবর্তন"
+              className="relative inline-flex items-center p-0.5 sm:p-1 bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 rounded-full cursor-pointer select-none transition-all shadow-inner"
+              title="Switch Language / ভাষা পরিবর্তন করুন"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  toggleLanguage();
+                }
+              }}
             >
-              <Globe size={15} className="text-[#008744]" />
-              <span>{language === "en" ? "EN / বাংলা" : "বাংলা / EN"}</span>
-            </button>
+              {/* Sliding Active Pill */}
+              <motion.div
+                className="absolute top-0.5 sm:top-1 bottom-0.5 sm:bottom-1 w-[calc(50%-2px)] sm:w-[calc(50%-4px)] bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.06)] border border-slate-200/60"
+                animate={{
+                  left: language === "en" ? (typeof window !== 'undefined' && window.innerWidth < 640 ? "2px" : "4px") : "50%",
+                }}
+                transition={{ type: "spring", stiffness: 500, damping: 35 }}
+              />
 
-            {/* CTA Button: Get Course (Bigger & bolder) */}
-            <Link href="/courses">
+              {/* EN Option */}
+              <span
+                className={`relative z-10 px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold transition-colors duration-200 flex items-center justify-center min-w-[28px] sm:min-w-[36px] ${
+                  language === "en" ? "text-[#008744]" : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                EN
+              </span>
+
+              {/* বাংলা Option */}
+              <span
+                className={`relative z-10 px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold transition-colors duration-200 flex items-center justify-center min-w-[28px] sm:min-w-[36px] ${
+                  language === "bn" ? "text-[#008744]" : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                বাং
+              </span>
+            </div>
+
+            {/* CTA Button: Get Course */}
+            <Link href="/courses" className="hidden sm:block">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-extrabold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] hover:shadow-[0_6px_20px_rgba(0,135,68,0.45)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
+                className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white px-3.5 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-extrabold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] hover:shadow-[0_6px_20px_rgba(0,135,68,0.45)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
               >
-                <BookOpen size={16} className="hidden sm:inline" />
+                <BookOpen size={15} className="hidden sm:inline" />
                 <span>{t.header.getCourse || "Get Course"}</span>
               </motion.button>
             </Link>
@@ -474,7 +505,7 @@ export default function Header() {
             {/* Mobile Hamburger Menu Toggle */}
             <motion.button
               whileTap={{ scale: 0.9 }}
-              className="lg:hidden text-[#08121a] p-2 sm:p-2.5 focus:outline-none bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              className="lg:hidden text-[#08121a] p-1.5 sm:p-2.5 focus:outline-none bg-slate-100 hover:bg-slate-200 rounded-lg sm:rounded-xl transition-colors cursor-pointer flex-shrink-0"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle navigation menu"
             >
@@ -525,15 +556,28 @@ export default function Header() {
 
                 {/* Mobile Bottom CTA & Contacts */}
                 <div className="pt-3 mt-2 border-t border-gray-100 flex flex-col space-y-2.5">
-                  <div className="flex items-center justify-between py-0.5">
-                    <span className="text-xs font-semibold text-gray-500">Language / ভাষা:</span>
-                    <button
+                  <div className="flex items-center justify-between py-1">
+                    <span className="text-xs font-bold text-gray-700">Language / ভাষা:</span>
+                    <div
                       onClick={toggleLanguage}
-                      className="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 px-3 py-1 rounded-lg text-xs font-bold text-[#08121a] transition-colors cursor-pointer"
+                      className="relative inline-flex items-center p-1 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-full cursor-pointer select-none transition-all shadow-inner"
+                      role="button"
+                      tabIndex={0}
                     >
-                      <Globe size={13} className="text-[#008744]" />
-                      <span>{language === "en" ? "English" : "বাংলা"}</span>
-                    </button>
+                      <motion.div
+                        className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-full shadow-sm border border-slate-200/60"
+                        animate={{
+                          left: language === "en" ? "4px" : "50%",
+                        }}
+                        transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                      />
+                      <span className={`relative z-10 px-3 py-1 text-xs font-bold transition-colors ${language === "en" ? "text-[#008744]" : "text-slate-500"}`}>
+                        EN
+                      </span>
+                      <span className={`relative z-10 px-3 py-1 text-xs font-bold transition-colors ${language === "bn" ? "text-[#008744]" : "text-slate-500"}`}>
+                        বাংলা
+                      </span>
+                    </div>
                   </div>
 
 
@@ -547,7 +591,7 @@ export default function Header() {
 
                   <div className="flex items-center justify-between text-xs text-gray-500 pt-1">
                     <span className="flex items-center gap-1">
-                      <Phone size={12} className="text-[#008744]" /> +880 1712-34578
+                      <Phone size={12} className="text-[#008744]" /> +880 1995-852964
                     </span>
                     <span className="flex items-center gap-1">
                       <Mail size={12} className="text-[#DE1F26]" /> info@ussoftwareltd.com

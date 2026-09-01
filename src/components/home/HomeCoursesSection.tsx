@@ -12,6 +12,8 @@ import {
   Play, X, Zap
 } from "lucide-react";
 
+import { coursesData } from "@/data/coursesData";
+
 export default function HomeCoursesSection() {
   const { language } = useLanguage();
   const isEn = language === "en";
@@ -21,159 +23,44 @@ export default function HomeCoursesSection() {
 
   const categories = [
     { id: "all", label: isEn ? "All Tracks" : "সকল কোর্স", icon: Layers },
-    { id: "programming", label: isEn ? "Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব", icon: Code2 },
-    { id: "ai", label: isEn ? "AI & Agents" : "এআই ও এজেন্টস", icon: Cpu },
-    { id: "devops", label: isEn ? "Cloud & DevOps" : "ক্লাউড ও ডেভঅপ্স", icon: Cloud },
-    { id: "mobile", label: isEn ? "Mobile Apps" : "মোবাইল অ্যাপস", icon: Smartphone },
-    { id: "cyber", label: isEn ? "Cyber Security" : "সাইবার সিকিউরিটি", icon: Shield },
-    { id: "design", label: isEn ? "UI/UX Design" : "ইউআই/ইউএক্স", icon: Palette },
+    { id: "ai", label: isEn ? "AI & Automation" : "এআই ও অটোমেশন", icon: Cpu },
+    { id: "web", label: isEn ? "Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব", icon: Code2 },
+    { id: "language", label: isEn ? "Language Skills" : "ল্যাংগুয়েজ স্কিলস", icon: BookOpen },
+    { id: "uiux", label: isEn ? "UI/UX & Design" : "ইউআই/ইউএক্স", icon: Palette },
     { id: "marketing", label: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: Megaphone },
+    { id: "cyber", label: isEn ? "Cyber Security" : "সাইবার সিকিউরিটি", icon: Shield },
+    { id: "cloud", label: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার", icon: Cloud },
+    { id: "management", label: isEn ? "Management" : "ম্যানেজমেন্ট", icon: Award },
     { id: "database", label: isEn ? "Database" : "ডাটাবেস", icon: Database },
+    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: Zap },
   ];
 
-  const allCourses = [
-    {
-      id: "fs-nextjs",
-      category: "programming",
-      categoryName: isEn ? "Full-Stack Engineering" : "ফুল-স্ট্যাক ওয়েব",
-      title: isEn ? "Enterprise Full-Stack Web Development with Next.js 15" : "এন্টারপ্রাইজ ফুল-স্ট্যাক ওয়েব ইঞ্জিনিয়ারিং (নেক্সট.জেএস ১৫)",
-      mode: isEn ? "Hybrid / Offline" : "হাইব্রিড / অফলাইন",
-      modeType: "offline",
-      rating: 5.0,
-      duration: isEn ? "6 Months" : "৬ মাস",
-      enrolled: isEn ? "85+ Enrolled" : "৮৫+ শিক্ষার্থী",
-      fee: "25,000৳",
-      originalFee: "35,000৳",
-      tags: ["Next.js 15", "TypeScript", "PostgreSQL"],
-      thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/wm5gMKuwSYk?autoplay=1",
-      accentColor: "#008744",
-    },
-    {
-      id: "ai-llm",
-      category: "ai",
-      categoryName: isEn ? "Generative AI & LLMs" : "জেনারেটিভ এআই ও এজেন্টস",
-      title: isEn ? "Generative AI, Multi-Agent Systems & RAG Pipelines" : "জেনারেটিভ এআই, অটোনোমাস এজেন্টস ও র‍্যাগ পাইপলাইন",
-      mode: isEn ? "Online Live" : "অনলাইন লাইভ",
-      modeType: "online",
-      rating: 5.0,
-      duration: isEn ? "5 Months" : "৫ মাস",
-      enrolled: isEn ? "70+ Enrolled" : "৭০+ শিক্ষার্থী",
-      fee: "28,000৳",
-      originalFee: "40,000৳",
-      tags: ["LangChain", "Vector DBs", "PyTorch"],
-      thumbnail: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/2eWuYf-keXI?autoplay=1",
-      accentColor: "#DE1F26",
-    },
-    {
-      id: "devops-aws",
-      category: "devops",
-      categoryName: isEn ? "Cloud & DevOps" : "ক্লাউড ও ডেভঅপ্স",
-      title: isEn ? "AWS Cloud Infrastructure, Kubernetes & GitOps CI/CD" : "এডব্লিউএস ক্লাউড আর্কিটেকচার, কুবারনেটিস ও সিআই/সিডি",
-      mode: isEn ? "Hybrid / Offline" : "হাইব্রিড / অফলাইন",
-      modeType: "offline",
-      rating: 5.0,
-      duration: isEn ? "4.5 Months" : "৪.৫ মাস",
-      enrolled: isEn ? "60+ Enrolled" : "৬০+ শিক্ষার্থী",
-      fee: "26,000৳",
-      originalFee: "36,000৳",
-      tags: ["AWS", "Kubernetes", "Docker"],
-      thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/dGcsHMXbSOA?autoplay=1",
-      accentColor: "#008744",
-    },
-    {
-      id: "mobile-flutter",
-      category: "mobile",
-      categoryName: isEn ? "Mobile Apps" : "মোবাইল অ্যাপস",
-      title: isEn ? "Cross-Platform Mobile App Engineering with Flutter 3.x" : "ক্রস-প্ল্যাটফর্ম ফ্লাটার অ্যাপ ইঞ্জিনিয়ারিং (আইওএস ও অ্যান্ড্রয়েড)",
-      mode: isEn ? "Online Live" : "অনলাইন লাইভ",
-      modeType: "online",
-      rating: 5.0,
-      duration: isEn ? "5 Months" : "৫ মাস",
-      enrolled: isEn ? "90+ Enrolled" : "৯০+ শিক্ষার্থী",
-      fee: "22,000৳",
-      originalFee: "30,000৳",
-      tags: ["Flutter", "Dart 3", "Riverpod"],
-      thumbnail: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/1gDhl4leEzA?autoplay=1",
-      accentColor: "#DE1F26",
-    },
-    {
-      id: "cyber-sec",
-      category: "cyber",
-      categoryName: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি",
-      title: isEn ? "Ethical Hacking, Penetration Testing & SOC Defense" : "এথিক্যাল হ্যাকিং, পেনেট্রেশন টেস্টিং ও এসওসি ডিফেন্স",
-      mode: isEn ? "Hybrid / Offline" : "হাইব্রিড / অফলাইন",
-      modeType: "offline",
-      rating: 5.0,
-      duration: isEn ? "4 Months" : "৪ মাস",
-      enrolled: isEn ? "45+ Enrolled" : "৪৫+ শিক্ষার্থী",
-      fee: "24,000৳",
-      originalFee: "34,000৳",
-      tags: ["Kali Linux", "OWASP", "SOC"],
-      thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/inWWhr5tnEA?autoplay=1",
-      accentColor: "#008744",
-    },
-    {
-      id: "digital-mkt",
-      category: "marketing",
-      categoryName: isEn ? "Digital Growth" : "ডিজিটাল মার্কেটিং",
-      title: isEn ? "Performance Digital Marketing, SEO Growth & Funnels" : "পারফরম্যান্স ডিজিটাল মার্কেটিং, এসইও ও গ্রোথ ফানেল",
-      mode: isEn ? "Hybrid / Offline" : "হাইব্রিড / অফলাইন",
-      modeType: "offline",
-      rating: 5.0,
-      duration: isEn ? "3 Months" : "৩ মাস",
-      enrolled: isEn ? "120+ Enrolled" : "১২০+ শিক্ষার্থী",
-      fee: "15,000৳",
-      originalFee: "22,000৳",
-      tags: ["Technical SEO", "Meta Ads", "Analytics"],
-      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/nU-IIXBWlS4?autoplay=1",
-      accentColor: "#008744",
-    },
-    {
-      id: "uiux-design",
-      category: "design",
-      categoryName: isEn ? "Product Design" : "প্রোডাক্ট ডিজাইন",
-      title: isEn ? "Enterprise UI/UX Design & Design Systems in Figma" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স) ও ফিগমা ডিজাইন সিস্টেমস",
-      mode: isEn ? "Online Live" : "অনলাইন লাইভ",
-      modeType: "online",
-      rating: 5.0,
-      duration: isEn ? "3.5 Months" : "৩.৫ মাস",
-      enrolled: isEn ? "65+ Enrolled" : "৬৫+ শিক্ষার্থী",
-      fee: "18,000৳",
-      originalFee: "25,000৳",
-      tags: ["Figma", "Design System", "UX Research"],
-      thumbnail: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/c9Wg6Cb_YlU?autoplay=1",
-      accentColor: "#DE1F26",
-    },
-    {
-      id: "db-postgresql",
-      category: "database",
-      categoryName: isEn ? "Database Systems" : "ডাটাবেস আর্কিটেকচার",
-      title: isEn ? "High-Scale PostgreSQL, Redis Caching & Query Optimization" : "হাই-স্কেল পোস্টগ্রেসকিউএল ও রেডিস ক্যাশিং আর্কিটেকচার",
-      mode: isEn ? "Online Live" : "অনলাইন লাইভ",
-      modeType: "online",
-      rating: 5.0,
-      duration: isEn ? "3 Months" : "৩ মাস",
-      enrolled: isEn ? "40+ Enrolled" : "৪০+ শিক্ষার্থী",
-      fee: "16,000৳",
-      originalFee: "24,000৳",
-      tags: ["PostgreSQL", "Redis", "Query Tuning"],
-      thumbnail: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80&w=600",
-      videoUrl: "https://www.youtube.com/embed/qw--VYLpxG4?autoplay=1",
-      accentColor: "#008744",
-    }
-  ];
+  const allCourses = useMemo(() => {
+    return coursesData.map((course) => ({
+      id: course.id,
+      category: course.category,
+      categoryName: course.categoryLabel[isEn ? "en" : "bn"],
+      title: course.title[isEn ? "en" : "bn"],
+      mode: course.mode[isEn ? "en" : "bn"],
+      modeType: course.modeType,
+      rating: course.rating,
+      duration: course.duration[isEn ? "en" : "bn"],
+      enrolled: course.enrolledCount,
+      fee: course.fee,
+      originalFee: course.originalFee || "25,000৳",
+      tags: [course.categoryLabel[isEn ? "en" : "bn"], course.mode[isEn ? "en" : "bn"]],
+      thumbnail: course.image,
+      videoUrl: course.videoUrl,
+      accentColor: course.category === "ai" ? "#DE1F26" : "#008744"
+    }));
+  }, [isEn]);
 
   const filteredCourses = useMemo(() => {
-    if (activeCategory === "all") return allCourses;
-    return allCourses.filter(c => c.category === activeCategory);
-  }, [activeCategory]);
+    const list = activeCategory === "all" 
+      ? allCourses 
+      : allCourses.filter(c => c.category === activeCategory);
+    return list.slice(0, 8);
+  }, [allCourses, activeCategory]);
 
   return (
     <section id="courses" className="py-16 sm:py-20 lg:py-24 bg-[#f8fafc] relative overflow-hidden">
@@ -287,41 +174,39 @@ export default function HomeCoursesSection() {
                   {/* Cinematic Video Thumbnail Area (Compact Height) */}
                   <div
                     onClick={() => setSelectedVideoCourse(course)}
-                    className="relative h-32 sm:h-36 w-full overflow-hidden cursor-pointer group/thumb"
+                    className="relative h-40 sm:h-44 w-full overflow-hidden cursor-pointer group/thumb select-none"
                   >
                     {/* Thumbnail Image with Scale-Up on hover */}
                     <img
                       src={course.thumbnail}
                       alt={course.title}
-                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover group-hover/thumb:scale-108 transition-transform duration-500 ease-out"
                     />
 
-                    {/* Dark gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#08121a]/85 via-[#08121a]/20 to-black/25" />
+                    {/* Subtle dark overlay on hover */}
+                    <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/40 transition-colors duration-300" />
 
                     {/* Floating Mode Badge & Rating on Thumbnail */}
-                    <div className="absolute top-2 inset-x-2 flex items-center justify-between z-10 pointer-events-none">
-                      <span className="bg-black/60 backdrop-blur-md border border-white/20 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
+                    <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
+                      <span className={`text-[9px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider shadow-md text-white ${
+                        course.modeType === "offline" ? "bg-[#008744]" : "bg-[#DE1F26]"
+                      }`}>
                         {course.mode}
                       </span>
+                    </div>
 
-                      <div className="flex items-center gap-0.5 bg-black/60 backdrop-blur-md border border-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-bold text-amber-400 shadow-xs">
-                        <Star size={10} className="fill-amber-400" />
+                    <div className="absolute top-2.5 right-2.5 z-10 pointer-events-none">
+                      <div className="flex items-center gap-0.5 bg-white/95 text-slate-900 px-1.5 py-0.5 rounded text-[10px] font-bold shadow-md">
+                        <Star size={10} className="fill-amber-400 text-amber-400" />
                         <span>5.0</span>
                       </div>
                     </div>
 
-                    {/* Glowing Glass Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                      <div className="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md border border-white/40 group-hover/thumb:bg-[#008744] text-white flex items-center justify-center shadow-lg transition-all duration-300 group-hover/thumb:scale-115 pl-0.5">
-                        <Play size={14} className="fill-current" />
+                    {/* Play Button in Center (Hidden by default, appears on hover) */}
+                    <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                      <div className="w-10 h-10 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
+                        <Play size={16} className="fill-current" />
                       </div>
-                    </div>
-
-                    {/* Duration chip on thumbnail bottom */}
-                    <div className="absolute bottom-2 left-2 z-10 pointer-events-none flex items-center gap-1 text-white/90 text-[10px] font-medium bg-black/50 backdrop-blur-md px-1.5 py-0.5 rounded border border-white/10">
-                      <Clock size={10} className="text-emerald-400" />
-                      <span>{course.duration}</span>
                     </div>
                   </div>
 
