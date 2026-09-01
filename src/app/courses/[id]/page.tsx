@@ -5,7 +5,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
-import { getCourseById, CourseDetail } from "@/data/coursesData";
+import { getCourseById, getVideoMeta, CourseDetail } from "@/data/coursesData";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Star,
@@ -26,7 +26,9 @@ import {
   MessageCircle,
   Sparkles,
   FileCheck,
-  Check
+  Check,
+  ExternalLink,
+  X
 } from "lucide-react";
 
 export default function CourseDetailsPage({ params }: { params: Promise<{ id: string }> }) {
@@ -460,20 +462,21 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                     )}
                   </div>
 
-                  {/* Main CTA Button */}
-                  <button
-                    onClick={() => setIsEnrollSuccess(true)}
-                    className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#008744] via-emerald-600 to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-700/25 hover:shadow-xl hover:shadow-emerald-700/35 transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                  {/* Main CTA Button - Direct WhatsApp Enrollment */}
+                  <a
+                    href={course.whatsappLink || `https://wa.me/8801995852964?text=${encodeURIComponent(isEn ? `Hello, I want to enroll in "${course.title.en}" course.` : `হ্যালো, আমি "${course.title.bn}" কোর্সে ভর্তি হতে চাই।`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#008744] via-emerald-600 to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-700/25 hover:shadow-xl hover:shadow-emerald-700/35 transition-all flex items-center justify-center space-x-2.5 cursor-pointer group"
                   >
-                    <span>{isEn ? "Enroll in this Course" : "এই কোর্সে এনরোল করুন"}</span>
-                    <ArrowRight size={18} />
-                  </button>
+                    <MessageCircle size={20} className="text-white fill-white/20 group-hover:scale-110 transition-transform" />
+                    <span>{isEn ? "Enroll via WhatsApp" : "এই কোর্সে ভর্তি হন (WhatsApp)"}</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
 
-                  {isEnrollSuccess && (
-                    <div className="p-3 bg-emerald-50 border border-emerald-200 text-[#008744] text-xs font-bold rounded-xl text-center">
-                      ✓ {isEn ? "Registration request received! Our team will contact you shortly." : "রেজিস্ট্রেশন আবেদন জমা হয়েছে! আমাদের টিম শীঘ্রই যোগাযোগ করবে।"}
-                    </div>
-                  )}
+                  <p className="text-[11px] text-center text-slate-500 font-medium">
+                    {isEn ? "⚡ Instant 1-on-1 counselor admission assistance" : "⚡ সরাসরি হোয়াটসঅ্যাপে কাউন্সেলরের সাথে কথা বলে ভর্তি নিশ্চিত করুন"}
+                  </p>
 
                   {/* Included Items Checklist */}
                   <div className="border-t border-slate-100 pt-5 space-y-3.5">
@@ -504,32 +507,98 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
 
       {/* VIDEO PREVIEW MODAL */}
       <AnimatePresence>
-        {isVideoModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800"
-            >
-              <button
-                onClick={() => setIsVideoModalOpen(false)}
-                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-md transition-colors cursor-pointer"
+        {isVideoModalOpen && (() => {
+          const videoMeta = getVideoMeta(course.videoUrl);
+          return (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col"
               >
-                ✕
-              </button>
-              <div className="aspect-video w-full">
-                <iframe
-                  src={course.videoUrl}
-                  title="Course Video Preview"
-                  className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </motion.div>
-          </div>
-        )}
+                {/* Modal Header */}
+                <div className="flex items-center justify-between px-5 py-4 bg-slate-900 border-b border-slate-800 text-white">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#DE1F26] animate-pulse"></span>
+                    <h3 className="text-sm sm:text-base font-bold truncate max-w-[280px] sm:max-w-md">
+                      {course.title[isEn ? "en" : "bn"]}
+                    </h3>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    {videoMeta.directUrl && (
+                      <a
+                        href={videoMeta.directUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-semibold transition-colors"
+                      >
+                        <ExternalLink size={13} />
+                        <span>{videoMeta.isFacebook ? (isEn ? "Open in Facebook" : "ফেসবুকে দেখুন") : (isEn ? "Watch on YouTube" : "ভিডিও লিংক")}</span>
+                      </a>
+                    )}
+                    <button
+                      onClick={() => setIsVideoModalOpen(false)}
+                      className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
+                      aria-label="Close modal"
+                    >
+                      <X size={18} />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Video Player Container */}
+                <div className="relative aspect-video w-full bg-black flex items-center justify-center">
+                  <iframe
+                    src={videoMeta.embedUrl}
+                    title={course.title.en}
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+
+                {/* Modal Footer */}
+                <div className="px-6 py-4 bg-slate-950 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800">
+                  <div className="flex items-center gap-3">
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-medium">
+                        {isEn ? "Course Tuition:" : "কোর্স ফি:"}
+                      </span>
+                      <span className="text-lg font-black text-emerald-400">
+                        {course.fee}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5">
+                    {videoMeta.directUrl && (
+                      <a
+                        href={videoMeta.directUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all flex items-center gap-1.5"
+                      >
+                        <ExternalLink size={14} />
+                        <span>{videoMeta.isFacebook ? (isEn ? "Watch on Facebook" : "ফেসবুক ভিডিও") : (isEn ? "Direct Link" : "ভিডিও লিংক")}</span>
+                      </a>
+                    )}
+                    <a
+                      href={`https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20enroll%20in%20${encodeURIComponent(course.title[isEn ? "en" : "bn"])}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-[#008744] hover:bg-[#007038] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-lg shadow-emerald-900/30"
+                    >
+                      <MessageCircle size={14} />
+                      <span>{isEn ? "Enroll via WhatsApp" : "ভর্তি নিশ্চিত করুন"}</span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          );
+        })()}
       </AnimatePresence>
 
       <Footer />

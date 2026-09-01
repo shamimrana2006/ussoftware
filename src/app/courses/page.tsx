@@ -15,10 +15,10 @@ import {
   Search, Filter, LayoutGrid, ListFilter,
   AlignJustify, X, Zap, Check, Bot, Globe2,
   TrendingUp, TrendingDown, Video, Server, Briefcase, GraduationCap,
-  Calendar, DollarSign, Play, ChevronDown, ChevronUp, ArrowUpDown
+  Calendar, DollarSign, Play, ChevronDown, ChevronUp, ArrowUpDown, ExternalLink
 } from "lucide-react";
 import { COMPANY_STATS } from "@/data/companyStats";
-import { coursesData } from "@/data/coursesData";
+import { coursesData, getVideoMeta } from "@/data/coursesData";
 
 function CoursesContent() {
   const { language } = useLanguage();
@@ -942,65 +942,99 @@ function CoursesContent() {
 
         {/* VIDEO PREVIEW MODAL */}
         <AnimatePresence>
-          {selectedVideoCourse && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
-              onClick={() => setSelectedVideoCourse(null)}
-            >
+          {selectedVideoCourse && (() => {
+            const videoMeta = getVideoMeta(selectedVideoCourse.videoUrl);
+            return (
               <motion.div
-                initial={{ scale: 0.9, y: 20 }}
-                animate={{ scale: 1, y: 0 }}
-                exit={{ scale: 0.9, y: 20 }}
-                className="bg-slate-900 rounded-3xl overflow-hidden max-w-2xl w-full border border-slate-800 shadow-2xl relative"
-                onClick={(e) => e.stopPropagation()}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md"
+                onClick={() => setSelectedVideoCourse(null)}
               >
-                <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 text-white">
-                  <div className="flex items-center gap-2.5">
-                    <Play size={15} className="text-[#008744] fill-[#008744]" />
-                    <span className="font-bold text-xs sm:text-sm truncate max-w-[280px] sm:max-w-md">
-                      {selectedVideoCourse.title}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => setSelectedVideoCourse(null)}
-                    className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center cursor-pointer transition-colors"
-                  >
-                    <X size={16} />
-                  </button>
-                </div>
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* Modal Header */}
+                  <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-900 text-white">
+                    <div className="flex items-center gap-2.5">
+                      <Play size={15} className="text-[#008744] fill-[#008744]" />
+                      <span className="font-bold text-xs sm:text-sm truncate max-w-[280px] sm:max-w-md">
+                        {selectedVideoCourse.title}
+                      </span>
+                    </div>
 
-                {/* 16:9 Video Player */}
-                <div className="relative pt-[56.25%] bg-black">
-                  <iframe
-                    src={selectedVideoCourse.videoUrl}
-                    title={selectedVideoCourse.title}
-                    className="absolute inset-0 w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-
-                <div className="p-4 sm:p-5 bg-slate-950 flex items-center justify-between gap-4">
-                  <div>
-                    <span className="text-[11px] text-slate-400 block font-medium">{isEn ? "Course Tuition" : "কোর্স ফি"}</span>
-                    <span className="text-lg font-black text-emerald-400">{selectedVideoCourse.fee}</span>
+                    <div className="flex items-center gap-2">
+                      {videoMeta.directUrl && (
+                        <a
+                          href={videoMeta.directUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-semibold transition-colors"
+                        >
+                          <ExternalLink size={13} />
+                          <span>{videoMeta.isFacebook ? (isEn ? "Open in Facebook" : "ফেসবুকে দেখুন") : (isEn ? "Watch on YouTube" : "ভিডিও লিংক")}</span>
+                        </a>
+                      )}
+                      <button
+                        onClick={() => setSelectedVideoCourse(null)}
+                        className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center cursor-pointer transition-colors"
+                        aria-label="Close modal"
+                      >
+                        <X size={16} />
+                      </button>
+                    </div>
                   </div>
-                  <a
-                    href={`https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20enroll%20in%20${encodeURIComponent(selectedVideoCourse.title)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="bg-[#008744] hover:bg-[#007038] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all flex items-center gap-1.5"
-                  >
-                    <MessageCircle size={14} />
-                    <span>{isEn ? "Enroll Now" : "ভর্তি নিশ্চিত করুন"}</span>
-                  </a>
-                </div>
+
+                  {/* Video Player */}
+                  <div className="relative aspect-video w-full bg-black flex items-center justify-center">
+                    <iframe
+                      src={videoMeta.embedUrl}
+                      title={selectedVideoCourse.title}
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+
+                  {/* Modal Footer */}
+                  <div className="p-4 sm:p-5 bg-slate-950 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800">
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-medium">{isEn ? "Course Tuition" : "কোর্স ফি"}</span>
+                      <span className="text-lg font-black text-emerald-400">{selectedVideoCourse.fee}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2.5">
+                      {videoMeta.directUrl && (
+                        <a
+                          href={videoMeta.directUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all flex items-center gap-1.5"
+                        >
+                          <ExternalLink size={14} />
+                          <span>{videoMeta.isFacebook ? (isEn ? "Watch on Facebook" : "ফেসবুক ভিডিও") : (isEn ? "Direct Link" : "ভিডিও লিংক")}</span>
+                        </a>
+                      )}
+                      <a
+                        href={`https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20enroll%20in%20${encodeURIComponent(selectedVideoCourse.title)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="bg-[#008744] hover:bg-[#007038] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-lg shadow-emerald-900/30"
+                      >
+                        <MessageCircle size={14} />
+                        <span>{isEn ? "Enroll Now" : "ভর্তি নিশ্চিত করুন"}</span>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          )}
+            );
+          })()}
         </AnimatePresence>
 
       </main>
