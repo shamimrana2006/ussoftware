@@ -48,13 +48,13 @@ function CoursesContent() {
   }, []);
 
   const categories = [
-    { id: "all", label: isEn ? "All Categories" : "সকল কোর্স", icon: Layers, iconColor: "text-[#008744]" },
-    { id: "web", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2, iconColor: "text-[#008744]" },
-    { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
-    { id: "creative", label: isEn ? "Creative, UI/UX & Motion" : "গ্রাফিক্স, ইউআই/ইউএক্স ও মোশন", icon: Palette, iconColor: "text-emerald-600" },
-    { id: "software", label: isEn ? "App, .NET & SAP" : "অ্যাপ, ডটনেট ও এসএপি", icon: Smartphone, iconColor: "text-purple-600" },
-    { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Server, iconColor: "text-blue-600" },
-    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-amber-500" },
+    { id: "all", label: isEn ? "All Categories" : "সকল কোর্স", pillLabel: isEn ? "All" : "সকল", icon: Layers, iconColor: "text-[#008744]" },
+    { id: "web", label: isEn ? "Programming & Web" : "প্রোগ্রামিং ও ওয়েব", pillLabel: isEn ? "Programming & Web" : "প্রোগ্রামিং ও ওয়েব", icon: Code2, iconColor: "text-[#008744]" },
+    { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", pillLabel: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
+    { id: "creative", label: isEn ? "Design, Motion & UI/UX" : "গ্রাফিক্স, মোশন ও ইউআই/ইউএক্স", pillLabel: isEn ? "Design & UI/UX" : "ডিজাইন ও ইউআই/ইউএক্স", icon: Palette, iconColor: "text-emerald-600" },
+    { id: "software", label: isEn ? "App & Software Development" : "অ্যাপ ও সফটওয়্যার", pillLabel: isEn ? "App & Software" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone, iconColor: "text-purple-600" },
+    { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", pillLabel: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Server, iconColor: "text-blue-600" },
+    { id: "diploma", label: isEn ? "Diploma Programs" : "ডিপ্লোমা প্রোগ্রাম", pillLabel: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-amber-500" },
   ];
 
   const iconMap: Record<string, any> = {
@@ -190,26 +190,19 @@ function CoursesContent() {
               <span className="text-[11px] font-bold text-slate-500 mr-1 hidden sm:inline-block">
                 {isEn ? "Popular Topics:" : "জনপ্রিয় টপিকস:"}
               </span>
-              {[
-                { label: isEn ? "All" : "সকল", cat: "all" },
-                { label: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং", cat: "ai" },
-                { label: isEn ? "Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব", cat: "web" },
-                { label: isEn ? "Cyber Security" : "সাইবার সিকিউরিটি", cat: "cyber" },
-                { label: isEn ? "UI/UX Design" : "ইউআই/ইউএক্স ডিজাইন", cat: "uiux" },
-                { label: isEn ? "DevOps & Cloud" : "ক্লাউড ডেভঅপ্স", cat: "cloud" },
-              ].map((topic, tIdx) => (
+              {categories.map((topic) => (
                 <button
-                  key={tIdx}
+                  key={topic.id}
                   onClick={() => {
-                    setActiveCategory(topic.cat);
+                    setActiveCategory(topic.id);
                   }}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-2xs border ${
-                    activeCategory === topic.cat
+                    activeCategory === topic.id
                       ? "bg-[#08121a] text-white border-slate-800 shadow-xs scale-105"
                       : "bg-white hover:bg-slate-100/90 text-slate-700 border-slate-200/80 hover:border-slate-300"
                   }`}
                 >
-                  {topic.label}
+                  {topic.pillLabel}
                 </button>
               ))}
             </motion.div>

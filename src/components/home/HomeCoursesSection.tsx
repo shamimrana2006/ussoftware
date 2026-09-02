@@ -23,11 +23,11 @@ export default function HomeCoursesSection() {
 
   const categories = [
     { id: "all", label: isEn ? "All Flagship Courses" : "জনপ্রিয় কোর্সসমূহ", icon: Layers },
-    { id: "web", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2 },
+    { id: "web", label: isEn ? "Programming & Web" : "প্রোগ্রামিং ও ওয়েব", icon: Code2 },
     { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", icon: Megaphone },
-    { id: "creative", label: isEn ? "Graphics & UI/UX" : "গ্রাফিক্স ও ইউআই/ইউএক্স", icon: Palette },
-    { id: "software", label: isEn ? "App & Enterprise" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone },
-    { id: "cloud", label: isEn ? "Networking" : "নেটওয়ার্কিং", icon: Cloud },
+    { id: "creative", label: isEn ? "Design & UI/UX" : "গ্রাফিক্স ও ইউআই/ইউএক্স", icon: Palette },
+    { id: "software", label: isEn ? "App & Software" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone },
+    { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Cloud },
     { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap },
   ];
 

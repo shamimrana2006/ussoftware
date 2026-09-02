@@ -21,7 +21,7 @@ export default function HomeCategoriesSection() {
         ? "React 19, Next.js 15, Node.js, Express, MongoDB, Python & Clean Architecture."
         : "রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, নোড.জেএস, মঙ্গোডিবি, পাইথন ও আধুনিক সফটওয়্যার আর্কিটেকচার।",
       icon: Code2,
-      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
+      count: isEn ? "4 Programs" : "৪টি প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
       iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",
