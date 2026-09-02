@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
+import {
   Search, Sparkles, Briefcase, CheckSquare,
   ChevronRight, ChevronDown, ChevronUp, Users
 } from "lucide-react";
@@ -35,7 +35,7 @@ export default function MentorsPage() {
     return mentorsData.filter((m) => {
       const matchesSpecialty = activeSpecialty === "all" || m.specialty === activeSpecialty;
       const q = searchQuery.toLowerCase().trim();
-      const matchesSearch = 
+      const matchesSearch =
         !q ||
         m.name.toLowerCase().includes(q) ||
         m.nameBn.toLowerCase().includes(q) ||
@@ -51,26 +51,26 @@ export default function MentorsPage() {
   const faqs = [
     {
       q: isEn ? "How do 1-on-1 mentorship sessions work at US Software?" : "ইউএস সফটওয়্যারে ১-অন-১ মেন্টরশিপ কীভাবে পরিচালিত হয়?",
-      a: isEn 
-        ? "Sessions are conducted live via Google Meet or Zoom screen-sharing for 45 minutes. You can share your codebase, review portfolio projects, or conduct mock interview rounds." 
+      a: isEn
+        ? "Sessions are conducted live via Google Meet or Zoom screen-sharing for 45 minutes. You can share your codebase, review portfolio projects, or conduct mock interview rounds."
         : "সেশনগুলো গুগল মিট বা জুমের মাধ্যমে লাইভ স্ক্রিন-শেয়ারিংয়ের মাধ্যমে ৪৫ মিনিট অনুষ্ঠিত হয়। আপনি কোড রিভিউ, প্রজেক্ট পোর্টফোলিও মূল্যায়ন কিংবা ইন্টারভিউ মক সেশন নিতে পারেন।"
     },
     {
       q: isEn ? "Can I schedule recurring sessions with the department heads?" : "আমি কি ডিপার্টমেন্ট হেডদের সাথে নিয়মিত সেশন নিতে পারব?",
-      a: isEn 
-        ? "Yes! Students enrolled in our Career Bootcamps receive dedicated 1-on-1 mentorship pairing throughout their course duration." 
+      a: isEn
+        ? "Yes! Students enrolled in our Career Bootcamps receive dedicated 1-on-1 mentorship pairing throughout their course duration."
         : "হ্যাঁ! আমাদের প্রফেশনাল বুটক্যাম্পে ভর্তি থাকা শিক্ষার্থীরা কোর্স চলাকালীন নিয়মিত মেন্টরশিপ পেয়ে থাকেন।"
     },
     {
       q: isEn ? "What should I prepare before joining the session?" : "সেশনে যুক্ত হওয়ার আগে কী কী প্রস্তুতি নেওয়া প্রয়োজন?",
-      a: isEn 
-        ? "We recommend preparing your specific questions, portfolio or GitHub repository links beforehand to maximize your 45-minute consultation." 
+      a: isEn
+        ? "We recommend preparing your specific questions, portfolio or GitHub repository links beforehand to maximize your 45-minute consultation."
         : "আপনার নির্দিষ্ট প্রশ্নমালা, পোর্টফোলিও বা গিটহাব লিংক আগে থেকেই প্রস্তুত রাখার পরামর্শ দেওয়া হচ্ছে।"
     },
     {
       q: isEn ? "How can I contact the mentorship desk on WhatsApp?" : "মেন্টরশিপ ডেস্কের সাথে হোয়াটসঅ্যাপে যোগাযোগের উপায় কী?",
-      a: isEn 
-        ? "Click any WhatsApp button on the mentor cards to instantly open a direct chat with our academic advising team." 
+      a: isEn
+        ? "Click any WhatsApp button on the mentor cards to instantly open a direct chat with our academic advising team."
         : "যেকোনো মেন্টর কার্ডের হোয়াটসঅ্যাপ বাটনে ক্লিক করে সরাসরি আমাদের একাডেমিক টিমের সাথে চ্যাট করতে পারেন।"
     }
   ];
@@ -80,7 +80,7 @@ export default function MentorsPage() {
       <Header />
 
       <main className="flex-grow">
-        
+
         {/* ========================================================================= */}
         {/* 1. HERO SECTION: MATCHING SCREENSHOT EXACTLY                              */}
         {/* ========================================================================= */}
@@ -91,7 +91,7 @@ export default function MentorsPage() {
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#2ed199]/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
-            
+
             {/* Top Pill Badge: Expert Instructors */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -129,7 +129,7 @@ export default function MentorsPage() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-normal"
             >
               {isEn
-                ? "Behind the leading IT skill development platform, masterminds of industry leaders are working. From the management to the expert mentors, highly skilled people are dedicated to your skill advancement."
+                ? "Behind the leading IT skill development platform, masterminds of industry leaders are working. From the management to the expert mentors, highly skilled people are dedicated to yours skill advancement."
                 : "দেশের শীর্ষস্থানীয় আইটি স্কিল ডেভেলপমেন্ট প্ল্যাটফর্মের পেছনে কাজ করছেন অভিজ্ঞ ইন্ডাস্ট্রি লিডারগণ। ব্যবস্থাপনা থেকে শুরু করে বিশেষজ্ঞ মেন্টর পর্যন্ত প্রতিটি সদস্য আপনার দক্ষতা বৃদ্ধির জন্য নিবেদিত।"}
             </motion.p>
 
@@ -146,11 +146,10 @@ export default function MentorsPage() {
                   <button
                     key={spec.id}
                     onClick={() => setActiveSpecialty(spec.id)}
-                    className={`px-4 py-1.5 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer ${
-                      isActive
+                    className={`px-4 py-1.5 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer ${isActive
                         ? "bg-[#008744] text-white shadow-md shadow-[#008744]/20 scale-105"
                         : "bg-white hover:bg-slate-100 text-slate-700 border border-slate-200/80 shadow-2xs"
-                    }`}
+                      }`}
                   >
                     {spec.name}
                   </button>
@@ -165,7 +164,7 @@ export default function MentorsPage() {
         {/* 2. MENTOR CARDS GRID (EXACT 2-COLUMN LAYOUT WITH HOVER BLACK FADE & DETAILS)*/}
         {/* ========================================================================= */}
         <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14">
-          
+
           {/* Quick Search & Count Header */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-700 bg-white border border-slate-200/80 px-3.5 py-2 rounded-xl shadow-2xs">
@@ -205,7 +204,7 @@ export default function MentorsPage() {
                 className="bg-[#edf9f6] hover:bg-[#e7f7f3] border border-[#aeead9] rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_rgba(13,148,136,0.04)] hover:shadow-[0_16px_36px_rgba(13,148,136,0.1)] transition-all duration-200 flex flex-col justify-between"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6 items-start">
-                  
+
                   {/* Left: Mentor Photo with 15% Black Fade-in & Scale-Up / Lift Animation on Hover */}
                   <div className="sm:col-span-5 flex-shrink-0">
                     <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-slate-200 to-slate-300 border border-slate-300/70 shadow-xs aspect-[4/5] sm:aspect-square group/img">
@@ -214,7 +213,7 @@ export default function MentorsPage() {
                         alt={isEn ? mentor.name : mentor.nameBn}
                         className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-110 group-hover/img:-translate-y-2"
                       />
-                      
+
                       {/* Compact Black Gradient Fade ONLY on bottom 30% behind button */}
                       <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
@@ -231,7 +230,7 @@ export default function MentorsPage() {
 
                   {/* Right: Info & Experience Column */}
                   <div className="sm:col-span-7 flex flex-col justify-between">
-                    
+
                     {/* Name (Clickable to Details Page) */}
                     <Link
                       href={`/mentors/${mentor.id}`}
