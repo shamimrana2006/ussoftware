@@ -16,10 +16,10 @@ export default function HomeCategoriesSection() {
   const categories = [
     {
       id: "web",
-      title: isEn ? "Full-Stack Web & Shopify" : "ফুল-স্ট্যাক ওয়েব ও শপিফাই",
+      title: isEn ? "Programming & Web" : "প্রোগ্রামিং ও ওয়েব",
       desc: isEn 
-        ? "React 19, Next.js 15, Node.js, Express, MongoDB, Shopify Liquid & Clean Architecture."
-        : "রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, নোড.জেএস, মঙ্গোডিবি, শপিফাই লিকুইড ও আধুনিক ওয়েব ইঞ্জিনিয়ারিং।",
+        ? "React 19, Next.js 15, Node.js, Express, MongoDB, Python & Clean Architecture."
+        : "রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, নোড.জেএস, মঙ্গোডিবি, পাইথন ও আধুনিক সফটওয়্যার আর্কিটেকচার।",
       icon: Code2,
       count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
@@ -78,11 +78,25 @@ export default function HomeCategoriesSection() {
         : "কম্পিউটার নেটওয়ার্কিং, সিসকো সুইচিং ও রাউটিং, মাইক্রোটিক ব্যান্ডউইথ ও নেটওয়ার্ক সিকিউরিটি।",
       icon: Cloud,
       count: isEn ? "1 Program" : "১টি প্রোগ্রাম",
-      gradient: "from-emerald-500/10 via-green-500/5 to-transparent",
+      gradient: "from-blue-500/10 via-cyan-500/5 to-transparent",
+      iconColor: "text-blue-600",
+      iconBg: "bg-blue-50 border-blue-200/70",
+      accent: "#2563eb",
+      skills: ["Cisco CCNA", "MikroTik", "TCP/IP Subnetting", "VPN Security"]
+    },
+    {
+      id: "diploma",
+      title: isEn ? "Professional Diploma Programs" : "প্রফেশনাল ডিপ্লোমা প্রোগ্রাম",
+      desc: isEn 
+        ? "Comprehensive career tracks covering Web, Marketing, Design, App Development & Networking."
+        : "ওয়েব, মার্কেটিং, ডিজাইন, অ্যাপ ডেভেলপমেন্ট ও নেটওয়ার্কিং সহ সকল ডোমেনের পূর্ণাঙ্গ কোর্স।",
+      icon: GraduationCap,
+      count: isEn ? "All Programs" : "সকল কোর্স",
+      gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
       iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",
       accent: "#008744",
-      skills: ["Cisco CCNA", "MikroTik", "TCP/IP Subnetting", "VPN Security"]
+      skills: ["All Disciplines", "Job Placement", "Live Projects", "Certificate"]
     }
   ];
 

@@ -71,6 +71,32 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
       {active && (
         <motion.div
           layoutId="hyperRealisticWaterDroplet"
+          animate={{
+            x: mouseOffset.x,
+            y: mouseOffset.y,
+            scaleX: rippleKey > 0
+              ? [1, 1.28 + (rippleKey % 2 ? 0.02 : 0), 0.78, 1.15, 0.93, 1]
+              : isHovered
+                ? 1 + Math.abs(mouseOffset.x) * 0.02
+                : 1,
+            scaleY: rippleKey > 0
+              ? [1, 0.74 + (rippleKey % 2 ? 0.02 : 0), 1.25, 0.88, 1.07, 1]
+              : isHovered
+                ? 1 + Math.abs(mouseOffset.y) * 0.02
+                : 1,
+            rotateZ: rippleKey > 0
+              ? [0, -4.5 + (rippleKey % 2 ? 0.5 : 0), 4.5, -2, 1, 0]
+              : mouseOffset.x * 0.35,
+            borderRadius: rippleKey > 0
+              ? [
+                  squircleFluidRadius,
+                  "26px 8px 24px 10px",
+                  "8px 26px 10px 24px",
+                  "22px 12px 18px 14px",
+                  squircleFluidRadius,
+                ]
+              : squircleFluidRadius,
+          }}
           transition={{
             layout: {
               type: "spring",
@@ -78,147 +104,148 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
               damping: 35,
               mass: 0.35,
             },
-            scaleX: { duration: 0.35, ease: "easeOut" },
-            scaleY: { duration: 0.35, ease: "easeOut" },
             x: { type: "spring", stiffness: 700, damping: 35 },
             y: { type: "spring", stiffness: 700, damping: 35 },
-            borderRadius: { duration: 0.2 },
-          }}
-          animate={{
-            x: mouseOffset.x,
-            y: mouseOffset.y,
-            scaleX: rippleKey > 0
-              ? [1, 1.15, 0.92, 1.04, 1]
-              : isHovered
-                ? 1 + Math.abs(mouseOffset.x) * 0.015
-                : 1,
-            scaleY: rippleKey > 0
-              ? [1, 0.88, 1.12, 0.96, 1]
-              : isHovered
-                ? 1 + Math.abs(mouseOffset.y) * 0.015
-                : 1,
-            borderRadius: squircleFluidRadius,
+            scaleX: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+            scaleY: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+            rotateZ: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+            borderRadius: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
           }}
           className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-slate-100/70 border border-slate-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.07),0_1.5px_4px_rgba(0,0,0,0.04),inset_0_2px_2px_rgba(255,255,255,1),inset_0_-1px_2px_rgba(0,0,0,0.04)] backdrop-blur-2xl overflow-hidden -z-0"
         >
-          {/* Primary High-Visibility Crystal Water Ripple Wavefront */}
-          {rippleKey > 0 && (
-            <motion.span
-              key={`wave1-${rippleKey}`}
-              initial={{ scale: 0.1, opacity: 1 }}
-              animate={{ scale: [0.1, 2.5, 4.6], opacity: [1, 0.6, 0] }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="absolute rounded-full border-2 border-cyan-300 bg-gradient-to-r from-cyan-400/35 via-white/60 to-emerald-300/35 shadow-[0_0_22px_rgba(6,182,212,0.9),inset_0_0_12px_white] pointer-events-none -translate-x-1/2 -translate-y-1/2"
-              style={{
-                left: clickPoint.x,
-                top: clickPoint.y,
-                width: 36,
-                height: 36,
-              }}
-            />
-          )}
-
-          {/* Secondary Pure White Luminous Core Shockwave */}
-          {rippleKey > 0 && (
-            <motion.span
-              key={`wave2-${rippleKey}`}
-              initial={{ scale: 0.1, opacity: 1 }}
-              animate={{ scale: [0.1, 1.8, 3.2], opacity: [1, 0.7, 0] }}
-              transition={{ duration: 0.55, delay: 0.05, ease: "easeOut" }}
-              className="absolute rounded-full border-2 border-white bg-white/70 shadow-[0_0_16px_white,0_0_24px_rgba(6,182,212,0.6)] pointer-events-none -translate-x-1/2 -translate-y-1/2"
-              style={{
-                left: clickPoint.x,
-                top: clickPoint.y,
-                width: 26,
-                height: 26,
-              }}
-            />
-          )}
-
-          {/* Micro Water Splashes / Droplets bursting out */}
-          {rippleKey > 0 && (
-            <>
+          {/* Inner Interactive Effects Container */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {/* Primary High-Visibility Crystal Water Ripple Wavefront */}
+            {rippleKey > 0 && (
               <motion.span
-                key={`splash1-${rippleKey}`}
-                initial={{ y: 0, x: 0, scale: 0, opacity: 0 }}
-                animate={{
-                  y: [0, -18, 0],
-                  x: [0, -12, -16],
-                  scale: [0, 1.3, 0],
-                  opacity: [0, 1, 0],
+                key={`wave1-${rippleKey}`}
+                initial={{ scale: 0.1, opacity: 1 }}
+                animate={{ scale: [0.1, 2.8, 5.2], opacity: [1, 0.65, 0] }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="absolute rounded-full border-2 border-emerald-300 bg-gradient-to-r from-emerald-400/40 via-white/70 to-teal-300/40 shadow-[0_0_22px_rgba(0,135,68,0.9),inset_0_0_12px_white] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+                style={{
+                  left: clickPoint.x,
+                  top: clickPoint.y,
+                  width: 38,
+                  height: 38,
                 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="absolute w-2.5 h-2.5 rounded-full bg-cyan-100 border border-white shadow-[0_0_10px_rgba(6,182,212,0.9),0_0_4px_white] pointer-events-none"
-                style={{ left: clickPoint.x, top: clickPoint.y }}
               />
-              <motion.span
-                key={`splash2-${rippleKey}`}
-                initial={{ y: 0, x: 0, scale: 0, opacity: 0 }}
-                animate={{
-                  y: [0, -22, 0],
-                  x: [0, 12, 18],
-                  scale: [0, 1.5, 0],
-                  opacity: [0, 1, 0],
-                }}
-                transition={{ duration: 0.55, delay: 0.03, ease: "easeOut" }}
-                className="absolute w-2.5 h-2.5 rounded-full bg-white border border-cyan-200 shadow-[0_0_12px_rgba(6,182,212,0.9),0_0_4px_white] pointer-events-none"
-                style={{ left: clickPoint.x, top: clickPoint.y }}
-              />
-            </>
-          )}
+            )}
 
-          {/* 1. Fluid Liquid Ripple Wave Internal Displacement Layer */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30" preserveAspectRatio="none" viewBox="0 0 100 40">
-            <motion.path
+            {/* Secondary Pure White Luminous Core Shockwave */}
+            {rippleKey > 0 && (
+              <motion.span
+                key={`wave2-${rippleKey}`}
+                initial={{ scale: 0.1, opacity: 1 }}
+                animate={{ scale: [0.1, 2.0, 3.6], opacity: [1, 0.75, 0] }}
+                transition={{ duration: 0.55, delay: 0.04, ease: "easeOut" }}
+                className="absolute rounded-full border-2 border-white bg-white/80 shadow-[0_0_18px_white,0_0_24px_rgba(0,135,68,0.7)] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+                style={{
+                  left: clickPoint.x,
+                  top: clickPoint.y,
+                  width: 28,
+                  height: 28,
+                }}
+              />
+            )}
+
+            {/* Micro Water Splashes / Droplets bursting out */}
+            {rippleKey > 0 && (
+              <>
+                <motion.span
+                  key={`splash1-${rippleKey}`}
+                  initial={{ y: 0, x: 0, scale: 0, opacity: 0 }}
+                  animate={{
+                    y: [0, -20, 0],
+                    x: [0, -14, -18],
+                    scale: [0, 1.4, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="absolute w-2.5 h-2.5 rounded-full bg-emerald-100 border border-white shadow-[0_0_10px_rgba(0,135,68,0.9),0_0_4px_white] pointer-events-none"
+                  style={{ left: clickPoint.x, top: clickPoint.y }}
+                />
+                <motion.span
+                  key={`splash2-${rippleKey}`}
+                  initial={{ y: 0, x: 0, scale: 0, opacity: 0 }}
+                  animate={{
+                    y: [0, -24, 0],
+                    x: [0, 14, 20],
+                    scale: [0, 1.6, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{ duration: 0.55, delay: 0.03, ease: "easeOut" }}
+                  className="absolute w-2.5 h-2.5 rounded-full bg-white border border-emerald-200 shadow-[0_0_12px_rgba(0,135,68,0.9),0_0_4px_white] pointer-events-none"
+                  style={{ left: clickPoint.x, top: clickPoint.y }}
+                />
+              </>
+            )}
+
+            {/* 1. Fluid Liquid Ripple Wave Internal Displacement Layer */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-35" preserveAspectRatio="none" viewBox="0 0 100 40">
+              <motion.path
+                key={`wavepath-${rippleKey}`}
+                initial={{ d: "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z" }}
+                animate={
+                  rippleKey > 0
+                    ? {
+                        d: [
+                          "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z",
+                          `M 0,20 Q ${25 + mouseOffset.x * 1.5},${4 + mouseOffset.y * 0.8} ${50 - mouseOffset.x * 0.8},34 T 100,20 L 100,40 L 0,40 Z`,
+                          `M 0,20 Q ${25 - mouseOffset.x * 1.2},${32 - mouseOffset.y * 0.8} ${50 + mouseOffset.x * 1.2},8 T 100,20 L 100,40 L 0,40 Z`,
+                          `M 0,20 Q ${25 + mouseOffset.x * 0.6},${14 + mouseOffset.y * 0.4} ${50 - mouseOffset.x * 0.4},24 T 100,20 L 100,40 L 0,40 Z`,
+                          "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z",
+                        ],
+                      }
+                    : {
+                        d: isHovered
+                          ? `M 0,20 Q ${25 + mouseOffset.x * 0.8},${14 + mouseOffset.y * 0.6} ${50 + mouseOffset.x * 0.4},20 T 100,20 L 100,40 L 0,40 Z`
+                          : "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z",
+                      }
+                }
+                transition={{ duration: 0.75, ease: "easeOut" }}
+                fill="rgba(255,255,255,0.85)"
+              />
+            </svg>
+
+            {/* 2. Main Curved Water Droplet Top Glass Highlight (Meniscus) */}
+            <motion.div
               animate={{
-                d: rippleKey > 0
-                  ? `M 0,20 Q ${25 + mouseOffset.x * 0.8},${8 + mouseOffset.y * 0.6} ${50 + mouseOffset.x * 0.4},26 T 100,20 L 100,40 L 0,40 Z`
-                  : isHovered
-                    ? `M 0,20 Q ${25 + mouseOffset.x * 0.8},${14 + mouseOffset.y * 0.6} ${50 + mouseOffset.x * 0.4},20 T 100,20 L 100,40 L 0,40 Z`
-                    : "M 0,20 Q 25,17 50,20 T 100,20 L 100,40 L 0,40 Z"
+                x: -mouseOffset.x * 0.4,
+                y: -mouseOffset.y * 0.4,
+                scaleX: isHovered ? 1 + mouseOffset.x * 0.02 : 1,
               }}
-              transition={{ type: "spring", stiffness: 300, damping: 15 }}
-              fill="rgba(255,255,255,0.85)"
+              className="absolute top-[1.5px] left-2 right-2 h-[45%] rounded-t-[12px] bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"
             />
-          </svg>
 
-          {/* 2. Main Curved Water Droplet Top Glass Highlight (Meniscus) */}
-          <motion.div
-            animate={{
-              x: -mouseOffset.x * 0.4,
-              y: -mouseOffset.y * 0.4,
-              scaleX: isHovered ? 1 + mouseOffset.x * 0.02 : 1
-            }}
-            className="absolute top-[1.5px] left-2 right-2 h-[45%] rounded-t-[12px] bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"
-          />
+            {/* 3. Distinct 3D Specular Light Reflection Dots */}
+            <motion.div
+              animate={{
+                x: mouseOffset.x * 0.6,
+                y: mouseOffset.y * 0.6,
+                scale: isHovered ? 1.15 : 1,
+              }}
+              className="absolute top-[3px] left-3.5 w-3.5 h-2 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,1)] pointer-events-none"
+            />
+            <motion.div
+              animate={{
+                x: mouseOffset.x * 0.6,
+                y: mouseOffset.y * 0.6,
+                scale: isHovered ? 1.15 : 1,
+              }}
+              className="absolute top-[4px] right-3.5 w-2 h-1.5 rounded-full bg-white/90 shadow-[0_0_4px_rgba(255,255,255,0.8)] pointer-events-none"
+            />
 
-          {/* 3. Distinct 3D Specular Light Reflection Dots */}
-          <motion.div
-            animate={{
-              x: mouseOffset.x * 0.6,
-              y: mouseOffset.y * 0.6,
-              scale: isHovered ? 1.15 : 1
-            }}
-            className="absolute top-[3px] left-3.5 w-3.5 h-2 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,1)] pointer-events-none"
-          />
-          <motion.div
-            animate={{
-              x: mouseOffset.x * 0.6,
-              y: mouseOffset.y * 0.6,
-              scale: isHovered ? 1.15 : 1
-            }}
-            className="absolute top-[4px] right-3.5 w-2 h-1.5 rounded-full bg-white/90 shadow-[0_0_4px_rgba(255,255,255,0.8)] pointer-events-none"
-          />
+            {/* 4. Dynamic Liquid Caustic Shimmer Wave (Light Reflection Sweep) */}
+            <motion.div
+              animate={{ x: ["-140%", "240%"] }}
+              transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 2, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute inset-y-0 w-3/4 bg-gradient-to-r from-transparent via-white/90 to-transparent skew-x-[-25deg] pointer-events-none"
+            />
 
-          {/* 4. Dynamic Liquid Caustic Shimmer Wave (Light Reflection Sweep) */}
-          <motion.div
-            animate={{ x: ["-140%", "240%"] }}
-            transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 2, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute inset-y-0 w-3/4 bg-gradient-to-r from-transparent via-white/90 to-transparent skew-x-[-25deg] pointer-events-none"
-          />
-
-          {/* 5. Bottom Light Concentration Focus Arc (White Glass Glow) */}
-          <div className="absolute bottom-[2px] left-4 right-4 h-[1.5px] rounded-full bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_8px_rgba(255,255,255,1)] pointer-events-none" />
+            {/* 5. Bottom Light Concentration Focus Arc (White Glass Glow) */}
+            <div className="absolute bottom-[2px] left-4 right-4 h-[1.5px] rounded-full bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_8px_rgba(255,255,255,1)] pointer-events-none" />
+          </div>
         </motion.div>
       )}
 
@@ -247,16 +274,19 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
 
       {/* Typography with gentle fluid wave reaction and reflective lighting */}
       <motion.span
+        key={`text-${rippleKey}`}
         animate={{
           x: mouseOffset.x * 0.25,
           y: mouseOffset.y * 0.25,
-          skewX: -mouseOffset.x * 0.2
+          skewX: -mouseOffset.x * 0.2,
+          scale: rippleKey > 0 ? [1, 0.93, 1.07, 0.98, 1] : 1,
         }}
-        transition={{ type: "spring", stiffness: 380, damping: 22 }}
-        className={`relative z-10 text-[15px] xl:text-[16px] transition-all duration-200 select-none ${active
-          ? "font-extrabold tracking-tight"
-          : "text-slate-700 font-semibold group-hover:text-[#008744]"
-          }`}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+        className={`relative z-10 text-[15px] xl:text-[16px] transition-all duration-200 select-none ${
+          active
+            ? "font-extrabold tracking-tight"
+            : "text-slate-700 font-semibold group-hover:text-[#008744]"
+        }`}
       >
         {active ? (
           <span className="relative inline-flex items-center overflow-hidden py-0.5">
@@ -273,7 +303,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
                 duration: 2.2,
                 repeat: Infinity,
                 repeatDelay: 1.8,
-                ease: [0.16, 1, 0.3, 1]
+                ease: [0.16, 1, 0.3, 1],
               }}
               className="absolute inset-y-0 w-2/3 bg-gradient-to-r from-transparent via-white to-transparent skew-x-[-22deg] pointer-events-none mix-blend-overlay"
             />
@@ -291,10 +321,11 @@ export default function Header() {
   const pathname = usePathname();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUniverseOpen, setIsUniverseOpen] = useState(false);
-  const [isMobileUniverseOpen, setIsMobileUniverseOpen] = useState(false);
+  const [isExploreOpen, setIsExploreOpen] = useState(false);
+  const [isMobileExploreOpen, setIsMobileExploreOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const universeRef = useRef<HTMLDivElement>(null);
+  const exploreRef = useRef<HTMLDivElement>(null);
 
   const isLinkActive = (href: string) => {
     if (href === "/") {
@@ -302,6 +333,12 @@ export default function Header() {
     }
     return pathname === href || pathname?.startsWith(href + "/");
   };
+
+  const isExploreActive =
+    pathname === "/gallery" ||
+    pathname?.startsWith("/gallery/") ||
+    pathname === "/events" ||
+    pathname?.startsWith("/events/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -311,11 +348,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close universe dropdown on outside click
+  // Close explore dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (universeRef.current && !universeRef.current.contains(event.target as Node)) {
-        setIsUniverseOpen(false);
+      if (exploreRef.current && !exploreRef.current.contains(event.target as Node)) {
+        setIsExploreOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -325,32 +362,19 @@ export default function Header() {
   // Close mobile drawer when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsExploreOpen(false);
   }, [pathname]);
 
-  const universePages = [
+  const exploreDropdownItems = [
     {
-      title: language === "bn" ? "ইউএস ইউনিভার্স" : "US Universe",
-      href: "/canvas",
-      icon: Box,
-      iconColor: "text-[#008744]",
-      iconBg: "bg-emerald-50/80 text-[#008744] group-hover:bg-emerald-100",
-      desc: language === "bn" ? "ইন্টারঅ্যাক্টিভ ৩ডি টেক হাব" : "Interactive 3D Tech Lab",
+      title: language === "bn" ? "গ্যালারি" : "Gallery",
+      href: "/gallery",
+      icon: LayoutGrid,
     },
     {
-      title: language === "bn" ? "এআই নিউরাল ইউনিভার্স" : "AI Neural Universe",
-      href: "/canvas?universe=ai",
+      title: language === "bn" ? "ইভেন্টস ও ওয়ার্কশপ" : "Events & Workshops",
+      href: "/events",
       icon: Sparkles,
-      iconColor: "text-[#DE1F26]",
-      iconBg: "bg-rose-50/80 text-[#DE1F26] group-hover:bg-rose-100",
-      desc: language === "bn" ? "জেনারেটিভ এআই ম্যাট্রিক্স" : "Generative AI & Neural Matrix",
-    },
-    {
-      title: language === "bn" ? "কোয়ান্টাম রিয়েলম ৩ডি" : "Quantum Realm 3D",
-      href: "/canvas?universe=quantum",
-      icon: Orbit,
-      iconColor: "text-cyan-600",
-      iconBg: "bg-cyan-50/80 text-cyan-600 group-hover:bg-cyan-100",
-      desc: language === "bn" ? "সাব-অ্যাটমিক পার্টিকল কসমস" : "Subatomic Particle Space",
     },
   ];
 
@@ -433,17 +457,136 @@ export default function Header() {
           </div>
 
           {/* Center: Clean Seamless Navigation Track (NO background container) */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-1.5 mx-2 relative">
-            {navLinks.map((item) => (
-              <NavItem
-                key={item.href}
-                href={item.href}
-                active={isLinkActive(item.href)}
-                onClick={item.href === "/" ? handleHomeClick : undefined}
+          <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 mx-2 relative">
+            <NavItem
+              href="/"
+              active={isLinkActive("/")}
+              onClick={handleHomeClick}
+            >
+              {t.header.home}
+            </NavItem>
+
+            <NavItem
+              href="/courses"
+              active={isLinkActive("/courses")}
+            >
+              {t.header.courses || "Courses"}
+            </NavItem>
+
+            {/* Desktop Explore Dropdown */}
+            <div
+              ref={exploreRef}
+              className="relative"
+              onMouseEnter={() => setIsExploreOpen(true)}
+              onMouseLeave={() => setIsExploreOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={(e) => {
+                  setIsExploreOpen(!isExploreOpen);
+                }}
+                className={`relative group px-3.5 xl:px-4 py-2.5 flex items-center space-x-1.5 transition-all duration-200 whitespace-nowrap rounded-xl select-none cursor-pointer ${
+                  isExploreActive
+                    ? "font-extrabold text-[#008744]"
+                    : "text-slate-700 font-semibold hover:text-[#008744]"
+                }`}
               >
-                {item.label}
-              </NavItem>
-            ))}
+                {/* Active/Hover Squircle Droplet Highlight */}
+                {isExploreActive && (
+                  <motion.div
+                    layoutId="exploreDropletHighlight"
+                    className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-slate-100/70 border border-slate-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.07),inset_0_2px_2px_white] backdrop-blur-2xl rounded-xl -z-0"
+                  />
+                )}
+
+                <span className="relative z-10 text-[15px] xl:text-[16px]">
+                  {language === "bn" ? "এক্সপ্লোর" : "Explore"}
+                </span>
+                <ChevronDown
+                  size={14}
+                  className={`relative z-10 transition-transform duration-200 ${
+                    isExploreOpen ? "rotate-180 text-[#008744]" : "text-slate-400 group-hover:text-[#008744]"
+                  }`}
+                />
+              </button>
+
+              {/* Simple & Sleek Dropdown Menu */}
+              <AnimatePresence>
+                {isExploreOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 4, scale: 0.97 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    className="absolute top-full left-0 mt-1 w-52 bg-white/98 backdrop-blur-xl rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08),0_1px_3px_rgba(0,0,0,0.04)] border border-slate-200/90 p-1.5 z-50 overflow-hidden"
+                  >
+                    <div className="space-y-0.5">
+                      {exploreDropdownItems.map((item) => {
+                        const isSubActive = isLinkActive(item.href);
+                        const Icon = item.icon;
+                        return (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsExploreOpen(false)}
+                            className={`flex items-center space-x-2.5 px-3 py-2 rounded-lg text-[13px] sm:text-sm font-semibold transition-all duration-150 ${
+                              isSubActive
+                                ? "bg-emerald-50 text-[#008744] font-bold"
+                                : "text-slate-700 hover:bg-slate-50 hover:text-[#008744]"
+                            }`}
+                          >
+                            <Icon
+                              size={16}
+                              className={
+                                isSubActive
+                                  ? "text-[#008744]"
+                                  : "text-slate-500"
+                              }
+                            />
+                            <span>{item.title}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <NavItem
+              href="/projects"
+              active={isLinkActive("/projects")}
+            >
+              {t.header.projects || "Success Story"}
+            </NavItem>
+
+            <NavItem
+              href="/mentors"
+              active={isLinkActive("/mentors")}
+            >
+              {t.header.mentors || "Mentors"}
+            </NavItem>
+
+            <NavItem
+              href="/about"
+              active={isLinkActive("/about")}
+            >
+              {t.header.about || "About"}
+            </NavItem>
+
+            <NavItem
+              href="/contact"
+              active={isLinkActive("/contact")}
+            >
+              {t.header.contact || "Contact"}
+            </NavItem>
+
+            <NavItem
+              href="/certification"
+              active={isLinkActive("/certification")}
+            >
+              {t.header.certification || "Certification"}
+            </NavItem>
           </nav>
 
           {/* Right Side: Language Switcher + CTA Button + Mobile Hamburger */}
@@ -528,25 +671,120 @@ export default function Header() {
 
 
 
-                {/* Mobile Navigation Links with 3D Water Droplet Squircle */}
-                {navLinks.map((item) => {
+                {/* Mobile Navigation Links */}
+                <Link
+                  href="/"
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    handleHomeClick(e);
+                  }}
+                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                    isLinkActive("/")
+                      ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
+                      : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
+                  }`}
+                >
+                  <span className={isLinkActive("/") ? "text-[#008744] font-bold" : ""}>
+                    {t.header.home}
+                  </span>
+                  {isLinkActive("/") && (
+                    <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
+                  )}
+                </Link>
+
+                <Link
+                  href="/courses"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                    isLinkActive("/courses")
+                      ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
+                      : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
+                  }`}
+                >
+                  <span className={isLinkActive("/courses") ? "text-[#008744] font-bold" : ""}>
+                    {t.header.courses || "Courses"}
+                  </span>
+                  {isLinkActive("/courses") && (
+                    <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
+                  )}
+                </Link>
+
+                {/* Mobile Explore Accordion */}
+                <div className="rounded-xl border border-slate-200/70 overflow-hidden bg-slate-50/50">
+                  <button
+                    type="button"
+                    onClick={() => setIsMobileExploreOpen(!isMobileExploreOpen)}
+                    className="w-full flex items-center justify-between px-4 py-2.5 text-slate-800 font-bold text-[15px] hover:text-[#008744] transition-colors cursor-pointer"
+                  >
+                    <span>{language === "bn" ? "এক্সপ্লোর" : "Explore"}</span>
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-200 text-slate-400 ${
+                        isMobileExploreOpen ? "rotate-180 text-[#008744]" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {isMobileExploreOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="px-2 pb-2 space-y-1 bg-white border-t border-slate-100"
+                      >
+                        {exploreDropdownItems.map((item) => {
+                          const isSubActive = isLinkActive(item.href);
+                          const Icon = item.icon;
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className={`flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
+                                isSubActive
+                                  ? "bg-emerald-50 text-[#008744] font-bold"
+                                  : "text-slate-600 hover:bg-slate-50 hover:text-[#008744]"
+                              }`}
+                            >
+                              <Icon
+                                size={15}
+                                className={
+                                  isSubActive ? "text-[#008744]" : "text-slate-400"
+                                }
+                              />
+                              <span>{item.title}</span>
+                            </Link>
+                          );
+                        })}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Remaining Navigation Links */}
+                {[
+                  { href: "/projects", label: t.header.projects || "Success Story" },
+                  { href: "/mentors", label: t.header.mentors || "Mentors" },
+                  { href: "/about", label: t.header.about || "About" },
+                  { href: "/contact", label: t.header.contact || "Contact" },
+                  { href: "/certification", label: t.header.certification || "Certification" },
+                ].map((item) => {
                   const active = isLinkActive(item.href);
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
-                      onClick={(e) => {
-                        setIsMobileMenuOpen(false);
-                        if (item.href === "/") {
-                          handleHomeClick(e);
-                        }
-                      }}
-                      className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${active
-                        ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-[0_4px_16px_rgba(0,135,68,0.08),inset_0_1.5px_1px_white] border border-emerald-200/80"
-                        : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
-                        }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                        active
+                          ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
+                          : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
+                      }`}
                     >
-                      <span className={active ? "text-[#008744] font-bold" : ""}>{item.label}</span>
+                      <span className={active ? "text-[#008744] font-bold" : ""}>
+                        {item.label}
+                      </span>
                       {active && (
                         <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
                       )}

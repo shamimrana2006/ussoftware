@@ -49,14 +49,16 @@ function CoursesContent() {
 
   const categories = [
     { id: "all", label: isEn ? "All Categories" : "সকল কোর্স", icon: Layers, iconColor: "text-[#008744]" },
-    { id: "web", label: isEn ? "Web & Shopify" : "ওয়েব ও শপিফাই", icon: Code2, iconColor: "text-[#008744]" },
+    { id: "web", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2, iconColor: "text-[#008744]" },
     { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
     { id: "creative", label: isEn ? "Creative, UI/UX & Motion" : "গ্রাফিক্স, ইউআই/ইউএক্স ও মোশন", icon: Palette, iconColor: "text-emerald-600" },
     { id: "software", label: isEn ? "App, .NET & SAP" : "অ্যাপ, ডটনেট ও এসএপি", icon: Smartphone, iconColor: "text-purple-600" },
     { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Server, iconColor: "text-blue-600" },
+    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-amber-500" },
   ];
 
   const iconMap: Record<string, any> = {
+    diploma: GraduationCap,
     web: Code2,
     marketing: TrendingUp,
     creative: Palette,
@@ -65,29 +67,34 @@ function CoursesContent() {
   };
 
   const allCourses = useMemo(() => {
-    return coursesData.map((course) => ({
-      id: course.id,
-      slug: course.slug,
-      category: course.category,
-      categoryLabel: course.categoryLabel[isEn ? "en" : "bn"],
-      catIcon: iconMap[course.category] || BookOpen,
-      title: course.title[isEn ? "en" : "bn"],
-      mode: course.mode[isEn ? "en" : "bn"],
-      modeType: course.modeType,
-      rating: course.rating,
-      duration: course.duration[isEn ? "en" : "bn"],
-      enrolled: course.enrolledCount,
-      fee: course.fee,
-      rawFee: course.rawFee,
-      bannerTitle: course.title.en,
-      bgGradient: "from-[#081b29] via-[#0d2a42] to-[#081b29]",
-      illustration: course.category === "web" ? "💻" : course.category === "marketing" ? "📢" : course.category === "creative" ? "🎨" : course.category === "software" ? "📱" : "🌐",
-      image: course.image,
-      videoUrl: course.videoUrl,
-      whatsappLink: course.whatsappLink || `https://wa.me/8801995852964?text=${encodeURIComponent(`আমি "${course.title.en}" কোর্সটি করতে চাই।`)}`,
-      desc: course.overview[isEn ? "en" : "bn"]
-    }));
-  }, [isEn]);
+    return coursesData.map((course) => {
+      const catObj = categories.find((c) => c.id === course.category);
+      const catLabel = catObj ? catObj.label : course.categoryLabel[isEn ? "en" : "bn"];
+
+      return {
+        id: course.id,
+        slug: course.slug,
+        category: course.category,
+        categoryLabel: catLabel,
+        catIcon: iconMap[course.category] || BookOpen,
+        title: course.title[isEn ? "en" : "bn"],
+        mode: course.mode[isEn ? "en" : "bn"],
+        modeType: course.modeType,
+        rating: course.rating,
+        duration: course.duration[isEn ? "en" : "bn"],
+        enrolled: course.enrolledCount,
+        fee: course.fee,
+        rawFee: course.rawFee,
+        bannerTitle: course.title.en,
+        bgGradient: "from-[#081b29] via-[#0d2a42] to-[#081b29]",
+        illustration: course.category === "web" ? "💻" : course.category === "marketing" ? "📢" : course.category === "creative" ? "🎨" : course.category === "software" ? "📱" : "🌐",
+        image: course.image,
+        videoUrl: course.videoUrl,
+        whatsappLink: course.whatsappLink || `https://wa.me/8801995852964?text=${encodeURIComponent(`আমি "${course.title.en}" কোর্সটি করতে চাই।`)}`,
+        desc: course.overview[isEn ? "en" : "bn"]
+      };
+    });
+  }, [isEn, categories]);
 
   // Handle URL query parameters from homepage navigation
   useEffect(() => {
@@ -100,7 +107,7 @@ function CoursesContent() {
   // Filtering & Sorting
   const filteredCourses = useMemo(() => {
     let result = allCourses.filter((course) => {
-      const matchCategory = activeCategory === "all" || course.category === activeCategory;
+      const matchCategory = activeCategory === "all" || activeCategory === "diploma" || course.category === activeCategory;
       const matchMode = selectedMode === "all" || course.modeType === selectedMode;
       const matchSearch = searchQuery.trim() === "" || 
         course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

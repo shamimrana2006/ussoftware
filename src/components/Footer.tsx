@@ -304,8 +304,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
               {[
+                { name: isEn ? "Photo Gallery" : "ফটো গ্যালারি", href: "/gallery" },
+                { name: isEn ? "Events & Workshops" : "ইভেন্টস ও ওয়ার্কশপ", href: "/events" },
                 { name: isEn ? "Courses" : "সকল কোর্স", href: "/courses" },
-                { name: isEn ? "Become Teacher" : "মেন্টরশিপ", href: "/mentors" },
                 { name: isEn ? "Verification" : "সার্টিফিকেট যাচাই", href: "/certification" },
                 { name: isEn ? "3D Canvas" : "৩ডি ক্যানভাস", href: "/canvas" },
               ].map((item, idx) => (

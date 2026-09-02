@@ -8,7 +8,7 @@ import {
   Sparkles, Star, Clock, Users, BookOpen,
   ArrowRight, MessageCircle, CheckCircle2,
   Code2, Cpu, Cloud, Smartphone, Shield,
-  Palette, Megaphone, Database, Award, Layers,
+  Palette, Megaphone, Database, Award, Layers, GraduationCap,
   Play, X, Zap, ExternalLink, Globe2
 } from "lucide-react";
 
@@ -23,11 +23,12 @@ export default function HomeCoursesSection() {
 
   const categories = [
     { id: "all", label: isEn ? "All Flagship Courses" : "জনপ্রিয় কোর্সসমূহ", icon: Layers },
-    { id: "web", label: isEn ? "Web & Shopify" : "ওয়েব ও শপিফাই", icon: Code2 },
+    { id: "web", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2 },
     { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", icon: Megaphone },
     { id: "creative", label: isEn ? "Graphics & UI/UX" : "গ্রাফিক্স ও ইউআই/ইউএক্স", icon: Palette },
     { id: "software", label: isEn ? "App & Enterprise" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone },
     { id: "cloud", label: isEn ? "Networking" : "নেটওয়ার্কিং", icon: Cloud },
+    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap },
   ];
 
   const allCourses = useMemo(() => {
@@ -57,6 +58,9 @@ export default function HomeCoursesSection() {
       return FEATURED_COURSE_IDS
         .map(id => allCourses.find(c => c.id === id))
         .filter(Boolean) as typeof allCourses;
+    }
+    if (activeCategory === "diploma") {
+      return allCourses;
     }
     const list = allCourses.filter(c => c.category === activeCategory);
     return list.slice(0, 6);
