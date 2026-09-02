@@ -50,7 +50,7 @@ export default function HomeCoursesSection() {
     }));
   }, [isEn]);
 
-  const FEATURED_COURSE_IDS = ["1", "10", "3", "6", "8", "13"];
+  const FEATURED_COURSE_IDS = ["1", "14", "3", "6", "8", "13"];
 
   const filteredCourses = useMemo(() => {
     if (activeCategory === "all") {

@@ -2336,6 +2336,181 @@ export const coursesData: CourseDetail[] = [
         date: "2 Weeks Ago"
       }
     ]
+  },
+
+  // 14. Mastering WordPress Development
+  {
+    id: "14",
+    slug: "mastering-wordpress-development",
+    title: {
+      en: "Mastering WordPress Development",
+      bn: "মাস্টারিং ওয়ার্ডপ্রেস ডেভেলপমেন্ট"
+    },
+    subtitle: {
+      en: "Build professional e-commerce, custom Elementor Pro & WooCommerce sites with payment gateways and freelancing mastery",
+      bn: "কোডিং ছাড়া প্রফেশনাল ই-কমার্স, এলিমেন্টর প্রো, উকমার্স ও পেমেন্ট গেটওয়ে দিয়ে ওয়েবসাইট তৈরি ও ফ্রিল্যান্সিং ক্যারিয়ার"
+    },
+    category: "web",
+    categoryLabel: {
+      en: "WordPress & Web",
+      bn: "ওয়ার্ডপ্রেস ও ওয়েব"
+    },
+    badge: {
+      en: "BEST SELLER",
+      bn: "বেস্ট সেলার"
+    },
+    mode: {
+      en: "Online & Offline",
+      bn: "অনলাইন ও অফলাইন"
+    },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 165,
+    enrolledCount: "150+ Enrolled",
+    languages: {
+      en: "Bengali / English",
+      bn: "বাংলা / ইংরেজি"
+    },
+    fee: "8,000৳",
+    rawFee: 8000,
+    originalFee: "15,000৳",
+    duration: {
+      en: "3 Months",
+      bn: "৩ মাস"
+    },
+    classesCount: {
+      en: "24 Classes",
+      bn: "২৪ টি ক্লাস"
+    },
+    image: "/images/course thumbnail/wordpress.jpg",
+    videoUrl: "https://www.facebook.com/reel/2302715647232585/",
+    whatsappLink: "https://wa.me/8801995852964?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%22Mastering%20WordPress%20Development%22%20%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A6%9F%E0%A6%BF%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4",
+    instructor: {
+      name: "Engr. Rezaul Karim",
+      designation: {
+        en: "Senior WordPress Engineer & Top Rated Freelancer",
+        bn: "সিনিয়র ওয়ার্ডপ্রেস ইঞ্জিনিয়ার ও টপ রেটেড ফ্রিল্যান্সার"
+      },
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      bio: {
+        en: "7+ years designing 300+ custom WordPress, WooCommerce & ACF websites for international clients on Upwork & Fiverr.",
+        bn: "৭+ বছরের ওয়ার্ডপ্রেস, উকমার্স ও ফ্রিল্যান্স মার্কেটপ্লেসে ক্লায়েন্ট প্রজেক্ট হ্যান্ডলিং অভিজ্ঞতা।"
+      },
+      experience: "7+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Master professional WordPress web development from scratch. Learn Elementor Pro, Divi, WooCommerce e-commerce setups with local/global payment gateways (bKash, Nagad, Stripe), dynamic websites using ACF & Crocoblock, speed optimization, and winning freelance clients on Fiverr & Upwork.",
+      bn: "কোডিং ছাড়া জিরো লেভেল থেকে প্রফেশনাল ওয়েবসাইট তৈরি ও ফ্রিল্যান্সিং ক্যারিয়ার গড়ার কমপ্লিট কোর্স। এলিমেন্টর প্রো, উকমার্স, বিকাশ-নগদ পেমেন্ট গেটওয়ে, এসিএফ ডাইনামিক ওয়েবসাইট ও মার্কেটপ্লেস গাইডলাইন শিখবেন।"
+    },
+    fullDescription: {
+      en: "WordPress powers over 43% of all websites on the internet. In this project-driven masterclass, you will build responsive landing pages, hotel/service booking portals, high-converting WooCommerce shops, and sales funnels. You will also master speed optimization, security hardening, and complete marketplace bidding strategies.",
+      bn: "থিওরির পাশাপাশি প্রতিটি ক্লাসে রিয়েল ক্লায়েন্ট প্রজেক্ট, প্রিমিয়াম প্লাগিন-থিম প্র্যাকটিস ফাইল ও আন্তর্জাতিক মার্কেটপ্লেসে কাজ পাওয়ার টেকনিক শেখানো হবে।"
+    },
+    coreValues: [
+      {
+        id: "cv1",
+        title: { en: "Elementor Pro & Dynamic ACF", bn: "এলিমেন্টর প্রো ও এসিএফ" },
+        desc: { en: "Build pixel-perfect landing pages and custom post type dynamic systems.", bn: "কাস্টম পোস্ট টাইপ ও আধুনিক ল্যান্ডিং পেজ ডিজাইন।" },
+        icon: "Code2"
+      },
+      {
+        id: "cv2",
+        title: { en: "WooCommerce & Payment Gateway", bn: "উকমার্স ও পেমেন্ট গেটওয়ে" },
+        desc: { en: "Full-functional online stores with bKash, Nagad, Stripe & PayPal.", bn: "বিকাশ, নগদ ও স্ট্রাইপ পেমেন্ট গেটওয়ে ইন্টিগ্রেশন।" },
+        icon: "Zap"
+      },
+      {
+        id: "cv3",
+        title: { en: "Speed, Security & Freelancing", bn: "স্পিড, সিকিউরিটি ও ফ্রিল্যান্সিং" },
+        desc: { en: "WP Rocket optimization, Wordfence security & Upwork/Fiverr gigs.", bn: "স্পিড অপটিমাইজেশন ও ফ্রিল্যান্সিং ব্লুপ্রিন্ট।" },
+        icon: "Award"
+      }
+    ],
+    learningOutcomes: [
+      { en: "Build modern business websites and landing pages using Elementor Pro and Divi builder.", bn: "এলিমেন্টর প্রো ও ডিভি দিয়ে আধুনিক বিজনেস ওয়েবসাইট ও ল্যান্ডিং পেজ তৈরি।" },
+      { en: "Create full-featured WooCommerce e-commerce stores with multi-currency and payment gateways.", bn: "উকমার্স দিয়ে কমপ্লিট ই-কমার্স শপ ও পেমেন্ট গেটওয়ে সেটআপ।" },
+      { en: "Develop dynamic web portals using ACF (Advanced Custom Fields) and Crocoblock JetEngine.", bn: "এসিএফ ও ক্রোকোব্লক দিয়ে ডাইনামিক ফিল্টার ও কাস্টম পোস্ট টাইপ তৈরি।" },
+      { en: "Optimize website speed (90+ Google PageSpeed) and secure WordPress with Wordfence/Cloudflare.", bn: "সাইট স্পিড অপটিমাইজেশন ও সিকিউরিটি হার্ডেনিং।" },
+      { en: "Create optimized Fiverr Gigs and winning Upwork proposals for WordPress client jobs.", bn: "ফাইভার গিগ ও আপওয়ার্ক কভার লেটার অপটিমাইজেশন।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: WordPress Core Architecture & Local Server Setup", bn: "মডিউল ১: ওয়ার্ডপ্রেস কোর আর্কিটেকচার ও লোকাল সার্ভার" },
+        duration: { en: "4 Classes • 8 Hours", bn: "৪ টি ক্লাস • ৮ ঘণ্টা" },
+        lessonsCount: 5,
+        topics: [
+          { en: "Domain, Hosting, cPanel, SSL & Local by Flywheel Setup", bn: "ডোমেন, হোস্টিং, সিপ্যানেল ও লোকাল সার্ভার কনফিগারেশন" },
+          { en: "WordPress Dashboard, Settings, Permalinks & Gutenberg Editor", bn: "ওয়ার্ডপ্রেস ড্যাশবোর্ড সেটিংস ও গুটেনবার্গ এডিটর" },
+          { en: "Theme and Plugin Architecture, Child Themes & Best Practices", bn: "থিম ও প্লাগিন আর্কিটেকচার এবং চাইল্ড থিম তৈরি" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Elementor Pro & High-Converting Landing Pages", bn: "মডিউল ২: এলিমেন্টর প্রো ও হাই-কনভার্টিং ল্যান্ডিং পেজ" },
+        duration: { en: "5 Classes • 10 Hours", bn: "৫ টি ক্লাস • ১০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Elementor Flexbox Containers, Responsive Breakpoints & Global Design System", bn: "এলিমেন্টর ফ্লেক্সবক্স কন্টেইনার ও রেসপনসিভ ডিজাইন" },
+          { en: "Theme Builder: Custom Header, Footer, 404, Single Post & Archive Templates", bn: "কাস্টম হেডার, ফুটার ও সিঙ্গেল পোস্ট টেমপ্লেট" },
+          { en: "Popups, Sticky Effects, Motion Effects & Lead Capture Forms", bn: "পপআপ, স্টিকি এফেক্টস ও লিড ক্যাপচার ফর্ম" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Full E-Commerce Store with WooCommerce & Payment Gateways", bn: "মডিউল ৩: উকমার্স ই-কমার্স ও পেমেন্ট গেটওয়ে ইন্টিগ্রেশন" },
+        duration: { en: "5 Classes • 10 Hours", bn: "৫ টি ক্লাস • ১০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "WooCommerce Setup: Simple, Variable, Digital & Downloadable Products", bn: "সিম্পল ও ভ্যারিয়েবল প্রোডাক্ট সেটআপ" },
+          { en: "Custom Checkout & Cart Page Design with Multi-Step Checkout", bn: "কাস্টম কার্ট ও চেকআউট পেজ ডিজাইন" },
+          { en: "Local & International Payment Integration: bKash, Nagad, Stripe, PayPal & SSLCommerz", bn: "বিকাশ, নগদ, স্ট্রাইপ ও এসএসএলকমার্স পেমেন্ট গেটওয়ে" }
+        ]
+      },
+      {
+        moduleNumber: 4,
+        title: { en: "Module 4: Dynamic Websites (ACF, Crocoblock & Custom Post Types)", bn: "মডিউল ৪: ডায়নামিক ওয়েবসাইট (ACF ও Crocoblock)" },
+        duration: { en: "5 Classes • 10 Hours", bn: "৫ টি ক্লাস • ১০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Custom Post Types (CPT) & Custom Taxonomies with CPT UI", bn: "কাস্টম পোস্ট টাইপ ও ট্যাক্সোনমি তৈরি" },
+          { en: "Advanced Custom Fields (ACF Pro) & Dynamic Content Binding in Elementor", bn: "এসিএফ প্রো দিয়ে ডাইনামিক ফিল্ড বাইন্ডিং" },
+          { en: "Building a Real Estate / Hotel Booking & Directory Portal with Crocoblock JetEngine", bn: "হোটেল বুকিং ও ডিরেক্টরি পোর্টাল প্রজেক্ট" }
+        ]
+      },
+      {
+        moduleNumber: 5,
+        title: { en: "Module 5: Speed Optimization, Security & Freelancing Blueprint", bn: "মডিউল ৫: স্পিড অপটিমাইজেশন, সিকিউরিটি ও ফ্রিল্যান্সিং" },
+        duration: { en: "5 Classes • 10 Hours", bn: "৫ টি ক্লাস • ১০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Speed Optimization (WP Rocket, Perfmatters, Image Compression & Cloudflare CDN)", bn: "সাইটের স্পিড ৯০+ অপটিমাইজেশন" },
+          { en: "WordPress Security (Wordfence, Two-Factor Auth, Malware Cleanup & Backups with UpdraftPlus)", bn: "ওয়ার্ডপ্রেস সিকিউরিটি ও ব্যাকআপ সেটআপ" },
+          { en: "Upwork Proposals, Fiverr Gig SEO & Winning High-Ticket WordPress Clients", bn: "আপওয়ার্ক ও ফাইভারে সফল ফ্রিল্যান্সিং গাইডলাইন" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "24 Live Practical WordPress Masterclasses", bn: "২৪ টি লাইভ প্র্যাকটিক্যাল ক্লাস" },
+      { en: "Premium Themes & Plugins Bundle (Elementor Pro, Crocoblock, WP Rocket)", bn: "প্রিমিয়াম থিম ও প্লাগিন প্র্যাকটিস ফাইলস" },
+      { en: "Fiverr & Upwork WordPress Freelance Blueprint", bn: "ফ্রিল্যান্সিং ব্লুপ্রিন্ট ও গিগ গাইড" },
+      { en: "Professional WordPress Developer Certificate", bn: "প্রফেশনাল ওয়ার্ডপ্রেস ডেভেলপার সনদপত্র" }
+    ],
+    reviews: [
+      {
+        id: "r14",
+        name: "Ashraful Alam",
+        avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=120",
+        role: { en: "WordPress Freelancer on Fiverr", bn: "ওয়ার্ডপ্রেস ফ্রিল্যান্সার" },
+        rating: 5,
+        comment: {
+          en: "The WooCommerce payment integration and ACF dynamic site lessons were top-notch. Started getting direct client orders within a month of completion!",
+          bn: "উকমার্স পেমেন্ট গেটওয়ে এবং এসিএফ ডাইনামিক ওয়েবসাইট বানানোর গাইডলাইন অসাধারণ ছিল।"
+        },
+        date: "1 Week Ago"
+      }
+    ]
   }
 ];
 
