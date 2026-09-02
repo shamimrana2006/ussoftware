@@ -9,7 +9,7 @@ import {
   ArrowRight, MessageCircle, CheckCircle2,
   Code2, Cpu, Cloud, Smartphone, Shield,
   Palette, Megaphone, Database, Award, Layers,
-  Play, X, Zap, ExternalLink
+  Play, X, Zap, ExternalLink, Globe2
 } from "lucide-react";
 
 import { coursesData, getVideoMeta } from "@/data/coursesData";
@@ -22,12 +22,12 @@ export default function HomeCoursesSection() {
   const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
 
   const categories = [
-    { id: "all", label: isEn ? "All Flagship Courses" : "৬টি জনপ্রিয় কোর্স", icon: Layers },
-    { id: "web", label: isEn ? "Web & WordPress" : "ওয়েব ও ওয়ার্ডপ্রেস", icon: Code2 },
-    { id: "software", label: isEn ? "Flutter App Dev" : "মোবাইল অ্যাপ", icon: Smartphone },
-    { id: "ai", label: isEn ? "Agentic AI & Automation" : "এআই ও অটোমেশন", icon: Cpu },
-    { id: "uiux", label: isEn ? "Graphic Design with AI" : "গ্রাফিক ডিজাইন", icon: Palette },
-    { id: "marketing", label: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: Megaphone },
+    { id: "all", label: isEn ? "All Flagship Courses" : "জনপ্রিয় কোর্সসমূহ", icon: Layers },
+    { id: "web", label: isEn ? "Web & Shopify" : "ওয়েব ও শপিফাই", icon: Code2 },
+    { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", icon: Megaphone },
+    { id: "creative", label: isEn ? "Graphics & UI/UX" : "গ্রাফিক্স ও ইউআই/ইউএক্স", icon: Palette },
+    { id: "software", label: isEn ? "App & Enterprise" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone },
+    { id: "cloud", label: isEn ? "Networking" : "নেটওয়ার্কিং", icon: Cloud },
   ];
 
   const allCourses = useMemo(() => {
@@ -42,15 +42,15 @@ export default function HomeCoursesSection() {
       duration: course.duration[isEn ? "en" : "bn"],
       enrolled: course.enrolledCount,
       fee: course.fee,
-      originalFee: course.originalFee || "25,000৳",
+      originalFee: course.originalFee || "20,000৳",
       tags: [course.categoryLabel[isEn ? "en" : "bn"], course.mode[isEn ? "en" : "bn"]],
       thumbnail: course.image,
       videoUrl: course.videoUrl,
-      accentColor: course.category === "ai" ? "#DE1F26" : "#008744"
+      accentColor: course.category === "marketing" ? "#DE1F26" : "#008744"
     }));
   }, [isEn]);
 
-  const FEATURED_COURSE_IDS = ["1", "2", "102", "4", "5", "135"];
+  const FEATURED_COURSE_IDS = ["1", "10", "3", "6", "8", "13"];
 
   const filteredCourses = useMemo(() => {
     if (activeCategory === "all") {
@@ -58,14 +58,7 @@ export default function HomeCoursesSection() {
         .map(id => allCourses.find(c => c.id === id))
         .filter(Boolean) as typeof allCourses;
     }
-    const list = allCourses.filter(c => {
-      if (activeCategory === "web") return c.id === "1" || c.id === "2" || c.category === "web";
-      if (activeCategory === "software") return c.id === "102" || c.category === "software";
-      if (activeCategory === "uiux") return c.id === "4" || c.category === "uiux";
-      if (activeCategory === "marketing") return c.id === "5" || c.category === "marketing";
-      if (activeCategory === "ai") return c.id === "135" || c.category === "ai";
-      return c.category === activeCategory;
-    });
+    const list = allCourses.filter(c => c.category === activeCategory);
     return list.slice(0, 6);
   }, [allCourses, activeCategory]);
 

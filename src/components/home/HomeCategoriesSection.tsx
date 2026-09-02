@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { 
   Code2, Cpu, Cloud, Shield, Smartphone, Palette, 
-  ArrowUpRight, Database, Terminal, Layers, GraduationCap
+  ArrowUpRight, Database, Terminal, Layers, GraduationCap, Megaphone
 } from "lucide-react";
 
 export default function HomeCategoriesSection() {
@@ -16,101 +16,73 @@ export default function HomeCategoriesSection() {
   const categories = [
     {
       id: "web",
-      title: isEn ? "Full-Stack Web Engineering" : "ফুল-স্ট্যাক ওয়েব ইঞ্জিনিয়ারিং",
+      title: isEn ? "Full-Stack Web & Shopify" : "ফুল-স্ট্যাক ওয়েব ও শপিফাই",
       desc: isEn 
-        ? "React 19, Next.js 15, Node.js, TypeScript, PostgreSQL & High-scale Microservices."
-        : "রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, টাইপস্ক্রিপ্ট, পোস্টগ্রেসকিউএল ও মাইক্রোসার্ভিসেস আর্কিটেকচার।",
+        ? "React 19, Next.js 15, Node.js, Express, MongoDB, Shopify Liquid & Clean Architecture."
+        : "রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, নোড.জেএস, মঙ্গোডিবি, শপিফাই লিকুইড ও আধুনিক ওয়েব ইঞ্জিনিয়ারিং।",
       icon: Code2,
-      count: isEn ? "4 Programs" : "৪টি প্রোগ্রাম",
+      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
       iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",
       accent: "#008744",
-      skills: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"]
+      skills: ["React & Next.js", "Node & Express", "MongoDB", "Shopify Liquid"]
     },
     {
-      id: "ai",
-      title: isEn ? "AI & Machine Learning" : "এআই ও মেশিন লার্নিং",
+      id: "marketing",
+      title: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ",
       desc: isEn 
-        ? "Generative AI, LLMs, RAG Pipelines, Autonomous Multi-Agent Frameworks & PyTorch."
-        : "জেনারেটিভ এআই, লার্জ ল্যাঙ্গুয়েজ মডেলস, র‍্যাগ ও অটোনোমাস মাল্টি-এজেন্ট সিস্টেমস।",
-      icon: Cpu,
+        ? "Performance SEO, Meta Advantage+ AI Ads, Google PMax, CPA Funnels & Upwork Freelancing."
+        : "এসইও, মেটা এআই অ্যাডস, গুগল পারফরম্যান্স ম্যাক্স, সিপিএ ট্রাফিক ও ফ্রিল্যান্সিং ক্যারিয়ার।",
+      icon: Megaphone,
       count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
       gradient: "from-red-500/10 via-rose-500/5 to-transparent",
       iconColor: "text-[#DE1F26]",
       iconBg: "bg-red-50 border-red-200/70",
       accent: "#DE1F26",
-      skills: ["LangChain", "Vector DBs", "RAG", "PyTorch"]
+      skills: ["Technical SEO", "Meta AI Ads", "CPA Networks", "Freelancing"]
     },
     {
-      id: "cloud",
-      title: isEn ? "DevOps & Cloud Architecture" : "ডেভঅপ্স ও ক্লাউড আর্কিটেকচার",
+      id: "creative",
+      title: isEn ? "Design, Motion & UX/UI" : "ডিজাইন, মোশন ও ইউআই/ইউএক্স",
       desc: isEn 
-        ? "AWS Infrastructure, Kubernetes Clusters, Docker, Terraform IaC & GitOps CI/CD."
-        : "এডব্লিউএস ক্লাউড ইনফ্রাস্ট্রাকচার, কুবারনেটিস, ডকার ও অটোমেটেড সিআই/সিডি।",
-      icon: Cloud,
+        ? "Photoshop & Illustrator with AI, Premiere Pro, After Effects VFX & Figma Design Systems."
+        : "ফটোশপ, ইলাস্ট্রেটর, এআই জেনারেটিভ আর্ট, প্রিমিয়ার প্রো, আফটার ইফেক্টস ও ফিগমা ইউআই/ইউএক্স।",
+      icon: Palette,
+      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
+      gradient: "from-purple-500/10 via-pink-500/5 to-transparent",
+      iconColor: "text-purple-600",
+      iconBg: "bg-purple-50 border-purple-200/70",
+      accent: "#9333ea",
+      skills: ["Adobe Suite", "Generative AI", "Motion Graphics", "Figma UX/UI"]
+    },
+    {
+      id: "software",
+      title: isEn ? "App & Enterprise Systems" : "অ্যাপ ও এন্টারপ্রাইজ সফটওয়্যার",
+      desc: isEn 
+        ? "Cross-Platform Flutter 3.x, C# ASP.NET Core 8 Web API, SQL Server & SAP ERP Systems."
+        : "ক্রস-প্ল্যাটফর্ম ফ্লাটার অ্যাপ, সি-শার্প এএসপি.নেট কোর ও এসএপি (SAP) এন্টারপ্রাইজ সিস্টেম।",
+      icon: Smartphone,
       count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
       gradient: "from-blue-500/10 via-cyan-500/5 to-transparent",
       iconColor: "text-blue-600",
       iconBg: "bg-blue-50 border-blue-200/70",
       accent: "#2563eb",
-      skills: ["AWS", "Kubernetes", "Docker", "Terraform"]
+      skills: ["Flutter & Dart", "ASP.NET Core", "SQL Server", "SAP ERP"]
     },
     {
-      id: "mobile",
-      title: isEn ? "Mobile App Engineering" : "মোবাইল অ্যাপ ইঞ্জিনিয়ারিং",
+      id: "cloud",
+      title: isEn ? "Networking & Infrastructure" : "নেটওয়ার্কিং ও ইনফ্রাস্ট্রাকচার",
       desc: isEn 
-        ? "Cross-Platform Flutter 3.x, Dart, Clean Architecture, Riverpod & Offline SQLite."
-        : "ফ্লাটার ও ডার্ট দিয়ে আইওএস এবং অ্যান্ড্রয়েড উভয় প্ল্যাটফর্মের জন্য প্রোডাকশন অ্যাপ।",
-      icon: Smartphone,
-      count: isEn ? "2 Programs" : "২টি প্রোগ্রাম",
-      gradient: "from-purple-500/10 via-pink-500/5 to-transparent",
-      iconColor: "text-purple-600",
-      iconBg: "bg-purple-50 border-purple-200/70",
-      accent: "#9333ea",
-      skills: ["Flutter", "Dart", "Clean Arch", "Riverpod"]
-    },
-    {
-      id: "cyber",
-      title: isEn ? "Cyber Security & Ethical Hacking" : "সাইবার সিকিউরিটি ও এথিক্যাল হ্যাকিং",
-      desc: isEn 
-        ? "Network Penetration Testing, SOC Defense, Web App Vulnerabilities & Kali Linux."
-        : "নেটওয়ার্ক পেনেট্রেশন টেস্টিং, এসওসি ডিফেন্স ও ওয়েব অ্যাপ্লিকেশন সিকিউরিটি।",
-      icon: Shield,
-      count: isEn ? "2 Programs" : "২টি প্রোগ্রাম",
-      gradient: "from-amber-500/10 via-orange-500/5 to-transparent",
-      iconColor: "text-amber-600",
-      iconBg: "bg-amber-50 border-amber-200/70",
-      accent: "#d97706",
-      skills: ["Ethical Hacking", "SOC", "Kali Linux", "OWASP"]
-    },
-    {
-      id: "uiux",
-      title: isEn ? "Product Design (UI/UX)" : "প্রোডাক্ট ডিজাইন (ইউআই/ইউএক্স)",
-      desc: isEn 
-        ? "Design Systems in Figma, User Research, Prototyping, Usability Testing & Micro-Interactions."
-        : "ফিগমায় আধুনিক ডিজাইন সিস্টেম, ইউজার রিসার্চ, প্রোটোটাইপিং ও ইউজেবিলিটি টেস্টিং।",
-      icon: Palette,
-      count: isEn ? "2 Programs" : "২টি প্রোগ্রাম",
+        ? "Computer Networking, Cisco Routing & Switching, MikroTik RouterOS, VPNs & Security."
+        : "কম্পিউটার নেটওয়ার্কিং, সিসকো সুইচিং ও রাউটিং, মাইক্রোটিক ব্যান্ডউইথ ও নেটওয়ার্ক সিকিউরিটি।",
+      icon: Cloud,
+      count: isEn ? "1 Program" : "১টি প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-green-500/5 to-transparent",
-      iconColor: "text-emerald-600",
+      iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",
-      accent: "#059669",
-      skills: ["Figma", "Design Systems", "Prototyping", "UX Research"]
-    },
-    {
-      id: "diploma",
-      title: isEn ? "Diploma Courses" : "ডিপ্লোমা কোর্সসমূহ",
-      desc: isEn 
-        ? "Comprehensive 6-month diploma engineering tracks designed for polytechnic learners & tech career seekers."
-        : "পলিটেকনিক শিক্ষার্থী ও উচ্চাভিলাষী ইঞ্জিনিয়ারদের জন্য ৬ মাসের ইন্ডাস্ট্রি-স্ট্যান্ডার্ড ডিপ্লোমা ট্র্যাক।",
-      icon: GraduationCap,
-      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
-      gradient: "from-red-500/10 via-rose-500/5 to-transparent",
-      iconColor: "text-[#DE1F26]",
-      iconBg: "bg-red-50 border-red-200/70",
-      accent: "#DE1F26",
-      skills: ["Full-Stack", "Cyber & Cloud", "AI & Data Science"]
+      accent: "#008744",
+      skills: ["Cisco CCNA", "MikroTik", "TCP/IP Subnetting", "VPN Security"]
     }
   ];
 

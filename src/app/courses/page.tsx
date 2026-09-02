@@ -48,30 +48,20 @@ function CoursesContent() {
   }, []);
 
   const categories = [
-    { id: "all", label: isEn ? "All Categories" : "সকল ক্যাটাগরি", icon: Layers, iconColor: "text-[#008744]" },
-    { id: "ai", label: isEn ? "AI & Automation" : "এআই ও অটোমেশন", icon: Cpu, iconColor: "text-[#DE1F26]" },
-    { id: "web", label: isEn ? "Programming" : "প্রোগ্রামিং", icon: Code2, iconColor: "text-[#008744]" },
-    { id: "language", label: isEn ? "Language Skills" : "ল্যাংগুয়েজ স্কিলস", icon: Globe2, iconColor: "text-blue-500" },
-    { id: "uiux", label: isEn ? "Art & Design" : "আর্ট ও ডিজাইন", icon: Palette, iconColor: "text-emerald-600" },
-    { id: "marketing", label: isEn ? "Digital Marketing" : "ডিজিটাল মার্কেটিং", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
-    { id: "cyber", label: isEn ? "Cybersecurity" : "সাইবার সিকিউরিটি", icon: ShieldCheck, iconColor: "text-amber-600" },
-    { id: "cloud", label: isEn ? "Networking & Server" : "নেটওয়ার্কিং ও সার্ভার", icon: Server, iconColor: "text-blue-600" },
-    { id: "management", label: isEn ? "Management" : "ম্যানেজমেন্ট", icon: Briefcase, iconColor: "text-purple-600" },
-    { id: "database", label: isEn ? "Database" : "ডাটাবেস", icon: Database, iconColor: "text-[#008744]" },
-    { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-[#DE1F26]" },
+    { id: "all", label: isEn ? "All Categories" : "সকল কোর্স", icon: Layers, iconColor: "text-[#008744]" },
+    { id: "web", label: isEn ? "Web & Shopify" : "ওয়েব ও শপিফাই", icon: Code2, iconColor: "text-[#008744]" },
+    { id: "marketing", label: isEn ? "Digital Marketing & CPA" : "ডিজিটাল মার্কেটিং ও সিপিএ", icon: TrendingUp, iconColor: "text-[#DE1F26]" },
+    { id: "creative", label: isEn ? "Creative, UI/UX & Motion" : "গ্রাফিক্স, ইউআই/ইউএক্স ও মোশন", icon: Palette, iconColor: "text-emerald-600" },
+    { id: "software", label: isEn ? "App, .NET & SAP" : "অ্যাপ, ডটনেট ও এসএপি", icon: Smartphone, iconColor: "text-purple-600" },
+    { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Server, iconColor: "text-blue-600" },
   ];
 
   const iconMap: Record<string, any> = {
-    ai: Cpu,
     web: Code2,
-    language: Globe2,
-    uiux: Palette,
     marketing: TrendingUp,
-    cyber: ShieldCheck,
+    creative: Palette,
+    software: Smartphone,
     cloud: Server,
-    management: Briefcase,
-    database: Database,
-    diploma: GraduationCap,
   };
 
   const allCourses = useMemo(() => {
@@ -91,7 +81,7 @@ function CoursesContent() {
       rawFee: course.rawFee,
       bannerTitle: course.title.en,
       bgGradient: "from-[#081b29] via-[#0d2a42] to-[#081b29]",
-      illustration: course.category === "ai" ? "🤖" : course.category === "web" ? "⚛️" : course.category === "language" ? "🇬🇧" : course.category === "uiux" ? "🎨" : course.category === "marketing" ? "📢" : course.category === "cyber" ? "🛡️" : course.category === "management" ? "💼" : course.category === "database" ? "🗄️" : "🎓",
+      illustration: course.category === "web" ? "💻" : course.category === "marketing" ? "📢" : course.category === "creative" ? "🎨" : course.category === "software" ? "📱" : "🌐",
       image: course.image,
       videoUrl: course.videoUrl,
       whatsappLink: course.whatsappLink || `https://wa.me/8801995852964?text=${encodeURIComponent(`আমি "${course.title.en}" কোর্সটি করতে চাই।`)}`,
