@@ -37,17 +37,17 @@
     "stats": {
       "courses": {
         "title": "Courses",
-        "value": "50+",
+        "value": "60+",
         "desc": "Vendor Certi."
       },
       "students": {
         "title": "Students",
-        "value": "27,000+",
+        "value": "40,000+",
         "desc": "Building Skills"
       },
       "placement": {
         "title": "Placement",
-        "value": "70%",
+        "value": "75%",
         "desc": "Career Success"
       }
     }

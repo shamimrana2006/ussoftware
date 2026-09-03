@@ -40,52 +40,6 @@ export default function HomePartnersSection() {
   const partners: PartnerItem[] = [
     // 1. Collaboration Partners
     {
-      id: "prometric",
-      name: "Prometric Authorized Test Center",
-      nameBn: "প্রমেট্রিক অথরাইজড গ্লোবাল টেস্ট সেন্টার",
-      logo: "/our partner/us-software-ltd-723199-Prometric-Logo-Black_Jpeg.webp",
-      category: "collaboration",
-      subtitle: "Global Exam & Certification Testing",
-      subtitleBn: "গ্লোবাল এক্সাম সেন্টার",
-      description: "Authorized testing facility partnership with Prometric, enabling students to sit for Microsoft, AWS, Oracle, Cisco, and other international professional vendor exams in-house.",
-      descriptionBn: "প্রমেট্রিক অথরাইজড টেস্ট সেন্টার পার্টনারশিপের মাধ্যমে আমাদের শিক্ষার্থীরা মাইক্রোসফট, এডাব্লিউএস, ওরাকল, সিসকো সহ আন্তর্জাতিক ভেন্ডর এক্সামে সরাসরি অংশ নিতে পারেন।",
-      highlights: [
-        "In-house international testing facilities",
-        "Global vendor credentials (Microsoft, AWS, Oracle, Cisco)",
-        "Discounted exam voucher assistance for enrolled students"
-      ],
-      highlightsBn: [
-        "ইন-হাউস আন্তর্জাতিক প্রফেশনাল এক্সাম সেন্টার সুবিধা",
-        "গ্লোবাল ভেন্ডর সার্টিফিকেশন (Microsoft, AWS, Oracle)",
-        "শিক্ষার্থীদের জন্য বিশেষ এক্সাম ভাউচার গাইডেন্স"
-      ],
-      website: "https://www.prometric.com"
-    },
-    {
-      id: "academic-alliance",
-      name: "University Innovation & Academic Alliance",
-      nameBn: "ইউনিভার্সিটি ইনোভেশন ও একাডেমিক অ্যালায়েন্স",
-      logo: "/our partner/us-software-ltd-659350-og_logo.webp",
-      category: "collaboration",
-      subtitle: "Higher Education Curriculum Bridge",
-      subtitleBn: "একাডেমিক কারিকুলাম পার্টনার",
-      description: "Active academic alliances with 20+ public & private universities to bridge the gap between academic computer science degrees and real-world production engineering.",
-      descriptionBn: "২০টিরও বেশি সরকারি ও বেসরকারি বিশ্ববিদ্যালয়ের সাথে সমঝোতার মাধ্যমে অ্যাকাডেমিক সিএসই সিলেবাস এবং ইন্ডাস্ট্রির প্রোডাকশন সফটওয়্যার কাজের মধ্যে ব্যবধান দূর করা।",
-      highlights: [
-        "University credit transfer and final year capstone guidance",
-        "Campus-to-corporate direct recruitment drives",
-        "Hands-on GitHub repository reviews & live coding bootcamps"
-      ],
-      highlightsBn: [
-        "বিশ্ববিদ্যালয়ের ফাইনাল ইয়ার ক্যাপস্টোন প্রজেক্ট মেন্টরিং",
-        "ক্যাম্পাস রিক্রুটমেন্ট ড্রাইভ ও সরাসরি জব অফার",
-        "লাইভ গিটহাব কোড রিভিউ ও ইন্ডাস্ট্রিয়াল বুটক্যাম্প"
-      ],
-      website: "https://ussoftwareltd.com"
-    },
-
-    // New Partner Additions from New Folder
-    {
       id: "bteb",
       name: "Bangladesh Technical Education Board (BTEB)",
       nameBn: "বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB)",
@@ -98,19 +52,41 @@ export default function HomePartnersSection() {
       highlights: ["BTEB Recognized Skills", "National Vocational Standard", "Professional Diploma Support"],
       highlightsBn: ["কারিগরি শিক্ষা বোর্ড অনুমোদিত স্কিলস", "জাতীয় ভোকেশনাল কারিকুলাম", "প্রফেশনাল ডিপ্লোমা সুবিধা"]
     },
-
     {
-      id: "iitu",
-      name: "Islamic University of Technology (IUT)",
-      nameBn: "ইসলামিক ইউনিভার্সিটি অব টেকনোলজি (IUT)",
+      id: "bitm",
+      name: "BASIS Institute of Technology & Management (BITM)",
+      nameBn: "বেসিস ইনস্টিটিউট অব টেকনোলজি অ্যান্ড ম্যানেজমেন্ট (BITM)",
+      logo: "/our partner/us-software-ltd-659350-og_logo.webp",
+      category: "collaboration",
+      subtitle: "BASIS IT & Software Training Wing",
+      subtitleBn: "বেসিস আইটি ও সফটওয়্যার ট্রেনিং ইনস্টিটিউট",
+      description: "Strategic collaboration and training alliance with BASIS Institute of Technology & Management (BITM) to provide industry-demanded tech skills, professional software engineering bootcamps, and career grooming.",
+      descriptionBn: "বেসিস ইনস্টিটিউট অব টেকনোলজি অ্যান্ড ম্যানেজমেন্ট (BITM)-এর সাথে পার্টনারশিপে ইন্ডাস্ট্রির চাহিদাসম্পন্ন সফটওয়্যার ইঞ্জিনিয়ারিং ও প্রফেশনাল আইটি ট্রেনিং পরিচালনা।",
+      highlights: [
+        "BASIS Affiliated IT & Software Programs",
+        "Industry-Grade Technical Bootcamps",
+        "Corporate Skill Development & Career Placement"
+      ],
+      highlightsBn: [
+        "বেসিস অনুমোদিত প্রফেশনাল আইটি প্রোগ্রাম",
+        "ইন্ডাস্ট্রি-গ্রেড টেকনিক্যাল বুটক্যাম্প",
+        "কর্পোরেট স্কিল ডেভেলপমেন্ট ও ক্যারিয়ার প্লেসমেন্ট"
+      ],
+      website: "https://www.bitm.org.bd"
+    },
+    {
+      id: "iit-du",
+      name: "Institute of Information Technology (IIT), University of Dhaka",
+      nameBn: "ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি (IIT), ঢাকা বিশ্ববিদ্যালয়",
       logo: "/our partner/New folder/3_iitu.webp",
       category: "collaboration",
-      subtitle: "International Engineering Institution",
-      subtitleBn: "আন্তর্জাতিক প্রকৌশল বিশ্ববিদ্যালয়",
-      description: "Academic and technological collaboration with Islamic University of Technology.",
-      descriptionBn: "আইইউটি-এর সাথে একাডেমিক ও কারিগরি দক্ষতা উন্নয়ন সেমিনার এবং ওয়ার্কশপ আয়োজন।",
-      highlights: ["Engineering Collaboration", "Tech Seminars", "Research Exchange"],
-      highlightsBn: ["ইঞ্জিনিয়ারিং কোলাবোরেশন", "টেক সেমিনার", "রিসার্চ এক্সচেঞ্জ"]
+      subtitle: "Institute of Information Technology",
+      subtitleBn: "তথ্য প্রযুক্তি ইনস্টিটিউট, ঢাকা বিশ্ববিদ্যালয়",
+      description: "Academic and technological collaboration with the Institute of Information Technology (IIT), University of Dhaka for software engineering, workshops, and talent grooming.",
+      descriptionBn: "ঢাকা বিশ্ববিদ্যালয়ের ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি (IIT)-এর সাথে একাডেমিক সেমিনার, কোডিং ওয়ার্কশপ ও টেক মেন্টরশিপ পার্টনারশিপ।",
+      highlights: ["IIT DU Collaboration", "Software Engineering Workshops", "Tech Seminars & Mentorship"],
+      highlightsBn: ["আইআইটি ডিইউ কোলাবোরেশন", "সফটওয়্যার ইঞ্জিনিয়ারিং ওয়ার্কশপ", "টেক সেমিনার ও মেন্টরশিপ"],
+      website: "https://www.iit.du.ac.bd"
     },
     {
       id: "edge-new",
@@ -137,6 +113,28 @@ export default function HomePartnersSection() {
       descriptionBn: "ঢাকা বিশ্ববিদ্যালয়ের সাথে একাডেমিক সেশন, কোডিং ওয়ার্কশপ ও টেক মেন্টরশিপ পার্টনারশিপ।",
       highlights: ["Academic Seminars", "Student Mentorship", "Technical Workshops"],
       highlightsBn: ["একাডেমিক সেমিনার", "স্টুডেন্ট মেন্টরশিপ", "কারিগরি ওয়ার্কশপ"]
+    },
+    {
+      id: "prometric",
+      name: "Prometric Authorized Test Center",
+      nameBn: "প্রমেট্রিক অথরাইজড গ্লোবাল টেস্ট সেন্টার",
+      logo: "/our partner/us-software-ltd-723199-Prometric-Logo-Black_Jpeg.webp",
+      category: "collaboration",
+      subtitle: "Global Exam & Certification Testing",
+      subtitleBn: "গ্লোবাল এক্সাম সেন্টার",
+      description: "Authorized testing facility partnership with Prometric, enabling students to sit for Microsoft, AWS, Oracle, Cisco, and other international professional vendor exams in-house.",
+      descriptionBn: "প্রমেট্রিক অথরাইজড টেস্ট সেন্টার পার্টনারশিপের মাধ্যমে আমাদের শিক্ষার্থীরা মাইক্রোসফট, এডাব্লিউএস, ওরাকল, সিসকো সহ আন্তর্জাতিক ভেন্ডর এক্সামে সরাসরি অংশ নিতে পারেন।",
+      highlights: [
+        "In-house international testing facilities",
+        "Global vendor credentials (Microsoft, AWS, Oracle, Cisco)",
+        "Discounted exam voucher assistance for enrolled students"
+      ],
+      highlightsBn: [
+        "ইন-হাউস আন্তর্জাতিক প্রফেশনাল এক্সাম সেন্টার সুবিধা",
+        "গ্লোবাল ভেন্ডর সার্টিফিকেশন (Microsoft, AWS, Oracle)",
+        "শিক্ষার্থীদের জন্য বিশেষ এক্সাম ভাউচার গাইডেন্স"
+      ],
+      website: "https://www.prometric.com"
     },
     {
       id: "cibt",

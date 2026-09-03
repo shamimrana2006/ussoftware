@@ -5,19 +5,19 @@ export const COMPANY_STATS = {
   yearsLegacyBn: "২৬+",
 
   // Total Students / Mentees Trained
-  studentsCount: 27000,
-  studentsCountFormatted: "27,000+",
-  studentsCountBn: "২৭,০০০+",
+  studentsCount: 40000,
+  studentsCountFormatted: "40,000+",
+  studentsCountBn: "৪০,০০০+",
 
   // Active Professional Courses
-  coursesCount: 42,
-  coursesCountFormatted: "42+",
-  coursesCountBn: "৪২+",
+  coursesCount: 60,
+  coursesCountFormatted: "60+",
+  coursesCountBn: "৬০+",
 
   // Direct Job Placement Rate
-  placementRate: 70,
-  placementRateFormatted: "70%",
-  placementRateBn: "৭০%",
+  placementRate: 75,
+  placementRateFormatted: "75%",
+  placementRateBn: "৭৫%",
 
   // Hiring Tech Partners Network
   hiringPartners: 120,

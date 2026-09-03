@@ -222,8 +222,8 @@ export default function AboutPage() {
       badge: "AI & 26th Year",
       title: isEn ? "26+ Years of Excellence & AI Hub" : "২৬+ বছরের গৌরব ও এআই টেক হাব",
       desc: isEn
-        ? "Over 27,000+ engineers graduated, 150+ live client deployments, and South Asia's leading Generative AI & Cloud engineering talent pipeline."
-        : "২৬ বছরের সফল অগ্রযাত্রা, ২৭,০০০+ গ্র্যাজুয়েট ও দক্ষিণ এশিয়ার অন্যতম শীর্ষ এআই ও ক্লাউড টেক ইকোসিস্টেম।",
+        ? "Over 40,000+ engineers graduated, 150+ live client deployments, and South Asia's leading Generative AI & Cloud engineering talent pipeline."
+        : "২৬ বছরের সফল অগ্রযাত্রা, ৪০,০০০+ গ্র্যাজুয়েট ও দক্ষিণ এশিয়ার অন্যতম শীর্ষ এআই ও ক্লাউড টেক ইকোসিস্টেম।",
       highlight: isEn ? `${COMPANY_STATS.placementRateFormatted} Placement Rate Across 14+ Global Hubs` : `${COMPANY_STATS.placementRateBn} প্লেসমেন্ট রেট সহ দক্ষিণ এশিয়ার শীর্ষ টেক হাব`
     }
   ];
