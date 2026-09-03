@@ -95,11 +95,11 @@ export default function HomeTrainingSection() {
           >
             {isEn ? (
               <>
-                Our <span className="text-[#008744]">Training</span> <span className="text-[#DE1F26]">Methodology</span>
+                Our <span className="text-[#008744]">Skill Development</span> <span className="text-[#DE1F26]">Methodology</span>
               </>
             ) : (
               <>
-                আমাদের বিশেষ <span className="text-[#008744]">প্রশিক্ষণ</span> <span className="text-[#DE1F26]">পদ্ধতি</span>
+                আমাদের <span className="text-[#008744]">স্কিল ডেভেলপমেন্ট</span> <span className="text-[#DE1F26]">পদ্ধতি</span>
               </>
             )}
           </motion.h2>

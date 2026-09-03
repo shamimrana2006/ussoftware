@@ -10,12 +10,12 @@ export default function AboutUsSection() {
   const isEn = language === 'en';
 
   const content = {
-    badge: isEn ? "ABOUT US SOFTWARE" : "আমাদের সম্পর্কে",
-    title1: isEn ? "We Build Digital" : "আমরা তৈরি করি",
-    title2: isEn ? "Experiences That Matter" : "ডিজিটাল ভবিষ্যৎ",
+    badge: isEn ? "ABOUT US" : "আমাদের সম্পর্কে",
+    title1: isEn ? "About" : "আমাদের",
+    title2: isEn ? "US" : "সম্পর্কে",
     description: isEn 
-      ? "US Software LTD is a cutting-edge IT solutions provider. We specialize in delivering high-impact, scalable, and innovative digital solutions to help modern businesses thrive in an ever-evolving technological landscape."
-      : "ইউএস সফটওয়্যার লিমিটেড একটি আধুনিক আইটি সলিউশন প্রোভাইডার। আধুনিক ব্যবসাগুলোকে প্রযুক্তিগতভাবে আরও শক্তিশালী ও আধুনিক করতে আমরা কাজ করে যাচ্ছি।",
+      ? "US Software Ltd. is a technology-focused organization dedicated to empowering people through digital skills, innovation and industry-relevant expertise. We create opportunities that help individuals build confidence, develop capabilities and succeed in today’s evolving digital world."
+      : "ইউএস সফটওয়্যার লিমিটেড একটি প্রযুক্তি-ভিত্তিক প্রতিষ্ঠান যা ডিজিটাল স্কিল, উদ্ভাবন এবং ইন্ডাস্ট্রির বাস্তবভিত্তিক অভিজ্ঞতার মাধ্যমে মানুষকে দক্ষ ও স্বাবলম্বী করে তুলতে নিবেদিত। আমরা এমন সব সুযোগ তৈরি করি যা শিক্ষার্থীদের আত্মবিশ্বাস বৃদ্ধি, সক্ষমতা উন্নয়ন এবং বর্তমানের দ্রুত পরিবর্তনশীল ডিজিটাল বিশ্বে সফল ক্যারিয়ার গড়তে সহায়তা করে।",
     points: [
       {
         icon: <ShieldCheck className="text-[#008744] mb-2" size={28} />,

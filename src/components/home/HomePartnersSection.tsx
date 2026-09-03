@@ -40,138 +40,6 @@ export default function HomePartnersSection() {
   const partners: PartnerItem[] = [
     // 1. Collaboration Partners
     {
-      id: "nsda",
-      name: "NSDA - Prime Minister's Office",
-      nameBn: "জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (প্রধানমন্ত্রীর কার্যালয়)",
-      logo: "/our partner/us-software-ltd-268073-জাতীয়_দক্ষতা_উন্নয়ন_কর্তৃপক্ষ.webp",
-      category: "collaboration",
-      subtitle: "National Skills Development Authority",
-      subtitleBn: "দক্ষতা উন্নয়ন কর্তৃপক্ষ",
-      description: "Official collaboration with the National Skills Development Authority (Prime Minister's Office, Bangladesh) to deliver government-aligned technical competency standards and national certifications.",
-      descriptionBn: "প্রধানমন্ত্রীর কার্যালয়ের অধীনস্থ জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA)-এর সাথে সরাসরি অংশীদারিত্বে আন্তর্জাতিক মানের ন্যাশনাল স্কিল স্ট্যান্ডার্ড কারিকুলাম ও ভেরিফাইড সনদ প্রদান করা হয়।",
-      highlights: [
-        "Government recognized competency benchmarks",
-        "National Qualification Framework (NQF) alignment",
-        "Direct access to national skill assessment & certification"
-      ],
-      highlightsBn: [
-        "সরকারি স্বীকৃতিপ্রাপ্ত কারিগরি কারিকুলাম",
-        "জাতীয় স্কিল ফ্রেমওয়ার্ক (NQF) অনুযায়ী প্রশিক্ষণ",
-        "এনএসডিএ ভেরিফাইড স্কিল অ্যাসেসমেন্ট সুবিধা"
-      ],
-      website: "https://nsda.gov.bd"
-    },
-    {
-      id: "ict",
-      name: "ICT Division Bangladesh",
-      nameBn: "তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ (গণপ্রজাতন্ত্রী বাংলাদেশ সরকার)",
-      logo: "/our partner/us-software-ltd-399754-favicon_2x.webp",
-      category: "collaboration",
-      subtitle: "Ministry of Posts, Telecommunications & IT",
-      subtitleBn: "আইসিটি বিভাগ",
-      description: "Strategic joint initiatives with the ICT Division to build high-end software engineering capability, AI readiness, and youth employment in digital economy exports.",
-      descriptionBn: "তথ্য ও যোগাযোগ প্রযুক্তি বিভাগের সাথে যৌথ উদ্যোগে অ্যাডভান্সড সফটওয়্যার ইঞ্জিনিয়ারিং, এআই স্কিলস ও ডিজিটাল অর্থনীতিতে উচ্চ বেতনের কর্মসংস্থান তৈরির লক্ষ্যে কার্যক্রম পরিচালিত হয়।",
-      highlights: [
-        "Digital Bangladesh & Smart Bangladesh roadmap alignment",
-        "Specialized industry training and internship tracks",
-        "Tech startup mentorship and national contest participation"
-      ],
-      highlightsBn: [
-        "স্মার্ট বাংলাদেশ বিনির্মাণে আইসিটি স্কিল ডেভেলপমেন্ট",
-        "বিশেষায়িত ইন্ডাস্ট্রি ট্রেইনিং ও ইন্টার্নশিপ সুযোগ",
-        "জাতীয় পর্যায়ের টেক প্রজেক্ট ও মেন্টরশিপ সাপোর্ট"
-      ],
-      website: "https://ictd.gov.bd"
-    },
-    {
-      id: "iit-du",
-      name: "IIT - University of Dhaka",
-      nameBn: "ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি, ঢাকা বিশ্ববিদ্যালয়",
-      logo: "/our partner/us-software-ltd-472875-images (1).webp",
-      category: "collaboration",
-      subtitle: "Institute of Information Technology, DU",
-      subtitleBn: "একাডেমিক ও গবেষণা পার্টনার",
-      description: "Academic synergy and joint workshops with the Institute of Information Technology (IIT), University of Dhaka for software engineering best practices and guest research lectures.",
-      descriptionBn: "ঢাকা বিশ্ববিদ্যালয়ের ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি (IIT)-এর সাথে একাডেমিক সেমিনার, অ্যাডভান্সড কোডিং কর্মশালা এবং গবেষণাভিত্তিক সফটওয়্যার ইঞ্জিনিয়ারিং কোলাবোরেশন।",
-      highlights: [
-        "Academic workshops and software engineering best practices",
-        "Guest mentor sessions by leading academic researchers",
-        "Code quality and algorithmic problem-solving seminars"
-      ],
-      highlightsBn: [
-        "একাডেমিক কর্মশালা ও সফটওয়্যার ইঞ্জিনিয়ারিং স্ট্যান্ডার্ড",
-        "ঢাবি শিক্ষকদের বিশেষ অতিথি লেকচার ও মেন্টরিং",
-        "অ্যালগরিদম ও কোড কোয়ালিটি নিশ্চিতকরণ সেমিনার"
-      ],
-      website: "https://www.iit.du.ac.bd"
-    },
-    {
-      id: "edge",
-      name: "EDGE Project (BCC)",
-      nameBn: "এনহ্যান্সিং ডিজিটাল গভর্নমেন্ট অ্যান্ড ইকোনমি (EDGE) প্রজেক্ট",
-      logo: "/our partner/us-software-ltd-622849-images.webp",
-      category: "collaboration",
-      subtitle: "Enhancing Digital Gov & Economy",
-      subtitleBn: "ডিজিটাল ইকোনমি প্রজেক্ট",
-      description: "Collaboration with the World Bank funded EDGE project under BCC to produce export-ready tech talents in fullstack engineering, cloud architecture, and cybersecurity.",
-      descriptionBn: "বিশ্বব্যাংক সহায়তাপুষ্ট ও বিসিসি পরিচালিত EDGE প্রকল্পের আওতায় আন্তর্জাতিক সফটওয়্যার বাজারে নিয়োগযোগ্য ফুলস্ট্যাক ডেভেলপার ও সাইবার নিরাপত্তা বিশেষজ্ঞ তৈরিতে সহায়তা।",
-      highlights: [
-        "World Bank backed tech capability framework",
-        "Export-oriented software development workflows",
-        "Direct hiring access for top tier government & enterprise IT roles"
-      ],
-      highlightsBn: [
-        "আন্তর্জাতিক মানের এক্সপোর্ট-রেডি সফটওয়্যার কারিকুলাম",
-        "টপ-টিয়ার আইটি কোম্পানিতে অগ্রাধিকারভিত্তিক নিয়োগ সংযোগ",
-        "গ্লোবাল রিমোট জবের জন্য প্রফেশনাল গ্রুমিং"
-      ],
-      website: "https://edge.gov.bd"
-    },
-    {
-      id: "bcc",
-      name: "Bangladesh Computer Council",
-      nameBn: "বাংলাদেশ কম্পিউটার কাউন্সিল (BCC)",
-      logo: "/our partner/us-software-ltd-626288-images.webp",
-      category: "collaboration",
-      subtitle: "Statutory Body for Information Technology",
-      subtitleBn: "বাংলাদেশ কম্পিউটার কাউন্সিল",
-      description: "Partnership with Bangladesh Computer Council for IT workforce enhancement, industry skills testing, and enterprise training standards across diverse tech domains.",
-      descriptionBn: "বাংলাদেশ কম্পিউটার কাউন্সিলের সাথে আইটি মানবসম্পদ উন্নয়ন, প্রফেশনাল টেস্ট ফ্যাসিলিটি এবং এন্টারপ্রাইজ স্ট্যান্ডার্ড সফটওয়্যার ট্রেনিং নিয়ে দীর্ঘমেয়াদি পার্টনারশিপ।",
-      highlights: [
-        "National standard skill assessments and evaluations",
-        "Specialized computing infrastructure integration",
-        "Collaborative hackathons and skill validation programs"
-      ],
-      highlightsBn: [
-        "জাতীয় মানের স্কিল টেস্ট ও স্ট্যান্ডার্ডাইজড মূল্যায়ন",
-        "কম্পিউটিং ও আইটি ইনফ্রাস্ট্রাকচার সংক্রান্ত সহযোগিতা",
-        "স্কিল ভ্যালিডেশন এবং জাতীয় টেক হ্যাকাথন সংযোগ"
-      ],
-      website: "https://bcc.gov.bd"
-    },
-    {
-      id: "idb",
-      name: "IDB-BISEW IT Scholarship",
-      nameBn: "আইডিবি-বিআইএসইডব্লিউ আইটি স্কলারশিপ প্রোগ্রাম",
-      logo: "/our partner/us-software-ltd-68966-idb-bisew.webp",
-      category: "collaboration",
-      subtitle: "Islamic Development Bank - BISEW",
-      subtitleBn: "আইটি স্কলারশিপ প্রোগ্রাম",
-      description: "Collaborative engagement with IDB-BISEW scholarship programs to empower meritorious students with industry-grade software engineering and enterprise placement.",
-      descriptionBn: "মেধাবী শিক্ষার্থীদের বিশ্বমানের সফটওয়্যার ট্রেনিং ও কর্মসংস্থান নিশ্চিত করতে আইডিবি-বিআইএসইডব্লিউ আইটি স্কলারশিপ সংক্রান্ত পার্টনারশিপ ও গ্র্যাজুয়েট প্লেসমেন্ট।",
-      highlights: [
-        "Merit-based scholarship placement network",
-        "Rigorous full-time immersion training modules",
-        "Proven 90%+ career transition within 6 months"
-      ],
-      highlightsBn: [
-        "স্কলারশিপ নেটওয়ার্ক ও মেধাভিত্তিক ক্যারিয়ার গ্রুমিং",
-        "ফুল-টাইম হ্যান্ডস-অন ইন্ডাস্ট্রি প্রজেক্ট লার্নিং",
-        "৬ মাসের মধ্যে ৯০%+ গ্র্যাজুয়েটদের চাকরি প্রাপ্তি"
-      ],
-      website: "https://idb-bisew.org"
-    },
-    {
       id: "prometric",
       name: "Prometric Authorized Test Center",
       nameBn: "প্রমেট্রিক অথরাইজড গ্লোবাল টেস্ট সেন্টার",
@@ -230,19 +98,7 @@ export default function HomePartnersSection() {
       highlights: ["BTEB Recognized Skills", "National Vocational Standard", "Professional Diploma Support"],
       highlightsBn: ["কারিগরি শিক্ষা বোর্ড অনুমোদিত স্কিলস", "জাতীয় ভোকেশনাল কারিকুলাম", "প্রফেশনাল ডিপ্লোমা সুবিধা"]
     },
-    {
-      id: "ict-new",
-      name: "ICT Division Bangladesh",
-      nameBn: "তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ",
-      logo: "/our partner/New folder/2_ict.webp",
-      category: "collaboration",
-      subtitle: "Government ICT Division",
-      subtitleBn: "আইসিটি বিভাগ",
-      description: "Joint ICT initiatives for building national tech capability and empowering young engineers.",
-      descriptionBn: "তথ্য ও যোগাযোগ প্রযুক্তি বিভাগের সাথে যৌথ উদ্যোগে দক্ষ আইটি জনশক্তি গড়ে তোলার কার্যক্রম।",
-      highlights: ["Government Tech Initiatives", "Youth Empowerment", "National Skill Labs"],
-      highlightsBn: ["সরকারি আইসিটি উদ্যোগ", "তরুণদের কারিগরি দক্ষতা", "জাতীয় স্কিল ল্যাব"]
-    },
+
     {
       id: "iitu",
       name: "Islamic University of Technology (IUT)",
@@ -703,6 +559,86 @@ export default function HomePartnersSection() {
 
     // 2. Member Of
     {
+      id: "ict",
+      name: "ICT Division Bangladesh",
+      nameBn: "তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ",
+      logo: "/our partner/New folder/2_ict.webp",
+      category: "member",
+      subtitle: "Government ICT Division",
+      subtitleBn: "আইসিটি বিভাগ",
+      description: "Joint ICT initiatives and membership alliance for building national tech capability and empowering young engineers.",
+      descriptionBn: "তথ্য ও যোগাযোগ প্রযুক্তি বিভাগের সাথে যৌথ উদ্যোগে দক্ষ আইটি জনশক্তি গড়ে তোলার কার্যক্রম।",
+      highlights: ["Government Tech Initiatives", "Youth Empowerment", "National Skill Labs"],
+      highlightsBn: ["সরকারি আইসিটি উদ্যোগ", "তরুণদের কারিগরি দক্ষতা", "জাতীয় স্কিল ল্যাব"],
+      website: "https://ictd.gov.bd"
+    },
+    {
+      id: "nsda",
+      name: "NSDA - Prime Minister's Office",
+      nameBn: "জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (প্রধানমন্ত্রীর কার্যালয়)",
+      logo: "/our partner/us-software-ltd-268073-জাতীয়_দক্ষতা_উন্নয়ন_কর্তৃপক্ষ.webp",
+      category: "member",
+      subtitle: "National Skills Development Authority",
+      subtitleBn: "দক্ষতা উন্নয়ন কর্তৃপক্ষ",
+      description: "Official recognized membership & alignment with the National Skills Development Authority (Prime Minister's Office, Bangladesh) to deliver government-aligned technical competency standards and verified national certifications.",
+      descriptionBn: "প্রধানমন্ত্রীর কার্যালয়ের অধীনস্থ জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA)-এর সাথে সরাসরি অংশীদারিত্বে আন্তর্জাতিক মানের ন্যাশনাল স্কিল স্ট্যান্ডার্ড কারিকুলাম ও ভেরিফাইড সনদ প্রদান করা হয়।",
+      highlights: [
+        "Government recognized competency benchmarks",
+        "National Qualification Framework (NQF) alignment",
+        "Direct access to national skill assessment & certification"
+      ],
+      highlightsBn: [
+        "সরকারি স্বীকৃতিপ্রাপ্ত কারিগরি কারিকুলাম",
+        "জাতীয় স্কিল ফ্রেমওয়ার্ক (NQF) অনুযায়ী প্রশিক্ষণ",
+        "এনএসডিএ ভেরিফাইড স্কিল অ্যাসেসমেন্ট সুবিধা"
+      ],
+      website: "https://nsda.gov.bd"
+    },
+    {
+      id: "idb",
+      name: "IDB-BISEW IT Scholarship",
+      nameBn: "আইডিবি-বিআইএসইডব্লিউ আইটি স্কলারশিপ প্রোগ্রাম",
+      logo: "/our partner/us-software-ltd-68966-idb-bisew.webp",
+      category: "member",
+      subtitle: "Islamic Development Bank - BISEW",
+      subtitleBn: "আইটি স্কলারশিপ প্রোগ্রাম",
+      description: "Collaborative engagement and network partnership with IDB-BISEW scholarship programs to empower meritorious students with industry-grade software engineering and enterprise placement.",
+      descriptionBn: "মেধাবী শিক্ষার্থীদের বিশ্বমানের সফটওয়্যার ট্রেনিং ও কর্মসংস্থান নিশ্চিত করতে আইডিবি-বিআইএসইডব্লিউ আইটি স্কলারশিপ সংক্রান্ত পার্টনারশিপ ও গ্র্যাজুয়েট প্লেসমেন্ট।",
+      highlights: [
+        "Merit-based scholarship placement network",
+        "Rigorous full-time immersion training modules",
+        "Proven 90%+ career transition within 6 months"
+      ],
+      highlightsBn: [
+        "স্কলারশিপ নেটওয়ার্ক ও মেধাভিত্তিক ক্যারিয়ার গ্রুমিং",
+        "ফুল-টাইম হ্যান্ডস-অন ইন্ডাস্ট্রি প্রজেক্ট লার্নিং",
+        "৬ মাসের মধ্যে ৯০%+ গ্র্যাজুয়েটদের চাকরি প্রাপ্তি"
+      ],
+      website: "https://idb-bisew.org"
+    },
+    {
+      id: "bcs",
+      name: "Bangladesh Computer Samity (BCS)",
+      nameBn: "বাংলাদেশ কম্পিউটার সমিতি (BCS)",
+      logo: "/our partner/us-software-ltd-399754-favicon_2x.webp",
+      category: "member",
+      subtitle: "Apex ICT Trade Association Member",
+      subtitleBn: "বাংলাদেশ কম্পিউটার সমিতি সদস্য",
+      description: "Member of BCS, the apex ICT trade association in Bangladesh, promoting nationwide computing education, tech exhibitions, and workforce enablement.",
+      descriptionBn: "দেশের শীর্ষস্থানীয় আইসিটি ট্রেড বডি বাংলাদেশ কম্পিউটার সমিতি (BCS)-এর সদস্য হিসেবে তথ্যপ্রযুক্তি সম্প্রসারণ, টেক এক্সপো ও আইটি স্কিল ডেভেলপমেন্ট পরিচালনা।",
+      highlights: [
+        "Pioneer ICT trade body membership in Bangladesh",
+        "Nationwide tech fairs, seminars, and networking hubs",
+        "Industry-aligned IT training and student workshops"
+      ],
+      highlightsBn: [
+        "দেশের প্রাচীনতম আইসিটি ট্রেড বডির সদস্যপদ",
+        "দেশব্যাপী টেক এক্সপো, সেমিনার ও পেশাদার নেটওয়ার্কিং",
+        "ইন্ডাস্ট্রি-অ্যালাইন্ড আইটি প্রশিক্ষণ ও কর্মশালা"
+      ],
+      website: "https://bcs.org.bd"
+    },
+    {
       id: "ecab",
       name: "E-Commerce Association of Bangladesh (E-CAB)",
       nameBn: "ই-কমার্স অ্যাসোসিয়েশন অব বাংলাদেশ (E-CAB)",
@@ -723,72 +659,6 @@ export default function HomePartnersSection() {
         "ই-কমার্স কোম্পানিতে গ্র্যাজুয়েটদের রিক্রুটমেন্ট সুবিধা"
       ],
       website: "https://e-cab.net"
-    },
-    {
-      id: "basis",
-      name: "BASIS",
-      nameBn: "বাংলাদেশ অ্যাসোসিয়েশন অব সফটওয়্যার অ্যান্ড ইনফরমেশন সার্ভিসেস (BASIS)",
-      logo: "/our partner/us-software-ltd-626288-images.webp",
-      category: "member",
-      subtitle: "National Software Association Member",
-      subtitleBn: "সফটওয়্যার ইন্ডাস্ট্রি মেম্বার",
-      description: "Accredited member of BASIS, the national association representing Bangladesh's software and IT-enabled services (ITES) industry.",
-      descriptionBn: "বাংলাদেশের শীর্ষ সফটওয়্যার ও আইটি শিল্প সমিতি BASIS-এর নিবন্ধিত সদস্য। সফটওয়্যার ইন্ডাস্ট্রির নীতি নির্ধারণ ও কর্মসংস্থান বৃদ্ধিতে সক্রিয় অংশীদার।",
-      highlights: [
-        "Accredited national software industry member",
-        "Access to BASIS SoftExpo and global tech delegations",
-        "Direct recruitment linkage with 1,500+ software companies"
-      ],
-      highlightsBn: [
-        "জাতীয় সফটওয়্যার শিল্প সমিতির নিবন্ধিত সদস্য",
-        "বেসিস সফটএক্সপো ও আন্তর্জাতিক ডেলিগেশনে অংশগ্রহণ",
-        "১৫০০+ সফটওয়্যার কোম্পানিতে সরাসরি নিয়োগ লিংক"
-      ],
-      website: "https://basis.org.bd"
-    },
-    {
-      id: "bacco",
-      name: "BACCO",
-      nameBn: "বাংলাদেশ অ্যাসোসিয়েশন অব কন্ট্যাক্ট সেন্টার অ্যান্ড আউটসোর্সিং (BACCO)",
-      logo: "/our partner/us-software-ltd-399754-favicon_2x.webp",
-      category: "member",
-      subtitle: "Outsourcing Trade Body Member",
-      subtitleBn: "আউটসোর্সিং ইন্ডাস্ট্রি মেম্বার",
-      description: "Registered member of BACCO, enabling international business process outsourcing (BPO), remote IT operations, and international offshore software support.",
-      descriptionBn: "BACCO-এর রেজিস্টার্ড সদস্য হিসেবে আন্তর্জাতিক আউটসোর্সিং, রিমোট আইটি অপারেশন এবং অফশোর সফটওয়্যার ইঞ্জিনিয়ারিং ক্যারিয়ারে সহায়তা প্রদান।",
-      highlights: [
-        "Offshore IT and global remote job placement",
-        "BPO and Tech Support certification standards",
-        "International client project management pipelines"
-      ],
-      highlightsBn: [
-        "আন্তর্জাতিক রিমোট জব ও অফশোর আইটি ক্যারিয়ার সংযোগ",
-        "গ্লোবাল সাপোর্ট ও ক্লাউড অপারেশন স্ট্যান্ডার্ড",
-        "ক্লায়েন্ট প্রজেক্ট হ্যান্ডলিং ও স্পেশালাইজড ট্রেনিং"
-      ],
-      website: "https://bacco.org.bd"
-    },
-    {
-      id: "bcs",
-      name: "Bangladesh Computer Samity (BCS)",
-      nameBn: "বাংলাদেশ কম্পিউটার সমিতি (BCS)",
-      logo: "/our partner/us-software-ltd-268073-জাতীয়_দক্ষতা_উন্নয়ন_কর্তৃপক্ষ.webp",
-      category: "member",
-      subtitle: "Apex ICT Trade Association Member",
-      subtitleBn: "ট্রেড বডি মেম্বার",
-      description: "Member of BCS, the apex ICT trade association, collaborating on technology hardware-software integration, tech fairs, and nationwide computing education.",
-      descriptionBn: "দেশের শীর্ষস্থানীয় আইসিটি ট্রেড বডি বাংলাদেশ কম্পিউটার সমিতি (BCS)-এর সদস্য হিসেবে দেশব্যাপী তথ্যপ্রযুক্তি সম্প্রসারণ ও প্রশিক্ষণ প্রদান।",
-      highlights: [
-        "Pioneer ICT trade body partnership in Bangladesh",
-        "Nationwide tech fairs, seminars, and networking hubs",
-        "Hardware-software integrated engineering certifications"
-      ],
-      highlightsBn: [
-        "দেশের প্রাচীনতম আইসিটি ট্রেড বডির সদস্যপদ",
-        "দেশব্যাপী টেক এক্সপো, সেমিনার ও পেশাদার নেটওয়ার্কিং",
-        "হার্ডওয়্যার-সফটওয়্যার ইন্টিগ্রেটেড স্কিল কারিকুলাম"
-      ],
-      website: "https://bcs.org.bd"
     }
   ];
 

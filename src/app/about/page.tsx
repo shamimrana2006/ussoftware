@@ -375,8 +375,8 @@ export default function AboutPage() {
                   className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-lg pt-1"
                 >
                   {isEn
-                    ? "From high-scale cloud platforms to cutting-edge AI labs — we engineer enterprise software systems and empower global tech leaders through 1-on-1 industry mentorship."
-                    : "হাই-স্কেল ক্লাউড প্ল্যাটফর্ম থেকে অত্যাধুনিক এআই সিস্টেম — আমরা তৈরি করি এন্টারপ্রাইজ লেভেলের সফটওয়্যার সলিউশন এবং ১-অন-১ ইন্ডাস্ট্রি মেন্টরশিপের মাধ্যমে গড়ে তুলি আগামী দিনের গ্লোবাল টেক লিডার।"}
+                    ? "US Software Ltd. is a technology-focused organization dedicated to empowering people through digital skills, innovation and industry-relevant expertise. We create opportunities that help individuals build confidence, develop capabilities and succeed in today’s evolving digital world."
+                    : "ইউএস সফটওয়্যার লিমিটেড একটি প্রযুক্তি-ভিত্তিক প্রতিষ্ঠান যা ডিজিটাল স্কিল, উদ্ভাবন এবং ইন্ডাস্ট্রির বাস্তবভিত্তিক অভিজ্ঞতার মাধ্যমে মানুষকে দক্ষ ও স্বাবলম্বী করে তুলতে নিবেদিত। আমরা এমন সব সুযোগ তৈরি করি যা শিক্ষার্থীদের আত্মবিশ্বাস বৃদ্ধি, সক্ষমতা উন্নয়ন এবং বর্তমানের দ্রুত পরিবর্তনশীল ডিজিটাল বিশ্বে সফল ক্যারিয়ার গড়তে সহায়তা করে।"}
                 </motion.p>
 
                 {/* 4. Mini Feature Chips */}
@@ -534,15 +534,15 @@ export default function AboutPage() {
 
                   <p className="text-base sm:text-lg font-bold text-slate-700 mt-2">
                     {isEn
-                      ? "Empowering Youth with Production-Grade Engineering Skills"
-                      : "প্র্যাকটিক্যাল আইটি ট্রেনিংয়ের মাধ্যমে বিশ্বমানের দক্ষ জনশক্তি গড়ে তোলা"}
+                      ? "Delivering Innovative IT Solutions & Developing Future-Ready Talent"
+                      : "উদ্ভাবনী আইটি সলিউশন ও ভবিষ্যৎ-উপযোগী দক্ষ জনশক্তি তৈরি"}
                   </p>
                 </div>
 
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed font-normal">
                   {isEn
-                    ? "To empower individuals with practical, industry-grade technology training, real client project mastery, and dedicated 1-on-1 mentorship — bridging the divide between academic theory and high-paying global IT careers."
-                    : "আমাদের মিশন হলো শিক্ষার্থীদের তাত্ত্বিক পড়াশোনার গণ্ডি পেরিয়ে রিয়েল ক্লায়েন্ট প্রজেক্ট ও ১-অন-১ মেন্টরশিপের মাধ্যমে আন্তর্জাতিক মানের দক্ষ ইঞ্জিনিয়ার হিসেবে প্রস্তুত করা, যাতে তারা গ্লোবাল মার্কেটে শীর্ষ পদে ক্যারিয়ার গড়তে পারেন।"}
+                    ? "To become a trusted technology partner by delivering innovative IT solutions, fostering digital transformation, developing future-ready talent and maintaining international standards of quality, integrity and customer satisfaction."
+                    : "উদ্ভাবনী আইটি সলিউশন প্রদান, ডিজিটাল রূপান্তর ত্বরান্বিতকরণ, ভবিষ্যৎ-উপযোগী দক্ষ জনশক্তি তৈরি এবং গুণগত মান, সততা ও গ্রাহক সন্তুষ্টির আন্তর্জাতিক মান বজায় রেখে একটি বিশ্বস্ত প্রযুক্তি পার্টনার হিসেবে প্রতিষ্ঠিত হওয়া।"}
                 </p>
 
                 {/* 4 Animated Mission Checkpoints Cards with Pure Smooth Hover Gradient (No Scale Up) */}
@@ -814,21 +814,21 @@ export default function AboutPage() {
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.08]">
                     <span className="text-[#ea580c] block sm:inline mr-3">{isEn ? "OUR" : "আমাদের"}</span>
                     <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-                      {isEn ? "VISION 2030" : "ভিশন ২০৩০"}
+                      {isEn ? "VISION" : "ভিশন"}
                     </span>
                   </h2>
 
                   <p className="text-base sm:text-lg font-bold text-slate-700 mt-2">
                     {isEn
-                      ? "Leading South Asia's Digital Disruption & Global Remote Economy"
-                      : "২০৩০ সালের মধ্যে দক্ষিণ এশিয়ার শীর্ষ টেক পাওয়ারহাউজ হওয়া"}
+                      ? "Leading Global Technology Partner & Transformative Digital Solutions"
+                      : "বিশ্বমানের শীর্ষস্থানীয় প্রযুক্তি পার্টনার ও টেকসই ডিজিটাল সলিউশন"}
                   </p>
                 </div>
 
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed font-normal">
                   {isEn
-                    ? "To stand as South Asia's premier digital innovation and skill development powerhouse, producing 50,000+ elite engineers, AI specialists, and tech entrepreneurs by 2030."
-                    : "আমাদের ভিশন হলো ২০৩০ সালের মধ্যে ৫০,০০০+ আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ার, এআই বিশেষজ্ঞ ও টেক উদ্যোক্তা তৈরি করে বিশ্বমানের ডিজিটাল লিডার হিসেবে বাংলাদেশকে প্রতিষ্ঠিত করা।"}
+                    ? "To be a leading global technology partner, recognized for innovation, excellence and integrity, delivering transformative digital solutions and developing future-ready talent that creates sustainable growth and lasting impact."
+                    : "উদ্ভাবন, শ্রেষ্ঠত্ব এবং সততার জন্য বিশ্বব্যাপী স্বীকৃত একটি শীর্ষস্থানীয় প্রযুক্তি পার্টনার হওয়া; রূপান্তরমূলক ডিজিটাল সলিউশন প্রদান এবং ভবিষ্যৎ-উপযোগী দক্ষ জনশক্তি তৈরি করা যা টেকসই প্রবৃদ্ধি এবং দীর্ঘস্থায়ী প্রভাব তৈরি করে।"}
                 </p>
 
                 {/* 4 Animated Vision Milestone Cards with Pure Smooth Hover Gradient (No Scale Up) */}
