@@ -75,15 +75,15 @@ export default function HomeTrainingSection() {
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* SECTION HEADER: Creative Stepper Badge & Dynamic Title */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#008744]/15 to-[#DE1F26]/15 border border-[#008744]/30 text-[#08121a] px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-2.5"
+            className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs"
           >
-            <Workflow size={12} className="text-[#008744]" />
-            <span>{isEn ? "THE 4-PHASE MASTERY FORMULA" : "আমাদের ৪-ধাপের প্রশিক্ষণ পদ্ধতি"}</span>
+            <Workflow size={13} className="text-[#008744]" />
+            <span>{isEn ? "THE 4-PHASE MASTERY FORMULA" : "আমাদের ৪-ধাপের স্কিল ডেভেলপমেন্ট পদ্ধতি"}</span>
           </motion.div>
 
           <motion.h2 
@@ -91,15 +91,15 @@ export default function HomeTrainingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="text-2xl sm:text-3xl font-black text-[#08121a] tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl font-black text-[#08121a] tracking-tight leading-tight"
           >
             {isEn ? (
               <>
-                Our <span className="text-[#008744]">Skill Development</span> <span className="text-[#DE1F26]">Methodology</span>
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">Skill Development Methodology</span>
               </>
             ) : (
               <>
-                আমাদের <span className="text-[#008744]">স্কিল ডেভেলপমেন্ট</span> <span className="text-[#DE1F26]">পদ্ধতি</span>
+                আমাদের <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">স্কিল ডেভেলপমেন্ট পদ্ধতি</span>
               </>
             )}
           </motion.h2>
@@ -109,7 +109,7 @@ export default function HomeTrainingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.12 }}
-            className="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed"
+            className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn 
               ? "A structured, rigorous engineering pedagogical framework engineered to transform motivated learners into production-ready software engineers."

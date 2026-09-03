@@ -420,7 +420,7 @@ export default function HeroSection() {
                 With
               </span>
               <span className="relative inline-block text-lg sm:text-xl md:text-2xl lg:text-[28px] xl:text-[34px] font-bold tracking-tight leading-none whitespace-nowrap">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">
                   {t.hero.title2}
                 </span>
                 <svg className="absolute w-full h-[7px] sm:h-[10px] bottom-[-2px] sm:bottom-[-4px] left-0 text-[#008744]/50" viewBox="0 0 200 12" preserveAspectRatio="none">

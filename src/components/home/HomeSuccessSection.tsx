@@ -98,14 +98,14 @@ export default function HomeSuccessSection() {
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* SECTION HEADER: Testimonial Header with Star Cluster */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2.5 shadow-2xs"
+            className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs"
           >
-            <div className="flex items-center gap-0.5 text-amber-500">
+            <div className="flex items-center gap-0.5 text-amber-400">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={11} className="fill-amber-400" />
               ))}
@@ -118,15 +118,15 @@ export default function HomeSuccessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="text-2xl sm:text-3xl font-black text-[#08121a] tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl font-black text-[#08121a] tracking-tight leading-tight"
           >
             {isEn ? (
               <>
-                Student <span className="text-[#008744]">Success</span> <span className="text-[#DE1F26]">Stories</span>
+                Student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">Success Stories</span>
               </>
             ) : (
               <>
-                সফল শিক্ষার্থীদের <span className="text-[#008744]">অনুপ্রেরণামূলক</span> <span className="text-[#DE1F26]">গল্প</span>
+                সফল শিক্ষার্থীদের <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">অনুপ্রেরণামূলক গল্প</span>
               </>
             )}
           </motion.h2>
@@ -136,7 +136,7 @@ export default function HomeSuccessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.12 }}
-            className="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed"
+            className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn 
               ? "Read how our graduates transformed their careers and secured engineering roles at top tech companies."

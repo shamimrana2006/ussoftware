@@ -89,14 +89,14 @@ export default function HomeBenefitsSection() {
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* SECTION HEADER */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-[#008744]/10 border border-[#008744]/20 text-[#008744] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-3.5 shadow-2xs"
+            className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs"
           >
-            <ShieldCheck size={13} className="text-[#DE1F26]" />
+            <ShieldCheck size={13} className="text-[#008744]" />
             <span>{isEn ? "THE US SOFTWARE ADVANTAGE" : "আমাদের বিশেষত্ব ও সুবিধা"}</span>
           </motion.div>
 
@@ -105,15 +105,15 @@ export default function HomeBenefitsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#08121a] tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl font-black text-[#08121a] tracking-tight leading-tight"
           >
             {isEn ? (
               <>
-                Why <span className="text-[#008744]">Choose</span> <span className="text-[#DE1F26]">US Software</span>
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">US Software</span>
               </>
             ) : (
               <>
-                কেন <span className="text-[#008744]">ইউএস সফটওয়্যার</span> <span className="text-[#DE1F26]">বেছে নেবেন?</span>
+                কেন <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">ইউএস সফটওয়্যার</span> বেছে নেবেন?
               </>
             )}
           </motion.h2>
@@ -123,7 +123,7 @@ export default function HomeBenefitsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.12 }}
-            className="mt-3 text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl mx-auto"
+            className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn 
               ? "We don't teach passive theory. We immerse you in actual software engineering lifecycles with enterprise standards and 1-on-1 mentorship."

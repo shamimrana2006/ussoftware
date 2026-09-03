@@ -674,14 +674,14 @@ export default function HomePartnersSection() {
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         
         {/* SECTION HEADER: Matched with User Screenshot */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3 shadow-xs"
+            className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs"
           >
-            <Sparkles size={12} className="text-[#008744]" />
+            <Sparkles size={13} className="text-[#008744]" />
             <span>{isEn ? "TRUSTED BY INDUSTRY LEADERS" : "ইন্ডাস্ট্রি লিডারদের বিশ্বস্ত"}</span>
           </motion.div>
 
@@ -694,11 +694,11 @@ export default function HomePartnersSection() {
           >
             {isEn ? (
               <>
-                Our <span className="text-[#008744]">Working</span> <span className="text-[#DE1F26]">Partners</span>
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">Working Partners</span>
               </>
             ) : (
               <>
-                আমাদের <span className="text-[#008744]">ওয়ার্কিং</span> <span className="text-[#DE1F26]">পার্টনার্স</span>
+                আমাদের <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">ওয়ার্কিং পার্টনার্স</span>
               </>
             )}
           </motion.h2>
@@ -708,7 +708,7 @@ export default function HomePartnersSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.12 }}
-            className="mt-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto"
+            className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn 
               ? "We collaborate with leading organizations, universities, and institutions to provide the best learning experience."

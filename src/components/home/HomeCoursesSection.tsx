@@ -75,14 +75,14 @@ export default function HomeCoursesSection() {
       <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
 
         {/* 1. TOP ELEGANT HEADER */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 bg-emerald-50/80 border border-[#008744]/20 text-[#008744] px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-2.5 shadow-2xs"
+            className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs"
           >
-            <Sparkles size={11} className="text-[#008744]" />
+            <Sparkles size={13} className="text-[#008744]" />
             <span>{isEn ? "FLAGSHIP TECH CURRICULUM" : "শীর্ষস্থানীয় প্রফেশনাল প্রোগ্রামসমূহ"}</span>
           </motion.div>
 
@@ -91,7 +91,7 @@ export default function HomeCoursesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="text-2xl sm:text-3xl font-black text-[#08121a] tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl font-black text-[#08121a] tracking-tight leading-tight"
           >
             {isEn ? (
               <>
@@ -109,11 +109,11 @@ export default function HomeCoursesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.12 }}
-            className="mt-2 text-slate-600 text-xs sm:text-sm leading-relaxed"
+            className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn
               ? "Architected by senior engineers from global tech companies. Hands-on production codebases, 1-on-1 code reviews, and direct hiring placement."
-              : "আন্তর্জাতিক সফটওয়্যার ইন্ডাস্ট্রির লিড ইঞ্জিনিয়ারদের সরাসরি তত্ত্বাবধানে প্রস্তুত করা বাস্তবমুখী ও ক্যারিয়ার-উপযোগী সিলেবাস।"}
+              : "আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ারদের নির্দেশনায় তৈরি প্র্যাকটিক্যাল কোর্স কারিকুলাম, ১-অন-১ মেন্টরিং ও জব প্লেসমেন্ট সাপোর্ট।"}
           </motion.p>
         </div>
 

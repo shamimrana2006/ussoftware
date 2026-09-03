@@ -42,9 +42,9 @@ export default function HomeCTASection() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200/80 px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#008744] mb-4 shadow-xs"
+              className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs"
             >
-              <Rocket size={13} className="text-[#DE1F26]" />
+              <Rocket size={13} className="text-[#008744]" />
               <span>{isEn ? "NEW BATCH ENROLLMENT OPEN" : "নতুন ব্যাচে সীমিত আসনে ভর্তি চলছে"}</span>
             </motion.div>
 
@@ -54,7 +54,7 @@ export default function HomeCTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.08 }}
-              className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight mb-3.5"
+              className="text-3xl sm:text-4xl font-black text-[#08121a] tracking-tight leading-tight mb-3.5"
             >
               {isEn ? (
                 <>
@@ -72,7 +72,7 @@ export default function HomeCTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.12 }}
-              className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed mb-8 max-w-xl mx-auto"
+              className="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto"
             >
               {isEn 
                 ? "Join 6,200+ ambitious developers. Gain production-grade architecture skills, 1-on-1 mentorship, and step directly into high-paying global tech roles."

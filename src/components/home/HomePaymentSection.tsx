@@ -70,17 +70,23 @@ export default function HomePaymentSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Centered Heading */}
-        <div className="text-center mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-[#008744] text-xs sm:text-sm font-semibold mb-3.5 tracking-wide shadow-xs">
-            <ShieldCheck className="w-4 h-4 text-[#008744]" />
-            <span className={isEn ? "font-outfit uppercase tracking-wider text-[11px] font-bold" : "font-baloo font-bold"}>
-              {isEn ? "Official Payment Methods" : "অফিসিয়াল পেমেন্ট নম্বর"}
-            </span>
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <div className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-3.5 py-1.5 rounded-full text-[11px] font-bold tracking-wider uppercase mb-3.5 shadow-xs">
+            <ShieldCheck size={13} className="text-[#008744]" />
+            <span>{isEn ? "OFFICIAL PAYMENT METHODS" : "অফিসিয়াল পেমেন্ট নম্বর"}</span>
           </div>
-          <h2 className={`text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight ${isEn ? "font-outfit" : "font-baloo"}`}>
-            {isEn ? "Fast & Secure Payment" : "পেমেন্ট মাধ্যমসমূহ"}
+          <h2 className="text-3xl sm:text-4xl font-black text-[#08121a] tracking-tight leading-tight">
+            {isEn ? (
+              <>
+                Fast & Secure <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">Fee Payment</span>
+              </>
+            ) : (
+              <>
+                সহজ ও নিরাপদ <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008744] via-emerald-600 to-[#DE1F26]">পেমেন্ট মাধ্যম</span>
+              </>
+            )}
           </h2>
-          <p className={`mt-2.5 text-sm sm:text-base text-slate-500 max-w-md mx-auto leading-relaxed ${isEn ? "font-sans" : "font-hind"}`}>
+          <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             {isEn
               ? "Click on any number below to copy and complete your fee payment via mobile banking."
               : "নিচের যেকোনো নম্বরে ক্লিক করে নম্বরটি কপি করুন এবং সেন্ড মানি করে ভর্তি সম্পন্ন করুন।"}
