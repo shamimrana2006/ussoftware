@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)" />
+
+  <!-- Subtle Inner Border / Ring -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.6" />
+
+  <!-- Head -->
+  <circle cx="200" cy="155" r="58" fill="url(#avatarGrad)" />
+
+  <!-- Shoulders / Body -->
+  <path d="M96 340 C104 252, 148 232, 200 232 C252 232, 296 252, 304 340 Z" fill="url(#avatarGrad)" />
+</svg>

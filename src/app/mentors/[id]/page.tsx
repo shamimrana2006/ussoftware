@@ -75,10 +75,13 @@ export default function MentorDetailsPage({ params }: { params: Promise<{ id: st
               
               {/* Avatar & Badges (Natural width, zero empty space) */}
               <div className="w-full sm:w-60 md:w-64 flex-shrink-0 flex flex-col items-center sm:items-start">
-                <div className="relative overflow-hidden rounded-2xl bg-slate-100 border-2 border-slate-200/80 shadow-md w-full aspect-square">
+                <div className="relative overflow-hidden rounded-2xl bg-slate-900 border-2 border-slate-700/80 shadow-md w-full aspect-square">
                   <img
-                    src={mentor.avatar}
+                    src={mentor.avatar || "/images/default-avatar.svg"}
                     alt={isEn ? mentor.name : mentor.nameBn}
+                    onError={(e) => {
+                      e.currentTarget.src = "/images/default-avatar.svg";
+                    }}
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-lg text-xs font-black text-[#008744] flex items-center gap-1 shadow-2xs">

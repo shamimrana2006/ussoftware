@@ -52,7 +52,7 @@ export const mentorsData: Mentor[] = [
       "৩,৫০০+ ডেভেলপারকে আন্তর্জাতিক ক্যারিয়ারে প্রতিষ্ঠিত করেছেন",
       "নেক্সট.জেএস ১৫, পোস্টগ্রেএসকিউএল ও মাইক্রোসার্ভিসেস বিশেষজ্ঞ"
     ],
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.98,
     reviewsCount: 245,
     menteesCount: "3,500+ Students",
@@ -105,7 +105,7 @@ export const mentorsData: Mentor[] = [
       "ইউজার রিসার্চ ও মাইক্রো-ইন্টারঅ্যাকশন ইউজেবিলিটি স্পেশালিস্ট",
       "মাল্টি-প্ল্যাটফর্ম এন্টারপ্রাইজ ডিজাইন সিস্টেম কনসালট্যান্ট"
     ],
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.99,
     reviewsCount: 195,
     menteesCount: "2,800+ Students",
@@ -157,7 +157,7 @@ export const mentorsData: Mentor[] = [
       "কম্পিউটার ভিশন অটোমেশন ও ওসিআর পাইপলাইন কনসালট্যান্ট",
       "ওপেন-সোর্স এলএলএম ফাইন-টিউনিং ও ডিপ্লয়মেন্ট বিশেষজ্ঞ"
     ],
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.99,
     reviewsCount: 310,
     menteesCount: "2,900+ Students",
@@ -209,7 +209,7 @@ export const mentorsData: Mentor[] = [
       "৯৯.৯৯৯% হাই-অ্যাভেইলেবিলিটি টেলিকম মাইক্রোসার্ভিস আর্কিটেক্ট",
       "দৈনিক ২০ মিলিয়ন+ এপিআই লেনদেন পরিচালনাকারী এসআরই"
     ],
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.97,
     reviewsCount: 175,
     menteesCount: "2,200+ Students",
@@ -261,7 +261,7 @@ export const mentorsData: Mentor[] = [
       "৪,২০০+ ডিজিটাল মার্কেটার ও মিডিয়া বায়ারকে প্রশিক্ষণ দিয়েছেন",
       "সার্টিফাইড গুগল ও মেটা মিডিয়া প্ল্যানিং প্রফেশনাল"
     ],
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.98,
     reviewsCount: 260,
     menteesCount: "4,200+ Students",
@@ -312,7 +312,7 @@ export const mentorsData: Mentor[] = [
       "৮০+ কর্পোরেট ও এফএমসিজি ব্র্যান্ডের ভিজ্যুয়াল আইডেন্টিটি তৈরি",
       "৩,৮০০+ ডিজাইনারকে আন্তর্জাতিক মার্কেটপ্লেসে সফল করেছেন"
     ],
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.96,
     reviewsCount: 280,
     menteesCount: "3,800+ Students",
@@ -364,7 +364,7 @@ export const mentorsData: Mentor[] = [
       "বাংলাদেশ ও দক্ষিণ এশিয়ার ১,৮০০+ মোবাইল ইঞ্জিনিয়ারকে মেন্টর করেছেন",
       "লো-ব্যান্ডউইথের জন্য অফলাইন এসকিউলাইট ডাটা সিঙ্ক আর্কিটেক্ট"
     ],
-    avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.95,
     reviewsCount: 160,
     menteesCount: "1,800+ Students",
@@ -416,7 +416,7 @@ export const mentorsData: Mentor[] = [
       "জাতীয় সাইবার নিরাপত্তা ও প্রাইভেসি কনফারেন্সের স্পিকার",
       "১০০+ এন্টারপ্রাইজ ওয়েব ও এপিআই পেনিট্রেশন টেস্ট সম্পন্নকারী"
     ],
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
+    avatar: "/images/default-avatar.svg",
     rating: 4.97,
     reviewsCount: 140,
     menteesCount: "1,500+ Students",

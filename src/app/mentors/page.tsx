@@ -207,11 +207,14 @@ export default function MentorsPage() {
 
                   {/* Left: Mentor Photo with 15% Black Fade-in & Scale-Up / Lift Animation on Hover */}
                   <div className="sm:col-span-5 flex-shrink-0">
-                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-slate-200 to-slate-300 border border-slate-300/70 shadow-xs aspect-[4/5] sm:aspect-square group/img">
+                    <div className="relative overflow-hidden rounded-xl bg-slate-900 border border-slate-700/60 shadow-xs aspect-[4/5] sm:aspect-square group/img">
                       <img
-                        src={mentor.avatar}
+                        src={mentor.avatar || "/images/default-avatar.svg"}
                         alt={isEn ? mentor.name : mentor.nameBn}
-                        className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-110 group-hover/img:-translate-y-2"
+                        onError={(e) => {
+                          e.currentTarget.src = "/images/default-avatar.svg";
+                        }}
+                        className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-105"
                       />
 
                       {/* Compact Black Gradient Fade ONLY on bottom 30% behind button */}

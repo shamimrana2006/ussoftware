@@ -380,12 +380,12 @@ export default function Header() {
 
   const navLinks = [
     { href: "/", label: t.header.home },
+    { href: "/about", label: t.header.about || "About" },
     { href: "/courses", label: t.header.courses || "Courses" },
     { href: "/projects", label: t.header.projects || "Success Story" },
     { href: "/mentors", label: t.header.mentors || "Mentors" },
-    { href: "/about", label: t.header.about || "About" },
-    { href: "/contact", label: t.header.contact || "Contact" },
     { href: "/certification", label: t.header.certification || "Certification" },
+    { href: "/contact", label: t.header.contact || "Contact" },
   ];
 
   const handleHomeClick = (e: React.MouseEvent) => {
@@ -464,6 +464,13 @@ export default function Header() {
               onClick={handleHomeClick}
             >
               {t.header.home}
+            </NavItem>
+
+            <NavItem
+              href="/about"
+              active={isLinkActive("/about")}
+            >
+              {t.header.about || "About"}
             </NavItem>
 
             <NavItem
@@ -568,10 +575,10 @@ export default function Header() {
             </NavItem>
 
             <NavItem
-              href="/about"
-              active={isLinkActive("/about")}
+              href="/certification"
+              active={isLinkActive("/certification")}
             >
-              {t.header.about || "About"}
+              {t.header.certification || "Certification"}
             </NavItem>
 
             <NavItem
@@ -579,13 +586,6 @@ export default function Header() {
               active={isLinkActive("/contact")}
             >
               {t.header.contact || "Contact"}
-            </NavItem>
-
-            <NavItem
-              href="/certification"
-              active={isLinkActive("/certification")}
-            >
-              {t.header.certification || "Certification"}
             </NavItem>
           </nav>
 
@@ -693,6 +693,23 @@ export default function Header() {
                 </Link>
 
                 <Link
+                  href="/about"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                    isLinkActive("/about")
+                      ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
+                      : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
+                  }`}
+                >
+                  <span className={isLinkActive("/about") ? "text-[#008744] font-bold" : ""}>
+                    {t.header.about || "About"}
+                  </span>
+                  {isLinkActive("/about") && (
+                    <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
+                  )}
+                </Link>
+
+                <Link
                   href="/courses"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
@@ -766,9 +783,8 @@ export default function Header() {
                 {[
                   { href: "/projects", label: t.header.projects || "Success Story" },
                   { href: "/mentors", label: t.header.mentors || "Mentors" },
-                  { href: "/about", label: t.header.about || "About" },
-                  { href: "/contact", label: t.header.contact || "Contact" },
                   { href: "/certification", label: t.header.certification || "Certification" },
+                  { href: "/contact", label: t.header.contact || "Contact" },
                 ].map((item) => {
                   const active = isLinkActive(item.href);
                   return (
