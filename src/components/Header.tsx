@@ -407,10 +407,10 @@ export default function Header() {
         <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
           {/* Left: Contact Info in Pills (Larger & clearer) */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
+            <a href="tel:01995852964" className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
               <Phone size={14} className="text-emerald-400" />
-              <span className="font-semibold text-xs sm:text-[13px] text-gray-100">+880 1995-852964</span>
-            </div>
+              <span className="font-semibold text-xs sm:text-[13px] text-gray-100">01995852964</span>
+            </a>
             <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
               <Mail size={14} className="text-rose-400" />
               <span className="font-semibold text-xs sm:text-[13px] text-gray-100">info@ussoftwareltd.com</span>
@@ -844,9 +844,9 @@ export default function Header() {
                   </Link>
 
                   <div className="flex items-center justify-between text-xs text-gray-500 pt-1">
-                    <span className="flex items-center gap-1">
-                      <Phone size={12} className="text-[#008744]" /> +880 1995-852964
-                    </span>
+                    <a href="tel:01995852964" className="flex items-center gap-1 hover:text-[#008744] transition-colors">
+                      <Phone size={12} className="text-[#008744]" /> 01995852964
+                    </a>
                     <span className="flex items-center gap-1">
                       <Mail size={12} className="text-[#DE1F26]" /> info@ussoftwareltd.com
                     </span>

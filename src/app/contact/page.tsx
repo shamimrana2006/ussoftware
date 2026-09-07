@@ -82,14 +82,14 @@ export default function ContactPage() {
     {
       q: isEn ? "How do I apply or book a counseling session?" : "কোর্সে কীভাবে ভর্তি হব বা কাউন্সিলিং সেশন বুক করব?",
       a: isEn 
-        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1995-852964). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites, and schedules." 
-        : "এই পেইজের ফর্মটি পূরণ করুন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে (+৮৮০ ১৭১২-৩৪৫৭৮) মেসেজ দিন। আমাদের সিনিয়র কাউন্সিলর ১৫ মিনিটের মধ্যে যোগাযোগ করে সম্পূর্ণ ভর্তি গাইডলাইন ও সময়সূচি জানিয়ে দেবেন।"
+        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1995852964). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites, and schedules." 
+        : "এই পেইজের ফর্মটি পূরণ করুন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে (+৮৮০ ১৯৯৫৮৫২৯৬৪) মেসেজ দিন। আমাদের সিনিয়র কাউন্সিলর ১৫ মিনিটের মধ্যে যোগাযোগ করে সম্পূর্ণ ভর্তি গাইডলাইন ও সময়সূচি জানিয়ে দেবেন।"
     },
     {
       q: isEn ? "Are courses held online, offline, or hybrid?" : "ক্লাসগুলো কি সরাসরি অফলাইনে হয় নাকি অনলাইনে?",
       a: isEn 
-        ? "We provide both interactive offline batches at our Panthapath Dhaka Campus and 100% live online interactive batches. All students get lifetime LMS recordings and repository access." 
-        : "আমাদের পান্থপথ ঢাকা ক্যাম্পাসে সরাসরি অফলাইন ক্লাস এবং দূরবর্তী শিক্ষার্থীদের জন্য ১০০% লাইভ অনলাইন ক্লাসের ব্যবস্থা রয়েছে। সব ক্লাসের রেকর্ডিং ও সোর্স কোড লাইফটাইম অ্যাক্সেস পাবেন।"
+        ? "We provide both interactive offline batches at our Dhanmondi Dhaka Campus (Metro Shopping Mall, Level-5) and 100% live online interactive batches. All students get lifetime LMS recordings and repository access." 
+        : "আমাদের ধানমন্ডি ঢাকা ক্যাম্পাসে (মেট্রো শপিং মল, লেভেল-৫) সরাসরি অফলাইন ক্লাস এবং দূরবর্তী শিক্ষার্থীদের জন্য ১০০% লাইভ অনলাইন ক্লাসের ব্যবস্থা রয়েছে। সব ক্লাসের রেকর্ডিং ও সোর্স কোড লাইফটাইম অ্যাক্সেস পাবেন।"
     },
     {
       q: isEn ? "How does the job placement & internship assistance work?" : "প্লেসমেন্ট সাপোর্ট ও ইন্টার্নশিপ সুবিধা কীভাবে কাজ করে?",
@@ -151,8 +151,8 @@ export default function ContactPage() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
             >
               {isEn
-                ? "Visit our Panthapath campus, send an inquiry through our direct concierge form, or connect with our lead engineering counselors."
-                : "আমাদের ঢাকা ক্যাম্পাসে সরাসরি চলে আসুন, ফর্মের মাধ্যমে তথ্য পাঠান অথবা আমাদের সিনিয়র ইঞ্জিনিয়ারদের সাথে সরাসরি কথা বলুন।"}
+                ? "Visit our Dhanmondi campus, send an inquiry through our direct concierge form, or connect with our lead engineering counselors."
+                : "আমাদের ধানমন্ডি ক্যাম্পাসে সরাসরি চলে আসুন, ফর্মের মাধ্যমে তথ্য পাঠান অথবা আমাদের সিনিয়র ইঞ্জিনিয়ারদের সাথে সরাসরি কথা বলুন।"}
             </motion.p>
 
             {/* 4 Trust & Direct Action Pills */}
@@ -173,16 +173,16 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="tel:+880 1995-852964"
+                href="tel:01995852964"
                 className="flex items-center justify-center gap-2 bg-white/90 hover:bg-red-50/80 backdrop-blur-sm border border-slate-200/80 hover:border-red-300 rounded-xl py-2.5 px-3 shadow-2xs transition-all group cursor-pointer"
               >
                 <Phone size={14} className="text-[#DE1F26] flex-shrink-0" />
-                <span className="text-xs font-bold text-slate-800 group-hover:text-[#DE1F26] transition-colors">{isEn ? "Admissions Hotline" : "ভর্তি সংক্রান্ত হেল্পলাইন"}</span>
+                <span className="text-xs font-bold text-slate-800 group-hover:text-[#DE1F26] transition-colors">{isEn ? "Hotline: 01995852964" : "হটলাইন: ০১৯৯৫-৮৫২৯৬৪"}</span>
               </a>
 
               <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <Building2 size={14} className="text-[#008744] flex-shrink-0" />
-                <span className="text-xs font-bold text-slate-800">{isEn ? "Metro Shopping Mall, Dhaka" : "মেট্রো শপিং মল, ধানমন্ডি"}</span>
+                <span className="text-xs font-bold text-slate-800">{isEn ? "Metro Shopping Mall, Level-5" : "মেট্রো শপিং মল, লেভেল-৫"}</span>
               </div>
 
               <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
@@ -413,19 +413,38 @@ export default function ContactPage() {
 
                 {/* CONTACT DETAILS LIST (US SOFTWARE BRAND ACCENTS) */}
                 <div className="space-y-4 text-sm sm:text-base text-slate-700 w-full pl-2 font-medium">
-                  <div className="flex items-center space-x-3.5">
-                    <MapPin size={18} className="text-[#008744] flex-shrink-0" />
-                    <span className="font-bold text-slate-800">Metro Shopping Mall, Mirpur Road, Dhanmondi, Dhaka 1205</span>
+                  <div className="flex items-start space-x-3.5">
+                    <MapPin size={18} className="text-[#008744] flex-shrink-0 mt-0.5" />
+                    <a
+                      href="https://maps.app.goo.gl/bqfEqEBG6pZpwox38"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-slate-800 hover:text-[#008744] transition-colors leading-snug"
+                    >
+                      {isEn
+                        ? "US Software Ltd., Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207, Bangladesh."
+                        : "ইউএস সফটওয়্যার লিমিটেড, মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭, বাংলাদেশ।"}
+                    </a>
                   </div>
 
                   <div className="flex items-center space-x-3.5">
                     <Phone size={18} className="text-[#DE1F26] flex-shrink-0" />
-                    <span className="font-bold text-slate-800">{isEn ? "Open to Connect • +880 1995-852964" : "যোগাযোগের জন্য উন্মুক্ত • +৮৮০ ১৭১২-৩৪৫৭৮"}</span>
+                    <a
+                      href="tel:01995852964"
+                      className="font-bold text-slate-800 hover:text-[#DE1F26] transition-colors"
+                    >
+                      {isEn ? "Hotline • 01995852964" : "হটলাইন • ০১৯৯৫-৮৫২৯৬৪"}
+                    </a>
                   </div>
 
                   <div className="flex items-center space-x-3.5">
                     <Mail size={18} className="text-[#008744] flex-shrink-0" />
-                    <span className="font-bold text-slate-800 font-mono">info@ussoftwareltd.com</span>
+                    <a
+                      href="mailto:info@ussoftwareltd.com"
+                      className="font-bold text-slate-800 font-mono hover:text-[#008744] transition-colors"
+                    >
+                      info@ussoftwareltd.com
+                    </a>
                   </div>
                 </div>
 
@@ -470,7 +489,7 @@ export default function ContactPage() {
                       {isEn ? "U S Software Limited Campus" : "ইউএস সফটওয়্যার লিমিটেড ক্যাম্পাস"}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-                      {isEn ? "Metro Shopping Mall, Mirpur Road, Dhanmondi" : "মেট্রো শপিং মল, মিরপুর রোড, ধানমন্ডি"}
+                      {isEn ? "Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207" : "মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭"}
                     </p>
                   </div>
                 </div>
@@ -513,7 +532,7 @@ export default function ContactPage() {
                     <span>U S Software Limited</span>
                   </div>
                   <p className="text-xs text-slate-500 font-medium mt-0.5">
-                    {isEn ? "Metro Shopping Mall, Dhanmondi" : "মেট্রো শপিং মল, ধানমন্ডি"}
+                    {isEn ? "Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207" : "মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭"}
                   </p>
                 </div>
               </div>
@@ -523,23 +542,13 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-2">
                   <MapPin size={17} className="text-[#008744] flex-shrink-0" />
                   <span className="text-xs sm:text-sm font-bold text-slate-800">
-                    {isEn ? "Metro Shopping Mall, Dhanmondi, Dhaka-1205" : "মেট্রো শপিং মল, ধানমন্ডি, ঢাকা-১২০৫"}
+                    {isEn ? "Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207" : "মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭"}
                   </span>
                 </div>
 
                 <div className="flex items-center space-x-2.5">
                   <a
-                    href="https://wa.me/8801995852964"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-1.5 bg-emerald-50 hover:bg-emerald-100 text-[#008744] border border-emerald-200 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"
-                  >
-                    <FaWhatsapp size={15} />
-                    <span>{isEn ? "Location Chat" : "হোয়াটসঅ্যাপ"}</span>
-                  </a>
-
-                  <a
-                    href="https://maps.app.goo.gl/GuULRR3xP9ZaJs8E9"
+                    href="https://maps.app.goo.gl/bqfEqEBG6pZpwox38"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-1.5 bg-[#008744] hover:bg-[#007038] text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"

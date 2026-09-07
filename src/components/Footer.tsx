@@ -338,8 +338,8 @@ export default function Footer() {
                 <div className="w-6 h-6 rounded-lg bg-emerald-50 text-[#008744] flex items-center justify-center flex-shrink-0">
                   <Phone size={13} />
                 </div>
-                <a href="tel:+880 1995-852964" className="hover:text-[#008744] font-semibold transition-colors">
-                  +880 1995-852964
+                <a href="tel:01995852964" className="hover:text-[#008744] font-semibold transition-colors">
+                  01995852964
                 </a>
               </li>
 
@@ -357,7 +357,17 @@ export default function Footer() {
 
               <li className="flex items-start space-x-2 pt-1 text-slate-500 text-[11px] leading-relaxed">
                 <MapPin size={13} className="text-slate-400 shrink-0 mt-0.5" />
-                <span>Metro Shopping Mall, Mirpur Road, Dhanmondi, Dhaka 1205</span>
+                <a
+                  href="https://maps.app.goo.gl/bqfEqEBG6pZpwox38"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#008744] transition-colors"
+                  title={isEn ? "View on Google Maps" : "গুগল ম্যাপে দেখুন"}
+                >
+                  {isEn
+                    ? "US Software Ltd., Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207, Bangladesh."
+                    : "ইউএস সফটওয়্যার লিমিটেড, মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭, বাংলাদেশ।"}
+                </a>
               </li>
             </ul>
           </div>
