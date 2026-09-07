@@ -54,7 +54,9 @@ function CoursesContent() {
     { id: "creative", label: isEn ? "Design, Motion & UI/UX" : "গ্রাফিক্স, মোশন ও ইউআই/ইউএক্স", pillLabel: isEn ? "Design & UI/UX" : "ডিজাইন ও ইউআই/ইউএক্স", icon: Palette, iconColor: "text-emerald-600" },
     { id: "software", label: isEn ? "App & Software Development" : "অ্যাপ ও সফটওয়্যার", pillLabel: isEn ? "App & Software" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone, iconColor: "text-purple-600" },
     { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", pillLabel: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Server, iconColor: "text-blue-600" },
+    { id: "security", label: isEn ? "Security" : "সিকিউরিটি", pillLabel: isEn ? "Security" : "সিকিউরিটি", icon: ShieldCheck, iconColor: "text-rose-600" },
     { id: "diploma", label: isEn ? "Diploma Programs" : "ডিপ্লোমা প্রোগ্রাম", pillLabel: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-amber-500" },
+    { id: "others", label: isEn ? "Others" : "অন্যান্য", pillLabel: isEn ? "Others" : "অন্যান্য", icon: Briefcase, iconColor: "text-amber-600" },
   ];
 
   const iconMap: Record<string, any> = {
@@ -64,6 +66,8 @@ function CoursesContent() {
     creative: Palette,
     software: Smartphone,
     cloud: Server,
+    security: ShieldCheck,
+    others: Briefcase,
   };
 
   const allCourses = useMemo(() => {
@@ -87,7 +91,7 @@ function CoursesContent() {
         rawFee: course.rawFee,
         bannerTitle: course.title.en,
         bgGradient: "from-[#081b29] via-[#0d2a42] to-[#081b29]",
-        illustration: course.category === "web" ? "💻" : course.category === "marketing" ? "📢" : course.category === "creative" ? "🎨" : course.category === "software" ? "📱" : "🌐",
+        illustration: course.category === "web" ? "💻" : course.category === "marketing" ? "📢" : course.category === "creative" ? "🎨" : course.category === "software" ? "📱" : course.category === "security" ? "🛡️" : course.category === "others" ? "💼" : "🌐",
         image: course.image,
         videoUrl: course.videoUrl,
         whatsappLink: course.whatsappLink || `https://wa.me/8801995852964?text=${encodeURIComponent(`আমি "${course.title.en}" কোর্সটি করতে চাই।`)}`,
@@ -107,7 +111,7 @@ function CoursesContent() {
   // Filtering & Sorting
   const filteredCourses = useMemo(() => {
     let result = allCourses.filter((course) => {
-      const matchCategory = activeCategory === "all" || activeCategory === "diploma" || course.category === activeCategory;
+      const matchCategory = activeCategory === "all" || course.category === activeCategory;
       const matchMode = selectedMode === "all" || course.modeType === selectedMode;
       const matchSearch = searchQuery.trim() === "" || 
         course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

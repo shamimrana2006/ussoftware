@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles, Star, Clock, Users, BookOpen,
   ArrowRight, MessageCircle, CheckCircle2,
-  Code2, Cpu, Cloud, Smartphone, Shield,
+  Code2, Cpu, Cloud, Smartphone, Shield, Briefcase,
   Palette, Megaphone, Database, Award, Layers, GraduationCap,
   Play, X, Zap, ExternalLink, Globe2
 } from "lucide-react";
@@ -28,7 +28,9 @@ export default function HomeCoursesSection() {
     { id: "creative", label: isEn ? "Design & UI/UX" : "গ্রাফিক্স ও ইউআই/ইউএক্স", icon: Palette },
     { id: "software", label: isEn ? "App & Software" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone },
     { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Cloud },
+    { id: "security", label: isEn ? "Security" : "সিকিউরিটি", icon: Shield },
     { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap },
+    { id: "others", label: isEn ? "Others" : "অন্যান্য", icon: Briefcase },
   ];
 
   const allCourses = useMemo(() => {
@@ -58,9 +60,6 @@ export default function HomeCoursesSection() {
       return FEATURED_COURSE_IDS
         .map(id => allCourses.find(c => c.id === id))
         .filter(Boolean) as typeof allCourses;
-    }
-    if (activeCategory === "diploma") {
-      return allCourses;
     }
     const list = allCourses.filter(c => c.category === activeCategory);
     return list.slice(0, 6);

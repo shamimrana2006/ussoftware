@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { 
   Code2, Cpu, Cloud, Shield, Smartphone, Palette, 
-  ArrowUpRight, Database, Terminal, Layers, GraduationCap, Megaphone
+  ArrowUpRight, Database, Terminal, Layers, GraduationCap, Megaphone, Briefcase
 } from "lucide-react";
 
 export default function HomeCategoriesSection() {
@@ -18,15 +18,15 @@ export default function HomeCategoriesSection() {
       id: "web",
       title: isEn ? "Programming & Web" : "প্রোগ্রামিং ও ওয়েব",
       desc: isEn 
-        ? "React 19, Next.js 15, Node.js, Express, MongoDB, Python & Clean Architecture."
-        : "রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, নোড.জেএস, মঙ্গোডিবি, পাইথন ও আধুনিক সফটওয়্যার আর্কিটেকচার।",
+        ? "React 19, MERN Stack, Python Django, WordPress, PHP Laravel & Shopify."
+        : "রিঅ্যাক্ট ১৯, মার্ন স্ট্যাক, পাইথন জ্যাঙ্গো, ওয়ার্ডপ্রেস, পিএইচপি লারাভেল ও শপিফাই।",
       icon: Code2,
-      count: isEn ? "4 Programs" : "৪টি প্রোগ্রাম",
+      count: isEn ? "6 Programs" : "৬টি প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
       iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",
       accent: "#008744",
-      skills: ["React & Next.js", "Node & Express", "MongoDB", "Shopify Liquid"]
+      skills: ["React & Next.js", "MERN Stack", "Python Django", "PHP & Laravel"]
     },
     {
       id: "marketing",
@@ -58,45 +58,73 @@ export default function HomeCategoriesSection() {
     },
     {
       id: "software",
-      title: isEn ? "App & Enterprise Systems" : "অ্যাপ ও এন্টারপ্রাইজ সফটওয়্যার",
+      title: isEn ? "App & Software Development" : "অ্যাপ ও সফটওয়্যার ডেভেলপমেন্ট",
       desc: isEn 
-        ? "Cross-Platform Flutter 3.x, C# ASP.NET Core 8 Web API, SQL Server & SAP ERP Systems."
-        : "ক্রস-প্ল্যাটফর্ম ফ্লাটার অ্যাপ, সি-শার্প এএসপি.নেট কোর ও এসএপি (SAP) এন্টারপ্রাইজ সিস্টেম।",
+        ? "Cross-Platform Flutter 3.x, Native Android Studio, Java/Kotlin & Firebase Integration."
+        : "ক্রস-প্ল্যাটফর্ম ফ্লাটার অ্যাপ, নেটিভ অ্যান্ড্রয়েড স্টুডিও, জাভা/কটলিন ও ফায়ারবেস।",
       icon: Smartphone,
-      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
+      count: isEn ? "2 Programs" : "২টি প্রোগ্রাম",
       gradient: "from-blue-500/10 via-cyan-500/5 to-transparent",
       iconColor: "text-blue-600",
       iconBg: "bg-blue-50 border-blue-200/70",
       accent: "#2563eb",
-      skills: ["Flutter & Dart", "ASP.NET Core", "SQL Server", "SAP ERP"]
+      skills: ["Flutter & Dart", "Android Studio", "Java/Kotlin", "Firebase"]
     },
     {
       id: "cloud",
       title: isEn ? "Networking & Infrastructure" : "নেটওয়ার্কিং ও ইনফ্রাস্ট্রাকচার",
       desc: isEn 
-        ? "Computer Networking, Cisco Routing & Switching, MikroTik RouterOS, VPNs & Security."
-        : "কম্পিউটার নেটওয়ার্কিং, সিসকো সুইচিং ও রাউটিং, মাইক্রোটিক ব্যান্ডউইথ ও নেটওয়ার্ক সিকিউরিটি।",
+        ? "Cisco CCNA (200-301), CompTIA A+ IT Support, MikroTik RouterOS, Linux Administration & Windows Server Active Directory."
+        : "সিসকো সিসিএনএ, কম্পটিয়া এ+ আইটি সাপোর্ট, মাইক্রোটিক রাউটারওএস, লিনাক্স এবং উইন্ডোজ সার্ভার অ্যাডমিনিস্ট্রেশন।",
       icon: Cloud,
-      count: isEn ? "1 Program" : "১টি প্রোগ্রাম",
+      count: isEn ? "5 Programs" : "৫টি প্রোগ্রাম",
       gradient: "from-blue-500/10 via-cyan-500/5 to-transparent",
       iconColor: "text-blue-600",
       iconBg: "bg-blue-50 border-blue-200/70",
       accent: "#2563eb",
-      skills: ["Cisco CCNA", "MikroTik", "TCP/IP Subnetting", "VPN Security"]
+      skills: ["Cisco CCNA", "CompTIA A+", "MikroTik MTCNA", "Linux (RHCSA)", "Windows Server AD"]
+    },
+    {
+      id: "security",
+      title: isEn ? "Security" : "সিকিউরিটি",
+      desc: isEn 
+        ? "Ethical Hacking & Pentesting, Cyber Security SOC Analyst & Cloud Computing."
+        : "ইথিক্যাল হ্যাকিং, সাইবার সিকিউরিটি এসওসি অ্যানালিস্ট ও ক্লাউড কম্পিউটিং।",
+      icon: Shield,
+      count: isEn ? "3 Programs" : "৩টি প্রোগ্রাম",
+      gradient: "from-rose-500/10 via-red-500/5 to-transparent",
+      iconColor: "text-rose-600",
+      iconBg: "bg-rose-50 border-rose-200/70",
+      accent: "#e11d48",
+      skills: ["Ethical Hacking", "Cyber Security", "SOC Analyst", "Cloud Computing"]
     },
     {
       id: "diploma",
       title: isEn ? "Professional Diploma Programs" : "প্রফেশনাল ডিপ্লোমা প্রোগ্রাম",
       desc: isEn 
-        ? "Comprehensive career tracks covering Web, Marketing, Design, App Development & Networking."
-        : "ওয়েব, মার্কেটিং, ডিজাইন, অ্যাপ ডেভেলপমেন্ট ও নেটওয়ার্কিং সহ সকল ডোমেনের পূর্ণাঙ্গ কোর্স।",
+        ? "6-Month Career Diplomas with Dual Certification & 100% Job Placement Support."
+        : "৬ মাস মেয়াদী ইন্ডাস্ট্রি-স্ট্যান্ডার্ড ডিপ্লোমা ও শতভাগ জব প্লেসমেন্ট সাপোর্ট।",
       icon: GraduationCap,
-      count: isEn ? "All Programs" : "সকল কোর্স",
+      count: isEn ? "6 Programs" : "৬টি ডিপ্লোমা প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
       iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",
       accent: "#008744",
-      skills: ["All Disciplines", "Job Placement", "Live Projects", "Certificate"]
+      skills: ["Full Stack Web", "AI & Data Science", "Cyber Security", "Digital Marketing", "Graphic & UI/UX", "Network & Cloud"]
+    },
+    {
+      id: "others",
+      title: isEn ? "Others" : "অন্যান্য",
+      desc: isEn 
+        ? "PMP Project Management Professional & Software Testing SQA Automation."
+        : "পিএমপি প্রজেক্ট ম্যানেজমেন্ট ও সফটওয়্যার টেস্টিং এবং এসকিউএ অটোমেশন।",
+      icon: Briefcase,
+      count: isEn ? "2 Programs" : "২টি প্রোগ্রাম",
+      gradient: "from-amber-500/10 via-yellow-500/5 to-transparent",
+      iconColor: "text-amber-600",
+      iconBg: "bg-amber-50 border-amber-200/70",
+      accent: "#d97706",
+      skills: ["PMP Certification", "Agile & Scrum", "Software Testing", "SQA Automation"]
     }
   ];
 
