@@ -180,7 +180,7 @@ function CoursesContent() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
             >
               {isEn
-                ? `Explore ${COMPANY_STATS.coursesCountFormatted} industry-aligned engineering bootcamps, hands-on live project tracks আমার 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready.`
+                ? `Explore ${COMPANY_STATS.coursesCountFormatted} industry-aligned engineering bootcamps, hands-on live project tracks and 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready.`
                 : `${COMPANY_STATS.coursesCountBn} প্রফেশনাল লাইভ কোর্স, এন্টারপ্রাইজ প্রজেক্ট ও শীর্ষ ইঞ্জিনিয়ারদের মেন্টরশিপের মাধ্যমে আন্তর্জাতিক জব মার্কেট ও ফ্রিল্যান্সিংয়ের জন্য প্রস্তুত হোন।`}
             </motion.p>
 
