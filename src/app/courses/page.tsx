@@ -54,9 +54,12 @@ function CoursesContent() {
     { id: "creative", label: isEn ? "Design, Motion & UI/UX" : "গ্রাফিক্স, মোশন ও ইউআই/ইউএক্স", pillLabel: isEn ? "Design & UI/UX" : "ডিজাইন ও ইউআই/ইউএক্স", icon: Palette, iconColor: "text-emerald-600" },
     { id: "software", label: isEn ? "App & Software Development" : "অ্যাপ ও সফটওয়্যার", pillLabel: isEn ? "App & Software" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone, iconColor: "text-purple-600" },
     { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", pillLabel: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Server, iconColor: "text-blue-600" },
+    { id: "database", label: isEn ? "Database & Analytics" : "ডাটাবেস ও অ্যানালিটিক্স", pillLabel: isEn ? "Database" : "ডাটাবেস", icon: Database, iconColor: "text-cyan-600" },
     { id: "security", label: isEn ? "Security" : "সিকিউরিটি", pillLabel: isEn ? "Security" : "সিকিউরিটি", icon: ShieldCheck, iconColor: "text-rose-600" },
     { id: "diploma", label: isEn ? "Diploma Programs" : "ডিপ্লোমা প্রোগ্রাম", pillLabel: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap, iconColor: "text-amber-500" },
-    { id: "others", label: isEn ? "Others" : "অন্যান্য", pillLabel: isEn ? "Others" : "অন্যান্য", icon: Briefcase, iconColor: "text-amber-600" },
+    { id: "language", label: isEn ? "Language Programs" : "ভাষা শিক্ষা", pillLabel: isEn ? "Languages" : "ভাষা শিক্ষা", icon: Globe2, iconColor: "text-indigo-600" },
+    { id: "management", label: isEn ? "Management & ITIL" : "ম্যানেজমেন্ট ও প্রজেক্ট", pillLabel: isEn ? "Management" : "ম্যানেজমেন্ট", icon: Briefcase, iconColor: "text-teal-600" },
+    { id: "others", label: isEn ? "Others" : "অন্যান্য", pillLabel: isEn ? "Others" : "অন্যান্য", icon: Sparkles, iconColor: "text-amber-600" },
   ];
 
   const iconMap: Record<string, any> = {
@@ -66,8 +69,11 @@ function CoursesContent() {
     creative: Palette,
     software: Smartphone,
     cloud: Server,
+    database: Database,
     security: ShieldCheck,
-    others: Briefcase,
+    language: Globe2,
+    management: Briefcase,
+    others: Sparkles,
   };
 
   const allCourses = useMemo(() => {

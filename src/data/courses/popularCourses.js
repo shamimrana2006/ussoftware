@@ -1,0 +1,1199 @@
+module.exports = [
+  // 1. ADVANCED GRAPHIC DESIGN WITH FREELANCING
+  {
+    id: "1",
+    slug: "advanced-graphic-design-with-freelancing",
+    title: { en: "Advanced Graphic Design with Freelancing", bn: "অ্যাডভান্সড গ্রাফিক ডিজাইন উইথ ফ্রিল্যান্সিং" },
+    subtitle: { en: "Master Photoshop, Illustrator, AI generative tools, branding, packaging & international freelancing marketplaces", bn: "ফটোশপ, ইলাস্ট্রেটর, এআই টুলস, ব্র্যান্ড আইডেন্টিটি, প্যাকেজিং ও মার্কেটপ্লেস ক্যারিয়ার" },
+    category: "creative",
+    categoryLabel: { en: "Design & UI/UX", bn: "ডিজাইন ও ইউআই/ইউএক্স" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 198,
+    enrolledCount: "420+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "17,000৳",
+    rawFee: 17000,
+    originalFee: "25,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/graphic design.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Sabrina Rahman",
+      designation: { en: "Senior Visual Designer & Behance Top Creator", bn: "সিনিয়র ভিজ্যুয়াল ডিজাইনার ও বেহ্যান্স টপ ক্রিয়েটর" },
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "7+ years experience in brand identity, packaging design and top-rated freelancing.", bn: "ব্র্যান্ড আইডেন্টিটি, প্যাকেজিং ডিজাইন ও টপ-রেটেড ফ্রিল্যান্সিংয়ে ৭+ বছরের অভিজ্ঞতা।" },
+      experience: "7+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "A complete professional graphic design mastery program. Learn Adobe Photoshop, advanced image manipulation, blend techniques, hair masking & action work, AI tools, Adobe Illustrator, vector logo design, t-shirt design, product packaging, Behance portfolio curation, communicative English and freelancing skills.",
+      bn: "একটি পূর্ণাঙ্গ প্রফেশনাল গ্রাফিক ডিজাইন কোর্স। এতে ফটোশপ, ইমেজ ম্যানিপুলেশন, ব্লেন্ড টেকনিক, হেয়ার মাস্কিং, এআই ডিজাইন, ইলাস্ট্রেটর, লোগো ডিজাইন, টি-শার্ট ডিজাইন, প্যাকেজিং, বেহ্যান্স পোর্টফোলিও এবং ফ্রিল্যান্সিং মার্কেটপ্লেস শেখানো হয়।"
+    },
+    fullDescription: {
+      en: "This 90-hour hands-on graphic design course covers Adobe Photoshop and Adobe Illustrator from fundamental principles to cutting-edge AI-assisted workflows. You will design commercial brand identities, product packaging, t-shirts, social media campaigns, and build a world-class Behance portfolio to earn from Fiverr, Upwork, and local agencies.",
+      bn: "৯০ ঘণ্টার এই বাস্তবভিত্তিক কোর্সে আপনি ফটোশপ ও ইলাস্ট্রেটরের অ্যাডভান্সড টুলস, এআই টেকনোলজি, লোগো ও ব্র্যান্ডিং, টি-শার্ট ডিজাইন, প্রোডাক্ট প্যাকেজিং এবং আন্তর্জাতিক মার্কেটপ্লেসে কাজ পাওয়ার যাবতীয় স্কিল শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Professional Brand Identity", bn: "প্রফেশনাল ব্র্যান্ড আইডেন্টিটি" }, desc: { en: "Create industry-grade vector logos, stationery, and comprehensive brand guidelines.", bn: "ভেক্টর লোগো ও ব্র্যান্ড গাইডলাইন তৈরিতে দক্ষতা।" }, icon: "Palette" },
+      { id: "cv2", title: { en: "AI-Powered Workflows", bn: "এআই পাওয়ারড ডিজাইন" }, desc: { en: "Leverage Midjourney, Firefly, and Photoshop AI generative tools for 10x faster output.", bn: "ফায়ারফ্লাই ও ফটোশপ এআই দিয়ে দ্রুত আধুনিক ডিজাইন।" }, icon: "Sparkles" },
+      { id: "cv3", title: { en: "Marketplace Mastery", bn: "মার্কেটপ্লেস ও ক্যারিয়ার" }, desc: { en: "Fiverr & Upwork account setup, gig optimization, bidding, client communication and Behance portfolio.", bn: "বেহ্যান্স পোর্টফোলিও ও মার্কেটপ্লেসে সফল ক্যারিয়ার।" }, icon: "Award" }
+    ],
+    learningOutcomes: [
+      { en: "Master Adobe Photoshop tools, layers, blending modes, and advanced hair masking.", bn: "ফটোশপ টুলস, লেয়ার ও অ্যাডভান্সড হেয়ার মাস্কিংয়ে পারদর্শী হওয়া।" },
+      { en: "Create ultra-realistic image manipulation and photo compositing with dynamic lighting.", bn: "ফটোরিয়ালিস্টিক ইমেজ ম্যানিপুলেশন ও কম্পোজিটিং তৈরি করা।" },
+      { en: "Master Adobe Illustrator for vector logo design, typography, and t-shirt graphics.", bn: "ভেক্টর লোগো ডিজাইন, টাইপোগ্রাফি ও টি-শার্ট গ্রাফিক্সে দক্ষতা অর্জন।" },
+      { en: "Design commercial 3D packaging mockups, die-lines, and print-ready files.", bn: "প্রিন্ট-রেডি প্রোডাক্ট প্যাকেজিং ও ডাই-লাইন ডিজাইন তৈরি করা।" },
+      { en: "Build an international Behance portfolio and succeed on Fiverr, Upwork & Freelancer.", bn: "বেহ্যান্স পোর্টফোলিও তৈরি এবং আন্তর্জাতিক ফ্রিল্যান্সিং মার্কেটপ্লেসে সফল হওয়া।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Adobe Photoshop & Advanced Photo Manipulation", bn: "মডিউল ১: অ্যাডোবি ফটোশপ ও অ্যাডভান্সড ইমেজ ম্যানিপুলেশন" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Adobe Photoshop Interface, Layers, Smart Objects & Selection Tools", bn: "ফটোশপ ইন্টারফেস, লেয়ার্স, স্মার্ট অবজেক্টস ও সিলেকশন টুলস" },
+          { en: "Image Manipulation, Background Removal & Pen Tool Precision", bn: "ইমেজ ম্যানিপুলেশন, ব্যাকগ্রাউন্ড রিমুভাল ও পেন টুল মাস্টারি" },
+          { en: "Advance Blend Technique, Layer Masks & Clipping Masks", bn: "অ্যাডভান্স ব্লেন্ড টেকনিক, লেয়ার মাস্ক ও ক্লিপিং মাস্ক" },
+          { en: "Hair Masking, Frequency Separation & Action Work Automation", bn: "হেয়ার মাস্কিং, ফ্রিকোয়েন্সি সেপারেশন ও অ্যাকশন ওয়ার্ক অটোমেশন" },
+          { en: "Artificial Intelligence (AI) Generative Fill & Neural Filters", bn: "আর্টিফিশিয়াল ইন্টেলিজেন্স (AI) জেনারেটিভ ফিল ও নিউরাল ফিল্টার" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Adobe Illustrator, Vector Graphics & Branding", bn: "মডিউল ২: অ্যাডোবি ইলাস্ট্রেটর, ভেক্টর গ্রাফিক্স ও ব্র্যান্ডিং" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Adobe Illustrator Tools, Pathfinders & Vector Fundamentals", bn: "ইলাস্ট্রেটর টুলস, পাথফাইন্ডার ও ভেক্টর ফান্ডামেন্টালস" },
+          { en: "Advance Gradient Technique, Mesh Tool & Color Palettes", bn: "অ্যাডভান্স গ্রেডিয়েন্ট টেকনিক, মেশ টুল ও কালার প্যালেট" },
+          { en: "Logo Design (Minimalist, Mascot, Monogram, Emblem, Abstract)", bn: "লোগো ডিজাইন (মিনিমালিস্ট, মাসকট, মনোগ্রাম ও অ্যাবস্ট্রাক্ট)" },
+          { en: "T-shirt Design (Typography, Vintage, Screen Print Preparation)", bn: "টি-শার্ট ডিজাইন (টাইপোগ্রাফি, ভিন্টেজ, স্ক্রিন প্রিন্ট প্রিপারেশন)" },
+          { en: "Product Packaging Design, Labeling & 3D Mockup Presentation", bn: "প্রোডাক্ট প্যাকেজিং ডিজাইন, লেবেলিং ও থ্রিডি মকআপ প্রেজেন্টেশন" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Portfolio, Marketplace & Soft Skills", bn: "মডিউল ৩: পোর্টফোলিও, মার্কেটপ্লেস ও সফট স্কিলস" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Behance Portfolio Setup & High-Converting Case Studies", bn: "বেহ্যান্স পোর্টফোলিও সেটআপ ও কেস স্টাডি ডিজাইন" },
+          { en: "Communicative English for Client Interaction & Negotiation", bn: "ক্লায়েন্ট কমিউনিকেশনের জন্য প্রয়োজনীয় ইংরেজি ও নেগোসিয়েশন" },
+          { en: "Soft Skills, Professional Ethics & Time Management", bn: "সফট স্কিলস, প্রফেশনাল এথিক্স ও টাইম ম্যানেজমেন্ট" },
+          { en: "Fiverr Gig Creation, SEO, Ranking Strategies & Order Fulfillment", bn: "ফাইবার গিগ তৈরি, এসইও, র‍্যাংকিং ও অর্ডার ডেলিভারি" },
+          { en: "Upwork Profile Approval, Proposal Writing & Direct Client Acquisition", bn: "আপওয়ার্ক প্রোফাইল, প্রপোজাল রাইটিং ও ডিরেক্ট ক্লায়েন্ট অ্যাকুইজিশন" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "100+ GB Premium Design Assets & Fonts", bn: "১০০+ জিবি প্রিমিয়াম ডিজাইন অ্যাসেট ও ফন্টস" },
+      { en: "1-on-1 Portfolio & Marketplace Mentorship", bn: "১-অন-১ পোর্টফোলিও ও মার্কেটপ্লেস মেন্টরশিপ" },
+      { en: "Lifetime Access to Class Recordings & Community", bn: "ক্লাস রেকর্ডিং ও প্রাইভেট কমিউনিটিতে আজীবন অ্যাক্সেস" }
+    ],
+    reviews: [
+      { id: "r1", name: "Tanvir Ahmed", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100", role: { en: "Freelance Graphic Designer", bn: "ফ্রিল্যান্স গ্রাফিক ডিজাইনার" }, rating: 5, comment: { en: "The AI design techniques and hair masking sessions were incredible. I earned $450 in my first month on Fiverr!", bn: "কোর্সের হেয়ার মাস্কিং ও এআই ট্রিকস অসাধারণ ছিল। ফাইবার থেকে প্রথম মাসেই আয় শুরু করেছি।" }, date: "1 Week Ago" }
+    ]
+  },
+
+  // 2. MASTERING WORDPRESS DEVELOPMENT
+  {
+    id: "2",
+    slug: "mastering-wordpress-development",
+    title: { en: "Mastering WordPress Development", bn: "মাস্টারিং ওয়ার্ডপ্রেস ডেভেলপমেন্ট" },
+    subtitle: { en: "From custom themes, WooCommerce & plugins to speed optimization, security & freelance marketplaces", bn: "ডোমেইন হোস্টিং, থিম কাস্টমাইজেশন, উকমার্স, স্পিড অপ্টিমাইজেশন ও প্রফেশনাল ক্লায়েন্ট প্রজেক্ট" },
+    category: "web",
+    categoryLabel: { en: "Programming & Web", bn: "প্রোগ্রামিং ও ওয়েব" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 165,
+    enrolledCount: "380+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "18,000৳",
+    rawFee: 18000,
+    originalFee: "26,000৳",
+    duration: { en: "120 hrs. (3.5 Months)", bn: "১২০ ঘণ্টা (৩.৫ মাস)" },
+    classesCount: { en: "40 Classes", bn: "৪০ টি ক্লাস" },
+    image: "/images/course thumbnail/wordpress.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Mehedi Hasan",
+      designation: { en: "WordPress Architect & ThemeForest Author", bn: "ওয়ার্ডপ্রেস আর্কিটেক্ট ও থিমফরেস্ট অথর" },
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "8+ years building enterprise WordPress, WooCommerce and headless solutions.", bn: "এন্টারপ্রাইজ ওয়ার্ডপ্রেস ও উকমার্স সলিউশনে ৮+ বছরের অভিজ্ঞতা।" },
+      experience: "8+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "A comprehensive 120-hour WordPress development program covering domain & hosting, dashboard architecture, media & pages, theme customization, essential & custom plugins, user roles, WooCommerce store building, management tools, SEO & speed optimization, communicative English and freelancing marketplaces.",
+      bn: "১২০ ঘণ্টার পূর্ণাঙ্গ ওয়ার্ডপ্রেস ডেভেলপমেন্ট কোর্স। এতে ডোমেইন ও হোস্টিং, ওয়ার্ডপ্রেস ড্যাশবোর্ড, থিম ও প্লাগিন কাস্টমাইজেশন, উকমার্স অনলাইন শপ তৈরি, স্পিড ও এসইও অপ্টিমাইজেশন এবং আন্তর্জাতিক মার্কেটপ্লেসে ক্লায়েন্ট হ্যান্ডলিং শেখানো হয়।"
+    },
+    fullDescription: {
+      en: "Learn how to build any dynamic, high-performance website without coding or with custom code. From corporate portals and news magazines to full-featured WooCommerce e-commerce stores with automated payment gateways, speed optimization, and malware protection.",
+      bn: "এই কোর্সে আপনি যেকোনো ডায়নামিক ওয়েবসাইট ও ই-কমার্স প্ল্যাটফর্ম তৈরি, বিকাশ/নগদ পেমেন্ট গেটওয়ে ইন্টিগ্রেশন, রকেট-ফাস্ট স্পিড অপ্টিমাইজেশন এবং আন্তর্জাতিক ক্লায়েন্টদের জন্য কাস্টম ওয়ার্ডপ্রেস সলিউশন তৈরি করা শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "WooCommerce & Payments", bn: "উকমার্স ও পেমেন্ট গেটওয়ে" }, desc: { en: "Build full multi-vendor and retail stores with bKash, Nagad, Stripe, and PayPal.", bn: "সম্পূর্ণ অনলাইন স্টোর এবং লোকাল ও গ্লোবাল পেমেন্ট গেটওয়ে সেটআপ।" }, icon: "Zap" },
+      { id: "cv2", title: { en: "Page Builders & Customization", bn: "পেজ বিল্ডার ও থিম কাস্টমাইজেশন" }, desc: { en: "Master Elementor Pro, Gutenberg, Astra, Divi, and theme options inside out.", bn: "এলিমেন্টর প্রো ও আধুনিক পেজ বিল্ডারে পূর্ণাঙ্গ দক্ষতা।" }, icon: "Code2" },
+      { id: "cv3", title: { en: "Speed, Security & SEO", bn: "স্পিড, সিকিউরিটি ও এসইও" }, desc: { en: "Achieve 95+ Google PageSpeed score, setup Wordfence security & RankMath SEO.", bn: "ওয়েবসাইটের সর্বোচ্চ স্পিড অপ্টিমাইজেশন ও সিকিউরিটি রক্ষা।" }, icon: "ShieldCheck" }
+    ],
+    learningOutcomes: [
+      { en: "Configure CPanel, domain, SSL, database, and local development environments.", bn: "সিপ্যানেল, ডোমেইন হোস্টিং ও লোকাল সার্ভার কনফিগারেশন করা।" },
+      { en: "Build responsive corporate websites, portfolios, blogs, and real estate portals.", bn: "কর্পোরেট ওয়েবসাইট, পোর্টফোলিও ও ম্যাগাজিন পোর্টাল ডিজাইন করা।" },
+      { en: "Develop complete WooCommerce e-commerce stores with checkout customization.", bn: "উকমার্স ই-কমার্স স্টোর ও ডায়নামিক চেকআউট তৈরি করা।" },
+      { en: "Perform 90+ PageSpeed optimizations, cache setups, and firewall security hardening.", bn: "ওয়েবসাইটের স্পিড বাড়ানো এবং হ্যাকিং প্রতিরোধে সিকিউরিটি হার্ডেনিং।" },
+      { en: "Win and deliver high-ticket WordPress projects on Fiverr and Upwork.", bn: "ফাইবার ও আপওয়ার্কে ওয়ার্ডপ্রেস প্রজেক্ট পেয়ে সফলভাবে ডেলিভারি করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Domain, Hosting & WordPress Core Architecture", bn: "মডিউল ১: ডোমেইন, হোস্টিং ও ওয়ার্ডপ্রেস কোর আর্কিটেকচার" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Domain and Hosting Setup, CPanel & Local Server (XAMPP/LocalWP)", bn: "ডোমেইন ও হোস্টিং সেটআপ, সিপ্যানেল ও লোকাল সার্ভার" },
+          { en: "WordPress Dashboard Overview & Core File System (wp-config, htaccess)", bn: "ওয়ার্ডপ্রেস ড্যাশবোর্ড পরিচিতি ও কোর ফাইল সিস্টেম" },
+          { en: "Media, Pages, Posts, Categories, Tags & Navigation Menus", bn: "মিডিয়া, পেজ, পোস্ট, ক্যাটাগরি ও মেনু ব্যবস্থাপনা" },
+          { en: "Settings, Permalinks, Discussion & User Roles & Permissions", bn: "সেটিংস, পারমালিঙ্ক ও ইউজার রোল ব্যবস্থাপনা" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Themes, Elementor Pro & WooCommerce Mastery", bn: "মডিউল ২: থিম, এলিমেন্টর প্রো ও উকমার্স মাস্টারি" },
+        duration: { en: "15 Classes • 45 Hours", bn: "১৫ টি ক্লাস • ৪৫ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "Settings & Theme Overview: Premium Themes (Astra, Hello, OceanWP)", bn: "সেটিংস ও থিম ওভারভিউ: প্রিমিয়াম থিম কনফিগারেশন" },
+          { en: "Elementor Pro Visual Page Builder, Header/Footer & Dynamic Templates", bn: "এলিমেন্টর প্রো পেজ বিল্ডার ও ডাইনামিক টেমপ্লেট ডিজাইন" },
+          { en: "Plugins Architecture: Essential, Custom & Addon Plugins", bn: "প্লাগিন আর্কিটেকচার: প্রয়োজনীয় প্লাগিন সেটআপ" },
+          { en: "WooCommerce & Products: Simple, Variable, Affiliate & Digital Products", bn: "উকমার্স ও প্রোডাক্টস: সিম্পল, ভেরিয়েবল ও ডিজিটাল প্রোডাক্ট সেটআপ" },
+          { en: "Payment Gateways (bKash, Nagad, Stripe, PayPal) & Tax/Shipping Rules", bn: "পেমেন্ট গেটওয়ে (বিকাশ, নগদ, স্ট্রাইপ) ও শিপিং ক্যালকুলেশন" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Speed Optimization, SEO, Maintenance & Marketplace", bn: "মডিউল ৩: স্পিড অপ্টিমাইজেশন, এসইও, মেইনটেন্যান্স ও মার্কেটপ্লেস" },
+        duration: { en: "15 Classes • 45 Hours", bn: "১৫ টি ক্লাস • ৪৫ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "WordPress Management Tools, Migration (All-in-One, Duplicator) & Backups", bn: "ওয়ার্ডপ্রেস ম্যানেজমেন্ট টুলস, মাইগ্রেশন ও অটো ব্যাকআপ" },
+          { en: "SEO & Speed Optimization: WP Rocket, LiteSpeed Cache, Image Compression & RankMath", bn: "এসইও ও স্পিড অপ্টিমাইজেশন: ক্যাশ ও র‍্যাঙ্কম্যাথ এসইও" },
+          { en: "WordPress Security Hardening, Wordfence, SSL & Malware Removal", bn: "ওয়ার্ডপ্রেস সিকিউরিটি ও ম্যালওয়্যার ক্লিনআপ" },
+          { en: "Communicative English & Client Requirement Gathering", bn: "কমিউনিকেটিভ ইংলিশ ও ক্লায়েন্ট রিকোয়ারমেন্ট অ্যানালাইসিস" },
+          { en: "Soft Skills, Freelance Marketplaces (Fiverr, Upwork) & Portfolio Showcase", bn: "সফট স্কিলস, ফ্রিল্যান্স মার্কেটপ্লেস ও পোর্টফোলিও শোকেস" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Elementor Pro & Premium Theme Pack (Worth $500+)", bn: "এলিমেন্টর প্রো ও প্রিমিয়াম থিম প্যাক" },
+      { en: "Live Client Projects Portfolio", bn: "লাইভ ক্লায়েন্ট প্রজেক্টস পোর্টফোলিও" },
+      { en: "1-on-1 Freelancing & Marketplace Mentorship", bn: "১-অন-১ মার্কেটপ্লেস মেন্টরশিপ" }
+    ],
+    reviews: [
+      { id: "r1", name: "Sabbir Hossain", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100", role: { en: "WordPress Freelancer", bn: "ওয়ার্ডপ্রেস ফ্রিল্যান্সার" }, rating: 5, comment: { en: "Learned WooCommerce & speed optimization thoroughly. Completed 12 client websites in 3 months!", bn: "উকমার্স ও স্পিড অপ্টিমাইজেশন অসাধারণ শেখানো হয়েছে। ৩ মাসেই ১২টি সাইট তৈরি করেছি।" }, date: "2 Weeks Ago" }
+    ]
+  },
+
+  // 3. ANDROID APPLICATION DEVELOPMENT
+  {
+    id: "3",
+    slug: "android-application-development",
+    title: { en: "Android Application Development", bn: "অ্যান্ড্রয়েড অ্যাপ্লিকেশন ডেভেলপমেন্ট" },
+    subtitle: { en: "Build modern native Android apps using Kotlin, Jetpack Compose, Room, REST APIs & Firebase", bn: "কোটলিন, জেটপ্যাক কম্পোজ, রেস্ট এপিআই ও ফায়ারবেস সহ প্রফেশনাল অ্যান্ড্রয়েড অ্যাপ ডেভেলপমেন্ট" },
+    category: "software",
+    categoryLabel: { en: "App & Software", bn: "অ্যাপ ও সফটওয়্যার" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 130,
+    enrolledCount: "290+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "20,000৳",
+    rawFee: 20000,
+    originalFee: "30,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/flutter app.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Engr. Zahidul Islam",
+      designation: { en: "Lead Android Developer at Pathao Tech", bn: "লিড অ্যান্ড্রয়েড ডেভেলপার, পাঠাও টেক" },
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "6+ years building high-scale Android applications with 1M+ downloads on Google Play.", bn: "গুগল প্লেতে ১ মিলিয়নের বেশি ডাউনলোড হওয়া অ্যান্ড্রয়েড অ্যাপ তৈরির ৬+ বছরের অভিজ্ঞতা।" },
+      experience: "6+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Learn native Android development from scratch to Google Play Store deployment. Covers Android Studio, Java/Kotlin basics, UI design & layouts, Activities & Navigation, Data Storage & SQLite/Room, Networking & Retrofit APIs, Firebase Integration, MVVM architecture, Communicative English and freelancing marketplace skills.",
+      bn: "অ্যান্ড্রয়েড স্টুডিও, কোটলিন, ইউআই লেআউটস, অ্যাক্টিভিটিজ ও নেভিগেশন, রুম ডাটাবেস, রেট্রোফিট এপিআই, ফায়ারবেস ইন্টিগ্রেশন ও প্লে স্টোরে অ্যাপ পাবলিশিং শেখার পূর্ণাঙ্গ কোর্স।"
+    },
+    fullDescription: {
+      en: "Dive into industry-standard Android app development. You will build real-world native apps with modern Kotlin, Jetpack Compose, Material 3 Design, asynchronous Coroutines, Retrofit REST APIs, push notifications, and Firebase backend.",
+      bn: "এই কোর্সে আপনি কোটলিন ও জেটপ্যাক কম্পোজ ব্যবহার করে চমৎকার ইউআই, এপিআই ডেটা ফেচিং, অফলাইন ক্যাশিং, ফায়ারবেস অথেনটিকেশন ও গুগল প্লে স্টোরে অ্যাপ রিলিজ দেওয়ার পূর্ণাঙ্গ প্রক্রিয়া শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Modern Kotlin & MVVM", bn: "মডার্ন কোটলিন ও এমভিভিএম" }, desc: { en: "Write clean, testable, reactive code using MVVM architecture and Kotlin Flow.", bn: "এমভিভিএম আর্কিটেকচার ও ক্লিন কোড প্র্যাকটিস।" }, icon: "Code2" },
+      { id: "cv2", title: { en: "Networking & Cloud Backend", bn: "নেটওয়ার্কিং ও ফায়ারবেস" }, desc: { en: "Connect apps with REST APIs using Retrofit and real-time cloud data with Firebase.", bn: "রেস্ট এপিআই ও রিয়েলটাইম ফায়ারবেস ব্যাকএন্ড।" }, icon: "Cloud" },
+      { id: "cv3", title: { en: "Play Store Deployment", bn: "গুগল প্লে স্টোর রিলিজ" }, desc: { en: "Build APK/AAB packages, sign apps, and publish live to the Google Play Store.", bn: "প্রোডাকশন অ্যাপ সাইন করে গুগল প্লে স্টোরে পাবলিশ করা।" }, icon: "Smartphone" }
+    ],
+    learningOutcomes: [
+      { en: "Master Android Studio IDE, project structure, and Gradle build system.", bn: "অ্যান্ড্রয়েড স্টুডিও ও গ্রেডল বিল্ড সিস্টেম আয়ত্ত করা।" },
+      { en: "Write clean object-oriented and functional Kotlin code for Android.", bn: "কোটলিন প্রোগ্রামিং ভাষায় পারদর্শী হয়ে অ্যাপ তৈরি করা।" },
+      { en: "Design intuitive Material 3 UI layouts and implement multi-screen navigation.", bn: "মডার্ন মেটেরিয়াল ডিজাইন ও স্মুথ স্ক্রিন নেভিগেশন তৈরি করা।" },
+      { en: "Manage offline-first persistence using Room Database & Shared Preferences.", bn: "রুম ডাটাবেস দিয়ে অফলাইন ডাটা স্টোরেজ ও ক্যাশিং তৈরি করা।" },
+      { en: "Integrate Firebase auth, cloud messaging, crashlytics, and publish on Google Play.", bn: "ফায়ারবেস নোটিফিকেশন ও প্লে স্টোরে অ্যাপ রিলিজ করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Android Studio, Kotlin Core & UI Layouts", bn: "মডিউল ১: অ্যান্ড্রয়েড স্টুডিও, কোটলিন কোর ও ইউআই লেআউটস" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Android Development Intro & Android Studio Setup", bn: "অ্যান্ড্রয়েড ডেভেলপমেন্ট পরিচিতি ও অ্যান্ড্রয়েড স্টুডিও সেটআপ" },
+          { en: "Java/Kotlin Basics for Android: Variables, OOP, Lambdas & Coroutines", bn: "জাভা/কোটলিন বেসিকস: ভ্যারিয়েবল, ওওপি ও কো-রুটিনস" },
+          { en: "UI Design & Layouts: ConstraintLayout, ViewBinding & Jetpack Compose", bn: "ইউআই ডিজাইন ও লেআউটস: কনস্ট্রেইন্ট লেআউট ও জেটপ্যাক কম্পোজ" },
+          { en: "Activities & Navigation: Lifecycle, Intents, Fragments & Navigation Component", bn: "অ্যাক্টিভিটিজ ও নেভিগেশন: লাইফসাইকেল, ইনটেন্টস ও ফ্র্যাগমেন্টস" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Data Storage, Networking & APIs", bn: "মডিউল ২: ডাটা স্টোরেজ, নেটওয়ার্কিং ও এপিআই" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Data Storage & Management: SharedPreferences, DataStore & Room Database", bn: "ডাটা স্টোরেজ ও ম্যানেজমেন্ট: রুম ডাটাবেস ও ডাটা স্টোর" },
+          { en: "Networking & APIs: Retrofit, OkHttp, GSON / Moshi Serialization", bn: "নেটওয়ার্কিং ও এপিআই: রেট্রোফিট ও জেসন পার্সিং" },
+          { en: "MVVM Architecture, Repository Pattern & LiveData/StateFlow", bn: "এমভিভিএম আর্কিটেকচার, রিপোজিটরি প্যাটার্ন ও স্টেটফ্লো" },
+          { en: "Firebase Integration: Authentication, Firestore, Realtime DB & FCM Push Notifications", bn: "ফায়ারবেস অথেনটিকেশন, ফায়ারস্টোর ও পুশ নোটিফিকেশন" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Production Projects, Play Store & Freelancing", bn: "মডিউল ৩: প্রোডাকশন প্রজেক্টস, প্লে স্টোর ও ফ্রিল্যান্সিং" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Building an E-Commerce / Food Delivery App with Payment Integration", bn: "পেমেন্ট গেটওয়ে সহ ফুল ই-কমার্স বা ফুড ডেলিভারি অ্যাপ প্রজেক্ট" },
+          { en: "Google Play Console Account, App Signing (AAB) & Store Optimization (ASO)", bn: "প্লে কনসোল অ্যাকাউন্ট, অ্যাপ বান্ডেল ও এএসও" },
+          { en: "Communicative English & Soft Skills for Tech Interviews", bn: "কমিউনিকেটিভ ইংলিশ ও টেকনিক্যাল ইন্টারভিউ প্রিপারেশন" },
+          { en: "Marketplace Guidance: Fiverr, Upwork & Remote Android Job Strategy", bn: "মার্কেটপ্লেস ও রিমোট অ্যান্ড্রয়েড জবের স্ট্র্যাটেজি" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Full Source Code of 4 Production Apps", bn: "৪টি প্রোডাকশন অ্যাপের সম্পূর্ণ সোর্স কোড" },
+      { en: "Google Play Console Publishing Guidance", bn: "গুগল প্লে স্টোরে পাবলিশিং সাপোর্ট" },
+      { en: "1-on-1 Code Review & Debugging Support", bn: "১-অন-১ কোড রিভিউ ও লাইভ সাপোর্ট" }
+    ],
+    reviews: [
+      { id: "r1", name: "Rashedul Karim", avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100", role: { en: "Junior Android Developer", bn: "জুনিয়র অ্যান্ড্রয়েড ডেভেলপার" }, rating: 5, comment: { en: "Best Android course in BD! The Retrofit and Room database projects helped me land my first software job.", bn: "বাংলাদেশের সেরা অ্যান্ড্রয়েড কোর্স! রেট্রোফিট ও রুমের প্রজেক্টের জন্যই প্রথম চাকরি পেয়েছি।" }, date: "3 Weeks Ago" }
+    ]
+  },
+
+  // 4. UX/UI DESIGN
+  {
+    id: "4",
+    slug: "ux-ui-design",
+    title: { en: "UX/UI Design", bn: "ইউএক্স/ইউআই ডিজাইন" },
+    subtitle: { en: "Design intuitive digital products with Figma: user research, wireframing, interactive prototyping & design systems", bn: "ফিগমা, ইউজার রিসার্চ, ওয়্যারফ্রেমিং, প্রোটোটাইপিং ও ডিজাইন সিস্টেম সহ কমপ্লিট প্রোডাক্ট ডিজাইন" },
+    category: "creative",
+    categoryLabel: { en: "Design & UI/UX", bn: "ডিজাইন ও ইউআই/ইউএক্স" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 172,
+    enrolledCount: "350+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "20,000৳",
+    rawFee: 20000,
+    originalFee: "28,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/ui ux design.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Nahid Hasan",
+      designation: { en: "Lead Product Designer at FinTech Global", bn: "লিড প্রোডাক্ট ডিজাইনার, ফিনটেক গ্লোবাল" },
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "7+ years designing mobile apps, SaaS dashboards, and design systems for European and US clients.", bn: "ইউরোপ ও আমেরিকার ক্লায়েন্টদের জন্য মোবাইল অ্যাপ ও সাস ড্যাশবোর্ড ডিজাইনে ৭+ বছরের অভিজ্ঞতা।" },
+      experience: "7+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Comprehensive UX/UI design masterclass. Topics include UX/UI design overview & languages, typography, iconography & imagery, sketching & wireframing, paper prototyping, app & web template design, implementation for mobile apps, prototyping process for web, work portfolio, communicative English and marketplace strategies.",
+      bn: "ইউএক্স/ইউআই ডিজাইনের পূর্ণাঙ্গ মাস্টারক্লাস। এতে ইউজার রিসার্চ, টাইপোগ্রাফি, স্কেচিং, ওয়্যারফ্রেমিং, পেপার প্রোটোটাইপিং, ফিগমাতে মোবাইল ও ওয়েব অ্যাপ ডিজাইন, ইন্টারঅ্যাক্টিভ প্রোটোটাইপ, পোর্টফোলিও ও মার্কেটপ্লেস ক্যারিয়ার শেখানো হয়।"
+    },
+    fullDescription: {
+      en: "Transform into an industry-ready Product (UX/UI) Designer. Learn how to conduct empathetic user research, create user personas, build wireframes, design atomic design systems in Figma, and build advanced interactive prototypes with smart animations.",
+      bn: "এই কোর্সে আপনি ফিগমা ব্যবহার করে আন্তর্জাতিক মানের মোবাইল অ্যাপ ও ওয়েব ড্যাশবোর্ড ডিজাইন, ইউজার এক্সপেরিয়েন্স অডিট, ভ্যারিয়েন্টস, অটো-লেআউট এবং ইন্টারঅ্যাক্টিভ মাইক্রো-অ্যানিমেশন তৈরি শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "User-Centered Research", bn: "ইউজার রিসার্চ ও স্ট্র্যাটেজি" }, desc: { en: "Conduct user interviews, surveys, empathy mapping, and data-backed UX audits.", bn: "ইউজার জার্নি ও ইনফরমেশন আর্কিটেকচার তৈরি।" }, icon: "Users" },
+      { id: "cv2", title: { en: "Figma Design Systems", bn: "ফিগমা ডিজাইন সিস্টেম" }, desc: { en: "Build production design systems with auto-layout, variables, and responsive components.", bn: "অটো-লেআউট ও কম্পোনেন্ট লাইব্রেরি তৈরি।" }, icon: "Palette" },
+      { id: "cv3", title: { en: "High-Fidelity Prototyping", bn: "ইন্টারঅ্যাক্টিভ প্রোটোটাইপিং" }, desc: { en: "Create clickable smart-animate prototypes for mobile and web user testing.", bn: "বাস্তবধর্মী ক্লিকেবল প্রোটোটাইপ তৈরি।" }, icon: "Layers" }
+    ],
+    learningOutcomes: [
+      { en: "Understand UX psychology, user mental models, and design thinking methodology.", bn: "ইউএক্স সাইকোলজি ও ডিজাইন থিংকিং মেথডোলজি বোঝা।" },
+      { en: "Master Figma: Auto-layout, component variants, design tokens, and constraints.", bn: "ফিগমা অটো-লেআউট ও ভ্যারিয়েন্টস ব্যবহারে শতভাগ দক্ষতা।" },
+      { en: "Create low-fidelity wireframes and high-fidelity pixel-perfect visual designs.", bn: "ওয়্যারফ্রেম থেকে পিক্সেল-পারফেক্ট ফাইনাল ডিজাইন তৈরি।" },
+      { en: "Build advanced interactive prototypes with micro-interactions and smart animate.", bn: "স্মার্ট অ্যানিমেট ও মাইক্রো-ইন্টারঅ্যাকশন প্রোটোটাইপ তৈরি।" },
+      { en: "Create Behance & Dribbble case studies and land high-paying UX/UI roles.", bn: "বেহ্যান্স ও ড্রিবলে আকর্ষণীয় কেস স্টাডি বানিয়ে কাজ পাওয়া।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: UX Fundamentals, Research & Wireframing", bn: "মডিউল ১: ইউএক্স ফান্ডামেন্টালস, রিসার্চ ও ওয়্যারফ্রেমিং" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "UX/UI Design Overview, Design Thinking & Product Lifecycle", bn: "ইউএক্স/ইউআই ডিজাইন পরিচিতি, ডিজাইন থিংকিং ও প্রোডাক্ট লাইফসাইকেল" },
+          { en: "Typography, Iconography, Imagery & Color Theory for Digital Screens", bn: "টাইপোগ্রাফি, আইকনোগ্রাফি, কালার থিওরি ও ভিজ্যুয়াল হায়ারার্কি" },
+          { en: "Sketching & Wireframing: Low-Fidelity Layouts & Information Architecture (IA)", bn: "স্কেচিং, ওয়্যারফ্রেমিং ও ইনফরমেশন আর্কিটেকচার (IA)" },
+          { en: "Paper Prototyping Process & User Journey Mapping", bn: "পেপার প্রোটোটাইপিং প্রসেস ও ইউজার জার্নি ম্যাপিং" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Figma Mastery & UI Design for Mobile/Web", bn: "মডিউল ২: ফিগমা মাস্টারি ও মোবাইল/ওয়েব ইউআই ডিজাইন" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Figma Masterclass: Auto-layout 5.0, Components, Variants & Design Tokens", bn: "ফিগমা মাস্টারক্লাস: অটো-লেআউট, কম্পোনেন্টস ও ভ্যারিয়েন্টস" },
+          { en: "App & Web Template Design: Responsive SaaS Dashboard & Landing Pages", bn: "অ্যাপ ও ওয়েব টেমপ্লেট ডিজাইন: রেসপনসিভ ড্যাশবোর্ড ও ল্যান্ডিং পেজ" },
+          { en: "Implementation For Mobile Apps (iOS Human Interface & Android Material 3)", bn: "মোবাইল অ্যাপস ইমপ্লিমেন্টেশন (আইওএস ও মেটেরিয়াল ৩ গাইডলাইন)" },
+          { en: "Prototyping Process For Web & Mobile: Smart Animate & Interactions", bn: "ওয়েব ও মোবাইলের জন্য ইন্টারেক্টিভ প্রোটোটাইপিং ও অ্যানিমেশন" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Design Systems, Portfolio & Freelancing", bn: "মডিউল ৩: ডিজাইন সিস্টেমস, পোর্টফোলিও ও ফ্রিল্যান্সিং" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Building a Scalable Design System & Developer Handoff with Zeplin/Figma", bn: "স্কেলেবল ডিজাইন সিস্টেম তৈরি ও ডেভেলপার হ্যান্ডঅফ" },
+          { en: "Work Portfolio Creation on Behance & Dribbble (Complete UX Case Study)", bn: "বেহ্যান্স ও ড্রিবলে প্রফেশনাল ইউএক্স কেস স্টাডি পোর্টফোলিও" },
+          { en: "Communicative English for Design Critiques & Client Pitches", bn: "ডিজাইন প্রেজেন্টেশন ও ক্লায়েন্ট পিচিংয়ের জন্য ইংরেজি" },
+          { en: "Soft Skills & Marketplace Mastery (Upwork, Fiverr, Toptal & LinkedIn)", bn: "সফট স্কিলস ও রিমোট জব মার্কেটপ্লেস স্ট্র্যাটেজি" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Comprehensive UI Kit & Design System Assets", bn: "কমপ্রিহেনসিভ ইউআই কিট ও ডিজাইন সিস্টেম অ্যাসেট" },
+      { en: "3 Complete UX Case Studies for Portfolio", bn: "পোর্টফোলিওর জন্য ৩টি কমপ্লিট ইউএক্স কেস স্টাডি" },
+      { en: "1-on-1 Portfolio Reviews by Senior Designers", bn: "সিনিয়র ডিজাইনারদের দ্বারা ১-অন-১ পোর্টফোলিও রিভিউ" }
+    ],
+    reviews: [
+      { id: "r1", name: "Anika Tabassum", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100", role: { en: "Product Designer", bn: "প্রোডাক্ট ডিজাইনার" }, rating: 5, comment: { en: "The case study preparation was top-tier. I got 3 remote client interview calls from my Behance case study!", bn: "কেস স্টাডি মডিউল অসাধারণ ছিল। বেহ্যান্স পোর্টফোলিও দেখেই ক্লায়েন্টরা কাজ দিচ্ছে।" }, date: "1 Month Ago" }
+    ]
+  },
+
+  // 5. DIGITAL MARKETING WITH SEO
+  {
+    id: "5",
+    slug: "digital-marketing-with-seo",
+    title: { en: "Digital Marketing with SEO", bn: "ডিজিটাল মার্কেটিং উইথ এসইও" },
+    subtitle: { en: "Master Meta ads, Google Ads, On-Page & Technical SEO, E-commerce growth, Email marketing & YouTube SEO", bn: "মেটা অ্যাডস, গুগল অ্যাডস, অন-পেজ ও টেকনিক্যাল এসইও, ইউটিউব ও ই-কমার্স মার্কেটিংয়ে ক্যারিয়ার গড়ুন" },
+    category: "marketing",
+    categoryLabel: { en: "Digital Marketing", bn: "ডিজিটাল মার্কেটিং" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 210,
+    enrolledCount: "480+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "16,000৳",
+    rawFee: 16000,
+    originalFee: "24,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/Digital Marketing.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Tareq Mahmud",
+      designation: { en: "Digital Growth Strategist & Google Certified Marketer", bn: "ডিজিটাল গ্রোথ স্ট্র্যাটেজিস্ট ও গুগল সার্টিফাইড মার্কেটার" },
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "Managed $1.5M+ in ad spend for international e-commerce brands with 5x+ average ROAS.", bn: "আন্তর্জাতিক ই-কমার্স ব্র্যান্ডের জন্য $১.৫ মিলিয়নের বেশি অ্যাড স্পেন্ড ম্যানেজ করার অভিজ্ঞতা।" },
+      experience: "8+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Master high-ROI digital marketing. Topics include Meta Marketing (Facebook & Instagram Ads), SEO & SEM, On-Page, Off-Page, Technical & Local SEO, E-commerce & YouTube SEO, E-mail Marketing & automation tools, Affiliate Marketing, Google Ads (Search, Display, Performance Max), Communicative English and freelancing marketplaces.",
+      bn: "মেটা মার্কেটিং, ফেসবুক ও ইনস্টাগ্রাম পেইড অ্যাডস, সার্চ ইঞ্জিন অপ্টিমাইজেশন (অন-পেজ, অফ-পেজ, টেকনিক্যাল ও লোকাল এসইও), ইউটিউব এসইও, ই-মেইল অটোমেশন, গুগল অ্যাডস ও ফ্রিল্যান্সিং মার্কেটপ্লেস মাস্টারি কোর্স।"
+    },
+    fullDescription: {
+      en: "Become a full-funnel digital marketer capable of generating massive traffic and sales. Learn modern pixel setup, Conversions API, lookalike audiences, Google Analytics 4 (GA4), Search Console, Ahrefs/Semrush keyword research, backlink acquisition, and Mailchimp/Klaviyo automation.",
+      bn: "এই কোর্সে আপনি ডেটা-ড্রাইভেন মার্কেটিং, ফেসবুক সিএপিআই, জিএ৪ ট্র্যাকিং, গুগল সার্চ ও শপিং অ্যাডস, এফিলিয়েট মার্কেটিং এবং গুগল ফার্স্ট পেজ র‍্যাংকিংয়ের বাস্তব কৌশল শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Meta & Google Ads Mastery", bn: "মেটা ও গুগল অ্যাডস মাস্টারি" }, desc: { en: "Run high-converting paid campaigns with Pixel, CAPI, Custom Audiences & GA4.", bn: "হাই আরওএএস পেইড অ্যাড ক্যাম্পেইন রান করার দক্ষতা।" }, icon: "TrendingUp" },
+      { id: "cv2", title: { en: "1st Page Google SEO", bn: "গুগল ফার্স্ট পেজ এসইও" }, desc: { en: "Master keyword research, technical audits, content optimization & high-DA backlinks.", bn: "কি-ওয়ার্ড রিসার্চ, টেকনিক্যাল অডিট ও র‍্যাংকিং।" }, icon: "Search" },
+      { id: "cv3", title: { en: "E-Commerce & Email Automation", bn: "ই-কমার্স ও ই-মেইল অটোমেশন" }, desc: { en: "Scale Shopify and WooCommerce stores with Klaviyo email flows and YouTube growth.", bn: "ক্লেভিয়ো অটোমেশন ও ই-কমার্স স্কেলিং।" }, icon: "Zap" }
+    ],
+    learningOutcomes: [
+      { en: "Create and scale profitable Meta (Facebook/Instagram) ad campaigns with high ROAS.", bn: "ফেসবুক ও ইনস্টাগ্রামে লাভজনক অ্যাড ক্যাম্পেইন তৈরি ও স্কেল করা।" },
+      { en: "Execute On-Page, Off-Page, Technical and Local Google SEO strategies.", bn: "অন-পেজ, অফ-পেজ ও টেকনিক্যাল এসইও অডিট ও অপ্টিমাইজ করা।" },
+      { en: "Run Google Search, Display, Video (YouTube), and Performance Max Ads.", bn: "গুগল সার্চ ও ইউটিউব ভিডিও অ্যাডস পরিচালনা করা।" },
+      { en: "Setup automated email marketing flows with Klaviyo and Mailchimp.", bn: "ইমেইল মার্কেটিং ও অটোমেটেড সেলস ফানেল তৈরি করা।" },
+      { en: "Secure high-paying digital marketing clients on Upwork, Fiverr & LinkedIn.", bn: "আপওয়ার্ক, ফাইবার ও লিংকডইন থেকে ক্লায়েন্ট অ্যাকুইজিশন করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Meta Marketing (Facebook & Instagram Ads)", bn: "মডিউল ১: মেটা মার্কেটিং (ফেসবুক ও ইনস্টাগ্রাম অ্যাডস)" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Meta Marketing Fundamentals, Business Manager & Ad Account Setup", bn: "মেটা মার্কেটিং ফান্ডামেন্টালস, বিজনেস ম্যানেজার ও অ্যাড অ্যাকাউন্ট সেটআপ" },
+          { en: "Meta Pixel, Conversions API (CAPI), Server-Side Tracking & Events", bn: "মেটা পিক্সেল, কনভার্সন এপিআই (CAPI) ও সার্ভার-সাইড ট্র্যাকিং" },
+          { en: "Custom Audiences, Lookalike Audiences & Funnel-Based Retargeting", bn: "কাস্টম অডিয়েন্স, লুকঅ্যালাইক অডিয়েন্স ও ফানেল রিটার্গেটিং" },
+          { en: "Ad Copywriting, Creative Testing, Budget Optimization & Scaling Strategies", bn: "অ্যাড কপিরাইটিং, ক্রিয়েটিভ টেস্টিং ও স্কেলিং স্ট্র্যাটেজি" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: SEO & SEM (Google Ranking & Google Ads)", bn: "মডিউল ২: এসইও ও এসইএম (গুগল র‍্যাংকিং ও গুগল অ্যাডস)" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "SEO & SEM Overview, Search Intent & Competitor Analysis", bn: "এসইও ও এসইএম ওভারভিউ, সার্চ ইনটেন্ট ও প্রতিযোগী বিশ্লেষণ" },
+          { en: "On-Page, Off-Page, Technical, and Local SEO (Google My Business)", bn: "অন-পেজ, অফ-পেজ, টেকনিক্যাল ও লোকাল এসইও (গুগল মাই বিজনেস)" },
+          { en: "E-commerce & YouTube SEO: Video Ranking, Tags & Channel Optimization", bn: "ই-কমার্স ও ইউটিউব এসইও: ভিডিও র‍্যাংকিং ও চ্যানেল অপ্টিমাইজেশন" },
+          { en: "Google Ads (Search, Display, Shopping, YouTube Ads) & GA4 Analytics", bn: "গুগল অ্যাডস (সার্চ, ডিসপ্লে, শপিং) ও জিএ৪ অ্যানালিটিক্স" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Email Marketing, Affiliate & Marketplace", bn: "মডিউল ৩: ই-মেইল মার্কেটিং, অ্যাফিলিয়েট ও মার্কেটপ্লেস" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "E-mail Marketing and Tools (Klaviyo, Mailchimp, Lead Capture Forms)", bn: "ই-মেইল মার্কেটিং ও টুলস (ক্লেভিয়ো, মেইলচিম্প, অটোমেশন ফ্লো)" },
+          { en: "E-commerce Marketing and Tools (Shopify/WooCommerce Sales Boost)", bn: "ই-কমার্স মার্কেটিং ও সেলস বুস্টিং টুলস" },
+          { en: "Affiliate Marketing Networks, Amazon Associates & Link Monetization", bn: "অ্যাফিলিয়েট মার্কেটিং নেটওয়ার্কস ও লিংক মনিটাইজেশন" },
+          { en: "Communicative English, Soft Skills & Freelance Marketplace Mastery", bn: "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস ও মার্কেটপ্লেস গাইডলাইন" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Access to Premium SEO Tools (Semrush, Ahrefs, Moz)", bn: "প্রিমিয়াম এসইও টুলস অ্যাক্সেস" },
+      { en: "Live Ad Budget Practice on Real Campaigns", bn: "রিয়েল ক্যাম্পেইনে লাইভ অ্যাড বাজেট প্র্যাকটিস" },
+      { en: "1-on-1 Client Acquisition Mentorship", bn: "১-অন-১ ক্লায়েন্ট অ্যাকুইজিশন মেন্টরশিপ" }
+    ],
+    reviews: [
+      { id: "r1", name: "Farhan Hossain", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100", role: { en: "Digital Marketer", bn: "ডিজিটাল মার্কেটার" }, rating: 5, comment: { en: "The Facebook Pixel and CAPI lessons are top-notch. I run ads for 3 e-commerce shops now.", bn: "পিক্সেল ও সিএপিআই এর ক্লাসগুলো অসাধারণ ছিল। বর্তমানে ৩টি ই-কমার্সের অ্যাড চালাচ্ছি।" }, date: "2 Weeks Ago" }
+    ]
+  },
+
+  // 6. CPA NEXUS MARKETING
+  {
+    id: "6",
+    slug: "cpa-nexus-marketing",
+    title: { en: "CPA Nexus Marketing", bn: "সিপিএ নেক্সাস মার্কেটিং" },
+    subtitle: { en: "Master CPA marketing networks, high-converting landing pages, TikTok, Meta, Native & Push ads arbitrage", bn: "সিপিএ নেটওয়ার্কস, হাই-কনভার্টিং ল্যান্ডিং পেজ, টিকটক, মেটা, নেটিভ ও পুশ অ্যাডস দিয়ে আন্তর্জাতিক ইনকাম" },
+    category: "marketing",
+    categoryLabel: { en: "Digital Marketing", bn: "ডিজিটাল মার্কেটিং" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.8,
+    ratingsCount: 140,
+    enrolledCount: "310+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "14,000৳",
+    rawFee: 14000,
+    originalFee: "20,000৳",
+    duration: { en: "60 hrs. (2 Months)", bn: "৬০ ঘণ্টা (২ মাস)" },
+    classesCount: { en: "20 Classes", bn: "২০ টি ক্লাস" },
+    image: "/images/cpa-nexus-banner.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Imran Hossain",
+      designation: { en: "Super Affiliate & CPA Media Buyer", bn: "সুপার অ্যাফিলিয়েট ও সিপিএ মিডিয়া বায়ার" },
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "6+ years in CPA marketing, generating $500k+ revenue from MaxBounty, CPAGrip & LosPollos.", bn: "ম্যাক্সবাউন্টি, সিপিএগ্রিপ ও লসপলোস থেকে $৫০০k+ আয় করা অভিজ্ঞ সিপিএ মার্কেটার।" },
+      experience: "6+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "High-income CPA marketing blueprint. Topics include CPA marketing fundamentals, domain, hosting & landing pages, TikTok Ads, Facebook & Instagram Ads, Google & YouTube Ads, E-mail marketing, Pinterest, Push & Native Ads, campaign optimization, communicative English and soft skills.",
+      bn: "সিপিএ মার্কেটিং ফান্ডামেন্টালস, টপ নেটওয়ার্ক অ্যাকাউন্ট অ্যাপ্রুভাল, ডোমেইন হোস্টিং ও প্রি-ল্যান্ডার পেজ ডিজাইন, টিকটক অ্যাডস, ফেসবুক অ্যাডস, পুশ ও নেটিভ ট্রাফিক এবং ক্যাম্পেইন ট্র্যাকিং ও অপ্টিমাইজেশন শেখার স্পেশালাইজড কোর্স।"
+    },
+    fullDescription: {
+      en: "Learn the secrets of modern CPA affiliate marketing. Master top CPA networks (MaxBounty, CPAGrip, LosPollos), create spy-tested high-converting landing pages, set up advanced trackers (Voluum, RedTrack), and run profitable paid traffic across TikTok, Meta, Bing, and Native ad networks.",
+      bn: "এই কোর্সে আপনি কস্ট-পার-অ্যাকশন (CPA) অফার নির্বাচন, প্রি-ল্যান্ডার তৈরি, ভলিউম ট্র্যাকার দিয়ে ডেটা অপ্টিমাইজেশন এবং টিকটক ও পুশ অ্যাডস দিয়ে উচ্চ কনভার্সন পাওয়ার সিক্রেট স্ট্র্যাটেজি শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Approved CPA Networks", bn: "টপ নেটওয়ার্ক অ্যাপ্রুভাল" }, desc: { en: "Get 100% account approval on MaxBounty, CPAGrip, ClickDealer & AdWorkMedia.", bn: "টপ সিপিএ নেটওয়ার্কে অ্যাকাউন্ট অ্যাপ্রুভালের গ্যারান্টি।" }, icon: "ShieldCheck" },
+      { id: "cv2", title: { en: "Spy Tools & Landing Pages", bn: "স্পাই টুলস ও ল্যান্ডিং পেজ" }, desc: { en: "Rip, clean, and host high-converting pre-landers with custom domains.", bn: "কনভার্টিং ল্যান্ডিং পেজ ও ট্র্যাকার সেটআপ।" }, icon: "Zap" },
+      { id: "cv3", title: { en: "Multi-Channel Paid Ads", bn: "মাল্টি-চ্যানেল ট্রাফিক" }, desc: { en: "Run TikTok, Facebook, Google, Bing, Pinterest & Native Push campaigns.", bn: "টিকটক, মেটা ও পুশ অ্যাড ক্যাম্পেইন অপ্টিমাইজেশন।" }, icon: "TrendingUp" }
+    ],
+    learningOutcomes: [
+      { en: "Get approved on Tier-1 CPA networks and choose winning evergreen offers.", bn: "টিয়ার-১ সিপিএ নেটওয়ার্কে অ্যাকাউন্ট তৈরি ও অফার নির্বাচন করা।" },
+      { en: "Build and host fast, high-converting pre-landing pages and lead funnels.", bn: "হাই-কনভার্টিং প্রি-ল্যান্ডিং পেজ ও লিড ফানেল ডিজাইন করা।" },
+      { en: "Run high-CTR campaigns on TikTok Ads and Facebook Ads with stealth tactics.", bn: "টিকটক ও মেটাতে হাই-সিটিআর বিজ্ঞাপন ক্যাম্পেইন চালানো।" },
+      { en: "Leverage low-cost high-volume Push & Native traffic (PropellerAds, Taboola).", bn: "পুশ ও নেটিভ অ্যাডস (প্রপেলার অ্যাডস) দিয়ে সস্তায় ট্রাফিক আনা।" },
+      { en: "Track every click and conversion using trackers and maximize ROI.", bn: "ক্যাম্পেইন ট্র্যাকিং করে সর্বোচ্চ লাভ নিশ্চিত করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: CPA Fundamentals, Networks & Landing Pages", bn: "মডিউল ১: সিপিএ ফান্ডামেন্টালস, নেটওয়ার্কস ও ল্যান্ডিং পেজ" },
+        duration: { en: "6 Classes • 18 Hours", bn: "৬ টি ক্লাস • ১৮ ঘণ্টা" },
+        lessonsCount: 5,
+        topics: [
+          { en: "CPA Marketing Fundamentals & High-Payout Vertical Selection", bn: "সিপিএ মার্কেটিং ফান্ডামেন্টালস ও হাই-পেআউট নিশ নির্বাচন" },
+          { en: "Top CPA Network Account Approval Strategy (MaxBounty, CPAGrip, etc.)", bn: "টপ সিপিএ নেটওয়ার্ক অ্যাকাউন্ট অ্যাপ্রুভাল স্ট্র্যাটেজি" },
+          { en: "Domain, Hosting & High-Converting Landing Page Architecture", bn: "ডোমেইন, হোস্টিং ও হাই-কনভার্টিং ল্যান্ডিং পেজ ডিজাইন" },
+          { en: "Content Locking, Smartlinks & Affiliate Link Masking", bn: "কনটেন্ট লকিং, স্মার্টলিংক ও লিংক মাস্কিং" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Paid Traffic (TikTok, Meta, Google & YouTube)", bn: "মডিউল ২: পেইড ট্রাফিক (টিকটক, মেটা, গুগল ও ইউটিউব)" },
+        duration: { en: "8 Classes • 24 Hours", bn: "৮ টি ক্লাস • ২৪ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Tik-Tok Ads: Account Warmup, Video Creatives & Campaign Launch", bn: "টিকটক অ্যাডস: অ্যাকাউন্ট সেটআপ, ক্রিয়েটিভ ও ক্যাম্পেইন" },
+          { en: "Facebook & Instagram Ads for CPA Lead Generation", bn: "ফেসবুক ও ইনস্টাগ্রাম অ্যাডস দিয়ে লিড জেনারেশন" },
+          { en: "Google & YouTube Ads: Search Arbitrage & Discovery Ads", bn: "গুগল ও ইউটিউব অ্যাডস: সার্চ আরবিট্রেজ ও ডিসকভারি" },
+          { en: "E-mail Marketing & Lead Nurturing for CPA Offers", bn: "সিপিএ অফারের জন্য ই-মেইল মার্কেটিং ও লিড নার্চারিং" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Push, Native Ads, Optimization & Scale", bn: "মডিউল ৩: পুশ, নেটিভ অ্যাডস, অপ্টিমাইজেশন ও স্কেলিং" },
+        duration: { en: "6 Classes • 18 Hours", bn: "৬ টি ক্লাস • ১৮ ঘণ্টা" },
+        lessonsCount: 5,
+        topics: [
+          { en: "Pinterest, Push & Native Ads (PropellerAds, RichAds, Outbrain)", bn: "পিন্টারেস্ট, পুশ ও নেটিভ অ্যাডস (প্রপেলারঅ্যাডস, রিচঅ্যাডস)" },
+          { en: "Campaign Optimization, Blacklisting Bad Placements & Scaling Winners", bn: "ক্যাম্পেইন অপ্টিমাইজেশন, ব্ল্যাকলিস্টিং ও উইনিং ক্যাম্পেইন স্কেল" },
+          { en: "Communicative English & Network Manager Negotiation", bn: "অ্যাফিলিয়েট ম্যানেজার নেগোসিয়েশনের জন্য ইংরেজি" },
+          { en: "Soft Skills, Payment Withdrawals (Payoneer, Wire, Crypto) & Best Practices", bn: "সফট স্কিলস ও ইন্টারন্যাশনাল পেমেন্ট উইথড্রয়াল মেথডস" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Ready-to-Use 20+ High-Converting Landing Pages", bn: "২০+ রেডিমেড কনভার্টিং ল্যান্ডিং পেজ" },
+      { en: "Direct Network Manager Skype / Telegram Intros", bn: "নেটওয়ার্ক ম্যানেজারের সাথে ডিরেক্ট কানেকশন" },
+      { en: "Secret Ad Spy Tools Access Guide", bn: "অ্যাড স্পাই টুলস ব্যবহারের কমপ্লিট গাইড" }
+    ],
+    reviews: [
+      { id: "r1", name: "Rakibul Islam", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100", role: { en: "CPA Media Buyer", bn: "সিপিএ মিডিয়া বায়ার" }, rating: 5, comment: { en: "Got MaxBounty approved on my first try with the trainer's reference. Made $380 in 2 weeks!", bn: "ট্রেইনারের রেফারেন্সে প্রথমবারেই ম্যাক্সবাউন্টি অ্যাপ্রুভ পেয়েছি। ২ সপ্তাহেই দারুণ ইনকাম!" }, date: "2 Weeks Ago" }
+    ]
+  },
+
+  // 7. VIDEO EDITING WITH MOTION GRAPHICS
+  {
+    id: "7",
+    slug: "video-editing-with-motion-graphics",
+    title: { en: "Video Editing with Motion Graphics", bn: "ভিডিও এডিটিং উইথ মোশন গ্রাফিক্স" },
+    subtitle: { en: "Master Premiere Pro, After Effects, film storytelling, CGI basics, green screen & color grading", bn: "প্রিমিয়ার প্রো, আফটার ইফেক্টস, সিনেমাটিক কালার গ্রেডিং, সিজিআই ও মোশন গ্রাফিক্সে প্রফেশনাল ক্যারিয়ার" },
+    category: "creative",
+    categoryLabel: { en: "Design & UI/UX", bn: "ডিজাইন ও ইউআই/ইউএক্স" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 180,
+    enrolledCount: "370+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "30,000৳",
+    rawFee: 30000,
+    originalFee: "42,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/video editing &motion graphics.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Sabbir Hossain",
+      designation: { en: "Senior Motion Designer & Commercial Film Editor", bn: "সিনিয়র মোশন ডিজাইনার ও কমার্শিয়াল ফিল্ম এডিটর" },
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "8+ years creating television commercials, YouTube channel branding and visual effects.", bn: "টিভি বিজ্ঞাপন, ইউটিউব ব্রান্ডিং ও ভিজ্যুয়াল ইফেক্টসে ৮+ বছরের অভিজ্ঞতা।" },
+      experience: "8+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Professional filmmaking and visual effects mastery. Topics include Premiere Pro, event editing, film & story composition, source panel & all editing tools, audio editing, basic CGI, green screen removal, Adobe After Effects, basic to advanced animation, basic color grading & correction, communicative English and marketplace strategies.",
+      bn: "অ্যাডোবি প্রিমিয়ার প্রো, আফটার ইফেক্টস, অডিও এডিটিং, গ্রিন স্ক্রিন রিমুভাল, বেসিক সিজিআই, সিনেমাটিক কালার গ্রেডিং, লুমিত্রি কালার, ৩ডি মোশন গ্রাফিক্স ও ফ্রিল্যান্স মার্কেটপ্লেস শেখার সম্পূর্ণ কোর্স।"
+    },
+    fullDescription: {
+      en: "Turn your passion for storytelling into a lucrative career. Master Adobe Premiere Pro timeline editing, multi-cam switching, sound design, dialogue cleanup, green screen keying, Lumetri color grading, and dynamic title/logo animations in Adobe After Effects.",
+      bn: "এই কোর্সে আপনি সোশ্যাল মিডিয়া রিলস, ইউটিউব ভিডিও, ডকুমেন্টারি ও কর্পোরেট প্রমোর জন্য হাই-এন্ড ভিডিও এডিটিং, মোশন গ্রাফিক্স ও সিনেমাটিক কালার কারেকশন তৈরি করা শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Cinematic Storytelling", bn: "সিনেমাটিক স্টোরিটেলিং" }, desc: { en: "Master pacing, rhythm, J/L cuts, sound effects, and emotional storytelling.", bn: "ভিডিও এডিটিংয়ের রিদম, সাউন্ড ডিজাইন ও সিনেমাটিক লুক।" }, icon: "Video" },
+      { id: "cv2", title: { en: "After Effects Motion", bn: "আফটার ইফেক্টস মোশন" }, desc: { en: "Create 2D/3D title sequences, logo reveals, lower thirds, and particle effects.", bn: "টাইটেল সিকোয়েন্স, লোগো অ্যানিমেশন ও স্পেশাল ইফেক্টস।" }, icon: "Sparkles" },
+      { id: "cv3", title: { en: "Color & Sound Mastery", bn: "কালার ও সাউন্ড মাস্টারি" }, desc: { en: "Lumetri color correction, LUTs, noise reduction, and audio mastering.", bn: "লুমিত্রি কালার গ্রেডিং ও ক্রিস্টাল ক্লিয়ার অডিও এডিটিং।" }, icon: "Palette" }
+    ],
+    learningOutcomes: [
+      { en: "Edit commercial videos, YouTube content, and documentary films in Premiere Pro.", bn: "প্রিমিয়ার প্রোতে কমার্শিয়াল ভিডিও ও ইউটিউব কনটেন্ট এডিট করা।" },
+      { en: "Master audio post-production: voice denoising, EQ, compression & sound effects.", bn: "নয়েজ রিমুভাল, সাউন্ড ইফেক্টস ও ব্যাকগ্রাউন্ড মিউজিক মিক্সিং।" },
+      { en: "Execute clean green screen removal (Ultra Key) and basic CGI compositing.", bn: "গ্রিন স্ক্রিন রিমুভ ও সিজিআই কম্পোজিটিং তৈরি করা।" },
+      { en: "Create advanced motion graphics, kinetic typography, and transitions in After Effects.", bn: "আফটার ইফেক্টসে মোশন গ্রাফিক্স ও টাইপোগ্রাফি অ্যানিমেশন তৈরি।" },
+      { en: "Grade video footage like Hollywood films and get clients on Fiverr/Upwork.", bn: "সিনেমাটিক কালার গ্রেডিং ও মার্কেটপ্লেসে ক্লায়েন্ট কাজ সম্পন্ন করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Adobe Premiere Pro & Storytelling Fundamentals", bn: "মডিউল ১: অ্যাডোবি প্রিমিয়ার প্রো ও স্টোরিটেলিং ফান্ডামেন্টালস" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Premiere Pro Interface, Project Setup, Sequences & Timeline Navigation", bn: "প্রিমিয়ার প্রো ইন্টারফেস, প্রজেক্ট সেটআপ ও টাইমলাইন নেভিগেশন" },
+          { en: "Source Panel & All Essential Editing Tools (Razor, Slip, Slide, Ripple)", bn: "সোর্স প্যানেল ও প্রয়োজনীয় সব এডিটিং টুলস পরিচিতি" },
+          { en: "Film & Story Composition, J-Cuts, L-Cuts & Cinematic Pacing", bn: "ফিল্ম ও স্টোরি কম্পোজিশন, জে-কাট, এল-কাট ও সিনেমাটিক পেসিং" },
+          { en: "Event Editing: Weddings, Corporate Promos, Music Videos & YouTube Vlogs", bn: "ইভেন্ট এডিটিং: ওয়েডিং, কর্পোরেট প্রোমো ও ইউটিউব ভ্লগ" },
+          { en: "Audio Editing: Equalization, Compression, Noise Reduction & Sound FX", bn: "অডিও এডিটিং: নয়েজ রিডাকশন, সাউন্ড এফএক্স ও অডিও মিক্সিং" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Visual Effects, CGI, Green Screen & Color Grading", bn: "মডিউল ২: ভিজ্যুয়াল ইফেক্টস, সিজিআই, গ্রিন স্ক্রিন ও কালার গ্রেডিং" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Green Screen Removal (Ultra Key, Alpha Channels & Spill Suppression)", bn: "গ্রিন স্ক্রিন রিমুভ (আল্ট্রা কি ও স্পিল সাপ্রেশন)" },
+          { en: "Basic CGI Compositing, Tracking & Background Replacement", bn: "বেসিক সিজিআই কম্পোজিটিং, মোশন ট্র্যাকিং ও ব্যাকগ্রাউন্ড রিপ্লেসমেন্ট" },
+          { en: "Basic Color Grading & Correction: Lumetri Scopes, Curves & LUTs", bn: "কালার গ্রেডিং ও কারেকশন: লুমিত্রি স্কোপস, কার্ভস ও এলইউটি" },
+          { en: "Export Presets for YouTube 4K, Reels, TikTok & Broadcast Standards", bn: "ইউটিউব ৪কে, রিলস, টিকটক ও টিভির জন্য সেরা এক্সপোর্ট সেটিংস" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Adobe After Effects, Motion Graphics & Marketplace", bn: "মডিউল ৩: অ্যাডোবি আফটার ইফেক্টস, মোশন গ্রাফিক্স ও মার্কেটপ্লেস" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Adobe After Effects Workspace, Keyframes & Graph Editor Speed Curves", bn: "আফটার ইফেক্টস ওয়ার্কস্পেস, কি-ফ্রেম ও গ্রাফ এডিটর" },
+          { en: "Basic to Advanced Animation: Kinetic Typography & Logo Reveals", bn: "বেসিক টু অ্যাডভান্সড অ্যানিমেশন: কাইনেটিক টাইপোগ্রাফি ও লোগো অ্যানিমেশন" },
+          { en: "Lower Thirds, Shape Layer Animations & Dynamic Link with Premiere Pro", bn: "লোয়ার থার্ডস, শেপ অ্যানিমেশন ও ডাইনামিক লিংক" },
+          { en: "Communicative English, Soft Skills & Freelance Marketplace Strategy", bn: "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস ও ফ্রিল্যান্স ভিডিও এডিটিং জবস" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "500+ GB Video Assets (LUTs, SFX, Transitions, Overlays)", bn: "৫০০+ জিবি ভিডিও অ্যাসেটস, এলইউটি ও সাউন্ড ইফেক্টস" },
+      { en: "Commercial Showreel for Client Pitches", bn: "ক্লায়েন্টদের দেখানোর জন্য প্রফেশনাল শোরিল" },
+      { en: "1-on-1 Marketplace Mentorship", bn: "১-অন-১ মার্কেটপ্লেস মেন্টরশিপ" }
+    ],
+    reviews: [
+      { id: "r1", name: "Ashfaqur Rahman", avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100", role: { en: "Video Editor & Motion Designer", bn: "ভিডিও এডিটর ও মোশন ডিজাইনার" }, rating: 5, comment: { en: "The Lumetri color grading and After Effects animation modules are worth every penny!", bn: "কালার গ্রেডিং ও আফটার ইফেক্টস এর ক্লাসগুলো এক কথায় সেরা ছিল!" }, date: "3 Weeks Ago" }
+    ]
+  },
+
+  // 8. APP DEVELOPMENT WITH FLUTTER
+  {
+    id: "8",
+    slug: "app-development-with-flutter",
+    title: { en: "App Development with Flutter", bn: "অ্যাপ ডেভেলপমেন্ট উইথ ফ্লাটার" },
+    subtitle: { en: "Build stunning cross-platform apps for iOS, Android & Web using Dart, Bloc/Provider & Firebase", bn: "ডার্ট, ফ্লাটার, ব্লক/প্রোভাইডার স্টেট ম্যানেজমেন্ট ও ফায়ারবেস সহ ক্রস-প্ল্যাটফর্ম অ্যাপ ডেভেলপমেন্ট" },
+    category: "software",
+    categoryLabel: { en: "App & Software", bn: "অ্যাপ ও সফটওয়্যার" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 155,
+    enrolledCount: "340+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "20,000৳",
+    rawFee: 20000,
+    originalFee: "30,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/flutter app.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Nazmul Haque",
+      designation: { en: "Senior Mobile Architect & Google Developer Expert", bn: "সিনিয়র মোবাইল আর্কিটেক্ট ও গুগল ডেভেলপার এক্সপার্ট" },
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "7+ years architecting enterprise cross-platform mobile apps for iOS and Android.", bn: "আইওএস ও অ্যান্ড্রয়েডের জন্য এন্টারপ্রাইজ ক্রস-প্ল্যাটফর্ম অ্যাপে ৭+ বছরের অভিজ্ঞতা।" },
+      experience: "7+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Complete cross-platform app development masterclass with Google Flutter & Dart. Topics include introduction to Flutter & Dart, widgets & UI design, navigation & routing, state management, forms & input, integrating APIs & networking, local data storage, authentication & authorization, state management solutions (Bloc, Riverpod, Provider), communicative English and freelancing marketplaces.",
+      bn: "গুগল ফ্লাটার ও ডার্ট দিয়ে আইওএস এবং অ্যান্ড্রয়েড অ্যাপ তৈরির পূর্ণাঙ্গ কোর্স। এতে ইউআই উইজেটস, রাউটিং, স্টেট ম্যানেজমেন্ট (ব্লক/প্রোভাইডার), রেস্ট এপিআই, লোকাল স্টোরেজ (হাইভ/এসকিউফ্লাইট), ফায়ারবেস অথ ও গুগল প্লে/অ্যাপ স্টোর রিলিজ শেখানো হয়।"
+    },
+    fullDescription: {
+      en: "Write once and deploy everywhere with 60 FPS silky smooth performance. You will build modern, pixel-perfect iOS and Android apps with Dart 3, Flutter 3, Bloc pattern, RESTful API integration, push notifications, and local offline caching.",
+      bn: "এই কোর্সে আপনি ডার্ট প্রোগ্রামিং থেকে শুরু করে রিয়েল-ওয়ার্ল্ড ই-কমার্স, চ্যাট অ্যাপ ও ফুড ডেলিভারি অ্যাপ প্রজেক্ট বানাবেন এবং অ্যাপ স্টোর ও গুগল প্লেতে পাবলিশ করবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Single Codebase iOS/Android", bn: "সিঙ্গেল কোডবেস আইওএস/অ্যান্ড্রয়েড" }, desc: { en: "Build native-performance apps for both Apple iOS and Google Android simultaneously.", bn: "একই কোডে আইওএস ও অ্যান্ড্রয়েড দুটি অ্যাপ তৈরি।" }, icon: "Smartphone" },
+      { id: "cv2", title: { en: "Enterprise State Management", bn: "ব্লক ও রিভারপড স্টেট" }, desc: { en: "Master BLoC and Riverpod patterns for clean, scalable, maintainable architectures.", bn: "ব্লক ও রিভারপড দিয়ে স্কেলেবল আর্কিটেকচার তৈরি।" }, icon: "Layers" },
+      { id: "cv3", title: { en: "API & Cloud Realtime", bn: "এপিআই ও ক্লাউড ডেটাবেস" }, desc: { en: "Seamlessly integrate REST APIs, Dio networking, and Firebase cloud services.", bn: "রেস্ট এপিআই ও ফায়ারবেস রিয়েলটাইম ডেটাবেস ইন্টিগ্রেশন।" }, icon: "Cloud" }
+    ],
+    learningOutcomes: [
+      { en: "Master the Dart 3 programming language and object-oriented paradigms.", bn: "ডার্ট ৩ প্রোগ্রামিং ও অবজেক্ট ওরিয়েন্টেড কনসেপ্টে দক্ষতা।" },
+      { en: "Design responsive, adaptive Flutter UIs following Material 3 & Cupertino styles.", bn: "মেটেরিয়াল ও কিউপারটিনো ডিজাইনের আধুনিক ইউআই তৈরি।" },
+      { en: "Manage complex application state using BLoC, Riverpod, and Provider.", bn: "ব্লক ও রিভারপড দিয়ে স্টেট ম্যানেজমেন্ট পরিচালনা।" },
+      { en: "Connect apps to backend REST APIs with Dio, interceptors, and error handling.", bn: "ডিও লাইব্রেরি দিয়ে রেস্ট এপিআই ও টোকেন ম্যানেজমেন্ট।" },
+      { en: "Build and publish production apps to Google Play Store and Apple App Store.", bn: "প্লে স্টোর ও অ্যাপল অ্যাপ স্টোরে প্রোডাকশন অ্যাপ পাবলিশ করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Dart Fundamentals, Flutter Widgets & UI Design", bn: "মডিউল ১: ডার্ট ফান্ডামেন্টালস, ফ্লাটার উইজেটস ও ইউআই ডিজাইন" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Introduction to Flutter and Dart: Setup, SDK, VS Code & Emulators", bn: "ফ্লাটার ও ডার্ট পরিচিতি: এসডিকে ও এমুলেটর সেটআপ" },
+          { en: "Dart Programming: OOP, Async/Await, Futures & Streams", bn: "ডার্ট প্রোগ্রামিং: ওওপি, অ্যাসিঙ্ক/অ্যাওয়েট ও স্ট্রিমস" },
+          { en: "Widgets and UI Design: Stateless vs Stateful, Layouts & Custom Components", bn: "উইজেটস ও ইউআই ডিজাইন: স্টেটলেস বনাম স্টেটফুল উইজেটস" },
+          { en: "Navigation and Routing: Named Routes, Deep Linking & GoRouter", bn: "নেভিগেশন ও রাউটিং: গো-রাউটার ও ডিপ লিংকিং" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: State Management, APIs & Local Storage", bn: "মডিউল ২: স্টেট ম্যানেজমেন্ট, এপিআই ও লোকাল স্টোরেজ" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "State Management Solutions: Provider, Riverpod & BLoC Pattern", bn: "স্টেট ম্যানেজমেন্ট সলিউশনস: প্রোভাইডার, রিভারপড ও ব্লক" },
+          { en: "Working with Forms and Input: Validation, FormFields & FocusNodes", bn: "ফর্ম ও ইনপুট: ভ্যালিডেশন ও কাস্টম টেক্সট ফিল্ডস" },
+          { en: "Integrating APIs and Networking: Dio, HTTP, JSON Serialization & Error Handling", bn: "এপিআই ইন্টিগ্রেশন: ডিও, এইচটিটিপি ও জেসন সিরিয়ালাইজেশন" },
+          { en: "Local Data Storage: Shared Preferences, Hive & SQLite / Isar Database", bn: "লোকাল ডাটা স্টোরেজ: শেয়ার্ড প্রেফারেন্সেস, হাইভ ও এসকিউফ্লাইট" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Firebase, Capstone App & Freelancing", bn: "মডিউল ৩: ফায়ারবেস, ক্যাপস্টোন অ্যাপ ও ফ্রিল্যান্সিং" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Authentication and Authorization: Firebase Auth, Google Sign-In & JWT", bn: "অথেনটিকেশন ও অথরাইজেশন: ফায়ারবেস অথ ও গুগল সাইন-ইন" },
+          { en: "Building a Full E-Commerce App Project with Payment Gateway", bn: "পেমেন্ট গেটওয়ে সহ সম্পূর্ণ ই-কমার্স মোবাইল অ্যাপ প্রজেক্ট" },
+          { en: "Google Play Store & Apple App Store Deployment Guidelines", bn: "গুগল প্লে ও অ্যাপল অ্যাপ স্টোরে পাবলিশিং গাইডলাইন" },
+          { en: "Communicative English, Soft Skills & Freelance App Projects", bn: "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস ও ফ্রিল্যান্স অ্যাপ প্রজেক্টস" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "3 Production Flutter App Repositories on GitHub", bn: "গিটহাবে ৩টি প্রোডাকশন অ্যাপের সম্পূর্ণ সোর্স কোড" },
+      { en: "App Store & Play Store Release Support", bn: "প্লে স্টোর ও অ্যাপ স্টোর রিলিজ সাপোর্ট" },
+      { en: "1-on-1 Code Mentorship & Architecture Reviews", bn: "১-অন-১ কোড ও আর্কিটেকচার মেন্টরশিপ" }
+    ],
+    reviews: [
+      { id: "r1", name: "Sohail Rana", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100", role: { en: "Flutter Developer", bn: "ফ্লাটার ডেভেলপার" }, rating: 5, comment: { en: "The BLoC state management and Dio networking explanations were crystal clear. Got hired as a remote Flutter dev!", bn: "ব্লক স্টেট ম্যানেজমেন্টের ব্যাখ্যা এক কথায় দারুণ ছিল। রিমোট ফ্লাটার ডেভেলপার হিসেবে চাকরি পেয়েছি।" }, date: "1 Month Ago" }
+    ]
+  },
+
+  // 9. PYTHON WITH DJANGO
+  {
+    id: "9",
+    slug: "python-with-django",
+    title: { en: "Python with Django", bn: "পাইথন উইথ জ্যাঙ্গো" },
+    subtitle: { en: "Build robust backend architectures, RESTful APIs, Django ORM, authentication & cloud deployment", bn: "পাইথন, জ্যাঙ্গো ফ্রেমওয়ার্ক, ডিআরএফ এপিআই, ডাটাবেস ম্যানেজমেন্ট ও ক্লাউড ডেপ্লয়মেন্ট" },
+    category: "web",
+    categoryLabel: { en: "Programming & Web", bn: "প্রোগ্রামিং ও ওয়েব" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 160,
+    enrolledCount: "330+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "20,000৳",
+    rawFee: 20000,
+    originalFee: "30,000৳",
+    duration: { en: "90 hrs. (3 Months)", bn: "৯০ ঘণ্টা (৩ মাস)" },
+    classesCount: { en: "30 Classes", bn: "৩০ টি ক্লাস" },
+    image: "/images/course thumbnail/python django and machine learning.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Dr. Asif Mahmud",
+      designation: { en: "Principal Python Architect & Backend Consultant", bn: "প্রিন্সিপাল পাইথন আর্কিটেক্ট ও ব্যাকএন্ড কনসালট্যান্ট" },
+      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "9+ years engineering scalable Python backends, Django REST APIs, and microservices.", bn: "স্কেলেবল পাইথন ব্যাকএন্ড ও জ্যাঙ্গো এপিআই তৈরিতে ৯+ বছরের অভিজ্ঞতা।" },
+      experience: "9+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Enterprise Python & Django backend engineering. Topics include Python and Django framework intro, setting up development environment, Django project structure & best practices, models and database management, creating & managing views & templates, user authentication and authorization, Django admin customization, RESTful API integration (DRF), middleware and request handling, deployment & hosting Django apps, testing and debugging, communicative English and soft skills.",
+      bn: "পাইথন ও জ্যাঙ্গো ব্যাকএন্ড ইঞ্জিনিয়ারিংয়ের পূর্ণাঙ্গ কোর্স। এতে পাইথন ওওপি, জ্যাঙ্গো ওআরএম, পোস্টগ্রেএসকিউএল, ভিউজ ও টেমপ্লেটস, ইউজার অথেনটিকেশন, জ্যাঙ্গো রেস্ট ফ্রেমওয়ার্ক (DRF) এপিআই, এডব্লিউএস/ভিডিএস ডেপ্লয়মেন্ট ও মার্কেটপ্লেস ক্যারিয়ার শেখানো হয়।"
+    },
+    fullDescription: {
+      en: "Learn Python from the ground up to advanced object-oriented design, then harness the power of the Django web framework. You will build secure, production-grade web applications, e-commerce backends with SSLCommerz/Stripe, scalable RESTful APIs with Django REST Framework, and deploy with Gunicorn, NGINX, and Docker.",
+      bn: "এই কোর্সে আপনি পাইথন ৩.১২, জ্যাঙ্গো এমভিটি আর্কিটেকচার, কাস্টম অ্যাডমিন প্যানেল, ডিআরএফ টোকেন অথেনটিকেশন, ব্যাকগ্রাউন্ড টাস্ক ও সার্ভার কনফিগারেশন পুঙ্খানুপুঙ্খভাবে শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Python OOP Mastery", bn: "পাইথন ওওপি মাস্টারি" }, desc: { en: "Master data structures, algorithms, functional programming, and OOP in Python.", bn: "পাইথনের ফান্ডামেন্টালস ও অবজেক্ট-ওরিয়েন্টেড ডিজাইন।" }, icon: "Code2" },
+      { id: "cv2", title: { en: "Django ORM & Security", bn: "জ্যাঙ্গো ওআরএম ও সিকিউরিটি" }, desc: { en: "Secure database models, transactions, migrations, and built-in CSRF/XSS defense.", bn: "সিকিউর ডেটাবেস মডেল ও ওআরএম কোয়েরিজ।" }, icon: "ShieldCheck" },
+      { id: "cv3", title: { en: "REST API & Production Deploy", bn: "ডিআরএফ এপিআই ও ডেপ্লয়মেন্ট" }, desc: { en: "Build Django REST Framework APIs and deploy to Ubuntu VPS with Nginx/Gunicorn.", bn: "ডিআরএফ এপিআই ও লাইভ লিনাক্স সার্ভার ডেপ্লয়মেন্ট।" }, icon: "Server" }
+    ],
+    learningOutcomes: [
+      { en: "Write clean, idiomatic Python code with data structures and OOP principles.", bn: "ক্লিন পাইথন কোড লেখা এবং ওওপি প্রিন্সিপালস আয়ত্ত করা।" },
+      { en: "Build complex multi-app Django projects following MVC/MVT architecture.", bn: "জ্যাঙ্গো ফ্রেমওয়ার্ক দিয়ে স্কেলেবল ওয়েব অ্যাপ্লিকেশন তৈরি করা।" },
+      { en: "Design and optimize PostgreSQL / MySQL databases using Django ORM.", bn: "জ্যাঙ্গো ওআরএম দিয়ে পোস্টগ্রেএসকিউএল ডেটাবেস পরিচালনা করা।" },
+      { en: "Develop high-performance RESTful APIs using Django REST Framework (DRF).", bn: "জ্যাঙ্গো রেস্ট ফ্রেমওয়ার্ক (DRF) দিয়ে সিকিউর এপিআই তৈরি।" },
+      { en: "Deploy Django applications to Linux VPS with Nginx, Gunicorn, and SSL.", bn: "লিনাক্স ভিপিএস সার্ভারে জিনিক্স ও গানিকর্ন দিয়ে অ্যাপ ডেপ্লয় করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Python Core, OOP & Django Setup", bn: "মডিউল ১: পাইথন কোর, ওওপি ও জ্যাঙ্গো সেটআপ" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Python and Django Framework Intro: Data Types, Flow Control & Functions", bn: "পাইথন ও জ্যাঙ্গো ফ্রেমওয়ার্ক পরিচিতি: ডাটা টাইপস ও ফাংশনস" },
+          { en: "Setting Up the Development Environment (Virtualenv, Pip, Git, VS Code)", bn: "ডেভেলপমেন্ট এনভায়রনমেন্ট সেটআপ (ভার্চুয়ালেনভ ও গিট)" },
+          { en: "Object-Oriented Programming (OOP): Classes, Inheritance & Polymorphism", bn: "অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং (ক্লাসেস ও ইনহেরিট্যান্স)" },
+          { en: "Django Project Structure & Best Practices: Settings, URLs & Apps", bn: "জ্যাঙ্গো প্রজেক্ট আর্কিটেকচার ও বেস্ট প্র্যাকটিসেস" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Django Models, Views, Templates & Auth", bn: "মডিউল ২: জ্যাঙ্গো মডেলস, ভিউজ, টেমপ্লেটস ও অথেনটিকেশন" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "Models and Database Management: Migrations, Relationships & Django ORM", bn: "মডেলস ও ডাটাবেস ম্যানেজমেন্ট: মাইগ্রেশনস ও জ্যাঙ্গো ওআরএম" },
+          { en: "Creating & Managing Views & Templates: Jinja Syntax, Forms & CBVs", bn: "ভিউ ও টেমপ্লেটস তৈরি: ক্লাস-বেসড ভিউজ ও ফর্মস" },
+          { en: "User Authentication and Authorization: Custom User Models, Login/Register", bn: "ইউজার অথেনটিকেশন ও কাস্টম ইউজার মডেল" },
+          { en: "Django Admin Customization: Inline Models, Filters & Search Actions", bn: "জ্যাঙ্গো অ্যাডমিন কাস্টমাইজেশন ও ফিল্টারিং" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: DRF APIs, Deployment, Testing & Freelancing", bn: "মডিউল ৩: ডিআরএফ এপিআই, ডেপ্লয়মেন্ট, টেস্টিং ও মার্কেটপ্লেস" },
+        duration: { en: "10 Classes • 30 Hours", bn: "১০ টি ক্লাস • ৩০ ঘণ্টা" },
+        lessonsCount: 6,
+        topics: [
+          { en: "RESTful API Integration: Django REST Framework (DRF), Serializers & JWT Auth", bn: "রেস্ট এপিআই ইন্টিগ্রেশন: ডিআরএফ সিরিয়ালাইজার ও জেডব্লিউটি" },
+          { en: "Middleware and Request Handling, Signals & Background Tasks (Celery/Redis)", bn: "মিডলওয়্যার, রিকোয়েস্ট হ্যান্ডলিং ও স্যালারি ব্যাকগ্রাউন্ড টাস্ক" },
+          { en: "Deployment & Hosting Django Apps on Ubuntu VPS (Nginx, Gunicorn, SSL)", bn: "উবুন্টু ভিপিএস-এ জ্যাঙ্গো অ্যাপ ডেপ্লয়মেন্ট ও এসএসএল" },
+          { en: "Testing and Debugging Django Projects, Communicative English & Soft Skills", bn: "টেস্টিং, ডিবাগিং, কমিউনিকেটিভ ইংলিশ ও মার্কেটপ্লেস" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Complete Source Code of 3 Enterprise Django Projects", bn: "৩টি এন্টারপ্রাইজ জ্যাঙ্গো প্রজেক্টের সম্পূর্ণ সোর্স কোড" },
+      { en: "VPS Server Deployment Practice Access", bn: "ভিপিএস সার্ভার ডেপ্লয়মেন্ট প্র্যাকটিস অ্যাক্সেস" },
+      { en: "1-on-1 Backend Career & Interview Mentorship", bn: "১-অন-১ ব্যাকএন্ড ক্যারিয়ার ও ইন্টারভিউ মেন্টরশিপ" }
+    ],
+    reviews: [
+      { id: "r1", name: "Shahriar Kabir", avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100", role: { en: "Django Backend Developer", bn: "জ্যাঙ্গো ব্যাকএন্ড ডেভেলপার" }, rating: 5, comment: { en: "The DRF serializers and VPS deployment sessions were top-class. Built my first SaaS backend within weeks.", bn: "ডিআরএফ এবং সার্ভার ডেপ্লয়মেন্টের ক্লাসগুলো এক কথায় অসাধারণ ছিল।" }, date: "2 Weeks Ago" }
+    ]
+  },
+
+  // 10. WEB DEVELOPMENT
+  {
+    id: "10",
+    slug: "web-development",
+    title: { en: "Web Development", bn: "ওয়েব ডেভেলপমেন্ট" },
+    subtitle: { en: "Learn HTML, CSS, Tailwind, JS, React, Firebase, Figma to React & build 4 production projects", bn: "এইচটিএমএল, সিএসএস, টেইলউইন্ড, জাভাস্ক্রিপ্ট, রিঅ্যাক্ট, ফায়ারবেস ও ৪টি লাইভ প্রোজেক্ট সহ পূর্ণাঙ্গ কোর্স" },
+    category: "web",
+    categoryLabel: { en: "Programming & Web", bn: "প্রোগ্রামিং ও ওয়েব" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 225,
+    enrolledCount: "520+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "20,000৳",
+    rawFee: 20000,
+    originalFee: "30,000৳",
+    duration: { en: "138 hrs. (4 Months)", bn: "১৩৮ ঘণ্টা (৪ মাস)" },
+    classesCount: { en: "46 Classes", bn: "৪৬ টি ক্লাস" },
+    image: "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Engr. Tanvir Hasan",
+      designation: { en: "Lead Frontend Architect & React Specialist", bn: "লিড ফ্রন্টএন্ড আর্কিটেক্ট ও রিঅ্যাক্ট স্পেশালিস্ট" },
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "8+ years engineering robust client-side architectures for international SaaS applications.", bn: "আন্তর্জাতিক ক্লায়েন্টদের জন্য আধুনিক ওয়েব অ্যাপ তৈরিতে ৮+ বছরের অভিজ্ঞতা।" },
+      experience: "8+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Complete frontend and web application development curriculum. Topics include HTML, CSS, Tailwind, GitHub, JavaScript, DOM, JSON, React, React Router, Firebase, Figma to React, PSD to React, Portfolio Website Design, Blog Website Design, Newspaper Website Design, Job Portal Website Design, Communicative English, Soft Skills & Marketplace.",
+      bn: "এইচটিএমএল, সিএসএস, টেইলউইন্ড, গিটহাব, জাভাস্ক্রিপ্ট, ডম, রিঅ্যাক্ট, রিঅ্যাক্ট রাউটার, ফায়ারবেস, ফিগমা/পিএসডি টু রিঅ্যাক্ট এবং ৪টি পূর্ণাঙ্গ বাস্তব প্রজেক্ট (পোর্টফোলিও, ব্লগ, সংবাদপত্র ও জব পোর্টাল) সহ ওয়েব ডেভেলপমেন্টের সম্পূর্ণ কোর্স।"
+    },
+    fullDescription: {
+      en: "From basic HTML markup to advanced interactive React web applications. This 138-hour extensive training ensures you master modern JavaScript, component design, responsive styling with Tailwind CSS, state management, Firebase backend integration, and building 4 enterprise-grade web applications.",
+      bn: "এই কোর্সে আপনি কোনো পূর্ব অভিজ্ঞতা ছাড়াই শুরু করে আধুনিক ওয়েব অ্যাপ্লিকেশন তৈরিতে দক্ষ হবেন। গিটহাব রিপোজিটরি, ক্লিন কোড প্র্যাকটিস এবং ফ্রিল্যান্স মার্কেটপ্লেস ও লোকাল সফটওয়্যার কোম্পানিতে চাকরির প্রস্তুতি নিশ্চিত করা হয়।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "React & Modern JS", bn: "রিঅ্যাক্ট ও আধুনিক জেএস" }, desc: { en: "Master React Hooks, props, state, React Router, and clean architecture.", bn: "রিঅ্যাক্ট হুকস, প্রপ্স ও রাউটিংয়ে শতভাগ পারদর্শিতা।" }, icon: "Code2" },
+      { id: "cv2", title: { en: "4 Live Real-World Projects", bn: "৪টি লাইভ রিয়েল প্রজেক্ট" }, desc: { en: "Build Portfolio, Blog, Newspaper, and Job Portal apps ready for portfolio.", bn: "পোর্টফোলিও, ব্লগ, নিউজপেপার ও জব পোর্টাল ওয়েব অ্যাপ।" }, icon: "Zap" },
+      { id: "cv3", title: { en: "Figma to Code & Firebase", bn: "ফিগমা টু কোড ও ফায়ারবেস" }, desc: { en: "Convert Figma/PSD pixel-perfect to React with Firebase auth & database.", bn: "ফিগমা ডিজাইনকে সরাসরি রিঅ্যাক্ট কোডে রূপান্তর।" }, icon: "Layers" }
+    ],
+    learningOutcomes: [
+      { en: "Master HTML5, CSS3, Tailwind CSS, and GitHub version control.", bn: "এইচটিএমএল৫, সিএসএস৩, টেইলউইন্ড সিএসএস ও গিটহাবে পূর্ণ দক্ষতা।" },
+      { en: "Understand JavaScript ES6+, DOM manipulation, fetch API, and JSON handling.", bn: "জাভাস্ক্রিপ্ট ফান্ডামেন্টালস ও ডম ম্যানিপুলেশন আয়ত্ত করা।" },
+      { en: "Build modular, high-performance React single-page applications.", bn: "মডার্ন রিঅ্যাক্ট ১৯ ও রিঅ্যাক্ট রাউটার দিয়ে স্কেলেবল ওয়েব অ্যাপ তৈরি।" },
+      { en: "Convert Figma and PSD design mockups into pixel-perfect responsive React code.", bn: "ফিগমা ও পিএসডি ডিজাইন ফাইলকে পারফেক্ট কোডে রূপান্তর করা।" },
+      { en: "Deploy production web apps with Firebase authentication and cloud hosting.", bn: "ফায়ারবেস অথেনটিকেশন ও ডাটাবেস সহ লাইভ সার্ভারে অ্যাপ ডেপ্লয় করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Web Fundamentals, Tailwind & JavaScript DOM", bn: "মডিউল ১: ওয়েব ফান্ডামেন্টালস, টেইলউইন্ড ও জাভাস্ক্রিপ্ট ডম" },
+        duration: { en: "15 Classes • 45 Hours", bn: "১৫ টি ক্লাস • ৪৫ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "HTML5 Semantic Tags, Forms & Modern CSS Layouts (Flexbox & Grid)", bn: "এইচটিএমএল৫ সিমান্টিক ট্যাগস, ফর্মস ও আধুনিক সিএসএস লেআউটস" },
+          { en: "Tailwind CSS Utility-First Framework & Responsive Design", bn: "টেইলউইন্ড সিএসএস ও রেসপনসিভ ওয়েব ডিজাইন" },
+          { en: "GitHub Version Control, Commits, Branches & Collaborative Workflows", bn: "গিটহাব ভার্সন কন্ট্রোল, কমিট, ব্রাঞ্চ ও টিম কলাবোরেশন" },
+          { en: "JavaScript Core (Variables, Functions, Arrays, Objects, Loops, ES6+)", bn: "জাভাস্ক্রিপ্ট কোর: ভ্যারিয়েবল, ফাংশন, অবজেক্ট ও ES6+" },
+          { en: "DOM Manipulation, Event Listeners, JSON Handling & Fetch API", bn: "ডম ম্যানিপুলেশন, ইভেন্ট লিসেনার, জেএসন ও ফেচ এপিআই" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: React Core, React Router & Firebase Backend", bn: "মডিউল ২: রিঅ্যাক্ট কোর, রিঅ্যাক্ট রাউটার ও ফায়ারবেস ব্যাকএন্ড" },
+        duration: { en: "15 Classes • 45 Hours", bn: "১৫ টি ক্লাস • ৪৫ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "React Fundamentals: JSX, Components, Props & State Management", bn: "রিঅ্যাক্ট ফান্ডামেন্টালস: জেএসএক্স, কম্পোনেন্টস, প্রপ্স ও স্টেট" },
+          { en: "React Hooks (useState, useEffect, useRef, useMemo, custom hooks)", bn: "রিঅ্যাক্ট হুকস: ইউজস্টেট, ইউজইফেক্ট ও কাস্টম হুকস" },
+          { en: "React Router for Dynamic Multi-Page Navigation & Nested Layouts", bn: "মাল্টি-পেজ অ্যাপের জন্য রিঅ্যাক্ট রাউটার ও নেস্টেড লেআউটস" },
+          { en: "Firebase Authentication (Google, Email/Pass) & Realtime Database / Firestore", bn: "ফায়ারবেস অথেনটিকেশন ও ফায়ারস্টোর ক্লাউড ডেটাবেস" },
+          { en: "Figma to React & PSD to React Conversion Techniques", bn: "ফিগমা টু রিঅ্যাক্ট ও পিএসডি টু রিঅ্যাক্ট কনভার্সন মেথড" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: 4 Production Projects & Freelance Career", bn: "মডিউল ৩: ৪টি প্রোডাকশন প্রজেক্ট ও ফ্রিল্যান্স ক্যারিয়ার" },
+        duration: { en: "16 Classes • 48 Hours", bn: "১৬ টি ক্লাস • ৪৮ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "Project 1: Modern Interactive Developer Portfolio Website Design", bn: "প্রজেক্ট ১: মডার্ন ইন্টারঅ্যাক্টিভ পোর্টফোলিও ওয়েবসাইট ডিজাইন" },
+          { en: "Project 2: Full Featured CMS Blog Website Design", bn: "প্রজেক্ট ২: পূর্ণাঙ্গ ফিচার সমৃদ্ধ সিএমএস ব্লগ ওয়েবসাইট ডিজাইন" },
+          { en: "Project 3: Live Breaking Newspaper / Media Portal Website Design", bn: "প্রজেক্ট ৩: লাইভ নিউজপেপার ও মিডিয়া পোর্টাল ওয়েবসাইট ডিজাইন" },
+          { en: "Project 4: Enterprise Job Portal Website Design with Application Tracking", bn: "প্রজেক্ট ৪: এন্টারপ্রাইজ জব পোর্টাল ওয়েবসাইট ডিজাইন ও ট্র্যাকিং" },
+          { en: "Communicative English, Soft Skills, Fiverr/Upwork Gigs & Job Placement", bn: "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস, মার্কেটপ্লেস ও জব প্লেসমেন্ট সাপোর্ট" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "4 Complete Production Web Projects Source Code", bn: "৪টি কমপ্লিট ওয়েব প্রজেক্টের সম্পূর্ণ সোর্স কোড" },
+      { en: "Lifetime Access to Recordings & Mentorship Group", bn: "রেকর্ডিং ও প্রাইভেট মেন্টরশিপ গ্রুপে আজীবন অ্যাক্সেস" },
+      { en: "Direct Resume Review & IT Placement Assistance", bn: "রিজিউমে রিভিউ ও লোকাল আইটি জব প্লেসমেন্ট সহায়তা" }
+    ],
+    reviews: [
+      { id: "r1", name: "Mahmud Hasan", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100", role: { en: "Frontend Developer", bn: "ফ্রন্টএন্ড ডেভেলপার" }, rating: 5, comment: { en: "The 4 real projects (especially the Job Portal) gave me immense confidence. I got hired within 1 month of finishing!", bn: "৪টি রিয়েল প্রজেক্ট পোর্টফোলিওতে থাকায় খুব সহজেই সফটওয়্যার কোম্পানিতে চাকরি পেয়েছি।" }, date: "1 Week Ago" }
+    ]
+  },
+
+  // 11. MERN STACK DEVELOPMENT
+  {
+    id: "11",
+    slug: "mern-stack-development",
+    title: { en: "MERN Stack Development", bn: "মার্ন স্ট্যাক ডেভেলপমেন্ট" },
+    subtitle: { en: "Master MongoDB, Express.js, React, Node.js, TypeScript & build enterprise full stack applications", bn: "মঙ্গোডিবি, এক্সপ্রেস.জেএস, রিঅ্যাক্ট, নোড.জেএস, টাইপস্ক্রিপ্ট ও ফুল স্ট্যাক আর্কিটেকচার" },
+    category: "web",
+    categoryLabel: { en: "Programming & Web", bn: "প্রোগ্রামিং ও ওয়েব" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 240,
+    enrolledCount: "510+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "40,000৳",
+    rawFee: 40000,
+    originalFee: "55,000৳",
+    duration: { en: "150 hrs. (5 Months)", bn: "১৫০ ঘণ্টা (৫ মাস)" },
+    classesCount: { en: "50 Classes", bn: "৫০ টি ক্লাস" },
+    image: "/images/course thumbnail/diploma in full stack.png",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Mahmudul Hasan Tanvir",
+      designation: { en: "Principal Full Stack Architect at Brain Station 23", bn: "প্রিন্সিপাল ফুল স্ট্যাক আর্কিটেক্ট, ব্রেন স্টেশন ২৩" },
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "10+ years engineering enterprise SaaS platforms, microservices and MERN web applications.", bn: "এন্টারপ্রাইজ সাস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ১০+ বছরের অভিজ্ঞতা।" },
+      experience: "10+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "Comprehensive MERN full-stack software engineering program. Topics include HTML, CSS, GitHub, Tailwind, React, Node JS, Express JS, MongoDB, Typescript, Advance NoSQL Backend, Advance Front End Project, Advance Full stack Website Build, Communicative English, Soft Skills & Marketplace.",
+      bn: "এইচটিএমএল, সিএসএস, গিটহাব, টেইলউইন্ড, রিঅ্যাক্ট, নোড.জেএস, এক্সপ্রেস.জেএস, মঙ্গোডিবি, টাইপস্ক্রিপ্ট, অ্যাডভান্সড নোএসকিউএল ব্যাকএন্ড, অ্যাডভান্সড ফ্রন্টএন্ড এবং কমপ্লিট ফুল স্ট্যাক প্রোডাকশন ওয়েবসাইট তৈরির পূর্ণাঙ্গ মার্ন স্ট্যাক কোর্স।"
+    },
+    fullDescription: {
+      en: "Step into the most in-demand software engineering stack in the global IT market. Master modern TypeScript on both client and server, architect RESTful and GraphQL APIs with Node.js and Express, manage scalable NoSQL data with MongoDB & Mongoose, and build high-performance React frontends.",
+      bn: "এই কোর্সে আপনি টাইপস্ক্রিপ্ট, নোড.জেএস ব্যাকএন্ড, মঙ্গোডিবি ডাটাবেস আর্কিটেকচার, পেমেন্ট গেটওয়ে ইন্টিগ্রেশন, রেডিস ক্যাশিং এবং ক্লাউড সার্ভার ডেপ্লয়মেন্ট সহ আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ার হওয়ার পূর্ণাঙ্গ গাইডলাইন পাবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Type-Safe Full Stack", bn: "টাইপ-সেফ ফুল স্ট্যাক" }, desc: { en: "End-to-end TypeScript from frontend React components to backend Node.js APIs.", bn: "ফ্রন্টএন্ড থেকে ব্যাকএন্ড সম্পূর্ণ টাইপস্ক্রিপ্ট আর্কিটেকচার।" }, icon: "Code2" },
+      { id: "cv2", title: { en: "Scalable NoSQL & Express", bn: "স্কেলেবল নোএসকিউএল ব্যাকএন্ড" }, desc: { en: "Aggregation pipelines, indexing, transactions, and REST APIs in Node/Express.", bn: "মঙ্গোডিবি অ্যাগ্রিগেশন ও এক্সপ্রেস জেএস ব্যাকএন্ড।" }, icon: "Database" },
+      { id: "cv3", title: { en: "Complete SaaS Projects", bn: "এন্টারপ্রাইজ সাস প্রজেক্টস" }, desc: { en: "Build and deploy multi-vendor e-commerce and SaaS platforms to AWS/Vercel.", bn: "লাইভ মাল্টি-ভেন্ডর ই-কমার্স ও সাস অ্যাপ্লিকেশন প্রজেক্ট।" }, icon: "Server" }
+    ],
+    learningOutcomes: [
+      { en: "Master JavaScript ESNext and TypeScript for robust, error-free full stack code.", bn: "মডার্ন জাভাস্ক্রিপ্ট ও টাইপস্ক্রিপ্টে পূর্ণ দক্ষতা অর্জন করা।" },
+      { en: "Build responsive, dynamic user interfaces with React, React Router & Tailwind CSS.", bn: "রিঅ্যাক্ট ও টেইলউইন্ড দিয়ে আধুনিক ইউআই ডিজাইন করা।" },
+      { en: "Architect secure REST APIs with Node.js, Express.js, JWT authentication & middleware.", bn: "নোড.জেএস ও এক্সপ্রেস দিয়ে সিকিউর ব্যাকএন্ড এপিআই তৈরি।" },
+      { en: "Design, query, and optimize MongoDB databases using Mongoose schemas & aggregation.", bn: "মঙ্গোডিবি ডাটাবেস ও মাঙ্গুস দিয়ে ডেটা মডেলিং ও অপ্টিমাইজেশন।" },
+      { en: "Deploy production full stack web applications to AWS, Render, and Vercel with CI/CD.", bn: "এডব্লিউএস ও ভার্সেলে সিআই/সিডি অটোমেশন সহ ফুল স্ট্যাক অ্যাপ ডেপ্লয় করা।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: Modern Frontend with React, Tailwind & TypeScript", bn: "মডিউল ১: রিঅ্যাক্ট, টেইলউইন্ড ও টাইপস্ক্রিপ্ট ফ্রন্টএন্ড" },
+        duration: { en: "15 Classes • 45 Hours", bn: "১৫ টি ক্লাস • ৪৫ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "HTML, CSS, GitHub & Modern Tailwind CSS Architecture", bn: "এইচটিএমএল, সিএসএস, গিটহাব ও টেইলউইন্ড সিএসএস" },
+          { en: "TypeScript Fundamentals: Generics, Interfaces, Types & Utility Types", bn: "টাইপস্ক্রিপ্ট ফান্ডামেন্টালস: টাইপস, ইন্টারফেস ও জেনেরিকস" },
+          { en: "React with TypeScript: Components, Hooks, State & Context API", bn: "টাইপস্ক্রিপ্ট সহ রিঅ্যাক্ট: হুকস, স্টেট ও কনটেক্সট এপিআই" },
+          { en: "Advance Front End Project: Building a High-Performance Web Dashboard", bn: "অ্যাডভান্সড ফ্রন্টএন্ড প্রজেক্ট: হাই-পারফরম্যান্স Web ড্যাশবোর্ড" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Node.js, Express.js & MongoDB NoSQL Backend", bn: "মডিউল ২: নোড.জেএস, এক্সপ্রেস.জেএস ও মঙ্গোডিবি নোএসকিউএল ব্যাকএন্ড" },
+        duration: { en: "15 Classes • 45 Hours", bn: "১৫ টি ক্লাস • ৪৫ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "Node JS & Express JS Architecture: Event Loop, Routing & Middleware", bn: "নোড.জেএস ও এক্সপ্রেস আর্কিটেকচার: রাউটিং ও মিডলওয়্যার" },
+          { en: "MongoDB & Mongoose: Schema Design, Validations & Aggregation Pipeline", bn: "মঙ্গোডিবি ও মাঙ্গুস: স্কিমা ডিজাইন ও অ্যাগ্রিগেশন পাইপলাইন" },
+          { en: "Advance NoSQL Backend: Indexing, Transactions, Sharding & Performance", bn: "অ্যাডভান্সড নোএসকিউএল ব্যাকএন্ড: ইনডেক্সিং ও ট্রানজ্যাকশন" },
+          { en: "Authentication & Security: JWT, Refresh Tokens, Bcrypt, Helmet & Rate Limiting", bn: "অথেনটিকেশন ও সিকিউরিটি: জেডব্লিউটি ও সিকিউরিটি হার্ডেনিং" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: Advance Full Stack Website Build & Career", bn: "মডিউল ৩: অ্যাডভান্সড ফুল স্ট্যাক ওয়েবসাইট বিল্ড ও ক্যারিয়ার" },
+        duration: { en: "20 Classes • 60 Hours", bn: "২০ টি ক্লাস • ৬০ ঘণ্টা" },
+        lessonsCount: 10,
+        topics: [
+          { en: "Advance Full Stack Website Build: Multi-Vendor E-Commerce SaaS Platform", bn: "অ্যাডভান্সড ফুল স্ট্যাক ওয়েবসাইট বিল্ড: মাল্টি-ভেন্ডর ই-কমার্স সাস" },
+          { en: "Payment Gateway Integration (SSLCommerz, Stripe, bKash) & Invoicing", bn: "পেমেন্ট গেটওয়ে ইন্টিগ্রেশন (এসএসএলকমার্জ, স্ট্রাইপ, বিকাশ)" },
+          { en: "Cloud Deployment (AWS EC2/S3, Render, Vercel) & CI/CD Pipelines", bn: "ক্লাউড ডেপ্লয়মেন্ট (এডব্লিউএস, রেন্ডার, ভার্সেল) ও সিআই/সিডি" },
+          { en: "Communicative English, Soft Skills, Technical Interview Prep & Marketplace", bn: "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস, টেক ইন্টারভিউ ও মার্কেটপ্লেস" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Government Endorsed Certificate", bn: "সরকারি অনুমোদিত সার্টিফিকেট" },
+      { en: "Full Source Code of 2 Full Stack Enterprise Projects", bn: "২টি এন্টারপ্রাইজ ফুল স্ট্যাক প্রজেক্টের সম্পূর্ণ সোর্স কোড" },
+      { en: "AWS Cloud Deployment Infrastructure Access", bn: "এডব্লিউএস ক্লাউড ডেপ্লয়মেন্ট প্র্যাকটিস অ্যাক্সেস" },
+      { en: "Dedicated 1-on-1 Job Placement Support", bn: "সফটওয়্যার কোম্পানিতে ডেডিকেটেড জব প্লেসমেন্ট সাপোর্ট" }
+    ],
+    reviews: [
+      { id: "r1", name: "Jubayer Hossain", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100", role: { en: "MERN Stack Engineer", bn: "মার্ন স্ট্যাক ইঞ্জিনিয়ার" }, rating: 5, comment: { en: "Tanvir sir's architectural depth is unmatched. Landed a high-paying software engineer role before finishing the course!", bn: "তানভীর স্যারের গাইডলাইনে কোর্স শেষ হওয়ার আগেই সফটওয়্যার কোম্পানিতে চাকরি পেয়েছি!" }, date: "2 Weeks Ago" }
+    ]
+  },
+
+  // 12. COMPTIA A+, CCNA & MTCNA
+  {
+    id: "12",
+    slug: "comptia-a-plus-ccna-mtcna",
+    title: { en: "CompTIA A+, CCNA & MTCNA", bn: "কম্পটিয়া এ+, সিসিএনএ ও এমটিসিএনএ" },
+    subtitle: { en: "Triple networking certification program: hardware engineering, Cisco routing & switching, MikroTik ISP config & CC camera", bn: "কম্পিউটার হার্ডওয়্যার, সিসকো সিসিএনএ, মিক্রোটিক রাউটারওএস ও সিসি ক্যামেরা ইনস্টলেশন মাস্টারক্লাস" },
+    category: "cloud",
+    categoryLabel: { en: "Networking & IT", bn: "নেটওয়ার্কিং ও আইটি" },
+    badge: { en: "POPULAR", bn: "জনপ্রিয়" },
+    mode: { en: "Online & Offline", bn: "অনলাইন ও অফলাইন" },
+    modeType: "offline",
+    rating: 4.9,
+    ratingsCount: 195,
+    enrolledCount: "430+ Enrolled",
+    languages: { en: "Bengali / English", bn: "বাংলা / ইংরেজি" },
+    fee: "30,000৳",
+    rawFee: 30000,
+    originalFee: "45,000৳",
+    duration: { en: "200 hrs. (6 Months)", bn: "২০০ ঘণ্টা (৬ মাস)" },
+    classesCount: { en: "60 Classes", bn: "৬০ টি ক্লাস" },
+    image: "/images/course thumbnail/ccna-networking.jpg",
+    videoUrl: "https://www.facebook.com/reel/1931942940836268/",
+    instructor: {
+      name: "Engr. M. A. Wahid",
+      designation: { en: "CCIE Certified Principal Network Consultant", bn: "সিসিআইই সার্টিফাইড প্রিন্সিপাল নেটওয়ার্ক কনসালট্যান্ট" },
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      bio: { en: "12+ years designing ISP, enterprise Cisco networks, and data center infrastructures.", bn: "আইএসপি, সিসকো এন্টারপ্রাইজ নেটওয়ার্ক ও ডাটা সেন্টারে ১২+ বছরের অভিজ্ঞতা।" },
+      experience: "12+ Yrs Exp",
+      verified: true
+    },
+    overview: {
+      en: "All-in-one professional networking and IT engineering combo. Topics include computer hardware fundamentals, operating systems, basic networking concepts, routing and switching (CCNA), network security, network troubleshooting, CC camera installation, CISCO Certified Network Associate (CCNA), wireless networking, MikroTik RouterOS essentials, network services & protocols, communicative English and soft skills.",
+      bn: "কম্পিউটার হার্ডওয়্যার ফান্ডামেন্টালস, অপারেটিং সিস্টেমস, সিসকো সিসিএনএ ২০০-৩০১ রাউটিং ও সুইচিং, নেটওয়ার্ক সিকিউরিটি ও ট্রাবলশুটিং, সিসি ক্যামেরা ও এনভিআর ইনস্টলেশন, মিক্রোটিক রাউটারওএস (MTCNA) আইএসপি কনফিগারেশন এবং আন্তর্জাতিক নেটওয়ার্কিং ক্যারিয়ারের পূর্ণাঙ্গ কোর্স।"
+    },
+    fullDescription: {
+      en: "Become an elite IT Infrastructure, System & Network Engineer. This flagship 200-hour hands-on program combines three top international certifications: CompTIA A+ (Hardware & OS), Cisco CCNA 200-301 (Routing, Switching & Security), and MikroTik MTCNA (ISP Bandwidth, Queue & Firewalls) alongside IP surveillance & CC camera deployment.",
+      bn: "এই ২০০ ঘণ্টার কোর্সে আপনি ফিজিক্যাল কম্পিউটার অ্যাসেম্বলিং, ট্রাবলশুটিং, সিসকো সুইচ-রাউটার কনফিগারেশন, ভি-ল্যান, ওএসপিএফ, মিক্রোটিক ব্যান্ডউইথ ম্যানেজমেন্ট, আইপি সিসি ক্যামেরা ইনস্টলেশন ও আইএসপি নেটওয়ার্ক সেটআপ প্র্যাকটিক্যাল ল্যাবে শিখবেন।"
+    },
+    coreValues: [
+      { id: "cv1", title: { en: "Cisco CCNA 200-301", bn: "সিসকো সিসিএনএ ২০০-৩০১" }, desc: { en: "Enterprise routing, switching, VLANs, OSPF, ACLs, and NAT configuration.", bn: "সিসকো রাউটার ও সুইচ কনফিগারেশন এবং ল্যাব।" }, icon: "Server" },
+      { id: "cv2", title: { en: "MikroTik ISP & Bandwidth", bn: "মিক্রোটিক আইএসপি নেটওয়ার্ক" }, desc: { en: "MTCNA setup, queue management, PPPoE server, firewall filter & NAT rules.", bn: "মিক্রোটিক আইএসপি ব্যান্ডউইথ ও কিউ ম্যানেজমেন্ট।" }, icon: "Zap" },
+      { id: "cv3", title: { en: "Hardware & CC Camera", bn: "হার্ডওয়্যার ও সিসি ক্যামেরা" }, desc: { en: "PC hardware troubleshooting, OS deployment, and IP camera / NVR installation.", bn: "হার্ডওয়্যার রিপেয়ার ও আইপি সিসি ক্যামেরা সেটআপ।" }, icon: "ShieldCheck" }
+    ],
+    learningOutcomes: [
+      { en: "Diagnose, repair, and assemble computer hardware and enterprise operating systems.", bn: "কম্পিউটার হার্ডওয়্যার ডায়াগনোসিস ও অ্যাসেম্বলিং করতে পারা।" },
+      { en: "Configure Cisco routers and switches for complex enterprise networks (CCNA).", bn: "সিসকো রাউটার ও সুইচে রাউটিং প্রটোকল ও ভি-ল্যান কনফিগার করা।" },
+      { en: "Deploy and manage MikroTik RouterOS for ISP bandwidth control, PPPoE & firewalls.", bn: "মিক্রোটিক রাউটারে ব্যান্ডউইথ কন্ট্রোল ও ফায়ারওয়াল কনফিগারেশন।" },
+      { en: "Install and manage analog/IP CC cameras, NVR/DVR systems, and remote viewing.", bn: "সিসি ক্যামেরা, ডিভিআর ও এনভিআর ইনস্টলেশন ও কনফিগারেশন করা।" },
+      { en: "Qualify for Network Administrator, System Support, and ISP Engineer positions.", bn: "আইটি সাপোর্ট ও নেটওয়ার্ক ইঞ্জিনিয়ার হিসেবে চাকরির জন্য প্রস্তুত হওয়া।" }
+    ],
+    curriculum: [
+      {
+        moduleNumber: 1,
+        title: { en: "Module 1: CompTIA A+ Hardware, OS & CC Camera Installation", bn: "মডিউল ১: কম্পটিয়া এ+ হার্ডওয়্যার, ওএস ও সিসি ক্যামেরা ইনস্টলেশন" },
+        duration: { en: "20 Classes • 60 Hours", bn: "২০ টি ক্লাস • ৬০ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "Computer Hardware Fundamentals: Motherboard, CPU, RAM, Storage & Power", bn: "কম্পিউটার হার্ডওয়্যার ফান্ডামেন্টালস: মাদারবোর্ড, র‍্যাম ও প্রসেসর" },
+          { en: "Operating Systems Installation, BIOS/UEFI, Partitioning & Recovery", bn: "অপারেটিং সিস্টেম ইনস্টলেশন, বায়োস ও পার্টিশনিং" },
+          { en: "Hardware Troubleshooting, Preventative Maintenance & Toolkits", bn: "হার্ডওয়্যার ট্রাবলশুটিং ও মেইনটেন্যান্স" },
+          { en: "CC Camera Installation: Analog, IP Cameras, NVR/DVR, Cabling & Remote Monitoring", bn: "সিসি ক্যামেরা ইনস্টলেশন: এনভিআর/ডিভিআর, ক্যাবলিং ও রিমোট ভিউ" }
+        ]
+      },
+      {
+        moduleNumber: 2,
+        title: { en: "Module 2: Cisco CCNA (Routing, Switching & Security)", bn: "মডিউল ২: সিসকো সিসিএনএ (রাউটিং, সুইচিং ও সিকিউরিটি)" },
+        duration: { en: "20 Classes • 60 Hours", bn: "২০ টি ক্লাস • ৬০ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "Basic Networking Concepts: OSI Model, TCP/IP, IPv4 Subnetting & IPv6", bn: "বেসিক নেটওয়ার্কিং: ওএসআই মডেল, আইপি সাবনেটিং ও আইপিভি৬" },
+          { en: "Routing and Switching (CCNA): Static Routing, OSPFv2, VLANs, Trunking & STP", bn: "রাউটিং ও সুইচিং: ওএসপিএফ, ভি-ল্যান, ট্রাংকিং ও এসটিপি" },
+          { en: "Network Security: Access Control Lists (ACL), Port Security & DHCP Snooping", bn: "নেটওয়ার্ক সিকিউরিটি: এসিএল, পোর্ট সিকিউরিটি ও ডিএইচসিপি স্নুপিং" },
+          { en: "Wireless Networking Fundamentals & Cisco Packet Tracer / GNS3 Labs", bn: "ওয়্যারলেস নেটওয়ার্কিং ও প্যাকেট ট্রেসার লাইভ ল্যাব" }
+        ]
+      },
+      {
+        moduleNumber: 3,
+        title: { en: "Module 3: MikroTik RouterOS (MTCNA), Protocols & Career", bn: "মডিউল ৩: মিক্রোটিক রাউটারওএস (MTCNA), প্রোটোকলস ও ক্যারিয়ার" },
+        duration: { en: "20 Classes • 60 Hours", bn: "২০ টি ক্লাস • ৬০ ঘণ্টা" },
+        lessonsCount: 8,
+        topics: [
+          { en: "Mikrotik RouterOS Essentials: Winbox, Initial Setup, Bridges & IP Addressing", bn: "মিক্রোটিক রাউটারওএস বেসিকস: উইনবক্স, ব্রিজ ও আইপি সেটআপ" },
+          { en: "ISP Bandwidth Management: Simple Queue, Queue Tree & PCQ Strategies", bn: "আইএসপি ব্যান্ডউইথ ম্যানেজমেন্ট: কিউ ও পিসিকিউ রুলস" },
+          { en: "PPPoE Server/Client, Hotspot Server, Firewall Filter & NAT Configuration", bn: "পিপিপিওই সার্ভার, হটস্পট ও ফায়ারওয়াল কনফিগারেশন" },
+          { en: "Network Services and Protocols (DNS, DHCP, NTP, SNMP, VPN)", bn: "নেটওয়ার্ক সার্ভিসেস ও প্রোটোকলস (ডিএনএস, ভিপিএন)" },
+          { en: "Network Troubleshooting, Communicative English, Soft Skills & Job Placement", bn: "নেটওয়ার্ক ট্রাবলশুটিং, কমিউনিকেটিভ ইংলিশ ও জব প্লেসমেন্ট" }
+        ]
+      }
+    ],
+    includedItems: [
+      { en: "Triple Training Certificate (CompTIA, CCNA, MTCNA)", bn: "ট্রিপল ট্রেনিং সার্টিফিকেট (CompTIA, CCNA, MTCNA)" },
+      { en: "Hands-on Physical Lab Access with Cisco & MikroTik Routers", bn: "সিসকো ও মিক্রোটিক রাউটার সমৃদ্ধ ফিজিক্যাল ল্যাব প্র্যাকটিস" },
+      { en: "CCNA 200-301 & MTCNA Exam Dumps & Prep Material", bn: "সিসিএনএ ও এমটিসিএনএ এক্সাম প্রিপারেশন ম্যাটেরিয়াল" },
+      { en: "Guaranteed Placement Assistance in ISPs & Corporate IT", bn: "আইএসপি ও কর্পোরেট আইটি সেক্টরে প্লেসমেন্ট সহায়তা" }
+    ],
+    reviews: [
+      { id: "r1", name: "Imtiaz Ahmed", avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100", role: { en: "Network Support Engineer", bn: "নেটওয়ার্ক সাপোর্ট ইঞ্জিনিয়ার" }, rating: 5, comment: { en: "Hands-down the best networking course. The real Cisco and MikroTik physical labs prepared me for my ISP job.", bn: "ফিজিক্যাল ল্যাবে সিসকো ও মিক্রোটিক কনফিগারেশন করার সুযোগ পাওয়ায় চাকরি পাওয়া সহজ হয়েছে।" }, date: "2 Weeks Ago" }
+    ]
+  }
+];

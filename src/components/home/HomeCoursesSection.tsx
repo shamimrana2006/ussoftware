@@ -28,8 +28,10 @@ export default function HomeCoursesSection() {
     { id: "creative", label: isEn ? "Design & UI/UX" : "গ্রাফিক্স ও ইউআই/ইউএক্স", icon: Palette },
     { id: "software", label: isEn ? "App & Software" : "অ্যাপ ও সফটওয়্যার", icon: Smartphone },
     { id: "cloud", label: isEn ? "Networking & IT" : "নেটওয়ার্কিং ও আইটি", icon: Cloud },
+    { id: "database", label: isEn ? "Database & Analytics" : "ডাটাবেস ও অ্যানালিটিক্স", icon: Database },
     { id: "security", label: isEn ? "Security" : "সিকিউরিটি", icon: Shield },
     { id: "diploma", label: isEn ? "Diploma" : "ডিপ্লোমা", icon: GraduationCap },
+    { id: "language", label: isEn ? "Language Programs" : "ভাষা শিক্ষা", icon: Globe2 },
     { id: "others", label: isEn ? "Others" : "অন্যান্য", icon: Briefcase },
   ];
 
