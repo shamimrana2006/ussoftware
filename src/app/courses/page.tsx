@@ -7,10 +7,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Sparkles, Star, Clock, Users, BookOpen, 
+import {
+  Sparkles, Star, Clock, Users, BookOpen,
   ArrowRight, MessageCircle, CheckCircle2,
-  Code2, Cpu, Cloud, Smartphone, ShieldCheck, 
+  Code2, Cpu, Cloud, Smartphone, ShieldCheck,
   Palette, Megaphone, Database, Award, Layers,
   Search, Filter, LayoutGrid, ListFilter,
   AlignJustify, X, Zap, Check, Bot, Globe2,
@@ -113,7 +113,7 @@ function CoursesContent() {
     let result = allCourses.filter((course) => {
       const matchCategory = activeCategory === "all" || course.category === activeCategory;
       const matchMode = selectedMode === "all" || course.modeType === selectedMode;
-      const matchSearch = searchQuery.trim() === "" || 
+      const matchSearch = searchQuery.trim() === "" ||
         course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         course.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
         course.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase());
@@ -200,11 +200,10 @@ function CoursesContent() {
                   onClick={() => {
                     setActiveCategory(topic.id);
                   }}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-2xs border ${
-                    activeCategory === topic.id
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-2xs border ${activeCategory === topic.id
                       ? "bg-[#08121a] text-white border-slate-800 shadow-xs scale-105"
                       : "bg-white hover:bg-slate-100/90 text-slate-700 border-slate-200/80 hover:border-slate-300"
-                  }`}
+                    }`}
                 >
                   {topic.pillLabel}
                 </button>
@@ -241,13 +240,13 @@ function CoursesContent() {
 
       <main className="flex-grow py-8 sm:py-12 select-none">
         <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10">
-          
+
           {/* MAIN LAYOUT: LEFT SIDEBAR (SEARCH + CATEGORIES) & RIGHT CONTENT (CONTROLS + COURSE GRID) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-            
+
             {/* LEFT SIDEBAR: Search & Categories (Sticky on Desktop) */}
             <div className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-[74px] space-y-4 max-h-[calc(100vh-6.5rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20 shadow-[0_-24px_0_0_#f8fafc]">
-              
+
               {/* Search Input Box */}
               <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/15 transition-all">
                 <div className="relative flex items-center">
@@ -260,7 +259,7 @@ function CoursesContent() {
                     className="w-full pl-2.5 pr-8 py-1 text-xs text-slate-800 placeholder-slate-400 outline-none bg-transparent font-medium"
                   />
                   {searchQuery && (
-                    <button 
+                    <button
                       onClick={() => setSearchQuery("")}
                       className="absolute right-2 text-slate-400 hover:text-slate-600 cursor-pointer"
                     >
@@ -287,19 +286,17 @@ function CoursesContent() {
                       <button
                         key={cat.id}
                         onClick={() => setActiveCategory(cat.id)}
-                        className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs transition-all text-left cursor-pointer group ${
-                          isChecked 
-                            ? "bg-emerald-50/90 text-[#008744] font-bold border border-emerald-200 shadow-2xs" 
+                        className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs transition-all text-left cursor-pointer group ${isChecked
+                            ? "bg-emerald-50/90 text-[#008744] font-bold border border-emerald-200 shadow-2xs"
                             : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium"
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-2.5 truncate">
                           {/* Custom Checkbox */}
-                          <div className={`w-4 h-4 rounded-md border flex items-center justify-center flex-shrink-0 transition-all ${
-                            isChecked 
-                              ? "bg-[#008744] border-[#008744] text-white" 
+                          <div className={`w-4 h-4 rounded-md border flex items-center justify-center flex-shrink-0 transition-all ${isChecked
+                              ? "bg-[#008744] border-[#008744] text-white"
                               : "border-slate-300 bg-white group-hover:border-slate-400"
-                          }`}>
+                            }`}>
                             {isChecked && <Check size={11} className="stroke-[3]" />}
                           </div>
 
@@ -318,11 +315,11 @@ function CoursesContent() {
 
             {/* RIGHT AREA: TOP CONTROLS & COURSE CARDS GRID */}
             <div className="lg:col-span-8 xl:col-span-9 space-y-6">
-              
+
               {/* 1. Top Filter / Control Bar (Sticky on Scroll with Upward Gap Seal) */}
               <div className="sticky top-[58px] sm:top-[64px] lg:top-[66px] z-30 bg-[#f8fafc] pt-2 pb-2 shadow-[0_-24px_0_0_#f8fafc]">
                 <div className="bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4">
-                  
+
                   {/* Left: Count & Mode Tabs */}
                   <div className="flex items-center flex-wrap gap-3 w-full sm:w-auto">
                     <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
@@ -338,11 +335,10 @@ function CoursesContent() {
                         <button
                           key={mode}
                           onClick={() => setSelectedMode(mode)}
-                          className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${
-                            selectedMode === mode
+                          className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${selectedMode === mode
                               ? "bg-[#008744] text-white shadow-2xs"
                               : "text-slate-600 hover:text-slate-900"
-                          }`}
+                            }`}
                         >
                           {mode === "all" ? (isEn ? "All" : "সকল") : mode === "online" ? (isEn ? "Online" : "অনলাইন") : (isEn ? "Offline" : "অফলাইন")}
                         </button>
@@ -357,18 +353,17 @@ function CoursesContent() {
                       <button
                         type="button"
                         onClick={() => setIsSortOpen(!isSortOpen)}
-                        className={`flex items-center gap-2 bg-white border text-xs font-semibold px-3.5 py-2 rounded-xl transition-all cursor-pointer select-none shadow-2xs ${
-                          isSortOpen 
-                            ? "border-[#008744] ring-2 ring-[#008744]/15 text-[#008744]" 
+                        className={`flex items-center gap-2 bg-white border text-xs font-semibold px-3.5 py-2 rounded-xl transition-all cursor-pointer select-none shadow-2xs ${isSortOpen
+                            ? "border-[#008744] ring-2 ring-[#008744]/15 text-[#008744]"
                             : "border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900"
-                        }`}
+                          }`}
                       >
                         <ArrowUpDown size={13} className={isSortOpen ? "text-[#008744]" : "text-slate-400"} />
                         <span className="font-bold">
-                          {sortBy === "default" 
-                            ? (isEn ? "Sort: Default" : "বাছাই: ডিফল্ট") 
-                            : sortBy === "price-low" 
-                              ? (isEn ? "Price: Low to High" : "মূল্য: কম-বেশি") 
+                          {sortBy === "default"
+                            ? (isEn ? "Sort: Default" : "বাছাই: ডিফল্ট")
+                            : sortBy === "price-low"
+                              ? (isEn ? "Price: Low to High" : "মূল্য: কম-বেশি")
                               : (isEn ? "Price: High to Low" : "মূল্য: বেশি-কম")}
                         </span>
                         <ChevronDown size={13} className={`text-slate-400 transition-transform duration-200 ${isSortOpen ? "rotate-180 text-[#008744]" : ""}`} />
@@ -423,16 +418,14 @@ function CoursesContent() {
                                       setSortBy(opt.id);
                                       setIsSortOpen(false);
                                     }}
-                                    className={`w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-xs transition-all cursor-pointer text-left group ${
-                                      isSelected
+                                    className={`w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-xs transition-all cursor-pointer text-left group ${isSelected
                                         ? "bg-emerald-50 text-[#008744] font-bold shadow-2xs"
                                         : "text-slate-700 hover:bg-slate-50 hover:text-slate-900 font-medium"
-                                    }`}
+                                      }`}
                                   >
                                     <div className="flex items-center gap-2">
-                                      <div className={`w-6 h-6 rounded-lg flex items-center justify-center transition-colors ${
-                                        isSelected ? "bg-[#008744] text-white" : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
-                                      }`}>
+                                      <div className={`w-6 h-6 rounded-lg flex items-center justify-center transition-colors ${isSelected ? "bg-[#008744] text-white" : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"
+                                        }`}>
                                         <Icon size={12} />
                                       </div>
                                       <span>{opt.label}</span>
@@ -458,18 +451,16 @@ function CoursesContent() {
                     <div className="flex items-center bg-slate-100 p-1 rounded-xl">
                       <button
                         onClick={() => setViewMode("grid")}
-                        className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
-                          viewMode === "grid" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
-                        }`}
+                        className={`p-1.5 rounded-lg cursor-pointer transition-colors ${viewMode === "grid" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
+                          }`}
                         title="Grid View"
                       >
                         <LayoutGrid size={14} />
                       </button>
                       <button
                         onClick={() => setViewMode("list")}
-                        className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
-                          viewMode === "list" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
-                        }`}
+                        className={`p-1.5 rounded-lg cursor-pointer transition-colors ${viewMode === "list" ? "bg-[#008744] text-white shadow-2xs" : "text-slate-500 hover:text-slate-800"
+                          }`}
                         title="List View"
                       >
                         <AlignJustify size={14} />
@@ -513,28 +504,27 @@ function CoursesContent() {
                           className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-200 shadow-2xs hover:shadow-[0_10px_25px_rgba(0,135,68,0.06)] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
                         >
                           {/* TOP THUMBNAIL BANNER */}
-                          <div 
+                          <div
                             onClick={() => setSelectedVideoCourse(course)}
                             className="relative h-48 sm:h-52 w-full overflow-hidden cursor-pointer group/thumb select-none"
                             title={isEn ? "Click to watch video preview" : "ভিডিও সিলেবাস দেখতে ক্লিক করুন"}
                           >
                             {/* Clear Background Image with Smooth Scale-Up on hover */}
-                            <img 
-                              src={course.image} 
+                            <img
+                              src={course.image}
                               alt={course.title}
-                              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/thumb:scale-108" 
+                              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/thumb:scale-108"
                             />
-                            
+
                             {/* Subtle dark overlay on hover */}
                             <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/40 transition-colors duration-300" />
 
                             {/* Top Badges: Mode & Star Rating */}
                             <div className="absolute top-3 left-3 z-10 pointer-events-none">
-                              <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider shadow-md text-white ${
-                                course.modeType === "offline" 
-                                  ? "bg-[#008744]" 
+                              <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider shadow-md text-white ${course.modeType === "offline"
+                                  ? "bg-[#008744]"
                                   : "bg-[#DE1F26]"
-                              }`}>
+                                }`}>
                                 {course.mode}
                               </span>
                             </div>
@@ -644,14 +634,13 @@ function CoursesContent() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.2 }}
-                          className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
-                            isExpanded 
-                              ? "border-emerald-400 shadow-md ring-2 ring-emerald-500/10" 
+                          className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${isExpanded
+                              ? "border-emerald-400 shadow-md ring-2 ring-emerald-500/10"
                               : "border-slate-200/90 hover:border-emerald-300 shadow-2xs hover:shadow-sm"
-                          }`}
+                            }`}
                         >
                           {/* COMPACT MAIN ROW BAR */}
-                          <div 
+                          <div
                             onClick={() => setExpandedRowId(isExpanded ? null : course.id)}
                             className="p-3.5 sm:p-4 flex flex-col md:flex-row md:items-center justify-between gap-3.5 sm:gap-4 cursor-pointer select-none group"
                           >
@@ -666,11 +655,10 @@ function CoursesContent() {
                               <div className="min-w-0 flex-1">
                                 <div className="flex items-center gap-2 flex-wrap mb-1">
                                   {/* Mode Badge */}
-                                  <span className={`text-[9.5px] font-extrabold px-2 py-0.5 rounded-md uppercase tracking-wider ${
-                                    course.modeType === "offline" 
-                                      ? "bg-[#008744] text-white" 
+                                  <span className={`text-[9.5px] font-extrabold px-2 py-0.5 rounded-md uppercase tracking-wider ${course.modeType === "offline"
+                                      ? "bg-[#008744] text-white"
                                       : "bg-[#DE1F26] text-white"
-                                  }`}>
+                                    }`}>
                                     {course.mode}
                                   </span>
                                   {/* Category Label */}
@@ -735,11 +723,10 @@ function CoursesContent() {
                                 <button
                                   type="button"
                                   onClick={() => setExpandedRowId(isExpanded ? null : course.id)}
-                                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 transition-all cursor-pointer ${
-                                    isExpanded 
-                                      ? "bg-slate-800 text-white" 
+                                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 transition-all cursor-pointer ${isExpanded
+                                      ? "bg-slate-800 text-white"
                                       : "bg-[#008744] hover:bg-[#007038] text-white shadow-2xs"
-                                  }`}
+                                    }`}
                                 >
                                   <span>{isExpanded ? (isEn ? "Close" : "বন্ধ") : (isEn ? "Details" : "বিস্তারিত")}</span>
                                   {isExpanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
@@ -759,14 +746,14 @@ function CoursesContent() {
                                 className="border-t border-slate-100 bg-slate-50/60 p-4 sm:p-6"
                               >
                                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
-                                  
+
                                   {/* Left: Thumbnail & Video Trigger */}
-                                  <div 
+                                  <div
                                     onClick={() => setSelectedVideoCourse(course)}
                                     className={`lg:col-span-4 relative h-32 sm:h-36 rounded-xl bg-gradient-to-br ${course.bgGradient} overflow-hidden p-3.5 flex flex-col justify-between text-white cursor-pointer group/vid shadow-xs`}
                                   >
-                                    <img 
-                                      src={course.image} 
+                                    <img
+                                      src={course.image}
                                       alt={course.title}
                                       className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover/vid:opacity-45 group-hover/vid:scale-105 transition-all duration-300"
                                     />
@@ -851,13 +838,13 @@ function CoursesContent() {
                   </div>
                 )}
 
+              </div>
+
             </div>
 
           </div>
 
         </div>
-
-      </div>
 
         {/* DETAILS MODAL */}
         <AnimatePresence>
