@@ -1,0 +1,201 @@
+COURSE LIST
+
+OUR POPULAR COURSES
+
+1. ADVANCED GRAPHIC DESIGN WITH FREELANCING
+
+Topics: - Adobe Photoshop - Image Manipulation - Advance Blend
+Technique - Hair Masking & Action Work - Artificial Intelligence (AI) -
+Adobe Illustrator - Advance Gradient Technique - Logo Design, T-shirt
+Design - Product Packaging - Behance Portfolio - Communicative English -
+Soft Skills & Marketplace
+
+Course Duration: 90 hrs. Course Fee: 17,000 BDT
+
+2. MASTERING WORDPRESS DEVELOPMENT
+
+Topics: - Domain and Hosting - WordPress Dashboard - Media, Pages &
+Appearance - Plugins - Users - Settings & Theme Overview - WooCommerce &
+Products - WordPress Management Tools - SEO & Speed Optimization -
+Communicative English - Soft Skills & Marketplace
+
+Course Duration: 120 hrs. Course Fee: 18,000 BDT
+
+3. ANDROID APPLICATION DEVELOPMENT
+
+Topics: - Android Development Intro - Android Studio Intro - Java/Kotlin
+Basics for Android - UI Design & Layouts - Activities & Navigation -
+Data Storage & Management - Networking & APIs - Firebase Integration -
+Communicative English - Soft Skills & Marketplace
+
+Course Duration: 90 hrs. Course Fee: 20,000 BDT
+
+4. UX/UI DESIGN
+
+Topics: - UX/UI Design Overview & Languages - Typography, Iconography
+and Imagery - Sketching & Wireframing - Paper Prototyping Process - App
+& Web Template Design - Implementation For Mobile Apps - Prototyping
+Process For Web - Work Portfolio - Communicative English - Soft Skills &
+Marketplace
+
+Course Duration: 90 hrs. Course Fee: 20,000 BDT
+
+5. DIGITAL MARKETING WITH SEO
+
+Topics: - Meta Marketing - SEO & SEM - On-Page, Off-Page, Technical, and
+Local SEO - E-commerce & YouTube SEO - E-mail Marketing - E-mail
+Marketing and Tools - E-commerce Marketing and Tools - Affiliate
+Marketing - Google Ads - Communicative English - Soft Skills &
+Marketplace
+
+Course Duration: 90 hrs. Course Fee: 16,000 BDT
+
+6. CPA NEXUS MARKETING
+
+Topics: - CPA Marketing Fundamentals - Domain, Hosting & Landing Page -
+Tok-tok Ads - Facebook & Instagram Ads - Google & YouTube Ads - E-mail
+Marketing - Pinterest, Push & Native Ads - Campaign Optimization -
+Communicative English - Soft Skills & Marketplace
+
+Course Duration: 60 hrs. Course Fee: 14,000 BDT
+
+7. VIDEO EDITING WITH MOTION GRAPHICS
+
+Topics: - Premiere Pro - Event Editing - Film & Story Composition -
+Source Panel & all tools - Audio Editing - Basic CGI - Green Screen
+Remove - Adobe After Effect - Basic to Advanced Animation - Basic Color
+Grading & Correction - Communicative English - Soft Skills & Marketplace
+
+Course Duration: 90 hrs. Course Fee: 30,000 BDT
+
+8. APP DEVELOPMENT WITH FLUTTER
+
+Topics: - Introduction to Flutter and Dart - Widgets and UI Design -
+Navigation and Routing - State Management - Working with Forms and
+Input - Integrating APIs and Networking - Local Data Storage -
+Authentication and Authorization - State Management Solutions -
+Communicative English - Soft Skills & Marketplace
+
+Course Duration: 90 hrs. Course Fee: 20,000 BDT
+
+9. PYTHON WITH DJANGO
+
+Topics: - Python and Django Framework Intro - Setting Up the Development
+Environment - Django Project Structure & Best Practices - Models and
+Database Management - Creating & Managing Views & Templates - User
+Authentication and Authorization - Django Admin Customization - RESTful
+API Integration - Middleware and Request Handling - Deployment & Hosting
+Django Apps - Testing and Debugging Django Projects - Communicative
+English - Soft Skills & Marketplace
+
+Course Duration: 90 hrs. Course Fee: 20,000 BDT
+
+10. WEB DEVELOPMENT
+
+Topics: - HTML, CSS, Tailwind, GitHub - JavaScript, DOM, JSON - React,
+React Router - Firebase - Figma to React - PSD to React - Portfolio
+Website Design - Blog Website Design - Newspaper Website Design - Job
+Portal Website Design - Communicative English - Soft Skills &
+Marketplace
+
+Course Duration: 138 hrs. Course Fee: 20,000 BDT
+
+11. MERN STACK DEVELOPMENT
+
+Topics: - HTML, CSS - GitHub, Tailwind - React - Node JS - Express JS -
+MongoDB - Typescript - Advance NoSQL Backend - Advance Front End
+Project - Advance Full stack Website Build - Communicative English -
+Soft Skills & Marketplace
+
+Course Duration: 150 hrs. Course Fee: 40,000 BDT
+
+12. COMPTIA A+, CCNA & MTCNA
+
+Topics: - Computer Hardware Fundamentals - Operating Systems - Basic
+Networking Concepts - Routing and Switching (CCNA) - Network Security -
+Network Troubleshooting - CC Camera Installation - CISCO Certified
+Network Associate (CCNA) - Wireless Networking - Mikrotik RouterOS
+Essentials - Network Services and Protocols - Communicative English -
+Soft Skills & Marketplace
+
+Course Duration: 200 hrs. Course Fee: 30,000 BDT
+
+OTHER COURSES
+
+MULTIMEDIA
+
+-   Advanced Graphic Design with AI — 126 hrs. — 15,000 BDT
+
+WEB TECHNOLOGY
+
+-   Certified Web Design and Development — 132 hrs. — 15,000 BDT
+-   Certified Shopify Specialist — 110 hrs. — 18,000 BDT
+-   Web Development Using PHP Laravel — 120 hrs. — 20,000 BDT
+
+NETWORKING
+
+-   CCNP — 120 hrs. — 40,000 BDT
+-   Red Hat Linux — 90 hrs. — 18,000 BDT
+-   Azure — 90 hrs. — 30,000 BDT
+-   AWS — 60 hrs. — 20,000 BDT
+
+SOFTWARE DEVELOPMENT
+
+-   Swift iOS — 80 hrs. — 20,000 BDT
+-   ASP.NET MVC Core — 110 hrs. — 18,000 BDT
+
+PROGRAMMING
+
+-   C/C++ — 40 hrs. — 12,000 BDT
+-   C# — 48 hrs. — 12,000 BDT
+-   Java SE — 80 hrs. — 15,000 BDT
+-   Programming for Kids — 60 hrs. — 10,000 BDT
+
+DATABASE
+
+-   Oracle DBA — 100 hrs. — 20,000 BDT
+-   Oracle Apex — 100 hrs. — 25,000 BDT
+-   Data Analysis with Macro — 40 hrs. — 18,000 BDT
+
+SECURITY
+
+-   Certified Ethical Hacking (CEH) — 80 hrs. — 18,000 BDT
+-   Cyber Security — 90 hrs. — 20,000 BDT
+-   Computer Hacking Forensic Investigator (CHFI) — 90 hrs. — 30,000 BDT
+-   Certified Information Systems Security Professional (CISSP) — 90
+    hrs. — 40,000 BDT
+
+DIPLOMA
+
+-   Diploma in Multimedia — 252 hrs. — 85,000 BDT
+-   Diploma in Web Technology — 252 hrs. — 90,000 BDT
+-   Diploma in Networking — 252 hrs. — 90,000 BDT
+
+LANGUAGE PROGRAMS
+
+-   Japanese Language — 3 Months — 10,000 BDT
+-   Korean Language — 3 Months — 12,000 BDT
+-   German Language — 3 Months — 12,000 BDT
+-   IELTS — 3 Months — 12,000 BDT
+-   Spoken English — 3 Months — 8,000 BDT
+-   Spoken English for Kids — 4 Months — 10,000 BDT
+-   Caregiver — 3 Months — 15,000 BDT
+
+MANAGEMENT
+
+-   Projects IN Controlled Environments (PRINCE2) — 60 hrs. — 30,000 BDT
+-   Project Management Professional (PMP) — 30 hrs. — 30,000 BDT
+-   Certified Information Systems Auditor (CISA) — 40 hrs. — 30,000 BDT
+-   Information Technology Infrastructure Library (ITIL) — 32 hrs. —
+    26,000 BDT
+-   Microsoft Project — 40 hrs. — 25,000 BDT
+
+OTHERS
+
+-   Microsoft Office Specialist — 80 hrs. — 10,000 BDT
+-   Big Data — 120 hrs. — 40,000 BDT
+-   SPSS — 40 hrs. — 25,000 BDT
+-   Machine Learning — 90 hrs. — 30,000 BDT
+-   Advanced Excel — 36 hrs. — 8,000 BDT
+-   Amazon KDP — 60 hrs. — 14,000 BDT
+-   SAP (FICO, ABAP, SD, MM) — 120 hrs. — 60,000 BDT
