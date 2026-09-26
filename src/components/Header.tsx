@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
-import { Phone, Mail, Globe, User, Menu, X, LayoutGrid, ChevronDown, BookOpen, Code, Cpu, Cloud, Layers, Sparkles, Box, Orbit, Bot, ArrowRight } from "lucide-react";
+import { Phone, Mail, Globe, User, Menu, X, LayoutGrid, ChevronDown, BookOpen, Code, Cpu, Cloud, Layers, Sparkles, Box, Orbit, Bot, ArrowRight, GraduationCap, Award, CheckCircle2, Users, PhoneCall } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
@@ -65,7 +65,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative group px-4 xl:px-4.5 py-2.5 flex items-center justify-center transition-all duration-200 whitespace-nowrap rounded-xl select-none"
+      className="relative group px-2.5 xl:px-3.5 2xl:px-4 py-2 xl:py-2.5 flex items-center justify-center transition-all duration-200 whitespace-nowrap rounded-xl select-none"
     >
       {/* 3D Liquid Water Droplet Capsule with Rounded Squircle Base (Active Item) */}
       {active && (
@@ -282,7 +282,7 @@ const NavItem = ({ href, active, onClick, children }: NavItemProps) => {
           scale: rippleKey > 0 ? [1, 0.93, 1.07, 0.98, 1] : 1,
         }}
         transition={{ duration: 0.45, ease: "easeOut" }}
-        className={`relative z-10 text-[15px] xl:text-[16px] transition-all duration-200 select-none ${
+        className={`relative z-10 text-[13.5px] xl:text-[14.5px] 2xl:text-[15.5px] transition-all duration-200 select-none ${
           active
             ? "font-extrabold tracking-tight"
             : "text-slate-700 font-semibold group-hover:text-[#008744]"
@@ -402,62 +402,59 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar - Dark Blue Gradient Theme with luminous center and reduced padding */}
-      <div className="hidden lg:block bg-gradient-to-r from-[#06111d] via-[#0d2a47] to-[#06111d] py-1.5 sm:py-2 text-xs text-gray-200 border-b border-blue-950/70 shadow-xs">
-        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-          {/* Left: Contact Info in Pills (Larger & clearer) */}
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <a href="tel:01995852964" className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
-              <Phone size={14} className="text-emerald-400" />
+      {/* Top Bar - Dark Blue Gradient Theme (Visible on Tablet & Desktop: md+) */}
+      <div className="hidden md:block bg-gradient-to-r from-[#06111d] via-[#0d2a47] to-[#06111d] py-1.5 sm:py-2 text-xs text-gray-200 border-b border-blue-950/70 shadow-xs">
+        <div className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center">
+          {/* Left: Contact Info in Pills */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <a href="tel:01995852964" className="flex items-center space-x-1.5 sm:space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 transition-colors cursor-pointer shadow-xs">
+              <Phone size={13} className="text-emerald-400" />
               <span className="font-semibold text-xs sm:text-[13px] text-gray-100">01995852964</span>
             </a>
-            <div className="flex items-center space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-4 py-1.5 transition-colors cursor-pointer shadow-xs">
-              <Mail size={14} className="text-rose-400" />
+            <div className="flex items-center space-x-1.5 sm:space-x-2 bg-white/10 hover:bg-white/15 border border-white/15 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 transition-colors cursor-pointer shadow-xs">
+              <Mail size={13} className="text-rose-400" />
               <span className="font-semibold text-xs sm:text-[13px] text-gray-100">info@ussoftwareltd.com</span>
             </div>
           </div>
 
-          {/* Right: Socials & Auth (Larger & bolder) */}
-          <div className="flex items-center space-x-4">
-            {/* Social Icons in Circles (Larger) */}
-            <div className="flex items-center space-x-2.5">
-              <a href="https://www.facebook.com/ussltraining" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          {/* Right: Socials & WhatsApp */}
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="flex items-center space-x-2">
+              <a href="https://www.facebook.com/ussltraining" target="_blank" rel="noopener noreferrer" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-[#1877F2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
-              <a href="https://www.youtube.com/@USSoftwar" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FF0000] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="YouTube">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <a href="https://www.youtube.com/@USSoftwar" target="_blank" rel="noopener noreferrer" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-[#FF0000] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" clipRule="evenodd" d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.943-.997 1.687-1.94 1.94C17.82 19.9 12 19.9 12 19.9s-5.82 0-7.603-.458c-.943-.253-1.686-.997-1.94-1.94C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.943.997-1.687 1.94-1.94C6.18 4.1 12 4.1 12 4.1s5.82 0 7.603.458c.943.253 1.686.997 1.94 1.94zM10 15.5l6-3.5-6-3.5v7z" />
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/us-software-08a1a2431/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#0A66C2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <a href="https://www.linkedin.com/in/us-software-08a1a2431/" target="_blank" rel="noopener noreferrer" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-[#0A66C2] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
-              <a href="https://instagram.com/ussoftwareltd" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#E1306C] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <a href="https://instagram.com/ussoftwareltd" target="_blank" rel="noopener noreferrer" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-[#E1306C] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
-              <a href="https://wa.me/8801995852964" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#25D366] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="WhatsApp">
-                <FaWhatsapp size={14} />
+              <a href="https://wa.me/8801995852964" target="_blank" rel="noopener noreferrer" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-[#25D366] transition-all flex items-center justify-center group shadow-xs hover:scale-105 text-gray-200 hover:text-white" aria-label="WhatsApp">
+                <FaWhatsapp size={13} />
               </a>
             </div>
-
-
           </div>
         </div>
       </div>
 
       {/* Main Sticky Nav Bar */}
       <header className={`w-full sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-200/70 py-2 sm:py-2.5" : "bg-white/85 backdrop-blur-md border-b border-gray-100 py-2 sm:py-3.5"}`}>
-        <div className="max-w-[96rem] mx-auto px-3 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300">
+        <div className="max-w-[96rem] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 flex justify-between items-center transition-all duration-300">
 
-          {/* Left: Logo (Responsive: Compact on mobile, full size on desktop) */}
+          {/* Left: Logo (Responsive: Compact on mobile, balanced on tablet & desktop) */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" onClick={handleHomeClick} className="flex items-center cursor-pointer">
-              <img src="/logo/logo.png" alt="US Software LTD" className="h-7 sm:h-10 lg:h-[50px] xl:h-[56px] max-w-[130px] sm:max-w-none w-auto object-contain transition-transform duration-200 hover:scale-105" />
+              <img src="/logo/logo.png" alt="US Software LTD" className="h-7 sm:h-9 md:h-10 lg:h-11 xl:h-12 max-w-[130px] sm:max-w-none w-auto object-contain transition-transform duration-200 hover:scale-105" />
             </Link>
           </div>
 
-          {/* Center: Clean Seamless Navigation Track (NO background container) */}
-          <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 mx-2 relative">
+          {/* Center: Desktop Navigation Track (Clean fluid track on xl+ desktop screens) */}
+          <nav className="hidden xl:flex items-center space-x-0.5 xl:space-x-1 mx-1 2xl:mx-2 relative">
             <NavItem
               href="/"
               active={isLinkActive("/")}
@@ -492,7 +489,7 @@ export default function Header() {
                 onClick={(e) => {
                   setIsExploreOpen(!isExploreOpen);
                 }}
-                className={`relative group px-3.5 xl:px-4 py-2.5 flex items-center space-x-1.5 transition-all duration-200 whitespace-nowrap rounded-xl select-none cursor-pointer ${
+                className={`relative group px-2.5 xl:px-3 2xl:px-3.5 py-2 xl:py-2.5 flex items-center space-x-1.5 transition-all duration-200 whitespace-nowrap rounded-xl select-none cursor-pointer ${
                   isExploreActive
                     ? "font-extrabold text-[#008744]"
                     : "text-slate-700 font-semibold hover:text-[#008744]"
@@ -506,7 +503,7 @@ export default function Header() {
                   />
                 )}
 
-                <span className="relative z-10 text-[15px] xl:text-[16px]">
+                <span className="relative z-10 text-[13.5px] xl:text-[14.5px] 2xl:text-[15.5px]">
                   {language === "bn" ? "এক্সপ্লোর" : "Explore"}
                 </span>
                 <ChevronDown
@@ -589,13 +586,13 @@ export default function Header() {
             </NavItem>
           </nav>
 
-          {/* Right Side: Language Switcher + CTA Button + Mobile Hamburger */}
-          <div className="flex items-center space-x-1.5 sm:space-x-3 flex-shrink-0">
+          {/* Right Side: Language Switcher + CTA Button + Tablet/Mobile Hamburger */}
+          <div className="flex items-center space-x-1.5 sm:space-x-2 md:space-x-3 flex-shrink-0">
 
             {/* Language Segmented Switch */}
             <div
               onClick={toggleLanguage}
-              className="relative inline-flex items-center p-0.5 sm:p-1 bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 rounded-full cursor-pointer select-none transition-all shadow-inner"
+              className="relative inline-flex items-center p-0.5 bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 rounded-full cursor-pointer select-none transition-all shadow-inner"
               title="Switch Language / ভাষা পরিবর্তন করুন"
               role="button"
               tabIndex={0}
@@ -607,16 +604,16 @@ export default function Header() {
             >
               {/* Sliding Active Pill */}
               <motion.div
-                className="absolute top-0.5 sm:top-1 bottom-0.5 sm:bottom-1 w-[calc(50%-2px)] sm:w-[calc(50%-4px)] bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.06)] border border-slate-200/60"
+                className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.06)] border border-slate-200/60"
                 animate={{
-                  left: language === "en" ? (typeof window !== 'undefined' && window.innerWidth < 640 ? "2px" : "4px") : "50%",
+                  left: language === "en" ? "2px" : "50%",
                 }}
                 transition={{ type: "spring", stiffness: 500, damping: 35 }}
               />
 
               {/* EN Option */}
               <span
-                className={`relative z-10 px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold transition-colors duration-200 flex items-center justify-center min-w-[28px] sm:min-w-[36px] ${
+                className={`relative z-10 px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold transition-colors duration-200 flex items-center justify-center min-w-[26px] sm:min-w-[34px] ${
                   language === "en" ? "text-[#008744]" : "text-slate-500 hover:text-slate-800"
                 }`}
               >
@@ -625,7 +622,7 @@ export default function Header() {
 
               {/* বাংলা Option */}
               <span
-                className={`relative z-10 px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold transition-colors duration-200 flex items-center justify-center min-w-[28px] sm:min-w-[36px] ${
+                className={`relative z-10 px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold transition-colors duration-200 flex items-center justify-center min-w-[26px] sm:min-w-[34px] ${
                   language === "bn" ? "text-[#008744]" : "text-slate-500 hover:text-slate-800"
                 }`}
               >
@@ -633,22 +630,22 @@ export default function Header() {
               </span>
             </div>
 
-            {/* CTA Button: Get Course */}
+            {/* CTA Button: Get Course (Visible on sm, md, lg, xl screens) */}
             <Link href="/courses" className="hidden sm:block">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white px-3.5 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-extrabold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] hover:shadow-[0_6px_20px_rgba(0,135,68,0.45)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
+                className="bg-gradient-to-r from-[#008744] to-[#056839] hover:from-[#007038] hover:to-[#04522d] text-white px-3 sm:px-4 md:px-5 xl:px-6 py-2 sm:py-2.5 xl:py-3 rounded-lg sm:rounded-xl font-extrabold text-xs sm:text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] hover:shadow-[0_6px_20px_rgba(0,135,68,0.45)] transition-all duration-200 flex items-center space-x-1.5 sm:space-x-2 whitespace-nowrap cursor-pointer"
               >
-                <BookOpen size={15} className="hidden sm:inline" />
+                <BookOpen size={14} className="hidden sm:inline" />
                 <span>{t.header.getCourse || "Get Course"}</span>
               </motion.button>
             </Link>
 
-            {/* Mobile Hamburger Menu Toggle */}
+            {/* Hamburger Menu Toggle (Visible on Mobile & Tablet: xl:hidden) */}
             <motion.button
               whileTap={{ scale: 0.9 }}
-              className="lg:hidden text-[#08121a] p-1.5 sm:p-2.5 focus:outline-none bg-slate-100 hover:bg-slate-200 rounded-lg sm:rounded-xl transition-colors cursor-pointer flex-shrink-0"
+              className="xl:hidden text-[#08121a] p-1.5 sm:p-2 md:p-2.5 focus:outline-none bg-slate-100 hover:bg-slate-200 rounded-lg sm:rounded-xl transition-colors cursor-pointer flex-shrink-0"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle navigation menu"
             >
@@ -657,7 +654,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Nav Drawer / Dropdown */}
+        {/* Mobile & Tablet Nav Drawer / Dropdown */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
@@ -665,75 +662,55 @@ export default function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
-              className="lg:hidden bg-white/98 backdrop-blur-2xl border-t border-gray-100 overflow-hidden shadow-xl"
+              className="xl:hidden bg-white/98 backdrop-blur-2xl border-t border-gray-100 overflow-hidden shadow-2xl"
             >
-              <div className="max-w-[96rem] mx-auto px-4 sm:px-6 py-4 space-y-1.5 text-[15px] font-semibold text-gray-700">
+              <div className="max-w-[96rem] mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 space-y-3 text-[15px] font-semibold text-gray-700">
 
+                {/* Primary Navigation Grid (1 column on mobile, 2 columns on tablet) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5 md:gap-2.5">
+                  {navLinks.map((item) => {
+                    const active = isLinkActive(item.href);
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={(e) => {
+                          setIsMobileMenuOpen(false);
+                          if (item.href === "/") handleHomeClick(e);
+                        }}
+                        className={`flex items-center justify-between px-3.5 sm:px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                          active
+                            ? "bg-gradient-to-r from-emerald-50 via-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
+                            : "text-slate-700 hover:text-[#008744] hover:bg-slate-50 border border-transparent"
+                        }`}
+                      >
+                        <div className="flex items-center space-x-2.5">
+                          <span className={`w-2 h-2 rounded-full ${active ? "bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.6)]" : "bg-slate-300"}`} />
+                          <span className={active ? "text-[#008744] font-bold" : ""}>
+                            {item.label}
+                          </span>
+                        </div>
+                        {active && (
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-md">
+                            {language === "bn" ? "সক্রিয়" : "Active"}
+                          </span>
+                        )}
+                      </Link>
+                    );
+                  })}
+                </div>
 
-
-                {/* Mobile Navigation Links */}
-                <Link
-                  href="/"
-                  onClick={(e) => {
-                    setIsMobileMenuOpen(false);
-                    handleHomeClick(e);
-                  }}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
-                    isLinkActive("/")
-                      ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
-                      : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
-                  }`}
-                >
-                  <span className={isLinkActive("/") ? "text-[#008744] font-bold" : ""}>
-                    {t.header.home}
-                  </span>
-                  {isLinkActive("/") && (
-                    <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
-                  )}
-                </Link>
-
-                <Link
-                  href="/about"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
-                    isLinkActive("/about")
-                      ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
-                      : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
-                  }`}
-                >
-                  <span className={isLinkActive("/about") ? "text-[#008744] font-bold" : ""}>
-                    {t.header.about || "About"}
-                  </span>
-                  {isLinkActive("/about") && (
-                    <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
-                  )}
-                </Link>
-
-                <Link
-                  href="/courses"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
-                    isLinkActive("/courses")
-                      ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
-                      : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
-                  }`}
-                >
-                  <span className={isLinkActive("/courses") ? "text-[#008744] font-bold" : ""}>
-                    {t.header.courses || "Courses"}
-                  </span>
-                  {isLinkActive("/courses") && (
-                    <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
-                  )}
-                </Link>
-
-                {/* Mobile Explore Accordion */}
-                <div className="rounded-xl border border-slate-200/70 overflow-hidden bg-slate-50/50">
+                {/* Explore Section (Accordion on mobile, 2-column cards on tablet) */}
+                <div className="rounded-xl border border-slate-200/80 overflow-hidden bg-slate-50/60 p-1">
                   <button
                     type="button"
                     onClick={() => setIsMobileExploreOpen(!isMobileExploreOpen)}
-                    className="w-full flex items-center justify-between px-4 py-2.5 text-slate-800 font-bold text-[15px] hover:text-[#008744] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between px-3.5 py-2.5 text-slate-800 font-bold text-[14px] sm:text-[15px] hover:text-[#008744] transition-colors cursor-pointer"
                   >
-                    <span>{language === "bn" ? "এক্সপ্লোর" : "Explore"}</span>
+                    <div className="flex items-center space-x-2">
+                      <LayoutGrid size={16} className="text-[#008744]" />
+                      <span>{language === "bn" ? "এক্সপ্লোর করুন" : "Explore More"}</span>
+                    </div>
                     <ChevronDown
                       size={16}
                       className={`transition-transform duration-200 text-slate-400 ${
@@ -748,7 +725,7 @@ export default function Header() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="px-2 pb-2 space-y-1 bg-white border-t border-slate-100"
+                        className="p-1.5 grid grid-cols-1 md:grid-cols-2 gap-1.5 bg-white rounded-lg border-t border-slate-100"
                       >
                         {exploreDropdownItems.map((item) => {
                           const isSubActive = isLinkActive(item.href);
@@ -758,18 +735,15 @@ export default function Header() {
                               key={item.href}
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className={`flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
+                              className={`flex items-center space-x-2.5 px-3 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                                 isSubActive
-                                  ? "bg-emerald-50 text-[#008744] font-bold"
+                                  ? "bg-emerald-50 text-[#008744] font-bold border border-emerald-200/60"
                                   : "text-slate-600 hover:bg-slate-50 hover:text-[#008744]"
                               }`}
                             >
-                              <Icon
-                                size={15}
-                                className={
-                                  isSubActive ? "text-[#008744]" : "text-slate-400"
-                                }
-                              />
+                              <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${isSubActive ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-500"}`}>
+                                <Icon size={14} />
+                              </div>
                               <span>{item.title}</span>
                             </Link>
                           );
@@ -779,49 +753,20 @@ export default function Header() {
                   </AnimatePresence>
                 </div>
 
-                {/* Remaining Navigation Links */}
-                {[
-                  { href: "/projects", label: t.header.projects || "Success Story" },
-                  { href: "/mentors", label: t.header.mentors || "Mentors" },
-                  { href: "/certification", label: t.header.certification || "Certification" },
-                  { href: "/contact", label: t.header.contact || "Contact" },
-                ].map((item) => {
-                  const active = isLinkActive(item.href);
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-200 ${
-                        active
-                          ? "bg-gradient-to-b from-white to-emerald-50/50 text-[#008744] font-extrabold shadow-sm border border-emerald-200/80"
-                          : "text-slate-600 hover:text-[#008744] hover:bg-slate-50"
-                      }`}
-                    >
-                      <span className={active ? "text-[#008744] font-bold" : ""}>
-                        {item.label}
-                      </span>
-                      {active && (
-                        <span className="w-2 h-2 rounded-full bg-[#008744] shadow-[0_0_6px_rgba(0,135,68,0.5)]" />
-                      )}
-                    </Link>
-                  );
-                })}
-
-                {/* Mobile Bottom CTA & Contacts */}
-                <div className="pt-3 mt-2 border-t border-gray-100 flex flex-col space-y-2.5">
-                  <div className="flex items-center justify-between py-1">
-                    <span className="text-xs font-bold text-gray-700">Language / ভাষা:</span>
+                {/* Mobile & Tablet Bottom Actions Bar */}
+                <div className="pt-3 border-t border-gray-100 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                  <div className="flex items-center justify-between md:justify-start gap-3">
+                    <span className="text-xs font-bold text-gray-700">{language === "bn" ? "ভাষা / Language:" : "Language:"}</span>
                     <div
                       onClick={toggleLanguage}
-                      className="relative inline-flex items-center p-1 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-full cursor-pointer select-none transition-all shadow-inner"
+                      className="relative inline-flex items-center p-0.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-full cursor-pointer select-none transition-all shadow-inner"
                       role="button"
                       tabIndex={0}
                     >
                       <motion.div
-                        className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-full shadow-sm border border-slate-200/60"
+                        className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] bg-white rounded-full shadow-sm border border-slate-200/60"
                         animate={{
-                          left: language === "en" ? "4px" : "50%",
+                          left: language === "en" ? "2px" : "50%",
                         }}
                         transition={{ type: "spring", stiffness: 500, damping: 35 }}
                       />
@@ -834,24 +779,29 @@ export default function Header() {
                     </div>
                   </div>
 
-
-
-                  <Link href="/courses" onClick={() => setIsMobileMenuOpen(false)}>
-                    <button className="w-full bg-gradient-to-r from-[#008744] to-[#056839] text-white py-3 rounded-xl font-bold text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] flex items-center justify-center space-x-2 cursor-pointer">
-                      <BookOpen size={16} />
-                      <span>{t.header.getCourse || "Get Course"}</span>
-                    </button>
-                  </Link>
-
-                  <div className="flex items-center justify-between text-xs text-gray-500 pt-1">
-                    <a href="tel:01995852964" className="flex items-center gap-1 hover:text-[#008744] transition-colors">
-                      <Phone size={12} className="text-[#008744]" /> 01995852964
-                    </a>
-                    <span className="flex items-center gap-1">
-                      <Mail size={12} className="text-[#DE1F26]" /> info@ussoftwareltd.com
-                    </span>
+                  <div className="flex flex-col sm:flex-row items-center gap-2 md:flex-1 md:max-w-md md:justify-end">
+                    <Link href="/courses" onClick={() => setIsMobileMenuOpen(false)} className="w-full sm:w-auto md:flex-1">
+                      <button className="w-full bg-gradient-to-r from-[#008744] to-[#056839] text-white py-2.5 sm:py-3 px-5 rounded-xl font-bold text-sm shadow-[0_4px_14px_rgba(0,135,68,0.3)] flex items-center justify-center space-x-2 cursor-pointer">
+                        <BookOpen size={16} />
+                        <span>{t.header.getCourse || "Get Course"}</span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
+
+                {/* Contact Quick Bar */}
+                <div className="flex flex-wrap items-center justify-between text-xs text-gray-500 pt-1 border-t border-slate-100/80 gap-2">
+                  <a href="tel:01995852964" className="flex items-center gap-1.5 hover:text-[#008744] transition-colors font-medium">
+                    <Phone size={13} className="text-[#008744]" /> 01995852964
+                  </a>
+                  <a href="mailto:info@ussoftwareltd.com" className="flex items-center gap-1.5 hover:text-[#DE1F26] transition-colors font-medium">
+                    <Mail size={13} className="text-[#DE1F26]" /> info@ussoftwareltd.com
+                  </a>
+                  <a href="https://wa.me/8801995852964" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-emerald-600 font-semibold hover:underline">
+                    <FaWhatsapp size={14} className="text-[#25D366]" /> WhatsApp
+                  </a>
+                </div>
+
               </div>
             </motion.div>
           )}
