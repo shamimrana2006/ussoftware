@@ -180,7 +180,7 @@ function CoursesContent() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
             >
               {isEn
-                ? `Explore ${COMPANY_STATS.coursesCountFormatted} industry-aligned engineering bootcamps, hands-on live project tracks, and 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready.`
+                ? `Explore ${COMPANY_STATS.coursesCountFormatted} industry-aligned engineering bootcamps, hands-on live project tracks and 1-on-1 mentorship designed to take you from fundamentals to enterprise production-ready.`
                 : `${COMPANY_STATS.coursesCountBn} প্রফেশনাল লাইভ কোর্স, এন্টারপ্রাইজ প্রজেক্ট ও শীর্ষ ইঞ্জিনিয়ারদের মেন্টরশিপের মাধ্যমে আন্তর্জাতিক জব মার্কেট ও ফ্রিল্যান্সিংয়ের জন্য প্রস্তুত হোন।`}
             </motion.p>
 
@@ -201,8 +201,8 @@ function CoursesContent() {
                     setActiveCategory(topic.id);
                   }}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-2xs border ${activeCategory === topic.id
-                      ? "bg-[#08121a] text-white border-slate-800 shadow-xs scale-105"
-                      : "bg-white hover:bg-slate-100/90 text-slate-700 border-slate-200/80 hover:border-slate-300"
+                    ? "bg-[#08121a] text-white border-slate-800 shadow-xs scale-105"
+                    : "bg-white hover:bg-slate-100/90 text-slate-700 border-slate-200/80 hover:border-slate-300"
                     }`}
                 >
                   {topic.pillLabel}
@@ -287,15 +287,15 @@ function CoursesContent() {
                         key={cat.id}
                         onClick={() => setActiveCategory(cat.id)}
                         className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs transition-all text-left cursor-pointer group ${isChecked
-                            ? "bg-emerald-50/90 text-[#008744] font-bold border border-emerald-200 shadow-2xs"
-                            : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium"
+                          ? "bg-emerald-50/90 text-[#008744] font-bold border border-emerald-200 shadow-2xs"
+                          : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium"
                           }`}
                       >
                         <div className="flex items-center gap-2.5 truncate">
                           {/* Custom Checkbox */}
                           <div className={`w-4 h-4 rounded-md border flex items-center justify-center flex-shrink-0 transition-all ${isChecked
-                              ? "bg-[#008744] border-[#008744] text-white"
-                              : "border-slate-300 bg-white group-hover:border-slate-400"
+                            ? "bg-[#008744] border-[#008744] text-white"
+                            : "border-slate-300 bg-white group-hover:border-slate-400"
                             }`}>
                             {isChecked && <Check size={11} className="stroke-[3]" />}
                           </div>
@@ -336,8 +336,8 @@ function CoursesContent() {
                           key={mode}
                           onClick={() => setSelectedMode(mode)}
                           className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${selectedMode === mode
-                              ? "bg-[#008744] text-white shadow-2xs"
-                              : "text-slate-600 hover:text-slate-900"
+                            ? "bg-[#008744] text-white shadow-2xs"
+                            : "text-slate-600 hover:text-slate-900"
                             }`}
                         >
                           {mode === "all" ? (isEn ? "All" : "সকল") : mode === "online" ? (isEn ? "Online" : "অনলাইন") : (isEn ? "Offline" : "অফলাইন")}
@@ -354,8 +354,8 @@ function CoursesContent() {
                         type="button"
                         onClick={() => setIsSortOpen(!isSortOpen)}
                         className={`flex items-center gap-2 bg-white border text-xs font-semibold px-3.5 py-2 rounded-xl transition-all cursor-pointer select-none shadow-2xs ${isSortOpen
-                            ? "border-[#008744] ring-2 ring-[#008744]/15 text-[#008744]"
-                            : "border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900"
+                          ? "border-[#008744] ring-2 ring-[#008744]/15 text-[#008744]"
+                          : "border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900"
                           }`}
                       >
                         <ArrowUpDown size={13} className={isSortOpen ? "text-[#008744]" : "text-slate-400"} />
@@ -419,8 +419,8 @@ function CoursesContent() {
                                       setIsSortOpen(false);
                                     }}
                                     className={`w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-xs transition-all cursor-pointer text-left group ${isSelected
-                                        ? "bg-emerald-50 text-[#008744] font-bold shadow-2xs"
-                                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900 font-medium"
+                                      ? "bg-emerald-50 text-[#008744] font-bold shadow-2xs"
+                                      : "text-slate-700 hover:bg-slate-50 hover:text-slate-900 font-medium"
                                       }`}
                                   >
                                     <div className="flex items-center gap-2">
@@ -522,8 +522,8 @@ function CoursesContent() {
                             {/* Top Badges: Mode & Star Rating */}
                             <div className="absolute top-3 left-3 z-10 pointer-events-none">
                               <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider shadow-md text-white ${course.modeType === "offline"
-                                  ? "bg-[#008744]"
-                                  : "bg-[#DE1F26]"
+                                ? "bg-[#008744]"
+                                : "bg-[#DE1F26]"
                                 }`}>
                                 {course.mode}
                               </span>
@@ -635,8 +635,8 @@ function CoursesContent() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.2 }}
                           className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${isExpanded
-                              ? "border-emerald-400 shadow-md ring-2 ring-emerald-500/10"
-                              : "border-slate-200/90 hover:border-emerald-300 shadow-2xs hover:shadow-sm"
+                            ? "border-emerald-400 shadow-md ring-2 ring-emerald-500/10"
+                            : "border-slate-200/90 hover:border-emerald-300 shadow-2xs hover:shadow-sm"
                             }`}
                         >
                           {/* COMPACT MAIN ROW BAR */}
@@ -656,8 +656,8 @@ function CoursesContent() {
                                 <div className="flex items-center gap-2 flex-wrap mb-1">
                                   {/* Mode Badge */}
                                   <span className={`text-[9.5px] font-extrabold px-2 py-0.5 rounded-md uppercase tracking-wider ${course.modeType === "offline"
-                                      ? "bg-[#008744] text-white"
-                                      : "bg-[#DE1F26] text-white"
+                                    ? "bg-[#008744] text-white"
+                                    : "bg-[#DE1F26] text-white"
                                     }`}>
                                     {course.mode}
                                   </span>
@@ -724,8 +724,8 @@ function CoursesContent() {
                                   type="button"
                                   onClick={() => setExpandedRowId(isExpanded ? null : course.id)}
                                   className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 transition-all cursor-pointer ${isExpanded
-                                      ? "bg-slate-800 text-white"
-                                      : "bg-[#008744] hover:bg-[#007038] text-white shadow-2xs"
+                                    ? "bg-slate-800 text-white"
+                                    : "bg-[#008744] hover:bg-[#007038] text-white shadow-2xs"
                                     }`}
                                 >
                                   <span>{isExpanded ? (isEn ? "Close" : "বন্ধ") : (isEn ? "Details" : "বিস্তারিত")}</span>
