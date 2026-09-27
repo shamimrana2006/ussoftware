@@ -106,7 +106,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/graphic design.jpg",
+    "image": "/images/course thumbnail/graphic design.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabrina Rahman",
@@ -373,7 +373,7 @@ export const coursesData: CourseDetail[] = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/wordpress.jpg",
+    "image": "/images/course thumbnail/wordpress.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mehedi Hasan",
@@ -636,7 +636,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/flutter app.jpg",
+    "image": "/images/course thumbnail/android application development.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahidul Islam",
@@ -891,7 +891,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ui ux design.jpg",
+    "image": "/images/course thumbnail/ui ux design.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Nahid Hasan",
@@ -1146,7 +1146,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Digital Marketing.jpg",
+    "image": "/images/course thumbnail/Digital Marketing.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tareq Mahmud",
@@ -1656,7 +1656,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/video editing &motion graphics.jpg",
+    "image": "/images/course thumbnail/video editing &motion graphics.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabbir Hossain",
@@ -1915,7 +1915,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/flutter app.jpg",
+    "image": "/images/course thumbnail/flutter app.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Nazmul Haque",
@@ -2170,7 +2170,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/python django and machine learning.jpg",
+    "image": "/images/course thumbnail/python django and machine learning.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -2425,7 +2425,7 @@ export const coursesData: CourseDetail[] = [
       "en": "46 Classes",
       "bn": "৪৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    "image": "/images/course thumbnail/web development.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Tanvir Hasan",
@@ -2692,7 +2692,7 @@ export const coursesData: CourseDetail[] = [
       "en": "50 Classes",
       "bn": "৫০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in full stack.png",
+    "image": "/images/course thumbnail/diploma in full stack.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahmudul Hasan Tanvir",
@@ -2947,7 +2947,7 @@ export const coursesData: CourseDetail[] = [
       "en": "60 Classes",
       "bn": "৬০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ccna-networking.jpg",
+    "image": "/images/course thumbnail/comptia-a-plus.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -3206,7 +3206,7 @@ export const coursesData: CourseDetail[] = [
       "en": "44 Classes",
       "bn": "৪৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    "image": "/images/course thumbnail/enterprise full stack next.js 15.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Tanvir Hasan",
@@ -3461,7 +3461,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/wordpress.jpg",
+    "image": "/images/course thumbnail/certified shopify specialist.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sajjad Hossain",
@@ -3716,7 +3716,7 @@ export const coursesData: CourseDetail[] = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/php-laravel.jpg",
+    "image": "/images/course thumbnail/php-laravel.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Monirul Islam",
@@ -3975,7 +3975,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ccna-networking.jpg",
+    "image": "/images/course thumbnail/cisco certified network associate.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -4230,7 +4230,7 @@ export const coursesData: CourseDetail[] = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ccna-networking.jpg",
+    "image": "/images/course thumbnail/cisco certified network professional.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -4485,7 +4485,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/linux system admin.jpg",
+    "image": "/images/course thumbnail/red hat lynux.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Monjurul Karim",
@@ -4740,7 +4740,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Cloud-Devops.jpg",
+    "image": "/images/course thumbnail/microsoft azure cloud.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Towhidul Alam",
@@ -4995,7 +4995,7 @@ export const coursesData: CourseDetail[] = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Cloud-Devops.jpg",
+    "image": "/images/course thumbnail/amazon web services.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Towhidul Alam",
@@ -5250,7 +5250,7 @@ export const coursesData: CourseDetail[] = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/flutter app.jpg",
+    "image": "/images/course thumbnail/swift ios app development.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahidul Islam",
@@ -5505,7 +5505,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    "image": "/images/course thumbnail/asp.net mvc core.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Masud Rana",
@@ -5760,7 +5760,7 @@ export const coursesData: CourseDetail[] = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    "image": "/images/course thumbnail/c-cpp programming.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -6015,7 +6015,7 @@ export const coursesData: CourseDetail[] = [
       "en": "16 Classes",
       "bn": "১৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/enterprise full stack next.js 15.jpg",
+    "image": "/images/course thumbnail/c-sharp programming.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Masud Rana",
@@ -6270,7 +6270,7 @@ export const coursesData: CourseDetail[] = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/flutter app.jpg",
+    "image": "/images/course thumbnail/java se programming.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahidul Islam",
@@ -6533,7 +6533,7 @@ export const coursesData: CourseDetail[] = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Generative ai and prompt eng.jpg",
+    "image": "/images/course thumbnail/programming for kids.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tahsina Akter",
@@ -6788,7 +6788,7 @@ export const coursesData: CourseDetail[] = [
       "en": "34 Classes",
       "bn": "৩৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.jpg",
+    "image": "/images/course thumbnail/oracle dba.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim",
@@ -7043,7 +7043,7 @@ export const coursesData: CourseDetail[] = [
       "en": "34 Classes",
       "bn": "৩৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.jpg",
+    "image": "/images/course thumbnail/oracle apex.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim",
@@ -7298,7 +7298,7 @@ export const coursesData: CourseDetail[] = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.jpg",
+    "image": "/images/course thumbnail/data analysis with macro.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahfuz Ahmed",
@@ -7553,7 +7553,7 @@ export const coursesData: CourseDetail[] = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ethical hacking.jpg",
+    "image": "/images/course thumbnail/ethical hacking.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -7808,7 +7808,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/soc analyst.jpg",
+    "image": "/images/course thumbnail/cyber security specialist.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -8063,7 +8063,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ethical hacking.jpg",
+    "image": "/images/course thumbnail/soc analyst.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -8318,7 +8318,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in cyber security.png",
+    "image": "/images/course thumbnail/cissp.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -8573,7 +8573,7 @@ export const coursesData: CourseDetail[] = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/3d animation.jpg",
+    "image": "/images/course thumbnail/3d animation.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabbir Hossain",
@@ -8828,7 +8828,7 @@ export const coursesData: CourseDetail[] = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in full stack.png",
+    "image": "/images/course thumbnail/diploma in web technology.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahmudul Hasan Tanvir",
@@ -9083,7 +9083,7 @@ export const coursesData: CourseDetail[] = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ccna-networking.jpg",
+    "image": "/images/course thumbnail/diploma in networking.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -9338,7 +9338,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.jpg",
+    "image": "/images/course thumbnail/japanese languase program.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sensei Rashedul Islam",
@@ -9593,7 +9593,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.jpg",
+    "image": "/images/course thumbnail/korean language program.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Seonsaengnim M. Alam",
@@ -9848,7 +9848,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.jpg",
+    "image": "/images/course thumbnail/german language program.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Herr Tanvir Ahmed",
@@ -10103,7 +10103,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ielts complete preparation.jpg",
+    "image": "/images/course thumbnail/ielts complete preparation.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -10358,7 +10358,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.jpg",
+    "image": "/images/course thumbnail/spoken english.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -10613,7 +10613,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Speak English Fluently.jpg",
+    "image": "/images/course thumbnail/Speak English Fluently.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tahsina Akter",
@@ -10868,7 +10868,7 @@ export const coursesData: CourseDetail[] = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.jpg",
+    "image": "/images/course thumbnail/caregiver training program.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Salma Begum (MBBS, MPH)",
@@ -11123,7 +11123,7 @@ export const coursesData: CourseDetail[] = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.jpg",
+    "image": "/images/course thumbnail/agile & scrum master.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -11378,7 +11378,7 @@ export const coursesData: CourseDetail[] = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.jpg",
+    "image": "/images/course thumbnail/agile & scrum master.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -11633,7 +11633,7 @@ export const coursesData: CourseDetail[] = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in cyber security.png",
+    "image": "/images/course thumbnail/cisa.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi (CISA, CISSP)",
@@ -11888,7 +11888,7 @@ export const coursesData: CourseDetail[] = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.jpg",
+    "image": "/images/course thumbnail/agile & scrum master.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (ITIL Managing Professional)",
@@ -12143,7 +12143,7 @@ export const coursesData: CourseDetail[] = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/product managment.png",
+    "image": "/images/course thumbnail/product managment.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP)",
@@ -12398,7 +12398,7 @@ export const coursesData: CourseDetail[] = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.jpg",
+    "image": "/images/course thumbnail/microsoft office specialist.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahfuz Ahmed",
@@ -12653,7 +12653,7 @@ export const coursesData: CourseDetail[] = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in ai and data science.png",
+    "image": "/images/course thumbnail/diploma in ai and data science.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -12908,7 +12908,7 @@ export const coursesData: CourseDetail[] = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.jpg",
+    "image": "/images/course thumbnail/postgresql.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -13163,7 +13163,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Generative ai and prompt eng.jpg",
+    "image": "/images/course thumbnail/Generative ai and prompt eng.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -13418,7 +13418,7 @@ export const coursesData: CourseDetail[] = [
       "en": "12 Classes",
       "bn": "১২ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.jpg",
+    "image": "/images/course thumbnail/advance excel for business analytics.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahfuz Ahmed",
@@ -13673,7 +13673,7 @@ export const coursesData: CourseDetail[] = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Digital Marketing.jpg",
+    "image": "/images/course thumbnail/amazon kdp.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tariqul Islam",
@@ -13928,7 +13928,7 @@ export const coursesData: CourseDetail[] = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agentic ai & business.png",
+    "image": "/images/course thumbnail/agentic ai & business.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim (SAP Consultant)",
