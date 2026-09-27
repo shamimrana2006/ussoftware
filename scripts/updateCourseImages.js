@@ -38,9 +38,9 @@ const imageUpdates = {
   "data-analysis-with-macro": "/images/course thumbnail/data analysis with macro.webp",
   "certified-ethical-hacking-ceh": "/images/course thumbnail/ethical hacking.webp",
   "cyber-security-specialist": "/images/course thumbnail/cyber security specialist.webp",
-  "computer-hacking-forensic-investigator-chfi": "/images/course thumbnail/soc analyst.webp",
+  "computer-hacking-forensic-investigator-chfi": "/images/course thumbnail/computer hacking forensic investigator.webp",
   "certified-information-systems-security-professional-cissp": "/images/course thumbnail/cissp.webp",
-  "diploma-in-multimedia": "/images/course thumbnail/3d animation.webp",
+  "diploma-in-multimedia": "/images/course thumbnail/diploma in multimedia.webp",
   "diploma-in-web-technology": "/images/course thumbnail/diploma in web technology.webp",
   "diploma-in-networking": "/images/course thumbnail/diploma in networking.webp",
   "japanese-language": "/images/course thumbnail/japanese languase program.webp",
@@ -52,18 +52,18 @@ const imageUpdates = {
   "caregiver-training-program": "/images/course thumbnail/caregiver training program.webp",
 
   // managementAndOthers
-  "prince2-project-management": "/images/course thumbnail/agile & scrum master.webp",
-  "pmp-project-management-professional": "/images/course thumbnail/agile & scrum master.webp",
+  "prince2-project-management": "/images/course thumbnail/prince project management.webp",
+  "pmp-project-management-professional": "/images/course thumbnail/pmp project management professional.webp",
   "cisa-certified-information-systems-auditor": "/images/course thumbnail/cisa.webp",
-  "itil-service-management": "/images/course thumbnail/agile & scrum master.webp",
+  "itil-service-management": "/images/course thumbnail/itil 4 foundation service management.webp",
   "microsoft-project": "/images/course thumbnail/product managment.webp",
   "microsoft-office-specialist": "/images/course thumbnail/microsoft office specialist.webp",
   "big-data-engineering": "/images/course thumbnail/diploma in ai and data science.webp",
-  "spss-data-analysis": "/images/course thumbnail/postgresql.webp",
+  "spss-data-analysis": "/images/course thumbnail/spss statistical data analysis.webp",
   "machine-learning-ai": "/images/course thumbnail/Generative ai and prompt eng.webp",
   "advanced-excel-mastery": "/images/course thumbnail/advance excel for business analytics.webp",
   "amazon-kdp-publishing": "/images/course thumbnail/amazon kdp.webp",
-  "sap-enterprise-fico-abap-sd-mm": "/images/course thumbnail/agentic ai & business.webp"
+  "sap-enterprise-fico-abap-sd-mm": "/images/course thumbnail/sap enterprise fico abap sd mm.webp"
 };
 
 const coursesDir = path.join(__dirname, '..', 'src', 'data', 'courses');

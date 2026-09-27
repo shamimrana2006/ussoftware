@@ -42,7 +42,7 @@ module.exports = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.webp",
+    "image": "/images/course thumbnail/prince project management.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -297,7 +297,7 @@ module.exports = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.webp",
+    "image": "/images/course thumbnail/pmp project management professional.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -807,7 +807,7 @@ module.exports = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.webp",
+    "image": "/images/course thumbnail/itil 4 foundation service management.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (ITIL Managing Professional)",
@@ -1827,7 +1827,7 @@ module.exports = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.webp",
+    "image": "/images/course thumbnail/spss statistical data analysis.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -2847,7 +2847,7 @@ module.exports = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agentic ai & business.webp",
+    "image": "/images/course thumbnail/sap enterprise fico abap sd mm.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim (SAP Consultant)",

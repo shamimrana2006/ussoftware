@@ -1317,7 +1317,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/soc analyst.webp",
+    "image": "/images/course thumbnail/computer hacking forensic investigator.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -1827,7 +1827,7 @@ module.exports = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/3d animation.webp",
+    "image": "/images/course thumbnail/diploma in multimedia.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabbir Hossain",

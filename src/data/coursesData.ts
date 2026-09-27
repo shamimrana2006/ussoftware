@@ -8063,7 +8063,7 @@ export const coursesData: CourseDetail[] = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/soc analyst.webp",
+    "image": "/images/course thumbnail/computer hacking forensic investigator.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -8573,7 +8573,7 @@ export const coursesData: CourseDetail[] = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/3d animation.webp",
+    "image": "/images/course thumbnail/diploma in multimedia.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabbir Hossain",
@@ -11123,7 +11123,7 @@ export const coursesData: CourseDetail[] = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.webp",
+    "image": "/images/course thumbnail/prince project management.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -11378,7 +11378,7 @@ export const coursesData: CourseDetail[] = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.webp",
+    "image": "/images/course thumbnail/pmp project management professional.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -11888,7 +11888,7 @@ export const coursesData: CourseDetail[] = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agile & scrum master.webp",
+    "image": "/images/course thumbnail/itil 4 foundation service management.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (ITIL Managing Professional)",
@@ -12908,7 +12908,7 @@ export const coursesData: CourseDetail[] = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/postgresql.webp",
+    "image": "/images/course thumbnail/spss statistical data analysis.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -13928,7 +13928,7 @@ export const coursesData: CourseDetail[] = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/agentic ai & business.webp",
+    "image": "/images/course thumbnail/sap enterprise fico abap sd mm.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim (SAP Consultant)",
