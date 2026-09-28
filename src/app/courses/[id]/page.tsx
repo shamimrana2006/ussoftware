@@ -434,17 +434,21 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                     alt={course.title[isEn ? "en" : "bn"]}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
-                    <button
-                      onClick={() => setIsVideoModalOpen(true)}
-                      className="w-14 h-14 rounded-full bg-white/90 text-[#008744] flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white transition-all cursor-pointer"
-                    >
-                      <Play size={24} className="ml-1 fill-[#008744]" />
-                    </button>
-                  </div>
-                  <span className="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-md">
-                    {isEn ? "Preview Course" : "কোর্স প্রিভিউ"}
-                  </span>
+                  {course.videoUrl && (
+                    <>
+                      <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/30 transition-colors flex items-center justify-center">
+                        <button
+                          onClick={() => setIsVideoModalOpen(true)}
+                          className="w-14 h-14 rounded-full bg-white/90 text-[#008744] flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white transition-all cursor-pointer"
+                        >
+                          <Play size={24} className="ml-1 fill-[#008744]" />
+                        </button>
+                      </div>
+                      <span className="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-md">
+                        {isEn ? "Preview Course" : "কোর্স প্রিভিউ"}
+                      </span>
+                    </>
+                  )}
                 </div>
 
                 {/* Price & CTA Section */}

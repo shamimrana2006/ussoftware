@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, useEffect, useRef, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -55,6 +55,7 @@ function CoursesContent() {
   const { language } = useLanguage();
   const isEn = language === "en";
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedMode, setSelectedMode] = useState<
@@ -727,12 +728,22 @@ function CoursesContent() {
                         >
                           {/* TOP THUMBNAIL BANNER */}
                           <div
-                            onClick={() => setSelectedVideoCourse(course)}
+                            onClick={() => {
+                              if (course.videoUrl) {
+                                setSelectedVideoCourse(course);
+                              } else {
+                                router.push(`/courses/${course.id}`);
+                              }
+                            }}
                             className="relative h-48 sm:h-52 w-full overflow-hidden cursor-pointer group/thumb select-none"
                             title={
-                              isEn
-                                ? "Click to watch video preview"
-                                : "ভিডিও সিলেবাস দেখতে ক্লিক করুন"
+                              course.videoUrl
+                                ? (isEn
+                                    ? "Click to watch video preview"
+                                    : "ভিডিও সিলেবাস দেখতে ক্লিক করুন")
+                                : (isEn
+                                    ? "Click to view course details"
+                                    : "কোর্স বিস্তারিত দেখতে ক্লিক করুন")
                             }
                           >
                             {/* Clear Background Image with Smooth Scale-Up on hover */}
@@ -768,12 +779,14 @@ function CoursesContent() {
                               </span>
                             </div>
 
-                            {/* CENTER VIDEO PLAY BUTTON (Hidden by default, appears on hover) */}
-                            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                              <div className="w-12 h-12 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
-                                <Play size={20} className="fill-current" />
+                            {/* CENTER VIDEO PLAY BUTTON (Only if videoUrl is available) */}
+                            {course.videoUrl && (
+                              <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                                <div className="w-12 h-12 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
+                                  <Play size={20} className="fill-current" />
+                                </div>
                               </div>
-                            </div>
+                            )}
                           </div>
 
                           {/* CARD BODY CONTENT */}
@@ -955,25 +968,27 @@ function CoursesContent() {
                                 className="flex items-center gap-1.5"
                                 onClick={(e) => e.stopPropagation()}
                               >
-                                {/* Small Video Preview Button */}
-                                <button
-                                  type="button"
-                                  onClick={() => setSelectedVideoCourse(course)}
-                                  className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-[#008744] text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                                  title={
-                                    isEn
-                                      ? "Watch preview video"
-                                      : "ভিডিও প্রিভিউ"
-                                  }
-                                >
-                                  <Play
-                                    size={12}
-                                    className="fill-current text-[#DE1F26]"
-                                  />
-                                  <span className="hidden lg:inline">
-                                    {isEn ? "Preview" : "ভিডিও"}
-                                  </span>
-                                </button>
+                                {/* Small Video Preview Button (Only when video is available) */}
+                                {course.videoUrl && (
+                                  <button
+                                    type="button"
+                                    onClick={() => setSelectedVideoCourse(course)}
+                                    className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-[#008744] text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
+                                    title={
+                                      isEn
+                                        ? "Watch preview video"
+                                        : "ভিডিও প্রিভিউ"
+                                    }
+                                  >
+                                    <Play
+                                      size={12}
+                                      className="fill-current text-[#DE1F26]"
+                                    />
+                                    <span className="hidden lg:inline">
+                                      {isEn ? "Preview" : "ভিডিও"}
+                                    </span>
+                                  </button>
+                                )}
 
                                 {/* Small Enroll Button */}
                                 <a
@@ -1035,9 +1050,13 @@ function CoursesContent() {
                                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
                                   {/* Left: Thumbnail & Video Trigger */}
                                   <div
-                                    onClick={() =>
-                                      setSelectedVideoCourse(course)
-                                    }
+                                    onClick={() => {
+                                      if (course.videoUrl) {
+                                        setSelectedVideoCourse(course);
+                                      } else {
+                                        router.push(`/courses/${course.id}`);
+                                      }
+                                    }}
                                     className={`lg:col-span-4 relative h-32 sm:h-36 rounded-xl bg-gradient-to-br ${course.bgGradient} overflow-hidden p-3.5 flex flex-col justify-between text-white cursor-pointer group/vid shadow-xs`}
                                   >
                                     <img
@@ -1054,15 +1073,17 @@ function CoursesContent() {
                                       <span>★ {course.rating}</span>
                                     </div>
 
-                                    {/* Play Button */}
-                                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                                      <div className="w-10 h-10 rounded-full bg-[#008744] text-white flex items-center justify-center shadow-lg group-hover/vid:scale-110 transition-transform pl-0.5">
-                                        <Play
-                                          size={15}
-                                          className="fill-white"
-                                        />
+                                    {/* Play Button (Only if videoUrl is available) */}
+                                    {course.videoUrl && (
+                                      <div className="absolute inset-0 flex items-center justify-center z-10">
+                                        <div className="w-10 h-10 rounded-full bg-[#008744] text-white flex items-center justify-center shadow-lg group-hover/vid:scale-110 transition-transform pl-0.5">
+                                          <Play
+                                            size={15}
+                                            className="fill-white"
+                                          />
+                                        </div>
                                       </div>
-                                    </div>
+                                    )}
 
                                     <div className="relative z-10 text-xs font-bold truncate">
                                       {course.bannerTitle}

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -17,6 +18,7 @@ import { coursesData, getVideoMeta } from "@/data/coursesData";
 export default function HomeCoursesSection() {
   const { language } = useLanguage();
   const isEn = language === "en";
+  const router = useRouter();
 
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
@@ -178,8 +180,19 @@ export default function HomeCoursesSection() {
                 <div>
                   {/* Cinematic Video Thumbnail Area (Compact Height) */}
                   <div
-                    onClick={() => setSelectedVideoCourse(course)}
+                    onClick={() => {
+                      if (course.videoUrl) {
+                        setSelectedVideoCourse(course);
+                      } else {
+                        router.push(`/courses/${course.id}`);
+                      }
+                    }}
                     className="relative h-40 sm:h-44 w-full overflow-hidden cursor-pointer group/thumb select-none"
+                    title={
+                      course.videoUrl
+                        ? (isEn ? "Click to watch video preview" : "ভিডিও সিলেবাস দেখতে ক্লিক করুন")
+                        : (isEn ? "Click to view course details" : "কোর্স বিস্তারিত দেখতে ক্লিক করুন")
+                    }
                   >
                     {/* Thumbnail Image with Scale-Up on hover */}
                     <img
@@ -207,12 +220,14 @@ export default function HomeCoursesSection() {
                       </div>
                     </div>
 
-                    {/* Play Button in Center (Hidden by default, appears on hover) */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                      <div className="w-10 h-10 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
-                        <Play size={16} className="fill-current" />
+                    {/* Play Button in Center (Only if videoUrl is available) */}
+                    {course.videoUrl && (
+                      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                        <div className="w-10 h-10 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
+                          <Play size={16} className="fill-current" />
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
 
                   {/* Card Body Area (Compact) */}
