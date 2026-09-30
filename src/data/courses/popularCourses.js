@@ -317,12 +317,12 @@ module.exports = [
         "en": "WordPress Architect & Full-Stack Developer",
         "bn": "ওয়ার্ডপ্রেস আর্কিটেক্ট ও ফুল-স্ট্যাক ডেভেলপার"
       },
-      "image": "/mentors/shamim-rana.png",
+      "image": "/images/default-avatar.svg",
       "bio": {
-        "en": "2.5+ years building enterprise WordPress, WooCommerce, custom themes/plugins and full-stack web solutions.",
-        "bn": "এন্টারপ্রাইজ ওয়ার্ডপ্রেস ও উকমার্স সলিউশনে ২.৫+ বছরের অভিজ্ঞতা।"
+        "en": "6+ years building enterprise WordPress, WooCommerce, custom themes/plugins and full-stack web solutions.",
+        "bn": "এন্টারপ্রাইজ ওয়ার্ডপ্রেস ও উকমার্স সলিউশনে ৬+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "2.5+ Yrs Exp",
+      "experience": "6+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -2369,12 +2369,12 @@ module.exports = [
         "en": "Lead Web Developer & Frontend Specialist",
         "bn": "লিড ওয়েব ডেভেলপার ও ফ্রন্টএন্ড স্পেশালিস্ট"
       },
-      "image": "/mentors/shamim-rana.png",
+      "image": "/images/default-avatar.svg",
       "bio": {
-        "en": "2.5+ years engineering robust web applications, responsive architectures and mentoring students.",
-        "bn": "আন্তর্জাতিক ক্লায়েন্টদের জন্য আধুনিক ওয়েব অ্যাপ তৈরিতে ২.৫+ বছরের অভিজ্ঞতা।"
+        "en": "6+ years engineering robust web applications, responsive architectures and mentoring students.",
+        "bn": "আন্তর্জাতিক ক্লায়েন্টদের জন্য আধুনিক ওয়েব অ্যাপ তৈরিতে ৬+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "2.5+ Yrs Exp",
+      "experience": "6+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -2636,12 +2636,12 @@ module.exports = [
         "en": "Lead Full-Stack Web Developer & MERN Specialist",
         "bn": "লিড ফুল-স্ট্যাক ওয়েব ডেভেলপার ও মার্ন স্পেশালিস্ট"
       },
-      "image": "/mentors/shamim-rana.png",
+      "image": "/images/default-avatar.svg",
       "bio": {
-        "en": "2.5+ years engineering enterprise SaaS platforms, microservices, and full-stack MERN web applications.",
-        "bn": "এন্টারপ্রাইজ সাস প্ল্যাটফর্ম, মাইক্রোসার্ভিসেস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ২.৫+ বছরের অভিজ্ঞতা।"
+        "en": "6+ years engineering enterprise SaaS platforms, microservices, and full-stack MERN web applications.",
+        "bn": "এন্টারপ্রাইজ সাস প্ল্যাটফর্ম, মাইক্রোসার্ভিসেস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ৬+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "2.5+ Yrs Exp",
+      "experience": "6+ Yrs Exp",
       "verified": true
     },
     "overview": {

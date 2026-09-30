@@ -36,23 +36,23 @@ export const mentorsData: Mentor[] = [
     specialty: "web",
     department: "Department of Web & Software Engineering",
     departmentBn: "ওয়েব ও সফটওয়্যার ইঞ্জিনিয়ারিং বিভাগ",
-    trainingExp: "2.5 Years of Training Experience",
-    trainingExpBn: "২.৫ বছরের প্রশিক্ষণ অভিজ্ঞতা",
+    trainingExp: "6 Years of Training Experience",
+    trainingExpBn: "৬ বছরের প্রশিক্ষণ অভিজ্ঞতা",
     workExperiences: [
       "Senior Full-Stack Web Developer & WordPress Architect",
       "Former Lead Web Development Trainer at National ICT Project",
       "Custom Theme & Plugin Development Specialist for International Clients",
-      "Mentored 1,500+ Web & WordPress Developers into Top IT Companies",
+      "Mentored 2,500+ Web & WordPress Developers into Top IT Companies",
       "Specialized in React, Next.js, WordPress, WooCommerce & Modern Web Stacks"
     ],
     workExperiencesBn: [
       "সিনিয়র ফুল-স্ট্যাক ওয়েব ডেভেলপার ও ওয়ার্ডপ্রেস আর্কিটেক্ট",
       "সাবেক লিড ওয়েব ট্রেইনার, ন্যাশনাল আইসিটি প্রজেক্ট",
       "আন্তর্জাতিক ক্লায়েন্টদের জন্য কাস্টম থিম ও প্লাগিন বিশেষজ্ঞ",
-      "১,৫০০+ ডেভেলপারকে ওয়েব ও ওয়ার্ডপ্রেস ক্যারিয়ারে প্রতিষ্ঠিত করেছেন",
+      "২,৫০০+ ডেভেলপারকে ওয়েব ও ওয়ার্ডপ্রেস ক্যারিয়ারে প্রতিষ্ঠিত করেছেন",
       "রিঅ্যাক্ট, নেক্সট.জেএস, ওয়ার্ডপ্রেস, উকমার্স ও আধুনিক ওয়েব স্ট্যাক বিশেষজ্ঞ"
     ],
-    avatar: "/mentors/shamim-rana.png",
+    avatar: "/images/default-avatar.svg",
     rating: 4.98,
     reviewsCount: 245,
     menteesCount: "1,500+ Students",

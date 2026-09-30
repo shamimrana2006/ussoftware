@@ -50,12 +50,12 @@ module.exports = [
         "en": "Senior Web Developer & UI Architect",
         "bn": "সিনিয়র ওয়েব ডেভেলপার ও ইউআই আর্কিটেক্ট"
       },
-      "image": "/mentors/shamim-rana.png",
+      "image": "/images/default-avatar.svg",
       "bio": {
-        "en": "2.5+ years in professional web design & development, building high-converting client websites.",
-        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ২.৫+ বছরের অভিজ্ঞতা।"
+        "en": "6+ years in professional web design & development, building high-converting client websites.",
+        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ৬+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "2.5+ Yrs Exp",
+      "experience": "6+ Yrs Exp",
       "verified": true
     },
     "overview": {

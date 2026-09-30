@@ -2090,12 +2090,12 @@ module.exports = [
         "en": "Lead Full-Stack Software Architect",
         "bn": "লিড ফুল-স্ট্যাক সফটওয়্যার আর্কিটেক্ট"
       },
-      "image": "/mentors/shamim-rana.png",
+      "image": "/images/default-avatar.svg",
       "bio": {
-        "en": "2.5+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
-        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ২.৫+ বছরের অভিজ্ঞতা।"
+        "en": "6+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
+        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ৬+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "2.5+ Yrs Exp",
+      "experience": "6+ Yrs Exp",
       "verified": true
     },
     "overview": {
