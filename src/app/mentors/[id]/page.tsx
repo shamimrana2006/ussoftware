@@ -76,9 +76,17 @@ export default function MentorDetailsPage({ params }: { params: Promise<{ id: st
               {/* Avatar & Badges (Natural width, zero empty space) */}
               <div className="w-full sm:w-60 md:w-64 flex-shrink-0 flex flex-col items-center sm:items-start">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 via-[#eaf8f4] to-teal-50 border-2 border-[#aeead9] shadow-md w-full aspect-square flex items-center justify-center">
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] text-[#008744]">
-                    <User size={80} className="stroke-[1.5] text-[#008744]/70" />
-                  </div>
+                  {mentor.avatar && !mentor.avatar.includes("default-avatar") ? (
+                    <img
+                      src={mentor.avatar}
+                      alt={mentor.name}
+                      className="w-full h-full object-cover object-top scale-120 transform"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] text-[#008744]">
+                      <User size={80} className="stroke-[1.5] text-[#008744]/70" />
+                    </div>
+                  )}
                   <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-lg text-xs font-black text-[#008744] flex items-center gap-1 shadow-2xs border border-emerald-100">
                     <Star size={13} className="fill-amber-400 text-amber-400" />
                     <span>{mentor.rating}</span>

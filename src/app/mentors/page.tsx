@@ -208,9 +208,17 @@ export default function MentorsPage() {
                   {/* Left: Mentor Photo with Clean Default Human Icon or Photo */}
                   <div className="sm:col-span-5 flex-shrink-0">
                     <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-emerald-50 via-[#eaf8f4] to-teal-50 border border-[#aeead9] shadow-xs aspect-[4/5] sm:aspect-square group/img flex items-center justify-center">
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] text-[#008744] transition-transform duration-300 group-hover/img:scale-105">
-                        <User size={64} className="stroke-[1.5] text-[#008744]/70" />
-                      </div>
+                      {mentor.avatar && !mentor.avatar.includes("default-avatar") ? (
+                        <img
+                          src={mentor.avatar}
+                          alt={mentor.name}
+                          className="w-full h-full object-cover object-top scale-120 transform transition-transform duration-300 group-hover/img:scale-128"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] text-[#008744] transition-transform duration-300 group-hover/img:scale-105">
+                          <User size={64} className="stroke-[1.5] text-[#008744]/70" />
+                        </div>
+                      )}
 
                       {/* Compact Black/Brand Gradient Fade ONLY on bottom 30% behind button */}
                       <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />

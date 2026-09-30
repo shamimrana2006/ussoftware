@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -10,18 +9,16 @@ import {
   ArrowRight, MessageCircle, CheckCircle2,
   Code2, Cpu, Cloud, Smartphone, Shield, Briefcase,
   Palette, Megaphone, Database, Award, Layers, GraduationCap,
-  Play, X, Zap, ExternalLink, Globe2
+  Zap, Globe2
 } from "lucide-react";
 
-import { coursesData, getVideoMeta } from "@/data/coursesData";
+import { coursesData } from "@/data/coursesData";
 
 export default function HomeCoursesSection() {
   const { language } = useLanguage();
   const isEn = language === "en";
-  const router = useRouter();
 
   const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
 
   const categories = [
     { id: "all", label: isEn ? "All Flagship Courses" : "জনপ্রিয় কোর্সসমূহ", icon: Layers },
@@ -178,21 +175,11 @@ export default function HomeCoursesSection() {
                 />
 
                 <div>
-                  {/* Cinematic Video Thumbnail Area (Compact Height) */}
-                  <div
-                    onClick={() => {
-                      if (course.videoUrl) {
-                        setSelectedVideoCourse(course);
-                      } else {
-                        router.push(`/courses/${course.id}`);
-                      }
-                    }}
-                    className="relative h-40 sm:h-44 w-full overflow-hidden cursor-pointer group/thumb select-none"
-                    title={
-                      course.videoUrl
-                        ? (isEn ? "Click to watch video preview" : "ভিডিও সিলেবাস দেখতে ক্লিক করুন")
-                        : (isEn ? "Click to view course details" : "কোর্স বিস্তারিত দেখতে ক্লিক করুন")
-                    }
+                  {/* Thumbnail Area - Click directly navigates to course details */}
+                  <Link
+                    href={`/courses/${course.id}`}
+                    className="relative h-40 sm:h-44 w-full block overflow-hidden cursor-pointer group/thumb select-none"
+                    title={isEn ? "Click to view course details" : "কোর্স বিস্তারিত দেখতে ক্লিক করুন"}
                   >
                     {/* Thumbnail Image with Scale-Up on hover */}
                     <img
@@ -202,7 +189,7 @@ export default function HomeCoursesSection() {
                     />
 
                     {/* Subtle dark overlay on hover */}
-                    <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/40 transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/20 transition-colors duration-300" />
 
                     {/* Floating Mode Badge & Rating on Thumbnail */}
                     <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
@@ -219,16 +206,7 @@ export default function HomeCoursesSection() {
                         <span>5.0</span>
                       </div>
                     </div>
-
-                    {/* Play Button in Center (Only if videoUrl is available) */}
-                    {course.videoUrl && (
-                      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                        <div className="w-10 h-10 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
-                          <Play size={16} className="fill-current" />
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  </Link>
 
                   {/* Card Body Area (Compact) */}
                   <div className="p-3.5 sm:p-4">
@@ -239,9 +217,11 @@ export default function HomeCoursesSection() {
                     </div>
 
                     {/* Course Title */}
-                    <h3 className="font-bold text-[#08121a] text-xs sm:text-[13.5px] leading-snug group-hover:text-[#008744] transition-colors mb-2.5 line-clamp-2 min-h-[2.4rem]">
-                      {course.title}
-                    </h3>
+                    <Link href={`/courses/${course.id}`}>
+                      <h3 className="font-bold text-[#08121a] text-xs sm:text-[13.5px] leading-snug group-hover:text-[#008744] transition-colors mb-2.5 line-clamp-2 min-h-[2.4rem]">
+                        {course.title}
+                      </h3>
+                    </Link>
 
                     {/* Tech Stack Chips */}
                     <div className="flex flex-wrap gap-1 mb-3">
@@ -289,97 +269,6 @@ export default function HomeCoursesSection() {
         </div>
 
       </div>
-
-      {/* 6. INTERACTIVE VIDEO PREVIEW MODAL */}
-      <AnimatePresence>
-        {selectedVideoCourse && (() => {
-          const videoMeta = getVideoMeta(selectedVideoCourse.videoUrl);
-          return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-slate-950/85 backdrop-blur-md">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.25 }}
-                className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
-              >
-                {/* Modal Top Bar */}
-                <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/95 text-white">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#DE1F26] animate-ping" />
-                    <h4 className="text-sm font-bold truncate max-w-[280px] sm:max-w-md">
-                      {selectedVideoCourse.title}
-                    </h4>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    {videoMeta.directUrl && (
-                      <a
-                        href={videoMeta.directUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-semibold transition-colors"
-                      >
-                        <ExternalLink size={13} />
-                        <span>{videoMeta.isFacebook ? (isEn ? "Open in Facebook" : "ফেসবুকে দেখুন") : (isEn ? "Watch on YouTube" : "ভিডিও লিংক")}</span>
-                      </a>
-                    )}
-                    <button
-                      onClick={() => setSelectedVideoCourse(null)}
-                      className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-                      aria-label="Close video modal"
-                    >
-                      <X size={18} />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Video Player */}
-                <div className="relative aspect-video w-full bg-black flex items-center justify-center">
-                  <iframe
-                    src={videoMeta.embedUrl}
-                    title={selectedVideoCourse.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="w-full h-full border-0"
-                  />
-                </div>
-
-                {/* Modal Footer with Direct Enroll Action */}
-                <div className="px-6 py-4 bg-slate-950 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-slate-400">{isEn ? "Course Tuition:" : "কোর্স ফি:"}</span>
-                    <span className="text-lg font-black text-emerald-400">{selectedVideoCourse.fee}</span>
-                  </div>
-
-                  <div className="flex items-center gap-2.5">
-                    {videoMeta.directUrl && (
-                      <a
-                        href={videoMeta.directUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all flex items-center gap-1.5"
-                      >
-                        <ExternalLink size={14} />
-                        <span>{videoMeta.isFacebook ? (isEn ? "Watch on Facebook" : "ফেসবুক ভিডিও") : (isEn ? "Direct Link" : "ভিডিও লিংক")}</span>
-                      </a>
-                    )}
-                    <Link
-                      href={`/courses/${selectedVideoCourse.id}`}
-                      onClick={() => setSelectedVideoCourse(null)}
-                      className="inline-flex items-center gap-2 bg-[#008744] hover:bg-[#007038] text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-md transition-colors"
-                    >
-                      <span>{isEn ? "Enroll in this Program" : "এই প্রোগ্রামে ভর্তি হন"}</span>
-                      <ArrowRight size={14} />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          );
-        })()}
-      </AnimatePresence>
-
     </section>
   );
 }

@@ -128,7 +128,20 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
 
                 {/* Instructor Capsule */}
                 <div className="pt-2">
-                  <div className="inline-flex items-center space-x-2.5 bg-white border border-slate-200/90 rounded-full px-4 py-1.5 shadow-2xs">
+                  <div className="inline-flex items-center space-x-2 bg-white border border-slate-200/90 rounded-full pl-1.5 pr-4 py-1.5 shadow-2xs">
+                    {course.instructor.image && !course.instructor.image.includes("default-avatar") ? (
+                      <div className="w-6 h-6 rounded-full overflow-hidden border border-emerald-300 flex-shrink-0 flex items-center justify-center">
+                        <img
+                          src={course.instructor.image}
+                          alt={course.instructor.name}
+                          className="w-full h-full object-cover object-top scale-125 transform"
+                        />
+                      </div>
+                    ) : (
+                      <span className="w-6 h-6 rounded-full bg-emerald-50 text-[#008744] flex items-center justify-center text-xs flex-shrink-0">
+                        <User size={12} />
+                      </span>
+                    )}
                     <span className="text-xs text-slate-500 font-medium">
                       {isEn ? "Instructed by" : "ইনস্ট্রাক্টর:"}
                     </span>
@@ -351,8 +364,16 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                   className="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-2xs space-y-6"
                 >
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] border-2 border-[#aeead9] flex items-center justify-center text-[#008744] shadow-md flex-shrink-0">
-                      <User size={52} className="stroke-[1.5] text-[#008744]/75" />
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] border-2 border-[#aeead9] overflow-hidden flex items-center justify-center text-[#008744] shadow-md flex-shrink-0">
+                      {course.instructor.image && !course.instructor.image.includes("default-avatar") ? (
+                        <img
+                          src={course.instructor.image}
+                          alt={course.instructor.name}
+                          className="w-full h-full object-cover object-top scale-120 transform"
+                        />
+                      ) : (
+                        <User size={52} className="stroke-[1.5] text-[#008744]/75" />
+                      )}
                     </div>
 
                     <div className="space-y-3 text-center sm:text-left flex-1">

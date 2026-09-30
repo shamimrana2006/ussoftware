@@ -50,7 +50,7 @@ module.exports = [
         "en": "Senior Visual Designer & Behance Top Creator",
         "bn": "সিনিয়র ভিজ্যুয়াল ডিজাইনার ও বেহ্যান্স টপ ক্রিয়েটর"
       },
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "7+ years experience in brand identity, packaging design and top-rated freelancing.",
         "bn": "ব্র্যান্ড আইডেন্টিটি, প্যাকেজিং ডিজাইন ও টপ-রেটেড ফ্রিল্যান্সিংয়ে ৭+ বছরের অভিজ্ঞতা।"
@@ -317,12 +317,12 @@ module.exports = [
         "en": "WordPress Architect & Full-Stack Developer",
         "bn": "ওয়ার্ডপ্রেস আর্কিটেক্ট ও ফুল-স্ট্যাক ডেভেলপার"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/mentors/shamim-rana.png",
       "bio": {
-        "en": "8+ years building enterprise WordPress, WooCommerce, custom themes/plugins and full-stack web solutions.",
-        "bn": "এন্টারপ্রাইজ ওয়ার্ডপ্রেস ও উকমার্স সলিউশনে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "2.5+ years building enterprise WordPress, WooCommerce, custom themes/plugins and full-stack web solutions.",
+        "bn": "এন্টারপ্রাইজ ওয়ার্ডপ্রেস ও উকমার্স সলিউশনে ২.৫+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "8+ Yrs Exp",
+      "experience": "2.5+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -580,7 +580,7 @@ module.exports = [
         "en": "Lead Android Developer at Pathao Tech",
         "bn": "লিড অ্যান্ড্রয়েড ডেভেলপার, পাঠাও টেক"
       },
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "6+ years building high-scale Android applications with 1M+ downloads on Google Play.",
         "bn": "গুগল প্লেতে ১ মিলিয়নের বেশি ডাউনলোড হওয়া অ্যান্ড্রয়েড অ্যাপ তৈরির ৬+ বছরের অভিজ্ঞতা।"
@@ -835,7 +835,7 @@ module.exports = [
         "en": "Lead Product Designer at FinTech Global",
         "bn": "লিড প্রোডাক্ট ডিজাইনার, ফিনটেক গ্লোবাল"
       },
-      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "7+ years designing mobile apps, SaaS dashboards and design systems for European and US clients.",
         "bn": "ইউরোপ ও আমেরিকার ক্লায়েন্টদের জন্য মোবাইল অ্যাপ ও সাস ড্যাশবোর্ড ডিজাইনে ৭+ বছরের অভিজ্ঞতা।"
@@ -1090,7 +1090,7 @@ module.exports = [
         "en": "Digital Growth Strategist & Google Certified Marketer",
         "bn": "ডিজিটাল গ্রোথ স্ট্র্যাটেজিস্ট ও গুগল সার্টিফাইড মার্কেটার"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "Managed $1.5M+ in ad spend for international e-commerce brands with 5x+ average ROAS.",
         "bn": "আন্তর্জাতিক ই-কমার্স ব্র্যান্ডের জন্য $১.৫ মিলিয়নের বেশি অ্যাড স্পেন্ড ম্যানেজ করার অভিজ্ঞতা।"
@@ -1345,7 +1345,7 @@ module.exports = [
         "en": "Super Affiliate & CPA Media Buyer",
         "bn": "সুপার অ্যাফিলিয়েট ও সিপিএ মিডিয়া বায়ার"
       },
-      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "6+ years in CPA marketing, generating $500k+ revenue from MaxBounty, CPAGrip & LosPollos.",
         "bn": "ম্যাক্সবাউন্টি, সিপিএগ্রিপ ও লসপলোস থেকে $৫০০k+ আয় করা অভিজ্ঞ সিপিএ মার্কেটার।"
@@ -1600,7 +1600,7 @@ module.exports = [
         "en": "Senior Motion Designer & Commercial Film Editor",
         "bn": "সিনিয়র মোশন ডিজাইনার ও কমার্শিয়াল ফিল্ম এডিটর"
       },
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years creating television commercials, YouTube channel branding and visual effects.",
         "bn": "টিভি বিজ্ঞাপন, ইউটিউব ব্রান্ডিং ও ভিজ্যুয়াল ইফেক্টসে ৮+ বছরের অভিজ্ঞতা।"
@@ -1859,7 +1859,7 @@ module.exports = [
         "en": "Senior Mobile Architect & Google Developer Expert",
         "bn": "সিনিয়র মোবাইল আর্কিটেক্ট ও গুগল ডেভেলপার এক্সপার্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "7+ years architecting enterprise cross-platform mobile apps for iOS and Android.",
         "bn": "আইওএস ও অ্যান্ড্রয়েডের জন্য এন্টারপ্রাইজ ক্রস-প্ল্যাটফর্ম অ্যাপে ৭+ বছরের অভিজ্ঞতা।"
@@ -2114,7 +2114,7 @@ module.exports = [
         "en": "Principal Python Architect & Backend Consultant",
         "bn": "প্রিন্সিপাল পাইথন আর্কিটেক্ট ও ব্যাকএন্ড কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "9+ years engineering scalable Python backends, Django REST APIs and microservices.",
         "bn": "স্কেলেবল পাইথন ব্যাকএন্ড ও জ্যাঙ্গো এপিআই তৈরিতে ৯+ বছরের অভিজ্ঞতা।"
@@ -2369,12 +2369,12 @@ module.exports = [
         "en": "Lead Web Developer & Frontend Specialist",
         "bn": "লিড ওয়েব ডেভেলপার ও ফ্রন্টএন্ড স্পেশালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+      "image": "/mentors/shamim-rana.png",
       "bio": {
-        "en": "8+ years engineering robust web applications, responsive architectures and mentoring 2,500+ developers.",
-        "bn": "আন্তর্জাতিক ক্লায়েন্টদের জন্য আধুনিক ওয়েব অ্যাপ তৈরিতে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "2.5+ years engineering robust web applications, responsive architectures and mentoring students.",
+        "bn": "আন্তর্জাতিক ক্লায়েন্টদের জন্য আধুনিক ওয়েব অ্যাপ তৈরিতে ২.৫+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "8+ Yrs Exp",
+      "experience": "2.5+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -2621,12 +2621,12 @@ module.exports = [
     "rawFee": 40000,
     "originalFee": "55,000৳",
     "duration": {
-      "en": "150 hrs. (5 Months)",
-      "bn": "১৫০ ঘণ্টা (৫ মাস)"
+      "en": "72 hrs. (3 Months)",
+      "bn": "৭২ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "50 Classes",
-      "bn": "৫০ টি ক্লাস"
+      "en": "36 Classes",
+      "bn": "৩৬ টি ক্লাস"
     },
     "image": "/images/course thumbnail/diploma in full stack.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -2636,170 +2636,322 @@ module.exports = [
         "en": "Lead Full-Stack Web Developer & MERN Specialist",
         "bn": "লিড ফুল-স্ট্যাক ওয়েব ডেভেলপার ও মার্ন স্পেশালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/mentors/shamim-rana.png",
       "bio": {
-        "en": "8+ years engineering enterprise SaaS platforms, microservices, and full-stack MERN web applications.",
-        "bn": "এন্টারপ্রাইজ সাস প্ল্যাটফর্ম, মাইক্রোসার্ভিসেস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "2.5+ years engineering enterprise SaaS platforms, microservices, and full-stack MERN web applications.",
+        "bn": "এন্টারপ্রাইজ সাস প্ল্যাটফর্ম, মাইক্রোসার্ভিসেস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ২.৫+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "8+ Yrs Exp",
+      "experience": "2.5+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive MERN full-stack software engineering program. Topics include HTML, CSS, GitHub, Tailwind, React, Node JS, Express JS, MongoDB, Typescript, Advance NoSQL Backend, Advance Front End Project, Advance Full stack Website Build, Communicative English, Soft Skills & Marketplace.",
-      "bn": "এইচটিএমএল, সিএসএস, গিটহাব, টেইলউইন্ড, রিঅ্যাক্ট, নোড.জেএস, এক্সপ্রেস.জেএস, মঙ্গোডিবি, টাইপস্ক্রিপ্ট, অ্যাডভান্সড নোএসকিউএল ব্যাকএন্ড, অ্যাডভান্সড ফ্রন্টএন্ড এবং কমপ্লিট ফুল স্ট্যাক প্রোডাকশন ওয়েবসাইট তৈরির পূর্ণাঙ্গ মার্ন স্ট্যাক কোর্স।"
+      "en": "Comprehensive MERN full-stack software engineering program covering 7 modules, 36 sessions and 72 hours of hands-on training. Topics include Web Development & JavaScript Foundation, React.js & Tailwind CSS, Node.js & Express.js, MongoDB & Mongoose, Authentication & API Security, MERN E-Commerce and MERN Service Marketplace projects.",
+      "bn": "৭টি মডিউল, ৩৬টি সেশন ও ৭২ ঘণ্টার হ্যান্ডস-অন মার্ন স্ট্যাক ডেভেলপমেন্ট কোর্স। এতে রয়েছে জাভাস্ক্রিপ্ট ফাউন্ডেশন, রিঅ্যাক্ট.জেএস, টেইলউইন্ড সিএসএস, নোড.জেএস, এক্সপ্রেস.জেএস, মঙ্গোডিবি, অথেনটিকেশন ও সিকিউরিটি এবং ২টি পূর্ণাঙ্গ ফুল স্ট্যাক লাইভ প্রজেক্ট (ই-কমার্স ও সার্ভিস মার্কেটপ্লেস)।"
     },
     "fullDescription": {
-      "en": "Step into the most in-demand software engineering stack in the global IT market. Master modern TypeScript on both client and server, architect RESTful and GraphQL APIs with Node.js and Express, manage scalable NoSQL data with MongoDB & Mongoose and build high-performance React frontends.",
-      "bn": "এই কোর্সে আপনি টাইপস্ক্রিপ্ট, নোড.জেএস ব্যাকএন্ড, মঙ্গোডিবি ডাটাবেস আর্কিটেকচার, পেমেন্ট গেটওয়ে ইন্টিগ্রেশন, রেডিস ক্যাশিং এবং ক্লাউড সার্ভার ডেপ্লয়মেন্ট সহ আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ার হওয়ার পূর্ণাঙ্গ গাইডলাইন পাবেন।"
+      "en": "Step into the most in-demand software engineering stack in the global IT market. Master modern JavaScript, React.js, Tailwind CSS, Node.js, Express.js, and MongoDB. Build 2 industry-standard full stack projects from scratch with authentication, payment workflows, admin dashboards, deployment, and marketplace preparation.",
+      "bn": "এই কোর্সে আপনি আধুনিক জাভাস্ক্রিপ্ট, রিঅ্যাক্ট.জেএস, টেইলউইন্ড সিএসএস, নোড.জেএস ব্যাকএন্ড, মঙ্গোডিবি ডাটাবেস আর্কিটেকচার, সিকিউর অথেনটিকেশন এবং ২টি কমপ্লিট এন্টারপ্রাইজ প্রজেক্ট তৈরির মাধ্যমে প্রফেশনাল মার্ন স্ট্যাক ডেভেলপার হওয়ার পূর্ণাঙ্গ গাইডলাইন পাবেন।"
     },
     "coreValues": [
       {
         "id": "cv1",
         "title": {
-          "en": "Type-Safe Full Stack",
-          "bn": "টাইপ-সেফ ফুল স্ট্যাক"
+          "en": "Modern Frontend & Backend",
+          "bn": "মডার্ন ফ্রন্টএন্ড ও ব্যাকএন্ড"
         },
         "desc": {
-          "en": "End-to-end TypeScript from frontend React components to backend Node.js APIs.",
-          "bn": "ফ্রন্টএন্ড থেকে ব্যাকএন্ড সম্পূর্ণ টাইপস্ক্রিপ্ট আর্কিটেকচার।"
+          "en": "Complete full stack mastery with React.js, Tailwind CSS, Node.js, Express.js and MongoDB.",
+          "bn": "রিঅ্যাক্ট, টেইলউইন্ড, নোড, এক্সপ্রেস ও মঙ্গোডিবি দিয়ে সম্পূর্ণ ফুল স্ট্যাক ডেভেলপমেন্ট।"
         },
         "icon": "Code2"
       },
       {
         "id": "cv2",
         "title": {
-          "en": "Scalable NoSQL & Express",
-          "bn": "স্কেলেবল নোএসকিউএল ব্যাকএন্ড"
+          "en": "REST API & Security",
+          "bn": "রেস্ট এপিআই ও সিকিউরিটি"
         },
         "desc": {
-          "en": "Aggregation pipelines, indexing, transactions and REST APIs in Node/Express.",
-          "bn": "মঙ্গোডিবি অ্যাগ্রিগেশন ও এক্সপ্রেস জেএস ব্যাকএন্ড।"
+          "en": "JWT authentication, protected routes, data validation and professional backend architecture.",
+          "bn": "জেডব্লিউটি অথেনটিকেশন, ডাটা ভ্যালিডেশন ও প্রফেশনাল ব্যাকএন্ড আর্কিটেকচার।"
         },
-        "icon": "Database"
+        "icon": "ShieldCheck"
       },
       {
         "id": "cv3",
         "title": {
-          "en": "Complete SaaS Projects",
-          "bn": "এন্টারপ্রাইজ সাস প্রজেক্টস"
+          "en": "2 Full Stack Projects",
+          "bn": "২টি ফুল স্ট্যাক লাইভ প্রজেক্ট"
         },
         "desc": {
-          "en": "Build and deploy multi-vendor e-commerce and SaaS platforms to AWS/Vercel.",
-          "bn": "লাইভ মাল্টি-ভেন্ডর ই-কমার্স ও সাস অ্যাপ্লিকেশন প্রজেক্ট।"
+          "en": "Build MERN E-Commerce and MERN Service Marketplace with complete live deployment.",
+          "bn": "মার্ন ই-কমার্স ও মার্ন সার্ভিস মার্কেটপ্লেস প্রজেক্ট তৈরি ও লাইভ ডেপ্লয়মেন্ট।"
         },
         "icon": "Server"
       }
     ],
     "learningOutcomes": [
       {
-        "en": "Master JavaScript ESNext and TypeScript for robust, error-free full stack code.",
-        "bn": "মডার্ন জাভাস্ক্রিপ্ট ও টাইপস্ক্রিপ্টে পূর্ণ দক্ষতা অর্জন করা।"
+        "en": "Master JavaScript ES6+ fundamentals, DOM manipulation, asynchronous programming and API handling.",
+        "bn": "মডার্ন জাভাস্ক্রিপ্ট (ES6+), অ্যাসিঙ্ক্রোনাস প্রোগ্রামিং ও এপিআই হ্যান্ডলিংয়ে দক্ষতা।"
       },
       {
-        "en": "Build responsive, dynamic user interfaces with React, React Router & Tailwind CSS.",
-        "bn": "রিঅ্যাক্ট ও টেইলউইন্ড দিয়ে আধুনিক ইউআই ডিজাইন করা।"
+        "en": "Build responsive, dynamic user interfaces with React, React Router, Tailwind CSS, Context API & Redux Toolkit.",
+        "bn": "রিঅ্যাক্ট, টেইলউইন্ড, রিঅ্যাক্ট রাউটার ও রিডাক্স টুলকিট দিয়ে আধুনিক ইউআই ডিজাইন।"
       },
       {
-        "en": "Architect secure REST APIs with Node.js, Express.js, JWT authentication & middleware.",
-        "bn": "নোড.জেএস ও এক্সপ্রেস দিয়ে সিকিউর ব্যাকএন্ড এপিআই তৈরি।"
+        "en": "Architect secure REST APIs with Node.js, Express.js, JWT authentication & protected routes.",
+        "bn": "নোড.জেএস ও এক্সপ্রেস দিয়ে সিকিউর ব্যাকএন্ড এপিআই ও জেডব্লিউটি অথেনটিকেশন তৈরি।"
       },
       {
-        "en": "Design, query and optimize MongoDB databases using Mongoose schemas & aggregation.",
-        "bn": "মঙ্গোডিবি ডাটাবেস ও মাঙ্গুস দিয়ে ডেটা মডেলিং ও অপ্টিমাইজেশন।"
+        "en": "Design and optimize MongoDB databases using Mongoose schemas, relations and advanced queries.",
+        "bn": "মঙ্গোডিবি ডাটাবেস ও মাঙ্গুস দিয়ে ডেটা মডেলিং, স্কিমা ডিজাইন ও কুয়েরি অপ্টিমাইজেশন।"
       },
       {
-        "en": "Deploy production full stack web applications to AWS, Render and Vercel with CI/CD.",
-        "bn": "এডব্লিউএস ও ভার্সেলে সিআই/সিডি অটোমেশন সহ ফুল স্ট্যাক অ্যাপ ডেপ্লয় করা।"
+        "en": "Build, deploy and present 2 complete production-ready MERN projects (E-Commerce & Service Marketplace).",
+        "bn": "২টি পূর্ণাঙ্গ মার্ন প্রজেক্ট (ই-কমার্স ও সার্ভিস মার্কেটপ্লেস) তৈরি, ডেপ্লয়মেন্ট ও পোর্টফোলিও প্রেজেন্টেশন।"
       }
     ],
     "curriculum": [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Modern Frontend with React, Tailwind & TypeScript",
-          "bn": "মডিউল ১: রিঅ্যাক্ট, টেইলউইন্ড ও টাইপস্ক্রিপ্ট ফ্রন্টএন্ড"
+          "en": "Module 01: Web Development & JavaScript Foundation",
+          "bn": "মডিউল ০১: ওয়েব ডেভেলপমেন্ট ও জাভাস্ক্রিপ্ট ফাউন্ডেশন"
         },
         "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
+          "en": "6 Classes • 12 Hours",
+          "bn": "৬ টি ক্লাস • ১২ ঘণ্টা"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 6,
         "topics": [
           {
-            "en": "HTML, CSS, GitHub & Modern Tailwind CSS Architecture",
-            "bn": "এইচটিএমএল, সিএসএস, গিটহাব ও টেইলউইন্ড সিএসএস"
+            "en": "Session 01: Web Development Fundamentals",
+            "bn": "সেশন ০১: ওয়েব ডেভেলপমেন্ট ফান্ডামেন্টালস"
           },
           {
-            "en": "TypeScript Fundamentals: Generics, Interfaces, Types & Utility Types",
-            "bn": "টাইপস্ক্রিপ্ট ফান্ডামেন্টালস: টাইপস, ইন্টারফেস ও জেনেরিকস"
+            "en": "Session 02: HTML, CSS & Tailwind CSS",
+            "bn": "সেশন ০২: এইচটিএমএল, সিএসএস ও টেইলউইন্ড সিএসএস"
           },
           {
-            "en": "React with TypeScript: Components, Hooks, State & Context API",
-            "bn": "টাইপস্ক্রিপ্ট সহ রিঅ্যাক্ট: হুকস, স্টেট ও কনটেক্সট এপিআই"
+            "en": "Session 03: JavaScript Fundamentals",
+            "bn": "সেশন ০৩: জাভাস্ক্রিপ্ট ফান্ডামেন্টালস"
           },
           {
-            "en": "Advance Front End Project: Building a High-Performance Web Dashboard",
-            "bn": "অ্যাডভান্সড ফ্রন্টএন্ড প্রজেক্ট: হাই-পারফরম্যান্স Web ড্যাশবোর্ড"
+            "en": "Session 04: Modern JavaScript (ES6+)",
+            "bn": "সেশন ০৪: মডার্ন জাভাস্ক্রিপ্ট (ES6+)"
+          },
+          {
+            "en": "Session 05: JavaScript Array & Object",
+            "bn": "সেশন ০৫: জাভাস্ক্রিপ্ট অ্যারে ও অবজেক্ট"
+          },
+          {
+            "en": "Session 06: Asynchronous JavaScript & API",
+            "bn": "সেশন ০৬: অ্যাসিঙ্ক্রোনাস জাভাস্ক্রিপ্ট ও এপিআই"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Node.js, Express.js & MongoDB NoSQL Backend",
-          "bn": "মডিউল ২: নোড.জেএস, এক্সপ্রেস.জেএস ও মঙ্গোডিবি নোএসকিউএল ব্যাকএন্ড"
+          "en": "Module 02: React.js & Tailwind CSS",
+          "bn": "মডিউল ০২: রিঅ্যাক্ট.জেএস ও টেইলউইন্ড সিএসএস"
         },
         "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
+          "en": "9 Classes • 18 Hours",
+          "bn": "৯ টি ক্লাস • ১৮ ঘণ্টা"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 9,
         "topics": [
           {
-            "en": "Node JS & Express JS Architecture: Event Loop, Routing & Middleware",
-            "bn": "নোড.জেএস ও এক্সপ্রেস আর্কিটেকচার: রাউটিং ও মিডলওয়্যার"
+            "en": "Session 07: React Fundamentals",
+            "bn": "সেশন ০৭: রিঅ্যাক্ট ফান্ডামেন্টালস"
           },
           {
-            "en": "MongoDB & Mongoose: Schema Design, Validations & Aggregation Pipeline",
-            "bn": "মঙ্গোডিবি ও মাঙ্গুস: স্কিমা ডিজাইন ও অ্যাগ্রিগেশন পাইপলাইন"
+            "en": "Session 08: Props & Component Architecture",
+            "bn": "সেশন ০৮: প্রপস ও কম্পোনেন্ট আর্কিটেকচার"
           },
           {
-            "en": "Advance NoSQL Backend: Indexing, Transactions, Sharding & Performance",
-            "bn": "অ্যাডভান্সড নোএসকিউএল ব্যাকএন্ড: ইনডেক্সিং ও ট্রানজ্যাকশন"
+            "en": "Session 09: State & Events",
+            "bn": "সেশন ০৯: স্টেট ও ইভেন্টস"
           },
           {
-            "en": "Authentication & Security: JWT, Refresh Tokens, Bcrypt, Helmet & Rate Limiting",
-            "bn": "অথেনটিকেশন ও সিকিউরিটি: জেডব্লিউটি ও সিকিউরিটি হার্ডেনিং"
+            "en": "Session 10: Forms & Lists",
+            "bn": "সেশন ১০: ফর্মস ও লিস্টস"
+          },
+          {
+            "en": "Session 11: useEffect & API Integration",
+            "bn": "সেশন ১১: useEffect ও এপিআই ইন্টিগ্রেশন"
+          },
+          {
+            "en": "Session 12: React Router",
+            "bn": "সেশন ১২: রিঅ্যাক্ট রাউটার"
+          },
+          {
+            "en": "Session 13: Context API & Custom Hooks",
+            "bn": "সেশন ১৩: কনটেক্সট এপিআই ও কাস্টম হুকস"
+          },
+          {
+            "en": "Session 14: Redux Toolkit",
+            "bn": "সেশন ১৪: রিডাক্স টুলকিট"
+          },
+          {
+            "en": "Session 15: Advanced React & API Architecture",
+            "bn": "সেশন ১৫: অ্যাডভান্সড রিঅ্যাক্ট ও এপিআই আর্কিটেকচার"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Advance Full Stack Website Build & Career",
-          "bn": "মডিউল ৩: অ্যাডভান্সড ফুল স্ট্যাক ওয়েবসাইট বিল্ড ও ক্যারিয়ার"
+          "en": "Module 03: Node.js & Express.js",
+          "bn": "মডিউল ০৩: নোড.জেএস ও এক্সপ্রেস.জেএস"
         },
         "duration": {
-          "en": "20 Classes • 60 Hours",
-          "bn": "২০ টি ক্লাস • ৬০ ঘণ্টা"
+          "en": "4 Classes • 8 Hours",
+          "bn": "৪ টি ক্লাস • ৮ ঘণ্টা"
         },
-        "lessonsCount": 10,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Advance Full Stack Website Build: Multi-Vendor E-Commerce SaaS Platform",
-            "bn": "অ্যাডভান্সড ফুল স্ট্যাক ওয়েবসাইট বিল্ড: মাল্টি-ভেন্ডর ই-কমার্স সাস"
+            "en": "Session 16: Node.js Fundamentals",
+            "bn": "সেশন ১৬: নোড.জেএস ফান্ডামেন্টালস"
           },
           {
-            "en": "Payment Gateway Integration (SSLCommerz, Stripe, bKash) & Invoicing",
-            "bn": "পেমেন্ট গেটওয়ে ইন্টিগ্রেশন (এসএসএলকমার্জ, স্ট্রাইপ, বিকাশ)"
+            "en": "Session 17: Express.js",
+            "bn": "সেশন ১৭: এক্সপ্রেস.জেএস"
           },
           {
-            "en": "Cloud Deployment (AWS EC2/S3, Render, Vercel) & CI/CD Pipelines",
-            "bn": "ক্লাউড ডেপ্লয়মেন্ট (এডব্লিউএস, রেন্ডার, ভার্সেল) ও সিআই/সিডি"
+            "en": "Session 18: REST API & CRUD",
+            "bn": "সেশন ১৮: রেস্ট এপিআই ও ক্রাড (CRUD)"
           },
           {
-            "en": "Communicative English, Soft Skills, Technical Interview Prep & Marketplace",
-            "bn": "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস, টেক ইন্টারভিউ ও মার্কেটপ্লেস"
+            "en": "Session 19: Professional Backend Architecture",
+            "bn": "সেশন ১৯: প্রফেশনাল ব্যাকএন্ড আর্কিটেকচার"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Module 04: MongoDB & Mongoose",
+          "bn": "মডিউল ০৪: মঙ্গোডিবি ও মাঙ্গুস"
+        },
+        "duration": {
+          "en": "3 Classes • 6 Hours",
+          "bn": "৩ টি ক্লাস • ৬ ঘণ্টা"
+        },
+        "lessonsCount": 3,
+        "topics": [
+          {
+            "en": "Session 20: MongoDB Fundamentals",
+            "bn": "সেশন ২০: মঙ্গোডিবি ফান্ডামেন্টালস"
+          },
+          {
+            "en": "Session 21: Mongoose & Schema Design",
+            "bn": "সেশন ২১: মাঙ্গুস ও স্কিমা ডিজাইন"
+          },
+          {
+            "en": "Session 22: Practical MongoDB & Advanced Queries",
+            "bn": "সেশন ২২: প্র্যাকটিক্যাল মঙ্গোডিবি ও অ্যাডভান্সড কোয়েরিজ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Module 05: Authentication & API Security",
+          "bn": "মডিউল ০৫: অথেনটিকেশন ও এপিআই সিকিউরিটি"
+        },
+        "duration": {
+          "en": "3 Classes • 6 Hours",
+          "bn": "৩ টি ক্লাস • ৬ ঘণ্টা"
+        },
+        "lessonsCount": 3,
+        "topics": [
+          {
+            "en": "Session 23: User Authentication & JWT",
+            "bn": "সেশন ২৩: ইউজার অথেনটিকেশন ও জেডব্লিউটি (JWT)"
+          },
+          {
+            "en": "Session 24: Authorization & Protected Routes",
+            "bn": "সেশন ২৪: অথরাইজেশন ও প্রোটেক্টেড রাউটস"
+          },
+          {
+            "en": "Session 25: Validation & API Security",
+            "bn": "সেশন ২৫: ভ্যালিডেশন ও এপিআই সিকিউরিটি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Module 06: Full Stack Project 01 — MERN E-Commerce",
+          "bn": "মডিউল ০৬: ফুল স্ট্যাক প্রজেক্ট ০১ — মার্ন ই-কমার্স"
+        },
+        "duration": {
+          "en": "6 Classes • 12 Hours",
+          "bn": "৬ টি ক্লাস • ১২ ঘণ্টা"
+        },
+        "lessonsCount": 6,
+        "topics": [
+          {
+            "en": "Session 26: Project Planning & Setup",
+            "bn": "সেশন ২৬: প্রজেক্ট প্ল্যানিং ও সেটআপ"
+          },
+          {
+            "en": "Session 27: Authentication System",
+            "bn": "সেশন ২৭: অথেনটিকেশন সিস্টেম"
+          },
+          {
+            "en": "Session 28: Product Management",
+            "bn": "সেশন ২৮: প্রোডাক্ট ম্যানেজমেন্ট"
+          },
+          {
+            "en": "Session 29: Search, Filter & Shopping Cart",
+            "bn": "সেশন ২৯: সার্চ, ফিল্টার ও শপিং কার্ট"
+          },
+          {
+            "en": "Session 30: Checkout & Order Management",
+            "bn": "সেশন ৩০: চেকআউট ও অর্ডার ম্যানেজমেন্ট"
+          },
+          {
+            "en": "Session 31: Admin Dashboard & Deployment",
+            "bn": "সেশন ৩১: অ্যাডমিন ড্যাশবোর্ড ও ডেপ্লয়মেন্ট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Module 07: Full Stack Project 02 — MERN Service Marketplace",
+          "bn": "মডিউল ০৭: ফুল স্ট্যাক প্রজেক্ট ০২ — মার্ন সার্ভিস মার্কেটপ্লেস"
+        },
+        "duration": {
+          "en": "5 Classes • 10 Hours",
+          "bn": "৫ টি ক্লাস • ১০ ঘণ্টা"
+        },
+        "lessonsCount": 5,
+        "topics": [
+          {
+            "en": "Session 32: Project Planning & Setup",
+            "bn": "সেশন ৩২: প্রজেক্ট প্ল্যানিং ও সেটআপ"
+          },
+          {
+            "en": "Session 33: Service / Gig Management",
+            "bn": "সেশন ৩৩: সার্ভিস / গিগ ম্যানেজমেন্ট"
+          },
+          {
+            "en": "Session 34: Order & Review System",
+            "bn": "সেশন ৩৪: অর্ডার ও রিভিউ সিস্টেম"
+          },
+          {
+            "en": "Session 35: Advanced Features & Project Finalization",
+            "bn": "সেশন ৩৫: অ্যাডভান্সড ফিচার্স ও প্রজেক্ট ফাইনালাইজেশন"
+          },
+          {
+            "en": "Session 36: Deployment, Portfolio & Final Presentation",
+            "bn": "সেশন ৩৬: ডেপ্লয়মেন্ট, পোর্টফোলিও ও ফাইনাল প্রেজেন্টেশন"
           }
         ]
       }
@@ -2891,7 +3043,7 @@ module.exports = [
         "en": "CCIE Certified Principal Network Consultant",
         "bn": "সিসিআইই সার্টিফাইড প্রিন্সিপাল নেটওয়ার্ক কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years designing ISP, enterprise Cisco networks and data center infrastructures.",
         "bn": "আইএসপি, সিসকো এন্টারপ্রাইজ নেটওয়ার্ক ও ডাটা সেন্টারে ১২+ বছরের অভিজ্ঞতা।"

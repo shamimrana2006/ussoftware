@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, useEffect, useRef, Suspense } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -42,20 +42,18 @@ import {
   GraduationCap,
   Calendar,
   DollarSign,
-  Play,
   ChevronDown,
   ChevronUp,
   ArrowUpDown,
   ExternalLink,
 } from "lucide-react";
 import { COMPANY_STATS } from "@/data/companyStats";
-import { coursesData, getVideoMeta } from "@/data/coursesData";
+import { coursesData } from "@/data/coursesData";
 
 function CoursesContent() {
   const { language } = useLanguage();
   const isEn = language === "en";
   const searchParams = useSearchParams();
-  const router = useRouter();
 
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedMode, setSelectedMode] = useState<
@@ -69,7 +67,6 @@ function CoursesContent() {
   const [expandedRowId, setExpandedRowId] = useState<string | null>(null);
   const [selectedCourseForModal, setSelectedCourseForModal] =
     useState<any>(null);
-  const [selectedVideoCourse, setSelectedVideoCourse] = useState<any>(null);
 
   // Close sort dropdown when clicking outside
   useEffect(() => {
@@ -726,24 +723,14 @@ function CoursesContent() {
                           whileHover={{ y: -4 }}
                           className="bg-white rounded-2xl border border-slate-200/90 hover:border-emerald-200 shadow-2xs hover:shadow-[0_10px_25px_rgba(0,135,68,0.06)] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
                         >
-                          {/* TOP THUMBNAIL BANNER */}
-                          <div
-                            onClick={() => {
-                              if (course.videoUrl) {
-                                setSelectedVideoCourse(course);
-                              } else {
-                                router.push(`/courses/${course.id}`);
-                              }
-                            }}
-                            className="relative h-48 sm:h-52 w-full overflow-hidden cursor-pointer group/thumb select-none"
+                          {/* TOP THUMBNAIL BANNER - Direct link to course details */}
+                          <Link
+                            href={`/courses/${course.id}`}
+                            className="relative h-48 sm:h-52 w-full block overflow-hidden cursor-pointer group/thumb select-none"
                             title={
-                              course.videoUrl
-                                ? (isEn
-                                    ? "Click to watch video preview"
-                                    : "ভিডিও সিলেবাস দেখতে ক্লিক করুন")
-                                : (isEn
-                                    ? "Click to view course details"
-                                    : "কোর্স বিস্তারিত দেখতে ক্লিক করুন")
+                              isEn
+                                ? "Click to view course details"
+                                : "কোর্স বিস্তারিত দেখতে ক্লিক করুন"
                             }
                           >
                             {/* Clear Background Image with Smooth Scale-Up on hover */}
@@ -754,7 +741,7 @@ function CoursesContent() {
                             />
 
                             {/* Subtle dark overlay on hover */}
-                            <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/40 transition-colors duration-300" />
+                            <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/20 transition-colors duration-300" />
 
                             {/* Top Badges: Mode & Star Rating */}
                             <div className="absolute top-3 left-3 z-10 pointer-events-none">
@@ -778,16 +765,7 @@ function CoursesContent() {
                                 <span>{course.rating}</span>
                               </span>
                             </div>
-
-                            {/* CENTER VIDEO PLAY BUTTON (Only if videoUrl is available) */}
-                            {course.videoUrl && (
-                              <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                                <div className="w-12 h-12 rounded-full bg-white/90 group-hover/thumb:bg-[#008744] text-[#008744] group-hover/thumb:text-white backdrop-blur-md border border-white/50 shadow-xl opacity-0 group-hover/thumb:opacity-100 transform scale-75 group-hover/thumb:scale-100 transition-all duration-300 flex items-center justify-center pl-0.5">
-                                  <Play size={20} className="fill-current" />
-                                </div>
-                              </div>
-                            )}
-                          </div>
+                          </Link>
 
                           {/* CARD BODY CONTENT */}
                           <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
@@ -799,9 +777,11 @@ function CoursesContent() {
                               </div>
 
                               {/* Course Title */}
-                              <h3 className="font-extrabold text-slate-900 text-sm sm:text-[14.5px] leading-snug line-clamp-2 mb-2.5 group-hover:text-[#008744] transition-colors min-h-[2.4rem]">
-                                {course.title}
-                              </h3>
+                              <Link href={`/courses/${course.id}`}>
+                                <h3 className="font-extrabold text-slate-900 text-sm sm:text-[14.5px] leading-snug line-clamp-2 mb-2.5 group-hover:text-[#008744] transition-colors min-h-[2.4rem] hover:text-[#008744]">
+                                  {course.title}
+                                </h3>
+                              </Link>
 
                               {/* Metadata Row (Duration & Enrolled) */}
                               <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 font-semibold">
@@ -968,28 +948,6 @@ function CoursesContent() {
                                 className="flex items-center gap-1.5"
                                 onClick={(e) => e.stopPropagation()}
                               >
-                                {/* Small Video Preview Button (Only when video is available) */}
-                                {course.videoUrl && (
-                                  <button
-                                    type="button"
-                                    onClick={() => setSelectedVideoCourse(course)}
-                                    className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-[#008744] text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                                    title={
-                                      isEn
-                                        ? "Watch preview video"
-                                        : "ভিডিও প্রিভিউ"
-                                    }
-                                  >
-                                    <Play
-                                      size={12}
-                                      className="fill-current text-[#DE1F26]"
-                                    />
-                                    <span className="hidden lg:inline">
-                                      {isEn ? "Preview" : "ভিডিও"}
-                                    </span>
-                                  </button>
-                                )}
-
                                 {/* Small Enroll Button */}
                                 <a
                                   href={`https://wa.me/8801995852964?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20course.`}
@@ -1048,16 +1006,11 @@ function CoursesContent() {
                                 className="border-t border-slate-100 bg-slate-50/60 p-4 sm:p-6"
                               >
                                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
-                                  {/* Left: Thumbnail & Video Trigger */}
-                                  <div
-                                    onClick={() => {
-                                      if (course.videoUrl) {
-                                        setSelectedVideoCourse(course);
-                                      } else {
-                                        router.push(`/courses/${course.id}`);
-                                      }
-                                    }}
-                                    className={`lg:col-span-4 relative h-32 sm:h-36 rounded-xl bg-gradient-to-br ${course.bgGradient} overflow-hidden p-3.5 flex flex-col justify-between text-white cursor-pointer group/vid shadow-xs`}
+                                  {/* Left: Thumbnail */}
+                                  <Link
+                                    href={`/courses/${course.id}`}
+                                    className={`lg:col-span-4 relative h-32 sm:h-36 rounded-xl bg-gradient-to-br ${course.bgGradient} overflow-hidden p-3.5 flex flex-col justify-between text-white cursor-pointer group/vid shadow-xs block`}
+                                    title={isEn ? "View course details" : "কোর্স বিস্তারিত দেখুন"}
                                   >
                                     <img
                                       src={course.image}
@@ -1073,22 +1026,10 @@ function CoursesContent() {
                                       <span>★ {course.rating}</span>
                                     </div>
 
-                                    {/* Play Button (Only if videoUrl is available) */}
-                                    {course.videoUrl && (
-                                      <div className="absolute inset-0 flex items-center justify-center z-10">
-                                        <div className="w-10 h-10 rounded-full bg-[#008744] text-white flex items-center justify-center shadow-lg group-hover/vid:scale-110 transition-transform pl-0.5">
-                                          <Play
-                                            size={15}
-                                            className="fill-white"
-                                          />
-                                        </div>
-                                      </div>
-                                    )}
-
                                     <div className="relative z-10 text-xs font-bold truncate">
                                       {course.bannerTitle}
                                     </div>
-                                  </div>
+                                  </Link>
 
                                   {/* Right: Description & Comprehensive Details */}
                                   <div className="lg:col-span-8 space-y-3">
@@ -1254,129 +1195,6 @@ function CoursesContent() {
               </motion.div>
             </motion.div>
           )}
-        </AnimatePresence>
-
-        {/* VIDEO PREVIEW MODAL */}
-        <AnimatePresence>
-          {selectedVideoCourse &&
-            (() => {
-              const videoMeta = getVideoMeta(selectedVideoCourse.videoUrl);
-              return (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md"
-                  onClick={() => setSelectedVideoCourse(null)}
-                >
-                  <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.9, opacity: 0 }}
-                    className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {/* Modal Header */}
-                    <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-900 text-white">
-                      <div className="flex items-center gap-2.5">
-                        <Play
-                          size={15}
-                          className="text-[#008744] fill-[#008744]"
-                        />
-                        <span className="font-bold text-xs sm:text-sm truncate max-w-[280px] sm:max-w-md">
-                          {selectedVideoCourse.title}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        {videoMeta.directUrl && (
-                          <a
-                            href={videoMeta.directUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-semibold transition-colors"
-                          >
-                            <ExternalLink size={13} />
-                            <span>
-                              {videoMeta.isFacebook
-                                ? isEn
-                                  ? "Open in Facebook"
-                                  : "ফেসবুকে দেখুন"
-                                : isEn
-                                  ? "Watch on YouTube"
-                                  : "ভিডিও লিংক"}
-                            </span>
-                          </a>
-                        )}
-                        <button
-                          onClick={() => setSelectedVideoCourse(null)}
-                          className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center cursor-pointer transition-colors"
-                          aria-label="Close modal"
-                        >
-                          <X size={16} />
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Video Player */}
-                    <div className="relative aspect-video w-full bg-black flex items-center justify-center">
-                      <iframe
-                        src={videoMeta.embedUrl}
-                        title={selectedVideoCourse.title}
-                        className="w-full h-full border-0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                      />
-                    </div>
-
-                    {/* Modal Footer */}
-                    <div className="p-4 sm:p-5 bg-slate-950 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800">
-                      <div>
-                        <span className="text-[11px] text-slate-400 block font-medium">
-                          {isEn ? "Course Tuition" : "কোর্স ফি"}
-                        </span>
-                        <span className="text-lg font-black text-emerald-400">
-                          {selectedVideoCourse.fee}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-2.5">
-                        {videoMeta.directUrl && (
-                          <a
-                            href={videoMeta.directUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all flex items-center gap-1.5"
-                          >
-                            <ExternalLink size={14} />
-                            <span>
-                              {videoMeta.isFacebook
-                                ? isEn
-                                  ? "Watch on Facebook"
-                                  : "ফেসবুক ভিডিও"
-                                : isEn
-                                  ? "Direct Link"
-                                  : "ভিডিও লিংক"}
-                            </span>
-                          </a>
-                        )}
-                        <a
-                          href={`https://wa.me/8801995852964?text=Hello%2C%20I%20want%20to%20enroll%20in%20${encodeURIComponent(selectedVideoCourse.title)}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="bg-[#008744] hover:bg-[#007038] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-lg shadow-emerald-900/30"
-                        >
-                          <MessageCircle size={14} />
-                          <span>
-                            {isEn ? "Enroll Now" : "ভর্তি নিশ্চিত করুন"}
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              );
-            })()}
         </AnimatePresence>
       </main>
 

@@ -50,12 +50,12 @@ module.exports = [
         "en": "Senior Web Developer & UI Architect",
         "bn": "সিনিয়র ওয়েব ডেভেলপার ও ইউআই আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
+      "image": "/mentors/shamim-rana.png",
       "bio": {
-        "en": "8+ years in professional web design & development, building high-converting client websites.",
-        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "2.5+ years in professional web design & development, building high-converting client websites.",
+        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ২.৫+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "8+ Yrs Exp",
+      "experience": "2.5+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -305,7 +305,7 @@ module.exports = [
         "en": "Official Shopify Partner & E-Commerce Consultant",
         "bn": "অফিসিয়াল শপিফাই পার্টনার ও ই-কমার্স কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "Built 150+ high-revenue Shopify stores generating millions for global clients.",
         "bn": "আন্তর্জাতিক ক্লায়েন্টদের জন্য ১৫০+ সফল শপিফাই স্টোর তৈরির অভিজ্ঞতা।"
@@ -560,7 +560,7 @@ module.exports = [
         "en": "Principal Laravel Architect & Enterprise Backend Lead",
         "bn": "প্রিন্সিপাল লারাভেল আর্কিটেক্ট ও এন্টারপ্রাইজ ব্যাকএন্ড লিড"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "9+ years developing robust ERP, FinTech and custom Laravel applications for global companies.",
         "bn": "ইআরপি, ফিনটেক ও কাস্টম লারাভেল অ্যাপ্লিকেশনে ৯+ বছরের অভিজ্ঞতা।"
@@ -819,7 +819,7 @@ module.exports = [
         "en": "CCIE Certified Principal Network Consultant",
         "bn": "সিসিআইই সার্টিফাইড প্রিন্সিপাল নেটওয়ার্ক কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years in enterprise Cisco network design and data center management.",
         "bn": "সিসকো এন্টারপ্রাইজ নেটওয়ার্কে ১২+ বছরের অভিজ্ঞতা।"
@@ -1074,7 +1074,7 @@ module.exports = [
         "en": "CCIE Certified Principal Network Consultant",
         "bn": "সিসিআইই সার্টিফাইড প্রিন্সিপাল নেটওয়ার্ক কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years designing ISP, enterprise Cisco networks and data center infrastructures.",
         "bn": "আইএসপি ও এন্টারপ্রাইজ নেটওয়ার্কে ১২+ বছরের অভিজ্ঞতা।"
@@ -1329,7 +1329,7 @@ module.exports = [
         "en": "Red Hat Certified Architect (RHCA) & DevOps Lead",
         "bn": "রেড হ্যাট সার্টিফাইড আর্কিটেক্ট ও ডেভঅপ্স লিড"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years managing enterprise Red Hat Linux, cloud infrastructure and automation.",
         "bn": "এন্টারপ্রাইজ লিনাক্স ও ক্লাউড ইনফ্রাস্ট্রাকচারে ১০+ বছরের অভিজ্ঞতা।"
@@ -1584,7 +1584,7 @@ module.exports = [
         "en": "Microsoft Certified Azure Solutions Architect Expert",
         "bn": "মাইক্রোসফট সার্টিফাইড অ্যাজুর সলিউশনস আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years migrating enterprise workloads to Microsoft Azure cloud infrastructure.",
         "bn": "মাইক্রোসফট অ্যাজুর ক্লাউড মাইগ্রেশন ও আর্কিটেকচারে ৮+ বছরের অভিজ্ঞতা।"
@@ -1839,7 +1839,7 @@ module.exports = [
         "en": "AWS Certified Solutions Architect Professional",
         "bn": "এডব্লিউএস সার্টিফাইড সলিউশনস আর্কিটেক্ট প্রফেশনাল"
       },
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years architecting high-traffic cloud infrastructure on Amazon Web Services.",
         "bn": "আমাজন ওয়েব সার্ভিসেস ক্লাউড আর্কিটেকচারে ৮+ বছরের অভিজ্ঞতা।"
@@ -2094,7 +2094,7 @@ module.exports = [
         "en": "Lead Mobile Architect & Apple Developer",
         "bn": "লিড মোবাইল আর্কিটেক্ট ও অ্যাপল ডেভেলপার"
       },
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "7+ years engineering native iOS apps with millions of downloads on Apple App Store.",
         "bn": "অ্যাপল অ্যাপ স্টোরের জন্য নেটিভ আইওএস অ্যাপ তৈরিতে ৭+ বছরের অভিজ্ঞতা।"
@@ -2349,7 +2349,7 @@ module.exports = [
         "en": "Principal .NET Architect & Enterprise Consultant",
         "bn": "প্রিন্সিপাল .নেট আর্কিটেক্ট ও এন্টারপ্রাইজ কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "11+ years engineering banking, telecom and ERP systems with Microsoft .NET Core.",
         "bn": "মাইক্রোসফট .নেট কোর দিয়ে ব্যাংকিং ও ইআরপি সিস্টেমে ১১+ বছরের অভিজ্ঞতা।"
@@ -2604,7 +2604,7 @@ module.exports = [
         "en": "Competitive Programmer & CS Faculty",
         "bn": "কম্পিটিটিভ প্রোগ্রামার ও সিএস ফ্যাকাল্টি"
       },
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "Former ACM-ICPC regionalist with 10+ years teaching algorithms and computer architecture.",
         "bn": "সাবেক আইসিপিসি প্রতিযোগী ও ১০+ বছরের প্রোগ্রামিং শিক্ষক।"
@@ -2859,7 +2859,7 @@ module.exports = [
         "en": "Principal .NET Architect",
         "bn": "প্রিন্সিপাল .নেট আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "11+ years developing enterprise business applications using C# and .NET technologies.",
         "bn": "সি# ও .নেট টেকনোলজিতে ১১+ বছরের অভিজ্ঞতা।"
@@ -3114,7 +3114,7 @@ module.exports = [
         "en": "Senior Java & Android Architect",
         "bn": "সিনিয়র জাভা ও অ্যান্ড্রয়েড আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years building enterprise Java systems, Spring Boot backends and Android applications.",
         "bn": "এন্টারপ্রাইজ জাভা সিস্টেম ও স্প্রিং বুট ব্যাকএন্ডে ৮+ বছরের অভিজ্ঞতা।"
@@ -3377,7 +3377,7 @@ module.exports = [
         "en": "Lead STEM & Kids Coding Educator",
         "bn": "লিড স্টেম ও কিডস কোডিং এডুকেটর"
       },
-      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "6+ years teaching Scratch, robotics and creative programming to kids aged 8-15.",
         "bn": "৮-১৫ বছর বয়সী শিশুদের প্রোগ্রামিং ও রোবোটিক্সে ৬+ বছরের শিক্ষকতা।"

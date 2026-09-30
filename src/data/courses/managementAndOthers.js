@@ -50,7 +50,7 @@ module.exports = [
         "en": "Principal Project Director & PRINCE2 Practitioner",
         "bn": "প্রিন্সিপাল প্রজেক্ট ডিরেক্টর ও প্রিন্স২ প্র্যাকটিশনার"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years directing multi-million dollar international IT and government projects.",
         "bn": "আন্তর্জাতিক ও সরকারি মেগা প্রজেক্ট পরিচালনায় ১২+ বছরের অভিজ্ঞতা।"
@@ -305,7 +305,7 @@ module.exports = [
         "en": "PMP Certified Project Director & PMI Mentor",
         "bn": "পিএমপি সার্টিফাইড প্রজেক্ট ডিরেক্টর ও পিএমআই মেন্টর"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "14+ years directing enterprise digital transformation and coaching 1,000+ certified PMPs.",
         "bn": "১,০০০+ প্রজেক্ট ম্যানেজারকে পিএমপি পাস করানোর ১৪+ বছরের অভিজ্ঞতা।"
@@ -560,7 +560,7 @@ module.exports = [
         "en": "Principal IT Auditor & ISACA Certified Mentor",
         "bn": "প্রিন্সিপাল আইটি অডিটর ও আইসাকা মেন্টর"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years conducting banking, telecom and government IT systems security audits.",
         "bn": "ব্যাংক ও টেলিকম আইটি সিস্টেমস অডিটে ১০+ বছরের অভিজ্ঞতা।"
@@ -815,7 +815,7 @@ module.exports = [
         "en": "ITSM Lead & ITIL 4 Managing Professional",
         "bn": "আইটিএসএম লিড ও আইটিআইএল ৪ ম্যানেজিং প্রফেশনাল"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "11+ years transforming enterprise IT service management and operations across global telecom.",
         "bn": "টেলিকম ও আইটিতে আইটি সার্ভিস ম্যানেজমেন্টে ১১+ বছরের অভিজ্ঞতা।"
@@ -1070,7 +1070,7 @@ module.exports = [
         "en": "Principal Project Planner & Scheduling Consultant",
         "bn": "প্রিন্সিপাল প্রজেক্ট প্ল্যানার ও শিডিউলিং কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years creating complex project schedules for construction, software and engineering.",
         "bn": "কনস্ট্রাকশন ও আইটি মেগা প্রজেক্টের শিডিউলিংয়ে ১২+ বছরের অভিজ্ঞতা।"
@@ -1325,7 +1325,7 @@ module.exports = [
         "en": "Certified Microsoft Office Specialist Master",
         "bn": "সার্টিফাইড মাইক্রোসফট অফিস স্পেশালিস্ট মাস্টার"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years training corporate executives and administrative officers in Microsoft Office suite.",
         "bn": "কর্পোরেট কর্মকর্তা ও চাকরিপ্রার্থীদের মাইক্রোসফট অফিস প্রশিক্ষণে ৮+ বছরের অভিজ্ঞতা।"
@@ -1580,7 +1580,7 @@ module.exports = [
         "en": "Principal Big Data Architect & Data Engineer",
         "bn": "প্রিন্সিপাল বিগ ডাটা আর্কিটেক্ট ও ডাটা ইঞ্জিনিয়ার"
       },
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years architecting petabyte-scale distributed data pipelines for telecom and fin-tech.",
         "bn": "পেটাবাইট-স্কেল বিগ ডাটা আর্কিটেকচারে ১০+ বছরের অভিজ্ঞতা।"
@@ -1835,7 +1835,7 @@ module.exports = [
         "en": "Senior Research Methodologist & Statistical Analyst",
         "bn": "সিনিয়র রিসার্চ মেথডোলজিস্ট ও স্ট্যাটিস্টিক্যাল অ্যানালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years conducting quantitative research, statistical modeling and thesis data analysis.",
         "bn": "কোয়ান্টিটেটিভ রিসার্চ ও থিসিস ডাটা অ্যানালাইসিসে ১২+ বছরের অভিজ্ঞতা।"
@@ -2090,7 +2090,7 @@ module.exports = [
         "en": "Lead AI Scientist & Machine Learning Architect",
         "bn": "লিড এআই সায়েন্টিস্ট ও মেশিন লার্নিং আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years deploying predictive AI algorithms, computer vision models and NLP systems.",
         "bn": "প্রেডিক্টিভ এআই অ্যালগরিদম ও ডিপ লার্নিংয়ে ১০+ বছরের অভিজ্ঞতা।"
@@ -2345,7 +2345,7 @@ module.exports = [
         "en": "Lead Financial & Data Analyst",
         "bn": "লিড ফিন্যান্সিয়াল ও ডাটা অ্যানালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years building enterprise financial models, reporting dashboards and Excel automations.",
         "bn": "এক্সেল ফিন্যান্সিয়াল মডেলিং ও অটোমেশনে ৮+ বছরের অভিজ্ঞতা।"
@@ -2600,7 +2600,7 @@ module.exports = [
         "en": "Top Amazon KDP Publisher & Author",
         "bn": "টপ আমাজন কেডিপি পাবলিশার ও লেখক"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "Published 200+ bestselling books on Amazon generating $3,000+/month passive royalties.",
         "bn": "আমাজনে ২০০+ বই প্রকাশ করে প্রতি মাসে সফল রয়্যালটি আয়ের বাস্তব অভিজ্ঞতা।"
@@ -2855,7 +2855,7 @@ module.exports = [
         "en": "Lead SAP S/4HANA Enterprise Architect",
         "bn": "লিড এসএপি এস/৪ হানা এন্টারপ্রাইজ আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years implementing SAP ERP for Fortune 500 multinationals, garment conglomerates and telecom.",
         "bn": "বহুজাতিক ও বৃহৎ শিল্পগ্রুপে এসএপি ইআরপি বাস্তবায়নে ১২+ বছরের অভিজ্ঞতা।"

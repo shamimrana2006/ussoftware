@@ -50,7 +50,7 @@ module.exports = [
         "en": "Senior Oracle DBA & Data Center Consultant",
         "bn": "সিনিয়র ওরাকল ডিবিএ ও ডাটা সেন্টার কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years managing multi-terabyte mission-critical Oracle databases for banks and telecom.",
         "bn": "ব্যাংক ও টেলিকমের ওরাকল ডাটাবেস পরিচালনায় ১২+ বছরের অভিজ্ঞতা।"
@@ -305,7 +305,7 @@ module.exports = [
         "en": "Oracle APEX Architect & ERP Consultant",
         "bn": "ওরাকল অ্যাপেক্স আর্কিটেক্ট ও ইআরপি কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years architecting enterprise ERP, Supply Chain and HR software on Oracle APEX.",
         "bn": "ওরাকল অ্যাপেক্সে ইআরপি ও এইচআরএম সফটওয়্যার তৈরিতে ১০+ বছরের অভিজ্ঞতা।"
@@ -560,7 +560,7 @@ module.exports = [
         "en": "Lead Financial Analyst & BI Specialist",
         "bn": "লিড ফিন্যান্সিয়াল অ্যানালিস্ট ও বিআই স্পেশালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years in corporate financial modeling, automated data pipelines and business intelligence.",
         "bn": "কর্পোরেট ফিন্যান্সিয়াল মডেলিং ও অটোমেশনে ৮+ বছরের অভিজ্ঞতা।"
@@ -815,7 +815,7 @@ module.exports = [
         "en": "Lead Penetration Tester & Certified Ethical Hacker",
         "bn": "লিড পেনিট্রেশন টেস্টার ও সার্টিফাইড এথিক্যাল হ্যাকার"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years conducting red teaming, vulnerability assessments and bug bounty hunting.",
         "bn": "রেড টিমিং ও ভালনারেবিলিটি অ্যাসেসমেন্টে ৮+ বছরের অভিজ্ঞতা।"
@@ -1070,7 +1070,7 @@ module.exports = [
         "en": "Lead SOC Architect & Cyber Security Consultant",
         "bn": "লিড এসওসি আর্কিটেক্ট ও সাইবার সিকিউরিটি কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years managing enterprise Security Operations Centers (SOC) and incident response.",
         "bn": "এন্টারপ্রাইজ এসওসি ও সাইবার সিকিউরিটিতে ৮+ বছরের অভিজ্ঞতা।"
@@ -1325,7 +1325,7 @@ module.exports = [
         "en": "Lead Digital Forensics Investigator & CHFI",
         "bn": "লিড ডিজিটাল ফরেনসিক ইনভেস্টিগেটর ও সিএইচএফআই"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years investigating cyber crimes, financial fraud and digital forensic evidence.",
         "bn": "সাইবার ক্রাইম তদন্ত ও ডিজিটাল ফরেনসিকে ৮+ বছরের অভিজ্ঞতা।"
@@ -1580,7 +1580,7 @@ module.exports = [
         "en": "CISSP Certified Chief Information Security Officer (CISO)",
         "bn": "সিআইএসএসপি সার্টিফাইড চিফ ইনফরমেশন সিকিউরিটি অফিসার"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years in executive cyber security governance, compliance and enterprise risk management.",
         "bn": "সাইবার সিকিউরিটি গভর্নেন্স ও এন্টারপ্রাইজ রিস্ক ম্যানেজমেন্টে ১২+ বছরের অভিজ্ঞতা।"
@@ -1835,7 +1835,7 @@ module.exports = [
         "en": "Creative Director & Lead Multimedia Architect",
         "bn": "ক্রিয়েটিভ ডিরেক্টর ও লিড মাল্টিমিডিয়া আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years directing commercial television animations, films and digital multimedia studios.",
         "bn": "কমার্শিয়াল টিভি অ্যানিমেশন ও ফিল্ম প্রোডাকশনে ১০+ বছরের অভিজ্ঞতা।"
@@ -2090,12 +2090,12 @@ module.exports = [
         "en": "Lead Full-Stack Software Architect",
         "bn": "লিড ফুল-স্ট্যাক সফটওয়্যার আর্কিটেক্ট"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/mentors/shamim-rana.png",
       "bio": {
-        "en": "8+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
-        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "2.5+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
+        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ২.৫+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "8+ Yrs Exp",
+      "experience": "2.5+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -2345,7 +2345,7 @@ module.exports = [
         "en": "CCIE Certified Principal Network Consultant",
         "bn": "সিসিআইই সার্টিফাইড প্রিন্সিপাল নেটওয়ার্ক কনসালট্যান্ট"
       },
-      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years designing ISP, enterprise Cisco networks and data center infrastructures.",
         "bn": "আইএসপি ও এন্টারপ্রাইজ নেটওয়ার্কে ১২+ বছরের অভিজ্ঞতা।"
@@ -2600,7 +2600,7 @@ module.exports = [
         "en": "JLPT N1 Certified Lead Japanese Instructor",
         "bn": "জেএলপিটি এন১ সার্টিফাইড লিড জাপানিজ ইনস্ট্রাক্টর"
       },
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "Graduated from Tokyo University with 8+ years teaching Japanese language and culture.",
         "bn": "টোকিও ইউনিভার্সিটির গ্র্যাজুয়েট ও ৮+ বছরের জাপানিজ ভাষা শিক্ষক।"
@@ -2855,7 +2855,7 @@ module.exports = [
         "en": "TOPIK Level 6 Certified Korean Expert",
         "bn": "টপিক লেভেল ৬ সার্টিফাইড কোরিয়ান এক্সপার্ট"
       },
-      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "7+ years preparing candidates for BOESL South Korea EPS-TOPIK government jobs.",
         "bn": "বোয়েসেল দক্ষিণ কোরিয়া ইপিএস-টপিক সরকারি চাকরির ৭+ বছরের অভিজ্ঞ শিক্ষক।"
@@ -3110,7 +3110,7 @@ module.exports = [
         "en": "Goethe Certified C1 German Specialist",
         "bn": "গ্যোথে সার্টিফাইড সি১ জার্মান স্পেশালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "Studied in Munich, Germany with 8+ years preparing students for Goethe-Institut exams.",
         "bn": "জার্মানির মিউনিখে পড়ালেখা করা ও গ্যোথে পরীক্ষার ৮+ বছরের অভিজ্ঞ শিক্ষক।"
@@ -3365,7 +3365,7 @@ module.exports = [
         "en": "IELTS Band 8.5 Lead Trainer & British Council Certified",
         "bn": "আইইএলটিএস ব্যান্ড ৮.৫ ট্রেইনার ও ব্রিটিশ কাউন্সিল সার্টিফাইড"
       },
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years mentoring 4,000+ students achieve Band 7.0 to 8.5 for study in UK, USA, Canada & Australia.",
         "bn": "ইউকে, কানাডা ও অস্ট্রেলিয়ায় উচ্চশিক্ষার জন্য ৪,০০০+ শিক্ষার্থীকে ব্যান্ড ৭-৮.৫ পাওয়ানোর অভিজ্ঞতা।"
@@ -3620,7 +3620,7 @@ module.exports = [
         "en": "Lead Corporate Communication & Spoken English Coach",
         "bn": "লিড কর্পোরেট কমিউনিকেশন ও স্পোকেন ইংলিশ কোচ"
       },
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "10+ years training executives, students and job seekers in fluent English communication.",
         "bn": "কর্পোরেট কর্মকর্তা ও শিক্ষার্থীদের সাবলীল ইংরেজি শেখানোর ১০+ বছরের অভিজ্ঞতা।"
@@ -3875,7 +3875,7 @@ module.exports = [
         "en": "Lead Early Childhood English Specialist",
         "bn": "লিড চাইল্ডহুড ইংলিশ স্পেশালিস্ট"
       },
-      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "8+ years developing phonics and creative English speaking curricula for children aged 5-14.",
         "bn": "৫-১৪ বছর বয়সী শিশুদের আনন্দময় ইংরেজি শিক্ষাদানে ৮+ বছরের অভিজ্ঞতা।"
@@ -4130,7 +4130,7 @@ module.exports = [
         "en": "Lead Healthcare & Caregiver Master Trainer",
         "bn": "লিড হেলথকেয়ার ও কেয়ারগিভার মাস্টার ট্রেইনার"
       },
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
+      "image": "/images/default-avatar.svg",
       "bio": {
         "en": "12+ years training certified caregivers and healthcare assistants for UK, Canada, Australia and Japan.",
         "bn": "ইউকে, কানাডা ও জাপানের জন্য আন্তর্জাতিক মানের কেয়ারগিভার তৈরির ১২+ বছরের অভিজ্ঞতা।"
