@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   Play, Star, Users, Award, CheckCircle2,
   Sparkles, ArrowRight, X, ExternalLink,
-  Code2, Cpu, Smartphone, Cloud, Layers
+  Code2, Cpu, Smartphone, Cloud, Layers, User
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { COMPANY_STATS } from "@/data/companyStats";
@@ -368,84 +368,7 @@ export default function ProjectsPage() {
         <section className="max-w-[96rem] mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-14 space-y-16">
           
           {/* SECTION 1: VIDEO SUCCESS STORIES */}
-          {(activeTab === "all" || activeTab === "stories") && (
-            <div>
-              {activeTab === "all" && (
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#008744]"></span>
-                      <span>{isEn ? "Student Video Stories" : "শিক্ষার্থীদের ভিডিও সাফল্যের গল্প"}</span>
-                    </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">{isEn ? "Real documentary stories of career transformation" : "বাস্তব ক্যারিয়ার রূপান্তরের গল্প ও অভিজ্ঞতা"}</p>
-                  </div>
-                  <button onClick={() => setActiveTab("stories")} className="text-xs font-bold text-[#008744] hover:underline flex items-center gap-1 cursor-pointer">
-                    <span>{isEn ? "View All Stories" : "সব গল্প দেখুন"}</span>
-                    <ArrowRight size={12} />
-                  </button>
-                </div>
-              )}
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {videoStories.map((story) => (
-                  <div
-                    key={story.id}
-                    onClick={() => setSelectedVideo(story)}
-                    className="group relative bg-[#091b24] rounded-3xl overflow-hidden shadow-lg border border-slate-800/80 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
-                  >
-                    {/* Thumbnail Container */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <img
-                        src={story.thumbnail}
-                        alt={story.title}
-                        className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-500"
-                      />
-
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#091b24] via-black/40 to-black/20" />
-
-                      {/* Top Left: Success Story Badge (Orange Pill matching Screenshot) */}
-                      <div className="absolute top-3.5 left-3.5 bg-[#f97316] text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-md shadow-md">
-                        {story.badge}
-                      </div>
-
-                      {/* Top Right: Duration */}
-                      <div className="absolute top-3.5 right-3.5 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-0.5 rounded-md">
-                        {story.duration}
-                      </div>
-
-                      {/* Center: Play Button matching Screenshot */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-13 h-13 rounded-full bg-white/30 backdrop-blur-md border-2 border-white flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.4)] group-hover:scale-115 group-hover:bg-[#008744] group-hover:border-[#008744] transition-all duration-300">
-                          <Play size={20} className="text-white fill-white ml-0.5" />
-                        </div>
-                      </div>
-
-                      {/* Bottom Caption Overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#091b24] via-[#091b24]/90 to-transparent">
-                        <h3 className="text-white font-black text-sm sm:text-base leading-snug line-clamp-1 group-hover:text-emerald-300 transition-colors">
-                          {story.title}
-                        </h3>
-                        <div className="text-xs text-slate-300 font-medium mt-1 flex items-center justify-between">
-                          <span>{story.studentName}</span>
-                          <span className="text-[11px] text-emerald-400 font-semibold">{story.course}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Card Bottom Strip */}
-                    <div className="p-3.5 bg-[#08151c] border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-                      <span className="truncate">{story.highlight}</span>
-                      <span className="text-[#008744] font-bold text-[11px] group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5">
-                        Watch <ArrowRight size={11} />
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
+       
           {/* SECTION 2: CLIENT & CAPSTONE PROJECTS */}
           {(activeTab === "all" || activeTab === "projects") && (
             <div>
@@ -539,11 +462,9 @@ export default function ProjectsPage() {
                       {/* Top Row: Avatar & Rating */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-3">
-                          <img
-                            src={fb.avatar}
-                            alt={fb.name}
-                            className="w-12 h-12 rounded-2xl object-cover border border-slate-200 shadow-xs"
-                          />
+                          <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-[#008744] shadow-xs shrink-0">
+                            <User size={22} className="stroke-[2]" />
+                          </div>
                           <div>
                             <h4 className="text-sm sm:text-base font-black text-slate-900 leading-snug">{fb.name}</h4>
                             <div className="text-[11px] font-bold text-[#008744]">{fb.role}</div>

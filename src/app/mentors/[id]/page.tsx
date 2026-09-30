@@ -13,7 +13,7 @@ import {
   Briefcase, CheckSquare, Sparkles,
   GraduationCap, BookOpen, Users,
   Check, ArrowRight, ShieldCheck,
-  Video, Code2, Globe2
+  Video, Code2, Globe2, User
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { mentorsData } from "@/data/mentorsData";
@@ -75,16 +75,22 @@ export default function MentorDetailsPage({ params }: { params: Promise<{ id: st
               
               {/* Avatar & Badges (Natural width, zero empty space) */}
               <div className="w-full sm:w-60 md:w-64 flex-shrink-0 flex flex-col items-center sm:items-start">
-                <div className="relative overflow-hidden rounded-2xl bg-slate-900 border-2 border-slate-700/80 shadow-md w-full aspect-square">
-                  <img
-                    src={mentor.avatar || "/images/default-avatar.svg"}
-                    alt={isEn ? mentor.name : mentor.nameBn}
-                    onError={(e) => {
-                      e.currentTarget.src = "/images/default-avatar.svg";
-                    }}
-                    className="w-full h-full object-cover object-top"
-                  />
-                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-lg text-xs font-black text-[#008744] flex items-center gap-1 shadow-2xs">
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 via-[#eaf8f4] to-teal-50 border-2 border-[#aeead9] shadow-md w-full aspect-square flex items-center justify-center">
+                  {mentor.avatar && mentor.avatar !== "/images/default-avatar.svg" ? (
+                    <img
+                      src={mentor.avatar}
+                      alt={isEn ? mentor.name : mentor.nameBn}
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] text-[#008744]">
+                      <User size={80} className="stroke-[1.5] text-[#008744]/70" />
+                    </div>
+                  )}
+                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-lg text-xs font-black text-[#008744] flex items-center gap-1 shadow-2xs border border-emerald-100">
                     <Star size={13} className="fill-amber-400 text-amber-400" />
                     <span>{mentor.rating}</span>
                   </div>

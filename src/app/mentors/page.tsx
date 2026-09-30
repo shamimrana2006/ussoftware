@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, Sparkles, Briefcase, CheckSquare,
-  ChevronRight, ChevronDown, ChevronUp, Users
+  ChevronRight, ChevronDown, ChevronUp, Users, User
 } from "lucide-react";
 import { mentorsData } from "@/data/mentorsData";
 
@@ -205,20 +205,26 @@ export default function MentorsPage() {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6 items-start">
 
-                  {/* Left: Mentor Photo with 15% Black Fade-in & Scale-Up / Lift Animation on Hover */}
+                  {/* Left: Mentor Photo with Clean Default Human Icon or Photo */}
                   <div className="sm:col-span-5 flex-shrink-0">
-                    <div className="relative overflow-hidden rounded-xl bg-slate-900 border border-slate-700/60 shadow-xs aspect-[4/5] sm:aspect-square group/img">
-                      <img
-                        src={mentor.avatar || "/images/default-avatar.svg"}
-                        alt={isEn ? mentor.name : mentor.nameBn}
-                        onError={(e) => {
-                          e.currentTarget.src = "/images/default-avatar.svg";
-                        }}
-                        className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-105"
-                      />
+                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-emerald-50 via-[#eaf8f4] to-teal-50 border border-[#aeead9] shadow-xs aspect-[4/5] sm:aspect-square group/img flex items-center justify-center">
+                      {mentor.avatar && mentor.avatar !== "/images/default-avatar.svg" ? (
+                        <img
+                          src={mentor.avatar}
+                          alt={isEn ? mentor.name : mentor.nameBn}
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                          className="w-full h-full object-cover object-top transition-transform duration-300 ease-out group-hover/img:scale-105"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] text-[#008744] transition-transform duration-300 group-hover/img:scale-105">
+                          <User size={64} className="stroke-[1.5] text-[#008744]/70" />
+                        </div>
+                      )}
 
-                      {/* Compact Black Gradient Fade ONLY on bottom 30% behind button */}
-                      <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                      {/* Compact Black/Brand Gradient Fade ONLY on bottom 30% behind button */}
+                      <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                       {/* "View Details >" Link Button sliding in on hover */}
                       <Link
