@@ -26,6 +26,7 @@ import {
   ChevronDown,
   ShieldCheck,
   Flame,
+  User,
 } from "lucide-react";
 
 export default function EventsPage() {
@@ -214,12 +215,8 @@ export default function EventsPage() {
 
                     {/* Speaker Info in overlay */}
                     <div className="absolute bottom-4 left-4 right-4 text-white flex items-center space-x-3 bg-black/40 backdrop-blur-md p-3 rounded-2xl border border-white/10">
-                      <div className="w-10 h-10 rounded-full overflow-hidden border border-emerald-400 flex-shrink-0 bg-slate-800">
-                        <img
-                          src={evt.speakerAvatar}
-                          alt="Speaker"
-                          className="w-full h-full object-cover"
-                        />
+                      <div className="w-10 h-10 rounded-full border border-emerald-400 flex items-center justify-center flex-shrink-0 bg-emerald-950/70 text-emerald-300">
+                        <User size={20} className="stroke-[1.8]" />
                       </div>
                       <div className="min-w-0">
                         <div className="text-xs font-bold truncate">

@@ -3,7 +3,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-import { Star, Quote, Award, TrendingUp, CheckCircle2, Building2 } from "lucide-react";
+import { Star, Quote, Award, TrendingUp, CheckCircle2, Building2, User } from "lucide-react";
 
 export default function HomeSuccessSection() {
   const { language } = useLanguage();
@@ -177,11 +177,9 @@ export default function HomeSuccessSection() {
 
               {/* Author & Placement Details */}
               <div className="pt-3 border-t border-slate-100 flex items-center gap-3">
-                <img 
-                  src={story.avatar} 
-                  alt={story.name}
-                  className="w-9 h-9 rounded-full object-cover border-2 border-[#008744]/30" 
-                />
+                <div className="w-9 h-9 rounded-full bg-[#edf9f6] border border-[#aeead9] flex items-center justify-center text-[#008744] shrink-0 shadow-2xs">
+                  <User size={18} className="stroke-[2]" />
+                </div>
                 <div className="min-w-0">
                   <h4 className="font-extrabold text-[#08121a] text-xs sm:text-sm truncate">{story.name}</h4>
                   <p className="text-[11px] font-semibold text-[#008744] truncate">{story.role}</p>

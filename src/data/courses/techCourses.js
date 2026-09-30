@@ -45,15 +45,15 @@ module.exports = [
     "image": "/images/course thumbnail/enterprise full stack next.js 15.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
-      "name": "Engr. Tanvir Hasan",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "Senior Frontend Web Architect",
-        "bn": "সিনিয়র ফ্রন্টএন্ড ওয়েব আর্কিটেক্ট"
+        "en": "Senior Web Developer & UI Architect",
+        "bn": "সিনিয়র ওয়েব ডেভেলপার ও ইউআই আর্কিটেক্ট"
       },
       "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "8+ years in professional UI web development, mentoring 2,000+ engineers.",
-        "bn": "প্রফেশনাল ওয়েব ডিজাইনে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years in professional web design & development, building high-converting client websites.",
+        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ৮+ বছরের অভিজ্ঞতা।"
       },
       "experience": "8+ Yrs Exp",
       "verified": true

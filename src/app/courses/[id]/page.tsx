@@ -28,7 +28,8 @@ import {
   FileCheck,
   Check,
   ExternalLink,
-  X
+  X,
+  User
 } from "lucide-react";
 
 export default function CourseDetailsPage({ params }: { params: Promise<{ id: string }> }) {
@@ -350,11 +351,9 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                   className="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-2xs space-y-6"
                 >
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                    <img
-                      src={course.instructor.image}
-                      alt={course.instructor.name}
-                      className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-emerald-200 shadow-md flex-shrink-0"
-                    />
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-b from-[#eaf8f4] to-[#edf9f6] border-2 border-[#aeead9] flex items-center justify-center text-[#008744] shadow-md flex-shrink-0">
+                      <User size={52} className="stroke-[1.5] text-[#008744]/75" />
+                    </div>
 
                     <div className="space-y-3 text-center sm:text-left flex-1">
                       <div>
@@ -400,7 +399,9 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                     <div key={rev.id} className="p-4 rounded-xl bg-slate-50/80 border border-slate-200/70 space-y-2.5">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2.5">
-                          <img src={rev.avatar} alt={rev.name} className="w-9 h-9 rounded-full object-cover" />
+                          <div className="w-9 h-9 rounded-full bg-[#edf9f6] border border-[#aeead9] flex items-center justify-center text-[#008744] shrink-0 shadow-2xs">
+                            <User size={18} className="stroke-[2]" />
+                          </div>
                           <div>
                             <h4 className="text-xs sm:text-sm font-bold text-slate-900">{rev.name}</h4>
                             <p className="text-[10px] text-slate-500">{rev.role[isEn ? "en" : "bn"]}</p>

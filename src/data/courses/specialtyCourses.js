@@ -2085,17 +2085,17 @@ module.exports = [
     "image": "/images/course thumbnail/diploma in web technology.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
-      "name": "Mahmudul Hasan Tanvir",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "Principal Software Architect at Brain Station 23",
-        "bn": "প্রিন্সিপাল সফটওয়্যার আর্কিটেক্ট, ব্রেন স্টেশন ২৩"
+        "en": "Lead Full-Stack Software Architect",
+        "bn": "লিড ফুল-স্ট্যাক সফটওয়্যার আর্কিটেক্ট"
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "10+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
-        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ১০+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
+        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ৮+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "10+ Yrs Exp",
+      "experience": "8+ Yrs Exp",
       "verified": true
     },
     "overview": {

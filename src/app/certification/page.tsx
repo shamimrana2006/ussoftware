@@ -80,7 +80,7 @@ export default function CertificationPage() {
       issueDate: "15 August 2026",
       grade: isEn ? "High Honors (Grade A+)" : "হাই অনার্স (গ্রেড এ+)",
       credentialHash: "0x4B9E21A0F88D93C5512B0A4E90123F1C",
-      instructor: "Engr. Tanvir Hasan",
+      instructor: "MD Shamim Rana",
       director: "Shafiul Alam",
       status: isEn ? "ACTIVE & VERIFIED" : "সক্রিয় ও ভেরিফাইড",
       skills: ["Next.js 16", "React 19", "Node.js", "PostgreSQL", "Docker", "TypeScript"],

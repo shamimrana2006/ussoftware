@@ -28,29 +28,29 @@ export interface Mentor {
 
 export const mentorsData: Mentor[] = [
   {
-    id: "mahmudul-hasan",
-    name: "Mahmudul Hasan Tanvir",
-    nameBn: "মাহমুদুল হাসান তানভীর",
-    role: "Department Head • Web Architecture",
-    roleBn: "ডিপার্টমেন্ট হেড • ওয়েব আর্কিটেকচার",
+    id: "md-shamim-rana",
+    name: "MD Shamim Rana",
+    nameBn: "মোঃ শামীম রানা",
+    role: "Department Head • Web & WordPress Development",
+    roleBn: "ডিপার্টমেন্ট হেড • ওয়েব ও ওয়ার্ডপ্রেস ডেভেলপমেন্ট",
     specialty: "web",
     department: "Department of Web & Software Engineering",
     departmentBn: "ওয়েব ও সফটওয়্যার ইঞ্জিনিয়ারিং বিভাগ",
-    trainingExp: "7 Years of Training Experience",
-    trainingExpBn: "৭ বছরের প্রশিক্ষণ অভিজ্ঞতা",
+    trainingExp: "8 Years of Training Experience",
+    trainingExpBn: "৮ বছরের প্রশিক্ষণ অভিজ্ঞতা",
     workExperiences: [
-      "Principal Software Engineer at Brain Station 23",
+      "Senior Full-Stack Web Developer & WordPress Architect",
       "Former Lead Web Development Trainer at National ICT Project",
-      "Senior Full-Stack Architect for European FinTech Applications",
-      "Mentored 3,500+ Web Developers into Top IT Companies",
-      "Specialized in Next.js 15, PostgreSQL & Scalable Microservices"
+      "Custom Theme & Plugin Development Specialist for International Clients",
+      "Mentored 3,500+ Web & WordPress Developers into Top IT Companies",
+      "Specialized in React, Next.js, WordPress, WooCommerce & Modern Web Stacks"
     ],
     workExperiencesBn: [
-      "প্রিন্সিপাল সফটওয়্যার ইঞ্জিনিয়ার, ব্রেন স্টেশন ২৩",
+      "সিনিয়র ফুল-স্ট্যাক ওয়েব ডেভেলপার ও ওয়ার্ডপ্রেস আর্কিটেক্ট",
       "সাবেক লিড ওয়েব ট্রেইনার, ন্যাশনাল আইসিটি প্রজেক্ট",
-      "সিনিয়র ফুল-স্ট্যাক আর্কিটেক্ট, ইউরোপিয়ান ফিনটেক প্রজেক্ট",
-      "৩,৫০০+ ডেভেলপারকে আন্তর্জাতিক ক্যারিয়ারে প্রতিষ্ঠিত করেছেন",
-      "নেক্সট.জেএস ১৫, পোস্টগ্রেএসকিউএল ও মাইক্রোসার্ভিসেস বিশেষজ্ঞ"
+      "আন্তর্জাতিক ক্লায়েন্টদের জন্য কাস্টম থিম ও প্লাগিন বিশেষজ্ঞ",
+      "৩,৫০০+ ডেভেলপারকে ওয়েব ও ওয়ার্ডপ্রেস ক্যারিয়ারে প্রতিষ্ঠিত করেছেন",
+      "রিঅ্যাক্ট, নেক্সট.জেএস, ওয়ার্ডপ্রেস, উকমার্স ও আধুনিক ওয়েব স্ট্যাক বিশেষজ্ঞ"
     ],
     avatar: "/images/default-avatar.svg",
     rating: 4.98,
@@ -58,22 +58,22 @@ export const mentorsData: Mentor[] = [
     menteesCount: "3,500+ Students",
     nextSlot: "Today, 7:00 PM",
     nextSlotBn: "আজ, সন্ধ্যা ৭:০০",
-    bio: "Passionate Full-Stack Architect and Department Head with extensive expertise in modern JavaScript ecosystems, Next.js 15, distributed backend architecture and PostgreSQL query tuning. Dedicated to preparing students for high-ticket global freelancing and enterprise software roles.",
-    bioBn: "আধুনিক জাভাস্ক্রিপ্ট ইকোসিস্টেম, নেক্সট.জেএস ১৫, ডিস্ট্রিবিউটেড ব্যাকএন্ড আর্কিটেকচার ও ডাটাবেস অপ্টিমাইজেশনে দক্ষ ফুল-স্ট্যাক আর্কিটেক্ট ও ডিপার্টমেন্ট হেড। শিক্ষার্থীদের আন্তর্জাতিক জব মার্কেট ও এন্টারপ্রাইজ ক্যারিয়ারের জন্য প্রস্তুত করতে নিবেদিত।",
-    skills: ["Next.js 15", "React", "Node.js", "TypeScript", "PostgreSQL", "Kafka", "Docker", "Tailwind CSS", "REST & GraphQL"],
+    bio: "Passionate Full-Stack Web Developer, WordPress Architect and Department Head with extensive expertise in modern web technologies, WordPress ecosystems, custom themes/plugins, and scalable frontend architectures. Dedicated to preparing students for high-ticket global freelancing and enterprise tech roles.",
+    bioBn: "আধুনিক ওয়েব প্রযুক্তি, ওয়ার্ডপ্রেস ইকোসিস্টেম, কাস্টম থিম ও প্লাগিন ডেভেলপমেন্ট এবং রেসপনসিভ ফ্রন্টএন্ড আর্কিটেকচারে দক্ষ সিনিয়র ওয়েব ডেভেলপার ও ডিপার্টমেন্ট হেড। শিক্ষার্থীদের আন্তর্জাতিক মার্কেটপ্লেস ও এন্টারপ্রাইজ ক্যারিয়ারের জন্য প্রস্তুত করতে নিবেদিত।",
+    skills: ["WordPress", "WooCommerce", "HTML5/CSS3", "Tailwind CSS", "JavaScript", "React", "Next.js", "PHP", "Git & GitHub"],
     education: [
       { degree: "B.Sc. in Computer Science & Engineering", institution: "BUET", year: "2017" },
       { degree: "NSDA Certified Master Trainer (Level-3)", institution: "National Skills Development Authority", year: "2020" }
     ],
     achievements: [
-      "Architect of high-scale enterprise banking web platforms in Bangladesh",
-      "Authored curriculum for national level web engineering programs",
-      "Keynote speaker on Modern Web Architecture at DevCon BD"
+      "Architect of high-performance WordPress & enterprise web platforms",
+      "Authored curriculum for national level web & CMS engineering programs",
+      "Keynote speaker on Modern Web Development at DevCon BD"
     ],
     coursesTaught: [
-      { title: "Enterprise Full-Stack Web Development Mastery", students: "1,800+ Enrolled", rating: 4.98 },
-      { title: "MERN Stack & Next.js 15 Bootcamp", students: "1,250+ Enrolled", rating: 4.97 },
-      { title: "NSDA Certified Professional Web Track", students: "980+ Enrolled", rating: 4.99 }
+      { title: "Mastering WordPress Development", students: "1,800+ Enrolled", rating: 4.98 },
+      { title: "Certified Web Design & Development", students: "1,450+ Enrolled", rating: 4.97 },
+      { title: "Professional Web Development Bootcamp", students: "1,200+ Enrolled", rating: 4.99 }
     ],
     socialLinks: {
       linkedin: "https://linkedin.com",

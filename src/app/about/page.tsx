@@ -14,7 +14,7 @@ import {
   TrendingUp, Award, Laptop, Briefcase,
   GraduationCap, CheckCircle2, Star, Quote,
   Calendar, Clock, Layers, Zap,
-  Monitor, Cpu
+  Monitor, Cpu, User
 } from "lucide-react";
 import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 import { COMPANY_STATS } from "@/data/companyStats";
@@ -355,13 +355,19 @@ export default function AboutPage() {
                     <motion.div 
                       animate={{ y: [0, -3, 0] }}
                       transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-                      className="inline-flex items-center gap-1.5 bg-emerald-50/90 border border-emerald-200/90 px-2.5 py-0.5 rounded-full shadow-2xs"
+                      className="inline-flex items-center gap-1.5 bg-emerald-50/90 border border-emerald-200/90 px-2.5 py-1 rounded-full shadow-2xs"
                     >
-                      <img
-                        src="/images/hero-avatars-pill.png"
-                        alt="Avatars"
-                        className="h-4.5 object-contain align-middle"
-                      />
+                      <div className="flex -space-x-1.5">
+                        <div className="w-5 h-5 rounded-full bg-[#008744] text-white flex items-center justify-center border border-white shadow-2xs">
+                          <User size={10} className="stroke-[2.5]" />
+                        </div>
+                        <div className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center border border-white shadow-2xs">
+                          <User size={10} className="stroke-[2.5]" />
+                        </div>
+                        <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center border border-white shadow-2xs">
+                          <User size={10} className="stroke-[2.5]" />
+                        </div>
+                      </div>
                       <span className="text-[10px] sm:text-[11px] font-bold text-[#008744] font-mono">2500+ Grads</span>
                     </motion.div>
                   </motion.div>

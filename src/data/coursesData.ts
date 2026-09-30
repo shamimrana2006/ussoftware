@@ -376,15 +376,15 @@ export const coursesData: CourseDetail[] = [
     "image": "/images/course thumbnail/wordpress.webp",
     "videoUrl": "https://www.facebook.com/reel/2302715647232585/",
     "instructor": {
-      "name": "Mehedi Hasan",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "WordPress Architect & ThemeForest Author",
-        "bn": "ওয়ার্ডপ্রেস আর্কিটেক্ট ও থিমফরেস্ট অথর"
+        "en": "WordPress Architect & Full-Stack Developer",
+        "bn": "ওয়ার্ডপ্রেস আর্কিটেক্ট ও ফুল-স্ট্যাক ডেভেলপার"
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "8+ years building enterprise WordPress, WooCommerce and headless solutions.",
-        "bn": "এন্টারপ্রাইজ ওয়ার্ডপ্রেস ও উকমার্স সলিউশনে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years building enterprise WordPress, WooCommerce, custom themes/plugins and full-stack web solutions.",
+        "bn": "এন্টারপ্রাইজ ওয়ার্ডপ্রেস, উকমার্স, কাস্টম থিম/প্লাগিন ও ফুল-স্ট্যাক ওয়েব সলিউশনে ৮+ বছরের অভিজ্ঞতা।"
       },
       "experience": "8+ Yrs Exp",
       "verified": true
@@ -2428,15 +2428,15 @@ export const coursesData: CourseDetail[] = [
     "image": "/images/course thumbnail/web development.webp",
     "videoUrl": "",
     "instructor": {
-      "name": "Engr. Tanvir Hasan",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "Lead Frontend Architect & React Specialist",
-        "bn": "লিড ফ্রন্টএন্ড আর্কিটেক্ট ও রিঅ্যাক্ট স্পেশালিস্ট"
+        "en": "Lead Web Developer & Frontend Specialist",
+        "bn": "লিড ওয়েব ডেভেলপার ও ফ্রন্টএন্ড স্পেশালিস্ট"
       },
       "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "8+ years engineering robust client-side architectures for international SaaS applications.",
-        "bn": "আন্তর্জাতিক ক্লায়েন্টদের জন্য আধুনিক ওয়েব অ্যাপ তৈরিতে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years engineering robust web applications, responsive architectures and mentoring 2,500+ developers.",
+        "bn": "আধুনিক ওয়েব অ্যাপ্লিকেশন, রেসপনসিভ আর্কিটেকচার ও ২,৫০০+ শিক্ষার্থীকে প্রশিক্ষণ দেওয়ার ৮+ বছরের অভিজ্ঞতা।"
       },
       "experience": "8+ Yrs Exp",
       "verified": true
@@ -2695,17 +2695,17 @@ export const coursesData: CourseDetail[] = [
     "image": "/images/course thumbnail/diploma in full stack.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
-      "name": "Mahmudul Hasan Tanvir",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "Principal Full Stack Architect at Brain Station 23",
-        "bn": "প্রিন্সিপাল ফুল স্ট্যাক আর্কিটেক্ট, ব্রেন স্টেশন ২৩"
+        "en": "Lead Full-Stack Web Developer & MERN Specialist",
+        "bn": "লিড ফুল-স্ট্যাক ওয়েব ডেভেলপার ও মার্ন স্পেশালিস্ট"
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "10+ years engineering enterprise SaaS platforms, microservices and MERN web applications.",
-        "bn": "এন্টারপ্রাইজ সাস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ১০+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years engineering enterprise SaaS platforms, microservices, and full-stack MERN web applications.",
+        "bn": "এন্টারপ্রাইজ সাস প্ল্যাটফর্ম, মাইক্রোসার্ভিসেস ও মার্ন স্ট্যাক ওয়েব অ্যাপ্লিকেশনে ৮+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "10+ Yrs Exp",
+      "experience": "8+ Yrs Exp",
       "verified": true
     },
     "overview": {
@@ -3209,15 +3209,15 @@ export const coursesData: CourseDetail[] = [
     "image": "/images/course thumbnail/enterprise full stack next.js 15.webp",
     "videoUrl": "",
     "instructor": {
-      "name": "Engr. Tanvir Hasan",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "Senior Frontend Web Architect",
-        "bn": "সিনিয়র ফ্রন্টএন্ড ওয়েব আর্কিটেক্ট"
+        "en": "Senior Web Developer & UI Architect",
+        "bn": "সিনিয়র ওয়েব ডেভেলপার ও ইউআই আর্কিটেক্ট"
       },
       "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "8+ years in professional UI web development, mentoring 2,000+ engineers.",
-        "bn": "প্রফেশনাল ওয়েব ডিজাইনে ৮+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years in professional web design & development, building high-converting client websites.",
+        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ৮+ বছরের অভিজ্ঞতা।"
       },
       "experience": "8+ Yrs Exp",
       "verified": true
@@ -8831,17 +8831,17 @@ export const coursesData: CourseDetail[] = [
     "image": "/images/course thumbnail/diploma in web technology.webp",
     "videoUrl": "",
     "instructor": {
-      "name": "Mahmudul Hasan Tanvir",
+      "name": "MD Shamim Rana",
       "designation": {
-        "en": "Principal Software Architect at Brain Station 23",
-        "bn": "প্রিন্সিপাল সফটওয়্যার আর্কিটেক্ট, ব্রেন স্টেশন ২৩"
+        "en": "Lead Full-Stack Software Architect",
+        "bn": "লিড ফুল-স্ট্যাক সফটওয়্যার আর্কিটেক্ট"
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "10+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
-        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ১০+ বছরের অভিজ্ঞতা।"
+        "en": "8+ years architecting multi-tenant SaaS platforms, full-stack microservices and web engineering.",
+        "bn": "এন্টারপ্রাইজ সাস ও ফুল স্ট্যাক ইঞ্জিনিয়ারিংয়ে ৮+ বছরের অভিজ্ঞতা।"
       },
-      "experience": "10+ Yrs Exp",
+      "experience": "8+ Yrs Exp",
       "verified": true
     },
     "overview": {
