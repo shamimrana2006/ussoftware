@@ -63,7 +63,7 @@ module.exports = [
       "bn": "১৩২ ঘণ্টার প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্ট কোর্স। এতে এইচটিএমএল৫, সিএসএস৩, বুটস্ট্র্যাপ ৫, টেইলউইন্ড, জাভাস্ক্রিপ্ট ডম, ফিগমা টু এইচটিএমএল কনভার্সন এবং রেসপনসিভ ক্লায়েন্ট ওয়েবসাইট তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Master the art of creating pixel-perfect, mobile-friendly websites that look gorgeous on all devices. You will build 5+ complete responsive client websites from scratch, learn cross-browser compatibility, web accessibility standards, and deploy live on Netlify/Vercel.",
+      "en": "Master the art of creating pixel-perfect, mobile-friendly websites that look gorgeous on all devices. You will build 5+ complete responsive client websites from scratch, learn cross-browser compatibility, web accessibility standards and deploy live on Netlify/Vercel.",
       "bn": "এই কোর্সে আপনি একদম বেসিক থেকে শুরু করে রেসপনসিভ ওয়েবসাইট ডিজাইন, অ্যানিমেশন, আধুনিক সিএসএস ফ্রেমওয়ার্ক এবং মার্কেটপ্লেসে ওয়েব ডিজাইনার হিসেবে কাজ করার পূর্ণাঙ্গ দক্ষতা অর্জন করবেন।"
     },
     "coreValues": [
@@ -74,7 +74,7 @@ module.exports = [
           "bn": "পিক্সেল-পারফেক্ট রেসপনসিভ"
         },
         "desc": {
-          "en": "Ensure 100% responsiveness across mobile, tablet, laptop, and 4K screens.",
+          "en": "Ensure 100% responsiveness across mobile, tablet, laptop and 4K screens.",
           "bn": "সব ডিভাইসে পারফেক্ট মোবাইল রেসপনসিভ ডিজাইন।"
         },
         "icon": "Code2"
@@ -110,7 +110,7 @@ module.exports = [
         "bn": "ক্লিন ও সিমান্টিক এইচটিএমএল৫ এবং সিএসএস৩ কোড লেখা।"
       },
       {
-        "en": "Master Flexbox, CSS Grid, animations, transitions, and media queries.",
+        "en": "Master Flexbox, CSS Grid, animations, transitions and media queries.",
         "bn": "ফ্লেক্সবক্স, সিএসএস গ্রিড ও মিডিয়া কোয়েরিজ আয়ত্ত করা।"
       },
       {
@@ -314,11 +314,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Certified Shopify Specialist mastery course. Learn Shopify store setup, navigation & catalog management, Liquid templating & code customization, dropshipping setup (DSers, CJ Dropshipping), app integrations, high-converting landing page builders (PageFly, GemPages), payment gateways, Shopify SEO & speed optimization, and freelance client acquisition.",
+      "en": "Certified Shopify Specialist mastery course. Learn Shopify store setup, navigation & catalog management, Liquid templating & code customization, dropshipping setup (DSers, CJ Dropshipping), app integrations, high-converting landing page builders (PageFly, GemPages), payment gateways, Shopify SEO & speed optimization and freelance client acquisition.",
       "bn": "শপিফাই স্টোর সেটআপ, প্রফেশনাল থিম কাস্টমাইজেশন, লিকুইড কোডিং, ড্রপশিপিং অটোমেশন, পেজফ্লাই ল্যান্ডিং পেজ ডিজাইন, পেমেন্ট গেটওয়ে, স্পিড অপ্টিমাইজেশন ও আন্তর্জাতিক মার্কেটপ্লেসে শপিফাই এক্সপার্ট হিসেবে ক্যারিয়ার গড়ার কমপ্লিট কোর্স।"
     },
     "fullDescription": {
-      "en": "Become a certified in-demand Shopify expert. Learn how to launch branded e-commerce stores from scratch, customize premium Shopify 2.0 themes with Liquid and CSS, install sales-boosting apps, optimize checkout funnels, and earn high-ticket earnings on Upwork and Fiverr.",
+      "en": "Become a certified in-demand Shopify expert. Learn how to launch branded e-commerce stores from scratch, customize premium Shopify 2.0 themes with Liquid and CSS, install sales-boosting apps, optimize checkout funnels and earn high-ticket earnings on Upwork and Fiverr.",
       "bn": "এই কোর্সে আপনি শপিফাই ২.০ আর্কিটেকচার, ডোমেইন কানেকশন, ড্রপশিপিং প্রোডাক্ট রিসার্চ, স্ট্রাইপ/পেপাল পেমেন্ট গেটওয়ে, রকেট স্পিড অপ্টিমাইজেশন এবং ক্লায়েন্টদের হাই-কনভার্টিং ই-কমার্স স্টোর তৈরি করে দেওয়ার যাবতীয় কৌশল শিখবেন।"
     },
     "coreValues": [
@@ -341,7 +341,7 @@ module.exports = [
           "bn": "পেজফ্লাই ল্যান্ডিং পেজ"
         },
         "desc": {
-          "en": "Design modern product pages, upsells, cross-sells, and bundles with PageFly.",
+          "en": "Design modern product pages, upsells, cross-sells and bundles with PageFly.",
           "bn": "হাই-কনভার্টিং প্রোডাক্ট ও ল্যান্ডিং পেজ ডিজাইন।"
         },
         "icon": "Zap"
@@ -353,7 +353,7 @@ module.exports = [
           "bn": "ড্রপশিপিং ও গ্লোবাল পেমেন্ট"
         },
         "desc": {
-          "en": "Automate fulfillment with DSers, CJ, Stripe, PayPal, and multi-currency.",
+          "en": "Automate fulfillment with DSers, CJ, Stripe, PayPal and multi-currency.",
           "bn": "ড্রপশিপিং অটোমেশন ও ইন্টারন্যাশনাল পেমেন্ট গেটওয়ে।"
         },
         "icon": "Award"
@@ -365,7 +365,7 @@ module.exports = [
         "bn": "শুরু থেকে সম্পূর্ণ রেসপনসিভ শপিফাই অনলাইন স্টোর তৈরি করা।"
       },
       {
-        "en": "Customize Shopify 2.0 themes using Liquid, JSON templates, and CSS.",
+        "en": "Customize Shopify 2.0 themes using Liquid, JSON templates and CSS.",
         "bn": "লিকুইড ও সিএসএস দিয়ে শপিফাই প্রিমিয়াম থিম কাস্টমাইজ করা।"
       },
       {
@@ -373,7 +373,7 @@ module.exports = [
         "bn": "পেজফ্লাই ও জেমপেজেস দিয়ে কনভার্টিং প্রোডাক্ট পেজ তৈরি।"
       },
       {
-        "en": "Integrate dropshipping suppliers, automated fulfillment, and payment gateways.",
+        "en": "Integrate dropshipping suppliers, automated fulfillment and payment gateways.",
         "bn": "ড্রপশিপিং অটোমেশন ও পেমেন্ট গেটওয়ে ইন্টিগ্রেশন সম্পন্ন করা।"
       },
       {
@@ -573,7 +573,7 @@ module.exports = [
       "bn": "কোর পিএইচপি, ওওপি, মাইএসকিউএল ডাটাবেস ডিজাইন, লারাভেল ১১ এমভিসি আর্কিটেকচার, ব্লেড টেমপ্লেট, ইলোকেন্ট ওআরএম, অথেনটিকেশন, রেস্ট এপিআই, বিকাশ/নগদ পেমেন্ট গেটওয়ে সহ পূর্ণাঙ্গ ই-কমার্স প্রজেক্ট এবং সার্ভার ডেপ্লয়মেন্ট শেখার প্রফেশনাল কোর্স।"
     },
     "fullDescription": {
-      "en": "PHP and Laravel power millions of robust business web applications worldwide. This course takes you from fundamental PHP programming to architecting enterprise-grade web portals, multi-auth systems, payment integrations, and high-performance REST APIs.",
+      "en": "PHP and Laravel power millions of robust business web applications worldwide. This course takes you from fundamental PHP programming to architecting enterprise-grade web portals, multi-auth systems, payment integrations and high-performance REST APIs.",
       "bn": "এই কোর্সে আপনি পিএইচপি ও লারাভেলের বেসিক থেকে শুরু করে ডাটাবেস অপ্টিমাইজেশন, এপিআই ডেভেলপমেন্ট, সিকিউরিটি এবং লোকাল ও আন্তর্জাতিক সফটওয়্যার কোম্পানিতে লারাভেল ডেভেলপার হিসেবে চাকরির সম্পূর্ণ প্রস্তুতি পাবেন।"
     },
     "coreValues": [
@@ -584,7 +584,7 @@ module.exports = [
           "bn": "কোর পিএইচপি ও ওওপি"
         },
         "desc": {
-          "en": "Master object-oriented programming, design patterns, PDO, and MVC basics.",
+          "en": "Master object-oriented programming, design patterns, PDO and MVC basics.",
           "bn": "অবজেক্ট ওরিয়েন্টেড পিএইচপি ও এমভিসি প্যাটার্ন।"
         },
         "icon": "Code2"
@@ -596,7 +596,7 @@ module.exports = [
           "bn": "লারাভেল ১১ ও ইলোকেন্ট ওআরএম"
         },
         "desc": {
-          "en": "Eloquent relationships, migrations, seeders, queues, events, and Sanctum APIs.",
+          "en": "Eloquent relationships, migrations, seeders, queues, events and Sanctum APIs.",
           "bn": "লারাভেল আর্কিটেকচার ও ডেটাবেস রিলেশনশিপ।"
         },
         "icon": "Zap"
@@ -624,7 +624,7 @@ module.exports = [
         "bn": "লারাভেল ১১ ফ্রেমওয়ার্ক দিয়ে স্কেলেবল ওয়েব অ্যাপ তৈরি করা।"
       },
       {
-        "en": "Implement multi-guard authentication, role-based access control (RBAC), and policies.",
+        "en": "Implement multi-guard authentication, role-based access control (RBAC) and policies.",
         "bn": "রোল-বেসড ইউজার এক্সেস ও পারমিশন সিস্টেম তৈরি করা।"
       },
       {
@@ -828,11 +828,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Official Cisco CCNA 200-301 curriculum covering network fundamentals, IPv4/IPv6 addressing & subnetting, routing protocols (OSPF), switching technologies (VLAN, Trunking, STP, EtherChannel), IP services (DHCP, NAT, DNS), network security fundamentals, VPNs, and network programmability/automation.",
+      "en": "Official Cisco CCNA 200-301 curriculum covering network fundamentals, IPv4/IPv6 addressing & subnetting, routing protocols (OSPF), switching technologies (VLAN, Trunking, STP, EtherChannel), IP services (DHCP, NAT, DNS), network security fundamentals, VPNs and network programmability/automation.",
       "bn": "সিসকো সিসিএনএ ২০০-৩০১ এক্সাম প্রিপারেশন ও প্র্যাকটিক্যাল ল্যাব কোর্স। এতে আইপি সাবনেটিং, ওএসপিএফ রাউটিং, ভি-ল্যান, এসটিপি, পোর্ট সিকিউরিটি, এসিএল এবং এন্টারপ্রাইজ নেটওয়ার্ক আর্কিটেকচার শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Prepare for the globally recognized Cisco CCNA 200-301 certification. Through extensive hands-on labs with Cisco Packet Tracer, GNS3, and real physical Cisco routers/switches, you will master enterprise networking concepts and pass the exam on your first attempt.",
+      "en": "Prepare for the globally recognized Cisco CCNA 200-301 certification. Through extensive hands-on labs with Cisco Packet Tracer, GNS3 and real physical Cisco routers/switches, you will master enterprise networking concepts and pass the exam on your first attempt.",
       "bn": "এই কোর্সে আপনি সিসকো সার্টিফাইড নেটওয়ার্ক অ্যাসোসিয়েট হওয়ার জন্য প্রয়োজনীয় থিওরি ও প্র্যাকটিক্যাল ল্যাব সম্পন্ন করবেন এবং কর্পোরেট আইটি ও আইএসপি সেক্টরে নেটওয়ার্ক ইঞ্জিনিয়ার হিসেবে ক্যারিয়ার শুরু করবেন।"
     },
     "coreValues": [
@@ -855,7 +855,7 @@ module.exports = [
           "bn": "রাউটিং ও সুইচিং ল্যাবস"
         },
         "desc": {
-          "en": "Hands-on configuration of OSPF, VLANs, Inter-VLAN routing, and Spanning Tree.",
+          "en": "Hands-on configuration of OSPF, VLANs, Inter-VLAN routing and Spanning Tree.",
           "bn": "প্যাকেট ট্রেসার ও ফিজিক্যাল ডিভাইসে রিয়েল ল্যাব।"
         },
         "icon": "Zap"
@@ -883,11 +883,11 @@ module.exports = [
         "bn": "সিসকো রাউটারে ওএসপিএফ রাউটিং প্রটোকল কনফিগার ও ট্রাবলশুট করা।"
       },
       {
-        "en": "Implement VLANs, 802.1Q Trunking, VTP, STP, and EtherChannel on Switches.",
+        "en": "Implement VLANs, 802.1Q Trunking, VTP, STP and EtherChannel on Switches.",
         "bn": "সিসকো সুইচে ভি-ল্যান, ট্রাংকিং ও এসটিপি কনফিগার করা।"
       },
       {
-        "en": "Secure enterprise networks using ACLs, Port Security, and Dynamic ARP Inspection.",
+        "en": "Secure enterprise networks using ACLs, Port Security and Dynamic ARP Inspection.",
         "bn": "এসিএল ও পোর্ট সিকিউরিটি দিয়ে নেটওয়ার্ক সুরক্ষিত রাখা।"
       },
       {
@@ -1076,18 +1076,18 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "12+ years designing ISP, enterprise Cisco networks, and data center infrastructures.",
+        "en": "12+ years designing ISP, enterprise Cisco networks and data center infrastructures.",
         "bn": "আইএসপি ও এন্টারপ্রাইজ নেটওয়ার্কে ১২+ বছরের অভিজ্ঞতা।"
       },
       "experience": "12+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Advanced enterprise routing and core architecture program covering Cisco ENCOR 350-401 and ENARSI 300-410. Master dual-stack IPv4/IPv6 enterprise architecture, Advanced OSPF, Multi-protocol BGP (MP-BGP), MPLS VPNs, DMVPN, QoS, Cisco SD-WAN fundamentals, and Python network automation.",
+      "en": "Advanced enterprise routing and core architecture program covering Cisco ENCOR 350-401 and ENARSI 300-410. Master dual-stack IPv4/IPv6 enterprise architecture, Advanced OSPF, Multi-protocol BGP (MP-BGP), MPLS VPNs, DMVPN, QoS, Cisco SD-WAN fundamentals and Python network automation.",
       "bn": "সিসকো সিসিএনপি এনকোর ও এনার্সি এক্সাম কারিকুলাম। এতে অ্যাডভান্সড বিজিপি, এমপিএলএস ভিপিএন, ডিএমভিপিএন, কিউওএস, এসডি-ওয়ান এবং এন্টারপ্রাইজ লেভেল ট্রাবলশুটিং শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Step into senior network engineering roles. This 120-hour intensive program equips you with deep enterprise routing knowledge, service provider technologies, high availability protocols (VRRP, HSRP), advanced security infrastructure, and programmatic network management.",
+      "en": "Step into senior network engineering roles. This 120-hour intensive program equips you with deep enterprise routing knowledge, service provider technologies, high availability protocols (VRRP, HSRP), advanced security infrastructure and programmatic network management.",
       "bn": "এই কোর্সে আপনি টেলিকম ও বড় কর্পোরেট নেটওয়ার্কের কোর রাউটিং, ট্রাফিক ইঞ্জিনিয়ারিং, বিজিপি পলিসি এবং পাইথন অটোমেশন হ্যান্ডস-অন ল্যাবে শিখে সিসকো প্রফেশনাল লেভেল সার্টিফাইড হবেন।"
     },
     "coreValues": [
@@ -1098,7 +1098,7 @@ module.exports = [
           "bn": "অ্যাডভান্সড বিজিপি ও এমপিএলএস"
         },
         "desc": {
-          "en": "eBGP, iBGP, route reflectors, AS path manipulation, and MPLS Layer 3 VPNs.",
+          "en": "eBGP, iBGP, route reflectors, AS path manipulation and MPLS Layer 3 VPNs.",
           "bn": "বিজিপি রাউট পলিসি ও এমপিএলএস লেয়ার ৩ ভিপিএন।"
         },
         "icon": "Server"
@@ -1110,7 +1110,7 @@ module.exports = [
           "bn": "সিসকো এসডি-ওয়ান ও কিউওএস"
         },
         "desc": {
-          "en": "Software-Defined WAN architecture, vManage, vEdge, and QoS queue scheduling.",
+          "en": "Software-Defined WAN architecture, vManage, vEdge and QoS queue scheduling.",
           "bn": "এসডি-ওয়ান ও কোয়ালিটি অফ সার্ভিস কনফিগারেশন।"
         },
         "icon": "Zap"
@@ -1122,7 +1122,7 @@ module.exports = [
           "bn": "পাইথন নেটওয়ার্ক অটোমেশন"
         },
         "desc": {
-          "en": "Automate Cisco IOS-XE devices using Netmiko, RESTCONF, and Ansible playbooks.",
+          "en": "Automate Cisco IOS-XE devices using Netmiko, RESTCONF and Ansible playbooks.",
           "bn": "নেটমিকো ও আনসিবল দিয়ে নেটওয়ার্ক কনফিগ অটোমেশন।"
         },
         "icon": "Code2"
@@ -1134,11 +1134,11 @@ module.exports = [
         "bn": "মাল্টি-হোমড এন্টারপ্রাইজ বিজিপি নেটওয়ার্ক আর্কিটেকচার ডিজাইন করা।"
       },
       {
-        "en": "Deploy MPLS L3VPNs, DMVPN with IPsec encryption, and GRE tunnels.",
+        "en": "Deploy MPLS L3VPNs, DMVPN with IPsec encryption and GRE tunnels.",
         "bn": "এমপিএলএস এল৩ ভিপিএন ও আইপিসেক ডিএমভিপিএন কনফিগার করা।"
       },
       {
-        "en": "Implement high availability (HSRP/VRRP), EtherChannel, and QoS traffic policies.",
+        "en": "Implement high availability (HSRP/VRRP), EtherChannel and QoS traffic policies.",
         "bn": "হাই অ্যাভেইলেবিলিটি ও কিউওএস ট্রাফিক পলিসি তৈরি করা।"
       },
       {
@@ -1338,11 +1338,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Official Red Hat Certified System Administrator (RHCSA EX200) course on RHEL 9. Learn command-line navigation, file permissions, users & groups, LVM storage management, process control (systemd), networking, firewall-cmd, SELinux security, shell scripting, and automated package management with DNF.",
+      "en": "Official Red Hat Certified System Administrator (RHCSA EX200) course on RHEL 9. Learn command-line navigation, file permissions, users & groups, LVM storage management, process control (systemd), networking, firewall-cmd, SELinux security, shell scripting and automated package management with DNF.",
       "bn": "রেড হ্যাট এন্টারপ্রাইজ লিনাক্স ৯ (RHEL 9) ও আরএইচসিএসএ EX200 এক্সাম প্রিপারেশন কোর্স। এতে লিনাক্স সিএলআই, ইউজার পারমিশনস, এলভিএম স্টোরেজ, সিস্টেমডি সার্ভিসেস, এসইলিনাক্স ও ব্যাশ অটোমেশন শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Linux powers over 90% of the world's cloud servers, supercomputers, and enterprise infrastructures. This 90-hour hands-on training prepares you to become an industry-ready Linux System Administrator capable of managing mission-critical RHEL, CentOS, Rocky Linux, and Ubuntu servers.",
+      "en": "Linux powers over 90% of the world's cloud servers, supercomputers and enterprise infrastructures. This 90-hour hands-on training prepares you to become an industry-ready Linux System Administrator capable of managing mission-critical RHEL, CentOS, Rocky Linux and Ubuntu servers.",
       "bn": "এই কোর্সে আপনি রিয়েল সার্ভার এনভায়রনমেন্টে লিনাক্স ইনস্টলেশন, ইউজার ম্যানেজমেন্ট, ডিস্ক পার্টিশন ও এলভিএম, ফায়ারওয়াল, এসএসএইচ হার্ডেনিং এবং ব্যাশ স্ক্রিপ্টিং দিয়ে সিস্টেম অটোমেশন শিখবেন।"
     },
     "coreValues": [
@@ -1365,7 +1365,7 @@ module.exports = [
           "bn": "এলভিএম স্টোরেজ ও এসইলিনাক্স"
         },
         "desc": {
-          "en": "Create volume groups, logical volumes, file systems, and enforce SELinux policies.",
+          "en": "Create volume groups, logical volumes, file systems and enforce SELinux policies.",
           "bn": "লজিক্যাল ভলিউম স্টোরেজ ও সিকিউরিটি কনফিগারেশন।"
         },
         "icon": "ShieldCheck"
@@ -1377,7 +1377,7 @@ module.exports = [
           "bn": "ব্যাশ স্ক্রিপ্টিং ও অটোমেশন"
         },
         "desc": {
-          "en": "Automate system monitoring, log rotation, cron jobs, and backup pipelines.",
+          "en": "Automate system monitoring, log rotation, cron jobs and backup pipelines.",
           "bn": "ক্রন জবস ও ব্যাশ স্ক্রিপ্টিং দিয়ে কাজ অটোমেশন।"
         },
         "icon": "Code2"
@@ -1389,15 +1389,15 @@ module.exports = [
         "bn": "লিনাক্স টার্মিনাল ও ফাইল সিস্টেমে সম্পূর্ণ কমান্ড দক্ষতা।"
       },
       {
-        "en": "Manage user accounts, group policies, ACLs, and sudo access controls.",
+        "en": "Manage user accounts, group policies, ACLs and sudo access controls.",
         "bn": "ইউজার অ্যাকাউন্ট, পারমিশনস ও সুডো এক্সেস পরিচালনা করা।"
       },
       {
-        "en": "Configure Logical Volume Management (LVM), Stratis, and VDO storage.",
+        "en": "Configure Logical Volume Management (LVM), Stratis and VDO storage.",
         "bn": "এলভিএম দিয়ে ডাইনামিক স্টোরেজ ম্যানেজমেন্ট কনফিগার করা।"
       },
       {
-        "en": "Secure servers with Firewalld, SSH key hardening, and SELinux boolean rules.",
+        "en": "Secure servers with Firewalld, SSH key hardening and SELinux boolean rules.",
         "bn": "ফায়ারওয়াল ও এসইলিনাক্স দিয়ে লিনাক্স সার্ভার সিকিউর করা।"
       },
       {
@@ -1597,7 +1597,7 @@ module.exports = [
       "bn": "মাইক্রোসফট অ্যাজুর ক্লাউড অ্যাডমিনিস্ট্রেশন (AZ-900 ও AZ-104) কোর্স। এতে অ্যাজুর ভার্চুয়াল মেশিন, ভার্চুয়াল নেটওয়ার্কিং, এন্ট্রা আইডি আইএএম, অ্যাজুর স্টোরেজ, লোড ব্যালেন্সার এবং ব্যাকআপ ও ক্লাউড সিকিউরিটি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Become an in-demand Microsoft Azure Cloud Administrator. Learn how to manage compute, networking, storage, identity, and security across the global Microsoft Azure cloud platform with live Azure Portal and PowerShell / CLI labs.",
+      "en": "Become an in-demand Microsoft Azure Cloud Administrator. Learn how to manage compute, networking, storage, identity and security across the global Microsoft Azure cloud platform with live Azure Portal and PowerShell / CLI labs.",
       "bn": "এই কোর্সে আপনি মাইক্রোসফট অ্যাজুরের গ্লোবাল ইনফ্রাস্ট্রাকচারে হাই-অ্যাভেইলেবল ভার্চুয়াল মেশিন তৈরি, ক্লাউড নেটওয়ার্কিং, এন্টারপ্রাইজ সিকিউরিটি এবং এজেড-১০৪ সার্টিফিকেশন পরীক্ষার প্রস্তুতি সম্পন্ন করবেন।"
     },
     "coreValues": [
@@ -1632,7 +1632,7 @@ module.exports = [
           "bn": "এন্ট্রা আইডি ও আইএএম"
         },
         "desc": {
-          "en": "Manage RBAC roles, MFA, Conditional Access, and hybrid directory sync.",
+          "en": "Manage RBAC roles, MFA, Conditional Access and hybrid directory sync.",
           "bn": "রোল-বেসড এক্সেস কন্ট্রোল ও ইউজার সিকিউরিটি।"
         },
         "icon": "Users"
@@ -1640,7 +1640,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Manage Azure subscriptions, governance policies, and cost optimization.",
+        "en": "Manage Azure subscriptions, governance policies and cost optimization.",
         "bn": "অ্যাজুর সাবস্ক্রিপশন, পলিসিজ ও কস্ট ম্যানেজমেন্ট পরিচালনা করা।"
       },
       {
@@ -1652,7 +1652,7 @@ module.exports = [
         "bn": "অ্যাজুর ভি-নেট ও ভিপিএন গেটওয়ে দিয়ে সিকিউর ক্লাউড নেটওয়ার্ক তৈরি।"
       },
       {
-        "en": "Configure Microsoft Entra ID (Azure AD), users, groups, and RBAC permissions.",
+        "en": "Configure Microsoft Entra ID (Azure AD), users, groups and RBAC permissions.",
         "bn": "মাইক্রোসফট এন্ট্রা আইডি ও আরব্যাক পারমিশনস কনফিগার করা।"
       },
       {
@@ -1848,11 +1848,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "AWS Solutions Architect Associate (SAA-C03) certification training. Learn AWS global infrastructure, IAM identity & policies, EC2 compute & autoscaling, S3 object storage & lifecycle policies, VPC custom networking, RDS & DynamoDB databases, Route 53, CloudFront CDN, and AWS Lambda serverless computing.",
+      "en": "AWS Solutions Architect Associate (SAA-C03) certification training. Learn AWS global infrastructure, IAM identity & policies, EC2 compute & autoscaling, S3 object storage & lifecycle policies, VPC custom networking, RDS & DynamoDB databases, Route 53, CloudFront CDN and AWS Lambda serverless computing.",
       "bn": "আমাজন ওয়েব সার্ভিসেস (AWS SAA-C03) সলিউশনস আর্কিটেক্ট কোর্স। এতে ইসি২ সার্ভার, এস৩ স্টোরেজ, কাস্টম ভিপিসি নেটওয়ার্কিং, আইএএম পারমিশনস, আরডিএস ডাটাবেস ও ল্যাম্বডা সার্ভারলেস শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Master the world's #1 public cloud computing platform. Build highly resilient, fault-tolerant, scalable, and secure cloud architectures on Amazon Web Services following the AWS Well-Architected Framework.",
+      "en": "Master the world's #1 public cloud computing platform. Build highly resilient, fault-tolerant, scalable and secure cloud architectures on Amazon Web Services following the AWS Well-Architected Framework.",
       "bn": "এই কোর্সে আপনি হ্যান্ডস-অন ল্যাবে এডব্লিউএস ক্লাউড আর্কিটেকচার ডিজাইন, অটো-স্কেলিং ও লোড ব্যালেন্সার কনফিগারেশন এবং আন্তর্জাতিক সার্টিফাইড এডব্লিউএস সলিউশনস আর্কিটেক্ট হওয়ার প্রস্তুতি সম্পন্ন করবেন।"
     },
     "coreValues": [
@@ -1899,11 +1899,11 @@ module.exports = [
         "bn": "এডব্লিউএসে হাই-অ্যাভেইলেবল মাল্টি-টিয়ার ওয়েব আর্কিটেকচার ডিজাইন করা।"
       },
       {
-        "en": "Configure custom VPCs, subnets, route tables, security groups, and NAT Gateways.",
+        "en": "Configure custom VPCs, subnets, route tables, security groups and NAT Gateways.",
         "bn": "কাস্টম ভিপিসি, সাবনেটস, সিকিউরিটি গ্রুপস ও ন্যাট গেটওয়ে তৈরি করা।"
       },
       {
-        "en": "Manage S3 storage classes, bucket policies, encryption, and lifecycle management.",
+        "en": "Manage S3 storage classes, bucket policies, encryption and lifecycle management.",
         "bn": "এস৩ বাকেট পলিসি ও লাইফসাইকেল ম্যানেজমেন্ট কনফিগার করা।"
       },
       {
@@ -2103,11 +2103,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive native Apple iOS development program. Learn Swift 5 language fundamentals, Xcode IDE, Auto Layout, UIKit & modern SwiftUI, MVVM architecture, CoreData & SQLite persistence, RESTful API networking with URLSession/Alamofire, Firebase integration, and Apple App Store deployment.",
+      "en": "Comprehensive native Apple iOS development program. Learn Swift 5 language fundamentals, Xcode IDE, Auto Layout, UIKit & modern SwiftUI, MVVM architecture, CoreData & SQLite persistence, RESTful API networking with URLSession/Alamofire, Firebase integration and Apple App Store deployment.",
       "bn": "সুইফট ৫, এক্সকোড, সুইফটইউআই, ইউআইকিট, এমভিভিএম আর্কিটেকচার, রেস্ট এপিআই, কোরডেটা এবং অ্যাপল অ্যাপ স্টোরে অ্যাপ পাবলিশিং শেখার পূর্ণাঙ্গ নেটিভ আইওএস কোর্স।"
     },
     "fullDescription": {
-      "en": "Enter the lucrative world of Apple iOS development. You will build 4 production-grade native iOS apps for iPhone and iPad, mastering modern SwiftUI reactive UI, smooth gestures, async/await networking, and publishing apps live to the Apple App Store.",
+      "en": "Enter the lucrative world of Apple iOS development. You will build 4 production-grade native iOS apps for iPhone and iPad, mastering modern SwiftUI reactive UI, smooth gestures, async/await networking and publishing apps live to the Apple App Store.",
       "bn": "এই কোর্সে আপনি আইওএস অ্যাপ ডিজাইনের আন্তর্জাতিক গাইডলাইন, সুইফট প্রোগ্রামিং, ডেটাবেস ক্যাশিং এবং অ্যাপল ডেভেলপার অ্যাকাউন্টে অ্যাপ সাবমিশন করার প্র্যাকটিক্যাল জ্ঞান অর্জন করবেন।"
     },
     "coreValues": [
@@ -2130,7 +2130,7 @@ module.exports = [
           "bn": "এমভিভিএম ও নেটওয়ার্কিং"
         },
         "desc": {
-          "en": "Clean code with async/await, URLSession, Combine framework, and Codable JSON.",
+          "en": "Clean code with async/await, URLSession, Combine framework and Codable JSON.",
           "bn": "ক্লিন এমভিভিএম কোড ও রেস্ট এপিআই ফেচিং।"
         },
         "icon": "Code2"
@@ -2142,7 +2142,7 @@ module.exports = [
           "bn": "অ্যাপ স্টোর পাবলিশিং"
         },
         "desc": {
-          "en": "TestFlight beta testing, App Store Connect setup, and Apple guidelines review.",
+          "en": "TestFlight beta testing, App Store Connect setup and Apple guidelines review.",
           "bn": "টেস্টফ্লাইট ও অ্যাপ স্টোরে সফল অ্যাপ রিলিজ।"
         },
         "icon": "Award"
@@ -2162,7 +2162,7 @@ module.exports = [
         "bn": "এমভিভিএম আর্কিটেকচার ফলো করে প্রজেক্ট তৈরি করা।"
       },
       {
-        "en": "Persist offline data using CoreData, SwiftData, and UserDefaults.",
+        "en": "Persist offline data using CoreData, SwiftData and UserDefaults.",
         "bn": "কোরডেটা দিয়ে অফলাইন ডাটা স্টোরেজ তৈরি করা।"
       },
       {
@@ -2358,11 +2358,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Enterprise software development with Microsoft .NET 8 and ASP.NET Core MVC. Learn C# advanced OOP, Entity Framework Core (EF Core), LINQ queries, SQL Server database design, Repository pattern & Dependency Injection (DI), ASP.NET Core Identity security, Web API with Swagger, and Azure deployment.",
+      "en": "Enterprise software development with Microsoft .NET 8 and ASP.NET Core MVC. Learn C# advanced OOP, Entity Framework Core (EF Core), LINQ queries, SQL Server database design, Repository pattern & Dependency Injection (DI), ASP.NET Core Identity security, Web API with Swagger and Azure deployment.",
       "bn": "মাইক্রোসফট .নেট ৮ এবং এএসপি.নেট কোর এমভিসি দিয়ে এন্টারপ্রাইজ সফটওয়্যার ডেভেলপমেন্ট। এতে সি-শার্প ওওপি, এন্টিটি ফ্রেমওয়ার্ক কোর, এসকিউএল সার্ভার, রেপোজিটরি প্যাটার্ন, আইডেন্টিটি অথেনটিকেশন ও রেস্ট এপিআই শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Build robust, scalable, enterprise-grade business applications that power Fortune 500 banks and multinational corporations. Master full-stack .NET development with C#, EF Core, SQL Server, Razor Pages, Web APIs, and automated Azure cloud hosting.",
+      "en": "Build robust, scalable, enterprise-grade business applications that power Fortune 500 banks and multinational corporations. Master full-stack .NET development with C#, EF Core, SQL Server, Razor Pages, Web APIs and automated Azure cloud hosting.",
       "bn": "এই কোর্সে আপনি কর্পোরেট লেভেল ইআরপি ও ব্যাংকিং সফটওয়্যার তৈরির জন্য সি#, ডিপেন্ডেন্সি ইনজেকশন, এন্টিটি ফ্রেমওয়ার্ক মাইগ্রেশনস, রোল পারমিশন এবং অ্যাজুর ক্লাউডে ডেপ্লয়মেন্ট শিখবেন।"
     },
     "coreValues": [
@@ -2385,7 +2385,7 @@ module.exports = [
           "bn": "ইএফ কোর ও এসকিউএল সার্ভার"
         },
         "desc": {
-          "en": "Code-first migrations, complex LINQ queries, and relational data modeling.",
+          "en": "Code-first migrations, complex LINQ queries and relational data modeling.",
           "bn": "কোড-ফার্স্ট মাইগ্রেশন ও লিঙ্ক কোয়েরিজ।"
         },
         "icon": "Database"
@@ -2397,7 +2397,7 @@ module.exports = [
           "bn": "আইডেন্টিটি ও ওয়েব এপিআই"
         },
         "desc": {
-          "en": "Role-based authentication, claims, JWT tokens, and RESTful Web APIs.",
+          "en": "Role-based authentication, claims, JWT tokens and RESTful Web APIs.",
           "bn": "সিকিউর ইউজার রোলস ও রেস্টফুল ওয়েব এপিআই।"
         },
         "icon": "ShieldCheck"
@@ -2613,11 +2613,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Foundational computer science programming in C and C++. Topics include variables & data types, control flow (if-else, loops), functions & recursion, arrays, strings, pointer arithmetic & dynamic memory allocation (malloc/free, new/delete), Object-Oriented Programming (OOP) in C++, Standard Template Library (STL), and competitive programming fundamentals.",
+      "en": "Foundational computer science programming in C and C++. Topics include variables & data types, control flow (if-else, loops), functions & recursion, arrays, strings, pointer arithmetic & dynamic memory allocation (malloc/free, new/delete), Object-Oriented Programming (OOP) in C++, Standard Template Library (STL) and competitive programming fundamentals.",
       "bn": "সি ও সি++ প্রোগ্রামিংয়ের শক্তিশালী ফাউন্ডেশন কোর্স। এতে ডাটা টাইপস, লুপস, ফাংশন ও রিকার্সন, পয়েন্টার মেমোরি ম্যানেজমেন্ট, সি++ অবজেক্ট ওরিয়েন্টেড কনসেপ্টস, এসটিএল ভেক্টর/ম্যাপ এবং প্রবলেম সলভিং শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Build rock-solid computer science fundamentals. Master how computers execute code at the memory level, conquer pointers and dynamic arrays, understand Object-Oriented principles, and write blazing-fast algorithms using the C++ Standard Template Library (STL).",
+      "en": "Build rock-solid computer science fundamentals. Master how computers execute code at the memory level, conquer pointers and dynamic arrays, understand Object-Oriented principles and write blazing-fast algorithms using the C++ Standard Template Library (STL).",
       "bn": "এই কোর্সে আপনি যেকোনো জটিল প্রোগ্রামিং ল্যাঙ্গুয়েজের মূল ভিত্তি সি ও সি++ শিখে কোডিং লজিক ডেভেলপ করবেন, যা ইউনিভার্সিটি কোর্স এবং সফটওয়্যার ক্যারিয়ারের জন্য অপরিহার্য।"
     },
     "coreValues": [
@@ -2628,7 +2628,7 @@ module.exports = [
           "bn": "পয়েন্টার ও মেমোরি"
         },
         "desc": {
-          "en": "Deep understanding of heap/stack memory, pointer arithmetic, and reference passing.",
+          "en": "Deep understanding of heap/stack memory, pointer arithmetic and reference passing.",
           "bn": "পয়েন্টার ও ডাইনামিক মেমোরি অ্যালোকেশন।"
         },
         "icon": "Cpu"
@@ -2640,7 +2640,7 @@ module.exports = [
           "bn": "সি++ ওওপি ও এসটিএল"
         },
         "desc": {
-          "en": "Classes, operator overloading, templates, vectors, sets, maps, and algorithms.",
+          "en": "Classes, operator overloading, templates, vectors, sets, maps and algorithms.",
           "bn": "সি++ এসটিএল লাইব্রেরি ও অবজেক্ট ওরিয়েন্টেড ডিজাইন।"
         },
         "icon": "Code2"
@@ -2652,7 +2652,7 @@ module.exports = [
           "bn": "প্রবলেম সলভিং"
         },
         "desc": {
-          "en": "Solve 100+ algorithmic problems on Codeforces, LeetCode, and HackerRank.",
+          "en": "Solve 100+ algorithmic problems on Codeforces, LeetCode and HackerRank.",
           "bn": "অনলাইন জাজে ১০০+ অ্যালগোরিদমিক প্রবলেম সমাধান।"
         },
         "icon": "Zap"
@@ -2660,11 +2660,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand computer architecture, compilation process, and memory management.",
+        "en": "Understand computer architecture, compilation process and memory management.",
         "bn": "কম্পিউটার মেমোরি আর্কিটেকচার ও কম্পাইলেশন প্রসেস বোঝা।"
       },
       {
-        "en": "Master pointers, dynamic memory allocation, and array manipulation.",
+        "en": "Master pointers, dynamic memory allocation and array manipulation.",
         "bn": "পয়েন্টার ও ডাইনামিক মেমোরি অ্যালোকেশনে পারদর্শী হওয়া।"
       },
       {
@@ -2868,11 +2868,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive modern C# programming course covering C# 12 syntax, OOP fundamentals (classes, interfaces, inheritance, polymorphism), Generics & Collections, LINQ data querying, Exception handling & File I/O, Asynchronous programming with async/await, Delegates, Events & Lambda expressions, and Windows desktop GUI development.",
+      "en": "Comprehensive modern C# programming course covering C# 12 syntax, OOP fundamentals (classes, interfaces, inheritance, polymorphism), Generics & Collections, LINQ data querying, Exception handling & File I/O, Asynchronous programming with async/await, Delegates, Events & Lambda expressions and Windows desktop GUI development.",
       "bn": "সি-শার্প ১২ প্রোগ্রামিং কোর্স। এতে সি# বেসিকস, অবজেক্ট ওরিয়েন্টেড কনসেপ্টস, জেনেরিকস, লিঙ্ক ডাটা কোয়েরি, অ্যাসিঙ্ক/অ্যাওয়েট, ফাইল আই/ও এবং উইন্ডোজ ডেস্কটপ অ্যাপ্লিকেশন তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Master one of the most versatile and high-paying programming languages in the world. C# powers enterprise web apps, desktop software, game development with Unity, and cloud systems on Microsoft Azure.",
+      "en": "Master one of the most versatile and high-paying programming languages in the world. C# powers enterprise web apps, desktop software, game development with Unity and cloud systems on Microsoft Azure.",
       "bn": "এই কোর্সে আপনি সি# ভাষার আধুনিক ফিচারস আয়ত্ত করে সফটওয়্যার ডেভেলপমেন্টের জন্য প্রস্তুতি নেবেন, যা ওয়েব ব্যাকএন্ড, ডেক্সটপ অ্যাপ এবং ইউনিটি গেম ডেভেলপমেন্টের মূল ভিত্তি।"
     },
     "coreValues": [
@@ -2883,7 +2883,7 @@ module.exports = [
           "bn": "মডার্ন সি# ১২ ওওপি"
         },
         "desc": {
-          "en": "Master encapsulation, polymorphism, abstraction, and interface-driven design.",
+          "en": "Master encapsulation, polymorphism, abstraction and interface-driven design.",
           "bn": "ইন্টারফেস ও অবজেক্ট ওরিয়েন্টেড সফটওয়্যার ডিজাইন।"
         },
         "icon": "Code2"
@@ -2895,7 +2895,7 @@ module.exports = [
           "bn": "লিঙ্ক ও কালেকশনস"
         },
         "desc": {
-          "en": "Filter, map, aggregate, and query in-memory collections effortlessly.",
+          "en": "Filter, map, aggregate and query in-memory collections effortlessly.",
           "bn": "লিঙ্ক কোয়েরি দিয়ে দ্রুত ডেটা প্রসেসিং।"
         },
         "icon": "Database"
@@ -3123,11 +3123,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Complete Java Standard Edition (Java SE 21) programming course. Topics include JDK/JVM architecture, Object-Oriented Programming (OOP) principles, Java Collections Framework (List, Set, Map), Exception Handling, Multithreading & Concurrency, Java I/O Streams, JDBC database connectivity, JavaFX desktop application development, and software design patterns.",
+      "en": "Complete Java Standard Edition (Java SE 21) programming course. Topics include JDK/JVM architecture, Object-Oriented Programming (OOP) principles, Java Collections Framework (List, Set, Map), Exception Handling, Multithreading & Concurrency, Java I/O Streams, JDBC database connectivity, JavaFX desktop application development and software design patterns.",
       "bn": "জাভা স্ট্যান্ডার্ড এডিশন (Java SE) প্রোগ্রামিং কোর্স। এতে জেভিএম আর্কিটেকচার, ওওপি কনসেপ্টস, কালেকশন ফ্রেমওয়ার্ক, মাল্টিথ্রেডিং, এক্সেপশন হ্যান্ডলিং, জেডিবিসি ডাটাবেস কানেক্টিভিটি ও জাভাএফএক্স ডেক্সটপ অ্যাপ ডেভেলপমেন্ট শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Java is the backbone of global enterprise banking, Android applications, and large-scale cloud services. Master object-oriented principles, robust exception handling, multi-threaded algorithms, and database connectivity to build scalable Java software.",
+      "en": "Java is the backbone of global enterprise banking, Android applications and large-scale cloud services. Master object-oriented principles, robust exception handling, multi-threaded algorithms and database connectivity to build scalable Java software.",
       "bn": "এই কোর্সে আপনি একদম বেসিক থেকে শুরু করে আধুনিক জাভা ২১, কালেকশনস, মাল্টিথ্রেডিং ও ডাটাবেস প্রোগ্রামিং শিখে স্প্রিং বুট বা অ্যান্ড্রয়েড ডেভেলপমেন্টের জন্য সম্পূর্ণ প্রস্তুত হবেন।"
     },
     "coreValues": [
@@ -3138,7 +3138,7 @@ module.exports = [
           "bn": "জাভা ওওপি মাস্টারি"
         },
         "desc": {
-          "en": "Master encapsulation, inheritance, polymorphism, abstraction, and interfaces.",
+          "en": "Master encapsulation, inheritance, polymorphism, abstraction and interfaces.",
           "bn": "অবজেক্ট ওরিয়েন্টেড ডিজাইন ও ক্লিন কোড প্র্যাকটিস।"
         },
         "icon": "Code2"
@@ -3150,7 +3150,7 @@ module.exports = [
           "bn": "কালেকশনস ও স্ট্রিমস"
         },
         "desc": {
-          "en": "ArrayList, HashMap, HashSet, and functional stream operations.",
+          "en": "ArrayList, HashMap, HashSet and functional stream operations.",
           "bn": "কালেকশন ফ্রেমওয়ার্ক ও ল্যাম্বডা স্ট্রিমস।"
         },
         "icon": "Database"
@@ -3170,7 +3170,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand JVM, JRE, JDK, bytecode execution, and garbage collection.",
+        "en": "Understand JVM, JRE, JDK, bytecode execution and garbage collection.",
         "bn": "জেভিএম আর্কিটেকচার ও মেমোরি ম্যানেজমেন্ট বোঝা।"
       },
       {
@@ -3379,18 +3379,18 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "6+ years teaching Scratch, robotics, and creative programming to kids aged 8-15.",
+        "en": "6+ years teaching Scratch, robotics and creative programming to kids aged 8-15.",
         "bn": "৮-১৫ বছর বয়সী শিশুদের প্রোগ্রামিং ও রোবোটিক্সে ৬+ বছরের শিক্ষকতা।"
       },
       "experience": "6+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Fun, engaging and highly creative programming course for kids (ages 8 to 16). Topics include computational thinking, block-based coding with MIT Scratch 3.0, interactive storytelling & animations, 2D game development (Maze, Catch, Flappy Bird), logic puzzles, introduction to Python with Turtle graphics, and building fun interactive mini apps.",
+      "en": "Fun, engaging and highly creative programming course for kids (ages 8 to 16). Topics include computational thinking, block-based coding with MIT Scratch 3.0, interactive storytelling & animations, 2D game development (Maze, Catch, Flappy Bird), logic puzzles, introduction to Python with Turtle graphics and building fun interactive mini apps.",
       "bn": "৮ থেকে ১৬ বছর বয়সী বাচ্চাদের জন্য আনন্দময় কোডিং কোর্স। এতে স্ক্র্যাচ ৩.০ ব্লক কোডিং, কার্টুন অ্যানিমেশন তৈরি, মেজ গেম ও ফ্ল্যাপি বার্ড গেম বানানো, লজিক পাজল এবং পাইথন টার্টল দিয়ে মজার মজার ছবি আঁকা শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Turn screen time into creative skill-building! Kids learn essential problem-solving, algorithmic thinking, and creativity through visual block programming and interactive game creation before transitioning smoothly into beginner-friendly Python code.",
+      "en": "Turn screen time into creative skill-building! Kids learn essential problem-solving, algorithmic thinking and creativity through visual block programming and interactive game creation before transitioning smoothly into beginner-friendly Python code.",
       "bn": "বাচ্চারা মোবাইল ও কম্পিউটারে শুধু গেম না খেলে নিজেই কীভাবে গেম ও অ্যানিমেশন বানাতে পারে তা শিখবে। এতে তাদের লজিক্যাল থিংকিং, গণিতের ভয় দূর হওয়া এবং ভবিষ্যতের প্রযুক্তি দক্ষতায় এগিয়ে থাকা নিশ্চিত হবে।"
     },
     "coreValues": [
@@ -3401,7 +3401,7 @@ module.exports = [
           "bn": "স্ক্র্যাচ ৩.০ গেম মেকিং"
         },
         "desc": {
-          "en": "Build 8+ fun arcade games, animations, and interactive stories.",
+          "en": "Build 8+ fun arcade games, animations and interactive stories.",
           "bn": "৮টিরও বেশি আর্কেড গেম ও অ্যানিমেশন তৈরি।"
         },
         "icon": "Sparkles"
@@ -3413,7 +3413,7 @@ module.exports = [
           "bn": "লজিক ও প্রবলেম সলভিং"
         },
         "desc": {
-          "en": "Develop logic, loops, conditionals, variables, and creative problem solving.",
+          "en": "Develop logic, loops, conditionals, variables and creative problem solving.",
           "bn": "লজিক, লুপস ও কন্ডিশনাল চিন্তাভাবনা বৃদ্ধি।"
         },
         "icon": "Cpu"
@@ -3433,19 +3433,19 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand core programming concepts: sequences, loops, variables, and events.",
+        "en": "Understand core programming concepts: sequences, loops, variables and events.",
         "bn": "প্রোগ্রামিংয়ের মূল ধারণা: সিকোয়েন্স, লুপস ও ভ্যারিয়েবলস বোঝা।"
       },
       {
-        "en": "Create interactive cartoons, animated stories, and music with Scratch.",
+        "en": "Create interactive cartoons, animated stories and music with Scratch.",
         "bn": "স্ক্র্যাচ দিয়ে কার্টুন অ্যানিমেশন ও মিউজিক্যাল স্টোরি তৈরি করা।"
       },
       {
-        "en": "Design and code full 2D games with scoring, lives, and collision detection.",
+        "en": "Design and code full 2D games with scoring, lives and collision detection.",
         "bn": "স্কোর ও লেভেল সহ সম্পূর্ণ ২ডি গেম তৈরি করা।"
       },
       {
-        "en": "Draw geometric shapes, mandalas, and colorful patterns with Python Turtle.",
+        "en": "Draw geometric shapes, mandalas and colorful patterns with Python Turtle.",
         "bn": "পাইথন টার্টল দিয়ে আকর্ষণীয় জ্যামিতিক নকশা আঁকা।"
       },
       {

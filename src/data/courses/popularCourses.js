@@ -63,7 +63,7 @@ module.exports = [
       "bn": "একটি পূর্ণাঙ্গ প্রফেশনাল গ্রাফিক ডিজাইন কোর্স। এতে ফটোশপ, ইমেজ ম্যানিপুলেশন, ব্লেন্ড টেকনিক, হেয়ার মাস্কিং, এআই ডিজাইন, ইলাস্ট্রেটর, লোগো ডিজাইন, টি-শার্ট ডিজাইন, প্যাকেজিং, বেহ্যান্স পোর্টফোলিও এবং ফ্রিল্যান্সিং মার্কেটপ্লেস শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "This 90-hour hands-on graphic design course covers Adobe Photoshop and Adobe Illustrator from fundamental principles to cutting-edge AI-assisted workflows. You will design commercial brand identities, product packaging, t-shirts, social media campaigns, and build a world-class Behance portfolio to earn from Fiverr, Upwork, and local agencies.",
+      "en": "This 90-hour hands-on graphic design course covers Adobe Photoshop and Adobe Illustrator from fundamental principles to cutting-edge AI-assisted workflows. You will design commercial brand identities, product packaging, t-shirts, social media campaigns and build a world-class Behance portfolio to earn from Fiverr, Upwork and local agencies.",
       "bn": "৯০ ঘণ্টার এই বাস্তবভিত্তিক কোর্সে আপনি ফটোশপ ও ইলাস্ট্রেটরের অ্যাডভান্সড টুলস, এআই টেকনোলজি, লোগো ও ব্র্যান্ডিং, টি-শার্ট ডিজাইন, প্রোডাক্ট প্যাকেজিং এবং আন্তর্জাতিক মার্কেটপ্লেসে কাজ পাওয়ার যাবতীয় স্কিল শিখবেন।"
     },
     "coreValues": [
@@ -74,7 +74,7 @@ module.exports = [
           "bn": "প্রফেশনাল ব্র্যান্ড আইডেন্টিটি"
         },
         "desc": {
-          "en": "Create industry-grade vector logos, stationery, and comprehensive brand guidelines.",
+          "en": "Create industry-grade vector logos, stationery and comprehensive brand guidelines.",
           "bn": "ভেক্টর লোগো ও ব্র্যান্ড গাইডলাইন তৈরিতে দক্ষতা।"
         },
         "icon": "Palette"
@@ -86,7 +86,7 @@ module.exports = [
           "bn": "এআই পাওয়ারড ডিজাইন"
         },
         "desc": {
-          "en": "Leverage Midjourney, Firefly, and Photoshop AI generative tools for 10x faster output.",
+          "en": "Leverage Midjourney, Firefly and Photoshop AI generative tools for 10x faster output.",
           "bn": "ফায়ারফ্লাই ও ফটোশপ এআই দিয়ে দ্রুত আধুনিক ডিজাইন।"
         },
         "icon": "Sparkles"
@@ -106,7 +106,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Master Adobe Photoshop tools, layers, blending modes, and advanced hair masking.",
+        "en": "Master Adobe Photoshop tools, layers, blending modes and advanced hair masking.",
         "bn": "ফটোশপ টুলস, লেয়ার ও অ্যাডভান্সড হেয়ার মাস্কিংয়ে পারদর্শী হওয়া।"
       },
       {
@@ -114,11 +114,11 @@ module.exports = [
         "bn": "ফটোরিয়ালিস্টিক ইমেজ ম্যানিপুলেশন ও কম্পোজিটিং তৈরি করা।"
       },
       {
-        "en": "Master Adobe Illustrator for vector logo design, typography, and t-shirt graphics.",
+        "en": "Master Adobe Illustrator for vector logo design, typography and t-shirt graphics.",
         "bn": "ভেক্টর লোগো ডিজাইন, টাইপোগ্রাফি ও টি-শার্ট গ্রাফিক্সে দক্ষতা অর্জন।"
       },
       {
-        "en": "Design commercial 3D packaging mockups, die-lines, and print-ready files.",
+        "en": "Design commercial 3D packaging mockups, die-lines and print-ready files.",
         "bn": "প্রিন্ট-রেডি প্রোডাক্ট প্যাকেজিং ও ডাই-লাইন ডিজাইন তৈরি করা।"
       },
       {
@@ -330,7 +330,7 @@ module.exports = [
       "bn": "১২০ ঘণ্টার পূর্ণাঙ্গ ওয়ার্ডপ্রেস ডেভেলপমেন্ট কোর্স। এতে ডোমেইন ও হোস্টিং, ওয়ার্ডপ্রেস ড্যাশবোর্ড, থিম ও প্লাগিন কাস্টমাইজেশন, উকমার্স অনলাইন শপ তৈরি, স্পিড ও এসইও অপ্টিমাইজেশন এবং আন্তর্জাতিক মার্কেটপ্লেসে ক্লায়েন্ট হ্যান্ডলিং শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Learn how to build any dynamic, high-performance website without coding or with custom code. From corporate portals and news magazines to full-featured WooCommerce e-commerce stores with automated payment gateways, speed optimization, and malware protection.",
+      "en": "Learn how to build any dynamic, high-performance website without coding or with custom code. From corporate portals and news magazines to full-featured WooCommerce e-commerce stores with automated payment gateways, speed optimization and malware protection.",
       "bn": "এই কোর্সে আপনি যেকোনো ডায়নামিক ওয়েবসাইট ও ই-কমার্স প্ল্যাটফর্ম তৈরি, বিকাশ/নগদ পেমেন্ট গেটওয়ে ইন্টিগ্রেশন, রকেট-ফাস্ট স্পিড অপ্টিমাইজেশন এবং আন্তর্জাতিক ক্লায়েন্টদের জন্য কাস্টম ওয়ার্ডপ্রেস সলিউশন তৈরি করা শিখবেন।"
     },
     "coreValues": [
@@ -341,7 +341,7 @@ module.exports = [
           "bn": "উকমার্স ও পেমেন্ট গেটওয়ে"
         },
         "desc": {
-          "en": "Build full multi-vendor and retail stores with bKash, Nagad, Stripe, and PayPal.",
+          "en": "Build full multi-vendor and retail stores with bKash, Nagad, Stripe and PayPal.",
           "bn": "সম্পূর্ণ অনলাইন স্টোর এবং লোকাল ও গ্লোবাল পেমেন্ট গেটওয়ে সেটআপ।"
         },
         "icon": "Zap"
@@ -353,7 +353,7 @@ module.exports = [
           "bn": "পেজ বিল্ডার ও থিম কাস্টমাইজেশন"
         },
         "desc": {
-          "en": "Master Elementor Pro, Gutenberg, Astra, Divi, and theme options inside out.",
+          "en": "Master Elementor Pro, Gutenberg, Astra, Divi and theme options inside out.",
           "bn": "এলিমেন্টর প্রো ও আধুনিক পেজ বিল্ডারে পূর্ণাঙ্গ দক্ষতা।"
         },
         "icon": "Code2"
@@ -373,11 +373,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Configure CPanel, domain, SSL, database, and local development environments.",
+        "en": "Configure CPanel, domain, SSL, database and local development environments.",
         "bn": "সিপ্যানেল, ডোমেইন হোস্টিং ও লোকাল সার্ভার কনফিগারেশন করা।"
       },
       {
-        "en": "Build responsive corporate websites, portfolios, blogs, and real estate portals.",
+        "en": "Build responsive corporate websites, portfolios, blogs and real estate portals.",
         "bn": "কর্পোরেট ওয়েবসাইট, পোর্টফোলিও ও ম্যাগাজিন পোর্টাল ডিজাইন করা।"
       },
       {
@@ -385,7 +385,7 @@ module.exports = [
         "bn": "উকমার্স ই-কমার্স স্টোর ও ডায়নামিক চেকআউট তৈরি করা।"
       },
       {
-        "en": "Perform 90+ PageSpeed optimizations, cache setups, and firewall security hardening.",
+        "en": "Perform 90+ PageSpeed optimizations, cache setups and firewall security hardening.",
         "bn": "ওয়েবসাইটের স্পিড বাড়ানো এবং হ্যাকিং প্রতিরোধে সিকিউরিটি হার্ডেনিং।"
       },
       {
@@ -593,7 +593,7 @@ module.exports = [
       "bn": "অ্যান্ড্রয়েড স্টুডিও, কোটলিন, ইউআই লেআউটস, অ্যাক্টিভিটিজ ও নেভিগেশন, রুম ডাটাবেস, রেট্রোফিট এপিআই, ফায়ারবেস ইন্টিগ্রেশন ও প্লে স্টোরে অ্যাপ পাবলিশিং শেখার পূর্ণাঙ্গ কোর্স।"
     },
     "fullDescription": {
-      "en": "Dive into industry-standard Android app development. You will build real-world native apps with modern Kotlin, Jetpack Compose, Material 3 Design, asynchronous Coroutines, Retrofit REST APIs, push notifications, and Firebase backend.",
+      "en": "Dive into industry-standard Android app development. You will build real-world native apps with modern Kotlin, Jetpack Compose, Material 3 Design, asynchronous Coroutines, Retrofit REST APIs, push notifications and Firebase backend.",
       "bn": "এই কোর্সে আপনি কোটলিন ও জেটপ্যাক কম্পোজ ব্যবহার করে চমৎকার ইউআই, এপিআই ডেটা ফেচিং, অফলাইন ক্যাশিং, ফায়ারবেস অথেনটিকেশন ও গুগল প্লে স্টোরে অ্যাপ রিলিজ দেওয়ার পূর্ণাঙ্গ প্রক্রিয়া শিখবেন।"
     },
     "coreValues": [
@@ -628,7 +628,7 @@ module.exports = [
           "bn": "গুগল প্লে স্টোর রিলিজ"
         },
         "desc": {
-          "en": "Build APK/AAB packages, sign apps, and publish live to the Google Play Store.",
+          "en": "Build APK/AAB packages, sign apps and publish live to the Google Play Store.",
           "bn": "প্রোডাকশন অ্যাপ সাইন করে গুগল প্লে স্টোরে পাবলিশ করা।"
         },
         "icon": "Smartphone"
@@ -636,7 +636,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Master Android Studio IDE, project structure, and Gradle build system.",
+        "en": "Master Android Studio IDE, project structure and Gradle build system.",
         "bn": "অ্যান্ড্রয়েড স্টুডিও ও গ্রেডল বিল্ড সিস্টেম আয়ত্ত করা।"
       },
       {
@@ -652,7 +652,7 @@ module.exports = [
         "bn": "রুম ডাটাবেস দিয়ে অফলাইন ডাটা স্টোরেজ ও ক্যাশিং তৈরি করা।"
       },
       {
-        "en": "Integrate Firebase auth, cloud messaging, crashlytics, and publish on Google Play.",
+        "en": "Integrate Firebase auth, cloud messaging, crashlytics and publish on Google Play.",
         "bn": "ফায়ারবেস নোটিফিকেশন ও প্লে স্টোরে অ্যাপ রিলিজ করা।"
       }
     ],
@@ -837,7 +837,7 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "7+ years designing mobile apps, SaaS dashboards, and design systems for European and US clients.",
+        "en": "7+ years designing mobile apps, SaaS dashboards and design systems for European and US clients.",
         "bn": "ইউরোপ ও আমেরিকার ক্লায়েন্টদের জন্য মোবাইল অ্যাপ ও সাস ড্যাশবোর্ড ডিজাইনে ৭+ বছরের অভিজ্ঞতা।"
       },
       "experience": "7+ Yrs Exp",
@@ -848,7 +848,7 @@ module.exports = [
       "bn": "ইউএক্স/ইউআই ডিজাইনের পূর্ণাঙ্গ মাস্টারক্লাস। এতে ইউজার রিসার্চ, টাইপোগ্রাফি, স্কেচিং, ওয়্যারফ্রেমিং, পেপার প্রোটোটাইপিং, ফিগমাতে মোবাইল ও ওয়েব অ্যাপ ডিজাইন, ইন্টারঅ্যাক্টিভ প্রোটোটাইপ, পোর্টফোলিও ও মার্কেটপ্লেস ক্যারিয়ার শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Transform into an industry-ready Product (UX/UI) Designer. Learn how to conduct empathetic user research, create user personas, build wireframes, design atomic design systems in Figma, and build advanced interactive prototypes with smart animations.",
+      "en": "Transform into an industry-ready Product (UX/UI) Designer. Learn how to conduct empathetic user research, create user personas, build wireframes, design atomic design systems in Figma and build advanced interactive prototypes with smart animations.",
       "bn": "এই কোর্সে আপনি ফিগমা ব্যবহার করে আন্তর্জাতিক মানের মোবাইল অ্যাপ ও ওয়েব ড্যাশবোর্ড ডিজাইন, ইউজার এক্সপেরিয়েন্স অডিট, ভ্যারিয়েন্টস, অটো-লেআউট এবং ইন্টারঅ্যাক্টিভ মাইক্রো-অ্যানিমেশন তৈরি শিখবেন।"
     },
     "coreValues": [
@@ -859,7 +859,7 @@ module.exports = [
           "bn": "ইউজার রিসার্চ ও স্ট্র্যাটেজি"
         },
         "desc": {
-          "en": "Conduct user interviews, surveys, empathy mapping, and data-backed UX audits.",
+          "en": "Conduct user interviews, surveys, empathy mapping and data-backed UX audits.",
           "bn": "ইউজার জার্নি ও ইনফরমেশন আর্কিটেকচার তৈরি।"
         },
         "icon": "Users"
@@ -871,7 +871,7 @@ module.exports = [
           "bn": "ফিগমা ডিজাইন সিস্টেম"
         },
         "desc": {
-          "en": "Build production design systems with auto-layout, variables, and responsive components.",
+          "en": "Build production design systems with auto-layout, variables and responsive components.",
           "bn": "অটো-লেআউট ও কম্পোনেন্ট লাইব্রেরি তৈরি।"
         },
         "icon": "Palette"
@@ -891,11 +891,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand UX psychology, user mental models, and design thinking methodology.",
+        "en": "Understand UX psychology, user mental models and design thinking methodology.",
         "bn": "ইউএক্স সাইকোলজি ও ডিজাইন থিংকিং মেথডোলজি বোঝা।"
       },
       {
-        "en": "Master Figma: Auto-layout, component variants, design tokens, and constraints.",
+        "en": "Master Figma: Auto-layout, component variants, design tokens and constraints.",
         "bn": "ফিগমা অটো-লেআউট ও ভ্যারিয়েন্টস ব্যবহারে শতভাগ দক্ষতা।"
       },
       {
@@ -1103,7 +1103,7 @@ module.exports = [
       "bn": "মেটা মার্কেটিং, ফেসবুক ও ইনস্টাগ্রাম পেইড অ্যাডস, সার্চ ইঞ্জিন অপ্টিমাইজেশন (অন-পেজ, অফ-পেজ, টেকনিক্যাল ও লোকাল এসইও), ইউটিউব এসইও, ই-মেইল অটোমেশন, গুগল অ্যাডস ও ফ্রিল্যান্সিং মার্কেটপ্লেস মাস্টারি কোর্স।"
     },
     "fullDescription": {
-      "en": "Become a full-funnel digital marketer capable of generating massive traffic and sales. Learn modern pixel setup, Conversions API, lookalike audiences, Google Analytics 4 (GA4), Search Console, Ahrefs/Semrush keyword research, backlink acquisition, and Mailchimp/Klaviyo automation.",
+      "en": "Become a full-funnel digital marketer capable of generating massive traffic and sales. Learn modern pixel setup, Conversions API, lookalike audiences, Google Analytics 4 (GA4), Search Console, Ahrefs/Semrush keyword research, backlink acquisition and Mailchimp/Klaviyo automation.",
       "bn": "এই কোর্সে আপনি ডেটা-ড্রাইভেন মার্কেটিং, ফেসবুক সিএপিআই, জিএ৪ ট্র্যাকিং, গুগল সার্চ ও শপিং অ্যাডস, এফিলিয়েট মার্কেটিং এবং গুগল ফার্স্ট পেজ র‍্যাংকিংয়ের বাস্তব কৌশল শিখবেন।"
     },
     "coreValues": [
@@ -1154,7 +1154,7 @@ module.exports = [
         "bn": "অন-পেজ, অফ-পেজ ও টেকনিক্যাল এসইও অডিট ও অপ্টিমাইজ করা।"
       },
       {
-        "en": "Run Google Search, Display, Video (YouTube), and Performance Max Ads.",
+        "en": "Run Google Search, Display, Video (YouTube) and Performance Max Ads.",
         "bn": "গুগল সার্চ ও ইউটিউব ভিডিও অ্যাডস পরিচালনা করা।"
       },
       {
@@ -1214,7 +1214,7 @@ module.exports = [
             "bn": "এসইও ও এসইএম ওভারভিউ, সার্চ ইনটেন্ট ও প্রতিযোগী বিশ্লেষণ"
           },
           {
-            "en": "On-Page, Off-Page, Technical, and Local SEO (Google My Business)",
+            "en": "On-Page, Off-Page, Technical and Local SEO (Google My Business)",
             "bn": "অন-পেজ, অফ-পেজ, টেকনিক্যাল ও লোকাল এসইও (গুগল মাই বিজনেস)"
           },
           {
@@ -1358,7 +1358,7 @@ module.exports = [
       "bn": "সিপিএ মার্কেটিং ফান্ডামেন্টালস, টপ নেটওয়ার্ক অ্যাকাউন্ট অ্যাপ্রুভাল, ডোমেইন হোস্টিং ও প্রি-ল্যান্ডার পেজ ডিজাইন, টিকটক অ্যাডস, ফেসবুক অ্যাডস, পুশ ও নেটিভ ট্রাফিক এবং ক্যাম্পেইন ট্র্যাকিং ও অপ্টিমাইজেশন শেখার স্পেশালাইজড কোর্স।"
     },
     "fullDescription": {
-      "en": "Learn the secrets of modern CPA affiliate marketing. Master top CPA networks (MaxBounty, CPAGrip, LosPollos), create spy-tested high-converting landing pages, set up advanced trackers (Voluum, RedTrack), and run profitable paid traffic across TikTok, Meta, Bing, and Native ad networks.",
+      "en": "Learn the secrets of modern CPA affiliate marketing. Master top CPA networks (MaxBounty, CPAGrip, LosPollos), create spy-tested high-converting landing pages, set up advanced trackers (Voluum, RedTrack) and run profitable paid traffic across TikTok, Meta, Bing and Native ad networks.",
       "bn": "এই কোর্সে আপনি কস্ট-পার-অ্যাকশন (CPA) অফার নির্বাচন, প্রি-ল্যান্ডার তৈরি, ভলিউম ট্র্যাকার দিয়ে ডেটা অপ্টিমাইজেশন এবং টিকটক ও পুশ অ্যাডস দিয়ে উচ্চ কনভার্সন পাওয়ার সিক্রেট স্ট্র্যাটেজি শিখবেন।"
     },
     "coreValues": [
@@ -1381,7 +1381,7 @@ module.exports = [
           "bn": "স্পাই টুলস ও ল্যান্ডিং পেজ"
         },
         "desc": {
-          "en": "Rip, clean, and host high-converting pre-landers with custom domains.",
+          "en": "Rip, clean and host high-converting pre-landers with custom domains.",
           "bn": "কনভার্টিং ল্যান্ডিং পেজ ও ট্র্যাকার সেটআপ।"
         },
         "icon": "Zap"
@@ -1613,7 +1613,7 @@ module.exports = [
       "bn": "অ্যাডোবি প্রিমিয়ার প্রো, আফটার ইফেক্টস, অডিও এডিটিং, গ্রিন স্ক্রিন রিমুভাল, বেসিক সিজিআই, সিনেমাটিক কালার গ্রেডিং, লুমিত্রি কালার, ৩ডি মোশন গ্রাফিক্স ও ফ্রিল্যান্স মার্কেটপ্লেস শেখার সম্পূর্ণ কোর্স।"
     },
     "fullDescription": {
-      "en": "Turn your passion for storytelling into a lucrative career. Master Adobe Premiere Pro timeline editing, multi-cam switching, sound design, dialogue cleanup, green screen keying, Lumetri color grading, and dynamic title/logo animations in Adobe After Effects.",
+      "en": "Turn your passion for storytelling into a lucrative career. Master Adobe Premiere Pro timeline editing, multi-cam switching, sound design, dialogue cleanup, green screen keying, Lumetri color grading and dynamic title/logo animations in Adobe After Effects.",
       "bn": "এই কোর্সে আপনি সোশ্যাল মিডিয়া রিলস, ইউটিউব ভিডিও, ডকুমেন্টারি ও কর্পোরেট প্রমোর জন্য হাই-এন্ড ভিডিও এডিটিং, মোশন গ্রাফিক্স ও সিনেমাটিক কালার কারেকশন তৈরি করা শিখবেন।"
     },
     "coreValues": [
@@ -1624,7 +1624,7 @@ module.exports = [
           "bn": "সিনেমাটিক স্টোরিটেলিং"
         },
         "desc": {
-          "en": "Master pacing, rhythm, J/L cuts, sound effects, and emotional storytelling.",
+          "en": "Master pacing, rhythm, J/L cuts, sound effects and emotional storytelling.",
           "bn": "ভিডিও এডিটিংয়ের রিদম, সাউন্ড ডিজাইন ও সিনেমাটিক লুক।"
         },
         "icon": "Video"
@@ -1636,7 +1636,7 @@ module.exports = [
           "bn": "আফটার ইফেক্টস মোশন"
         },
         "desc": {
-          "en": "Create 2D/3D title sequences, logo reveals, lower thirds, and particle effects.",
+          "en": "Create 2D/3D title sequences, logo reveals, lower thirds and particle effects.",
           "bn": "টাইটেল সিকোয়েন্স, লোগো অ্যানিমেশন ও স্পেশাল ইফেক্টস।"
         },
         "icon": "Sparkles"
@@ -1648,7 +1648,7 @@ module.exports = [
           "bn": "কালার ও সাউন্ড মাস্টারি"
         },
         "desc": {
-          "en": "Lumetri color correction, LUTs, noise reduction, and audio mastering.",
+          "en": "Lumetri color correction, LUTs, noise reduction and audio mastering.",
           "bn": "লুমিত্রি কালার গ্রেডিং ও ক্রিস্টাল ক্লিয়ার অডিও এডিটিং।"
         },
         "icon": "Palette"
@@ -1656,7 +1656,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Edit commercial videos, YouTube content, and documentary films in Premiere Pro.",
+        "en": "Edit commercial videos, YouTube content and documentary films in Premiere Pro.",
         "bn": "প্রিমিয়ার প্রোতে কমার্শিয়াল ভিডিও ও ইউটিউব কনটেন্ট এডিট করা।"
       },
       {
@@ -1668,7 +1668,7 @@ module.exports = [
         "bn": "গ্রিন স্ক্রিন রিমুভ ও সিজিআই কম্পোজিটিং তৈরি করা।"
       },
       {
-        "en": "Create advanced motion graphics, kinetic typography, and transitions in After Effects.",
+        "en": "Create advanced motion graphics, kinetic typography and transitions in After Effects.",
         "bn": "আফটার ইফেক্টসে মোশন গ্রাফিক্স ও টাইপোগ্রাফি অ্যানিমেশন তৈরি।"
       },
       {
@@ -1872,7 +1872,7 @@ module.exports = [
       "bn": "গুগল ফ্লাটার ও ডার্ট দিয়ে আইওএস এবং অ্যান্ড্রয়েড অ্যাপ তৈরির পূর্ণাঙ্গ কোর্স। এতে ইউআই উইজেটস, রাউটিং, স্টেট ম্যানেজমেন্ট (ব্লক/প্রোভাইডার), রেস্ট এপিআই, লোকাল স্টোরেজ (হাইভ/এসকিউফ্লাইট), ফায়ারবেস অথ ও গুগল প্লে/অ্যাপ স্টোর রিলিজ শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Write once and deploy everywhere with 60 FPS silky smooth performance. You will build modern, pixel-perfect iOS and Android apps with Dart 3, Flutter 3, Bloc pattern, RESTful API integration, push notifications, and local offline caching.",
+      "en": "Write once and deploy everywhere with 60 FPS silky smooth performance. You will build modern, pixel-perfect iOS and Android apps with Dart 3, Flutter 3, Bloc pattern, RESTful API integration, push notifications and local offline caching.",
       "bn": "এই কোর্সে আপনি ডার্ট প্রোগ্রামিং থেকে শুরু করে রিয়েল-ওয়ার্ল্ড ই-কমার্স, চ্যাট অ্যাপ ও ফুড ডেলিভারি অ্যাপ প্রজেক্ট বানাবেন এবং অ্যাপ স্টোর ও গুগল প্লেতে পাবলিশ করবেন।"
     },
     "coreValues": [
@@ -1907,7 +1907,7 @@ module.exports = [
           "bn": "এপিআই ও ক্লাউড ডেটাবেস"
         },
         "desc": {
-          "en": "Seamlessly integrate REST APIs, Dio networking, and Firebase cloud services.",
+          "en": "Seamlessly integrate REST APIs, Dio networking and Firebase cloud services.",
           "bn": "রেস্ট এপিআই ও ফায়ারবেস রিয়েলটাইম ডেটাবেস ইন্টিগ্রেশন।"
         },
         "icon": "Cloud"
@@ -1923,11 +1923,11 @@ module.exports = [
         "bn": "মেটেরিয়াল ও কিউপারটিনো ডিজাইনের আধুনিক ইউআই তৈরি।"
       },
       {
-        "en": "Manage complex application state using BLoC, Riverpod, and Provider.",
+        "en": "Manage complex application state using BLoC, Riverpod and Provider.",
         "bn": "ব্লক ও রিভারপড দিয়ে স্টেট ম্যানেজমেন্ট পরিচালনা।"
       },
       {
-        "en": "Connect apps to backend REST APIs with Dio, interceptors, and error handling.",
+        "en": "Connect apps to backend REST APIs with Dio, interceptors and error handling.",
         "bn": "ডিও লাইব্রেরি দিয়ে রেস্ট এপিআই ও টোকেন ম্যানেজমেন্ট।"
       },
       {
@@ -2116,7 +2116,7 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "9+ years engineering scalable Python backends, Django REST APIs, and microservices.",
+        "en": "9+ years engineering scalable Python backends, Django REST APIs and microservices.",
         "bn": "স্কেলেবল পাইথন ব্যাকএন্ড ও জ্যাঙ্গো এপিআই তৈরিতে ৯+ বছরের অভিজ্ঞতা।"
       },
       "experience": "9+ Yrs Exp",
@@ -2127,7 +2127,7 @@ module.exports = [
       "bn": "পাইথন ও জ্যাঙ্গো ব্যাকএন্ড ইঞ্জিনিয়ারিংয়ের পূর্ণাঙ্গ কোর্স। এতে পাইথন ওওপি, জ্যাঙ্গো ওআরএম, পোস্টগ্রেএসকিউএল, ভিউজ ও টেমপ্লেটস, ইউজার অথেনটিকেশন, জ্যাঙ্গো রেস্ট ফ্রেমওয়ার্ক (DRF) এপিআই, এডব্লিউএস/ভিডিএস ডেপ্লয়মেন্ট ও মার্কেটপ্লেস ক্যারিয়ার শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Learn Python from the ground up to advanced object-oriented design, then harness the power of the Django web framework. You will build secure, production-grade web applications, e-commerce backends with SSLCommerz/Stripe, scalable RESTful APIs with Django REST Framework, and deploy with Gunicorn, NGINX, and Docker.",
+      "en": "Learn Python from the ground up to advanced object-oriented design, then harness the power of the Django web framework. You will build secure, production-grade web applications, e-commerce backends with SSLCommerz/Stripe, scalable RESTful APIs with Django REST Framework and deploy with Gunicorn, NGINX and Docker.",
       "bn": "এই কোর্সে আপনি পাইথন ৩.১২, জ্যাঙ্গো এমভিটি আর্কিটেকচার, কাস্টম অ্যাডমিন প্যানেল, ডিআরএফ টোকেন অথেনটিকেশন, ব্যাকগ্রাউন্ড টাস্ক ও সার্ভার কনফিগারেশন পুঙ্খানুপুঙ্খভাবে শিখবেন।"
     },
     "coreValues": [
@@ -2138,7 +2138,7 @@ module.exports = [
           "bn": "পাইথন ওওপি মাস্টারি"
         },
         "desc": {
-          "en": "Master data structures, algorithms, functional programming, and OOP in Python.",
+          "en": "Master data structures, algorithms, functional programming and OOP in Python.",
           "bn": "পাইথনের ফান্ডামেন্টালস ও অবজেক্ট-ওরিয়েন্টেড ডিজাইন।"
         },
         "icon": "Code2"
@@ -2150,7 +2150,7 @@ module.exports = [
           "bn": "জ্যাঙ্গো ওআরএম ও সিকিউরিটি"
         },
         "desc": {
-          "en": "Secure database models, transactions, migrations, and built-in CSRF/XSS defense.",
+          "en": "Secure database models, transactions, migrations and built-in CSRF/XSS defense.",
           "bn": "সিকিউর ডেটাবেস মডেল ও ওআরএম কোয়েরিজ।"
         },
         "icon": "ShieldCheck"
@@ -2186,7 +2186,7 @@ module.exports = [
         "bn": "জ্যাঙ্গো রেস্ট ফ্রেমওয়ার্ক (DRF) দিয়ে সিকিউর এপিআই তৈরি।"
       },
       {
-        "en": "Deploy Django applications to Linux VPS with Nginx, Gunicorn, and SSL.",
+        "en": "Deploy Django applications to Linux VPS with Nginx, Gunicorn and SSL.",
         "bn": "লিনাক্স ভিপিএস সার্ভারে জিনিক্স ও গানিকর্ন দিয়ে অ্যাপ ডেপ্লয় করা।"
       }
     ],
@@ -2382,7 +2382,7 @@ module.exports = [
       "bn": "এইচটিএমএল, সিএসএস, টেইলউইন্ড, গিটহাব, জাভাস্ক্রিপ্ট, ডম, রিঅ্যাক্ট, রিঅ্যাক্ট রাউটার, ফায়ারবেস, ফিগমা/পিএসডি টু রিঅ্যাক্ট এবং ৪টি পূর্ণাঙ্গ বাস্তব প্রজেক্ট (পোর্টফোলিও, ব্লগ, সংবাদপত্র ও জব পোর্টাল) সহ ওয়েব ডেভেলপমেন্টের সম্পূর্ণ কোর্স।"
     },
     "fullDescription": {
-      "en": "From basic HTML markup to advanced interactive React web applications. This 138-hour extensive training ensures you master modern JavaScript, component design, responsive styling with Tailwind CSS, state management, Firebase backend integration, and building 4 enterprise-grade web applications.",
+      "en": "From basic HTML markup to advanced interactive React web applications. This 138-hour extensive training ensures you master modern JavaScript, component design, responsive styling with Tailwind CSS, state management, Firebase backend integration and building 4 enterprise-grade web applications.",
       "bn": "এই কোর্সে আপনি কোনো পূর্ব অভিজ্ঞতা ছাড়াই শুরু করে আধুনিক ওয়েব অ্যাপ্লিকেশন তৈরিতে দক্ষ হবেন। গিটহাব রিপোজিটরি, ক্লিন কোড প্র্যাকটিস এবং ফ্রিল্যান্স মার্কেটপ্লেস ও লোকাল সফটওয়্যার কোম্পানিতে চাকরির প্রস্তুতি নিশ্চিত করা হয়।"
     },
     "coreValues": [
@@ -2393,7 +2393,7 @@ module.exports = [
           "bn": "রিঅ্যাক্ট ও আধুনিক জেএস"
         },
         "desc": {
-          "en": "Master React Hooks, props, state, React Router, and clean architecture.",
+          "en": "Master React Hooks, props, state, React Router and clean architecture.",
           "bn": "রিঅ্যাক্ট হুকস, প্রপ্স ও রাউটিংয়ে শতভাগ পারদর্শিতা।"
         },
         "icon": "Code2"
@@ -2405,7 +2405,7 @@ module.exports = [
           "bn": "৪টি লাইভ রিয়েল প্রজেক্ট"
         },
         "desc": {
-          "en": "Build Portfolio, Blog, Newspaper, and Job Portal apps ready for portfolio.",
+          "en": "Build Portfolio, Blog, Newspaper and Job Portal apps ready for portfolio.",
           "bn": "পোর্টফোলিও, ব্লগ, নিউজপেপার ও জব পোর্টাল ওয়েব অ্যাপ।"
         },
         "icon": "Zap"
@@ -2425,11 +2425,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Master HTML5, CSS3, Tailwind CSS, and GitHub version control.",
+        "en": "Master HTML5, CSS3, Tailwind CSS and GitHub version control.",
         "bn": "এইচটিএমএল৫, সিএসএস৩, টেইলউইন্ড সিএসএস ও গিটহাবে পূর্ণ দক্ষতা।"
       },
       {
-        "en": "Understand JavaScript ES6+, DOM manipulation, fetch API, and JSON handling.",
+        "en": "Understand JavaScript ES6+, DOM manipulation, fetch API and JSON handling.",
         "bn": "জাভাস্ক্রিপ্ট ফান্ডামেন্টালস ও ডম ম্যানিপুলেশন আয়ত্ত করা।"
       },
       {
@@ -2649,7 +2649,7 @@ module.exports = [
       "bn": "এইচটিএমএল, সিএসএস, গিটহাব, টেইলউইন্ড, রিঅ্যাক্ট, নোড.জেএস, এক্সপ্রেস.জেএস, মঙ্গোডিবি, টাইপস্ক্রিপ্ট, অ্যাডভান্সড নোএসকিউএল ব্যাকএন্ড, অ্যাডভান্সড ফ্রন্টএন্ড এবং কমপ্লিট ফুল স্ট্যাক প্রোডাকশন ওয়েবসাইট তৈরির পূর্ণাঙ্গ মার্ন স্ট্যাক কোর্স।"
     },
     "fullDescription": {
-      "en": "Step into the most in-demand software engineering stack in the global IT market. Master modern TypeScript on both client and server, architect RESTful and GraphQL APIs with Node.js and Express, manage scalable NoSQL data with MongoDB & Mongoose, and build high-performance React frontends.",
+      "en": "Step into the most in-demand software engineering stack in the global IT market. Master modern TypeScript on both client and server, architect RESTful and GraphQL APIs with Node.js and Express, manage scalable NoSQL data with MongoDB & Mongoose and build high-performance React frontends.",
       "bn": "এই কোর্সে আপনি টাইপস্ক্রিপ্ট, নোড.জেএস ব্যাকএন্ড, মঙ্গোডিবি ডাটাবেস আর্কিটেকচার, পেমেন্ট গেটওয়ে ইন্টিগ্রেশন, রেডিস ক্যাশিং এবং ক্লাউড সার্ভার ডেপ্লয়মেন্ট সহ আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ার হওয়ার পূর্ণাঙ্গ গাইডলাইন পাবেন।"
     },
     "coreValues": [
@@ -2672,7 +2672,7 @@ module.exports = [
           "bn": "স্কেলেবল নোএসকিউএল ব্যাকএন্ড"
         },
         "desc": {
-          "en": "Aggregation pipelines, indexing, transactions, and REST APIs in Node/Express.",
+          "en": "Aggregation pipelines, indexing, transactions and REST APIs in Node/Express.",
           "bn": "মঙ্গোডিবি অ্যাগ্রিগেশন ও এক্সপ্রেস জেএস ব্যাকএন্ড।"
         },
         "icon": "Database"
@@ -2704,11 +2704,11 @@ module.exports = [
         "bn": "নোড.জেএস ও এক্সপ্রেস দিয়ে সিকিউর ব্যাকএন্ড এপিআই তৈরি।"
       },
       {
-        "en": "Design, query, and optimize MongoDB databases using Mongoose schemas & aggregation.",
+        "en": "Design, query and optimize MongoDB databases using Mongoose schemas & aggregation.",
         "bn": "মঙ্গোডিবি ডাটাবেস ও মাঙ্গুস দিয়ে ডেটা মডেলিং ও অপ্টিমাইজেশন।"
       },
       {
-        "en": "Deploy production full stack web applications to AWS, Render, and Vercel with CI/CD.",
+        "en": "Deploy production full stack web applications to AWS, Render and Vercel with CI/CD.",
         "bn": "এডব্লিউএস ও ভার্সেলে সিআই/সিডি অটোমেশন সহ ফুল স্ট্যাক অ্যাপ ডেপ্লয় করা।"
       }
     ],
@@ -2893,7 +2893,7 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "12+ years designing ISP, enterprise Cisco networks, and data center infrastructures.",
+        "en": "12+ years designing ISP, enterprise Cisco networks and data center infrastructures.",
         "bn": "আইএসপি, সিসকো এন্টারপ্রাইজ নেটওয়ার্ক ও ডাটা সেন্টারে ১২+ বছরের অভিজ্ঞতা।"
       },
       "experience": "12+ Yrs Exp",
@@ -2904,7 +2904,7 @@ module.exports = [
       "bn": "কম্পিউটার হার্ডওয়্যার ফান্ডামেন্টালস, অপারেটিং সিস্টেমস, সিসকো সিসিএনএ ২০০-৩০১ রাউটিং ও সুইচিং, নেটওয়ার্ক সিকিউরিটি ও ট্রাবলশুটিং, সিসি ক্যামেরা ও এনভিআর ইনস্টলেশন, মিক্রোটিক রাউটারওএস (MTCNA) আইএসপি কনফিগারেশন এবং আন্তর্জাতিক নেটওয়ার্কিং ক্যারিয়ারের পূর্ণাঙ্গ কোর্স।"
     },
     "fullDescription": {
-      "en": "Become an elite IT Infrastructure, System & Network Engineer. This flagship 200-hour hands-on program combines three top international certifications: CompTIA A+ (Hardware & OS), Cisco CCNA 200-301 (Routing, Switching & Security), and MikroTik MTCNA (ISP Bandwidth, Queue & Firewalls) alongside IP surveillance & CC camera deployment.",
+      "en": "Become an elite IT Infrastructure, System & Network Engineer. This flagship 200-hour hands-on program combines three top international certifications: CompTIA A+ (Hardware & OS), Cisco CCNA 200-301 (Routing, Switching & Security) and MikroTik MTCNA (ISP Bandwidth, Queue & Firewalls) alongside IP surveillance & CC camera deployment.",
       "bn": "এই ২০০ ঘণ্টার কোর্সে আপনি ফিজিক্যাল কম্পিউটার অ্যাসেম্বলিং, ট্রাবলশুটিং, সিসকো সুইচ-রাউটার কনফিগারেশন, ভি-ল্যান, ওএসপিএফ, মিক্রোটিক ব্যান্ডউইথ ম্যানেজমেন্ট, আইপি সিসি ক্যামেরা ইনস্টলেশন ও আইএসপি নেটওয়ার্ক সেটআপ প্র্যাকটিক্যাল ল্যাবে শিখবেন।"
     },
     "coreValues": [
@@ -2915,7 +2915,7 @@ module.exports = [
           "bn": "সিসকো সিসিএনএ ২০০-৩০১"
         },
         "desc": {
-          "en": "Enterprise routing, switching, VLANs, OSPF, ACLs, and NAT configuration.",
+          "en": "Enterprise routing, switching, VLANs, OSPF, ACLs and NAT configuration.",
           "bn": "সিসকো রাউটার ও সুইচ কনফিগারেশন এবং ল্যাব।"
         },
         "icon": "Server"
@@ -2939,7 +2939,7 @@ module.exports = [
           "bn": "হার্ডওয়্যার ও সিসি ক্যামেরা"
         },
         "desc": {
-          "en": "PC hardware troubleshooting, OS deployment, and IP camera / NVR installation.",
+          "en": "PC hardware troubleshooting, OS deployment and IP camera / NVR installation.",
           "bn": "হার্ডওয়্যার রিপেয়ার ও আইপি সিসি ক্যামেরা সেটআপ।"
         },
         "icon": "ShieldCheck"
@@ -2947,7 +2947,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Diagnose, repair, and assemble computer hardware and enterprise operating systems.",
+        "en": "Diagnose, repair and assemble computer hardware and enterprise operating systems.",
         "bn": "কম্পিউটার হার্ডওয়্যার ডায়াগনোসিস ও অ্যাসেম্বলিং করতে পারা।"
       },
       {
@@ -2959,11 +2959,11 @@ module.exports = [
         "bn": "মিক্রোটিক রাউটারে ব্যান্ডউইথ কন্ট্রোল ও ফায়ারওয়াল কনফিগারেশন।"
       },
       {
-        "en": "Install and manage analog/IP CC cameras, NVR/DVR systems, and remote viewing.",
+        "en": "Install and manage analog/IP CC cameras, NVR/DVR systems and remote viewing.",
         "bn": "সিসি ক্যামেরা, ডিভিআর ও এনভিআর ইনস্টলেশন ও কনফিগারেশন করা।"
       },
       {
-        "en": "Qualify for Network Administrator, System Support, and ISP Engineer positions.",
+        "en": "Qualify for Network Administrator, System Support and ISP Engineer positions.",
         "bn": "আইটি সাপোর্ট ও নেটওয়ার্ক ইঞ্জিনিয়ার হিসেবে চাকরির জন্য প্রস্তুত হওয়া।"
       }
     ],

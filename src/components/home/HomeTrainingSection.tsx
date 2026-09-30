@@ -18,7 +18,7 @@ export default function HomeTrainingSection() {
       title: isEn ? "First-Principles Architecture" : "ফান্ডামেন্টালস ও আর্কিটেকচার",
       subtitle: isEn ? "Deep Core Understanding" : "গভীর মৌলিক ধারণা",
       desc: isEn 
-        ? "We deconstruct computing foundations, data structures, concurrency, and system design patterns before touching framework APIs."
+        ? "We deconstruct computing foundations, data structures, concurrency and system design patterns before touching framework APIs."
         : "সরাসরি ফ্রেমওয়ার্ক শেখার আগে কম্পিউটার সায়েন্সের ফান্ডামেন্টালস, ডাটা স্ট্রাকচার ও সিস্টেম ডিজাইন প্যাটার্ন আয়ত্ত করা।",
       icon: Terminal,
       accent: "text-[#008744]",
@@ -31,7 +31,7 @@ export default function HomeTrainingSection() {
       title: isEn ? "Daily Live Code & Lab Sprints" : "প্রতিদিনের লাইভ কোডিং ও ল্যাব স্প্রিন্ট",
       subtitle: isEn ? "Hands-On Muscle Memory" : "বাস্তব কোডিং অনুশীলন",
       desc: isEn 
-        ? "Interactive daily programming sessions with real-time test suites, automated lint checks, and algorithmic problem-solving."
+        ? "Interactive daily programming sessions with real-time test suites, automated lint checks and algorithmic problem-solving."
         : "প্রতিদিনের ক্লাসে স্বয়ংক্রিয় টেস্ট ও টেস্ট-ড্রিভেন ডেভেলপমেন্টের মাধ্যমে কোডিংয়ের ব্যবহারিক দক্ষতা তৈরি।",
       icon: Code2,
       accent: "text-[#DE1F26]",
@@ -44,7 +44,7 @@ export default function HomeTrainingSection() {
       title: isEn ? "Enterprise Agile Capstones" : "রিয়েল এন্টারপ্রাইজ টিম প্রজেক্ট",
       subtitle: isEn ? "Industry Teamwork Simulation" : "টিমওয়ার্ক ও প্রজেক্ট ম্যানেজমেন্ট",
       desc: isEn 
-        ? "Collaborate in Scrum teams using Git branching models, Jira boards, Dockerized microservices, and continuous CI/CD pipelines."
+        ? "Collaborate in Scrum teams using Git branching models, Jira boards, Dockerized microservices and continuous CI/CD pipelines."
         : "গিট ব্রাঞ্চিং, জিরা ও ডকার ব্যবহারের মাধ্যমে এন্টারপ্রাইজ টিমের মতো যৌথভাবে বড় সাইজের সফটওয়্যার তৈরি।",
       icon: Workflow,
       accent: "text-[#008744]",
@@ -57,7 +57,7 @@ export default function HomeTrainingSection() {
       title: isEn ? "Technical Defense & Placement" : "টেকনিক্যাল ডিফেন্স ও জব প্লেসমেন্ট",
       subtitle: isEn ? "Direct Career Launch" : "চাকরি ও ক্যারিয়ারের শুরু",
       desc: isEn 
-        ? "Defend your codebase in front of senior tech leads, undergo rigorous mock architecture interviews, and get referred to hiring partners."
+        ? "Defend your codebase in front of senior tech leads, undergo rigorous mock architecture interviews and get referred to hiring partners."
         : "সিনিয়র ইঞ্জিনিয়ারদের সামনে প্রজেক্ট ডিফেন্স, মক টেক ইন্টারভিউ এবং আমাদের ১২০+ পার্টনার কোম্পানিতে সরাসরি ইন্টারভিউ।",
       icon: Trophy,
       accent: "text-[#DE1F26]",

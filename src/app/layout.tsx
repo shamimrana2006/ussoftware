@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     template: "%s | US Software LTD",
   },
   description:
-    "Empowering engineers and businesses with enterprise software engineering, scalable cloud systems, and industry-grade IT academy programs.",
+    "Empowering engineers and businesses with enterprise software engineering, scalable cloud systems and industry-grade IT academy programs.",
   keywords: [
     "US Software LTD",
     "Software Engineering Bangladesh",
@@ -120,7 +120,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "US Software LTD | Your Complete IT Partner",
     description:
-      "We deliver smart, scalable, and secure IT solutions and industry-grade training.",
+      "We deliver smart, scalable and secure IT solutions and industry-grade training.",
   },
   robots: {
     index: true,

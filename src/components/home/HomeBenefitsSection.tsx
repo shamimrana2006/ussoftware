@@ -21,7 +21,7 @@ export default function HomeBenefitsSection() {
       iconBg: "bg-emerald-50 text-[#008744] border-emerald-200/80",
       title: isEn ? "Production-Grade Projects" : "প্রোডাকশন-গ্রেড লাইভ প্রজেক্ট",
       desc: isEn 
-        ? "Work on real-world enterprise architectures, scalable cloud microservices, and client systems—not toy tutorials."
+        ? "Work on real-world enterprise architectures, scalable cloud microservices and client systems—not toy tutorials."
         : "কোনো ডামি প্রজেক্ট নয়—সরাসরি বড় স্কেলের মাইক্রোসার্ভিসেস, ক্লাউড আর্কিটেকচার ও রিয়েল ক্লায়েন্ট সিস্টেমে কাজ করুন।",
       tags: [
         isEn ? "Full SaaS Systems" : "কম্প্লিট সাশ আর্কিটেকচার",
@@ -35,7 +35,7 @@ export default function HomeBenefitsSection() {
       iconBg: "bg-red-50 text-[#DE1F26] border-red-200/80",
       title: isEn ? "1-on-1 Senior Mentorship" : "সিনিয়র ইঞ্জিনিয়ারদের ১-অন-১ মেন্টরশিপ",
       desc: isEn 
-        ? "Weekly code reviews, system design critiques, and career roadmaps directly from lead engineers at top tech companies."
+        ? "Weekly code reviews, system design critiques and career roadmaps directly from lead engineers at top tech companies."
         : "টপ গ্লোবাল ও লোকাল টেক কোম্পানিতে কর্মরত লিড ইঞ্জিনিয়ারদের কাছ থেকে সাপ্তাহিক কোড রিভিউ ও ক্যারিয়ার গাইডেন্স।",
       tags: [
         isEn ? "Weekly 1-on-1 Code Reviews" : "সাপ্তাহিক ১-অন-১ কোড রিভিউ",
@@ -63,7 +63,7 @@ export default function HomeBenefitsSection() {
       iconBg: "bg-red-50 text-[#DE1F26] border-red-200/80",
       title: isEn ? "120+ Placement Network" : "১২০+ টেক পার্টনার প্লেসমেন্ট",
       desc: isEn 
-        ? "Direct interview referrals, resume optimization, mock technical architecture interviews, and salary negotiation support."
+        ? "Direct interview referrals, resume optimization, mock technical architecture interviews and salary negotiation support."
         : "মক ইন্টারভিউ, সিভি অপ্টিমাইজেশন ও শীর্ষস্থানীয় ১২০+ সফটওয়্যার প্রতিষ্ঠানে সরাসরি ইন্টারভিউয়ের সুযোগ।",
       tags: [
         isEn ? "Direct Company Referrals" : "সরাসরি ইন্টারভিউ রেফারেল",

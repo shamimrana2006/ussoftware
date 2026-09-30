@@ -82,11 +82,11 @@ export default function ContactPage() {
     {
       q: isEn ? "How do I apply or book a counseling session?" : "কোর্সে কীভাবে ভর্তি হব বা কাউন্সিলিং সেশন বুক করব?",
       a: isEn 
-        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1995852964). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites, and schedules." 
+        ? "Fill out the contact form on this page or message us directly on WhatsApp (+880 1995852964). Our lead academic advisor will connect with you within 15 minutes to guide you on syllabus, prerequisites and schedules." 
         : "এই পেইজের ফর্মটি পূরণ করুন অথবা সরাসরি আমাদের হোয়াটসঅ্যাপে (+৮৮০ ১৯৯৫৮৫২৯৬৪) মেসেজ দিন। আমাদের সিনিয়র কাউন্সিলর ১৫ মিনিটের মধ্যে যোগাযোগ করে সম্পূর্ণ ভর্তি গাইডলাইন ও সময়সূচি জানিয়ে দেবেন।"
     },
     {
-      q: isEn ? "Are courses held online, offline, or hybrid?" : "ক্লাসগুলো কি সরাসরি অফলাইনে হয় নাকি অনলাইনে?",
+      q: isEn ? "Are courses held online, offline or hybrid?" : "ক্লাসগুলো কি সরাসরি অফলাইনে হয় নাকি অনলাইনে?",
       a: isEn 
         ? "We provide both interactive offline batches at our Dhanmondi Dhaka Campus (Metro Shopping Mall, Level-5) and 100% live online interactive batches. All students get lifetime LMS recordings and repository access." 
         : "আমাদের ধানমন্ডি ঢাকা ক্যাম্পাসে (মেট্রো শপিং মল, লেভেল-৫) সরাসরি অফলাইন ক্লাস এবং দূরবর্তী শিক্ষার্থীদের জন্য ১০০% লাইভ অনলাইন ক্লাসের ব্যবস্থা রয়েছে। সব ক্লাসের রেকর্ডিং ও সোর্স কোড লাইফটাইম অ্যাক্সেস পাবেন।"
@@ -94,7 +94,7 @@ export default function ContactPage() {
     {
       q: isEn ? "How does the job placement & internship assistance work?" : "প্লেসমেন্ট সাপোর্ট ও ইন্টার্নশিপ সুবিধা কীভাবে কাজ করে?",
       a: isEn 
-        ? "We partner with 120+ software companies. Graduates completing capstone enterprise projects receive direct interview referrals, resume optimization, and mock technical defense coaching." 
+        ? "We partner with 120+ software companies. Graduates completing capstone enterprise projects receive direct interview referrals, resume optimization and mock technical defense coaching." 
         : "১২০+ শীর্ষ সফটওয়্যার পার্টনার প্রতিষ্ঠানের সাথে আমাদের সরাসরি প্লেসমেন্ট নেটওয়ার্ক রয়েছে। সফল শিক্ষার্থীদের সরাসরি ইন্টারভিউ রেফারেল ও পেইড ইন্টার্নশিপ সুযোগ প্রদান করা হয়।"
     }
   ];
@@ -151,7 +151,7 @@ export default function ContactPage() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
             >
               {isEn
-                ? "Visit our Dhanmondi campus, send an inquiry through our direct concierge form, or connect with our lead engineering counselors."
+                ? "Visit our Dhanmondi campus, send an inquiry through our direct concierge form or connect with our lead engineering counselors."
                 : "আমাদের ধানমন্ডি ক্যাম্পাসে সরাসরি চলে আসুন, ফর্মের মাধ্যমে তথ্য পাঠান অথবা আমাদের সিনিয়র ইঞ্জিনিয়ারদের সাথে সরাসরি কথা বলুন।"}
             </motion.p>
 
@@ -218,7 +218,7 @@ export default function ContactPage() {
                 {/* Subtitle */}
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-md font-normal mb-8">
                   {isEn 
-                    ? "To request a course roadmap, admission info, or custom software solutions, contact us directly or fill out the form and we will get back to you promptly."
+                    ? "To request a course roadmap, admission info or custom software solutions, contact us directly or fill out the form and we will get back to you promptly."
                     : "কোর্সে ভর্তি, ক্যারিয়ার পরামর্শ বা সফটওয়্যার ডেভেলপমেন্ট সেবা সংক্রান্ত তথ্যের জন্য ফর্মটি পূরণ করুন, আমরা দ্রুত যোগাযোগ করব।"}
                 </p>
 

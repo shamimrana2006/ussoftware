@@ -49,7 +49,7 @@ export default function CertificationPage() {
   const [searchStep, setSearchStep] = useState<string>("");
   const [copiedHash, setCopiedHash] = useState(false);
 
-  // Active verified certificate state (null by default for clean initial empty state, or loaded on search)
+  // Active verified certificate state (null by default for clean initial empty state or loaded on search)
   const [searchedCert, setSearchedCert] = useState<SampleStudentRecord | null>(null);
 
   // Pre-configured Student Database for quick lookup
@@ -120,7 +120,7 @@ export default function CertificationPage() {
     }
   ];
 
-  // Verification Handler: Searches across Mobile, Email, or Student ID
+  // Verification Handler: Searches across Mobile, Email or Student ID
   const handleVerify = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
 
@@ -449,7 +449,7 @@ export default function CertificationPage() {
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
                     {isEn 
-                      ? "Enter your phone number, email, or student ID to find your certificate." 
+                      ? "Enter your phone number, email or student ID to find your certificate." 
                       : "আপনার ফোন নম্বর, ইমেইল অথবা স্টুডেন্ট আইডি প্রবেশ করিয়ে আপনার সার্টিফিকেট খুঁজে নিন।"}
                   </p>
                 </div>

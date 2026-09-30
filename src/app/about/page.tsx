@@ -186,7 +186,7 @@ export default function AboutPage() {
       badge: "Inception",
       title: isEn ? "Foundation & Early IT Solutions" : "প্রতিষ্ঠা ও প্রাথমিক আইটি সলিউশন",
       desc: isEn
-        ? "Established with a visionary goal to pioneer enterprise software development, corporate IT infrastructure, and digital skills in Bangladesh."
+        ? "Established with a visionary goal to pioneer enterprise software development, corporate IT infrastructure and digital skills in Bangladesh."
         : "বাংলাদেশে সফটওয়্যার ডেভেলপমেন্ট ও ডিজিটাল স্কিল অগ্রযাত্রার স্বপ্ন নিয়ে ২০০০ সালে যাত্রা শুরু।",
       highlight: isEn ? "Founded in Dhaka • 5 Enterprise Clients" : "ঢাকায় যাত্রা শুরু • প্রাথমিক এন্টারপ্রাইজ প্রজেক্ট"
     },
@@ -195,7 +195,7 @@ export default function AboutPage() {
       badge: "Offshore Growth",
       title: isEn ? "Offshore Software & ERP Systems" : "অফশোর সফটওয়্যার ও এন্টারপ্রাইজ সেবা",
       desc: isEn
-        ? "Expanded operations to deliver custom ERPs, high-concurrency database architectures, and web applications for international clients."
+        ? "Expanded operations to deliver custom ERPs, high-concurrency database architectures and web applications for international clients."
         : "আন্তর্জাতিক ক্লায়েন্টদের জন্য কাস্টম ইআরপি, ডাটাবেস ও ওয়েব অ্যাপ্লিকেশন ডেলিভারি শুরু।",
       highlight: isEn ? "Global Contracts in UK & North America" : "যুক্তরাজ্য ও উত্তর আমেরিকায় ক্লায়েন্ট নেটওয়ার্ক"
     },
@@ -213,7 +213,7 @@ export default function AboutPage() {
       badge: "Cloud & NSDA",
       title: isEn ? "Remote Mentorship & Cloud Labs" : "রিমোট মেন্টরশিপ ও ক্লাউড ল্যাব",
       desc: isEn
-        ? "Scaled nationwide remote learning infrastructure, NSDA certified curriculum, and multi-cloud Kubernetes training environments."
+        ? "Scaled nationwide remote learning infrastructure, NSDA certified curriculum and multi-cloud Kubernetes training environments."
         : "সারাদেশে লাইভ ১-অন-১ মেন্টরশিপ, এনএসডিএ সার্টিফাইড কারিকুলাম ও ক্লাউড ল্যাব বিস্তার।",
       highlight: isEn ? "NSDA Certified Training Partner" : "এনএসডিএ জাতীয় সার্টিফিকেশন পার্টনার"
     },
@@ -222,7 +222,7 @@ export default function AboutPage() {
       badge: "AI & 26th Year",
       title: isEn ? "26+ Years of Excellence & AI Hub" : "২৬+ বছরের গৌরব ও এআই টেক হাব",
       desc: isEn
-        ? "Over 40,000+ engineers graduated, 150+ live client deployments, and South Asia's leading Generative AI & Cloud engineering talent pipeline."
+        ? "Over 40,000+ engineers graduated, 150+ live client deployments and South Asia's leading Generative AI & Cloud engineering talent pipeline."
         : "২৬ বছরের সফল অগ্রযাত্রা, ৪০,০০০+ গ্র্যাজুয়েট ও দক্ষিণ এশিয়ার অন্যতম শীর্ষ এআই ও ক্লাউড টেক ইকোসিস্টেম।",
       highlight: isEn ? `${COMPANY_STATS.placementRateFormatted} Placement Rate Across 14+ Global Hubs` : `${COMPANY_STATS.placementRateBn} প্লেসমেন্ট রেট সহ দক্ষিণ এশিয়ার শীর্ষ টেক হাব`
     }
@@ -231,13 +231,13 @@ export default function AboutPage() {
   const campusFacilities = [
     {
       title: isEn ? "High-Performance AI & Cloud Labs" : "হাই-পারফরম্যান্স এআই ও ক্লাউড ল্যাব",
-      desc: isEn ? "Equipped with dedicated workstation GPUs, dual-monitor desks, and multi-cloud Kubernetes sandbox servers." : "ডেডিকেটেড জিপিইউ ওয়ার্কস্টেশন, ডুয়াল-মনিটর সেটআপ ও কুবারনেটিস ক্লাউড সার্ভার সমন্বিত আধুনিক ল্যাব।",
+      desc: isEn ? "Equipped with dedicated workstation GPUs, dual-monitor desks and multi-cloud Kubernetes sandbox servers." : "ডেডিকেটেড জিপিইউ ওয়ার্কস্টেশন, ডুয়াল-মনিটর সেটআপ ও কুবারনেটিস ক্লাউড সার্ভার সমন্বিত আধুনিক ল্যাব।",
       icon: Cpu,
       img: "/images/about/about-lab-session.png"
     },
     {
       title: isEn ? "Collaborative Open Studio & Coworking" : "ওপেন কো-ওয়ার্কিং স্টুডিও ও ব্রেনস্টর্মিং জোন",
-      desc: isEn ? "Spacious interactive open spaces designed for sprint planning, agile standups, and peer code reviews." : "স্প্রিন্ট প্ল্যানিং, এজাইল স্ট্যান্ডআপ ও পিয়ার কোড রিভিউয়ের জন্য উন্মুক্ত কোলাবোরেটিভ জোন।",
+      desc: isEn ? "Spacious interactive open spaces designed for sprint planning, agile standups and peer code reviews." : "স্প্রিন্ট প্ল্যানিং, এজাইল স্ট্যান্ডআপ ও পিয়ার কোড রিভিউয়ের জন্য উন্মুক্ত কোলাবোরেটিভ জোন।",
       icon: Users,
       img: "/images/about/about-students-1.png"
     },
@@ -775,8 +775,8 @@ export default function AboutPage() {
                         texts={
                           isEn
                             ? [
-                              "Creating South Asia's most competent talent ecosystem in Artificial Intelligence, Cloud DevOps, and Full-Stack Engineering.",
-                              "Empowering 50,000+ elite engineers, AI specialists, and tech entrepreneurs by 2030.",
+                              "Creating South Asia's most competent talent ecosystem in Artificial Intelligence, Cloud DevOps and Full-Stack Engineering.",
+                              "Empowering 50,000+ elite engineers, AI specialists and tech entrepreneurs by 2030.",
                               "Accelerating remote Silicon Valley placement and tech startup incubation."
                             ]
                             : [

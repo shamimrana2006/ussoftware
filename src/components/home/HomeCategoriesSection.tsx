@@ -173,7 +173,7 @@ export default function HomeCategoriesSection() {
             className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn 
-              ? "Comprehensive tech disciplines tailored for market demand, freelance mastery, and international placement."
+              ? "Comprehensive tech disciplines tailored for market demand, freelance mastery and international placement."
               : "আন্তর্জাতিক জব মার্কেট ও ফ্রিল্যান্সিংয়ের চাহিদা অনুযায়ী সাজানো ইন-ডিমান্ড টেকনোলজি ট্র্যাক।"}
           </motion.p>
         </div>
@@ -272,7 +272,7 @@ export default function HomeCategoriesSection() {
 
                   {/* Animated Slow Circular Border Fill Button (Z-Index Top & Always Visible) */}
                   <div className="relative w-9 h-9 flex items-center justify-center ml-2 flex-shrink-0">
-                    {/* SVG Circular Border with Z-INDEX TOP, Sleek Thin Stroke, and Radiant Gradient */}
+                    {/* SVG Circular Border with Z-INDEX TOP, Sleek Thin Stroke and Radiant Gradient */}
                     <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none z-20" viewBox="0 0 36 36">
                       <defs>
                         <linearGradient id={`btn-grad-${cat.id}`} x1="0%" y1="0%" x2="100%" y2="100%">

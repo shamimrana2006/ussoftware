@@ -144,7 +144,7 @@ export default function Footer() {
 
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-sm">
               {isEn
-                ? "US Software LTD is an enterprise software engineering company and premier IT academy delivering smart, scalable, and secure software solutions."
+                ? "US Software LTD is an enterprise software engineering company and premier IT academy delivering smart, scalable and secure software solutions."
                 : "ইউএস সফটওয়্যার লিমিটেড একটি এন্টারপ্রাইজ সফটওয়্যার ইঞ্জিনিয়ারিং প্রতিষ্ঠান এবং প্রিমিয়ার আইটি একাডেমি, যা বাস্তবমুখী প্রযুক্তি শিক্ষা প্রদান করে।"}
             </p>
 

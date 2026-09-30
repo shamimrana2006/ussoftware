@@ -123,7 +123,7 @@ export const EVENTS_DATA: EventItem[] = [
     speakerRoleBn: "আইটি ট্রেইনার",
     speakerAvatar: "/images/about/about-lab-session.png",
     coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop",
-    descEn: "Successful workshop covering Linux terminal commands, SSH keys, and basic server setup.",
+    descEn: "Successful workshop covering Linux terminal commands, SSH keys and basic server setup.",
     descBn: "লিনাক্স টার্মিনাল কমান্ড, এসএসএইচ কী এবং বেসিক সার্ভার সেটআপ নিয়ে সফল ওয়ার্কশপ সম্পন্ন হয়েছে।",
     seatTotal: 25,
     seatBooked: 25,

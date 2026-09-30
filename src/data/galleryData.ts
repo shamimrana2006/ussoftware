@@ -107,7 +107,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     date: "2026-04-18",
     locationEn: "US Software Computer Lab",
     locationBn: "ইউএস সফটওয়্যার কম্পিউটার ল্যাব",
-    descEn: "Hands-on practice on Linux command line, server configuration, and networking basics.",
+    descEn: "Hands-on practice on Linux command line, server configuration and networking basics.",
     descBn: "লিনাক্স কমান্ড লাইন, সার্ভার কনফিগারেশন এবং নেটওয়ার্কিং বেসিক্স এর প্র্যাকটিক্যাল ক্লাস।",
     likes: 31,
     featured: false,

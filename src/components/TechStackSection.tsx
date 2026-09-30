@@ -40,7 +40,7 @@ export default function TechStackSection() {
           className="text-slate-400 max-w-2xl mx-auto font-normal"
         >
           {isEn
-            ? "We leverage the latest and most powerful technologies to build robust, scalable, and secure applications."
+            ? "We leverage the latest and most powerful technologies to build robust, scalable and secure applications."
             : "আমরা আধুনিক এবং শক্তিশালী প্রযুক্তি ব্যবহার করে সেরা মানের অ্যাপ্লিকেশন তৈরি করি।"}
         </motion.p>
       </div>

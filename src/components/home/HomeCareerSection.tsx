@@ -24,7 +24,7 @@ export default function HomeCareerSection() {
       salary: isEn ? "$65,000 – $140,000 / yr" : "৳৭০,০০০ – ৳২,৫০,০০০ / মাস",
       demand: isEn ? "Extremely High (98%)" : "সর্বোচ্চ চাহিদা (৯৮%)",
       summary: isEn 
-        ? "Design and scale end-to-end web applications, master React/Next.js frontends, microservices APIs, and cloud database optimization."
+        ? "Design and scale end-to-end web applications, master React/Next.js frontends, microservices APIs and cloud database optimization."
         : "সম্পূর্ণ ওয়েব সিস্টেম আর্কিটেকচার, ফ্রন্টএন্ড, ব্যাকএন্ড এপিআই ও ক্লাউড ডাটাবেস সমন্বয়ে হাই-স্কেল সফটওয়্যার ডিজাইন।",
       roadmap: [
         { stage: "01", title: isEn ? "Frontend Mastery" : "ফ্রন্টএন্ড দক্ষতা", desc: "React 19, Next.js 15, TypeScript & Tailwind CSS" },
@@ -43,7 +43,7 @@ export default function HomeCareerSection() {
       salary: isEn ? "$80,000 – $160,000 / yr" : "৳৮৫,০০০ – ৳৩,০০,০০০ / মাস",
       demand: isEn ? "Fastest Growing (+140%)" : "দ্রুততম ক্রমবর্ধমান (+১৪০%)",
       summary: isEn 
-        ? "Build intelligent autonomous agent workflows, fine-tune LLMs, design hybrid vector search RAG pipelines, and integrate AI into products."
+        ? "Build intelligent autonomous agent workflows, fine-tune LLMs, design hybrid vector search RAG pipelines and integrate AI into products."
         : "স্বয়ংক্রিয় এআই এজেন্ট, লার্জ ল্যাঙ্গুয়েজ মডেল ফাইন-টিউনিং, ভেক্টর সার্চ র‍্যাগ পাইপলাইন ও এআই প্রোডাক্ট তৈরি।",
       roadmap: [
         { stage: "01", title: isEn ? "Python & AI Foundations" : "পাইথন ও এআই ফাউন্ডেশন", desc: "PyTorch, Transformers & Embedding Vectors" },
@@ -81,7 +81,7 @@ export default function HomeCareerSection() {
       salary: isEn ? "$60,000 – $130,000 / yr" : "৳৬৫,০০০ – ৳২,২০,০০০ / মাস",
       demand: isEn ? "Very High (90%)" : "উচ্চ চাহিদা (৯০%)",
       summary: isEn 
-        ? "Craft high-performance iOS and Android apps with Flutter, clean architecture, responsive fluid animations, and real-time backend sync."
+        ? "Craft high-performance iOS and Android apps with Flutter, clean architecture, responsive fluid animations and real-time backend sync."
         : "ফ্লাটার ও ডার্ট দিয়ে চমৎকার পারফরম্যান্স সম্পন্ন আইওএস ও অ্যান্ড্রয়েড অ্যাপ এবং রিয়েল-টাইম ডাটাবেস সিঙ্ক।",
       roadmap: [
         { stage: "01", title: isEn ? "Dart & Modern Flutter" : "ডার্ট ও ফ্লাটার ইউআই", desc: "Widgets, Animations & Clean UI Layouts" },

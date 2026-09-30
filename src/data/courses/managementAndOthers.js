@@ -59,11 +59,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Official PRINCE2 (Projects IN Controlled Environments) 7th Edition certification curriculum. Learn the 7 Principles, 7 Practices (Business Case, Organizing, Plans, Quality, Risk, Issues, Progress), and 7 Processes from Starting Up a Project (SU) to Closing a Project (CP), tailoring PRINCE2, and passing both Foundation and Practitioner exams.",
+      "en": "Official PRINCE2 (Projects IN Controlled Environments) 7th Edition certification curriculum. Learn the 7 Principles, 7 Practices (Business Case, Organizing, Plans, Quality, Risk, Issues, Progress) and 7 Processes from Starting Up a Project (SU) to Closing a Project (CP), tailoring PRINCE2 and passing both Foundation and Practitioner exams.",
       "bn": "বিশ্বখ্যাত ব্রিটিশ প্রজেক্ট ম্যানেজমেন্ট মেথডোলজি PRINCE2 ৭ম সংস্করণ কোর্স। এতে প্রজেক্টের শুরু থেকে সমাপ্তি পর্যন্ত ৭টি মূল নীতি, বিজনেস কেস, রিস্ক ও কোয়ালিটি ম্যানেজমেন্ট এবং ফাউন্ডেশন ও প্র্যাকটিশনার এক্সাম প্রিপারেশন শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "PRINCE2 is the de facto standard project management methodology utilized by the UK government, United Nations (UN), NGOs, and multinational corporate enterprises worldwide. Master step-by-step governance, role delegation, stage boundaries, and project risk control.",
+      "en": "PRINCE2 is the de facto standard project management methodology utilized by the UK government, United Nations (UN), NGOs and multinational corporate enterprises worldwide. Master step-by-step governance, role delegation, stage boundaries and project risk control.",
       "bn": "এই কোর্সে আপনি আন্তর্জাতিক প্রজেক্ট ম্যানেজমেন্টের স্বীকৃত পদ্ধতি আয়ত্ত করে প্রজেক্টের বাজেট, সময় ও কোয়ালিটি নিয়ন্ত্রণ করা এবং গ্লোবাল প্রজেক্ট ম্যানেজার হিসেবে ক্যারিয়ার গড়ার পূর্ণাঙ্গ জ্ঞান অর্জন করবেন।"
     },
     "coreValues": [
@@ -86,7 +86,7 @@ module.exports = [
           "bn": "বিজনেস কেস ও রিস্ক কন্ট্রোল"
         },
         "desc": {
-          "en": "Learn continuous business justification, risk registers, and quality review techniques.",
+          "en": "Learn continuous business justification, risk registers and quality review techniques.",
           "bn": "বিজনেস জাস্টিফিকেশন ও রিস্ক রেজিস্টার তৈরি।"
         },
         "icon": "ShieldCheck"
@@ -106,7 +106,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand the core structure of PRINCE2: principles, practices, processes, and project context.",
+        "en": "Understand the core structure of PRINCE2: principles, practices, processes and project context.",
         "bn": "প্রিন্স২ মেথডোলজির কোর স্ট্রাকচার আয়ত্ত করা।"
       },
       {
@@ -114,11 +114,11 @@ module.exports = [
         "bn": "প্রজেক্ট ইনিশিয়েশন ডকুমেন্ট (PID) তৈরি করতে পারা।"
       },
       {
-        "en": "Manage stage boundaries, product delivery, issues, and change control.",
+        "en": "Manage stage boundaries, product delivery, issues and change control.",
         "bn": "প্রজেক্ট স্টেজ বাউন্ডারি ও চেঞ্জ কন্ট্রোল পরিচালনা করা।"
       },
       {
-        "en": "Tailor PRINCE2 methodology to agile, hybrid, and small-to-large project scales.",
+        "en": "Tailor PRINCE2 methodology to agile, hybrid and small-to-large project scales.",
         "bn": "অ্যাজাইল ও হাইব্রিড এনভায়রনমেন্টে প্রিন্স২ বাস্তবায়ন করা।"
       },
       {
@@ -174,7 +174,7 @@ module.exports = [
             "bn": "প্রোডাক্ট-বেসড প্ল্যানিং ও ডব্লিউবিএস"
           },
           {
-            "en": "Quality Practice: Quality Planning, Control, and Quality Review Techniques",
+            "en": "Quality Practice: Quality Planning, Control and Quality Review Techniques",
             "bn": "কোয়ালিটি প্ল্যানিং ও রিভিউ টেকনিকস"
           },
           {
@@ -314,11 +314,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Authorized PMI PMP (Project Management Professional) certification prep course based on PMBOK Guide 7th Edition and Agile Practice Guide. Covers the 3 core domains (People 42%, Process 50%, Business Environment 8%), predictive waterfall, Scrum, Kanban, hybrid lifecycles, and provides the mandatory 35 Contact Hours PDUs certificate.",
+      "en": "Authorized PMI PMP (Project Management Professional) certification prep course based on PMBOK Guide 7th Edition and Agile Practice Guide. Covers the 3 core domains (People 42%, Process 50%, Business Environment 8%), predictive waterfall, Scrum, Kanban, hybrid lifecycles and provides the mandatory 35 Contact Hours PDUs certificate.",
       "bn": "আমেরিকার প্রজেক্ট ম্যানেজমেন্ট ইনস্টিটিউটের (PMI) পিএমপি সার্টিফিকেশন কোর্স। এতে পিএমবক ৭ম গাইড অনুযায়ী পিপল, প্রসেস ও বিজনেস এনভায়রনমেন্ট ডোমেন, অ্যাজাইল স্ক্রাম এবং আন্তর্জাতিক ৩৫ কন্টাক্ট আওয়ার্স পিডিইউ সার্টিফিকেট দেওয়া হয়।"
     },
     "fullDescription": {
-      "en": "PMP is the gold standard of project management recognized in 200+ countries. Gain mastery over team leadership, stakeholder engagement, earned value analysis (EVA), critical path method (CPM), and agile delivery to pass the PMP exam on your first try.",
+      "en": "PMP is the gold standard of project management recognized in 200+ countries. Gain mastery over team leadership, stakeholder engagement, earned value analysis (EVA), critical path method (CPM) and agile delivery to pass the PMP exam on your first try.",
       "bn": "এই কোর্সে আপনি কর্পোরেট প্রজেক্ট লিডার হিসেবে টিম ম্যানেজমেন্ট, আর্নড ভ্যালু ম্যানেজমেন্ট, রিস্ক মিটিগেশন এবং পিএমআই এক্সাম ক্র্যাক করার 'PMP Mindset' আয়ত্ত করবেন।"
     },
     "coreValues": [
@@ -365,7 +365,7 @@ module.exports = [
         "bn": "হাই-পারফর্মিং অ্যাজাইল ও প্রেডিক্টিভ টিম পরিচালনা করা।"
       },
       {
-        "en": "Master Earned Value Management (EVM), Schedule Variance (SV), and Cost Index (CPI).",
+        "en": "Master Earned Value Management (EVM), Schedule Variance (SV) and Cost Index (CPI).",
         "bn": "আর্নড ভ্যালু ও প্রজেক্ট কস্ট ম্যানেজমেন্ট ক্যালকুলেশন।"
       },
       {
@@ -373,7 +373,7 @@ module.exports = [
         "bn": "স্ক্রাম ফ্রেমওয়ার্ক ও স্প্রিন্ট বাস্তবায়ন করা।"
       },
       {
-        "en": "Manage project governance, organizational compliance, and value delivery.",
+        "en": "Manage project governance, organizational compliance and value delivery.",
         "bn": "প্রজেক্ট গভর্নেন্স ও কমপ্লায়েন্স নিশ্চিত করা।"
       },
       {
@@ -569,11 +569,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Official ISACA Certified Information Systems Auditor (CISA) certification training. Comprehensive coverage of all 5 CISA domains: Information System Auditing Process (21%), Governance & Management of IT (17%), Information Systems Acquisition, Development & Implementation (12%), Information Systems Operations & Business Resilience (23%), and Protection of Information Assets (27%).",
+      "en": "Official ISACA Certified Information Systems Auditor (CISA) certification training. Comprehensive coverage of all 5 CISA domains: Information System Auditing Process (21%), Governance & Management of IT (17%), Information Systems Acquisition, Development & Implementation (12%), Information Systems Operations & Business Resilience (23%) and Protection of Information Assets (27%).",
       "bn": "আইসাকা (ISACA) সার্টিফাইড ইনফরমেশন সিস্টেমস অডিটর (CISA) কোর্স। এতে আইটি অডিটিং প্রসেস, আইটি গভর্নেন্স, সিস্টেম ডেভেলপমেন্ট অডিট, বিজনেস রেজিলিয়েন্স ও ডাটা সিকিউরিটি অডিট শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "CISA is the globally recognized benchmark for professionals who audit, control, monitor, and assess an enterprise's information technology and business systems. Master IT compliance, control frameworks (COBIT, ISO 27001), and pass the ISACA CISA exam.",
+      "en": "CISA is the globally recognized benchmark for professionals who audit, control, monitor and assess an enterprise's information technology and business systems. Master IT compliance, control frameworks (COBIT, ISO 27001) and pass the ISACA CISA exam.",
       "bn": "এই কোর্সে আপনি ব্যাংকিং ও আর্থিক প্রতিষ্ঠানের আইটি অডিটর হিসেবে নিরাপত্তা ত্রুটি মূল্যায়ন, নিয়ন্ত্রক কমপ্লায়েন্স ও আইসাকা সিআইএসএ পরীক্ষার শতভাগ প্রস্তুতি সম্পন্ন করবেন।"
     },
     "coreValues": [
@@ -596,7 +596,7 @@ module.exports = [
           "bn": "কোবিট ও আইএসও ২৭০০১"
         },
         "desc": {
-          "en": "Master IT governance frameworks, risk-based audit planning, and testing.",
+          "en": "Master IT governance frameworks, risk-based audit planning and testing.",
           "bn": "রিস্ক-বেসড আইটি অডিট প্ল্যানিং ও টেস্টিং।"
         },
         "icon": "Award"
@@ -628,7 +628,7 @@ module.exports = [
         "bn": "সফটওয়্যার ডেভেলপমেন্ট লাইফসাইকেল অডিট করা।"
       },
       {
-        "en": "Assess business continuity, disaster recovery, and IT operations resilience.",
+        "en": "Assess business continuity, disaster recovery and IT operations resilience.",
         "bn": "বিজনেস কন্টিনিউটি ও ডিজাস্টার রিকভারি অডিট করা।"
       },
       {
@@ -824,11 +824,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Official ITIL 4 Foundation certification training course by Axelos/PeopleCert. Learn the ITIL 4 Framework, Key Concepts of Service Management (value, co-creation, stakeholders), The Four Dimensions of Service Management, The Service Value System (SVS), The Service Value Chain, 7 Guiding Principles, and key ITIL management practices (Incident, Problem, Change Enablement, Service Desk).",
+      "en": "Official ITIL 4 Foundation certification training course by Axelos/PeopleCert. Learn the ITIL 4 Framework, Key Concepts of Service Management (value, co-creation, stakeholders), The Four Dimensions of Service Management, The Service Value System (SVS), The Service Value Chain, 7 Guiding Principles and key ITIL management practices (Incident, Problem, Change Enablement, Service Desk).",
       "bn": "আইটিআইএল ৪ ফাউন্ডেশন সার্টিফিকেশন কোর্স। এতে আইটি সার্ভিস ম্যানেজমেন্ট, সার্ভিস ভ্যালু সিস্টেম, ভ্যালু চেইন, ৭টি গাইডিং প্রিন্সিপাল, ইনসিডেন্ট ম্যানেজমেন্ট ও চেঞ্জ এনেবলমেন্ট শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "ITIL 4 is the globally accepted standard for IT Service Management (ITSM). Learn how to align modern IT services with business digital transformation, Agile, DevOps, and cloud environments, passing the official ITIL 4 Foundation exam.",
+      "en": "ITIL 4 is the globally accepted standard for IT Service Management (ITSM). Learn how to align modern IT services with business digital transformation, Agile, DevOps and cloud environments, passing the official ITIL 4 Foundation exam.",
       "bn": "এই কোর্সে আপনি আধুনিক আইটি সার্ভিস অপারেশন পরিচালনা, সার্ভিস লেভেল এগ্রিমেন্ট (SLA) ম্যানেজমেন্ট, ইনসিডেন্ট রেসপন্স এবং আইটিআইএল ৪ ফাউন্ডেশন সার্টিফিকেশন অর্জনের সম্পূর্ণ প্রস্তুতি পাবেন।"
     },
     "coreValues": [
@@ -851,7 +851,7 @@ module.exports = [
           "bn": "সার্ভিস ভ্যালু সিস্টেম"
         },
         "desc": {
-          "en": "Master the 4 dimensions, 7 guiding principles, and Service Value Chain.",
+          "en": "Master the 4 dimensions, 7 guiding principles and Service Value Chain.",
           "bn": "সার্ভিস ভ্যালু চেইন ও ৭টি গাইডিং প্রিন্সিপাল।"
         },
         "icon": "Zap"
@@ -1079,11 +1079,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Practical project planning, scheduling, and control using Microsoft Project Professional. Topics include project calendar configuration, Work Breakdown Structure (WBS), task dependencies & link types (FS, SS, FF, SF), Critical Path Method (CPM), resource allocation & leveling, cost management, baseline setting, variance analysis, and visual dashboard reporting.",
+      "en": "Practical project planning, scheduling and control using Microsoft Project Professional. Topics include project calendar configuration, Work Breakdown Structure (WBS), task dependencies & link types (FS, SS, FF, SF), Critical Path Method (CPM), resource allocation & leveling, cost management, baseline setting, variance analysis and visual dashboard reporting.",
       "bn": "মাইক্রোসফট প্রজেক্ট প্রফেশনাল দিয়ে প্রজেক্ট প্ল্যানিং ও শিডিউলিং কোর্স। এতে ক্যালেন্ডার কনফিগারেশন, ডব্লিউবিএস, গ্যান্ট চার্ট, ক্রিটিক্যাল পাথ মেথড, রিসোর্স ব্যালেন্সিং, কস্ট ট্র্যাকিং এবং এক্সিকিউটিভ ড্যাশবোর্ড রিপোর্ট তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Transform into an expert Project Scheduler & Planning Engineer. Learn how to manage project timelines, optimize resource utilization without over-allocation, track progress against baseline budgets, and deliver construction or IT projects on time.",
+      "en": "Transform into an expert Project Scheduler & Planning Engineer. Learn how to manage project timelines, optimize resource utilization without over-allocation, track progress against baseline budgets and deliver construction or IT projects on time.",
       "bn": "এই কোর্সে আপনি বাস্তব প্রজেক্টের গ্যান্ট চার্ট তৈরি, রিসোর্স শিডিউলিং, আর্নড ভ্যালু অ্যানালাইসিস এবং ক্লায়েন্টদের জন্য প্রজেক্ট প্রগ্রেস রিপোর্ট তৈরির বাস্তবমুখী প্রশিক্ষণ পাবেন।"
     },
     "coreValues": [
@@ -1094,7 +1094,7 @@ module.exports = [
           "bn": "ডব্লিউবিএস ও গ্যান্ট চার্ট"
         },
         "desc": {
-          "en": "Build detailed task hierarchies, milestones, summary tasks, and dependency links.",
+          "en": "Build detailed task hierarchies, milestones, summary tasks and dependency links.",
           "bn": "টাস্ক হায়ারার্কি, মাইলস্টোন ও গ্যান্ট চার্ট তৈরি।"
         },
         "icon": "Briefcase"
@@ -1126,7 +1126,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Set up project calendars, working hours, exceptions, and project start dates.",
+        "en": "Set up project calendars, working hours, exceptions and project start dates.",
         "bn": "প্রজেক্ট ক্যালেন্ডার ও ওয়ার্কিং আওয়ার্স সেটআপ করা।"
       },
       {
@@ -1138,11 +1138,11 @@ module.exports = [
         "bn": "ক্রিটিক্যাল পাথ ও ফ্লোট বিশ্লেষণ করে সময় বাঁচানো।"
       },
       {
-        "en": "Allocate resources, manage hourly rates, and execute resource leveling.",
+        "en": "Allocate resources, manage hourly rates and execute resource leveling.",
         "bn": "রিসোর্স বাজেট নির্ধারণ ও রিসোর্স লেভেলিং করা।"
       },
       {
-        "en": "Generate visual status reports, S-Curves, and executive dashboards.",
+        "en": "Generate visual status reports, S-Curves and executive dashboards.",
         "bn": "ভিজ্যুয়াল প্রজেক্ট স্ট্যাটাস ও এস-কার্ভ রিপোর্ট তৈরি করা।"
       }
     ],
@@ -1334,11 +1334,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Complete Microsoft Office Specialist (MOS) certification course. Topics include Microsoft Word (formatting, tables, mail merge, official letters, thesis formatting), Microsoft Excel (formulas, functions, charts, pivot tables, data sorting), Microsoft PowerPoint (slide design, transitions, animations, pitch decks), Microsoft Outlook & Teams, and high-speed Bengali (Bijoy & Avro) + English typing.",
+      "en": "Complete Microsoft Office Specialist (MOS) certification course. Topics include Microsoft Word (formatting, tables, mail merge, official letters, thesis formatting), Microsoft Excel (formulas, functions, charts, pivot tables, data sorting), Microsoft PowerPoint (slide design, transitions, animations, pitch decks), Microsoft Outlook & Teams and high-speed Bengali (Bijoy & Avro) + English typing.",
       "bn": "মাইক্রোসফট অফিস অ্যাপ্লিকেশনের পূর্ণাঙ্গ কোর্স। এতে মাইক্রোসফট ওয়ার্ড (অফিসিয়াল চিঠি, টেবিল, মেইল মার্জ), এক্সেল (হিসাব-নিকাশ, ফর্মুলা, পিভট টেবিল), পাওয়ারপয়েন্ট (অ্যানিমেটেড প্রেজেন্টেশন), আউটলুক এবং বাংলা ও ইংরেজি টাইপিং স্পিড বৃদ্ধি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Master the essential computer office productivity suite required for every corporate, government, bank, and administrative job. Learn professional document formatting, automated calculations, executive presentation design, and speed typing.",
+      "en": "Master the essential computer office productivity suite required for every corporate, government, bank and administrative job. Learn professional document formatting, automated calculations, executive presentation design and speed typing.",
       "bn": "এই কোর্সে আপনি সরকারি ও বেসরকারি চাকরির কম্পিউটার পরীক্ষার শতভাগ প্রস্তুতি এবং দৈনন্দিন অফিসের সমস্ত ডকুমেন্টেশন ও প্রেজেন্টেশনের কাজ দ্রুত ও নিখুঁতভাবে করার দক্ষতা অর্জন করবেন।"
     },
     "coreValues": [
@@ -1349,7 +1349,7 @@ module.exports = [
           "bn": "অফিসিয়াল ডকুমেন্টেশন"
         },
         "desc": {
-          "en": "Master official memo writing, mail merge, table formatting, and header/footer styling.",
+          "en": "Master official memo writing, mail merge, table formatting and header/footer styling.",
           "bn": "অফিসিয়াল চিঠি, মেমো ও মেইল মার্জ তৈরিতে পূর্ণ দক্ষতা।"
         },
         "icon": "BookOpen"
@@ -1361,7 +1361,7 @@ module.exports = [
           "bn": "এক্সেল হিসাব ও চার্টস"
         },
         "desc": {
-          "en": "Automate financial payrolls, salary sheets, inventory, and dynamic charts.",
+          "en": "Automate financial payrolls, salary sheets, inventory and dynamic charts.",
           "bn": "বেতন শিট ও ইনভেন্টরি হিসাব তৈরির ফর্মুলা।"
         },
         "icon": "Database"
@@ -1373,7 +1373,7 @@ module.exports = [
           "bn": "বাংলা ও ইংরেজি টাইপিং"
         },
         "desc": {
-          "en": "Touch typing in Bijoy Bayanno, Avro, and English with 40+ WPM speed.",
+          "en": "Touch typing in Bijoy Bayanno, Avro and English with 40+ WPM speed.",
           "bn": "বিজয় ও অভ্রতে দ্রুত টাইপিং স্পিড অর্জন।"
         },
         "icon": "Zap"
@@ -1381,7 +1381,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Create professional formatted reports, books, and official letters in MS Word.",
+        "en": "Create professional formatted reports, books and official letters in MS Word.",
         "bn": "মাইক্রোসফট ওয়ার্ডে প্রফেশনাল ডকুমেন্ট ও চিঠি তৈরি করা।"
       },
       {
@@ -1393,7 +1393,7 @@ module.exports = [
         "bn": "পাওয়ারপয়েন্টে আকর্ষণীয় অ্যানিমেটেড স্লাইড তৈরি করা।"
       },
       {
-        "en": "Manage corporate emails, calendar meetings, and contacts in MS Outlook.",
+        "en": "Manage corporate emails, calendar meetings and contacts in MS Outlook.",
         "bn": "আউটলুক দিয়ে প্রফেশনাল ইমেইল ও মিটিং শিডিউল পরিচালনা করা।"
       },
       {
@@ -1589,11 +1589,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Complete distributed Big Data Engineering curriculum. Topics include Big Data architecture overview, Apache Hadoop ecosystem (HDFS, MapReduce, YARN), Apache Spark & PySpark for large-scale data processing, Spark SQL & DataFrames, Apache Kafka real-time streaming, Hive & Snowflake data warehousing, and AWS EMR cloud pipelines.",
+      "en": "Complete distributed Big Data Engineering curriculum. Topics include Big Data architecture overview, Apache Hadoop ecosystem (HDFS, MapReduce, YARN), Apache Spark & PySpark for large-scale data processing, Spark SQL & DataFrames, Apache Kafka real-time streaming, Hive & Snowflake data warehousing and AWS EMR cloud pipelines.",
       "bn": "বিশাল পরিমাণ ডেটা প্রসেসিংয়ের জন্য কমপ্লিট বিগ ডাটা কোর্স। এতে হাডুপ এইচডিএফএস, অ্যাপাচি স্পার্ক, পাইস্পার্ক, কাফকা রিয়েলটাইম স্ট্রিমিং, স্নোফ্লেক এবং ক্লাউড ডাটা পাইপলাইন তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Learn how modern tech giants process billions of data records in real time. Master distributed data storage, parallel compute algorithms, ETL data pipelines, stream analytics, and data lakehouse architecture.",
+      "en": "Learn how modern tech giants process billions of data records in real time. Master distributed data storage, parallel compute algorithms, ETL data pipelines, stream analytics and data lakehouse architecture.",
       "bn": "এই কোর্সে আপনি পেটাবাইট ডেটা স্টোরেজ, পাইস্পার্ক দিয়ে মিলিসেকেন্ডে ডেটা প্রসেসিং, কাফকা দিয়ে রিয়েলটাইম ইভেন্ট স্ট্রিমিং এবং ক্লাউড বিগ ডাটা সলিউশন তৈরির বাস্তব দক্ষতা অর্জন করবেন।"
     },
     "coreValues": [
@@ -1604,7 +1604,7 @@ module.exports = [
           "bn": "অ্যাপাচি স্পার্ক ও পাইস্পার্ক"
         },
         "desc": {
-          "en": "Master RDDs, DataFrames, Spark SQL, and in-memory parallel computation.",
+          "en": "Master RDDs, DataFrames, Spark SQL and in-memory parallel computation.",
           "bn": "মেমোরি-স্পিড প্যারালাল ডাটা প্রসেসিং ও পাইস্পার্ক।"
         },
         "icon": "Zap"
@@ -1628,7 +1628,7 @@ module.exports = [
           "bn": "ডাটা লেকহাউস ও স্নোফ্লেক"
         },
         "desc": {
-          "en": "Modern data warehousing with Snowflake, Delta Lake, and AWS EMR.",
+          "en": "Modern data warehousing with Snowflake, Delta Lake and AWS EMR.",
           "bn": "স্নোফ্লেক ও ডেল্টা লেক আর্কিটেকচার।"
         },
         "icon": "Database"
@@ -1636,7 +1636,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand distributed systems, CAP theorem, and Big Data architecture.",
+        "en": "Understand distributed systems, CAP theorem and Big Data architecture.",
         "bn": "ডিস্ট্রিবিউটেড সিস্টেম ও বিগ ডাটা আর্কিটেকচার বোঝা।"
       },
       {
@@ -1837,18 +1837,18 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "12+ years conducting quantitative research, statistical modeling, and thesis data analysis.",
+        "en": "12+ years conducting quantitative research, statistical modeling and thesis data analysis.",
         "bn": "কোয়ান্টিটেটিভ রিসার্চ ও থিসিস ডাটা অ্যানালাইসিসে ১২+ বছরের অভিজ্ঞতা।"
       },
       "experience": "12+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive IBM SPSS Statistics course for researchers, university students, and data analysts. Topics include SPSS interface & variable view, data cleaning & transformation, descriptive statistics & charts, parametric & non-parametric hypothesis tests (t-tests, Chi-square), ANOVA & MANOVA, correlation & multiple linear regression, exploratory factor analysis (EFA), reliability testing (Cronbach's Alpha), and APA format output interpretation.",
+      "en": "Comprehensive IBM SPSS Statistics course for researchers, university students and data analysts. Topics include SPSS interface & variable view, data cleaning & transformation, descriptive statistics & charts, parametric & non-parametric hypothesis tests (t-tests, Chi-square), ANOVA & MANOVA, correlation & multiple linear regression, exploratory factor analysis (EFA), reliability testing (Cronbach's Alpha) and APA format output interpretation.",
       "bn": "গবেষক ও শিক্ষার্থীদের জন্য আইবিএম এসপিএসএস স্ট্যাটিস্টিক্যাল ডাটা অ্যানালাইসিস কোর্স। এতে ভ্যারিয়েবল কোডিং, ডেসক্রিপটিভ স্ট্যাটিসটিক্স, টি-টেস্ট, কাই-স্কয়ার, আনোভা, রিগ্রেশন, ফ্যাক্টর অ্যানালাইসিস ও থিসিস পেপারের জন্য এপিএ ফরম্যাট ব্যাখ্যা শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Master quantitative research methodology and data analysis with IBM SPSS. Learn how to design research questionnaires, code survey responses, choose the correct statistical tests, verify assumptions (normality, multicollinearity), and write publication-ready academic reports.",
+      "en": "Master quantitative research methodology and data analysis with IBM SPSS. Learn how to design research questionnaires, code survey responses, choose the correct statistical tests, verify assumptions (normality, multicollinearity) and write publication-ready academic reports.",
       "bn": "এই কোর্সে আপনি মাস্টার্স ও পিএইচডি থিসিস, সামাজিক বিজ্ঞান, মেডিকেল ও বিজনেস রিসার্চের জন্য এসপিএসএস সফটওয়্যার ব্যবহার করে নির্ভুল পরিসংখ্যান বিশ্লেষণ ও জার্নাল পেপারের রিপোর্ট তৈরি শিখবেন।"
     },
     "coreValues": [
@@ -1891,11 +1891,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Code survey questionnaires, variables, and clean missing values in SPSS.",
+        "en": "Code survey questionnaires, variables and clean missing values in SPSS.",
         "bn": "সার্ভে ডেটা কোডিং ও ক্লিনজিং সম্পন্ন করা।"
       },
       {
-        "en": "Check statistical assumptions: normality (Shapiro-Wilk), linearity, and homoscedasticity.",
+        "en": "Check statistical assumptions: normality (Shapiro-Wilk), linearity and homoscedasticity.",
         "bn": "নরমালিটি ও স্ট্যাটিস্টিক্যাল অ্যাজাম্পশন চেক করা।"
       },
       {
@@ -2099,11 +2099,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive Machine Learning and Deep Learning engineering masterclass. Topics include Python for Data Science (NumPy, Pandas, Matplotlib, Seaborn), Supervised Learning (Linear/Logistic Regression, Decision Trees, Random Forests, SVM, XGBoost), Unsupervised Learning (K-Means, PCA), Neural Networks & Deep Learning with TensorFlow/Keras, Natural Language Processing (NLP), Computer Vision with OpenCV, and ML model deployment with Streamlit.",
+      "en": "Comprehensive Machine Learning and Deep Learning engineering masterclass. Topics include Python for Data Science (NumPy, Pandas, Matplotlib, Seaborn), Supervised Learning (Linear/Logistic Regression, Decision Trees, Random Forests, SVM, XGBoost), Unsupervised Learning (K-Means, PCA), Neural Networks & Deep Learning with TensorFlow/Keras, Natural Language Processing (NLP), Computer Vision with OpenCV and ML model deployment with Streamlit.",
       "bn": "মেশিন লার্নিং ও ডিপ লার্নিংয়ের কমপ্লিট ইঞ্জিনিয়ারিং কোর্স। এতে পাইথন ডাটা সায়েন্স, ক্লাসিফিকেশন ও রিগ্রেশন মডেল, র‍্যান্ডম ফরেস্ট, এক্সজিবুস্ট, কে-মিনস ক্লাস্টারিং, টেনসরফ্লো ডিপ লার্নিং, এনএলপি ও স্ট্রিমলিট দিয়ে লাইভ মডেল ডেপ্লয়মেন্ট শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Step into the most revolutionary field of modern technology. Learn the mathematical foundations and code implementation of modern ML algorithms, train deep neural networks on real-world datasets, and build AI applications ready for production.",
+      "en": "Step into the most revolutionary field of modern technology. Learn the mathematical foundations and code implementation of modern ML algorithms, train deep neural networks on real-world datasets and build AI applications ready for production.",
       "bn": "এই কোর্সে আপনি ডেটা প্রিপ্রসেসিং থেকে শুরু করে মেশিন লার্নিং মডেল ট্রেইনিং, হাইপারপ্যারামিটার টিউনিং, নিউরাল নেটওয়ার্ক এবং প্রেডিক্টিভ এআই ওয়েব অ্যাপ তৈরি শিখবেন।"
     },
     "coreValues": [
@@ -2114,7 +2114,7 @@ module.exports = [
           "bn": "মেশিন লার্নিং অ্যালগরিদম"
         },
         "desc": {
-          "en": "Master Regression, Classification, Random Forests, XGBoost, and Clustering.",
+          "en": "Master Regression, Classification, Random Forests, XGBoost and Clustering.",
           "bn": "রিগ্রেশন, ক্লাসিফিকেশন ও ক্লাস্টারিং অ্যালগরিদম।"
         },
         "icon": "Zap"
@@ -2126,7 +2126,7 @@ module.exports = [
           "bn": "ডিপ লার্নিং ও টেনসরফ্লো"
         },
         "desc": {
-          "en": "Build Artificial Neural Networks (ANN), CNN for images, and RNN/LSTM.",
+          "en": "Build Artificial Neural Networks (ANN), CNN for images and RNN/LSTM.",
           "bn": "নিউরাল নেটওয়ার্ক ও কম্পিউটার ভিশন সিএনএন।"
         },
         "icon": "Cpu"
@@ -2146,11 +2146,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Master Python data science libraries: NumPy arrays, Pandas DataFrames, and Seaborn.",
+        "en": "Master Python data science libraries: NumPy arrays, Pandas DataFrames and Seaborn.",
         "bn": "নামপাই, পান্ডাস ও সিবর্ন দিয়ে ডাটা প্রসেসিং ও ভিজ্যুয়ালাইজেশন।"
       },
       {
-        "en": "Train, evaluate, and tune machine learning models with Scikit-Learn.",
+        "en": "Train, evaluate and tune machine learning models with Scikit-Learn.",
         "bn": "সাইকিট-লার্ন দিয়ে মেশিন লার্নিং মডেল ট্রেইন ও টিউন করা।"
       },
       {
@@ -2354,11 +2354,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Fast-track Advanced Excel for corporate professionals, accountants, and managers. Topics include advanced formulas (XLOOKUP, INDEX/MATCH, SUMIFS, FILTER, SORT, UNIQUE), multi-level dynamic Pivot Tables, Power Query automated data transformation, What-If Analysis (Goal Seek, Scenario Manager, Solver), data validation, and building C-suite interactive KPI dashboards.",
+      "en": "Fast-track Advanced Excel for corporate professionals, accountants and managers. Topics include advanced formulas (XLOOKUP, INDEX/MATCH, SUMIFS, FILTER, SORT, UNIQUE), multi-level dynamic Pivot Tables, Power Query automated data transformation, What-If Analysis (Goal Seek, Scenario Manager, Solver), data validation and building C-suite interactive KPI dashboards.",
       "bn": "চাকরিজীবী ও ব্যবসায়ীদের জন্য দ্রুত এক্সেল মাস্টারি কোর্স। এতে এক্সলুকআপ, ইনডেক্স/ম্যাচ, ডায়নামিক পিভট টেবিল, পাওয়ার কোয়েরি ডাটা ক্লিনিং, হোয়াট-ইফ অ্যানালাইসিস এবং আকর্ষণীয় কেপিআই ড্যাশবোর্ড তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Level up your Excel skills from basic data entry to powerful business analytics. Learn how to crunch thousands of rows in seconds, write advanced nested functions, automate data cleanup with Power Query, and build interactive dashboards that impress senior management.",
+      "en": "Level up your Excel skills from basic data entry to powerful business analytics. Learn how to crunch thousands of rows in seconds, write advanced nested functions, automate data cleanup with Power Query and build interactive dashboards that impress senior management.",
       "bn": "এই কোর্সে আপনি ম্যানুয়াল ডাটা এন্ট্রির ঝামেলা ছাড়া আধুনিক ফর্মুলা ও ড্যাশবোর্ড ব্যবহার করে প্রফেশনাল বিজনেস রিপোর্ট ও ফাইন্যান্সিয়াল মডেল তৈরি করতে পারবেন।"
     },
     "coreValues": [
@@ -2393,7 +2393,7 @@ module.exports = [
           "bn": "এক্সিকিউটিভ ড্যাশবোর্ড"
         },
         "desc": {
-          "en": "Build interactive sales, inventory, and financial KPI dashboards with slicers.",
+          "en": "Build interactive sales, inventory and financial KPI dashboards with slicers.",
           "bn": "স্লাইসার ও ট্রেন্ডস সহ আকর্ষণীয় সেলস ও ফিন্যান্স ড্যাশবোর্ড।"
         },
         "icon": "TrendingUp"
@@ -2609,11 +2609,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Complete Amazon Kindle Direct Publishing (KDP) blueprint for global passive royalties. Topics include Amazon KDP account setup & US tax interview, profitable niche & keyword research (Publisher Rocket, Helium 10), creating low content (journals, planners), medium content (coloring books, activity books, puzzle books) & high content books, Canva / Illustrator cover design, formatting, Amazon Ads (AMS), and royalty withdrawals.",
+      "en": "Complete Amazon Kindle Direct Publishing (KDP) blueprint for global passive royalties. Topics include Amazon KDP account setup & US tax interview, profitable niche & keyword research (Publisher Rocket, Helium 10), creating low content (journals, planners), medium content (coloring books, activity books, puzzle books) & high content books, Canva / Illustrator cover design, formatting, Amazon Ads (AMS) and royalty withdrawals.",
       "bn": "আমাজন কেডিপি দিয়ে বই প্রকাশ করে আজীবন প্যাসিভ ইনকাম করার কমপ্লিট কোর্স। এতে লাভজনক নিশ রিসার্চ, কালারিং বুক, অ্যাক্টিভিটি বুক, প্লাগিয়ারিজম-মুক্ত কনটেন্ট, কভার ডিজাইন, আমাজন অ্যাডস এবং রয়্যালটি তোলার উপায় শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Earn continuous dollar royalties without inventory, shipping, or customer support. Amazon prints, ships, and handles customer service while depositing your monthly book royalties directly into your Payoneer bank account.",
+      "en": "Earn continuous dollar royalties without inventory, shipping or customer support. Amazon prints, ships and handles customer service while depositing your monthly book royalties directly into your Payoneer bank account.",
       "bn": "এই কোর্সে আপনি কোনো প্রিন্টিং বা ইনভেন্টরি ছাড়াই আমাজনে বিশ্বব্যাপী বই বিক্রি করার যাবতীয় সিক্রেট টেকনিক ও এআই টুলস ব্যবহার করে আকর্ষণীয় বই তৈরি শিখবেন।"
     },
     "coreValues": [
@@ -2636,7 +2636,7 @@ module.exports = [
           "bn": "কালারিং ও অ্যাক্টিভিটি বুক"
         },
         "desc": {
-          "en": "Create coloring books, logbooks, planners, and puzzle interiors with AI.",
+          "en": "Create coloring books, logbooks, planners and puzzle interiors with AI.",
           "bn": "এআই ও ক্যানভা দিয়ে কালারিং ও পাজল বুক তৈরি।"
         },
         "icon": "BookOpen"
@@ -2668,7 +2668,7 @@ module.exports = [
         "bn": "ক্যানভা ও ইলাস্ট্রেটরে আকর্ষণীয় বুক কভার তৈরি করা।"
       },
       {
-        "en": "Format interior manuscripts for Paperback, Hardcover, and Kindle eBooks.",
+        "en": "Format interior manuscripts for Paperback, Hardcover and Kindle eBooks.",
         "bn": "পেপারব্যাক ও কিন্ডল ই-বুকের সঠিক ফরম্যাটিং করা।"
       },
       {
@@ -2857,14 +2857,14 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "12+ years implementing SAP ERP for Fortune 500 multinationals, garment conglomerates, and telecom.",
+        "en": "12+ years implementing SAP ERP for Fortune 500 multinationals, garment conglomerates and telecom.",
         "bn": "বহুজাতিক ও বৃহৎ শিল্পগ্রুপে এসএপি ইআরপি বাস্তবায়নে ১২+ বছরের অভিজ্ঞতা।"
       },
       "experience": "12+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive SAP S/4HANA ERP Enterprise master program covering the four core modules: SAP FICO (Financial Accounting & Controlling, General Ledger, AP, AR, Asset Accounting), SAP ABAP (Advanced Business Application Programming, Data Dictionary, Reports, BAPIs, Interfaces), SAP SD (Sales & Distribution, Order-to-Cash process), and SAP MM (Materials Management & Procurement, Procure-to-Pay process) with live server access.",
+      "en": "Comprehensive SAP S/4HANA ERP Enterprise master program covering the four core modules: SAP FICO (Financial Accounting & Controlling, General Ledger, AP, AR, Asset Accounting), SAP ABAP (Advanced Business Application Programming, Data Dictionary, Reports, BAPIs, Interfaces), SAP SD (Sales & Distribution, Order-to-Cash process) and SAP MM (Materials Management & Procurement, Procure-to-Pay process) with live server access.",
       "bn": "বিশ্বের শীর্ষস্থানীয় এন্টারপ্রাইজ ইআরপি এসএপি (SAP S/4HANA) কোর্স। এতে ৪টি কোর মডিউল: ফিন্যান্সিয়াল একাউন্টিং (FICO), এব্যাপ প্রোগ্রামিং (ABAP), সেলস অ্যান্ড ডিস্ট্রিবিউশন (SD) এবং মেটেরিয়ালস ম্যানেজমেন্ট (MM) লাইভ সার্ভার অ্যাক্সেস সহ শেখানো হয়।"
     },
     "fullDescription": {
@@ -2879,7 +2879,7 @@ module.exports = [
           "bn": "৪টি কোর এসএপি মডিউল"
         },
         "desc": {
-          "en": "Comprehensive mastery of FICO, ABAP, SD, and MM module configurations.",
+          "en": "Comprehensive mastery of FICO, ABAP, SD and MM module configurations.",
           "bn": "এফআইসিও, এব্যাপ, এসডি ও এমএম মডিউলে পূর্ণ দক্ষতা।"
         },
         "icon": "Briefcase"
@@ -2911,7 +2911,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand enterprise structure, organizational units, and master data in SAP S/4HANA.",
+        "en": "Understand enterprise structure, organizational units and master data in SAP S/4HANA.",
         "bn": "এসএপিতে এন্টারপ্রাইজ স্ট্রাকচার ও মাস্টার ডাটা সেটআপ করা।"
       },
       {
@@ -2923,7 +2923,7 @@ module.exports = [
         "bn": "এসডি ও এমএম মডিউলে সেলস ও প্রকিউরমেন্ট প্রসেস পরিচালনা করা।"
       },
       {
-        "en": "Write custom ABAP programs, Data Dictionary objects, and BAPI interfaces.",
+        "en": "Write custom ABAP programs, Data Dictionary objects and BAPI interfaces.",
         "bn": "কাস্টম এব্যাপ কোডিং ও ডাটা ডিকশনারি অবজেক্টস তৈরি করা।"
       },
       {

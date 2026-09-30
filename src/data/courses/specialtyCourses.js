@@ -59,11 +59,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Oracle Database Administrator (OCA / OCP 19c) professional program. Learn Oracle memory structures (SGA, PGA), background processes, storage management (Tablespaces, Datafiles, ASM), user administration & privileges, RMAN automated backup & disaster recovery, performance tuning with AWR/ADDM, and Oracle Data Guard high availability.",
+      "en": "Oracle Database Administrator (OCA / OCP 19c) professional program. Learn Oracle memory structures (SGA, PGA), background processes, storage management (Tablespaces, Datafiles, ASM), user administration & privileges, RMAN automated backup & disaster recovery, performance tuning with AWR/ADDM and Oracle Data Guard high availability.",
       "bn": "ওরাকল ডাটাবেস ১৯সি ডিবিএ ও ওসিপি সার্টিফিকেশন কোর্স। এতে ওরাকল মেমোরি আর্কিটেকচার, টেবিলস্পেস, ইউজার সিকিউরিটি, আরম্যান ব্যাকআপ ও রিকভারি, পারফরম্যান্স টিউনিং এবং ডাটা গার্ড হাই অ্যাভেইলেবিলিটি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Oracle is the undisputed database engine powering the world's leading financial institutions, telecommunications giants, and national registries. Master enterprise database architecture, automated backup strategies with RMAN, disaster recovery, and query optimization.",
+      "en": "Oracle is the undisputed database engine powering the world's leading financial institutions, telecommunications giants and national registries. Master enterprise database architecture, automated backup strategies with RMAN, disaster recovery and query optimization.",
       "bn": "এই কোর্সে আপনি ব্যাংকিং ও কর্পোরেট সেক্টরে ব্যবহৃত ওরাকল ডাটাবেস হ্যান্ডস-অন লিনাক্স সার্ভার ল্যাবে ইনস্টলেশন, সিকিউরিটি হার্ডেনিং, ব্যাকআপ-রিস্টোর এবং পারফরম্যান্স অপ্টিমাইজেশন শিখবেন।"
     },
     "coreValues": [
@@ -74,7 +74,7 @@ module.exports = [
           "bn": "ওরাকল ১৯সি আর্কিটেকচার"
         },
         "desc": {
-          "en": "Master Multitenant CDB/PDB architecture, SGA, PGA, and background processes.",
+          "en": "Master Multitenant CDB/PDB architecture, SGA, PGA and background processes.",
           "bn": "মাল্টিটেন্যান্ট আর্কিটেকচার ও মেমোরি ম্যানেজমেন্ট।"
         },
         "icon": "Database"
@@ -86,7 +86,7 @@ module.exports = [
           "bn": "আরম্যান ব্যাকআপ ও রিকভারি"
         },
         "desc": {
-          "en": "Complete disaster recovery, point-in-time recovery, Flashback, and cloning.",
+          "en": "Complete disaster recovery, point-in-time recovery, Flashback and cloning.",
           "bn": "কমপ্লিট আরম্যান ডিজাস্টার রিকভারি ও ফ্ল্যাশব্যাক।"
         },
         "icon": "ShieldCheck"
@@ -114,11 +114,11 @@ module.exports = [
         "bn": "মাল্টিটেন্যান্ট সিডিবি ও পিডিবি পরিচালনা করা।"
       },
       {
-        "en": "Execute backup, restoration, and point-in-time recovery using Oracle RMAN.",
+        "en": "Execute backup, restoration and point-in-time recovery using Oracle RMAN.",
         "bn": "আরম্যান দিয়ে অটোমেটেড ব্যাকআপ ও রিকভারি সম্পন্ন করা।"
       },
       {
-        "en": "Diagnose and optimize database performance using AWR, ADDM, and ASH reports.",
+        "en": "Diagnose and optimize database performance using AWR, ADDM and ASH reports.",
         "bn": "এডব্লিউআর ও এডিডিএম দিয়ে ডাটাবেস পারফরম্যান্স টিউন করা।"
       },
       {
@@ -314,11 +314,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Enterprise Low-Code Rapid Application Development with Oracle APEX. Topics include Oracle APEX architecture, SQL & Advanced PL/SQL scripting, Workspace administration, Page Designer, Interactive Grids & Interactive Reports, Forms & Master-Detail relationships, Dynamic Actions, JavaScript integration, RESTful Web Services, security authentication, and full ERP application development.",
+      "en": "Enterprise Low-Code Rapid Application Development with Oracle APEX. Topics include Oracle APEX architecture, SQL & Advanced PL/SQL scripting, Workspace administration, Page Designer, Interactive Grids & Interactive Reports, Forms & Master-Detail relationships, Dynamic Actions, JavaScript integration, RESTful Web Services, security authentication and full ERP application development.",
       "bn": "ওরাকল অ্যাপেক্স দিয়ে আধুনিক এন্টারপ্রাইজ ওয়েব অ্যাপ্লিকেশন ও ইআরপি তৈরির কোর্স। এতে এসকিউএল, পিএল/এসকিউএল, ইন্টারঅ্যাক্টিভ গ্রিডস, ডায়নামিক অ্যাকশনস, রেস্ট এপিআই ও সিকিউর বিজনেস পোর্টাল ডেভেলপমেন্ট শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Oracle APEX is the world's most powerful enterprise low-code application platform. Learn how to build responsive, data-driven web applications 20x faster with SQL, PL/SQL, interactive reports, charts, and modern universal themes.",
+      "en": "Oracle APEX is the world's most powerful enterprise low-code application platform. Learn how to build responsive, data-driven web applications 20x faster with SQL, PL/SQL, interactive reports, charts and modern universal themes.",
       "bn": "এই কোর্সে আপনি সরকারি প্রতিষ্ঠান, বহুজাতিক কোম্পানি ও ব্যাংকিং সেক্টরে বহুল ব্যবহৃত ওরাকল অ্যাপেক্স ব্যবহার করে রিয়েল-ওয়ার্ল্ড একাউন্টিং, ইনভেন্টরি ও এইচআরএম ইআরপি সফটওয়্যার তৈরি শিখবেন।"
     },
     "coreValues": [
@@ -341,7 +341,7 @@ module.exports = [
           "bn": "ইন্টারঅ্যাক্টিভ গ্রিডস ও রিপোর্টস"
         },
         "desc": {
-          "en": "Faceted search, master-detail grids, pivot charts, and PDF reporting.",
+          "en": "Faceted search, master-detail grids, pivot charts and PDF reporting.",
           "bn": "ফ্যাসেটেড সার্চ ও অ্যাডভান্সড ইন্টারঅ্যাক্টিভ রিপোর্টস।"
         },
         "icon": "Database"
@@ -361,19 +361,19 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Administer Oracle APEX workspaces, schemas, users, and web credentials.",
+        "en": "Administer Oracle APEX workspaces, schemas, users and web credentials.",
         "bn": "ওরাকল অ্যাপেক্স ওয়ার্কস্পেস ও স্কিমা পরিচালনা করা।"
       },
       {
-        "en": "Write advanced SQL queries, PL/SQL stored procedures, packages, and triggers.",
+        "en": "Write advanced SQL queries, PL/SQL stored procedures, packages and triggers.",
         "bn": "পিএল/এসকিউএল প্রসিডিউর, প্যাকেজ ও ট্রিগার তৈরি করা।"
       },
       {
-        "en": "Design interactive reports, editable interactive grids, and master-detail forms.",
+        "en": "Design interactive reports, editable interactive grids and master-detail forms.",
         "bn": "এডিটেবল ইন্টারঅ্যাক্টিভ গ্রিড ও ফর্মস ডিজাইন করা।"
       },
       {
-        "en": "Implement Dynamic Actions, AJAX callbacks, and client-side JavaScript.",
+        "en": "Implement Dynamic Actions, AJAX callbacks and client-side JavaScript.",
         "bn": "ডায়নামিক অ্যাকশনস ও এজেক্স কলব্যাকস তৈরি করা।"
       },
       {
@@ -569,11 +569,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "High-impact business analytics and automation course. Topics include Advanced Excel functions (XLOOKUP, INDEX/MATCH, dynamic arrays), Power Query ETL & data transformation, interactive KPI dashboards, VBA programming fundamentals & syntax, automating repetitive reporting tasks with Macros, UserForms, and database integration.",
+      "en": "High-impact business analytics and automation course. Topics include Advanced Excel functions (XLOOKUP, INDEX/MATCH, dynamic arrays), Power Query ETL & data transformation, interactive KPI dashboards, VBA programming fundamentals & syntax, automating repetitive reporting tasks with Macros, UserForms and database integration.",
       "bn": "অ্যাডভান্সড এক্সেল, ভিবিএ ম্যাক্রো কোডিং, পাওয়ার কোয়েরি, ডাইনামিক ড্যাশবোর্ড এবং বিজনেস ডাটা অটোমেশনের কমপ্লিট কোর্স। এতে ঘণ্টার কাজ সেকেন্ডে অটোমেট করা এবং আকর্ষণীয় এক্সিকিউটিভ রিপোর্ট তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Eliminate repetitive manual spreadsheet work and transform into a high-value Business Data Analyst. Learn how to clean messy data with Power Query, write custom VBA scripts to automate reports with 1 click, and create executive KPI dashboards.",
+      "en": "Eliminate repetitive manual spreadsheet work and transform into a high-value Business Data Analyst. Learn how to clean messy data with Power Query, write custom VBA scripts to automate reports with 1 click and create executive KPI dashboards.",
       "bn": "এই কোর্সে আপনি এক্সেলের অ্যাডভান্সড ফর্মুলা, পাওয়ার কোয়েরি দিয়ে ডাটা ক্লিনজিং, ভিবিএ ম্যাক্রো প্রোগ্রামিং এবং সি-লেভেল এক্সিকিউটিভদের জন্য আকর্ষণীয় বিজনেস অ্যানালিটিক্স ড্যাশবোর্ড তৈরি শিখবেন।"
     },
     "coreValues": [
@@ -596,7 +596,7 @@ module.exports = [
           "bn": "পাওয়ার কোয়েরি ইটিএল"
         },
         "desc": {
-          "en": "Extract, transform, and clean multi-source data without formulas.",
+          "en": "Extract, transform and clean multi-source data without formulas.",
           "bn": "মাল্টিপল সোর্স থেকে ডেটা অটোমেটেড ক্লিনজিং।"
         },
         "icon": "Database"
@@ -620,7 +620,7 @@ module.exports = [
         "bn": "অ্যাডভান্সড এক্সেল ফর্মুলা ব্যবহারে পূর্ণ দক্ষতা অর্জন।"
       },
       {
-        "en": "Clean, transform, and merge millions of rows using Power Query.",
+        "en": "Clean, transform and merge millions of rows using Power Query.",
         "bn": "পাওয়ার কোয়েরি দিয়ে বিশাল ডাটা ক্লিন ও মার্জ করা।"
       },
       {
@@ -654,7 +654,7 @@ module.exports = [
             "bn": "মডার্ন ফর্মুলা: এক্সলুকআপ, ইনডেক্স/ম্যাচ ও ফিল্টার"
           },
           {
-            "en": "Nested Logical Functions (IFS, SWITCH, AND, OR) & Error Handling (IFERROR)",
+            "en": "Nested Logical Functions (IFS, SWITCH AND OR) & Error Handling (IFERROR)",
             "bn": "লজিক্যাল ফাংশনস ও এরর হ্যান্ডলিং"
           },
           {
@@ -817,14 +817,14 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "8+ years conducting red teaming, vulnerability assessments, and bug bounty hunting.",
+        "en": "8+ years conducting red teaming, vulnerability assessments and bug bounty hunting.",
         "bn": "রেড টিমিং ও ভালনারেবিলিটি অ্যাসেসমেন্টে ৮+ বছরের অভিজ্ঞতা।"
       },
       "experience": "8+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Official Certified Ethical Hacker (CEH v12) certification curriculum. Topics include introduction to ethical hacking & footprinting, network scanning & enumeration (Nmap, Wireshark), vulnerability assessment & Nessus, system hacking & privilege escalation, malware threats & social engineering, web application attacks & SQL injection, wireless security, and Kali Linux penetration testing labs.",
+      "en": "Official Certified Ethical Hacker (CEH v12) certification curriculum. Topics include introduction to ethical hacking & footprinting, network scanning & enumeration (Nmap, Wireshark), vulnerability assessment & Nessus, system hacking & privilege escalation, malware threats & social engineering, web application attacks & SQL injection, wireless security and Kali Linux penetration testing labs.",
       "bn": "সার্টিফাইড এথিক্যাল হ্যাকার (CEH v12) কোর্স। এতে ফুটপ্রিন্টিং, এনম্যাপ স্ক্যানিং, ভালনারেবিলিটি অ্যাসেসমেন্ট, সিস্টেম হ্যাকিং, ম্যালওয়্যার থ্রেটস, এসকিউএল ইনজেকশন, ওয়াইফাই সিকিউরিটি এবং কালি লিনাক্স ল্যাব প্র্যাকটিস শেখানো হয়।"
     },
     "fullDescription": {
@@ -851,7 +851,7 @@ module.exports = [
           "bn": "কালি লিনাক্স লাইভ ল্যাবস"
         },
         "desc": {
-          "en": "Master Metasploit, Nmap, Burp Suite, Wireshark, Hydras, and John the Ripper.",
+          "en": "Master Metasploit, Nmap, Burp Suite, Wireshark, Hydras and John the Ripper.",
           "bn": "টপ সাইবার সিকিউরিটি টুলস ব্যবহারে গভীর দক্ষতা।"
         },
         "icon": "Code2"
@@ -871,11 +871,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Execute advanced reconnaissance, OSINT, and network footprinting.",
+        "en": "Execute advanced reconnaissance, OSINT and network footprinting.",
         "bn": "ওসিন্ট ও নেটওয়ার্ক ফুটপ্রিন্টিং করতে পারা।"
       },
       {
-        "en": "Scan and enumerate live networks using Nmap, Masscan, and Wireshark.",
+        "en": "Scan and enumerate live networks using Nmap, Masscan and Wireshark.",
         "bn": "এনম্যাপ ও ওয়্যারশার্ক দিয়ে নেটওয়ার্ক স্ক্যান ও অ্যানালাইজ করা।"
       },
       {
@@ -1079,11 +1079,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive Blue Team Defensive Cyber Security and SOC Analyst program. Topics include cybersecurity fundamentals & threat landscapes, network security & firewall architectures, SIEM tools & log analysis (Splunk, Wazuh, Elastic), incident detection & triage, malware analysis fundamentals, vulnerability management, and SOC Tier 1/2 operations.",
+      "en": "Comprehensive Blue Team Defensive Cyber Security and SOC Analyst program. Topics include cybersecurity fundamentals & threat landscapes, network security & firewall architectures, SIEM tools & log analysis (Splunk, Wazuh, Elastic), incident detection & triage, malware analysis fundamentals, vulnerability management and SOC Tier 1/2 operations.",
       "bn": "ব্লু টিম ডিফেন্সিভ সাইবার সিকিউরিটি ও এসওসি অ্যানালিস্ট কোর্স। এতে এন্টারপ্রাইজ থ্রেট ল্যান্ডস্কেপ, ফায়ারওয়াল আর্কিটেকচার, স্প্লাঙ্ক ও ওয়াজু এসআইইএম লগ অ্যানালাইসিস, ইন্সিডেন্ট হ্যান্ডলিং এবং ম্যালওয়্যার ডিটেকশন শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Protect enterprise organizations from modern cyber threats and ransomware attacks. Learn how to work inside a 24/7 Security Operations Center (SOC), configure SIEM platforms, analyze network logs, detect unauthorized intrusions, and lead incident response playbooks.",
+      "en": "Protect enterprise organizations from modern cyber threats and ransomware attacks. Learn how to work inside a 24/7 Security Operations Center (SOC), configure SIEM platforms, analyze network logs, detect unauthorized intrusions and lead incident response playbooks.",
       "bn": "এই কোর্সে আপনি কর্পোরেট সিকিউরিটি অপারেশন্স সেন্টারে (SOC) একজন প্রফেশনাল অ্যানালিস্ট হিসেবে লগ অ্যানালাইসিস, রিয়েলটাইম সাইবার অ্যাটাক মনিটরিং ও থ্রেট হান্টিংয়ের বাস্তব প্রশিক্ষণ পাবেন।"
     },
     "coreValues": [
@@ -1094,7 +1094,7 @@ module.exports = [
           "bn": "এসআইইএম ও লগ অ্যানালাইসিস"
         },
         "desc": {
-          "en": "Configure Splunk, Wazuh, and Elastic SIEM for real-time security alerting.",
+          "en": "Configure Splunk, Wazuh and Elastic SIEM for real-time security alerting.",
           "bn": "স্প্লাঙ্ক ও ওয়াজু দিয়ে রিয়েলটাইম লগ অ্যানালাইসিস।"
         },
         "icon": "ShieldCheck"
@@ -1106,7 +1106,7 @@ module.exports = [
           "bn": "ইন্সিডেন্ট রেসপন্স প্লেবুকস"
         },
         "desc": {
-          "en": "NIST & SANS incident response frameworks, containment, and root cause analysis.",
+          "en": "NIST & SANS incident response frameworks, containment and root cause analysis.",
           "bn": "এনআইএসটি ফ্রেমওয়ার্ক অনুযায়ী সাইবার হামলার প্রতিরোধ।"
         },
         "icon": "Server"
@@ -1130,7 +1130,7 @@ module.exports = [
         "bn": "এন্টারপ্রাইজ সাইবার সিকিউরিটি আর্কিটেকচার বোঝা।"
       },
       {
-        "en": "Monitor, correlate, and analyze security logs using Splunk & Wazuh SIEM.",
+        "en": "Monitor, correlate and analyze security logs using Splunk & Wazuh SIEM.",
         "bn": "স্প্লাঙ্ক ও ওয়াজু এসআইইএম দিয়ে সিকিউরিটি লগ বিশ্লেষণ করা।"
       },
       {
@@ -1327,18 +1327,18 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "8+ years investigating cyber crimes, financial fraud, and digital forensic evidence.",
+        "en": "8+ years investigating cyber crimes, financial fraud and digital forensic evidence.",
         "bn": "সাইবার ক্রাইম তদন্ত ও ডিজিটাল ফরেনসিকে ৮+ বছরের অভিজ্ঞতা।"
       },
       "experience": "8+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "Official EC-Council Computer Hacking Forensic Investigator (CHFI v10) curriculum. Learn digital forensics principles, legal chain of custody, evidence acquisition & write blockers (FTK Imager), file system forensics (FAT, NTFS, Ext4), RAM memory analysis (Volatility), registry forensics, email & network forensics, and anti-forensics detection.",
+      "en": "Official EC-Council Computer Hacking Forensic Investigator (CHFI v10) curriculum. Learn digital forensics principles, legal chain of custody, evidence acquisition & write blockers (FTK Imager), file system forensics (FAT, NTFS, Ext4), RAM memory analysis (Volatility), registry forensics, email & network forensics and anti-forensics detection.",
       "bn": "ইসি-কাউন্সিল সার্টিফাইড ফরেনসিক ইনভেস্টিগেটর (CHFI v10) কোর্স। এতে ডিজিটাল এভিডেন্স সংগ্রহ, চেইন অফ কাস্টডি, এফটিকে ইমেজার, উইন্ডোজ ও লিনাক্স ফাইল সিস্টেম ফরেনসিক্স, র‍্যাম মেমোরি অ্যানালাইসিস ও কোর্টরুম রিপোর্ট তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Become a licensed Cyber Crime & Digital Forensics Investigator. Learn the methodologies used by law enforcement and enterprise security teams to uncover digital evidence from compromised hard drives, memory dumps, cloud platforms, and mobile devices.",
+      "en": "Become a licensed Cyber Crime & Digital Forensics Investigator. Learn the methodologies used by law enforcement and enterprise security teams to uncover digital evidence from compromised hard drives, memory dumps, cloud platforms and mobile devices.",
       "bn": "এই কোর্সে আপনি সাইবার অপরাধ তদন্ত, হ্যাকিংয়ের ডিজিটাল প্রমাণ সংগ্রহ ও বিশ্লেষণ, ডাটা রিকভারি এবং আইনগতভাবে গ্রহণযোগ্য ফরেনসিক রিপোর্ট তৈরি করার আন্তর্জাতিক দক্ষতা অর্জন করবেন।"
     },
     "coreValues": [
@@ -1373,7 +1373,7 @@ module.exports = [
           "bn": "লিগ্যাল ফরেনসিক ইনভেস্টিগেশন"
         },
         "desc": {
-          "en": "Chain of custody, forensic hash validation (MD5/SHA256), and expert reporting.",
+          "en": "Chain of custody, forensic hash validation (MD5/SHA256) and expert reporting.",
           "bn": "চেইন অফ কাস্টডি ও লিগ্যাল ফরেনসিক রিপোর্ট তৈরি।"
         },
         "icon": "Award"
@@ -1389,11 +1389,11 @@ module.exports = [
         "bn": "এফটিকে ইমেজার দিয়ে হুবহু ডিস্ক ইমেজ তৈরি ও ভেরিফাই করা।"
       },
       {
-        "en": "Analyze Windows Registry, Prefetch, Shellbags, and Event Log artifacts.",
+        "en": "Analyze Windows Registry, Prefetch, Shellbags and Event Log artifacts.",
         "bn": "উইন্ডোজ রেজিস্ট্রি ও সিস্টেম আর্টিফ্যাক্টস তদন্ত করা।"
       },
       {
-        "en": "Extract running processes, passwords, and injected code using Volatility.",
+        "en": "Extract running processes, passwords and injected code using Volatility.",
         "bn": "ভোলাটিলিটি দিয়ে র‍্যাম মেমোরি থেকে ম্যালওয়্যার কোড বের করা।"
       },
       {
@@ -1582,18 +1582,18 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "12+ years in executive cyber security governance, compliance, and enterprise risk management.",
+        "en": "12+ years in executive cyber security governance, compliance and enterprise risk management.",
         "bn": "সাইবার সিকিউরিটি গভর্নেন্স ও এন্টারপ্রাইজ রিস্ক ম্যানেজমেন্টে ১২+ বছরের অভিজ্ঞতা।"
       },
       "experience": "12+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "The world's premier cybersecurity leadership certification by (ISC)². Comprehensive coverage of all 8 Common Body of Knowledge (CBK) domains: Security & Risk Management, Asset Security, Security Architecture & Engineering, Communication & Network Security, Identity & Access Management (IAM), Security Assessment & Testing, Security Operations, and Software Development Security.",
+      "en": "The world's premier cybersecurity leadership certification by (ISC)². Comprehensive coverage of all 8 Common Body of Knowledge (CBK) domains: Security & Risk Management, Asset Security, Security Architecture & Engineering, Communication & Network Security, Identity & Access Management (IAM), Security Assessment & Testing, Security Operations and Software Development Security.",
       "bn": "বিশ্বের এক নম্বর ইনফরমেশন সিকিউরিটি লিডারশিপ সার্টিফিকেশন (ISC)² CISSP কোর্স। এতে ৮টি কোর সিকিউরিটি ডোমেন, এন্টারপ্রাইজ গভর্নেন্স, রিস্ক ম্যানেজমেন্ট, সিকিউরিটি আর্কিটেকচার, আইএএম এবং সিআইএসএসপি এক্সাম স্ট্র্যাটেজি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Achieve the gold standard in cybersecurity. This program prepares senior security professionals, architects, and IT managers to design, implement, and manage a world-class cybersecurity program, passing the rigorous (ISC)² CISSP exam.",
+      "en": "Achieve the gold standard in cybersecurity. This program prepares senior security professionals, architects and IT managers to design, implement and manage a world-class cybersecurity program, passing the rigorous (ISC)² CISSP exam.",
       "bn": "এই কোর্সে আপনি সিআইএসও এবং সিনিয়র সিকিউরিটি লিডারদের দৃষ্টিভঙ্গি থেকে এন্টারপ্রাইজ সাইবার সিকিউরিটি পলিসি তৈরি, রিস্ক অ্যাসেসমেন্ট এবং গ্লোবাল সিআইএসএসপি সার্টিফিকেশনের পূর্ণ প্রস্তুতি সম্পন্ন করবেন।"
     },
     "coreValues": [
@@ -1640,7 +1640,7 @@ module.exports = [
         "bn": "বিজনেস লক্ষ্যের সাথে সাইবার সিকিউরিটি স্ট্র্যাটেজি সমন্বয় করা।"
       },
       {
-        "en": "Implement robust access controls, cryptographic standards, and network architecture.",
+        "en": "Implement robust access controls, cryptographic standards and network architecture.",
         "bn": "ক্রিপ্টোগ্রাফিক স্ট্যান্ডার্ড ও এক্সেস কন্ট্রোল বাস্তবায়ন করা।"
       },
       {
@@ -1648,7 +1648,7 @@ module.exports = [
         "bn": "বিজনেস কন্টিনিউটি ও ডিজাস্টার রিকভারি প্ল্যান তৈরি করা।"
       },
       {
-        "en": "Conduct vulnerability assessments, audits, and security operations management.",
+        "en": "Conduct vulnerability assessments, audits and security operations management.",
         "bn": "সিকিউরিটি অডিট ও অপারেশনস পরিচালনা করা।"
       },
       {
@@ -1844,11 +1844,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive 6-Month professional Diploma in Multimedia. Curriculum includes graphic design & brand identity (Photoshop, Illustrator), audio engineering & sound design (Audition), video editing & film composition (Premiere Pro), motion graphics & visual effects (After Effects), 3D modeling & animation (Blender / Maya), digital broadcasting, and international creative studio portfolio creation.",
+      "en": "Comprehensive 6-Month professional Diploma in Multimedia. Curriculum includes graphic design & brand identity (Photoshop, Illustrator), audio engineering & sound design (Audition), video editing & film composition (Premiere Pro), motion graphics & visual effects (After Effects), 3D modeling & animation (Blender / Maya), digital broadcasting and international creative studio portfolio creation.",
       "bn": "৬ মাসের পূর্ণাঙ্গ ডিপ্লোমা ইন মাল্টিমিডিয়া কোর্স। এতে গ্রাফিক ডিজাইন, অডিও সাউন্ড ডিজাইন, সিনেমাটিক ভিডিও এডিটিং, মোশন গ্রাফিক্স, ব্লেন্ডার ৩ডি অ্যানিমেশন ও কমার্শিয়াল শোরিল তৈরি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Master all facets of modern creative digital media. This flagship 252-hour diploma transforms you into a complete Multimedia Specialist capable of working in broadcast television, advertising agencies, game studios, VFX production houses, and high-ticket freelance platforms.",
+      "en": "Master all facets of modern creative digital media. This flagship 252-hour diploma transforms you into a complete Multimedia Specialist capable of working in broadcast television, advertising agencies, game studios, VFX production houses and high-ticket freelance platforms.",
       "bn": "এই ডিপ্লোমা প্রোগ্রামে আপনি ফটোশপ, ইলাস্ট্রেটর, প্রিমিয়ার প্রো, আফটার ইফেক্টস এবং ৩ডি ব্লেন্ডার সফটওয়্যারে কাজ করে সম্পূর্ণ মাল্টিমিডিয়া ও ক্রিয়েটিভ ইন্ডাস্ট্রিতে ক্যারিয়ার গড়ার সুযোগ পাবেন।"
     },
     "coreValues": [
@@ -1859,7 +1859,7 @@ module.exports = [
           "bn": "সম্পূর্ণ ক্রিয়েটিভ স্যুট"
         },
         "desc": {
-          "en": "Master Photoshop, Illustrator, Premiere Pro, After Effects, and Blender 3D.",
+          "en": "Master Photoshop, Illustrator, Premiere Pro, After Effects and Blender 3D.",
           "bn": "ডিজাইন, ভিডিও, মোশন ও ৩ডি অ্যানিমেশনের পূর্ণ প্যাকেজ।"
         },
         "icon": "Palette"
@@ -1871,7 +1871,7 @@ module.exports = [
           "bn": "৩ডি অ্যানিমেশন ও ভিএফএক্স"
         },
         "desc": {
-          "en": "3D modeling, lighting, texturing, rigging, animation, and green screen CGI.",
+          "en": "3D modeling, lighting, texturing, rigging, animation and green screen CGI.",
           "bn": "ব্লেন্ডার ৩ডি মডেলিং ও স্পেশাল ভিজ্যুয়াল ইফেক্টস।"
         },
         "icon": "Sparkles"
@@ -1891,11 +1891,11 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Create vector brand identities, packaging, and commercial graphic designs.",
+        "en": "Create vector brand identities, packaging and commercial graphic designs.",
         "bn": "কমার্শিয়াল গ্রাফিক ডিজাইন ও ব্র্যান্ড আইডেন্টিটি তৈরি করা।"
       },
       {
-        "en": "Edit commercial films, documentary videos, and social media reels professionally.",
+        "en": "Edit commercial films, documentary videos and social media reels professionally.",
         "bn": "প্রফেশনাল ফিল্ম ও কমার্শিয়াল ভিডিও এডিট করা।"
       },
       {
@@ -1903,7 +1903,7 @@ module.exports = [
         "bn": "আফটার ইফেক্টসে আকর্ষণীয় মোশন গ্রাফিক্স তৈরি করা।"
       },
       {
-        "en": "Model, texture, light, and animate 3D assets and characters in Blender.",
+        "en": "Model, texture, light and animate 3D assets and characters in Blender.",
         "bn": "ব্লেন্ডারে ৩ডি ক্যারেক্টার ও অবজেক্ট মডেলিং ও অ্যানিমেশন করা।"
       },
       {
@@ -2099,7 +2099,7 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Premier 6-Month Diploma in Full Stack Web Technology. Covers modern frontend (HTML5, Tailwind, JavaScript ESNext, React 19, Next.js 15), multi-stack backend (Node.js/Express & PHP Laravel 11), databases (PostgreSQL, MongoDB, Redis), Docker containerization, CI/CD pipelines, AWS cloud hosting, and enterprise SaaS capstone projects.",
+      "en": "Premier 6-Month Diploma in Full Stack Web Technology. Covers modern frontend (HTML5, Tailwind, JavaScript ESNext, React 19, Next.js 15), multi-stack backend (Node.js/Express & PHP Laravel 11), databases (PostgreSQL, MongoDB, Redis), Docker containerization, CI/CD pipelines, AWS cloud hosting and enterprise SaaS capstone projects.",
       "bn": "৬ মাসের পূর্ণাঙ্গ ডিপ্লোমা ইন ফুল স্ট্যাক ওয়েব টেকনোলজি কোর্স। এতে আধুনিক ফ্রন্টএন্ড (রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, টেইলউইন্ড), ব্যাকএন্ড (নোড.জেএস ও পিএইচপি লারাভেল), ডাটাবেস (পোস্টগ্রেএসকিউএল, মঙ্গোডিবি), ডকার এবং এডব্লিউএস ক্লাউড ডেপ্লয়মেন্ট শেখানো হয়।"
     },
     "fullDescription": {
@@ -2126,7 +2126,7 @@ module.exports = [
           "bn": "ডকার ও ক্লাউড ডেভঅপ্স"
         },
         "desc": {
-          "en": "Containerize apps with Docker, configure CI/CD pipelines, and deploy to AWS.",
+          "en": "Containerize apps with Docker, configure CI/CD pipelines and deploy to AWS.",
           "bn": "ডকার কন্টেইনারাইজেশন ও এডব্লিউএস ক্লাউড ডেপ্লয়মেন্ট।"
         },
         "icon": "Server"
@@ -2158,7 +2158,7 @@ module.exports = [
         "bn": "পোস্টগ্রেএসকিউএল ও মঙ্গোডিবি ডাটাবেস অপ্টিমাইজেশন করা।"
       },
       {
-        "en": "Implement Docker containers, Redis caching, and automated CI/CD pipelines.",
+        "en": "Implement Docker containers, Redis caching and automated CI/CD pipelines.",
         "bn": "ডকার ও রেডিস ক্যাশিং দিয়ে সিস্টেম পারফরম্যান্স বাড়ানো।"
       },
       {
@@ -2347,18 +2347,18 @@ module.exports = [
       },
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
       "bio": {
-        "en": "12+ years designing ISP, enterprise Cisco networks, and data center infrastructures.",
+        "en": "12+ years designing ISP, enterprise Cisco networks and data center infrastructures.",
         "bn": "আইএসপি ও এন্টারপ্রাইজ নেটওয়ার্কে ১২+ বছরের অভিজ্ঞতা।"
       },
       "experience": "12+ Yrs Exp",
       "verified": true
     },
     "overview": {
-      "en": "6-Month Premier Diploma in Network & Systems Engineering. Covers PC hardware engineering, Cisco enterprise routing & switching (CCNA & CCNP concepts), MikroTik RouterOS (MTCNA/MTCRE), Red Hat Linux system administration, Windows Server 2022 Active Directory, network security & firewalls, and ISP deployment capstones.",
+      "en": "6-Month Premier Diploma in Network & Systems Engineering. Covers PC hardware engineering, Cisco enterprise routing & switching (CCNA & CCNP concepts), MikroTik RouterOS (MTCNA/MTCRE), Red Hat Linux system administration, Windows Server 2022 Active Directory, network security & firewalls and ISP deployment capstones.",
       "bn": "৬ মাসের পূর্ণাঙ্গ ডিপ্লোমা ইন নেটওয়ার্ক ও সিস্টেমস ইঞ্জিনিয়ারিং কোর্স। এতে সিসকো সিসিএনএ ও সিসিএনপি রাউটিং-সুইচিং, মিক্রোটিক আইএসপি নেটওয়ার্ক, রেড হ্যাট লিনাক্স, উইন্ডোজ সার্ভার অ্যাক্টিভ ডিরেক্টরি এবং এন্টারপ্রাইজ সিকিউরিটি প্র্যাকটিক্যাল ল্যাবে শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "The most complete network engineering diploma in Bangladesh. Master the physical and logical layers of modern networking, ISP bandwidth distribution, enterprise domain controllers, Linux server administration, and cybersecurity defense with physical Cisco racks and MikroTik hardware.",
+      "en": "The most complete network engineering diploma in Bangladesh. Master the physical and logical layers of modern networking, ISP bandwidth distribution, enterprise domain controllers, Linux server administration and cybersecurity defense with physical Cisco racks and MikroTik hardware.",
       "bn": "এই ডিপ্লোমা প্রোগ্রামে আপনি ডাটা সেন্টার, আইএসপি ও মাল্টিন্যাশনাল কর্পোরেশনের নেটওয়ার্ক ইনফ্রাস্ট্রাকচার ডিজাইন ও পরিচালনা করার জন্য প্রয়োজনীয় সকল আন্তর্জাতিক সার্টিফিকেশন স্কিল অর্জন করবেন।"
     },
     "coreValues": [
@@ -2381,7 +2381,7 @@ module.exports = [
           "bn": "অ্যাক্টিভ ডিরেক্টরি ও উইন্ডোজ সার্ভার"
         },
         "desc": {
-          "en": "Manage domain controllers, group policies (GPO), DNS, DHCP, and file servers.",
+          "en": "Manage domain controllers, group policies (GPO), DNS, DHCP and file servers.",
           "bn": "ডোমেইন কন্ট্রোলার ও গ্রুপ পলিসি ম্যানেজমেন্ট।"
         },
         "icon": "ShieldCheck"
@@ -2393,7 +2393,7 @@ module.exports = [
           "bn": "ফিজিক্যাল সিসকো র‍্যাক ল্যাব"
         },
         "desc": {
-          "en": "Hands-on configuration on real Cisco routers, switches, and MikroTik CCR hardware.",
+          "en": "Hands-on configuration on real Cisco routers, switches and MikroTik CCR hardware.",
           "bn": "রিয়েল সিসকো ও মিক্রোটিক ডিভাইসে লাইভ কনফিগারেশন।"
         },
         "icon": "Cpu"
@@ -2405,7 +2405,7 @@ module.exports = [
         "bn": "সিসকো রাউটার ও সুইচে এন্টারপ্রাইজ রাউটিং প্রটোকল কনফিগার করা।"
       },
       {
-        "en": "Deploy MikroTik RouterOS for ISP bandwidth queues, PPPoE, and firewalls.",
+        "en": "Deploy MikroTik RouterOS for ISP bandwidth queues, PPPoE and firewalls.",
         "bn": "মিক্রোটিক দিয়ে আইএসপি ব্যান্ডউইথ ও ফায়ারওয়াল পরিচালনা করা।"
       },
       {
@@ -2609,11 +2609,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Complete Japanese language mastery program for students and job seekers targeting Japan. Topics include Hiragana & Katakana writing mastery, 150+ essential Kanji characters, Minna no Nihongo grammar patterns, daily conversational fluency, listening comprehension (Choukai), Japanese workplace business etiquette, and complete JLPT N5 / NAT-TEST preparation.",
+      "en": "Complete Japanese language mastery program for students and job seekers targeting Japan. Topics include Hiragana & Katakana writing mastery, 150+ essential Kanji characters, Minna no Nihongo grammar patterns, daily conversational fluency, listening comprehension (Choukai), Japanese workplace business etiquette and complete JLPT N5 / NAT-TEST preparation.",
       "bn": "জাপানে উচ্চশিক্ষা ও এসএসডব্লিউ ওয়ার্ক ভিসার জন্য পূর্ণাঙ্গ জাপানিজ ভাষা কোর্স। এতে হিরাগানা, কাতাকানা, কাঞ্জি, মিন্না নো নিহোঙ্গো ব্যাকরণ, লিসেনিং এবং জেএলপিটি N5 ও NAT-TEST পরীক্ষার পূর্ণ প্রস্তুতি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Learn Japanese from native-level certified instructors. This comprehensive 3-month course covers reading, writing, listening, and speaking with authentic Minna no Nihongo curriculum, preparing you 100% to pass the official JLPT N5 or NAT-TEST exam.",
+      "en": "Learn Japanese from native-level certified instructors. This comprehensive 3-month course covers reading, writing, listening and speaking with authentic Minna no Nihongo curriculum, preparing you 100% to pass the official JLPT N5 or NAT-TEST exam.",
       "bn": "এই কোর্সে আপনি জাপানি বর্ণমালা থেকে শুরু করে দৈনন্দিন সাবলীল কথোপকথন, ইন্টারভিউ কৌশল এবং জাপানের জব বা স্টুডেন্ট ভিসার জন্য প্রয়োজনীয় ল্যাঙ্গুয়েজ প্রফিসিয়েন্সি সার্টিফিকেট অর্জন করবেন।"
     },
     "coreValues": [
@@ -2656,7 +2656,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Read and write Hiragana, Katakana, and 150+ essential Kanji characters fluently.",
+        "en": "Read and write Hiragana, Katakana and 150+ essential Kanji characters fluently.",
         "bn": "হিরাগানা, কাতাকানা ও ১৫০টি কাঞ্জি পড়তে ও লিখতে পারা।"
       },
       {
@@ -2864,11 +2864,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive Korean language program specialized for South Korea EPS-TOPIK employment (BOESL government lottery & exam) and TOPIK I. Topics include Hangul alphabet mastery, Korean grammar particles, daily conversations, workplace manufacturing/agriculture vocabulary, listening & reading drills, Korean culture, and UBT/CBT computer exam simulations.",
+      "en": "Comprehensive Korean language program specialized for South Korea EPS-TOPIK employment (BOESL government lottery & exam) and TOPIK I. Topics include Hangul alphabet mastery, Korean grammar particles, daily conversations, workplace manufacturing/agriculture vocabulary, listening & reading drills, Korean culture and UBT/CBT computer exam simulations.",
       "bn": "দক্ষিণ কোরিয়ায় সরকারিভাবে বোয়েসেলের মাধ্যমে ইপিএস কর্মী নিয়োগ এবং স্টুডেন্ট ভিসার জন্য পূর্ণাঙ্গ কোরিয়ান ভাষা কোর্স। এতে হাঙ্গুল বর্ণমালা, ব্যাকরণ, শব্দার্থ, লিসেনিং, রিডিং এবং ইউবিটি/সিবিটি কম্পিউটার পরীক্ষার পূর্ণ প্রস্তুতি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "South Korea offers the highest-earning government employment opportunities for Bangladeshi youth through the EPS system. Master the official HRD Korea textbook, memorize essential workplace vocabulary, and practice on simulated UBT/CBT software to score 180+ out of 200.",
+      "en": "South Korea offers the highest-earning government employment opportunities for Bangladeshi youth through the EPS system. Master the official HRD Korea textbook, memorize essential workplace vocabulary and practice on simulated UBT/CBT software to score 180+ out of 200.",
       "bn": "এই কোর্সে আপনি একদম শূন্য থেকে কোরিয়ান বর্ণমালা উচ্চারণ, এইচআরডি কোরিয়ার অফিসিয়াল টেক্সটবুক, কারখানার কাজের জন্য প্রয়োজনীয় শব্দভাণ্ডার এবং কম্পিউটার ভিত্তিক ইউবিটি মক টেস্ট দিয়ে সর্বোচ্চ স্কোর নিশ্চিত করবেন।"
     },
     "coreValues": [
@@ -2911,7 +2911,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Read, write, and pronounce the Korean Hangul script with perfect batchim rules.",
+        "en": "Read, write and pronounce the Korean Hangul script with perfect batchim rules.",
         "bn": "কোরিয়ান হাঙ্গুল বর্ণমালা ও বাচ্ছিম নিয়ম নিখুঁতভাবে পড়া ও লেখা।"
       },
       {
@@ -3119,7 +3119,7 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive German Language mastery for Goethe-Zertifikat A1 and A2. Topics include German alphabet, phonetics & pronunciation, A1 grammar (articles Der/Die/Das, Nominative, Accusative, Dative cases, modal verbs), everyday vocabulary & conversations, listening (Hören), reading (Lesen), writing (Schreiben), speaking (Sprechen), and higher studies in Germany consultation.",
+      "en": "Comprehensive German Language mastery for Goethe-Zertifikat A1 and A2. Topics include German alphabet, phonetics & pronunciation, A1 grammar (articles Der/Die/Das, Nominative, Accusative, Dative cases, modal verbs), everyday vocabulary & conversations, listening (Hören), reading (Lesen), writing (Schreiben), speaking (Sprechen) and higher studies in Germany consultation.",
       "bn": "জার্মানিতে টিউশন-ফি ফ্রি উচ্চশিক্ষা ও আউসবিল্ডুং ভিসার জন্য গ্যোথে A1 ও A2 সার্টিফিকেশন কোর্স। এতে সঠিক জার্মান উচ্চারণ, আর্টিকেল (Der/Die/Das), আকুসাটিভ ও ডাটিভ কারক, স্পিকিং, লিসেনিং এবং গ্যোথে পরীক্ষার মক টেস্ট শেখানো হয়।"
     },
     "fullDescription": {
@@ -3166,7 +3166,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Understand and pronounce German phonetics, umlauts (ä, ö, ü), and letter blends.",
+        "en": "Understand and pronounce German phonetics, umlauts (ä, ö, ü) and letter blends.",
         "bn": "জার্মান বর্ণ ও উমলাউটের সঠিক উচ্চারণ আয়ত্ত করা।"
       },
       {
@@ -3174,7 +3174,7 @@ module.exports = [
         "bn": "আর্টিকেল ও কারক পরিবর্তন সঠিকভাবে ব্যবহার করতে পারা।"
       },
       {
-        "en": "Write formal emails, letters, and fill out official registration forms in German.",
+        "en": "Write formal emails, letters and fill out official registration forms in German.",
         "bn": "জার্মান ভাষায় ফরমাল ইমেইল ও চিঠি লিখতে পারা।"
       },
       {
@@ -3374,11 +3374,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Complete IELTS Academic & General Training masterclass. Topics include Listening note-taking & map labeling strategies, Academic/General Reading skimming & scanning techniques, Writing Task 1 (Charts, Maps, Processes / Letters), Writing Task 2 (Opinion, Discussion, Problem-Solution Essays), 1-on-1 Speaking interviews, vocabulary booster, and full-length computer-delivered & paper mock tests.",
+      "en": "Complete IELTS Academic & General Training masterclass. Topics include Listening note-taking & map labeling strategies, Academic/General Reading skimming & scanning techniques, Writing Task 1 (Charts, Maps, Processes / Letters), Writing Task 2 (Opinion, Discussion, Problem-Solution Essays), 1-on-1 Speaking interviews, vocabulary booster and full-length computer-delivered & paper mock tests.",
       "bn": "আইইএলটিএস একাডেমিক ও জেনারেল ট্রেনিংয়ের কমপ্লিট মাস্টারক্লাস। এতে লিসেনিং, রিডিং স্কিমিং-স্ক্যানিং, রাইটিং টাস্ক ১ ও টাস্ক ২ রচনা লিখন, ১-অন-১ স্পিকিং ইন্টারভিউ এবং ফুল মক টেস্ট নেওয়া হয়।"
     },
     "fullDescription": {
-      "en": "Achieve Band 7.5+ on your first attempt. Master the exact question types, time management techniques, and scoring criteria evaluated by British Council and IDP examiners for both Paper-Based and Computer-Delivered IELTS.",
+      "en": "Achieve Band 7.5+ on your first attempt. Master the exact question types, time management techniques and scoring criteria evaluated by British Council and IDP examiners for both Paper-Based and Computer-Delivered IELTS.",
       "bn": "এই কোর্সে আপনি আন্তর্জাতিক মানদণ্ড অনুযায়ী প্রতিটি মডিউলে সর্বোচ্চ স্কোর তোলার কৌশল, ক্যামব্রিজ বিগত বছরের প্রশ্ন সমাধান, ব্যক্তিগত কোহিসন-কোহেরেন্স ফিডব্যাক এবং নিয়মিত স্পিকিং মক টেস্ট পাবেন।"
     },
     "coreValues": [
@@ -3629,11 +3629,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Practical and interactive Spoken English program designed to eliminate hesitation and build natural fluency. Topics include phonetics & clear neutral accent, everyday practical conversations, vocabulary building & idioms, overcoming nervousness, public speaking practice, corporate email & workplace communication, debates, and group discussions.",
+      "en": "Practical and interactive Spoken English program designed to eliminate hesitation and build natural fluency. Topics include phonetics & clear neutral accent, everyday practical conversations, vocabulary building & idioms, overcoming nervousness, public speaking practice, corporate email & workplace communication, debates and group discussions.",
       "bn": "ইংরেজি বলার জড়তা ও ভয় দূর করে সাবলীলভাবে কথা বলার প্র্যাকটিক্যাল কোর্স। এতে সঠিক উচ্চারণ, দৈনন্দিন ডায়ালগ, বিজনেস কমিউনিকেশন, পাবলিক স্পিকিং, প্রেজেন্টেশন ও গ্রুপ ডিসকাশন শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Speak English with natural confidence in any professional or social situation. Through hundreds of interactive role-playing conversations, pronunciation drills, debates, and presentation sessions, you will transform into a fluent English speaker.",
+      "en": "Speak English with natural confidence in any professional or social situation. Through hundreds of interactive role-playing conversations, pronunciation drills, debates and presentation sessions, you will transform into a fluent English speaker.",
       "bn": "এই কোর্সে আপনি গ্রামারের অতিরিক্ত জটিলতা ছাড়া বাস্তব কথোপকথন ও নিয়মিত স্পিকিং প্র্যাকটিসের মাধ্যমে যেকোনো ইন্টারভিউ, মিটিং বা ক্লায়েন্টের সাথে আত্মবিশ্বাসের সাথে ইংরেজিতে কথা বলা শিখবেন।"
     },
     "coreValues": [
@@ -3644,7 +3644,7 @@ module.exports = [
           "bn": "জড়তাহীন সাবলীল ইংরেজি"
         },
         "desc": {
-          "en": "Eliminate stage fright, mother-tongue influence (MTI), and speaking nervousness.",
+          "en": "Eliminate stage fright, mother-tongue influence (MTI) and speaking nervousness.",
           "bn": "ইংরেজি বলার ভয় ও আঞ্চলিকতার টান দূর করা।"
         },
         "icon": "Users"
@@ -3656,7 +3656,7 @@ module.exports = [
           "bn": "কর্পোরেট কমিউনিকেশন"
         },
         "desc": {
-          "en": "Master business meetings, elevator pitches, professional emails, and negotiation.",
+          "en": "Master business meetings, elevator pitches, professional emails and negotiation.",
           "bn": "অফিসিয়াল মিটিং, প্রেজেন্টেশন ও ইমেইল রাইটিং।"
         },
         "icon": "Briefcase"
@@ -3668,7 +3668,7 @@ module.exports = [
           "bn": "লাইভ ডিবেট ও স্পিকিং ক্লাব"
         },
         "desc": {
-          "en": "Weekly debate sessions, role-playing scenarios, and live club conversations.",
+          "en": "Weekly debate sessions, role-playing scenarios and live club conversations.",
           "bn": "প্রতি সপ্তাহে লাইভ ডিবেট ও স্পিকিং ক্লাবে অংশ নেওয়া।"
         },
         "icon": "Award"
@@ -3680,7 +3680,7 @@ module.exports = [
         "bn": "মনে মনে বাংলা অনুবাদ না করে সরাসরি ইংরেজিতে কথা বলা।"
       },
       {
-        "en": "Master clear pronunciation, phonetic sounds, word stress, and intonation.",
+        "en": "Master clear pronunciation, phonetic sounds, word stress and intonation.",
         "bn": "সঠিক উচ্চারণ ও শব্দে স্ট্রেস দেওয়ার নিয়ম জানা।"
       },
       {
@@ -3688,11 +3688,11 @@ module.exports = [
         "bn": "অফিসে বা ক্লাসে চমৎকার প্রেজেন্টেশন দেওয়া।"
       },
       {
-        "en": "Handle job interviews, client meetings, and international calls effortlessly.",
+        "en": "Handle job interviews, client meetings and international calls effortlessly.",
         "bn": "চাকরির ইন্টারভিউ ও ক্লায়েন্ট মিটিং সফলভাবে সম্পন্ন করা।"
       },
       {
-        "en": "Expand active vocabulary with idioms, phrasal verbs, and smart expressions.",
+        "en": "Expand active vocabulary with idioms, phrasal verbs and smart expressions.",
         "bn": "প্রয়োজনীয় শব্দভাণ্ডার ও আধুনিক স্মার্ট এক্সপ্রেশনস ব্যবহার করা।"
       }
     ],
@@ -3884,11 +3884,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "Joyful and activity-based Spoken English program for kids (ages 5 to 14). Topics include British/American phonics, word pronunciation games, picture storytelling, daily social expressions & manners, rhymes & songs, public speaking without hesitation, and building an active English-speaking habit at home and school.",
+      "en": "Joyful and activity-based Spoken English program for kids (ages 5 to 14). Topics include British/American phonics, word pronunciation games, picture storytelling, daily social expressions & manners, rhymes & songs, public speaking without hesitation and building an active English-speaking habit at home and school.",
       "bn": "৫ থেকে ১৪ বছর বয়সী শিশুদের জন্য আনন্দদায়ক স্পোকেন ইংলিশ কোর্স। এতে ফোনিক্স সাউন্ড, ছবির মাধ্যমে গল্প বলা, গান, সঠিক উচ্চারণ, আত্মবিশ্বাস বৃদ্ধি এবং ক্লাসরুমে ইংরেজি বলার অভ্যাস গড়ে তোলা হয়।"
     },
     "fullDescription": {
-      "en": "Help your child speak English naturally and fearlessly from an early age! Using gamified interactive teaching, colorful flashcards, moral animated stories, and fun speaking challenges, children build native-like pronunciation and rich vocabulary.",
+      "en": "Help your child speak English naturally and fearlessly from an early age! Using gamified interactive teaching, colorful flashcards, moral animated stories and fun speaking challenges, children build native-like pronunciation and rich vocabulary.",
       "bn": "ছোটবেলা থেকেই শিশুর ইংরেজির ভয় দূর করে আকর্ষণীয় উচ্চারণ ও শব্দভাণ্ডার গড়ে তুলতে এই কোর্সটি তৈরি করা হয়েছে। কোনো মুখস্থ বিদ্যা নয়, বরং খেলার ছলে শিশুরা ইংরেজিতে কথা বলতে শিখে।"
     },
     "coreValues": [
@@ -3899,7 +3899,7 @@ module.exports = [
           "bn": "জলি ফোনিক্স সাউন্ডস"
         },
         "desc": {
-          "en": "Master 42 letter sounds, blending, and correct pronunciation without memorizing.",
+          "en": "Master 42 letter sounds, blending and correct pronunciation without memorizing.",
           "bn": "মুখস্থ ছাড়া সঠিক ফোনিক্স নিয়মে শব্দ উচ্চারণ।"
         },
         "icon": "Sparkles"
@@ -3911,7 +3911,7 @@ module.exports = [
           "bn": "কার্টুন গল্প ও উপস্থাপনা"
         },
         "desc": {
-          "en": "Encourage imagination through storytelling, rhymes, and cartoon role-plays.",
+          "en": "Encourage imagination through storytelling, rhymes and cartoon role-plays.",
           "bn": "গল্প ও নাটকের মাধ্যমে কথা বলার জড়তা দূরীকরণ।"
         },
         "icon": "Users"
@@ -3923,7 +3923,7 @@ module.exports = [
           "bn": "শিশুর আত্মবিশ্বাস বৃদ্ধি"
         },
         "desc": {
-          "en": "Build self-confidence to speak in front of classes, relatives, and school events.",
+          "en": "Build self-confidence to speak in front of classes, relatives and school events.",
           "bn": "স্কুল ও যেকোনো অনুষ্ঠানে নির্ভয়ে কথা বলার আত্মবিশ্বাস।"
         },
         "icon": "Award"
@@ -3935,7 +3935,7 @@ module.exports = [
         "bn": "ফোনিক্স নিয়মে যেকোনো নতুন ইংরেজি শব্দ সঠিকভাবে উচ্চারণ করা।"
       },
       {
-        "en": "Speak complete English sentences about daily routines, school, and hobbies.",
+        "en": "Speak complete English sentences about daily routines, school and hobbies.",
         "bn": "স্কুল ও দৈনন্দিন কাজের ব্যাপারে ইংরেজিতে কথা বলা।"
       },
       {
@@ -3943,7 +3943,7 @@ module.exports = [
         "bn": "লাজুকতা দূর করে সবার সামনে আনন্দচিত্তে কথা বলা।"
       },
       {
-        "en": "Understand spoken English from cartoons, teachers, and storybooks.",
+        "en": "Understand spoken English from cartoons, teachers and storybooks.",
         "bn": "কার্টুন ও টিচারদের ইংরেজি কথা সহজে বুঝতে পারা।"
       },
       {
@@ -4139,11 +4139,11 @@ module.exports = [
       "verified": true
     },
     "overview": {
-      "en": "International Professional Caregiver certification course. Topics include fundamentals of caregiving & ethics, elderly care (Geriatric care) & mobility assistance, child care & special needs support (Pediatric care), vital signs monitoring (BP, Pulse, Glucose), First Aid & CPR life support, hygiene, nutrition & infection control, medical terminology & documentation, and overseas caregiver visa interview preparation.",
+      "en": "International Professional Caregiver certification course. Topics include fundamentals of caregiving & ethics, elderly care (Geriatric care) & mobility assistance, child care & special needs support (Pediatric care), vital signs monitoring (BP, Pulse, Glucose), First Aid & CPR life support, hygiene, nutrition & infection control, medical terminology & documentation and overseas caregiver visa interview preparation.",
       "bn": "ইউকে, কানাডা, জাপান ও মধ্যপ্রাচ্যে কেয়ারগিভার ও হেলথকেয়ার অ্যাসিস্ট্যান্ট জবের জন্য আন্তর্জাতিক মানের কোর্স। এতে বয়স্ক ও শিশুর সেবা, ভাইটাল সাইনস (ব্লাড প্রেশার, ডায়াবেটিস), ফার্স্ট এইড ও সিপিআর, ইনফেকশন কন্ট্রোল এবং মেডিকেল ইংরেজি শেখানো হয়।"
     },
     "fullDescription": {
-      "en": "Caregiving is one of the highest-demand global visa categories with rapid pathways to residency in Canada, the UK, Europe, and Japan. Learn compassionate patient care, emergency life-saving procedures, medication management, and medical English communication in practical healthcare lab settings.",
+      "en": "Caregiving is one of the highest-demand global visa categories with rapid pathways to residency in Canada, the UK, Europe and Japan. Learn compassionate patient care, emergency life-saving procedures, medication management and medical English communication in practical healthcare lab settings.",
       "bn": "এই কোর্সে আপনি থিওরিটিক্যাল ও প্র্যাকটিক্যাল ল্যাবে আধুনিক কেয়ারগিভিং যন্ত্রপাতি ব্যবহার, বয়স্ক ও পক্ষাঘাতগ্রস্ত রোগীদের যত্ন, ফার্স্ট এইড এবং আন্তর্জাতিক ভিসা ইন্টারভিউয়ের শতভাগ প্রস্তুতি সম্পন্ন করবেন।"
     },
     "coreValues": [
@@ -4154,7 +4154,7 @@ module.exports = [
           "bn": "আন্তর্জাতিক মানসম্পন্ন"
         },
         "desc": {
-          "en": "Curriculum aligned with UK NHS, Canada Home Care, and Japanese Kaigo standards.",
+          "en": "Curriculum aligned with UK NHS, Canada Home Care and Japanese Kaigo standards.",
           "bn": "ইউকে ও কানাডা হোম কেয়ারের আন্তর্জাতিক স্ট্যান্ডার্ড অনুযায়ী প্রশিক্ষণ।"
         },
         "icon": "Award"
@@ -4186,7 +4186,7 @@ module.exports = [
     ],
     "learningOutcomes": [
       {
-        "en": "Provide safe, empathetic daily care for elderly, disabled, and recovering patients.",
+        "en": "Provide safe, empathetic daily care for elderly, disabled and recovering patients.",
         "bn": "বয়স্ক ও অসুস্থ রোগীদের নিরাপদ ও সহানুভূতিশীল যত্ন প্রদান করা।"
       },
       {
@@ -4194,7 +4194,7 @@ module.exports = [
         "bn": "ব্লাড প্রেশার, পালস, অক্সিজেন ও ডায়াবেটিস সঠিকভাবে মাপা ও রেকর্ড করা।"
       },
       {
-        "en": "Perform emergency First Aid, CPR, choking relief, and patient transfer safely.",
+        "en": "Perform emergency First Aid, CPR, choking relief and patient transfer safely.",
         "bn": "জরুরি ফার্স্ট এইড, সিপিআর ও রোগী স্থানান্তর সম্পন্ন করা।"
       },
       {

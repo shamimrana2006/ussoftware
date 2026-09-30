@@ -115,7 +115,7 @@ export default function HomeCoursesSection() {
             className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn
-              ? "Architected by senior engineers from global tech companies. Hands-on production codebases, 1-on-1 code reviews, and direct hiring placement."
+              ? "Architected by senior engineers from global tech companies. Hands-on production codebases, 1-on-1 code reviews and direct hiring placement."
               : "আন্তর্জাতিক মানের সফটওয়্যার ইঞ্জিনিয়ারদের নির্দেশনায় তৈরি প্র্যাকটিক্যাল কোর্স কারিকুলাম, ১-অন-১ মেন্টরিং ও জব প্লেসমেন্ট সাপোর্ট।"}
           </motion.p>
         </div>

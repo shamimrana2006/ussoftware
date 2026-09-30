@@ -56,7 +56,7 @@
     "badge": "WHAT WE DO",
     "title1": "Smart Solutions For",
     "title2": "Modern Businesses",
-    "subtitle": "We provide end-to-end IT services to help businesses grow, secure, and succeed in a digital world.",
+    "subtitle": "We provide end-to-end IT services to help businesses grow, secure and succeed in a digital world.",
     "exploreAll": "Explore All Services",
     "webDev": {
       "title": "Web Development",
@@ -110,7 +110,7 @@
   "projectsPage": {
     "badge": "STUDENT & PRODUCTION SHOWCASE",
     "title": "Real Software Built by Our Engineers",
-    "subtitle": "Discover enterprise systems, SaaS platforms, and AI applications created by our graduates and engineering team.",
+    "subtitle": "Discover enterprise systems, SaaS platforms and AI applications created by our graduates and engineering team.",
     "liveDemo": "Live Demo",
     "sourceCode": "GitHub Code",
     "techStack": "Tech Stack"
@@ -137,7 +137,7 @@
   "contactPage": {
     "badge": "LET'S TALK",
     "title": "Get in Touch with Our Team",
-    "subtitle": "Have questions about our programs, corporate training, or custom software solutions? We are here to help.",
+    "subtitle": "Have questions about our programs, corporate training or custom software solutions? We are here to help.",
     "formName": "Full Name",
     "formEmail": "Email Address",
     "formPhone": "Phone Number",
@@ -151,7 +151,7 @@
   "certPage": {
     "badge": "OFFICIAL CREDENTIAL VERIFICATION PORTAL",
     "title": "Verify Student Certificates",
-    "subtitle": "Instant verification of credentials, skill badges, and ISO 9001:2015 course certifications issued by US Software LTD.",
+    "subtitle": "Instant verification of credentials, skill badges and ISO 9001:2015 course certifications issued by US Software LTD.",
     "searchPromptCert": "Enter Certificate ID (e.g. USL-2025-0587)",
     "searchPromptEmail": "Enter Student Email (e.g. shamim@gmail.com)",
     "searchPromptPhone": "Enter Student Phone Number (e.g. 01712345678)",
@@ -170,7 +170,7 @@
   "notFound": {
     "badge": "404 ERROR • PAGE NOT FOUND",
     "title": "Oops! Lost in Cyberspace",
-    "subtitle": "The page you are looking for might have been removed, renamed, or is temporarily unavailable. Let's get you back on track!",
+    "subtitle": "The page you are looking for might have been removed, renamed or is temporarily unavailable. Let's get you back on track!",
     "backHome": "Back to Home",
     "exploreCourses": "Explore Courses",
     "contactSupport": "Contact Support",
@@ -189,7 +189,7 @@
   },
   "loginPage": {
     "title": "Sign in with email",
-    "subtitle": "Access your US Software LTD learning dashboard, 1-on-1 mentorship, and course certificates.",
+    "subtitle": "Access your US Software LTD learning dashboard, 1-on-1 mentorship and course certificates.",
     "emailLabel": "Email",
     "emailPlaceholder": "Enter your email address",
     "passwordLabel": "Password",

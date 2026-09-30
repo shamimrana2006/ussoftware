@@ -75,7 +75,7 @@ export default function HomeCTASection() {
               className="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto"
             >
               {isEn 
-                ? "Join 6,200+ ambitious developers. Gain production-grade architecture skills, 1-on-1 mentorship, and step directly into high-paying global tech roles."
+                ? "Join 6,200+ ambitious developers. Gain production-grade architecture skills, 1-on-1 mentorship and step directly into high-paying global tech roles."
                 : "৬,২০০+ সফল শিক্ষার্থীদের সাথে যোগ দিন। বাস্তবমুখী সফটওয়্যার ইঞ্জিনিয়ারিং শিখে নিজের ভবিষ্যৎকে এগিয়ে নিন।"}
             </motion.p>
 

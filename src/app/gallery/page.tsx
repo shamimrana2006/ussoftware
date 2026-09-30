@@ -190,7 +190,7 @@ export default function GalleryPage() {
               >
                 {isBn
                   ? "ইউএস সফটওয়্যার লিমিটেডের ট্রেনিং ল্যাব, প্র্যাকটিক্যাল ক্লাস, সার্টিফিকেট বিতরণ এবং শিক্ষার্থী ও টিমের সুন্দর মুহূর্তগুলোর এক ঝলক।"
-                  : "A visual look at our hands-on coding labs, practical workshops, certificate ceremonies, and memorable team moments."}
+                  : "A visual look at our hands-on coding labs, practical workshops, certificate ceremonies and memorable team moments."}
               </motion.p>
             </div>
 

@@ -52,7 +52,7 @@ export default function MentorsPage() {
     {
       q: isEn ? "How do 1-on-1 mentorship sessions work at US Software?" : "ইউএস সফটওয়্যারে ১-অন-১ মেন্টরশিপ কীভাবে পরিচালিত হয়?",
       a: isEn
-        ? "Sessions are conducted live via Google Meet or Zoom screen-sharing for 45 minutes. You can share your codebase, review portfolio projects, or conduct mock interview rounds."
+        ? "Sessions are conducted live via Google Meet or Zoom screen-sharing for 45 minutes. You can share your codebase, review portfolio projects or conduct mock interview rounds."
         : "সেশনগুলো গুগল মিট বা জুমের মাধ্যমে লাইভ স্ক্রিন-শেয়ারিংয়ের মাধ্যমে ৪৫ মিনিট অনুষ্ঠিত হয়। আপনি কোড রিভিউ, প্রজেক্ট পোর্টফোলিও মূল্যায়ন কিংবা ইন্টারভিউ মক সেশন নিতে পারেন।"
     },
     {
@@ -181,7 +181,7 @@ export default function MentorsPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={isEn ? "Search mentor, role, or experience..." : "নাম বা অভিজ্ঞতা দিয়ে খুঁজুন..."}
+                placeholder={isEn ? "Search mentor, role or experience..." : "নাম বা অভিজ্ঞতা দিয়ে খুঁজুন..."}
                 className="w-full text-xs text-slate-800 placeholder-slate-400 outline-none bg-transparent font-medium"
               />
               {searchQuery && (

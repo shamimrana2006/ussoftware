@@ -108,7 +108,7 @@ export default function ProjectsPage() {
       id: "nexus-ai",
       title: isEn ? "NexusAI — Multi-Agent Intelligence Platform" : "নেক্সাস এআই — মাল্টি-এজেন্ট ইন্টেলিজেন্স প্ল্যাটফর্ম",
       desc: isEn 
-        ? "Autonomous distributed multi-agent system automating financial document audits, fraud detection, and real-time ledger intelligence." 
+        ? "Autonomous distributed multi-agent system automating financial document audits, fraud detection and real-time ledger intelligence." 
         : "একটি মাল্টি-এজেন্ট প্ল্যাটফর্ম যা জটিল ডাটা পাইপলাইন, কোড জেনারেশন ও ফিন্যান্সিয়াল এনালাইসিস স্বয়ংক্রিয়ভাবে সম্পাদন করে।",
       badge: "Flagship AI",
       authors: isEn ? "AI Fellowship Cohort 4" : "এআই ফেলোশিপ ব্যাচ ৪ এর শিক্ষার্থী",
@@ -136,7 +136,7 @@ export default function ProjectsPage() {
       id: "paysphere-escrow",
       title: isEn ? "PaySphere Global Escrow Engine" : "পে-স্ফিয়ার গ্লোবাল পেমেন্ট ইঞ্জিন",
       desc: isEn 
-        ? "High-concurrency multi-currency payment platform with double-entry automated ledgers, pessimistic transaction locks, and anti-fraud webhooks." 
+        ? "High-concurrency multi-currency payment platform with double-entry automated ledgers, pessimistic transaction locks and anti-fraud webhooks." 
         : "মাল্টি-কারেন্সি পেআউট, অটোমেটেড ইনভয়েস ও ফ্রড ডিটেকশন সমন্বিত একটি হাই-স্পিড পেমেন্ট গেটওয়ে।",
       badge: "FinTech",
       authors: isEn ? "Full-Stack Cohort 7" : "ফুল-স্ট্যাক ব্যাচ ৭ এর শিক্ষার্থী",
@@ -231,7 +231,7 @@ export default function ProjectsPage() {
       avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=200",
       rating: 5,
       feedback: isEn 
-        ? "Clean Architecture, Riverpod state management, and real-time WebRTC audio/video integration were taught systematically. The placement team connected me directly with tech recruiters." 
+        ? "Clean Architecture, Riverpod state management and real-time WebRTC audio/video integration were taught systematically. The placement team connected me directly with tech recruiters." 
         : "ক্লিন আর্কিটেকচার ও রিয়েল-টাইম মোবাইল অ্যাপ ডেভেলপমেন্টের ওপর অসাধারণ গাইডলাইন পেয়েছি। ইন্টারভিউতে সরাসরি সিলেকশন পেয়েছি।",
       badge: isEn ? "Placed at Shohoz" : "সহজে কর্মরত"
     }
@@ -516,7 +516,7 @@ export default function ProjectsPage() {
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                 {isEn
-                  ? "Join us today and start your career transformation journey with our expert-led courses, real-world client projects, and dedicated 1-on-1 mentorship."
+                  ? "Join us today and start your career transformation journey with our expert-led courses, real-world client projects and dedicated 1-on-1 mentorship."
                   : "আমাদের প্রফেশনাল কোর্স ও ১-অন-১ মেন্টরশিপের সাথে আজই যুক্ত হোন এবং আপনার টেক ক্যারিয়ারকে নিয়ে যান এক অনন্য উচ্চতায়।"}
               </p>
 

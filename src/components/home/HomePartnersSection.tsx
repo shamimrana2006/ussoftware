@@ -60,7 +60,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "BASIS IT & Software Training Wing",
       subtitleBn: "বেসিস আইটি ও সফটওয়্যার ট্রেনিং ইনস্টিটিউট",
-      description: "Strategic collaboration and training alliance with BASIS Institute of Technology & Management (BITM) to provide industry-demanded tech skills, professional software engineering bootcamps, and career grooming.",
+      description: "Strategic collaboration and training alliance with BASIS Institute of Technology & Management (BITM) to provide industry-demanded tech skills, professional software engineering bootcamps and career grooming.",
       descriptionBn: "বেসিস ইনস্টিটিউট অব টেকনোলজি অ্যান্ড ম্যানেজমেন্ট (BITM)-এর সাথে পার্টনারশিপে ইন্ডাস্ট্রির চাহিদাসম্পন্ন সফটওয়্যার ইঞ্জিনিয়ারিং ও প্রফেশনাল আইটি ট্রেনিং পরিচালনা।",
       highlights: [
         "BASIS Affiliated IT & Software Programs",
@@ -82,7 +82,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "Institute of Information Technology",
       subtitleBn: "তথ্য প্রযুক্তি ইনস্টিটিউট, ঢাকা বিশ্ববিদ্যালয়",
-      description: "Academic and technological collaboration with the Institute of Information Technology (IIT), University of Dhaka for software engineering, workshops, and talent grooming.",
+      description: "Academic and technological collaboration with the Institute of Information Technology (IIT), University of Dhaka for software engineering, workshops and talent grooming.",
       descriptionBn: "ঢাকা বিশ্ববিদ্যালয়ের ইনস্টিটিউট অব ইনফরমেশন টেকনোলজি (IIT)-এর সাথে একাডেমিক সেমিনার, কোডিং ওয়ার্কশপ ও টেক মেন্টরশিপ পার্টনারশিপ।",
       highlights: ["IIT DU Collaboration", "Software Engineering Workshops", "Tech Seminars & Mentorship"],
       highlightsBn: ["আইআইটি ডিইউ কোলাবোরেশন", "সফটওয়্যার ইঞ্জিনিয়ারিং ওয়ার্কশপ", "টেক সেমিনার ও মেন্টরশিপ"],
@@ -122,7 +122,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "Global Exam & Certification Testing",
       subtitleBn: "গ্লোবাল এক্সাম সেন্টার",
-      description: "Authorized testing facility partnership with Prometric, enabling students to sit for Microsoft, AWS, Oracle, Cisco, and other international professional vendor exams in-house.",
+      description: "Authorized testing facility partnership with Prometric, enabling students to sit for Microsoft, AWS, Oracle, Cisco and other international professional vendor exams in-house.",
       descriptionBn: "প্রমেট্রিক অথরাইজড টেস্ট সেন্টার পার্টনারশিপের মাধ্যমে আমাদের শিক্ষার্থীরা মাইক্রোসফট, এডাব্লিউএস, ওরাকল, সিসকো সহ আন্তর্জাতিক ভেন্ডর এক্সামে সরাসরি অংশ নিতে পারেন।",
       highlights: [
         "In-house international testing facilities",
@@ -157,7 +157,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "Private University Academic Partner",
       subtitleBn: "একাডেমিক পার্টনার",
-      description: "Academic synergy for CSE student internships, capstone projects, and industry readiness.",
+      description: "Academic synergy for CSE student internships, capstone projects and industry readiness.",
       descriptionBn: "ইস্টার্ন ইউনিভার্সিটির সিএসই শিক্ষার্থীদের জন্য ইন্ডাস্ট্রিয়াল ট্রেনিং ও ইন্টার্নশিপ সুযোগ।",
       highlights: ["Campus Placement Drives", "Live Project Guidance", "CSE Capstone Mentoring"],
       highlightsBn: ["ক্যাম্পাস প্লেসমেন্ট ড্রাইভ", "লাইভ প্রজেক্ট গাইডেন্স", "ক্যাপস্টোন প্রজেক্ট মেন্টরিং"]
@@ -196,7 +196,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "Leading Private Research University",
       subtitleBn: "শীর্ষ গবেষণা বিশ্ববিদ্যালয়",
-      description: "Collaboration for AI & software engineering research, hackathons, and placement drives.",
+      description: "Collaboration for AI & software engineering research, hackathons and placement drives.",
       descriptionBn: "ইউআইইউ-এর সাথে যৌথ হ্যাকাথন, এআই প্রজেক্ট ও গ্র্যাজুয়েট প্লেসমেন্ট কার্যক্রম।",
       highlights: ["AI & Software Research", "Hackathons & Contests", "Direct Graduate Recruitment"],
       highlightsBn: ["এআই ও সফটওয়্যার রিসার্চ", "হ্যাকাথন ও কনটেস্ট", "সরাসরি গ্র্যাজুয়েট নিয়োগ"]
@@ -222,7 +222,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "First Private University of Bangladesh",
       subtitleBn: "নর্থ সাউথ ইউনিভার্সিটি",
-      description: "Partnership for enterprise software engineering, campus recruitment, and tech leadership.",
+      description: "Partnership for enterprise software engineering, campus recruitment and tech leadership.",
       descriptionBn: "নর্থ সাউথ ইউনিভার্সিটির সাথে সফটওয়্যার ইঞ্জিনিয়ারিং ট্রেনিং ও এক্সক্লুসিভ ক্যাম্পাস রিক্রুটমেন্ট।",
       highlights: ["Enterprise Software Labs", "Campus Job Recruitment", "Global Career Guidance"],
       highlightsBn: ["এন্টারপ্রাইজ সফটওয়্যার ল্যাব", "ক্যাম্পাস জব রিক্রুটমেন্ট", "গ্লোবাল ক্যারিয়ার গাইডেন্স"]
@@ -248,7 +248,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "Creative & Tech Academic Partner",
       subtitleBn: "শান্ত-মারিয়াম ইউনিভার্সিটি",
-      description: "Collaboration for Web Engineering, UI/UX design standards, and IT skill building.",
+      description: "Collaboration for Web Engineering, UI/UX design standards and IT skill building.",
       descriptionBn: "শান্ত-মারিয়াম ইউনিভার্সিটির শিক্ষার্থীদের জন্য ওয়েব ও ইউআই/ইউএক্স ডিজাইনিং ট্রেইনিং।",
       highlights: ["Web & UI/UX Standards", "Creative Tech Labs", "Student Grooming"],
       highlightsBn: ["ওয়েব ও ইউআই/ইউএক্স স্ট্যান্ডার্ড", "ক্রিয়েটিভ টেক ল্যাব", "স্টুডেন্ট গ্রুমিং"]
@@ -261,7 +261,7 @@ export default function HomePartnersSection() {
       category: "collaboration",
       subtitle: "Leading Research Institution",
       subtitleBn: "ব্র্যাক বিশ্ববিদ্যালয়",
-      description: "Strategic academic ties with BRAC University for student internships, AI research, and hiring.",
+      description: "Strategic academic ties with BRAC University for student internships, AI research and hiring.",
       descriptionBn: "ব্র্যাক বিশ্ববিদ্যালয়ের শিক্ষার্থীদের সাথে টেক হ্যাকাথন, এআই প্রজেক্ট ও ইন্টার্নশিপ নেটওয়ার্ক।",
       highlights: ["AI & Cloud Projects", "Tech Hackathons", "Graduate Internship Pipeline"],
       highlightsBn: ["এআই ও ক্লাউড প্রজেক্ট", "টেক হ্যাকাথন", "গ্র্যাজুয়েট ইন্টার্নশিপ পাইপলাইন"]
@@ -622,11 +622,11 @@ export default function HomePartnersSection() {
       category: "member",
       subtitle: "Apex ICT Trade Association Member",
       subtitleBn: "বাংলাদেশ কম্পিউটার সমিতি সদস্য",
-      description: "Member of BCS, the apex ICT trade association in Bangladesh, promoting nationwide computing education, tech exhibitions, and workforce enablement.",
+      description: "Member of BCS, the apex ICT trade association in Bangladesh, promoting nationwide computing education, tech exhibitions and workforce enablement.",
       descriptionBn: "দেশের শীর্ষস্থানীয় আইসিটি ট্রেড বডি বাংলাদেশ কম্পিউটার সমিতি (BCS)-এর সদস্য হিসেবে তথ্যপ্রযুক্তি সম্প্রসারণ, টেক এক্সপো ও আইটি স্কিল ডেভেলপমেন্ট পরিচালনা।",
       highlights: [
         "Pioneer ICT trade body membership in Bangladesh",
-        "Nationwide tech fairs, seminars, and networking hubs",
+        "Nationwide tech fairs, seminars and networking hubs",
         "Industry-aligned IT training and student workshops"
       ],
       highlightsBn: [
@@ -644,7 +644,7 @@ export default function HomePartnersSection() {
       category: "member",
       subtitle: "Official Corporate Member",
       subtitleBn: "কর্পোরেট মেম্বার",
-      description: "Proud corporate member of E-CAB, fostering robust enterprise eCommerce systems, digital logistics platforms, and payment gateway infrastructure development.",
+      description: "Proud corporate member of E-CAB, fostering robust enterprise eCommerce systems, digital logistics platforms and payment gateway infrastructure development.",
       descriptionBn: "ই-কমার্স অ্যাসোসিয়েশন অব বাংলাদেশ (E-CAB)-এর অফিসিয়াল মেম্বার হিসেবে ই-কমার্স প্রযুক্তি, লজিস্টিকস প্ল্যাটফর্ম ও ডিজিটাল পেমেন্ট সলিউশন নিয়ে কাজ করছি।",
       highlights: [
         "Active member of National E-Commerce Ecosystem",
@@ -709,7 +709,7 @@ export default function HomePartnersSection() {
             className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
           >
             {isEn 
-              ? "We collaborate with leading organizations, universities, and institutions to provide the best learning experience."
+              ? "We collaborate with leading organizations, universities and institutions to provide the best learning experience."
               : "শিক্ষার্থীদের সেরা প্রশিক্ষণ ও চাকরির সুযোগ দিতে আমরা শীর্ষস্থানীয় প্রতিষ্ঠান, বিশ্ববিদ্যালয় এবং ইন্ডাস্ট্রির সাথে সরাসরি কাজ করি।"}
           </motion.p>
         </div>

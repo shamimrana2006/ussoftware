@@ -67,7 +67,7 @@ export default function EventsPage() {
     {
       qEn: "Are these workshops and masterclasses free to attend?",
       qBn: "এই ওয়ার্কশপ ও মাস্টারক্লাসগুলোতে কি ফ্রিতে অংশ নেওয়া যাবে?",
-      aEn: "Yes! Most of our introductory masterclasses, hackathons, and webinars are 100% free of cost with prior registration. Space is limited per session.",
+      aEn: "Yes! Most of our introductory masterclasses, hackathons and webinars are 100% free of cost with prior registration. Space is limited per session.",
       aBn: "হ্যাঁ! আমাদের বেশিরভাগ প্রযুক্তি সেমিনার, ওয়েবিনার ও হ্যাক্যাথন সম্পূর্ণ ফ্রি। তবে প্রতিটি সেশনে আসন সংখ্যা সীমিত হওয়ায় পূর্বে রেজিস্ট্রেশন আবশ্যক।",
     },
     {
@@ -134,7 +134,7 @@ export default function EventsPage() {
               <p className="text-slate-300 text-sm sm:text-base lg:text-lg max-w-2xl leading-relaxed">
                 {isBn
                   ? "শীর্ষস্থানীয় সফটওয়্যার ইঞ্জিনিয়ার ও এআই স্পেশালিস্টদের সাথে সরাসরি যুক্ত হোন। লাইভ প্রজেক্ট বিল্ডিং, হ্যাক্যাথন ও নেটওয়ার্কিংয়ের অনন্য প্ল্যাটফর্ম।"
-                  : "Connect directly with top software engineers, AI architects, and industry leaders. Experience hands-on live code demos, national hackathons, and high-impact career sessions."}
+                  : "Connect directly with top software engineers, AI architects and industry leaders. Experience hands-on live code demos, national hackathons and high-impact career sessions."}
               </p>
             </div>
           </div>

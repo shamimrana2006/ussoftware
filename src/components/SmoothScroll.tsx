@@ -5,7 +5,7 @@ import Lenis from 'lenis';
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.65, // Snappy, fast, and responsive smooth scroll (reduced from sluggish 1.2s)
+      duration: 0.65, // Snappy, fast and responsive smooth scroll (reduced from sluggish 1.2s)
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       wheelMultiplier: 1.15,
       touchMultiplier: 1.5,

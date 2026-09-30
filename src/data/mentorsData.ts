@@ -58,7 +58,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "3,500+ Students",
     nextSlot: "Today, 7:00 PM",
     nextSlotBn: "আজ, সন্ধ্যা ৭:০০",
-    bio: "Passionate Full-Stack Architect and Department Head with extensive expertise in modern JavaScript ecosystems, Next.js 15, distributed backend architecture, and PostgreSQL query tuning. Dedicated to preparing students for high-ticket global freelancing and enterprise software roles.",
+    bio: "Passionate Full-Stack Architect and Department Head with extensive expertise in modern JavaScript ecosystems, Next.js 15, distributed backend architecture and PostgreSQL query tuning. Dedicated to preparing students for high-ticket global freelancing and enterprise software roles.",
     bioBn: "আধুনিক জাভাস্ক্রিপ্ট ইকোসিস্টেম, নেক্সট.জেএস ১৫, ডিস্ট্রিবিউটেড ব্যাকএন্ড আর্কিটেকচার ও ডাটাবেস অপ্টিমাইজেশনে দক্ষ ফুল-স্ট্যাক আর্কিটেক্ট ও ডিপার্টমেন্ট হেড। শিক্ষার্থীদের আন্তর্জাতিক জব মার্কেট ও এন্টারপ্রাইজ ক্যারিয়ারের জন্য প্রস্তুত করতে নিবেদিত।",
     skills: ["Next.js 15", "React", "Node.js", "TypeScript", "PostgreSQL", "Kafka", "Docker", "Tailwind CSS", "REST & GraphQL"],
     education: [
@@ -111,7 +111,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "2,800+ Students",
     nextSlot: "Tomorrow, 6:00 PM",
     nextSlotBn: "আগামীকাল, সন্ধ্যা ৬:০০",
-    bio: "Accomplished Lead Product Designer with over 6 years of experience building scalable enterprise design systems in Figma, user psychology journeys, and friction-free developer token handoffs.",
+    bio: "Accomplished Lead Product Designer with over 6 years of experience building scalable enterprise design systems in Figma, user psychology journeys and friction-free developer token handoffs.",
     bioBn: "ফিগমায় স্কেলেবল এন্টারপ্রাইজ ডিজাইন সিস্টেম, ইউজার সাইকোলজি ও স্মুথ ডেভেলপার হ্যান্ডঅফ তৈরিতে ৬ বছরেরও বেশি অভিজ্ঞতাসম্পন্ন লিড প্রোডাক্ট ডিজাইনার।",
     skills: ["Figma Enterprise", "Design Systems", "Design Tokens", "User Research", "Wireframing", "Interactive Prototyping", "Usability Testing"],
     education: [
@@ -163,7 +163,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "2,900+ Students",
     nextSlot: "Today, 8:30 PM",
     nextSlotBn: "আজ, রাত ৮:৩০",
-    bio: "Pioneering AI Scientist and Department Head specializing in Generative AI, Large Language Models (LLMs), Autonomous Agentic Workflows, LangChain/LlamaIndex RAG pipelines, and PyTorch production infrastructure.",
+    bio: "Pioneering AI Scientist and Department Head specializing in Generative AI, Large Language Models (LLMs), Autonomous Agentic Workflows, LangChain/LlamaIndex RAG pipelines and PyTorch production infrastructure.",
     bioBn: "জেনারেটিভ এআই, লার্জ ল্যাঙ্গুয়েজ মডেল (LLM), অটোনোমাস এজেনটিক ফ্রেমওয়ার্ক, র্যাগ পাইপলাইন এবং পাইটর্চ প্রোডাকশন ইনফ্রাস্ট্রাকচারে ১০ বছরের অভিজ্ঞতাসম্পন্ন খ্যাতনামা এআই গবেষক।",
     skills: ["Generative AI", "PyTorch", "LangChain", "LLMs & RAG", "Vector DBs", "Python", "Computer Vision", "Agentic Workflows"],
     education: [
@@ -215,7 +215,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "2,200+ Students",
     nextSlot: "Tomorrow, 5:00 PM",
     nextSlotBn: "আগামীকাল, বিকাল ৫:০০",
-    bio: "Senior Infrastructure Architect with extensive background in hyper-scale cloud deployments, multi-region Kubernetes clusters, Docker containerization, Terraform Infrastructure-as-Code, and ArgoCD automated GitOps.",
+    bio: "Senior Infrastructure Architect with extensive background in hyper-scale cloud deployments, multi-region Kubernetes clusters, Docker containerization, Terraform Infrastructure-as-Code and ArgoCD automated GitOps.",
     bioBn: "হাইপার-স্কেল ক্লাউড প্ল্যাটফর্ম, মাল্টি-রিজিয়ন কুবারনেটিস ক্লাস্টার, ডকার, টেরাফর্ম আইএসি এবং অটোমেটেড সিআই/সিডি পাইপলাইনে ৯ বছরের অভিজ্ঞতাসম্পন্ন সিনিয়র ইনফ্রাস্ট্রাকচার আর্কিটেক্ট।",
     skills: ["AWS Cloud", "Kubernetes", "Docker", "Terraform", "CI/CD GitOps", "ArgoCD", "Linux", "Prometheus & Grafana", "Go"],
     education: [
@@ -267,7 +267,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "4,200+ Students",
     nextSlot: "Monday, 6:00 PM",
     nextSlotBn: "সোমবার, সন্ধ্যা ৬:০০",
-    bio: "Accomplished Performance Marketing Leader and Department Head with proven track record in scaling global e-commerce and SaaS brands. Expert in multi-channel paid acquisition, Google Analytics 4, and conversion funnel strategies.",
+    bio: "Accomplished Performance Marketing Leader and Department Head with proven track record in scaling global e-commerce and SaaS brands. Expert in multi-channel paid acquisition, Google Analytics 4 and conversion funnel strategies.",
     bioBn: "গ্লোবাল ই-কমার্স ও সাস ব্র্যান্ড স্কেলিংয়ে অভিজ্ঞ পারফরম্যান্স মার্কেটিং লিডার ও ডিপার্টমেন্ট হেড। পেইড ট্রাফিক অ্যাকুইজিশন, গুগল অ্যানালিটিক্স ৪ এবং কনভার্সন ফানেল অপ্টিমাইজেশনে বিশেষজ্ঞ।",
     skills: ["Performance Marketing", "Meta Ads Manager", "Google Ads", "Technical SEO", "Google Analytics 4", "Conversion Funnels", "CRO Strategy"],
     education: [
@@ -318,7 +318,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "3,800+ Students",
     nextSlot: "Today, 9:00 PM",
     nextSlotBn: "আজ, রাত ৯:০০",
-    bio: "Veteran Art Director, Brand Designer, and official National CBT&A Assessor with over 11 years of experience in visual brand strategy, typography, packaging design, and creative design pedagogy.",
+    bio: "Veteran Art Director, Brand Designer and official National CBT&A Assessor with over 11 years of experience in visual brand strategy, typography, packaging design and creative design pedagogy.",
     bioBn: "১১ বছরের অভিজ্ঞতাসম্পন্ন প্রবীণ আর্ট ডিরেক্টর, ব্র্যান্ড ডিজাইনার ও জাতীয় সিবিটিঅ্যান্ডএ অ্যাসেসর। আন্তর্জাতিক ব্র্যান্ড আইডেন্টিটি, টাইপোগ্রাফি ও প্যাকেজিং ডিজাইনে অনন্য বিশেষজ্ঞ।",
     skills: ["Brand Identity", "Adobe Illustrator", "Adobe Photoshop", "InDesign", "Packaging Design", "Print Production", "Typography", "Visual Arts"],
     education: [
@@ -370,7 +370,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "1,800+ Students",
     nextSlot: "Thursday, 7:00 PM",
     nextSlotBn: "বৃহস্পতিবার, সন্ধ্যা ৭:০০",
-    bio: "High-performance Mobile Architect specializing in Flutter, Dart, iOS Swift, Clean Architecture, and real-time WebRTC communications for million-user apps.",
+    bio: "High-performance Mobile Architect specializing in Flutter, Dart, iOS Swift, Clean Architecture and real-time WebRTC communications for million-user apps.",
     bioBn: "ফ্লাটার, ডার্ট, আইওএস সুইফট এবং ক্লিন আর্কিটেকচারে দক্ষ সিনিয়র মোবাইল আর্কিটেক্ট। রিয়েল-টাইম অডিও/ভিডিও ও হাই-কনকারেন্সি মোবাইল অ্যাপ ডেভেলপমেন্টে অভিজ্ঞ।",
     skills: ["Flutter 3.x", "Dart", "Clean Architecture", "Riverpod", "WebRTC", "Firebase", "iOS Swift", "SQLite", "GraphQL"],
     education: [
@@ -422,7 +422,7 @@ export const mentorsData: Mentor[] = [
     menteesCount: "1,500+ Students",
     nextSlot: "Friday, 6:00 PM",
     nextSlotBn: "শুক্রবার, সন্ধ্যা ৬:০০",
-    bio: "Distinguished Cyber Defense and Penetration Testing Specialist with 7 years of active consulting for multinational healthcare, banking, and fintech platforms. Expert in zero-trust architectures, OWASP top 10 defense, and DevSecOps pipelines.",
+    bio: "Distinguished Cyber Defense and Penetration Testing Specialist with 7 years of active consulting for multinational healthcare, banking and fintech platforms. Expert in zero-trust architectures, OWASP top 10 defense and DevSecOps pipelines.",
     bioBn: "মাল্টিন্যাশনাল হেলথকেয়ার, ব্যাংকিং ও ফিনটেক প্ল্যাটফর্মের জন্য ৭ বছরের অভিজ্ঞতাসম্পন্ন খ্যাতনামা সাইবার সিকিউরিটি ও পেনিট্রেশন টেস্টিং বিশেষজ্ঞ। এথিক্যাল হ্যাকিং ও ক্লাউড ডিফেন্সে পারদর্শী।",
     skills: ["Ethical Hacking", "OWASP Top 10", "Penetration Testing", "SOC Operations", "Burp Suite Pro", "Network Security", "DevSecOps", "Linux Hardening"],
     education: [
