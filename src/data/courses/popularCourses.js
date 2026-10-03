@@ -3237,7 +3237,7 @@ module.exports = [
       "en": "8 Modules • 138 Hours",
       "bn": "৮ টি মডিউল • ১৩৮ ঘণ্টা"
     },
-    "image": "/images/course thumbnail/web development.jpg",
+    "image": "/images/course thumbnail/web development frontend.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "MD Shamim Rana",

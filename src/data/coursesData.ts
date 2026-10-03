@@ -3301,7 +3301,7 @@ export const coursesData: CourseDetail[] = [
       "en": "8 Modules • 138 Hours",
       "bn": "৮ টি মডিউল • ১৩৮ ঘণ্টা"
     },
-    "image": "/images/course thumbnail/web development.jpg",
+    "image": "/images/course thumbnail/web development frontend.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "MD Shamim Rana",
@@ -7851,7 +7851,7 @@ export const coursesData: CourseDetail[] = [
       "en": "8 Modules • 36 Classes",
       "bn": "৮ টি মডিউল • ৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in full stack.png",
+    "image": "/images/course thumbnail/mern backend.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Tanvir Ahmed",
