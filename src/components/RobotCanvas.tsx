@@ -12,31 +12,38 @@ function RobotModel() {
   // High-performance interaction refs (no React re-renders in useFrame loop)
   const isReactingRef = useRef(false);
   const reactionProgressRef = useRef(0);
+  const actionsRef = useRef(actions);
+
+  useEffect(() => {
+    actionsRef.current = actions;
+  }, [actions]);
 
   // Play built-in idle animation smoothly
   useEffect(() => {
-    if (actions) {
-      const names = Object.keys(actions);
+    const act = actionsRef.current;
+    if (act) {
+      const names = Object.keys(act);
       if (names.length > 0) {
-        const action = actions[names[0]];
+        const action = act[names[0]];
         if (action) {
           action.reset().fadeIn(0.6).play();
           action.timeScale = 1;
         }
       }
     }
-  }, [actions]);
+  }, []);
 
   // Click handler: natural cheerful double bounce & playful head tilt
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     isReactingRef.current = true;
     reactionProgressRef.current = 1;
 
-    if (actions) {
-      const names = Object.keys(actions);
+    const act = actionsRef.current;
+    if (act) {
+      const names = Object.keys(act);
       if (names.length > 0) {
-        const action = actions[names[0]];
+        const action = act[names[0]];
         if (action) {
           action.timeScale = 1.3;
         }
@@ -45,7 +52,7 @@ function RobotModel() {
   };
 
   // Pure WebGL animation loop without React state overhead
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (!group.current) return;
 
     if (isReactingRef.current && reactionProgressRef.current > 0) {
@@ -65,10 +72,11 @@ function RobotModel() {
 
       if (reactionProgressRef.current <= 0.02) {
         isReactingRef.current = false;
-        if (actions) {
-          const names = Object.keys(actions);
+        const act = actionsRef.current;
+        if (act) {
+          const names = Object.keys(act);
           if (names.length > 0) {
-            const action = actions[names[0]];
+            const action = act[names[0]];
             if (action) action.timeScale = 1;
           }
         }

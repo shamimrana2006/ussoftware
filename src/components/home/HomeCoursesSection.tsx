@@ -5,14 +5,16 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Sparkles, Star, Clock, Users, BookOpen,
-  ArrowRight, MessageCircle, CheckCircle2,
-  Code2, Cpu, Cloud, Smartphone, Shield, Briefcase,
-  Palette, Megaphone, Database, Award, Layers, GraduationCap,
-  Zap, Globe2
+  Sparkles, Star,
+  ArrowRight,
+  Code2, Cloud, Smartphone, Shield, Briefcase,
+  Palette, Megaphone, Database, Layers, GraduationCap,
+  Globe2
 } from "lucide-react";
 
 import { coursesData } from "@/data/coursesData";
+
+const FEATURED_COURSE_IDS = ["1", "14", "3", "6", "8", "13"];
 
 export default function HomeCoursesSection() {
   const { language } = useLanguage();
@@ -53,8 +55,6 @@ export default function HomeCoursesSection() {
       accentColor: course.category === "marketing" ? "#DE1F26" : "#008744"
     }));
   }, [isEn]);
-
-  const FEATURED_COURSE_IDS = ["1", "14", "3", "6", "8", "13"];
 
   const filteredCourses = useMemo(() => {
     if (activeCategory === "all") {

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { motion, Variants, Transition } from "framer-motion";
+import { motion, Variants, Transition, TargetAndTransition } from "framer-motion";
 import { ArrowRight, Rocket, Cpu, Users, LineChart, BookOpen, Play } from "lucide-react";
 import {
   RiCodeSSlashLine,
@@ -118,7 +118,7 @@ interface FloatingShapeItem {
   style: React.CSSProperties;
   size: number;
   opacity: number;
-  animate: any;
+  animate: TargetAndTransition;
   transition: Transition;
 }
 
@@ -186,7 +186,7 @@ const heroFloatingShapes: FloatingShapeItem[] = [
 ];
 
 export default function HeroSection() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);

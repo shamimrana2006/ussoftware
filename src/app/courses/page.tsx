@@ -15,40 +15,54 @@ import {
   MessageCircle,
   CheckCircle2,
   Code2,
-  Cpu,
-  Cloud,
   Smartphone,
   ShieldCheck,
   Palette,
-  Megaphone,
   Database,
   Award,
   Layers,
   Search,
   Filter,
   LayoutGrid,
-  ListFilter,
   AlignJustify,
   X,
-  Zap,
   Check,
-  Bot,
   Globe2,
   TrendingUp,
   TrendingDown,
-  Video,
   Server,
   Briefcase,
   GraduationCap,
   Calendar,
-  DollarSign,
   ChevronDown,
   ChevronUp,
   ArrowUpDown,
-  ExternalLink,
 } from "lucide-react";
 import { COMPANY_STATS } from "@/data/companyStats";
-import { coursesData } from "@/data/coursesData";
+import { coursesData, CourseDetail } from "@/data/coursesData";
+
+export interface FormattedCourse {
+  id: string;
+  slug: string;
+  category: string;
+  categoryLabel: string;
+  catIcon: React.ComponentType<{ size?: number; className?: string }>;
+  title: string;
+  mode: string;
+  modeType: "online" | "offline";
+  rating: number;
+  duration: string;
+  enrolled: string;
+  fee: string;
+  rawFee: number;
+  bannerTitle: string;
+  bgGradient: string;
+  illustration: string;
+  image: string;
+  videoUrl?: string;
+  whatsappLink: string;
+  desc: string;
+}
 
 function CoursesContent() {
   const { language } = useLanguage();
@@ -65,8 +79,7 @@ function CoursesContent() {
   const sortRef = useRef<HTMLDivElement>(null);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [expandedRowId, setExpandedRowId] = useState<string | null>(null);
-  const [selectedCourseForModal, setSelectedCourseForModal] =
-    useState<any>(null);
+  const [selectedCourseForModal, setSelectedCourseForModal] = useState<FormattedCourse | null>(null);
 
   // Close sort dropdown when clicking outside
   useEffect(() => {
@@ -494,33 +507,6 @@ function CoursesContent() {
                         </strong>{" "}
                         {isEn ? "courses found" : "টি কোর্স পাওয়া গেছে"}
                       </span>
-                    </div>
-
-                    {/* Mode Pills: All, Online, Offline (Brand Styled) */}
-                    <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
-                      {(["all", "online", "offline"] as const).map((mode) => (
-                        <button
-                          key={mode}
-                          onClick={() => setSelectedMode(mode)}
-                          className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${
-                            selectedMode === mode
-                              ? "bg-[#008744] text-white shadow-2xs"
-                              : "text-slate-600 hover:text-slate-900"
-                          }`}
-                        >
-                          {mode === "all"
-                            ? isEn
-                              ? "All"
-                              : "সকল"
-                            : mode === "online"
-                              ? isEn
-                                ? "Online"
-                                : "অনলাইন"
-                              : isEn
-                                ? "Offline"
-                                : "অফলাইন"}
-                        </button>
-                      ))}
                     </div>
                   </div>
 

@@ -324,7 +324,6 @@ export default function Header() {
   const [isExploreOpen, setIsExploreOpen] = useState(false);
   const [isMobileExploreOpen, setIsMobileExploreOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
-  const universeRef = useRef<HTMLDivElement>(null);
   const exploreRef = useRef<HTMLDivElement>(null);
 
   const isLinkActive = (href: string) => {
@@ -361,8 +360,11 @@ export default function Header() {
 
   // Close mobile drawer when route changes
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-    setIsExploreOpen(false);
+    const timer = setTimeout(() => {
+      setIsMobileMenuOpen(false);
+      setIsExploreOpen(false);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   const exploreDropdownItems = [
@@ -391,7 +393,7 @@ export default function Header() {
   const handleHomeClick = (e: React.MouseEvent) => {
     if (pathname === "/") {
       e.preventDefault();
-      const lenis = typeof window !== "undefined" ? (window as any).__lenis : null;
+      const lenis = typeof window !== "undefined" ? window.__lenis : null;
       if (lenis) {
         lenis.scrollTo(0, { duration: 0.5, immediate: false });
       } else {
@@ -486,7 +488,7 @@ export default function Header() {
             >
               <button
                 type="button"
-                onClick={(e) => {
+                onClick={() => {
                   setIsExploreOpen(!isExploreOpen);
                 }}
                 className={`relative group px-2.5 xl:px-3 2xl:px-3.5 py-2 xl:py-2.5 flex items-center space-x-1.5 transition-all duration-200 whitespace-nowrap rounded-xl select-none cursor-pointer ${

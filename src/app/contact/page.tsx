@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   Phone, Mail, MapPin, Send, CheckCircle2, 
   ChevronDown, HelpCircle, 
-  MessageCircle, ArrowRight, Sparkles,
-  ExternalLink, Compass, Building2, Star
+  ArrowRight, Sparkles,
+  Building2, Star
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 

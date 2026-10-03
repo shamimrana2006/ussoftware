@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-import { Star, Quote, Award, TrendingUp, CheckCircle2, Building2, User } from "lucide-react";
+import { Star, TrendingUp, Building2, User } from "lucide-react";
 
 export default function HomeSuccessSection() {
   const { language } = useLanguage();
@@ -171,7 +170,7 @@ export default function HomeSuccessSection() {
 
                 {/* Quote Text */}
                 <p className="text-slate-600 text-xs sm:text-[13px] leading-relaxed mb-4 italic relative">
-                  "{story.story}"
+                  &ldquo;{story.story}&rdquo;
                 </p>
               </div>
 

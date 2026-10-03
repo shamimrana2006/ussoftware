@@ -5,18 +5,25 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
-  Target, Compass, ShieldCheck,
-  Globe, Building2, Users,
-  HeartHandshake, Lightbulb, Rocket,
-  Code2, Check, ArrowRight, Sparkles,
-  TrendingUp, Award, Laptop, Briefcase,
-  GraduationCap, CheckCircle2, Star, Quote,
-  Calendar, Clock, Layers, Zap,
-  Monitor, Cpu, User
+  Target,
+  Compass,
+  Globe,
+  Users,
+  Rocket,
+  Check,
+  ArrowRight,
+  Sparkles,
+  Award,
+  CheckCircle2,
+  Star,
+  Zap,
+  Monitor,
+  Cpu,
+  User
 } from "lucide-react";
-import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { COMPANY_STATS } from "@/data/companyStats";
 
 // Reusable Smooth Typewriter Effect with Looping Sentences
@@ -40,9 +47,12 @@ function TypewriterText({
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    setTextIndex(0);
-    setCurrentText("");
-    setIsDeleting(false);
+    const timer = setTimeout(() => {
+      setTextIndex(0);
+      setCurrentText("");
+      setIsDeleting(false);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [texts]);
 
   useEffect(() => {
@@ -67,8 +77,10 @@ function TypewriterText({
           setCurrentText(activeText.slice(0, currentText.length - 1));
         }, deletingSpeed);
       } else {
-        setIsDeleting(false);
-        setTextIndex((prev) => (prev + 1) % texts.length);
+        timer = setTimeout(() => {
+          setIsDeleting(false);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+        }, deletingSpeed);
       }
     }
 
@@ -171,12 +183,6 @@ export default function AboutPage() {
   const isEn = language === "en";
 
   const [selectedMilestone, setSelectedMilestone] = useState(4); // Default to 2026
-
-  const studentAvatars = [
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150",
-  ];
 
 
 

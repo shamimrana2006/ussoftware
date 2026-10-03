@@ -5,6 +5,12 @@ import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
+
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const lenisRef = useRef<Lenis | null>(null);
@@ -25,7 +31,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     });
 
     lenisRef.current = lenis;
-    (window as any).__lenis = lenis;
+    if (typeof window !== "undefined") {
+      window.__lenis = lenis;
+    }
 
     // 2. Continuous Animation Frame
     let animationId: number;
@@ -90,7 +98,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       window.removeEventListener('resize', triggerResize);
       window.removeEventListener('load', triggerResize);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
-      delete (window as any).__lenis;
+      delete window.__lenis;
       lenis.destroy();
       lenisRef.current = null;
     };

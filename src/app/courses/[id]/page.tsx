@@ -17,15 +17,9 @@ import {
   BookOpen,
   LayoutGrid,
   UserCheck,
-  Zap,
-  ShieldCheck,
-  Clock,
-  Video,
   Award,
   ChevronDown,
   MessageCircle,
-  Sparkles,
-  FileCheck,
   Check,
   ExternalLink,
   X,
@@ -41,7 +35,6 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "instructor">("overview");
   const [expandedModule, setExpandedModule] = useState<number | null>(1);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  const [isEnrollSuccess, setIsEnrollSuccess] = useState(false);
 
   const toggleModule = (modNum: number) => {
     setExpandedModule(expandedModule === modNum ? null : modNum);
@@ -435,7 +428,7 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                         </div>
                       </div>
                       <p className="text-xs text-slate-600 leading-relaxed italic">
-                        "{rev.comment[isEn ? "en" : "bn"]}"
+                        &ldquo;{rev.comment[isEn ? "en" : "bn"]}&rdquo;
                       </p>
                     </div>
                   ))}

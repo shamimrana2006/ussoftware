@@ -1,13 +1,10 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { 
-  ShieldCheck, Sparkles, Users, Award, 
-  Briefcase, CheckCircle2, ArrowRight, Star, 
-  HeartHandshake, TrendingUp, Check, Laptop, Code2
+  ShieldCheck, Users, Award, 
+  Briefcase, HeartHandshake, Check
 } from "lucide-react";
 
 export default function HomeBenefitsSection() {
@@ -71,13 +68,6 @@ export default function HomeBenefitsSection() {
         isEn ? "Salary Negotiation Prep" : "স্যালারি নেগোসিয়েশন সাপোর্ট"
       ]
     }
-  ];
-
-  const stats = [
-    { value: "94%", label: isEn ? "Placement Success Rate" : "প্লেসমেন্ট সাফল্যের হার" },
-    { value: "120+", label: isEn ? "Hiring Tech Partners" : "হায়ারিং পার্টনার প্রতিষ্ঠান" },
-    { value: "1:1", label: isEn ? "Dedicated Mentorship" : "ডেডিকেটেড মেন্টর সাপোর্ট" },
-    { value: "6,200+", label: isEn ? "Engineers Graduated" : "সফল গ্র্যাজুয়েট শিক্ষার্থী" }
   ];
 
   return (

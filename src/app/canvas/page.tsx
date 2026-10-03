@@ -5,19 +5,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { ShieldCheck, Globe2, Cloud, BrainCircuit, Rocket, Cpu } from "lucide-react";
+import { ShieldCheck, Globe2, Cloud, BrainCircuit, Rocket } from "lucide-react";
 
 export default function CanvasPage() {
-  const { t } = useLanguage();
-
   // Track mouse position globally
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+  const mouseX = useMotionValue(500);
+  const mouseY = useMotionValue(500);
 
-  const [windowSize, setWindowSize] = useState({ width: 1000, height: 1000 });
+  const [windowSize, setWindowSize] = useState<{ width: number; height: number }>(() => {
+    if (typeof window !== "undefined") {
+      return { width: window.innerWidth, height: window.innerHeight };
+    }
+    return { width: 1000, height: 1000 };
+  });
 
   useEffect(() => {
-    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
     mouseX.set(window.innerWidth / 2);
     mouseY.set(window.innerHeight / 2);
 
@@ -27,7 +33,11 @@ export default function CanvasPage() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [mouseX, mouseY]);
 
   // Smooth springs for fluid motion

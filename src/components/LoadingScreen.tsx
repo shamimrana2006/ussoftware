@@ -29,21 +29,25 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
   const infinityPath = "M 120,60 C 150,15 210,15 210,60 C 210,105 150,105 120,60 C 90,15 30,15 30,60 C 30,105 90,105 120,60 Z";
 
   useEffect(() => {
-    setIsClient(true);
-
     let hasLoaded = false;
     try {
       hasLoaded = !!sessionStorage.getItem("us_software_initial_loaded");
     } catch {}
 
     if (hasLoaded) {
-      setIsLoading(false);
-      setIsFinishedLoading(true);
-      document.documentElement.classList.remove("app-loading");
-      return;
+      const timer = setTimeout(() => {
+        setIsClient(true);
+        setIsLoading(false);
+        setIsFinishedLoading(true);
+        document.documentElement.classList.remove("app-loading");
+      }, 0);
+      return () => clearTimeout(timer);
     }
 
-    setIsLoading(true);
+    const initTimer = setTimeout(() => {
+      setIsClient(true);
+      setIsLoading(true);
+    }, 0);
     document.body.style.overflow = "hidden";
 
     let animationFrameId: number;
@@ -95,8 +99,8 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
           try {
             sessionStorage.setItem("us_software_initial_loaded", "true");
           } catch {}
-          if (typeof window !== "undefined" && (window as any).__lenis) {
-            (window as any).__lenis.resize();
+          if (typeof window !== "undefined" && window.__lenis) {
+            window.__lenis.resize();
           }
         }, 260);
       }
@@ -105,6 +109,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
     animationFrameId = requestAnimationFrame(updateProgress);
 
     return () => {
+      clearTimeout(initTimer);
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
       document.documentElement.classList.remove("app-loading");
       document.body.style.overflow = "";

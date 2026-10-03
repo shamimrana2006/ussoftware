@@ -5,8 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { 
-  Rocket, ArrowRight, PhoneCall, Sparkles, CheckCircle2, 
-  MessageSquare, BookOpen, ShieldCheck, Users
+  Rocket, ArrowRight, PhoneCall, CheckCircle2
 } from "lucide-react";
 
 export default function HomeCTASection() {

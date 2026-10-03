@@ -2,9 +2,9 @@
 
 import React, { Suspense, useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useGLTF, Float, OrbitControls, Center, ContactShadows } from "@react-three/drei";
+import { useGLTF, Float, OrbitControls, Center } from "@react-three/drei";
 import * as THREE from "three";
-import { Copy, Check, Sliders, RefreshCw, X, Box, Layers, Maximize2 } from "lucide-react";
+import { Copy, Check, Sliders, RefreshCw, X, Box } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Live Coordinate Tracker Component inside Three.js Canvas

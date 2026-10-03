@@ -30,7 +30,7 @@ export default function Footer() {
   const handleHomeClick = (e: React.MouseEvent) => {
     if (pathname === "/") {
       e.preventDefault();
-      const lenis = typeof window !== "undefined" ? (window as any).__lenis : null;
+      const lenis = typeof window !== "undefined" ? window.__lenis : null;
       if (lenis) {
         lenis.scrollTo(0, { duration: 0.5, immediate: false });
       } else {
@@ -89,7 +89,7 @@ export default function Footer() {
 
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
-      const lenis = (window as any).__lenis;
+      const lenis = window.__lenis;
       if (lenis) {
         lenis.scrollTo(0, { duration: 0.5, immediate: false });
       } else {

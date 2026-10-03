@@ -5,9 +5,9 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Compass, TrendingUp, DollarSign, CheckCircle2, 
-  ArrowRight, Briefcase, ChevronRight, Zap, Target,
-  Sparkles, Layers, Cpu, Globe, Smartphone, Check
+  Compass, TrendingUp, DollarSign, 
+  ArrowRight, Briefcase, ChevronRight, Zap,
+  Layers, Cpu, Globe, Smartphone
 } from "lucide-react";
 
 export default function HomeCareerSection() {

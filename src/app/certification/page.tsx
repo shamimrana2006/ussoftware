@@ -7,9 +7,9 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Award, ShieldCheck, CheckCircle2, Search, QrCode, 
-  Lock, FileCheck, Shield, Building, Sparkles, 
+  Lock, FileCheck, Shield, Building, 
   Mail, Phone, Hash, User, Copy, RefreshCw, 
-  Printer, RotateCcw, Check
+  Printer, RotateCcw
 } from "lucide-react";
 
 export interface SampleStudentRecord {

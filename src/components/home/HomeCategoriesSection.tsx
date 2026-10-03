@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { 
-  Code2, Cpu, Cloud, Shield, Smartphone, Palette, 
-  ArrowUpRight, Database, Terminal, Layers, GraduationCap, Megaphone, Briefcase
+  Code2, Cloud, Shield, Smartphone, Palette, 
+  ArrowUpRight, Layers, GraduationCap, Megaphone, Briefcase
 } from "lucide-react";
 
 export default function HomeCategoriesSection() {

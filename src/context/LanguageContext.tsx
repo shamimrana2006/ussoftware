@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 import en from "../locales/en.json";
 import bn from "../locales/bn.json";
 
@@ -17,19 +17,19 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguageState] = useState<Language>("en");
-
-  // Load language preference from localStorage on mount
-  useEffect(() => {
-    try {
-      const savedLang = localStorage.getItem("us_software_language") as Language;
-      if (savedLang === "en" || savedLang === "bn") {
-        setLanguageState(savedLang);
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const savedLang = localStorage.getItem("us_software_language") as Language;
+        if (savedLang === "en" || savedLang === "bn") {
+          return savedLang;
+        }
+      } catch {
+        // ignore
       }
-    } catch {
-      // ignore SSR or localStorage access restriction errors
     }
-  }, []);
+    return "en";
+  });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
