@@ -3262,8 +3262,8 @@ export const coursesData: CourseDetail[] = [
     "id": "10",
     "slug": "web-development",
     "title": {
-      "en": "Web Development",
-      "bn": "ওয়েব ডেভেলপমেন্ট"
+      "en": "Frontend Web Development",
+      "bn": "ফ্রন্টএন্ড ওয়েব ডেভেলপমেন্ট"
     },
     "subtitle": {
       "en": "Learn HTML, CSS, Tailwind, JS, React, Firebase, Figma to React & build 4 production projects",
@@ -3298,8 +3298,8 @@ export const coursesData: CourseDetail[] = [
       "bn": "১৩৮ ঘণ্টা (৪ মাস)"
     },
     "classesCount": {
-      "en": "46 Classes",
-      "bn": "৪৬ টি ক্লাস"
+      "en": "8 Modules • 138 Hours",
+      "bn": "৮ টি মডিউল • ১৩৮ ঘণ্টা"
     },
     "image": "/images/course thumbnail/web development.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -3389,102 +3389,144 @@ export const coursesData: CourseDetail[] = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Web Fundamentals, Tailwind & JavaScript DOM",
-          "bn": "মডিউল ১: ওয়েব ফান্ডামেন্টালস, টেইলউইন্ড ও জাভাস্ক্রিপ্ট ডম"
+          "en": "HTML5, Modern CSS3 & Responsive Web Design",
+          "bn": "এইচটিএমএল৫, আধুনিক সিএসএস৩ ও রেসপন্সিভ ওয়েব ডিজাইন"
         },
         "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "HTML5 Semantic Tags, Forms & Modern CSS Layouts (Flexbox & Grid)",
-            "bn": "এইচটিএমএল৫ সিমান্টিক ট্যাগস, ফর্মস ও আধুনিক সিএসএস লেআউটস"
-          },
-          {
-            "en": "Tailwind CSS Utility-First Framework & Responsive Design",
-            "bn": "টেইলউইন্ড সিএসএস ও রেসপনসিভ ওয়েব ডিজাইন"
-          },
-          {
-            "en": "GitHub Version Control, Commits, Branches & Collaborative Workflows",
-            "bn": "গিটহাব ভার্সন কন্ট্রোল, কমিট, ব্রাঞ্চ ও টিম কলাবোরেশন"
-          },
-          {
-            "en": "JavaScript Core (Variables, Functions, Arrays, Objects, Loops, ES6+)",
-            "bn": "জাভাস্ক্রিপ্ট কোর: ভ্যারিয়েবল, ফাংশন, অবজেক্ট ও ES6+"
-          },
-          {
-            "en": "DOM Manipulation, Event Listeners, JSON Handling & Fetch API",
-            "bn": "ডম ম্যানিপুলেশন, ইভেন্ট লিসেনার, জেএসন ও ফেচ এপিআই"
+            "en": "Semantic HTML5, CSS Grid, Flexbox, media queries and mobile-first layouts",
+            "bn": "এইচটিএমএল৫, ফ্লেক্সবক্স, সিএসএস গ্রিড ও রেসপন্সিভ ডিজাইন"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: React Core, React Router & Firebase Backend",
-          "bn": "মডিউল ২: রিঅ্যাক্ট কোর, রিঅ্যাক্ট রাউটার ও ফায়ারবেস ব্যাকএন্ড"
+          "en": "Tailwind CSS Masterclass & Modern UI Components",
+          "bn": "টেইলউইন্ড সিএসএস মাস্টারক্লাস ও মডার্ন ইউআই কম্পোনেন্ট"
         },
         "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "React Fundamentals: JSX, Components, Props & State Management",
-            "bn": "রিঅ্যাক্ট ফান্ডামেন্টালস: জেএসএক্স, কম্পোনেন্টস, প্রপ্স ও স্টেট"
-          },
-          {
-            "en": "React Hooks (useState, useEffect, useRef, useMemo, custom hooks)",
-            "bn": "রিঅ্যাক্ট হুকস: ইউজস্টেট, ইউজইফেক্ট ও কাস্টম হুকস"
-          },
-          {
-            "en": "React Router for Dynamic Multi-Page Navigation & Nested Layouts",
-            "bn": "মাল্টি-পেজ অ্যাপের জন্য রিঅ্যাক্ট রাউটার ও নেস্টেড লেআউটস"
-          },
-          {
-            "en": "Firebase Authentication (Google, Email/Pass) & Realtime Database / Firestore",
-            "bn": "ফায়ারবেস অথেনটিকেশন ও ফায়ারস্টোর ক্লাউড ডেটাবেস"
-          },
-          {
-            "en": "Figma to React & PSD to React Conversion Techniques",
-            "bn": "ফিগমা টু রিঅ্যাক্ট ও পিএসডি টু রিঅ্যাক্ট কনভার্সন মেথড"
+            "en": "Utility-first workflow, custom themes, dark mode and glassmorphic UI cards",
+            "bn": "টেইলউইন্ড ইউটিলিটি, ডার্ক মোড ও কাস্টম কম্পোনেন্ট"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: 4 Production Projects & Freelance Career",
-          "bn": "মডিউল ৩: ৪টি প্রোডাকশন প্রজেক্ট ও ফ্রিল্যান্স ক্যারিয়ার"
+          "en": "Core JavaScript & Modern ES6+ Architecture",
+          "bn": "কোর জাভাস্ক্রিপ্ট ও মডার্ন ইএস৬+ আর্কিটেকচার"
         },
         "duration": {
-          "en": "16 Classes • 48 Hours",
-          "bn": "১৬ টি ক্লাস • ৪৮ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Project 1: Modern Interactive Developer Portfolio Website Design",
-            "bn": "প্রজেক্ট ১: মডার্ন ইন্টারঅ্যাক্টিভ পোর্টফোলিও ওয়েবসাইট ডিজাইন"
-          },
+            "en": "Variables, closures, arrow functions, destructuring, modules & array methods",
+            "bn": "জাভাস্ক্রিপ্ট ইএস৬+, ক্লোজার, অ্যারো ফাংশন ও মেথডস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "DOM Manipulation, Fetch API & Async Programming",
+          "bn": "ডম ম্যানিপুলেশন, ফেচ এপিআই ও অ্যাসিঙ্ক্রোনাস প্রোগ্রামিং"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Project 2: Full Featured CMS Blog Website Design",
-            "bn": "প্রজেক্ট ২: পূর্ণাঙ্গ ফিচার সমৃদ্ধ সিএমএস ব্লগ ওয়েবসাইট ডিজাইন"
-          },
+            "en": "Event listeners, dynamic DOM rendering, Promises, async/await and REST APIs",
+            "bn": "ইভেন্ট হ্যান্ডলিং, ডায়নামিক ডম ও রেস্ট এপিআই কল"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Git, GitHub Version Control & Developer Workflow",
+          "bn": "গিট, গিটহাব ভার্সন কন্ট্রোল ও ডেভেলপার ওয়ার্কফ্লো"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Project 3: Live Breaking Newspaper / Media Portal Website Design",
-            "bn": "প্রজেক্ট ৩: লাইভ নিউজপেপার ও মিডিয়া পোর্টাল ওয়েবসাইট ডিজাইন"
-          },
+            "en": "Repository management, branching, pull requests, merge conflicts & Vercel deployment",
+            "bn": "গিট ব্রাঞ্চিং, পুল রিকোয়েস্ট ও ভার্সেল ডিপ্লয়মেন্ট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "React.js Fundamentals, Hooks & Component Architecture",
+          "bn": "রিঅ্যাক্ট.জেএস ফান্ডামেন্টালস, হুকস ও কম্পোনেন্ট আর্কিটেকচার"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Project 4: Enterprise Job Portal Website Design with Application Tracking",
-            "bn": "প্রজেক্ট ৪: এন্টারপ্রাইজ জব পোর্টাল ওয়েবসাইট ডিজাইন ও ট্র্যাকিং"
-          },
+            "en": "JSX, Virtual DOM, props, useState, useEffect, useMemo, custom hooks & context API",
+            "bn": "জেএসএক্স, স্টেট, হুকস ও কম্পোনেন্ট আর্কিটেকচার"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "React Router, State Management & Firebase Backend",
+          "bn": "রিঅ্যাক্ট রাউটার, স্টেট ম্যানেজমেন্ট ও ফায়ারবেস অথেনটিকেশন"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English, Soft Skills, Fiverr/Upwork Gigs & Job Placement",
-            "bn": "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস, মার্কেটপ্লেস ও জব প্লেসমেন্ট সাপোর্ট"
+            "en": "SPA dynamic routing, protected routes, Firebase authentication & cloud storage",
+            "bn": "ডায়নামিক রাউটিং ও ফায়ারবেস অথেনটিকেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Figma to Pixel-Perfect React Projects & Marketplace Portfolio",
+          "bn": "ফিগমা টু রিঅ্যাক্ট প্রজেক্ট, পোর্টফোলিও ও ফ্রিল্যান্সিং ক্যারিয়ার"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Converting Figma UI to production-ready React apps, live showcase & Upwork/Fiverr gigs",
+            "bn": "ফিগমা টু কোড, লাইভ প্রজেক্ট ও ফ্রিল্যান্সিং গাইডলাইন"
           }
         ]
       }
