@@ -356,7 +356,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
             !isFinishedLoading ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
-          {isFinishedLoading && children}
+          {children}
         </div>
       </LoadingContext.Provider>
     </>

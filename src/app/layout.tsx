@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Hind_Siliguri, Baloo_Da_2, Outfit, Plus_Jakarta_Sans, Space_Grotesk, Sora, Poppins, Urbanist } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -136,10 +137,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${spaceGrotesk.variable} ${sora.variable} ${poppins.variable} ${urbanist.variable} ${balooDa2.variable} ${hindSiliguri.variable} antialiased`}
     >
-      <head>
-        <script
+      <body
+        className="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-900 selection:bg-[#008744]/20 selection:text-[#008744] antialiased"
+        style={{ fontFamily: "var(--font-hind), sans-serif" }}
+      >
+        <Script
+          id="app-loader-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               try {
@@ -150,20 +157,15 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body
-        className="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-900 selection:bg-[#008744]/20 selection:text-[#008744] antialiased"
-        style={{ fontFamily: "var(--font-hind), sans-serif" }}
-      >
-        <LoadingScreen>
-          <SmoothScroll>
-            <LanguageProvider>
+        <LanguageProvider>
+          <LoadingScreen>
+            <SmoothScroll>
               <MouseBubbles />
               {children}
               <FloatingWhatsApp />
-            </LanguageProvider>
-          </SmoothScroll>
-        </LoadingScreen>
+            </SmoothScroll>
+          </LoadingScreen>
+        </LanguageProvider>
       </body>
     </html>
   );
