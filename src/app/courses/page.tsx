@@ -414,7 +414,7 @@ function CoursesContent() {
           {/* MAIN LAYOUT: LEFT SIDEBAR (SEARCH + CATEGORIES) & RIGHT CONTENT (CONTROLS + COURSE GRID) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             {/* LEFT SIDEBAR: Search & Categories (Sticky on Desktop) */}
-            <div data-lenis-prevent className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-[74px] space-y-4 max-h-[calc(100vh-6.5rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20 shadow-[0_-24px_0_0_#f8fafc]">
+            <div data-lenis-prevent className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-[88px] xl:top-[96px] space-y-4 max-h-[calc(100vh-7.5rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20">
               {/* Search Input Box */}
               <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/15 transition-all">
                 <div className="relative flex items-center">
@@ -494,9 +494,8 @@ function CoursesContent() {
 
             {/* RIGHT AREA: TOP CONTROLS & COURSE CARDS GRID */}
             <div className="lg:col-span-8 xl:col-span-9 space-y-6">
-              {/* 1. Top Filter / Control Bar (Sticky on Scroll with Upward Gap Seal) */}
-              <div className="sticky top-[58px] sm:top-[64px] lg:top-[66px] z-30 bg-[#f8fafc] pt-2 pb-2 shadow-[0_-24px_0_0_#f8fafc]">
-                <div className="bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4">
+              {/* 1. Top Filter / Control Bar (Static / Non-sticky) */}
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4">
                   {/* Left: Count & Mode Tabs */}
                   <div className="flex items-center flex-wrap gap-3 w-full sm:w-auto">
                     <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
@@ -672,7 +671,6 @@ function CoursesContent() {
                     </div>
                   </div>
                 </div>
-              </div>
 
               {/* 2. Course Cards Container */}
               <div className="relative z-10">
