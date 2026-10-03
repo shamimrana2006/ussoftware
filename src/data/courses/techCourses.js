@@ -1,260 +1,5 @@
 module.exports = [
   {
-    "id": "13",
-    "slug": "certified-web-design-and-development",
-    "title": {
-      "en": "Certified Web Design and Development",
-      "bn": "সার্টিফাইড ওয়েব ডিজাইন অ্যান্ড ডেভেলপমেন্ট"
-    },
-    "subtitle": {
-      "en": "Professional front-end web design: HTML5, CSS3, JavaScript, Bootstrap, Tailwind & responsive UI projects",
-      "bn": "এইচটিএমএল৫, সিএসএস৩, বুটস্ট্র্যাপ, টেইলউইন্ড ও জাভাস্ক্রিপ্ট দিয়ে আধুনিক রেসপনসিভ ওয়েব ডিজাইন"
-    },
-    "category": "web",
-    "categoryLabel": {
-      "en": "Programming & Web",
-      "bn": "প্রোগ্রামিং ও ওয়েব"
-    },
-    "badge": {
-      "en": "CERTIFIED",
-      "bn": "সার্টিফাইড"
-    },
-    "mode": {
-      "en": "Online & Offline",
-      "bn": "অনলাইন ও অফলাইন"
-    },
-    "modeType": "offline",
-    "rating": 4.8,
-    "ratingsCount": 110,
-    "enrolledCount": "260+ Enrolled",
-    "languages": {
-      "en": "Bengali / English",
-      "bn": "বাংলা / ইংরেজি"
-    },
-    "fee": "15,000৳",
-    "rawFee": 15000,
-    "originalFee": "22,000৳",
-    "duration": {
-      "en": "132 hrs. (4 Months)",
-      "bn": "১৩২ ঘণ্টা (৪ মাস)"
-    },
-    "classesCount": {
-      "en": "44 Classes",
-      "bn": "৪৪ টি ক্লাস"
-    },
-    "image": "/images/course thumbnail/enterprise full stack next.js 15.webp",
-    "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
-    "instructor": {
-      "name": "MD Shamim Rana",
-      "designation": {
-        "en": "Senior Web Developer & UI Architect",
-        "bn": "সিনিয়র ওয়েব ডেভেলপার ও ইউআই আর্কিটেক্ট"
-      },
-      "image": "/images/default-avatar.svg",
-      "bio": {
-        "en": "6+ years in professional web design & development, building high-converting client websites.",
-        "bn": "প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্টে ৬+ বছরের অভিজ্ঞতা।"
-      },
-      "experience": "6+ Yrs Exp",
-      "verified": true
-    },
-    "overview": {
-      "en": "Certified Web Design and Development course covering HTML5 semantic structure, CSS3 styling, Flexbox & Grid layouts, Bootstrap 5, Tailwind CSS, JavaScript DOM interactivity, jQuery effects, PSD/Figma to HTML conversion, Git/GitHub and freelance portfolio creation.",
-      "bn": "১৩২ ঘণ্টার প্রফেশনাল ওয়েব ডিজাইন ও ডেভেলপমেন্ট কোর্স। এতে এইচটিএমএল৫, সিএসএস৩, বুটস্ট্র্যাপ ৫, টেইলউইন্ড, জাভাস্ক্রিপ্ট ডম, ফিগমা টু এইচটিএমএল কনভার্সন এবং রেসপনসিভ ক্লায়েন্ট ওয়েবসাইট তৈরি শেখানো হয়।"
-    },
-    "fullDescription": {
-      "en": "Master the art of creating pixel-perfect, mobile-friendly websites that look gorgeous on all devices. You will build 5+ complete responsive client websites from scratch, learn cross-browser compatibility, web accessibility standards and deploy live on Netlify/Vercel.",
-      "bn": "এই কোর্সে আপনি একদম বেসিক থেকে শুরু করে রেসপনসিভ ওয়েবসাইট ডিজাইন, অ্যানিমেশন, আধুনিক সিএসএস ফ্রেমওয়ার্ক এবং মার্কেটপ্লেসে ওয়েব ডিজাইনার হিসেবে কাজ করার পূর্ণাঙ্গ দক্ষতা অর্জন করবেন।"
-    },
-    "coreValues": [
-      {
-        "id": "cv1",
-        "title": {
-          "en": "Pixel-Perfect Responsive",
-          "bn": "পিক্সেল-পারফেক্ট রেসপনসিভ"
-        },
-        "desc": {
-          "en": "Ensure 100% responsiveness across mobile, tablet, laptop and 4K screens.",
-          "bn": "সব ডিভাইসে পারফেক্ট মোবাইল রেসপনসিভ ডিজাইন।"
-        },
-        "icon": "Code2"
-      },
-      {
-        "id": "cv2",
-        "title": {
-          "en": "Tailwind & Bootstrap 5",
-          "bn": "টেইলউইন্ড ও বুটস্ট্র্যাপ"
-        },
-        "desc": {
-          "en": "Build rapid UI prototypes and enterprise-grade designs using modern frameworks.",
-          "bn": "আধুনিক সিএসএস ফ্রেমওয়ার্কে পূর্ণ পারদর্শিতা।"
-        },
-        "icon": "Palette"
-      },
-      {
-        "id": "cv3",
-        "title": {
-          "en": "Figma to Code",
-          "bn": "ফিগমা টু কোড"
-        },
-        "desc": {
-          "en": "Convert complex Figma and PSD templates into semantic clean HTML/CSS code.",
-          "bn": "ফিগমা ডিজাইন থেকে ক্লিন এইচটিএমএল কোড তৈরি।"
-        },
-        "icon": "Zap"
-      }
-    ],
-    "learningOutcomes": [
-      {
-        "en": "Write clean, semantic HTML5 markup and modern CSS3 stylesheets.",
-        "bn": "ক্লিন ও সিমান্টিক এইচটিএমএল৫ এবং সিএসএস৩ কোড লেখা।"
-      },
-      {
-        "en": "Master Flexbox, CSS Grid, animations, transitions and media queries.",
-        "bn": "ফ্লেক্সবক্স, সিএসএস গ্রিড ও মিডিয়া কোয়েরিজ আয়ত্ত করা।"
-      },
-      {
-        "en": "Build interactive UI elements using JavaScript and DOM manipulation.",
-        "bn": "জাভাস্ক্রিপ্ট দিয়ে ইন্টারঅ্যাক্টিভ ওয়েব কম্পোনেন্ট তৈরি করা।"
-      },
-      {
-        "en": "Convert Figma/PSD designs into fully functional responsive websites.",
-        "bn": "ফিগমা ডিজাইনকে সরাসরি রেসপনসিভ ওয়েবসাইটে রূপান্তর করা।"
-      },
-      {
-        "en": "Create a professional portfolio and earn on Fiverr, Upwork & local agencies.",
-        "bn": "প্রফেশনাল পোর্টফোলিও বানিয়ে ফ্রিল্যান্সিং ক্যারিয়ার শুরু করা।"
-      }
-    ],
-    "curriculum": [
-      {
-        "moduleNumber": 1,
-        "title": {
-          "en": "Module 1: HTML5, CSS3 & Responsive Design Fundamentals",
-          "bn": "মডিউল ১: এইচটিএমএল৫, সিএসএস৩ ও রেসপনসিভ ডিজাইন"
-        },
-        "duration": {
-          "en": "14 Classes • 42 Hours",
-          "bn": "১৪ টি ক্লাস • ৪২ ঘণ্টা"
-        },
-        "lessonsCount": 6,
-        "topics": [
-          {
-            "en": "HTML5 Semantic Tags, Document Structure, Tables & Multi-step Forms",
-            "bn": "এইচটিএমএল৫ সিমান্টিক ট্যাগস, টেবিলস ও মাল্টি-স্টেপ ফর্মস"
-          },
-          {
-            "en": "CSS3 Typography, Colors, Box Model, Borders & Shadows",
-            "bn": "সিএসএস৩ টাইপোগ্রাফি, বক্স মডেল ও শ্যাডোজ"
-          },
-          {
-            "en": "CSS Flexbox & CSS Grid Mastery for Modern Layouts",
-            "bn": "মডার্ন লেআউটের জন্য সিএসএস ফ্লেক্সবক্স ও গ্রিড মাস্টারি"
-          },
-          {
-            "en": "Media Queries & Mobile-First Responsive Web Design",
-            "bn": "মিডিয়া কোয়েরিজ ও মোবাইল-ফার্স্ট রেসপনসিভ ডিজাইন"
-          }
-        ]
-      },
-      {
-        "moduleNumber": 2,
-        "title": {
-          "en": "Module 2: Bootstrap 5, Tailwind CSS & JavaScript Interactivity",
-          "bn": "মডিউল ২: বুটস্ট্র্যাপ ৫, টেইলউইন্ড সিএসএস ও জাভাস্ক্রিপ্ট"
-        },
-        "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
-        },
-        "lessonsCount": 6,
-        "topics": [
-          {
-            "en": "Bootstrap 5 Components, Grid System & Utilities",
-            "bn": "বুটস্ট্র্যাপ ৫ কম্পোনেন্টস ও গ্রিড সিস্টেম"
-          },
-          {
-            "en": "Tailwind CSS Utility-First Architecture, Custom Config & Plugins",
-            "bn": "টেইলউইন্ড সিএসএস ইউটিলিটি আর্কিটেকচার ও কাস্টমাইজেশন"
-          },
-          {
-            "en": "JavaScript Essentials: Variables, Functions, Arrays, Objects & Events",
-            "bn": "জাভাস্ক্রিপ্ট বেসিকস: ভ্যারিয়েবল, ফাংশন ও ইভেন্টস"
-          },
-          {
-            "en": "DOM Manipulation, Sliders, Modals, Accordions & Form Validation",
-            "bn": "ডম ম্যানিপুলেশন, স্লাইডার, মোডাল ও ফর্ম ভ্যালিডেশন"
-          }
-        ]
-      },
-      {
-        "moduleNumber": 3,
-        "title": {
-          "en": "Module 3: Figma to HTML, Live Projects & Freelancing",
-          "bn": "মডিউল ৩: ফিগমা টু এইচটিএমএল, লাইভ প্রজেক্টস ও ফ্রিল্যান্সিং"
-        },
-        "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
-        },
-        "lessonsCount": 6,
-        "topics": [
-          {
-            "en": "Figma to HTML / PSD to HTML Pixel-Perfect Conversion Practice",
-            "bn": "ফিগমা টু এইচটিএমএল পিক্সেল-পারফেক্ট কনভার্সন"
-          },
-          {
-            "en": "Building 3 Full Responsive Client Websites (Agency, Restaurant, E-Commerce)",
-            "bn": "৩টি ফুল রেসপনসিভ ক্লায়েন্ট ওয়েবসাইট তৈরি"
-          },
-          {
-            "en": "Git, GitHub & Live Deployment on Netlify / Vercel with Custom Domains",
-            "bn": "গিটহাব ও নেটলিফাইতে লাইভ ডেপ্লয়মেন্ট"
-          },
-          {
-            "en": "Portfolio Creation, Fiverr Gigs & Client Communication English",
-            "bn": "পোর্টফোলিও তৈরি, ফাইবার গিগ ও ক্লায়েন্ট কমিউনিকেশন"
-          }
-        ]
-      }
-    ],
-    "includedItems": [
-      {
-        "en": "Certified Web Designer Certificate",
-        "bn": "সার্টিফাইড ওয়েব ডিজাইনার সার্টিফিকেট"
-      },
-      {
-        "en": "Source Code of 5 Commercial Responsive Websites",
-        "bn": "৫টি কমার্শিয়াল রেসপনসিভ ওয়েবসাইটের সোর্স কোড"
-      },
-      {
-        "en": "Premium UI Kits, Icons & Templates Pack",
-        "bn": "প্রিমিয়াম ইউআই কিট, আইকন ও টেমপ্লেট প্যাক"
-      },
-      {
-        "en": "1-on-1 Freelancing & Marketplace Mentorship",
-        "bn": "১-অন-১ ফ্রিল্যান্সিং মেন্টরশিপ"
-      }
-    ],
-    "reviews": [
-      {
-        "id": "r1",
-        "name": "Kamrul Hasan",
-        "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100",
-        "role": {
-          "en": "Frontend Web Designer",
-          "bn": "ফ্রন্টএন্ড ওয়েব ডিজাইনার"
-        },
-        "rating": 5,
-        "comment": {
-          "en": "The Figma to HTML conversion sessions gave me real confidence. Completed 6 projects on Fiverr!",
-          "bn": "ফিগমা টু এইচটিএমএল এর ক্লাসগুলো অসাধারণ ছিল। ফাইবারে ৬টি প্রজেক্ট শেষ করেছি।"
-        },
-        "date": "2 Weeks Ago"
-      }
-    ]
-  },
-  {
     "id": "14",
     "slug": "certified-shopify-specialist",
     "title": {
@@ -297,7 +42,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/certified shopify specialist.webp",
+    "image": "/images/course thumbnail/certified shopify specialist.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sajjad Hossain",
@@ -552,7 +297,7 @@ module.exports = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/php-laravel.webp",
+    "image": "/images/course thumbnail/php-laravel.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Monirul Islam",
@@ -811,7 +556,7 @@ module.exports = [
       "en": "12 Modules",
       "bn": "১২ টি মডিউল"
     },
-    "image": "/images/course thumbnail/cisco certified network associate.webp",
+    "image": "/images/course thumbnail/cisco certified network associate.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -1192,7 +937,7 @@ module.exports = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/cisco certified network professional.webp",
+    "image": "/images/course thumbnail/cisco certified network professional.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -1447,7 +1192,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/red hat lynux.webp",
+    "image": "/images/course thumbnail/red hat lynux.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Monjurul Karim",
@@ -1702,7 +1447,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/microsoft azure cloud.webp",
+    "image": "/images/course thumbnail/microsoft azure cloud.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Towhidul Alam",
@@ -1957,7 +1702,7 @@ module.exports = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/amazon web services.webp",
+    "image": "/images/course thumbnail/amazon web services.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Towhidul Alam",
@@ -2212,7 +1957,7 @@ module.exports = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/swift ios app development.webp",
+    "image": "/images/course thumbnail/swift ios app development.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahidul Islam",
@@ -2467,7 +2212,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/asp.net mvc core.webp",
+    "image": "/images/course thumbnail/asp.net mvc core.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Masud Rana",
@@ -2722,7 +2467,7 @@ module.exports = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/c-cpp programming.webp",
+    "image": "/images/course thumbnail/c-cpp programming.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -2977,7 +2722,7 @@ module.exports = [
       "en": "16 Classes",
       "bn": "১৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/c-sharp programming.webp",
+    "image": "/images/course thumbnail/c-sharp programming.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Masud Rana",
@@ -3232,7 +2977,7 @@ module.exports = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/java se programming.webp",
+    "image": "/images/course thumbnail/java se programming.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahidul Islam",
@@ -3495,7 +3240,7 @@ module.exports = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/programming for kids.webp",
+    "image": "/images/course thumbnail/programming for kids.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tahsina Akter",
@@ -3704,6 +3449,319 @@ module.exports = [
           "bn": "আমার ছেলে নিজেই স্ক্র্যাচে গেম তৈরি করেছে। শিক্ষক অনেক ধৈর্য নিয়ে শিখিয়েছেন।"
         },
         "date": "2 Weeks Ago"
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "slug": "mern-backend-development",
+    "title": {
+      "en": "MERN Backend Engineering (Node.js & MongoDB)",
+      "bn": "মার্ন ব্যাকএন্ড ইঞ্জিনিয়ারিং (নোড.জেএস ও মঙ্গোডিবি)"
+    },
+    "subtitle": {
+      "en": "Master Node.js, Express, MongoDB aggregation, JWT auth, Redis caching, WebSockets, Docker & AWS cloud deployment",
+      "bn": "নোড.জেএস, এক্সপ্রেস, মঙ্গোডিবি ডেটাবেস, রেডিস ক্যাশিং, ডকার ও এডব্লিউএস ক্লাউড ডিপ্লয়মেন্ট"
+    },
+    "category": "web",
+    "categoryLabel": {
+      "en": "Programming & Web",
+      "bn": "প্রোগ্রামিং ও ওয়েব"
+    },
+    "badge": {
+      "en": "NEW & POPULAR",
+      "bn": "নতুন ও জনপ্রিয়"
+    },
+    "mode": {
+      "en": "Online & Offline",
+      "bn": "অনলাইন ও অফলাইন"
+    },
+    "modeType": "offline",
+    "rating": 4.9,
+    "ratingsCount": 185,
+    "enrolledCount": "460+ Enrolled",
+    "languages": {
+      "en": "Bengali / English",
+      "bn": "বাংলা / ইংরেজি"
+    },
+    "fee": "22,000৳",
+    "rawFee": 22000,
+    "originalFee": "30,000৳",
+    "duration": {
+      "en": "120 hrs. (3.5 Months)",
+      "bn": "১২০ ঘণ্টা (৩.৫ মাস)"
+    },
+    "classesCount": {
+      "en": "8 Modules • 36 Classes",
+      "bn": "৮ টি মডিউল • ৩৬ টি ক্লাস"
+    },
+    "image": "/images/course thumbnail/diploma in full stack.png",
+    "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
+    "instructor": {
+      "name": "Engr. Tanvir Ahmed",
+      "designation": {
+        "en": "Principal Backend Architect & Cloud Consultant",
+        "bn": "প্রিন্সিপাল ব্যাকএন্ড আর্কিটেক্ট ও ক্লাউড কনসালট্যান্ট"
+      },
+      "image": "/images/default-avatar.svg",
+      "bio": {
+        "en": "8+ years scaling enterprise Node.js microservices, distributed databases, high-throughput APIs and cloud DevOps architectures.",
+        "bn": "এন্টারপ্রাইজ নোড.জেএস মাইক্রোসার্ভিসেস, ডিস্ট্রিবিউটেড ডেটাবেস ও ক্লাউড ডেভঅপ্স আর্কিটেকচারে ৮+ বছরের অভিজ্ঞতা।"
+      },
+      "experience": "8+ Yrs Exp",
+      "verified": true
+    },
+    "overview": {
+      "en": "An intensive enterprise-grade backend engineering curriculum. Master Node.js runtime internals, asynchronous event loops, Express RESTful & GraphQL APIs, MongoDB database indexing & complex aggregation pipelines, Redis caching, JWT RBAC security, WebSockets, payment gateways, clean hexagonal architecture, Docker containerization and AWS cloud deployment.",
+      "bn": "একটি পূর্ণাঙ্গ এন্টারপ্রাইজ-গ্রেড ব্যাকএন্ড ইঞ্জিনিয়ারিং কোর্স। এতে নোড.জেএস, এক্সপ্রেস, মঙ্গোডিবি অ্যাডভান্সড অ্যাগ্রিগেশন, রেডিস ক্যাশ, জেডব্লিউটি সিকিউরিটি, পেমেন্ট গেটওয়ে, ডকার এবং এডব্লিউএস ক্লাউড ডিপ্লয়মেন্ট বাস্তব প্রজেক্টের মাধ্যমে শেখানো হয়।"
+    },
+    "fullDescription": {
+      "en": "Transform into a production-grade Backend Engineer capable of architecting scalable, secure and high-performance server-side applications. You will build real-world distributed backends, e-commerce microservices, real-time chat engines and deploy them with automated CI/CD on cloud infrastructure.",
+      "bn": "এই কোর্সে আপনি আধুনিক সফটওয়্যার ইন্ডাস্ট্রির উপযোগী হাই-পারফরম্যান্স ও সিকিউর ব্যাকএন্ড সিস্টেম ডিজাইন করা শিখবেন। এতে লাইভ ই-কমার্স ব্যাকএন্ড, রিয়েলটাইম চ্যাট ইঞ্জিন এবং এডব্লিউএস ক্লাউডে প্রোডাকশন ডিপ্লয়মেন্ট অন্তর্ভুক্ত রয়েছে।"
+    },
+    "coreValues": [
+      {
+        "id": "cv1",
+        "title": {
+          "en": "High-Throughput Node.js APIs",
+          "bn": "হাই-থ্রুপুট নোড.জেএস এপিআই"
+        },
+        "desc": {
+          "en": "Build ultra-fast asynchronous RESTful microservices with clean code principles.",
+          "bn": "স্কেলেবল ও হাই-পারফরম্যান্স এপিআই আর্কিটেকচার।"
+        },
+        "icon": "Server"
+      },
+      {
+        "id": "cv2",
+        "title": {
+          "en": "Advanced Database Architecture",
+          "bn": "অ্যাডভান্সড ডেটাবেস আর্কিটেকচার"
+        },
+        "desc": {
+          "en": "Master MongoDB complex aggregations, indexing, transactions and Redis caching.",
+          "bn": "মঙ্গোডিবি অ্যাগ্রিগেশন, ইনডেক্সিং ও রেডিস ক্যাশিং।"
+        },
+        "icon": "Database"
+      },
+      {
+        "id": "cv3",
+        "title": {
+          "en": "Production DevOps & Cloud",
+          "bn": "প্রোডাকশন ডেভঅপ্স ও ক্লাউড"
+        },
+        "desc": {
+          "en": "Dockerize your backend and deploy on AWS with automated CI/CD pipelines.",
+          "bn": "ডকার কনটেইনার ও এডব্লিউএস ক্লাউড ডিপ্লয়মেন্ট।"
+        },
+        "icon": "Cloud"
+      }
+    ],
+    "learningOutcomes": [
+      {
+        "en": "Architect robust RESTful APIs with Node.js, Express.js and clean MVC patterns.",
+        "bn": "নোড.জেএস ও এক্সপ্রেস দিয়ে রোবাস্ট ও স্কেলেবল এপিআই তৈরি করা।"
+      },
+      {
+        "en": "Design scalable MongoDB schemas with indexing, transactions and complex aggregation pipelines.",
+        "bn": "মঙ্গোডিবি স্কিমা, ইনডেক্সিং ও জটিল অ্যাগ্রিগেশন কুয়েরি হ্যান্ডেল করা।"
+      },
+      {
+        "en": "Implement enterprise JWT authentication, refresh tokens, bcrypt encryption and RBAC authorization.",
+        "bn": "জেডব্লিউটি অথেনটিকেশন ও রোল-বেসড সিকিউরিটি সেটআপ করা।"
+      },
+      {
+        "en": "Integrate Redis in-memory caching and rate limiters to handle millions of requests.",
+        "bn": "রেডিস ক্যাশিং ও রেট লিমিটিং দিয়ে এপিআই স্পিড অপ্টিমাইজ করা।"
+      },
+      {
+        "en": "Build real-time applications with Socket.io, WebSockets and event-driven architecture.",
+        "bn": "সকেট.আইও দিয়ে রিয়েলটাইম মেসেজিং ও নোটিফিকেশন সিস্টেম তৈরি করা।"
+      },
+      {
+        "en": "Containerize microservices with Docker and deploy to AWS/DigitalOcean with CI/CD.",
+        "bn": "ডকার দিয়ে কনটেইনারাইজেশন ও ক্লাউডে অটোমেটেড ডিপ্লয়মেন্ট।"
+      }
+    ],
+    "curriculum": [
+      {
+        "moduleNumber": 1,
+        "title": {
+          "en": "Node.js Runtime Engine, Event Loop & Asynchronous Architecture",
+          "bn": "নোড.জেএস রানটাইম ইঞ্জিন, ইভেন্ট লুপ ও অ্যাসিঙ্ক্রোনাস আর্কিটেকচার"
+        },
+        "duration": {
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "V8 engine internals, libuv, non-blocking I/O, event emitters, streams, buffers and process management",
+            "bn": "নোড.জেএস ভি৮ ইঞ্জিন, ইভেন্ট লুপ ও স্ট্রিমস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 2,
+        "title": {
+          "en": "Express.js Framework, Middleware Pipeline & RESTful APIs",
+          "bn": "এক্সপ্রেস.জেএস ফ্রেমওয়ার্ক, মিডলওয়্যার পাইপলাইন ও রেস্ট এপিআই"
+        },
+        "duration": {
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Express routing, custom middlewares, request validation (Joi/Zod), centralized error handling & CORS",
+            "bn": "এক্সপ্রেস রাউটিং, মিডলওয়্যার ও সেন্ট্রালাইজড এরর হ্যান্ডলিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 3,
+        "title": {
+          "en": "MongoDB Database Modeling, Aggregation Pipelines & Mongoose ODM",
+          "bn": "মঙ্গোডিবি ডেটাবেস মডেলিং, অ্যাগ্রিগেশন ও মঙ্গুজ ওডিএম"
+        },
+        "duration": {
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Schema design, compound indexes, multi-stage aggregation pipelines, population & ACID transactions",
+            "bn": "মঙ্গোডিবি স্কিমা, ইনডেক্সিং ও জটিল অ্যাগ্রিগেশন পাইপলাইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Authentication, Role-Based Access Control (RBAC) & JWT Security",
+          "bn": "জেডব্লিউটি অথেনটিকেশন, রোল-বেসড অ্যাক্সেস কন্ট্রোল ও পাসওয়ার্ড এনক্রিপশন"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "JWT access & refresh tokens, httpOnly cookies, password hashing (bcrypt), OAuth2 & RBAC middlewares",
+            "bn": "জেডব্লিউটি রিফ্রেশ টোকেন, বিরিপ্ট এনক্রিপশন ও আরবিএসি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Caching with Redis, Rate Limiting & API Performance Optimization",
+          "bn": "রেডিস ক্যাশিং, রেট লিমিটিং ও এপিআই পারফরম্যান্স অপ্টিমাইজেশন"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Redis in-memory caching strategies, cache invalidation, API rate limiting & compression",
+            "bn": "রেডিস ক্যাশ স্টোরেজ, ডেটা এক্সপায়ারেশন ও স্পিড অপ্টিমাইজেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Payment Gateways (bKash, Nagad, Stripe) & Real-time WebSockets",
+          "bn": "পেমেন্ট গেটওয়ে ইন্টিগ্রেশন (বিকাশ/নগদ/স্ট্রাইপ) ও সকেট.আইও"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "bKash/Nagad merchant APIs, Stripe checkout webhooks, Socket.io real-time chat & push events",
+            "bn": "বিকাশ ও স্ট্রাইপ পেমেন্ট গেটওয়ে এবং সকেট.আইও রিয়েলটাইম চ্যাট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Clean Architecture, Microservices & Docker Containerization",
+          "bn": "ক্লিন ব্যাকএন্ড আর্কিটেকচার, মাইক্রোসার্ভিসেস ও ডকার"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Hexagonal clean architecture, repository patterns, Dockerfiles, docker-compose & microservices networking",
+            "bn": "ক্লিন আর্কিটেকচার, ডকার ইমেজ ও মাইক্রোসার্ভিসেস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Cloud Deployment (AWS/DigitalOcean/Render), CI/CD & Production Monitoring",
+          "bn": "ক্লাউড ডিপ্লয়মেন্ট (এডব্লিউএস/ডিজিটালওশান), সিআই/সিডি ও মনিটরিং"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "AWS EC2/ECS, PM2 cluster mode, Nginx reverse proxy, SSL, GitHub Actions CI/CD & Winston/Morgan logging",
+            "bn": "এডব্লিউএস ক্লাউড, এনজিনএক্স রিভার্স প্রক্সি ও সিআই/সিডি অটোমেশন"
+          }
+        ]
+      }
+    ],
+    "includedItems": [
+      {
+        "en": "Industry-Recognized Backend Engineering Certificate",
+        "bn": "আন্তর্জাতিক মানের ব্যাকএন্ড ইঞ্জিনিয়ারিং সার্টিফিকেট"
+      },
+      {
+        "en": "Enterprise E-Commerce & Microservices Source Code",
+        "bn": "এন্টারপ্রাইজ ই-কমার্স ও মাইক্রোসার্ভিসেস সোর্স কোড"
+      },
+      {
+        "en": "AWS Cloud & DevOps Deployment Sandbox Access",
+        "bn": "এডব্লিউএস ক্লাউড ও ডেভঅপ্স প্র্যাকটিস অ্যাক্সেস"
+      },
+      {
+        "en": "1-on-1 Technical Interview & Remote Job Mentorship",
+        "bn": "১-অন-১ টেকনিক্যাল ইন্টারভিউ ও রিমোট জব গাইডলাইন"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "r1",
+        "name": "Mehedi Hasan",
+        "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100",
+        "role": {
+          "en": "Backend Engineer at TechCorp",
+          "bn": "ব্যাকএন্ড ইঞ্জিনিয়ার, টেককর্প"
+        },
+        "rating": 5,
+        "comment": {
+          "en": "The Redis caching, MongoDB aggregations and Docker modules are top-notch. Landed a senior backend role within 2 months!",
+          "bn": "রেডিস ক্যাশিং ও মঙ্গোডিবি অ্যাগ্রিগেশন অসাধারণ শিখিয়েছে। কোর্স শেষে দ্রুত ব্যাকএন্ড ইঞ্জিনিয়ার হিসেবে জব পেয়েছি।"
+        },
+        "date": "1 Week Ago"
       }
     ]
   }

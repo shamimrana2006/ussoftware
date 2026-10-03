@@ -42,7 +42,7 @@ module.exports = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/prince project management.webp",
+    "image": "/images/course thumbnail/prince project management.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -297,7 +297,7 @@ module.exports = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/pmp project management professional.webp",
+    "image": "/images/course thumbnail/pmp project management professional.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP, PRINCE2)",
@@ -552,7 +552,7 @@ module.exports = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/cisa.webp",
+    "image": "/images/course thumbnail/cisa.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi (CISA, CISSP)",
@@ -807,7 +807,7 @@ module.exports = [
       "en": "10 Classes",
       "bn": "১০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/itil 4 foundation service management.webp",
+    "image": "/images/course thumbnail/itil 4 foundation service management.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (ITIL Managing Professional)",
@@ -1062,7 +1062,7 @@ module.exports = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/product managment.webp",
+    "image": "/images/course thumbnail/product managment.png",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahid Hasan (PMP)",
@@ -1317,7 +1317,7 @@ module.exports = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/microsoft office specialist.webp",
+    "image": "/images/course thumbnail/microsoft office specialist.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahfuz Ahmed",
@@ -1572,7 +1572,7 @@ module.exports = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in ai and data science.webp",
+    "image": "/images/course thumbnail/diploma in ai and data science.png",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -1827,7 +1827,7 @@ module.exports = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spss statistical data analysis.webp",
+    "image": "/images/course thumbnail/spss statistical data analysis.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -2082,7 +2082,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Generative ai and prompt eng.webp",
+    "image": "/images/course thumbnail/Generative ai and prompt eng.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -2337,7 +2337,7 @@ module.exports = [
       "en": "12 Classes",
       "bn": "১২ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/advance excel for business analytics.webp",
+    "image": "/images/course thumbnail/advance excel for business analytics.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahfuz Ahmed",
@@ -2592,7 +2592,7 @@ module.exports = [
       "en": "20 Classes",
       "bn": "২০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/amazon kdp.webp",
+    "image": "/images/course thumbnail/amazon kdp.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tariqul Islam",
@@ -2847,7 +2847,7 @@ module.exports = [
       "en": "40 Classes",
       "bn": "৪০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/sap enterprise fico abap sd mm.webp",
+    "image": "/images/course thumbnail/sap enterprise fico abap sd mm.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim (SAP Consultant)",

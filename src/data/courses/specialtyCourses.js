@@ -42,7 +42,7 @@ module.exports = [
       "en": "34 Classes",
       "bn": "৩৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/oracle dba.webp",
+    "image": "/images/course thumbnail/oracle dba.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim",
@@ -297,7 +297,7 @@ module.exports = [
       "en": "34 Classes",
       "bn": "৩৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/oracle apex.webp",
+    "image": "/images/course thumbnail/oracle apex.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Rezaul Karim",
@@ -552,7 +552,7 @@ module.exports = [
       "en": "14 Classes",
       "bn": "১৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/data analysis with macro.webp",
+    "image": "/images/course thumbnail/data analysis with macro.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Mahfuz Ahmed",
@@ -807,7 +807,7 @@ module.exports = [
       "en": "26 Classes",
       "bn": "২৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ethical hacking.webp",
+    "image": "/images/course thumbnail/ethical hacking.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -1062,7 +1062,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/cyber security specialist.webp",
+    "image": "/images/course thumbnail/cyber security specialist.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -1317,7 +1317,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/computer hacking forensic investigator.webp",
+    "image": "/images/course thumbnail/computer hacking forensic investigator.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -1572,7 +1572,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/cissp.webp",
+    "image": "/images/course thumbnail/cissp.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Salman Farsi",
@@ -1827,7 +1827,7 @@ module.exports = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in multimedia.webp",
+    "image": "/images/course thumbnail/diploma in multimedia.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabbir Hossain",
@@ -2082,7 +2082,7 @@ module.exports = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in web technology.webp",
+    "image": "/images/course thumbnail/diploma in web technology.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "MD Shamim Rana",
@@ -2337,7 +2337,7 @@ module.exports = [
       "en": "84 Classes",
       "bn": "৮৪ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in networking.webp",
+    "image": "/images/course thumbnail/diploma in networking.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
@@ -2592,7 +2592,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/japanese languase program.webp",
+    "image": "/images/course thumbnail/japanese languase program.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sensei Rashedul Islam",
@@ -2847,7 +2847,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/korean language program.webp",
+    "image": "/images/course thumbnail/korean language program.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Seonsaengnim M. Alam",
@@ -3102,7 +3102,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/german language program.webp",
+    "image": "/images/course thumbnail/german language program.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Herr Tanvir Ahmed",
@@ -3357,7 +3357,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/ielts complete preparation.webp",
+    "image": "/images/course thumbnail/ielts complete preparation.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -3612,7 +3612,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/spoken english.webp",
+    "image": "/images/course thumbnail/spoken english.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Farzana Yasmin",
@@ -3867,7 +3867,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/Speak English Fluently.webp",
+    "image": "/images/course thumbnail/Speak English Fluently.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tahsina Akter",
@@ -4122,7 +4122,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/caregiver training program.webp",
+    "image": "/images/course thumbnail/caregiver training program.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Salma Begum (MBBS, MPH)",

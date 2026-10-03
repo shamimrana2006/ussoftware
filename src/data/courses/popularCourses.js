@@ -42,7 +42,7 @@ module.exports = [
       "en": "15 Modules",
       "bn": "১৫ টি মডিউল"
     },
-    "image": "/images/course thumbnail/graphic design.webp",
+    "image": "/images/course thumbnail/graphic design.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabrina Rahman",
@@ -477,7 +477,7 @@ module.exports = [
       "en": "12 Modules",
       "bn": "১২ টি মডিউল"
     },
-    "image": "/images/course thumbnail/wordpress.webp",
+    "image": "/images/course thumbnail/wordpress.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "MD Shamim Rana",
@@ -858,7 +858,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/android application development.webp",
+    "image": "/images/course thumbnail/android application development.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. Zahidul Islam",
@@ -1113,7 +1113,7 @@ module.exports = [
       "en": "7 Modules",
       "bn": "৭ টি মডিউল"
     },
-    "image": "/images/course thumbnail/ui ux design.webp",
+    "image": "/images/course thumbnail/ui ux design.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Nahid Hasan",
@@ -1404,7 +1404,7 @@ module.exports = [
       "en": "15 Modules",
       "bn": "১৫ টি মডিউল"
     },
-    "image": "/images/course thumbnail/Digital Marketing.webp",
+    "image": "/images/course thumbnail/Digital Marketing.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Tareq Mahmud",
@@ -2220,7 +2220,7 @@ module.exports = [
       "en": "12 Modules",
       "bn": "১২ টি মডিউল"
     },
-    "image": "/images/course thumbnail/video editing &motion graphics.webp",
+    "image": "/images/course thumbnail/video editing &motion graphics.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Sabbir Hossain",
@@ -2601,7 +2601,7 @@ module.exports = [
       "en": "12 Modules",
       "bn": "১২ টি মডিউল"
     },
-    "image": "/images/course thumbnail/flutter app.webp",
+    "image": "/images/course thumbnail/flutter app.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Nazmul Haque",
@@ -2982,7 +2982,7 @@ module.exports = [
       "en": "30 Classes",
       "bn": "৩০ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/python django and machine learning.webp",
+    "image": "/images/course thumbnail/python django and machine learning.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Dr. Asif Mahmud",
@@ -3237,7 +3237,7 @@ module.exports = [
       "en": "8 Modules • 138 Hours",
       "bn": "৮ টি মডিউল • ১৩৮ ঘণ্টা"
     },
-    "image": "/images/course thumbnail/web development.webp",
+    "image": "/images/course thumbnail/web development.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "MD Shamim Rana",
@@ -3546,7 +3546,7 @@ module.exports = [
       "en": "36 Classes",
       "bn": "৩৬ টি ক্লাস"
     },
-    "image": "/images/course thumbnail/diploma in full stack.webp",
+    "image": "/images/course thumbnail/diploma in full stack.png",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "MD Shamim Rana",
@@ -3953,7 +3953,7 @@ module.exports = [
       "en": "12 Modules",
       "bn": "১২ টি মডিউল"
     },
-    "image": "/images/course thumbnail/comptia-a-plus.webp",
+    "image": "/images/course thumbnail/comptia-a-plus.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
     "instructor": {
       "name": "Engr. M. A. Wahid",
