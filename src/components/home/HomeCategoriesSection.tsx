@@ -102,10 +102,10 @@ export default function HomeCategoriesSection() {
       id: "diploma",
       title: isEn ? "Professional Diploma Programs" : "প্রফেশনাল ডিপ্লোমা প্রোগ্রাম",
       desc: isEn 
-        ? "6-Month Career Diplomas with Dual Certification & 100% Job Placement Support."
-        : "৬ মাস মেয়াদী ইন্ডাস্ট্রি-স্ট্যান্ডার্ড ডিপ্লোমা ও শতভাগ জব প্লেসমেন্ট সাপোর্ট।",
+        ? "Professional Career Diplomas with Dual Certification & 100% Job Placement Support."
+        : "ইন্ডাস্ট্রি-স্ট্যান্ডার্ড ডিপ্লোমা ও শতভাগ জব প্লেসমেন্ট সাপোর্ট।",
       icon: GraduationCap,
-      count: isEn ? "6 Programs" : "৬টি ডিপ্লোমা প্রোগ্রাম",
+      count: isEn ? "3 Programs" : "৩টি ডিপ্লোমা প্রোগ্রাম",
       gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
       iconColor: "text-[#008744]",
       iconBg: "bg-emerald-50 border-emerald-200/70",

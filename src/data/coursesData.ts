@@ -8690,8 +8690,8 @@ export const coursesData: CourseDetail[] = [
       "bn": "ডিপ্লোমা ইন মাল্টিমিডিয়া"
     },
     "subtitle": {
-      "en": "6-Month Professional Diploma: Graphic Design, 3D Animation, Video Editing, Motion Graphics & Audio Production",
-      "bn": "৬ মাসের ডিপ্লোমা: গ্রাফিক্স ডিজাইন, ৩ডি অ্যানিমেশন, ভিডিও এডিটিং, মোশন গ্রাফিক্স ও অডিও প্রোডাকশন"
+      "en": "Professional Diploma: Graphic Design, 3D Animation, Video Editing, Motion Graphics & Audio Production",
+      "bn": "প্রফেশনাল ডিপ্লোমা: গ্রাফিক্স ডিজাইন, ৩ডি অ্যানিমেশন, ভিডিও এডিটিং, মোশন গ্রাফিক্স ও অডিও প্রোডাকশন"
     },
     "category": "diploma",
     "categoryLabel": {
@@ -8714,16 +8714,16 @@ export const coursesData: CourseDetail[] = [
       "en": "Bengali / English",
       "bn": "বাংলা / ইংরেজি"
     },
-    "fee": "85,000৳",
-    "rawFee": 85000,
-    "originalFee": "1,10,000৳",
+    "fee": "16,000৳",
+    "rawFee": 16000,
+    "originalFee": "25,000৳",
     "duration": {
-      "en": "252 hrs. (6 Months)",
-      "bn": "২৫২ ঘণ্টা (৬ মাস)"
+      "en": "96 hrs. (4 Months)",
+      "bn": "৯৬ ঘণ্টা (৪ মাস)"
     },
     "classesCount": {
-      "en": "84 Classes",
-      "bn": "৮৪ টি ক্লাস"
+      "en": "48 Classes",
+      "bn": "৪৮ টি ক্লাস"
     },
     "image": "/images/course thumbnail/diploma in multimedia.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -8742,8 +8742,8 @@ export const coursesData: CourseDetail[] = [
       "verified": true
     },
     "overview": {
-      "en": "Comprehensive 6-Month professional Diploma in Multimedia. Curriculum includes graphic design & brand identity (Photoshop, Illustrator), audio engineering & sound design (Audition), video editing & film composition (Premiere Pro), motion graphics & visual effects (After Effects), 3D modeling & animation (Blender / Maya), digital broadcasting and international creative studio portfolio creation.",
-      "bn": "৬ মাসের পূর্ণাঙ্গ ডিপ্লোমা ইন মাল্টিমিডিয়া কোর্স। এতে গ্রাফিক ডিজাইন, অডিও সাউন্ড ডিজাইন, সিনেমাটিক ভিডিও এডিটিং, মোশন গ্রাফিক্স, ব্লেন্ডার ৩ডি অ্যানিমেশন ও কমার্শিয়াল শোরিল তৈরি শেখানো হয়।"
+      "en": "Comprehensive professional Diploma in Multimedia. Curriculum includes graphic design & brand identity (Photoshop, Illustrator), audio engineering & sound design (Audition), video editing & film composition (Premiere Pro), motion graphics & visual effects (After Effects), 3D modeling & animation (Blender / Maya), digital broadcasting and international creative studio portfolio creation.",
+      "bn": "পূর্ণাঙ্গ প্রফেশনাল ডিপ্লোমা ইন মাল্টিমিডিয়া কোর্স। এতে গ্রাফিক ডিজাইন, অডিও সাউন্ড ডিজাইন, সিনেমাটিক ভিডিও এডিটিং, মোশন গ্রাফিক্স, ব্লেন্ডার ৩ডি অ্যানিমেশন ও কমার্শিয়াল শোরিল তৈরি শেখানো হয়।"
     },
     "fullDescription": {
       "en": "Master all facets of modern creative digital media. This flagship 252-hour diploma transforms you into a complete Multimedia Specialist capable of working in broadcast television, advertising agencies, game studios, VFX production houses and high-ticket freelance platforms.",
@@ -8945,8 +8945,8 @@ export const coursesData: CourseDetail[] = [
       "bn": "ডিপ্লোমা ইন ওয়েব টেকনোলজি"
     },
     "subtitle": {
-      "en": "6-Month Full Stack Engineering Diploma: React, Next.js, Node.js, PHP Laravel, PostgreSQL & DevOps",
-      "bn": "৬ মাসের ডিপ্লোমা: রিঅ্যাক্ট, নেক্সট.জেএস, নোড.জেএস, পিএইচপি লারাভেল, পোস্টগ্রেএসকিউএল ও ডেভঅপ্স"
+      "en": "Full Stack Engineering Diploma: React, Next.js, Node.js, PHP Laravel, PostgreSQL & DevOps",
+      "bn": "ফুল স্ট্যাক ইঞ্জিনিয়ারিং ডিপ্লোমা: রিঅ্যাক্ট, নেক্সট.জেএস, নোড.জেএস, পিএইচপি লারাভেল, পোস্টগ্রেএসকিউএল ও ডেভঅপ্স"
     },
     "category": "diploma",
     "categoryLabel": {
@@ -8969,16 +8969,16 @@ export const coursesData: CourseDetail[] = [
       "en": "Bengali / English",
       "bn": "বাংলা / ইংরেজি"
     },
-    "fee": "90,000৳",
-    "rawFee": 90000,
-    "originalFee": "1,20,000৳",
+    "fee": "18,000৳",
+    "rawFee": 18000,
+    "originalFee": "28,000৳",
     "duration": {
-      "en": "252 hrs. (6 Months)",
-      "bn": "২৫২ ঘণ্টা (৬ মাস)"
+      "en": "108 hrs. (4 Months)",
+      "bn": "১০৮ ঘণ্টা (৪ মাস)"
     },
     "classesCount": {
-      "en": "84 Classes",
-      "bn": "৮৪ টি ক্লাস"
+      "en": "54 Classes",
+      "bn": "৫৪ টি ক্লাস"
     },
     "image": "/images/course thumbnail/diploma in web technology.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -8997,8 +8997,8 @@ export const coursesData: CourseDetail[] = [
       "verified": true
     },
     "overview": {
-      "en": "Premier 6-Month Diploma in Full Stack Web Technology. Covers modern frontend (HTML5, Tailwind, JavaScript ESNext, React 19, Next.js 15), multi-stack backend (Node.js/Express & PHP Laravel 11), databases (PostgreSQL, MongoDB, Redis), Docker containerization, CI/CD pipelines, AWS cloud hosting and enterprise SaaS capstone projects.",
-      "bn": "৬ মাসের পূর্ণাঙ্গ ডিপ্লোমা ইন ফুল স্ট্যাক ওয়েব টেকনোলজি কোর্স। এতে আধুনিক ফ্রন্টএন্ড (রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, টেইলউইন্ড), ব্যাকএন্ড (নোড.জেএস ও পিএইচপি লারাভেল), ডাটাবেস (পোস্টগ্রেএসকিউএল, মঙ্গোডিবি), ডকার এবং এডব্লিউএস ক্লাউড ডেপ্লয়মেন্ট শেখানো হয়।"
+      "en": "Premier Diploma in Full Stack Web Technology. Covers modern frontend (HTML5, Tailwind, JavaScript ESNext, React 19, Next.js 15), multi-stack backend (Node.js/Express & PHP Laravel 11), databases (PostgreSQL, MongoDB, Redis), Docker containerization, CI/CD pipelines, AWS cloud hosting and enterprise SaaS capstone projects.",
+      "bn": "প্রিমিয়ার ডিপ্লোমা ইন ফুল স্ট্যাক ওয়েব টেকনোলজি কোর্স। এতে আধুনিক ফ্রন্টএন্ড (রিঅ্যাক্ট ১৯, নেক্সট.জেএস ১৫, টেইলউইন্ড), ব্যাকএন্ড (নোড.জেএস ও পিএইচপি লারাভেল), ডাটাবেস (পোস্টগ্রেএসকিউএল, মঙ্গোডিবি), ডকার এবং এডব্লিউএস ক্লাউড ডেপ্লয়মেন্ট শেখানো হয়।"
     },
     "fullDescription": {
       "en": "Graduate as an elite Full-Stack Software Engineer. This 252-hour intensive curriculum trains you across both modern JavaScript/TypeScript ecosystems and enterprise PHP Laravel architectures, preparing you for senior software engineer roles globally.",
@@ -9200,8 +9200,8 @@ export const coursesData: CourseDetail[] = [
       "bn": "ডিপ্লোমা ইন নেটওয়ার্কিং"
     },
     "subtitle": {
-      "en": "6-Month Enterprise Network Engineering Diploma: Cisco CCNA/CCNP, MikroTik MTCNA, Linux, Windows Server & Security",
-      "bn": "৬ মাসের ডিপ্লোমা: সিসকো সিসিএনএ/সিসিএনপি, মিক্রোটিক, লিনাক্স সার্ভার, উইন্ডোজ সার্ভার ও সিকিউরিটি"
+      "en": "Enterprise Network Engineering Diploma: Cisco CCNA/CCNP, MikroTik MTCNA, Linux, Windows Server & Security",
+      "bn": "এন্টারপ্রাইজ নেটওয়ার্ক ইঞ্জিনিয়ারিং ডিপ্লোমা: সিসকো সিসিএনএ/সিসিএনপি, মিক্রোটিক, লিনাক্স সার্ভার, উইন্ডোজ সার্ভার ও সিকিউরিটি"
     },
     "category": "diploma",
     "categoryLabel": {
@@ -9224,16 +9224,16 @@ export const coursesData: CourseDetail[] = [
       "en": "Bengali / English",
       "bn": "বাংলা / ইংরেজি"
     },
-    "fee": "90,000৳",
-    "rawFee": 90000,
-    "originalFee": "1,20,000৳",
+    "fee": "17,000৳",
+    "rawFee": 17000,
+    "originalFee": "26,000৳",
     "duration": {
-      "en": "252 hrs. (6 Months)",
-      "bn": "২৫২ ঘণ্টা (৬ মাস)"
+      "en": "96 hrs. (4 Months)",
+      "bn": "৯৬ ঘণ্টা (৪ মাস)"
     },
     "classesCount": {
-      "en": "84 Classes",
-      "bn": "৮৪ টি ক্লাস"
+      "en": "48 Classes",
+      "bn": "৪৮ টি ক্লাস"
     },
     "image": "/images/course thumbnail/diploma in networking.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -9252,8 +9252,8 @@ export const coursesData: CourseDetail[] = [
       "verified": true
     },
     "overview": {
-      "en": "6-Month Premier Diploma in Network & Systems Engineering. Covers PC hardware engineering, Cisco enterprise routing & switching (CCNA & CCNP concepts), MikroTik RouterOS (MTCNA/MTCRE), Red Hat Linux system administration, Windows Server 2022 Active Directory, network security & firewalls and ISP deployment capstones.",
-      "bn": "৬ মাসের পূর্ণাঙ্গ ডিপ্লোমা ইন নেটওয়ার্ক ও সিস্টেমস ইঞ্জিনিয়ারিং কোর্স। এতে সিসকো সিসিএনএ ও সিসিএনপি রাউটিং-সুইচিং, মিক্রোটিক আইএসপি নেটওয়ার্ক, রেড হ্যাট লিনাক্স, উইন্ডোজ সার্ভার অ্যাক্টিভ ডিরেক্টরি এবং এন্টারপ্রাইজ সিকিউরিটি প্র্যাকটিক্যাল ল্যাবে শেখানো হয়।"
+      "en": "Premier Diploma in Network & Systems Engineering. Covers PC hardware engineering, Cisco enterprise routing & switching (CCNA & CCNP concepts), MikroTik RouterOS (MTCNA/MTCRE), Red Hat Linux system administration, Windows Server 2022 Active Directory, network security & firewalls and ISP deployment capstones.",
+      "bn": "প্রিমিয়ার ডিপ্লোমা ইন নেটওয়ার্ক ও সিস্টেমস ইঞ্জিনিয়ারিং কোর্স। এতে সিসকো সিসিএনএ ও সিসিএনপি রাউটিং-সুইচিং, মিক্রোটিক আইএসপি নেটওয়ার্ক, রেড হ্যাট লিনাক্স, উইন্ডোজ সার্ভার অ্যাক্টিভ ডিরেক্টরি এবং এন্টারপ্রাইজ সিকিউরিটি প্র্যাকটিক্যাল ল্যাবে শেখানো হয়।"
     },
     "fullDescription": {
       "en": "The most complete network engineering diploma in Bangladesh. Master the physical and logical layers of modern networking, ISP bandwidth distribution, enterprise domain controllers, Linux server administration and cybersecurity defense with physical Cisco racks and MikroTik hardware.",
