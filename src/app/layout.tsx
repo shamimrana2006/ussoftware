@@ -136,7 +136,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${spaceGrotesk.variable} ${sora.variable} ${poppins.variable} ${urbanist.variable} ${balooDa2.variable} ${hindSiliguri.variable} h-full antialiased scroll-smooth`}
+      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${spaceGrotesk.variable} ${sora.variable} ${poppins.variable} ${urbanist.variable} ${balooDa2.variable} ${hindSiliguri.variable} antialiased`}
     >
       <head>
         <script

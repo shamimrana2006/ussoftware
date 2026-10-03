@@ -814,7 +814,7 @@ export default function HomePartnersSection() {
       {/* ANIMATED POPUP DETAILS MODAL */}
       <AnimatePresence>
         {selectedPartner && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div data-lenis-prevent className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
             {/* Backdrop Blur Overlay */}
             <motion.div
               initial={{ opacity: 0 }}

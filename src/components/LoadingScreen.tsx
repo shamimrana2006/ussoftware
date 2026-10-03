@@ -95,6 +95,9 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
           try {
             sessionStorage.setItem("us_software_initial_loaded", "true");
           } catch {}
+          if (typeof window !== "undefined" && (window as any).__lenis) {
+            (window as any).__lenis.resize();
+          }
         }, 260);
       }
     };

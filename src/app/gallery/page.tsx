@@ -114,13 +114,23 @@ export default function GalleryPage() {
 
   // Prevent background scroll when lightbox/modal is open
   useEffect(() => {
+    const lenis = typeof window !== "undefined" ? (window as any).__lenis : null;
     if (activeLightboxIndex !== null || activeVideoItem !== null) {
       document.body.style.overflow = "hidden";
+      if (lenis) lenis.stop();
     } else {
       document.body.style.overflow = "unset";
+      if (lenis) {
+        lenis.start();
+        lenis.resize();
+      }
     }
     return () => {
       document.body.style.overflow = "unset";
+      if (lenis) {
+        lenis.start();
+        lenis.resize();
+      }
     };
   }, [activeLightboxIndex, activeVideoItem]);
 
