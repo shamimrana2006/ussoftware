@@ -808,8 +808,8 @@ module.exports = [
       "bn": "৯০ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "30 Classes",
-      "bn": "৩০ টি ক্লাস"
+      "en": "12 Modules",
+      "bn": "১২ টি মডিউল"
     },
     "image": "/images/course thumbnail/cisco certified network associate.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -899,90 +899,216 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Network Fundamentals & IP Subnetting",
-          "bn": "মডিউল ১: নেটওয়ার্ক ফান্ডামেন্টালস ও আইপি সাবনেটিং"
+          "en": "Network Fundamentals, OSI Reference Model & TCP/IP Protocols",
+          "bn": "নেটওয়ার্ক ফান্ডামেন্টালস, ওএসআই মডেল ও টিসিপি/আইপি প্রোটোকল"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 5,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "OSI 7-Layer Model, TCP/IP Protocol Suite & Cabling Types",
-            "bn": "ওএসআই ৭-লেয়ার মডেল, টিসিপি/আইপি প্রোটোকল ও ক্যাবলিং"
-          },
-          {
-            "en": "IPv4 Addressing, Binary Math, Classful vs Classless & Subnetting (FLSM/VLSM)",
-            "bn": "আইপিভি৪ সাবনেটিং, বাইনারি ও ভিএলএসএম ক্যালকুলেশন"
-          },
-          {
-            "en": "IPv6 Addressing, Global Unicast, Link-Local & SLAAC Configuration",
-            "bn": "আইপিভি৬ অ্যাড্রেসিং ও কনফিগারেশন"
-          },
-          {
-            "en": "Cisco IOS CLI Navigation, Basic Router/Switch Configuration & Backups",
-            "bn": "সিসকো আইওএস সিএলআই পরিচিতি ও বেসিক রাউটার কনফিগারেশন"
+            "en": "Network topologies, cabling, OSI 7-layer architecture, TCP/UDP sockets & packet headers",
+            "bn": "নেটওয়ার্ক টপোলজি, ওএসআই মডেল ও টিসিপি/আইপি"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Routing Technologies & Switching Protocols",
-          "bn": "মডিউল ২: রাউটিং টেকনোলজিস ও সুইচিং প্রোটোকলস"
+          "en": "IPv4 & IPv6 Architecture, Subnetting, VLSM & Supernetting",
+          "bn": "আইপিভি৪ ও আইপিভি৬ অ্যাড্রেসিং, সাবনেটিং ও ভিএলএসএম"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 5,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Static Routing, Default Routing & Floating Static Routes",
-            "bn": "স্ট্যাটিক রাউটিং ও ডিফল্ট রাউটিং কনফিগারেশন"
-          },
-          {
-            "en": "Dynamic Routing with OSPFv2 (Neighbor States, Cost, Metric & DR/BDR)",
-            "bn": "ওএসপিএফ রাউটিং প্রটোকল ও নেইবার রিলেশনশিপ"
-          },
-          {
-            "en": "Switching Operations, VLANs, 802.1Q Trunks & Inter-VLAN Routing (ROAS)",
-            "bn": "সুইচিং, ভি-ল্যান, ট্রাংকিং ও ইন্টার-ভিল্যান রাউটিং"
-          },
-          {
-            "en": "Spanning Tree Protocol (STP, RSTP, PVST+) & EtherChannel (LACP/PAGP)",
-            "bn": "স্প্যানিং ট্রি প্রটোকল (STP) ও ইথারচ্যানেল কনফিগারেশন"
+            "en": "Classful/classless addressing, binary subnetting calculations, VLSM design & IPv6 unicast",
+            "bn": "আইপিভি৪ ও আইপিভি৬ সাবনেটিং মাস্টারি"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: IP Services, Security & Network Automation",
-          "bn": "মডিউল ৩: আইপি সার্ভিসেস, সিকিউরিটি ও নেটওয়ার্ক অটোমেশন"
+          "en": "Cisco IOS CLI Navigation, Router Configuration & Device Hardening",
+          "bn": "সিসকো আইওএস সিএলআই, রাউটার কনফিগারেশন ও ডিভাইস হার্ডেনিং"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 5,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "IP Services: DHCP Server/Relay, DNS, NTP, SNMP & Syslog",
-            "bn": "আইপি সার্ভিসেস: ডিএইচসিপি সার্ভার, ডিএনএস ও এসএনএমপি"
-          },
+            "en": "User/Privileged EXEC modes, configuration registers, SSH/Telnet security & banners",
+            "bn": "সিসকো আইওএস সিএলআই ও বেসিক কনফিগারেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Ethernet Switching, VLANs, Trunking (802.1Q) & Inter-VLAN Routing",
+          "bn": "ইথারনেট সুইচিং, ভি-ল্যান, ট্রাঙ্কিং ও ইন্টার-ভ্যান রাউটিং"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Network Address Translation (Static NAT, Dynamic NAT & PAT)",
-            "bn": "নেটওয়ার্ক অ্যাড্রেস ট্রান্সলেশন (NAT/PAT) কনফিগারেশন"
-          },
+            "en": "MAC address tables, VLAN segmentation, DTP, VTP, Native VLANs & Router-on-a-Stick",
+            "bn": "সুইচিং, ভি-ল্যান ও ইন্টার-ভি-ল্যান রাউটিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Spanning Tree Protocols (STP, RSTP, MSTP) & EtherChannel Bundling",
+          "bn": "স্প্যানিং ট্রি প্রোটোকলস (এসটিপি, আরএসটিপি) ও ইথারচ্যানেল"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Network Security: Standard & Extended ACLs, Port Security & AAA",
-            "bn": "নেটওয়ার্ক সিকিউরিটি: এসিএল, পোর্ট সিকিউরিটি ও এএএ"
-          },
+            "en": "Loop prevention, root bridge election, PVST+, Rapid STP & LACP/PAGP EtherChannel",
+            "bn": "স্প্যানিং ট্রি প্রোটোকল ও লিংক অ্যাগ্রিগেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Dynamic Routing Architecture: OSPFv2, OSPFv3 & Route Summarization",
+          "bn": "ডায়নামিক রাউটিং আর্কিটেকচার: ওএসপিএফ ও রাউট সামারাইজেশন"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Network Programmability, REST APIs, JSON, Ansible & CCNA Exam Prep",
-            "bn": "নেটওয়ার্ক অটোমেশন, রেস্ট এপিআই ও সিসিএনএ এক্সাম প্রিপারেশন"
+            "en": "Link-state routing, OSPF adjacency, single/multi-area OSPF, DR/BDR election & metric cost",
+            "bn": "ওএসপিএফ রাউটিং প্রোটোকল কনফিগারেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "First Hop Redundancy Protocols (HSRP, VRRP, GLBP)",
+          "bn": "ফার্স্ট হপ রিডানড্যান্সি প্রোটোকলস (এইচএসআরপি ও ভিআরআরপি)"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Gateway failover redundancy, virtual MACs, priority preemption and tracking interfaces",
+            "bn": "গেটওয়ে রিডানড্যান্সি ও এইচএসআরপি সেটআপ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "IP Services & Network Address Translation (Static, Dynamic, PAT)",
+          "bn": "আইপি সার্ভিসেস, স্ট্যাটিক/ডায়নামিক ন্যাট (NAT/PAT) ও ডিএইচসিপি"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Cisco DHCP Server, DHCP Relay Agent, DNS resolution, NTP and NAT overload (PAT)",
+            "bn": "আইপি সার্ভিসেস, ডিএইচসিপি ও প্যাট কনফিগারেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Network Security Fundamentals: Standard & Extended Access Lists (ACLs)",
+          "bn": "নেটওয়ার্ক সিকিউরিটি ও অ্যাক্সেস কন্ট্রোল লিস্ট (এসিএল)"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Standard/Extended ACL filtering, Port Security, DHCP Snooping, Dynamic ARP Inspection",
+            "bn": "সিকিউরিটি ফিল্টারিং ও পোর্ট সিকিউরিটি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "Wide Area Networks (WAN), Site-to-Site VPNs & IPsec Tunnels",
+          "bn": "ওয়াইড এরিয়া নেটওয়ার্ক (WAN), সাইট-টু-সাইট ভিপিএন ও আইপিসেক"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Point-to-Point WAN, Metro Ethernet, GRE tunnels, IPsec cryptography and site-to-site VPN",
+            "bn": "ওয়াইড এরিয়া নেটওয়ার্ক ও আইপিসেক ভিপিএন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Quality of Service (QoS), Network Management & Monitoring (SNMP, Syslog)",
+          "bn": "কোয়ালিটি অব সার্ভিস (QoS), নেটওয়ার্ক মনিটরিং ও এসএনএমপি"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Classification, marking, queuing, SNMPv2/v3, Syslog logging, NetFlow & CDP/LLDP",
+            "bn": "কিউওএস ট্রাফিক ম্যানেজমেন্ট ও নেটওয়ার্ক মনিটরিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "Network Programmability, REST APIs, Cisco DNA Center & Automation",
+          "bn": "নেটওয়ার্ক অটোমেশন, রেস্ট এপিআই ও সিসকো ডিএনএ সেন্টার"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Software Defined Networking (SDN), REST APIs, JSON/YAML data modeling, Puppet/Ansible & DNA Center",
+            "bn": "এসডিএন নেটওয়ার্ক আর্কিটেকচার ও পাইথন অটোমেশন"
           }
         ]
       }

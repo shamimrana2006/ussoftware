@@ -33,12 +33,7 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
 
   const course: CourseDetail = getCourseById(id);
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "instructor">("overview");
-  const [expandedModule, setExpandedModule] = useState<number | null>(1);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-
-  const toggleModule = (modNum: number) => {
-    setExpandedModule(expandedModule === modNum ? null : modNum);
-  };
 
   return (
     <div className="min-h-screen bg-slate-50/50 flex flex-col font-sans text-slate-800">
@@ -284,7 +279,7 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                   <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                     <div>
                       <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                        {isEn ? "Course Modules & Schedule" : "কোর্স কারিকুলাম ও মডিউলসমূহ"}
+                        {isEn ? "Course Modules" : "কোর্স মডিউলসমূহ"}
                       </h2>
                       <p className="text-xs sm:text-sm text-slate-500 mt-1">
                         {course.curriculum.length} {isEn ? "Comprehensive Modules" : "টি বিস্তৃত মডিউল"} • {course.classesCount[isEn ? "en" : "bn"]}
@@ -292,59 +287,30 @@ export default function CourseDetailsPage({ params }: { params: Promise<{ id: st
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    {course.curriculum.map((mod) => {
-                      const isExpanded = expandedModule === mod.moduleNumber;
-                      return (
-                        <div
-                          key={mod.moduleNumber}
-                          className="border border-slate-200/80 rounded-2xl overflow-hidden transition-all duration-200"
-                        >
-                          <button
-                            onClick={() => toggleModule(mod.moduleNumber)}
-                            className="w-full flex items-center justify-between p-4 sm:p-5 bg-slate-50/70 hover:bg-slate-100/70 text-left transition-colors cursor-pointer"
-                          >
-                            <div className="flex items-center space-x-3 pr-4">
-                              <span className="w-8 h-8 rounded-lg bg-[#008744]/10 text-[#008744] text-xs font-black flex items-center justify-center flex-shrink-0">
-                                #{mod.moduleNumber}
-                              </span>
-                              <div>
-                                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                                  {mod.title[isEn ? "en" : "bn"]}
-                                </h3>
-                                <p className="text-xs text-slate-500 mt-0.5">
-                                  {mod.duration[isEn ? "en" : "bn"]} • {mod.topics.length} {isEn ? "Lessons" : "টি লেসন"}
-                                </p>
-                              </div>
-                            </div>
-                            <ChevronDown
-                              size={18}
-                              className={`text-slate-400 transition-transform duration-200 flex-shrink-0 ${
-                                isExpanded ? "rotate-180 text-[#008744]" : ""
-                              }`}
-                            />
-                          </button>
-
-                          <AnimatePresence>
-                            {isExpanded && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                className="bg-white border-t border-slate-100 p-4 sm:p-5 space-y-2.5"
-                              >
-                                {mod.topics.map((topic, tIdx) => (
-                                  <div key={tIdx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-700 py-1">
-                                    <div className="w-2 h-2 rounded-full bg-[#008744] mt-2 flex-shrink-0"></div>
-                                    <span className="font-medium">{topic[isEn ? "en" : "bn"]}</span>
-                                  </div>
-                                ))}
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
+                  <div className="grid grid-cols-1 gap-3">
+                    {course.curriculum.map((mod) => (
+                      <div
+                        key={mod.moduleNumber}
+                        className="group flex items-center justify-between p-4 sm:p-5 bg-slate-50/70 hover:bg-emerald-50/30 border border-slate-200/80 hover:border-emerald-200/80 rounded-2xl transition-all duration-200"
+                      >
+                        <div className="flex items-center space-x-3.5 sm:space-x-4 pr-3 min-w-0">
+                          <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#008744]/10 text-[#008744] text-xs sm:text-sm font-black flex items-center justify-center flex-shrink-0 group-hover:bg-[#008744] group-hover:text-white transition-colors duration-200 shadow-2xs">
+                            #{mod.moduleNumber}
+                          </span>
+                          <div className="min-w-0">
+                            <h3 className="font-bold text-slate-900 text-sm sm:text-base group-hover:text-[#008744] transition-colors">
+                              {mod.title[isEn ? "en" : "bn"]}
+                            </h3>
+                          </div>
                         </div>
-                      );
-                    })}
+
+                        <div className="flex-shrink-0">
+                          <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-bold bg-white border border-slate-200/80 text-slate-600 group-hover:border-emerald-200 group-hover:text-[#008744] transition-colors shadow-2xs">
+                            {isEn ? `Module ${mod.moduleNumber}` : `মডিউল ${mod.moduleNumber}`}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </motion.div>
               )}

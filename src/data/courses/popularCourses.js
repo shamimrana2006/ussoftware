@@ -39,8 +39,8 @@ module.exports = [
       "bn": "৯০ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "30 Classes",
-      "bn": "৩০ টি ক্লাস"
+      "en": "15 Modules",
+      "bn": "১৫ টি মডিউল"
     },
     "image": "/images/course thumbnail/graphic design.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -130,102 +130,270 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Adobe Photoshop & Advanced Photo Manipulation",
-          "bn": "মডিউল ১: অ্যাডোবি ফটোশপ ও অ্যাডভান্সড ইমেজ ম্যানিপুলেশন"
+          "en": "Visual Foundations: Color Theory, Typography & Composition",
+          "bn": "ভিজ্যুয়াল ফাউন্ডেশন: কালার থিওরি, টাইপোগ্রাফি ও কম্পোজিশন"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Adobe Photoshop Interface, Layers, Smart Objects & Selection Tools",
-            "bn": "ফটোশপ ইন্টারফেস, লেয়ার্স, স্মার্ট অবজেক্টস ও সিলেকশন টুলস"
-          },
-          {
-            "en": "Image Manipulation, Background Removal & Pen Tool Precision",
-            "bn": "ইমেজ ম্যানিপুলেশন, ব্যাকগ্রাউন্ড রিমুভাল ও পেন টুল মাস্টারি"
-          },
-          {
-            "en": "Advance Blend Technique, Layer Masks & Clipping Masks",
-            "bn": "অ্যাডভান্স ব্লেন্ড টেকনিক, লেয়ার মাস্ক ও ক্লিপিং মাস্ক"
-          },
-          {
-            "en": "Hair Masking, Frequency Separation & Action Work Automation",
-            "bn": "হেয়ার মাস্কিং, ফ্রিকোয়েন্সি সেপারেশন ও অ্যাকশন ওয়ার্ক অটোমেশন"
-          },
-          {
-            "en": "Artificial Intelligence (AI) Generative Fill & Neural Filters",
-            "bn": "আর্টিফিশিয়াল ইন্টেলিজেন্স (AI) জেনারেটিভ ফিল ও নিউরাল ফিল্টার"
+            "en": "Fundamentals of color harmony, typography hierarchies and visual balance composition",
+            "bn": "কালার থিওরি, টাইপোগ্রাফি ও ভিজ্যুয়াল ব্যালেন্স কম্পোজিশন"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Adobe Illustrator, Vector Graphics & Branding",
-          "bn": "মডিউল ২: অ্যাডোবি ইলাস্ট্রেটর, ভেক্টর গ্রাফিক্স ও ব্র্যান্ডিং"
+          "en": "Commercial Photo Retouching & Editing in Photoshop",
+          "bn": "কমার্শিয়াল ফটো রিটাচিং ও অ্যাডভান্সড ফটোশপ এডিটিং"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Adobe Illustrator Tools, Pathfinders & Vector Fundamentals",
-            "bn": "ইলাস্ট্রেটর টুলস, পাথফাইন্ডার ও ভেক্টর ফান্ডামেন্টালস"
-          },
-          {
-            "en": "Advance Gradient Technique, Mesh Tool & Color Palettes",
-            "bn": "অ্যাডভান্স গ্রেডিয়েন্ট টেকনিক, মেশ টুল ও কালার প্যালেট"
-          },
-          {
-            "en": "Logo Design (Minimalist, Mascot, Monogram, Emblem, Abstract)",
-            "bn": "লোগো ডিজাইন (মিনিমালিস্ট, মাসকট, মনোগ্রাম ও অ্যাবস্ট্রাক্ট)"
-          },
-          {
-            "en": "T-shirt Design (Typography, Vintage, Screen Print Preparation)",
-            "bn": "টি-শার্ট ডিজাইন (টাইপোগ্রাফি, ভিন্টেজ, স্ক্রিন প্রিন্ট প্রিপারেশন)"
-          },
-          {
-            "en": "Product Packaging Design, Labeling & 3D Mockup Presentation",
-            "bn": "প্রোডাক্ট প্যাকেজিং ডিজাইন, লেবেলিং ও থ্রিডি মকআপ প্রেজেন্টেশন"
+            "en": "Advanced skin retouching, color grading, clipping path and hair masking techniques",
+            "bn": "স্কিন রিটাচিং, কালার গ্রেডিং, ক্লিপিং পাথ ও হেয়ার মাস্কিং"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Portfolio, Marketplace & Soft Skills",
-          "bn": "মডিউল ৩: পোর্টফোলিও, মার্কেটপ্লেস ও সফট স্কিলস"
+          "en": "Vector Art, Iconography & Brand Illustration in Illustrator",
+          "bn": "ভেক্টর আর্ট, আইকনোগ্রাফি ও ব্র্যান্ড ইলাস্ট্রেশন"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Behance Portfolio Setup & High-Converting Case Studies",
-            "bn": "বেহ্যান্স পোর্টফোলিও সেটআপ ও কেস স্টাডি ডিজাইন"
-          },
+            "en": "Pen tool mastery, vector illustration, custom icon design and character art",
+            "bn": "পেন টুল মাস্টারি, ভেক্টর ইলাস্ট্রেশন ও কাস্টম আইকন ডিজাইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Generative AI Masterclass: Adobe Firefly & Leonardo.ai",
+          "bn": "জেনারেটিভ এআই মাস্টারক্লাস: ফায়ারফ্লাই ও লিওনার্দো এআই"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English for Client Interaction & Negotiation",
-            "bn": "ক্লায়েন্ট কমিউনিকেশনের জন্য প্রয়োজনীয় ইংরেজি ও নেগোসিয়েশন"
-          },
+            "en": "Generative AI prompting, inpainting, style transfer and AI asset integration",
+            "bn": "জেনারেটিভ এআই প্রম্পটিং, স্টাইল ট্রান্সফার ও এআই আর্ট ডিজাইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Product Packaging Architecture, Dielines & Label Design",
+          "bn": "প্রোডাক্ট প্যাকেজিং আর্কিটেকচার, ডাইলাইন ও লেবেল ডিজাইন"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Soft Skills, Professional Ethics & Time Management",
-            "bn": "সফট স্কিলস, প্রফেশনাল এথিক্স ও টাইম ম্যানেজমেন্ট"
-          },
+            "en": "Dielines, commercial box packaging, bottle labels and print-ready production files",
+            "bn": "ডাইলাইন, কমার্শিয়াল বক্স প্যাকেজিং, লেবেল ডিজাইন ও প্রিন্ট ফাইল প্রস্তুত"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Digital Product Previews & App Store Showcase Assets",
+          "bn": "ডিজিটাল প্রোডাক্ট প্রিভিউ ও অ্যাপ স্টোর শোকেস ডিজাইন"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Fiverr Gig Creation, SEO, Ranking Strategies & Order Fulfillment",
-            "bn": "ফাইবার গিগ তৈরি, এসইও, র‍্যাংকিং ও অর্ডার ডেলিভারি"
-          },
+            "en": "Landing page banners, app store screenshots and digital presentation mockups",
+            "bn": "ল্যান্ডিং পেজ ব্যানার, অ্যাপ স্টোর স্ক্রিনশট ও ডিজিটাল প্রেজেন্টেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Design Case Studies & Storytelling for Global Clients",
+          "bn": "ডিজাইন কেস স্টাডি ও গ্লোবাল ক্লায়েন্ট স্টোরিটেলিং"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Upwork Profile Approval, Proposal Writing & Direct Client Acquisition",
-            "bn": "আপওয়ার্ক প্রোফাইল, প্রপোজাল রাইটিং ও ডিরেক্ট ক্লায়েন্ট অ্যাকুইজিশন"
+            "en": "Design problem solving narratives, before/after metrics and client case study writing",
+            "bn": "ডিজাইন কেস স্টাডি ও প্রজেক্ট ডেসক্রিপশন তৈরি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Freelance Business Strategy: Pricing, Proposals & Retainers",
+          "bn": "ফ্রিল্যান্স বিজনেস স্ট্র্যাটেজি: প্রাইসিং, প্রপোজাল ও ক্লায়েন্ট রিটেইনার"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "High-ticket project estimation, contract negotiation and winning proposals",
+            "bn": "প্রজেক্ট প্রাইসিং, ক্লায়েন্ট কমিউনিকেশন ও প্রপোজাল রাইটিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Editorial Design, Advertising Principles & Layout Mastery",
+          "bn": "এডিটোরিয়াল ডিজাইন, অ্যাডভার্টাইজিং প্রিন্সিপালস ও লেআউট"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Grid systems, visual hierarchy, white space and print vs digital layout rules",
+            "bn": "গ্রিড সিস্টেম, ভিজ্যুয়াল হায়ারার্কি ও লেআউট প্রিন্সিপালস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "High-Impact Photo Manipulation & Creative Key Visuals",
+          "bn": "হাই-ইমপ্যাক্ট ফটো ম্যানিপুলেশন ও ক্রিয়েটিভ কি-ভিজ্যুয়াল"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Lighting adjustment, shadow creation, blend modes and movie poster manipulation",
+            "bn": "লাইটিং এডজাস্টমেন্ট, শ্যাডো ক্রিয়েশন ও মুভি পোস্টার ম্যানিপুলেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Corporate Logo Design & Complete Brand Identity Systems",
+          "bn": "কর্পোরেট লোগো ডিজাইন ও কমপ্লিট ব্র্যান্ড আইডেন্টিটি"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Concept sketching, geometric logo construction, brand guidelines and color palettes",
+            "bn": "লোগো কনসেপ্ট স্কেচিং, জিওমেট্রিক কনস্ট্রাকশন ও ব্র্যান্ড গাইডলাইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "AI-Powered Asset Production for Multi-Channel Media",
+          "bn": "মাল্টি-চ্যানেল মিডিয়ার জন্য এআই অ্যাসেট প্রোডাকশন"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "High-resolution AI upscaling, vectorizing AI art and print CMYK optimization",
+            "bn": "হাই-রেজোলিউশন এআই আপস্কেলিং ও প্রিন্ট সিএমওয়াইকে অপ্টিমাইজেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 13,
+        "title": {
+          "en": "Photorealistic 3D Mockups & High-Converting Pitch Decks",
+          "bn": "ফটোরিয়ালিস্টিক ৩ডি মকআপ ও ক্লায়েন্ট প্রেজেন্টেশন"
+        },
+        "duration": {
+          "en": "Module 13",
+          "bn": "মডিউল ১৩"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Smart object 3D realistic mockups, stationery branding decks and client PDF decks",
+            "bn": "স্মার্ট অবজেক্ট ৩ডি রিয়ালিস্টিক মকআপ ও ব্র্যান্ডিং প্রেজেন্টেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 14,
+        "title": {
+          "en": "Curating Award-Winning Behance & Dribbble Portfolios",
+          "bn": "আন্তর্জাতিক মানের বেহ্যান্স ও ড্রিবল পোর্টফোলিও কিউরেশন"
+        },
+        "duration": {
+          "en": "Module 14",
+          "bn": "মডিউল ১৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Curating Behance featured projects, Dribbble shots and personal creative identity",
+            "bn": "বেহ্যান্স ফিচার্ড প্রজেক্ট সাজানো, ড্রিবল শটস ও পোর্টফোলিও ব্রান্ডিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 15,
+        "title": {
+          "en": "Marketplace Domination: Fiverr Pro, Upwork & 99designs",
+          "bn": "মার্কেটপ্লেস ডমিনেশন: ফাইবার প্রো, আপওয়ার্ক ও ৯৯ডিজাইনস"
+        },
+        "duration": {
+          "en": "Module 15",
+          "bn": "মডিউল ১৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Fiverr gig SEO, Upwork Project Catalog, 99designs contests and international client retention",
+            "bn": "ফাইবার গিগ এসইও, আপওয়ার্ক প্রজেক্ট ও ৯৯ডিজাইনস কনটেস্ট স্ট্র্যাটেজি"
           }
         ]
       }
@@ -306,8 +474,8 @@ module.exports = [
       "bn": "১২০ ঘণ্টা (৩.৫ মাস)"
     },
     "classesCount": {
-      "en": "40 Classes",
-      "bn": "৪০ টি ক্লাস"
+      "en": "12 Modules",
+      "bn": "১২ টি মডিউল"
     },
     "image": "/images/course thumbnail/wordpress.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -397,98 +565,216 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Domain, Hosting & WordPress Core Architecture",
-          "bn": "মডিউল ১: ডোমেইন, হোস্টিং ও ওয়ার্ডপ্রেস কোর আর্কিটেকচার"
+          "en": "Frontend Foundations: HTML5, CSS3 & Tailwind CSS",
+          "bn": "ফ্রন্টএন্ড ফান্ডামেন্টালস: এইচটিএমএল৫, সিএসএস৩ ও টেইলউইন্ড"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Domain and Hosting Setup, CPanel & Local Server (XAMPP/LocalWP)",
-            "bn": "ডোমেইন ও হোস্টিং সেটআপ, সিপ্যানেল ও লোকাল সার্ভার"
-          },
-          {
-            "en": "WordPress Dashboard Overview & Core File System (wp-config, htaccess)",
-            "bn": "ওয়ার্ডপ্রেস ড্যাশবোর্ড পরিচিতি ও কোর ফাইল সিস্টেম"
-          },
-          {
-            "en": "Media, Pages, Posts, Categories, Tags & Navigation Menus",
-            "bn": "মিডিয়া, পেজ, পোস্ট, ক্যাটাগরি ও মেনু ব্যবস্থাপনা"
-          },
-          {
-            "en": "Settings, Permalinks, Discussion & User Roles & Permissions",
-            "bn": "সেটিংস, পারমালিঙ্ক ও ইউজার রোল ব্যবস্থাপনা"
+            "en": "HTML5 semantic structure, modern CSS styling and Tailwind utility classes",
+            "bn": "এইচটিএমএল৫ স্ট্রাকচার, আধুনিক সিএসএস ও টেইলউইন্ড ইউটিলিটি ক্লাস"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Themes, Elementor Pro & WooCommerce Mastery",
-          "bn": "মডিউল ২: থিম, এলিমেন্টর প্রো ও উকমার্স মাস্টারি"
+          "en": "Advanced WordPress Architecture & Theme Customization",
+          "bn": "অ্যাডভান্সড ওয়ার্ডপ্রেস আর্কিটেকচার ও থিম কাস্টমাইজেশন"
         },
         "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Settings & Theme Overview: Premium Themes (Astra, Hello, OceanWP)",
-            "bn": "সেটিংস ও থিম ওভারভিউ: প্রিমিয়াম থিম কনফিগারেশন"
-          },
-          {
-            "en": "Elementor Pro Visual Page Builder, Header/Footer & Dynamic Templates",
-            "bn": "এলিমেন্টর প্রো পেজ বিল্ডার ও ডাইনামিক টেমপ্লেট ডিজাইন"
-          },
-          {
-            "en": "Plugins Architecture: Essential, Custom & Addon Plugins",
-            "bn": "প্লাগিন আর্কিটেকচার: প্রয়োজনীয় প্লাগিন সেটআপ"
-          },
-          {
-            "en": "WooCommerce & Products: Simple, Variable, Affiliate & Digital Products",
-            "bn": "উকমার্স ও প্রোডাক্টস: সিম্পল, ভেরিয়েবল ও ডিজিটাল প্রোডাক্ট সেটআপ"
-          },
-          {
-            "en": "Payment Gateways (bKash, Nagad, Stripe, PayPal) & Tax/Shipping Rules",
-            "bn": "পেমেন্ট গেটওয়ে (বিকাশ, নগদ, স্ট্রাইপ) ও শিপিং ক্যালকুলেশন"
+            "en": "Deep dive into WordPress theme customization, typography, layouts & child themes",
+            "bn": "ওয়ার্ডপ্রেস থিম কাস্টমাইজেশন, টাইপোগ্রাফি, লেআউট ও চাইল্ড থিম"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Speed Optimization, SEO, Maintenance & Marketplace",
-          "bn": "মডিউল ৩: স্পিড অপ্টিমাইজেশন, এসইও, মেইনটেন্যান্স ও মার্কেটপ্লেস"
+          "en": "Dynamic Web Engines: ACF Pro & JetEngine CPTs",
+          "bn": "ডায়নামিক ডেটাবেস ইঞ্জিন: এসিএফ প্রো ও জেটইঞ্জিন"
         },
         "duration": {
-          "en": "15 Classes • 45 Hours",
-          "bn": "১৫ টি ক্লাস • ৪৫ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "WordPress Management Tools, Migration (All-in-One, Duplicator) & Backups",
-            "bn": "ওয়ার্ডপ্রেস ম্যানেজমেন্ট টুলস, মাইগ্রেশন ও অটো ব্যাকআপ"
-          },
+            "en": "Advanced Custom Fields (ACF), JetEngine CPT, custom taxonomy & dynamic listings",
+            "bn": "অ্যাডভান্সড কাস্টম ফিল্ডস (এসিএফ), জেটইঞ্জিন সিপিটি ও ডায়নামিক লিস্টিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Enterprise LMS & Multi-Author Editorial Portals",
+          "bn": "এন্টারপ্রাইজ এলএমএস ও ডিজিটাল নিউজ পোর্টাল প্রজেক্ট"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "SEO & Speed Optimization: WP Rocket, LiteSpeed Cache, Image Compression & RankMath",
-            "bn": "এসইও ও স্পিড অপ্টিমাইজেশন: ক্যাশ ও র‍্যাঙ্কম্যাথ এসইও"
-          },
+            "en": "Building learning management systems (TutorLMS/LearnDash) and high-traffic news portals",
+            "bn": "লার্নিং ম্যানেজমেন্ট সিস্টেম (এলএমএস) ও হাই-ট্রাফিক নিউজ পোর্টাল প্রজেক্ট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Developer Portfolio & Git/GitHub Version Control",
+          "bn": "প্রফেশনাল ডেভেলপার পোর্টফোলিও ও গিটহাব সেটআপ"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "WordPress Security Hardening, Wordfence, SSL & Malware Removal",
-            "bn": "ওয়ার্ডপ্রেস সিকিউরিটি ও ম্যালওয়্যার ক্লিনআপ"
-          },
+            "en": "Creating high-converting personal portfolios and GitHub repository version control",
+            "bn": "প্রফেশনাল পোর্টফোলিও ওয়েবসাইট তৈরি ও গিটহাব ভার্সন কন্ট্রোল"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Career Strategy, Soft Skills & Industry Mentorship",
+          "bn": "টেক ক্যারিয়ার স্ট্র্যাটেজি, সফট স্কিলস ও মেন্টরশিপ"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English & Client Requirement Gathering",
-            "bn": "কমিউনিকেটিভ ইংলিশ ও ক্লায়েন্ট রিকোয়ারমেন্ট অ্যানালাইসিস"
-          },
+            "en": "English communication, interview preparation, portfolio presentation & career growth",
+            "bn": "ইংলিশ কমিউনিকেশন, ইন্টারভিউ প্রিপারেশন ও ক্যারিয়ার গাইডলাইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Core Infrastructure, CPanel & WordPress Ecosystem",
+          "bn": "সার্ভার ইনফ্রাস্ট্রাকচার, সিপ্যানেল ও ওয়ার্ডপ্রেস সেটআপ"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Soft Skills, Freelance Marketplaces (Fiverr, Upwork) & Portfolio Showcase",
-            "bn": "সফট স্কিলস, ফ্রিল্যান্স মার্কেটপ্লেস ও পোর্টফোলিও শোকেস"
+            "en": "Domain, hosting, CPanel configuration, local development & core architecture",
+            "bn": "ডোমেইন ও হোস্টিং সেটআপ, সিপ্যানেল ও লোকাল সার্ভার ইনস্টলেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Pixel-Perfect UI with Elementor Pro Masterclass",
+          "bn": "পিক্সেল-পারফেক্ট ইউআই ও এলিমেন্টর প্রো মাস্টারক্লাস"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Elementor Pro page builder, custom headers/footers, popups & responsive templates",
+            "bn": "এলিমেন্টর প্রো পেজ বিল্ডার ও রেসপন্সিভ ডায়নামিক টেমপ্লেট ডিজাইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Full-Scale WooCommerce Store & Payment Gateways",
+          "bn": "ফুল-স্কেল উকমার্স ই-কমার্স ও অটোমেটেড পেমেন্ট গেটওয়ে"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Full eCommerce store setup, product variations, payment gateways (bKash/Nagad/Stripe) & shipping",
+            "bn": "সম্পূর্ণ ই-কমার্স স্টোর, ভেরিয়েবল প্রোডাক্ট, পেমেন্ট গেটওয়ে ও শিপিং সেটআপ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "High-Ticket Freelance Strategies (Fiverr & Upwork)",
+          "bn": "হাই-টিকেট ফ্রিল্যান্সিং স্ট্র্যাটেজি (ফাইবার ও আপওয়ার্ক)"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Fiverr gig ranking, Upwork profile optimization & international marketplace strategies",
+            "bn": "ফাইবার গিগ র‍্যাংকিং, আপওয়ার্ক প্রোফাইল অপ্টিমাইজেশন ও স্ট্র্যাটেজি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Client Communication, Contract Negotiation & Proposals",
+          "bn": "ক্লায়েন্ট কমিউনিকেশন, প্রজেক্ট নেগোসিয়েশন ও প্রপোজাল"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Winning proposal writing, client requirements analysis, pricing & project delivery",
+            "bn": "কভার লেটার / প্রপোজাল রাইটিং, ক্লায়েন্ট কমিউনিকেশন ও প্রজেক্ট ডেলিভারি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "95+ PageSpeed Optimization, Security Hardening & SEO",
+          "bn": "৯৫+ পেজস্পিড অপ্টিমাইজেশন, সিকিউরিটি ও টেকনিক্যাল এসইও"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "90+ Google PageSpeed optimization, cache setup, RankMath SEO & security hardening",
+            "bn": "৯০+ গুগল পেজস্পিড স্কোর, ক্যাশ অপ্টিমাইজেশন, এসইও ও সিকিউরিটি রক্ষা"
           }
         ]
       }
@@ -824,8 +1110,8 @@ module.exports = [
       "bn": "৯০ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "30 Classes",
-      "bn": "৩০ টি ক্লাস"
+      "en": "7 Modules",
+      "bn": "৭ টি মডিউল"
     },
     "image": "/images/course thumbnail/ui ux design.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -915,90 +1201,126 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: UX Fundamentals, Research & Wireframing",
-          "bn": "মডিউল ১: ইউএক্স ফান্ডামেন্টালস, রিসার্চ ও ওয়্যারফ্রেমিং"
+          "en": "Design Thinking & Product UX Discovery Frameworks",
+          "bn": "ডিজাইন থিংকিং ও প্রোডাক্ট ইউএক্স ডিসকভারি ফ্রেমওয়ার্ক"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "UX/UI Design Overview, Design Thinking & Product Lifecycle",
-            "bn": "ইউএক্স/ইউআই ডিজাইন পরিচিতি, ডিজাইন থিংকিং ও প্রোডাক্ট লাইফসাইকেল"
-          },
-          {
-            "en": "Typography, Iconography, Imagery & Color Theory for Digital Screens",
-            "bn": "টাইপোগ্রাফি, আইকনোগ্রাফি, কালার থিওরি ও ভিজ্যুয়াল হায়ারার্কি"
-          },
-          {
-            "en": "Sketching & Wireframing: Low-Fidelity Layouts & Information Architecture (IA)",
-            "bn": "স্কেচিং, ওয়্যারফ্রেমিং ও ইনফরমেশন আর্কিটেকচার (IA)"
-          },
-          {
-            "en": "Paper Prototyping Process & User Journey Mapping",
-            "bn": "পেপার প্রোটোটাইপিং প্রসেস ও ইউজার জার্নি ম্যাপিং"
+            "en": "Design thinking methodology, user empathy, heuristic evaluation and design sprints",
+            "bn": "ডিজাইন থিংকিং মেথডলজি, ইউজার রিসার্চ ও হিউরিস্টিক ইভ্যালুয়েশন"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Figma Mastery & UI Design for Mobile/Web",
-          "bn": "মডিউল ২: ফিগমা মাস্টারি ও মোবাইল/ওয়েব ইউআই ডিজাইন"
+          "en": "Interactive Wireframing & Advanced Figma Prototyping",
+          "bn": "ইন্টারঅ্যাক্টিভ ওয়্যারফ্রেম ও অ্যাডভান্সড ফিগমা প্রোটোটাইপিং"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Figma Masterclass: Auto-layout 5.0, Components, Variants & Design Tokens",
-            "bn": "ফিগমা মাস্টারক্লাস: অটো-লেআউট, কম্পোনেন্টস ও ভ্যারিয়েন্টস"
-          },
-          {
-            "en": "App & Web Template Design: Responsive SaaS Dashboard & Landing Pages",
-            "bn": "অ্যাপ ও ওয়েব টেমপ্লেট ডিজাইন: রেসপনসিভ ড্যাশবোর্ড ও ল্যান্ডিং পেজ"
-          },
-          {
-            "en": "Implementation For Mobile Apps (iOS Human Interface & Android Material 3)",
-            "bn": "মোবাইল অ্যাপস ইমপ্লিমেন্টেশন (আইওএস ও মেটেরিয়াল ৩ গাইডলাইন)"
-          },
-          {
-            "en": "Prototyping Process For Web & Mobile: Smart Animate & Interactions",
-            "bn": "ওয়েব ও মোবাইলের জন্য ইন্টারেক্টিভ প্রোটোটাইপিং ও অ্যানিমেশন"
+            "en": "Low-fidelity to high-fidelity wireframes, Figma interactive prototypes and micro-interactions",
+            "bn": "লো-ফিডেলিটি ও হাই-ফিডেলিটি ওয়্যারফ্রেম এবং ফিগমা ইন্টারঅ্যাক্টিভ প্রোটোটাইপ"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Design Systems, Portfolio & Freelancing",
-          "bn": "মডিউল ৩: ডিজাইন সিস্টেমস, পোর্টফোলিও ও ফ্রিল্যান্সিং"
+          "en": "User Research, Empathy Mapping & Journey Architecture",
+          "bn": "ইউজার রিসার্চ, এম্প্যাথি ম্যাপিং ও জার্নি আর্কিটেকচার"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Building a Scalable Design System & Developer Handoff with Zeplin/Figma",
-            "bn": "স্কেলেবল ডিজাইন সিস্টেম তৈরি ও ডেভেলপার হ্যান্ডঅফ"
-          },
+            "en": "User persona creation, journey mapping, empathy maps, information architecture & card sorting",
+            "bn": "ইউজার পারসোনা, জার্নি ম্যাপিং ও ইনফরমেশন আর্কিটেকচার"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Global Product Design Careers & High-Value Freelancing",
+          "bn": "গ্লোবাল প্রোডাক্ট ডিজাইন ক্যারিয়ার ও প্রিমিয়াম ফ্রিল্যান্সিং"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Work Portfolio Creation on Behance & Dribbble (Complete UX Case Study)",
-            "bn": "বেহ্যান্স ও ড্রিবলে প্রফেশনাল ইউএক্স কেস স্টাডি পোর্টফোলিও"
-          },
+            "en": "Product design interview prep, freelancing on Upwork & Fiverr, client handoff and contracts",
+            "bn": "প্রোডাক্ট ডিজাইন ইন্টারভিউ প্রস্তুতি, ফ্রিল্যান্সিং ও ক্লায়েন্ট হ্যান্ডঅফ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Design Systems, 8pt Grids & WCAG 2.2 Accessibility",
+          "bn": "ডিজাইন সিস্টেমস, ৮পিটি গ্রিড আর্কিটেকচার ও ডব্লিউসিএজি এক্সেসিবিলিটি"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English for Design Critiques & Client Pitches",
-            "bn": "ডিজাইন প্রেজেন্টেশন ও ক্লায়েন্ট পিচিংয়ের জন্য ইংরেজি"
-          },
+            "en": "Color theory, typography scales, 8pt grid system, WCAG 2.1 accessibility standards & Figma variables",
+            "bn": "কালার থিওরি, টাইপোগ্রাফি স্কেল, ৮পিটি গ্রিড ও এক্সেসিবিলিটি স্ট্যান্ডার্ড"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Multi-Platform Systems: iOS Human Interface & Material 3",
+          "bn": "মাল্টি-প্ল্যাটফর্ম সিস্টেম: আইওএস ও ম্যাটেরিয়াল ৩ গাইডলাইনস"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Soft Skills & Marketplace Mastery (Upwork, Fiverr, Toptal & LinkedIn)",
-            "bn": "সফট স্কিলস ও রিমোট জব মার্কেটপ্লেস স্ট্র্যাটেজি"
+            "en": "iOS Human Interface Guidelines, Android Material Design 3, SaaS dashboards and responsive web",
+            "bn": "আইওএস ও অ্যান্ড্রয়েড ম্যাটেরিয়াল ডিজাইন গাইডলাইন এবং রেসপন্সিভ ওয়েব"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Industry-Grade UX Case Studies & Portfolio Presentation",
+          "bn": "ইন্ডাস্ট্রি-গ্রেড ইউএক্স কেস স্টাডি ও পোর্টফোলিও প্রেজেন্টেশন"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "In-depth UX case study presentation, Behance & Dribbble curation, resume & portfolio review",
+            "bn": "ইউএক্স কেস স্টাডি প্রেজেন্টেশন, বেহ্যান্স পোর্টফোলিও ও সিভি রিভিউ"
           }
         ]
       }
@@ -1079,8 +1401,8 @@ module.exports = [
       "bn": "৯০ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "30 Classes",
-      "bn": "৩০ টি ক্লাস"
+      "en": "15 Modules",
+      "bn": "১৫ টি মডিউল"
     },
     "image": "/images/course thumbnail/Digital Marketing.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -1170,90 +1492,270 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Meta Marketing (Facebook & Instagram Ads)",
-          "bn": "মডিউল ১: মেটা মার্কেটিং (ফেসবুক ও ইনস্টাগ্রাম অ্যাডস)"
+          "en": "Modern Search Engine Optimization (SEO) & Core Web Vitals",
+          "bn": "মডার্ন সার্চ ইঞ্জিন অপ্টিমাইজেশন (এসইও) ও কোর ওয়েব ভাইটালস"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Meta Marketing Fundamentals, Business Manager & Ad Account Setup",
-            "bn": "মেটা মার্কেটিং ফান্ডামেন্টালস, বিজনেস ম্যানেজার ও অ্যাড অ্যাকাউন্ট সেটআপ"
-          },
-          {
-            "en": "Meta Pixel, Conversions API (CAPI), Server-Side Tracking & Events",
-            "bn": "মেটা পিক্সেল, কনভার্সন এপিআই (CAPI) ও সার্ভার-সাইড ট্র্যাকিং"
-          },
-          {
-            "en": "Custom Audiences, Lookalike Audiences & Funnel-Based Retargeting",
-            "bn": "কাস্টম অডিয়েন্স, লুকঅ্যালাইক অডিয়েন্স ও ফানেল রিটার্গেটিং"
-          },
-          {
-            "en": "Ad Copywriting, Creative Testing, Budget Optimization & Scaling Strategies",
-            "bn": "অ্যাড কপিরাইটিং, ক্রিয়েটিভ টেস্টিং ও স্কেলিং স্ট্র্যাটেজি"
+            "en": "Core search engine algorithms, ranking signals, crawl budgets and indexing foundations",
+            "bn": "সার্চ ইঞ্জিন অ্যালগরিদম, র‍্যাংকিং ফ্যাক্টর ও ইনডেক্সিং গাইডলাইন"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: SEO & SEM (Google Ranking & Google Ads)",
-          "bn": "মডিউল ২: এসইও ও এসইএম (গুগল র‍্যাংকিং ও গুগল অ্যাডস)"
+          "en": "Comprehensive Technical & Manual Site Auditing",
+          "bn": "কমপ্রিহেনসিভ টেকনিক্যাল ও ম্যানুয়াল ওয়েবসাইট অডিট"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "SEO & SEM Overview, Search Intent & Competitor Analysis",
-            "bn": "এসইও ও এসইএম ওভারভিউ, সার্চ ইনটেন্ট ও প্রতিযোগী বিশ্লেষণ"
-          },
-          {
-            "en": "On-Page, Off-Page, Technical and Local SEO (Google My Business)",
-            "bn": "অন-পেজ, অফ-পেজ, টেকনিক্যাল ও লোকাল এসইও (গুগল মাই বিজনেস)"
-          },
-          {
-            "en": "E-commerce & YouTube SEO: Video Ranking, Tags & Channel Optimization",
-            "bn": "ই-কমার্স ও ইউটিউব এসইও: ভিডিও র‍্যাংকিং ও চ্যানেল অপ্টিমাইজেশন"
-          },
-          {
-            "en": "Google Ads (Search, Display, Shopping, YouTube Ads) & GA4 Analytics",
-            "bn": "গুগল অ্যাডস (সার্চ, ডিসপ্লে, শপিং) ও জিএ৪ অ্যানালিটিক্স"
+            "en": "Screaming Frog, site speed analysis, broken links, robots.txt, sitemap and canonical fixes",
+            "bn": "স্ক্রিমিং ফ্রগ, সাইট স্পিড, ব্রোকেন লিংক ও টেকনিক্যাল অডিট"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Email Marketing, Affiliate & Marketplace",
-          "bn": "মডিউল ৩: ই-মেইল মার্কেটিং, অ্যাফিলিয়েট ও মার্কেটপ্লেস"
+          "en": "Amazon Affiliate Mastery & High-Yield Niche Sites",
+          "bn": "অ্যামাজন অ্যাফিলিয়েট মাস্টারি ও হাই-কনভার্টিং নিশ সাইট"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "E-mail Marketing and Tools (Klaviyo, Mailchimp, Lead Capture Forms)",
-            "bn": "ই-মেইল মার্কেটিং ও টুলস (ক্লেভিয়ো, মেইলচিম্প, অটোমেশন ফ্লো)"
-          },
+            "en": "Niche selection, Amazon Associates approval, product reviews and affiliate conversions",
+            "bn": "নিশ সিলেকশন, অ্যামাজন অ্যাসোসিয়েট অ্যাকাউন্ট ও প্রোডাক্ট রিভিউ সাইট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Advanced On-Page Architecture & Authority Link Building",
+          "bn": "অ্যাডভান্সড অন-পেজ আর্কিটেকচার ও অথরিটি লিংক বিল্ডিং"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "E-commerce Marketing and Tools (Shopify/WooCommerce Sales Boost)",
-            "bn": "ই-কমার্স মার্কেটিং ও সেলস বুস্টিং টুলস"
-          },
+            "en": "Title tags, meta descriptions, internal linking, guest posting, backlinks & outreach",
+            "bn": "টাইটেল ট্যাগ, মেটা ডেসক্রিপশন, ব্যাকলিংক বিল্ডিং ও আউটরিচ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "AI-Driven Keyword Intelligence & Competitor Gap Analysis",
+          "bn": "এআই-ড্রিভেন কিওয়ার্ড ইন্টেলিজেন্স ও কম্পিটিটর অ্যানালাইসিস"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Affiliate Marketing Networks, Amazon Associates & Link Monetization",
-            "bn": "অ্যাফিলিয়েট মার্কেটিং নেটওয়ার্কস ও লিংক মনিটাইজেশন"
-          },
+            "en": "Using AI to uncover search intent, long-tail keywords, keyword clusters & competitor gaps",
+            "bn": "এআই দিয়ে লং-টেইল কিওয়ার্ড ও কম্পিটিটর গ্যাপ অ্যানালাইসিস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Performance Social Marketing (Meta, LinkedIn, X & TikTok)",
+          "bn": "পারফরম্যান্স সোশ্যাল মার্কেটিং (মেটা, লিংকডইন ও এক্স)"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English, Soft Skills & Freelance Marketplace Mastery",
-            "bn": "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস ও মার্কেটপ্লেস গাইডলাইন"
+            "en": "Meta Business Suite, organic engagement, target audience segmentation & B2B LinkedIn growth",
+            "bn": "মেটা বিজনেস স্যুট, অডিয়েন্স টার্গেটিং ও সোশ্যাল ব্র্যান্ডিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Google Growth Stack: GA4, Search Console & Local SEO",
+          "bn": "গুগল গ্রোথ স্ট্যাক: জিএ৪, সার্চ কনসোল ও লোকাল এসইও"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Google Analytics 4 (GA4), Search Console performance reports and Google Business Profile local SEO",
+            "bn": "গুগল অ্যানালিটিক্স ৪, সার্চ কনসোল ও লোকাল গুগল বিজনেস প্রোফাইল"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Smart Email Automation & Conversion Lifecycle Funnels",
+          "bn": "স্মার্ট ইমেইল অটোমেশন ও কনভার্সন ফানেল আর্কিটেকচার"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "AI personalization, Mailchimp/Klaviyo automation flows, drip campaigns & lead magnets",
+            "bn": "এআই পারসোনালাইজেশন, ড্রিপ ক্যাম্পেইন ও ইমেইল অটোমেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "High-Intent Keyword Strategies for E-Commerce & SaaS",
+          "bn": "ই-কমার্স ও বি২বি এন্টারপ্রাইজের হাই-ইনটেন্ট কিওয়ার্ড স্ট্র্যাটেজি"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Commercial intent keywords, transactional terms, Semrush, Ahrefs & Google Keyword Planner",
+            "bn": "কমার্শিয়াল কিওয়ার্ড, সেমরাশ, আহরেফস ও গুগল কিওয়ার্ড প্ল্যানার"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "WordPress Technical Setup & Schema Engine Integration",
+          "bn": "ওয়ার্ডপ্রেস টেকনিক্যাল সেটআপ ও স্কিমা ইঞ্জিন অপ্টিমাইজেশন"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "RankMath SEO, Yoast SEO configuration, schema markup, site structure & speed optimization",
+            "bn": "র‍্যাঙ্কম্যাথ এসইও, স্কিমা মার্কআপ ও সাইট স্পিড অপ্টিমাইজেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Content Strategy, Semantic Copywriting & Topic Clusters",
+          "bn": "কনটেন্ট স্ট্র্যাটেজি, সেম্যান্টিক কপিরাইটিং ও টপিক ক্লাস্টার"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Competitor backlink audit, content gap analysis, SEO copywriting & editorial guidelines",
+            "bn": "কম্পিটিটর ব্যাকলিংক অডিট, এসইও কপিরাইটিং ও কনটেন্ট স্ট্র্যাটেজি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "Enterprise AI Content Workflows (ChatGPT, Claude, Jasper)",
+          "bn": "এন্টারপ্রাইজ এআই কনটেন্ট ওয়ার্কফ্লো (চ্যাটজিপিটি, ক্লড, জ্যাসপার)"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "AI prompt engineering, long-form blog post generation, human editing & plagiarism checks",
+            "bn": "এআই প্রম্পট ইঞ্জিনিয়ারিং, এসইও আর্টিকেল তৈরি ও হিউম্যানাইজিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 13,
+        "title": {
+          "en": "Freelance Agency Growth: High-Ticket Client Acquisition",
+          "bn": "ফ্রিল্যান্স এজেন্সি গ্রোথ ও হাই-ভ্যালু ক্লায়েন্ট একুইজিশন"
+        },
+        "duration": {
+          "en": "Module 13",
+          "bn": "মডিউল ১৩"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Fiverr SEO gig ranking, Upwork proposal writing, client onboarding & payment withdrawals",
+            "bn": "ফাইবার গিগ অপ্টিমাইজেশন, আপওয়ার্ক বিডিং ও মার্কেটপ্লেস ক্যারিয়ার"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 14,
+        "title": {
+          "en": "AI-Powered Paid Ads & Algorithmic ROAS Scaling",
+          "bn": "এআই-পাওয়ারড পেইড অ্যাডস ও আরওএএস স্কেলিং"
+        },
+        "duration": {
+          "en": "Module 14",
+          "bn": "মডিউল ১৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Meta Pixel setup, conversion API, AI ad copy generation, ROAS scaling & A/B split testing",
+            "bn": "মেটা পিক্সেল, কনভার্সন এপিআই, আরওএএস অপ্টিমাইজেশন ও এবি টেস্ট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 15,
+        "title": {
+          "en": "Omnichannel Retention Marketing & Automated Drip Systems",
+          "bn": "ওমনিচ্যানেল রিটেনশন মার্কেটিং ও ড্রিপ ক্যাম্পেইন"
+        },
+        "duration": {
+          "en": "Module 15",
+          "bn": "মডিউল ১৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Lead generation funnels, newsletter design, email deliverability, spam score & analytics",
+            "bn": "লিড ম্যাগনেট ফানেল, নিউজলেটার ও ইমেইল ডেলিভারেবিলিটি অপ্টিমাইজেশন"
           }
         ]
       }
@@ -1334,8 +1836,8 @@ module.exports = [
       "bn": "৬০ ঘণ্টা (২ মাস)"
     },
     "classesCount": {
-      "en": "20 Classes",
-      "bn": "২০ টি ক্লাস"
+      "en": "12 Modules",
+      "bn": "১২ টি মডিউল"
     },
     "image": "/images/cpa-nexus-banner.jpg",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -1425,90 +1927,216 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: CPA Fundamentals, Networks & Landing Pages",
-          "bn": "মডিউল ১: সিপিএ ফান্ডামেন্টালস, নেটওয়ার্কস ও ল্যান্ডিং পেজ"
+          "en": "Foundations of CPA & Performance Affiliate Ecosystems",
+          "bn": "সিপিএ ও পারফরম্যান্স অ্যাফিলিয়েট ইকোসিস্টেম"
         },
         "duration": {
-          "en": "6 Classes • 18 Hours",
-          "bn": "৬ টি ক্লাস • ১৮ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 5,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "CPA Marketing Fundamentals & High-Payout Vertical Selection",
-            "bn": "সিপিএ মার্কেটিং ফান্ডামেন্টালস ও হাই-পেআউট নিশ নির্বাচন"
-          },
-          {
-            "en": "Top CPA Network Account Approval Strategy (MaxBounty, CPAGrip, etc.)",
-            "bn": "টপ সিপিএ নেটওয়ার্ক অ্যাকাউন্ট অ্যাপ্রুভাল স্ট্র্যাটেজি"
-          },
-          {
-            "en": "Domain, Hosting & High-Converting Landing Page Architecture",
-            "bn": "ডোমেইন, হোস্টিং ও হাই-কনভার্টিং ল্যান্ডিং পেজ ডিজাইন"
-          },
-          {
-            "en": "Content Locking, Smartlinks & Affiliate Link Masking",
-            "bn": "কনটেন্ট লকিং, স্মার্টলিংক ও লিংক মাস্কিং"
+            "en": "CPA fundamentals, revenue models, conversion triggers and vertical landscape",
+            "bn": "সিপিএ ফান্ডামেন্টালস ও কনভার্সন মডেল"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Paid Traffic (TikTok, Meta, Google & YouTube)",
-          "bn": "মডিউল ২: পেইড ট্রাফিক (টিকটক, মেটা, গুগল ও ইউটিউব)"
+          "en": "Top Tier CPA Networks Approval (MaxBounty, CPALead, OGAds)",
+          "bn": "শীর্ষ সিপিএ নেটওয়ার্কস অ্যাপ্রুভাল মেথডলজি"
         },
         "duration": {
-          "en": "8 Classes • 24 Hours",
-          "bn": "৮ টি ক্লাস • ২৪ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Tik-Tok Ads: Account Warmup, Video Creatives & Campaign Launch",
-            "bn": "টিকটক অ্যাডস: অ্যাকাউন্ট সেটআপ, ক্রিয়েটিভ ও ক্যাম্পেইন"
-          },
-          {
-            "en": "Facebook & Instagram Ads for CPA Lead Generation",
-            "bn": "ফেসবুক ও ইনস্টাগ্রাম অ্যাডস দিয়ে লিড জেনারেশন"
-          },
-          {
-            "en": "Google & YouTube Ads: Search Arbitrage & Discovery Ads",
-            "bn": "গুগল ও ইউটিউব অ্যাডস: সার্চ আরবিট্রেজ ও ডিসকভারি"
-          },
-          {
-            "en": "E-mail Marketing & Lead Nurturing for CPA Offers",
-            "bn": "সিপিএ অফারের জন্য ই-মেইল মার্কেটিং ও লিড নার্চারিং"
+            "en": "Guaranteed network approval techniques, affiliate manager interview prep and profile verification",
+            "bn": "নেটওয়ার্ক অ্যাপ্রুভাল ও প্রোফাইল ভেরিফিকেশন"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Push, Native Ads, Optimization & Scale",
-          "bn": "মডিউল ৩: পুশ, নেটিভ অ্যাডস, অপ্টিমাইজেশন ও স্কেলিং"
+          "en": "High-Converting Niche Selection & Vertical Research",
+          "bn": "হাই-কনভার্টিং নিশ সিলেকশন ও অফার রিসার্চ"
         },
         "duration": {
-          "en": "6 Classes • 18 Hours",
-          "bn": "৬ টি ক্লাস • ১৮ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 5,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Pinterest, Push & Native Ads (PropellerAds, RichAds, Outbrain)",
-            "bn": "পিন্টারেস্ট, পুশ ও নেটিভ অ্যাডস (প্রপেলারঅ্যাডস, রিচঅ্যাডস)"
-          },
+            "en": "Nutra, sweepstakes, gaming, finance, insurance & software niche research",
+            "bn": "প্রফিটেবল নিশ রিসার্চ ও অফার সিলেকশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "High-Yield Landing Page Architecture & A/B Split Testing",
+          "bn": "হাই-কনভার্টিং ল্যান্ডিং পেজ আর্কিটেকচার ও এবি টেস্টিং"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Campaign Optimization, Blacklisting Bad Placements & Scaling Winners",
-            "bn": "ক্যাম্পেইন অপ্টিমাইজেশন, ব্ল্যাকলিস্টিং ও উইনিং ক্যাম্পেইন স্কেল"
-          },
+            "en": "Pre-landers, bridge pages, direct-response copywriting & click-through optimization",
+            "bn": "ল্যান্ডিং পেজ ডিজাইন ও কপিরাইটিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Content Locking & Incentive Marketing Strategies",
+          "bn": "কনটেন্ট লকিং ও ইনসেন্টিভ মার্কেটিং স্ট্র্যাটেজি"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English & Network Manager Negotiation",
-            "bn": "অ্যাফিলিয়েট ম্যানেজার নেগোসিয়েশনের জন্য ইংরেজি"
-          },
+            "en": "File locking, URL locking, offerwall integration and gaming reward funnels",
+            "bn": "কনটেন্ট লকার সেটআপ ও অফারওয়াল ইন্টিগ্রেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Paid Traffic Arbitrage: Meta & Instagram Ads Scaling",
+          "bn": "পেইড ট্রাফিক আর্বিট্রেজ: মেটা ও ইনস্টাগ্রাম অ্যাডস"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Soft Skills, Payment Withdrawals (Payoneer, Wire, Crypto) & Best Practices",
-            "bn": "সফট স্কিলস ও ইন্টারন্যাশনাল পেমেন্ট উইথড্রয়াল মেথডস"
+            "en": "Facebook/Instagram ads campaign setup, pixel tracking, audience targeting & scaling",
+            "bn": "মেটা অ্যাডস ক্যাম্পেইন ও ট্রাফিক স্কেলিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Native Advertising Networks (Taboola, Outbrain, MGID)",
+          "bn": "নেটিভ অ্যাডভার্টাইজিং নেটওয়ার্কস ও ক্যাম্পেইন অপ্টিমাইজেশন"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Native ad headlines, clickbait psychology, widget whitelisting and campaign ROI scaling",
+            "bn": "নেটিভ অ্যাডস ক্যাম্পেইন ও উইজেট অপ্টিমাইজেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Push Notifications & Popunder Traffic Optimization (PropellerAds)",
+          "bn": "পুশ নোটিফিকেশন ও পপ ট্রাফিক অপ্টিমাইজেশন"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "High-volume pop traffic, push subscriber lists, bidding strategies & frequency capping",
+            "bn": "পুশ ট্রাফিক ও পপান্ডার ক্যাম্পেইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Conversion Tracking, Postback URLs & ClickFlare/Voluum",
+          "bn": "কনভার্সন ট্র্যাকিং, পোস্টব্যাক ইউআরএল ও ট্র্যাকার সেটআপ"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "S2S postback tracking, affiliate parameter macros, subID token tracking & Voluum setup",
+            "bn": "সার্ভার-টু-সার্ভার পোস্টব্যাক ট্র্যাকিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "Automated Sales Funnels & Multi-Tier Email Retargeting",
+          "bn": "অটোমেটেড সেলস ফানেল ও ইমেইল রি-টার্গেটিং"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Lead capture funnels, automated drip sequences, SMS retargeting and high-LTV funnels",
+            "bn": "সেলস ফানেল ও ড্রিপ ইমেইল ক্যাম্পেইন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Anti-Fraud Security, Cloaking & Compliance Guidelines",
+          "bn": "অ্যান্টি-ফ্রড সিকিউরিটি, ক্লোকিং ও কমপ্লায়েন্স"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "IP filtering, bot protection, policy compliance, safe page creation & ad account safety",
+            "bn": "অ্যাড অ্যাকাউন্ট সেফটি ও কমপ্লায়েন্স"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "Scaling Campaign ROI, Team Management & Global Banking",
+          "bn": "আরওআই স্কেলিং, গ্লোবাল পেমেন্ট গেটওয়ে ও বিজনেস গ্রোথ"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Multi-thousand dollar budget scaling, team delegating, Payoneer/Wise & tax compliance",
+            "bn": "ক্যাম্পেইন স্কেলিং ও গ্লোবাল পেমেন্ট উইথড্র"
           }
         ]
       }
@@ -1589,8 +2217,8 @@ module.exports = [
       "bn": "৯০ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "30 Classes",
-      "bn": "৩০ টি ক্লাস"
+      "en": "12 Modules",
+      "bn": "১২ টি মডিউল"
     },
     "image": "/images/course thumbnail/video editing &motion graphics.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -1680,94 +2308,216 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Adobe Premiere Pro & Storytelling Fundamentals",
-          "bn": "মডিউল ১: অ্যাডোবি প্রিমিয়ার প্রো ও স্টোরিটেলিং ফান্ডামেন্টালস"
+          "en": "Visual Storytelling, Video Composition & Montage Principles",
+          "bn": "ভিজ্যুয়াল স্টোরিটেলিং, ভিডিও কম্পোজিশন ও মন্টেজ"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Premiere Pro Interface, Project Setup, Sequences & Timeline Navigation",
-            "bn": "প্রিমিয়ার প্রো ইন্টারফেস, প্রজেক্ট সেটআপ ও টাইমলাইন নেভিগেশন"
-          },
-          {
-            "en": "Source Panel & All Essential Editing Tools (Razor, Slip, Slide, Ripple)",
-            "bn": "সোর্স প্যানেল ও প্রয়োজনীয় সব এডিটিং টুলস পরিচিতি"
-          },
-          {
-            "en": "Film & Story Composition, J-Cuts, L-Cuts & Cinematic Pacing",
-            "bn": "ফিল্ম ও স্টোরি কম্পোজিশন, জে-কাট, এল-কাট ও সিনেমাটিক পেসিং"
-          },
-          {
-            "en": "Event Editing: Weddings, Corporate Promos, Music Videos & YouTube Vlogs",
-            "bn": "ইভেন্ট এডিটিং: ওয়েডিং, কর্পোরেট প্রোমো ও ইউটিউব ভ্লগ"
-          },
-          {
-            "en": "Audio Editing: Equalization, Compression, Noise Reduction & Sound FX",
-            "bn": "অডিও এডিটিং: নয়েজ রিডাকশন, সাউন্ড এফএক্স ও অডিও মিক্সিং"
+            "en": "Cinematic camera angles, pacing, 180-degree rule and rhythm-driven editing",
+            "bn": "সিনেমাটিক স্টোরিটেলিং ও ভিডিও কম্পোজিশন"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Visual Effects, CGI, Green Screen & Color Grading",
-          "bn": "মডিউল ২: ভিজ্যুয়াল ইফেক্টস, সিজিআই, গ্রিন স্ক্রিন ও কালার গ্রেডিং"
+          "en": "Adobe Premiere Pro Interface, Timeline & Ingest Workflows",
+          "bn": "অ্যাডোবি প্রিমিয়ার প্রো ইন্টারফেস, টাইমলাইন ও ইনজেস্ট ওয়ার্কফ্লো"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Green Screen Removal (Ultra Key, Alpha Channels & Spill Suppression)",
-            "bn": "গ্রিন স্ক্রিন রিমুভ (আল্ট্রা কি ও স্পিল সাপ্রেশন)"
-          },
-          {
-            "en": "Basic CGI Compositing, Tracking & Background Replacement",
-            "bn": "বেসিক সিজিআই কম্পোজিটিং, মোশন ট্র্যাকিং ও ব্যাকগ্রাউন্ড রিপ্লেসমেন্ট"
-          },
-          {
-            "en": "Basic Color Grading & Correction: Lumetri Scopes, Curves & LUTs",
-            "bn": "কালার গ্রেডিং ও কারেকশন: লুমিত্রি স্কোপস, কার্ভস ও এলইউটি"
-          },
-          {
-            "en": "Export Presets for YouTube 4K, Reels, TikTok & Broadcast Standards",
-            "bn": "ইউটিউব ৪কে, রিলস, টিকটক ও টিভির জন্য সেরা এক্সপোর্ট সেটিংস"
+            "en": "Project organization, proxy editing, multi-cam synchronization and keyboard shortcuts",
+            "bn": "প্রজেক্ট অর্গানাইজেশন ও প্রক্সি এডিটিং"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Adobe After Effects, Motion Graphics & Marketplace",
-          "bn": "মডিউল ৩: অ্যাডোবি আফটার ইফেক্টস, মোশন গ্রাফিক্স ও মার্কেটপ্লেস"
+          "en": "Audio Engineering, Sound Design & Dynamic Voice Mixing",
+          "bn": "অডিও ইঞ্জিনিয়ারিং, সাউন্ড ডিজাইন ও ভয়েস মিক্সিং"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Adobe After Effects Workspace, Keyframes & Graph Editor Speed Curves",
-            "bn": "আফটার ইফেক্টস ওয়ার্কস্পেস, কি-ফ্রেম ও গ্রাফ এডিটর"
-          },
+            "en": "Foley sound design, EQ, noise reduction, vocal clarity & cinematic soundscapes",
+            "bn": "সাউন্ড ডিজাইন, নয়েজ রিডাকশন ও অডিও মিক্সিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Advanced Color Grading & Lumetri Color Science (LUTs & HDR)",
+          "bn": "অ্যাডভান্সড কালার গ্রেডিং ও লুমেট্রি কালার সায়েন্স"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Basic to Advanced Animation: Kinetic Typography & Logo Reveals",
-            "bn": "বেসিক টু অ্যাডভান্সড অ্যানিমেশন: কাইনেটিক টাইপোগ্রাফি ও লোগো অ্যানিমেশন"
-          },
+            "en": "Color correction, scopes reading, film emulation, LUT creation & skin tone grading",
+            "bn": "কালার কারেকশন, স্কোপস রিডিং ও লুমেট্রি কালার"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Dynamic Video Transitions, Speed Ramps & Visual Effects",
+          "bn": "ডায়নামিক ভিডিও ট্রানজিশন, স্পিড র‍্যাম্প ও ভিএফএক্স"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Lower Thirds, Shape Layer Animations & Dynamic Link with Premiere Pro",
-            "bn": "লোয়ার থার্ডস, শেপ অ্যানিমেশন ও ডাইনামিক লিংক"
-          },
+            "en": "Seamless whip pans, optical flow speed ramping, mask transitions & glitch effects",
+            "bn": "স্পিড র‍্যাম্পিং ও কাস্টম ট্রানজিশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Adobe After Effects Foundations: Keyframing & Layer Physics",
+          "bn": "অ্যাডোবি আফটার ইফেক্টস: কি-ফ্রেমিং ও লেয়ার ফিজিক্স"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English, Soft Skills & Freelance Marketplace Strategy",
-            "bn": "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস ও ফ্রিল্যান্স ভিডিও এডিটিং জবস"
+            "en": "Graph editor easing, spatial vs temporal interpolation & parenting hierarchies",
+            "bn": "গ্রাফ এডিটর স্পিড কার্ভ ও কি-ফ্রেমিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Kinetic Typography, Lower Thirds & Title Animation",
+          "bn": "কাইনেটিক টাইপোগ্রাফি, লোয়ার থার্ড ও টাইটেল অ্যানিমেশন"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Dynamic text animators, broadcast lower thirds, subtitle auto-generation & Mogrts",
+            "bn": "কাইনেটিক টাইটেল ও ব্রডকাস্ট প্যাকেজ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Logo Animation, 2D Motion Graphics & Shape Morphing",
+          "bn": "লোগো অ্যানিমেশন, ২ডি মোশন গ্রাফিক্স ও শেপ মরফিং"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Trim paths, liquid shape reveals, corporate logo animation and isometric motion",
+            "bn": "লোগো রিভিল ও ২ডি ভেক্টর মোশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Green Screen Keying, Track Mattes & Rotoscoping Magic",
+          "bn": "গ্রিন স্ক্রিন কি-য়িং, ট্র্যাক ম্যাটস ও রোটোস্কোপিং"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Keylight chroma removal, edge feathering, AI Roto Brush 3 & background replacement",
+            "bn": "ক্রোমা কি-য়িং ও ব্যাকগ্রাউন্ড রিপ্লেসমেন্ট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "3D Camera Tracking, Element 3D & Parallax Animation",
+          "bn": "৩ডি ক্যামেরা ট্র্যাকিং, এলিমেন্ট ৩ডি ও প্যারালাক্স ইফেক্ট"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "3D camera tracking, 2.5D photo parallax animation, lighting & shadow integration",
+            "bn": "৩ডি ক্যামেরা ট্র্যাকিং ও প্যারালাক্স অ্যানিমেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Short-Form Content Mastery (YouTube Shorts, Reels & TikTok)",
+          "bn": "শর্ট-ফর্ম কনটেন্ট মাস্টারি (ইউটিউব শর্টস, রিলস ও টিকটক)"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Hook retention editing, Alex Hormozi caption styling, sound FX & viral pacing",
+            "bn": "ভাইরাল শর্টস এডিটিং ও ক্যাপশন অ্যানিমেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "Client Project Packaging, Portfolio Showcase & Freelance Marketplaces",
+          "bn": "ক্লায়েন্ট প্রজেক্ট ডেলিভারি, শোরিল ও ফ্রিল্যান্স ক্যারিয়ার"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "High-impact showreel creation, Fiverr/Upwork video gig ranking & client retention",
+            "bn": "প্রফেশনাল শোরিল ও মার্কেটপ্লেস ক্যারিয়ার"
           }
         ]
       }
@@ -1848,8 +2598,8 @@ module.exports = [
       "bn": "৯০ ঘণ্টা (৩ মাস)"
     },
     "classesCount": {
-      "en": "30 Classes",
-      "bn": "৩০ টি ক্লাস"
+      "en": "12 Modules",
+      "bn": "১২ টি মডিউল"
     },
     "image": "/images/course thumbnail/flutter app.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -1939,90 +2689,216 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: Dart Fundamentals, Flutter Widgets & UI Design",
-          "bn": "মডিউল ১: ডার্ট ফান্ডামেন্টালস, ফ্লাটার উইজেটস ও ইউআই ডিজাইন"
+          "en": "Dart Programming Fundamentals & OOP Architecture",
+          "bn": "ডার্ট প্রোগ্রামিং ফান্ডামেন্টালস ও ওওপি আর্কিটেকচার"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Introduction to Flutter and Dart: Setup, SDK, VS Code & Emulators",
-            "bn": "ফ্লাটার ও ডার্ট পরিচিতি: এসডিকে ও এমুলেটর সেটআপ"
-          },
-          {
-            "en": "Dart Programming: OOP, Async/Await, Futures & Streams",
-            "bn": "ডার্ট প্রোগ্রামিং: ওওপি, অ্যাসিঙ্ক/অ্যাওয়েট ও স্ট্রিমস"
-          },
-          {
-            "en": "Widgets and UI Design: Stateless vs Stateful, Layouts & Custom Components",
-            "bn": "উইজেটস ও ইউআই ডিজাইন: স্টেটলেস বনাম স্টেটফুল উইজেটস"
-          },
-          {
-            "en": "Navigation and Routing: Named Routes, Deep Linking & GoRouter",
-            "bn": "নেভিগেশন ও রাউটিং: গো-রাউটার ও ডিপ লিংকিং"
+            "en": "Dart syntax, null safety, asynchronous programming, streams and OOP principles",
+            "bn": "ডার্ট সিনট্যাক্স, নাল সেফটি ও অ্যাসিঙ্ক প্রোগ্রামিং"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: State Management, APIs & Local Storage",
-          "bn": "মডিউল ২: স্টেট ম্যানেজমেন্ট, এপিআই ও লোকাল স্টোরেজ"
+          "en": "Flutter Framework Architecture, Widgets & Lifecycle",
+          "bn": "ফ্লাটার ফ্রেমওয়ার্ক আর্কিটেকচার, উইজেটস ও লাইফসাইকেল"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "State Management Solutions: Provider, Riverpod & BLoC Pattern",
-            "bn": "স্টেট ম্যানেজমেন্ট সলিউশনস: প্রোভাইডার, রিভারপড ও ব্লক"
-          },
-          {
-            "en": "Working with Forms and Input: Validation, FormFields & FocusNodes",
-            "bn": "ফর্ম ও ইনপুট: ভ্যালিডেশন ও কাস্টম টেক্সট ফিল্ডস"
-          },
-          {
-            "en": "Integrating APIs and Networking: Dio, HTTP, JSON Serialization & Error Handling",
-            "bn": "এপিআই ইন্টিগ্রেশন: ডিও, এইচটিটিপি ও জেসন সিরিয়ালাইজেশন"
-          },
-          {
-            "en": "Local Data Storage: Shared Preferences, Hive & SQLite / Isar Database",
-            "bn": "লোকাল ডাটা স্টোরেজ: শেয়ার্ড প্রেফারেন্সেস, হাইভ ও এসকিউফ্লাইট"
+            "en": "Stateless vs Stateful widgets, widget tree, element tree and render tree internals",
+            "bn": "স্টেটলেস ও স্টেটফুল উইজেটস এবং ফ্রেমওয়ার্ক আর্কিটেকচার"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: Firebase, Capstone App & Freelancing",
-          "bn": "মডিউল ৩: ফায়ারবেস, ক্যাপস্টোন অ্যাপ ও ফ্রিল্যান্সিং"
+          "en": "Responsive & Adaptive UI Design with Material 3 & Cupertino",
+          "bn": "রেসপন্সিভ ইউআই ডিজাইন: ম্যাটেরিয়াল ৩ ও কিউপারটিনো"
         },
         "duration": {
-          "en": "10 Classes • 30 Hours",
-          "bn": "১০ টি ক্লাস • ৩০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 6,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Authentication and Authorization: Firebase Auth, Google Sign-In & JWT",
-            "bn": "অথেনটিকেশন ও অথরাইজেশন: ফায়ারবেস অথ ও গুগল সাইন-ইন"
-          },
+            "en": "LayoutBuilder, MediaQuery, CustomScrollView, Slivers and cross-platform UI",
+            "bn": "রেসপন্সিভ লেআউট ও কাস্টম স্ক্রোল উইজেটস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "State Management Mastery: Provider, Riverpod & Bloc",
+          "bn": "স্টেট ম্যানেজমেন্ট মাস্টারি: প্রোভাইডার, রিভারপড ও ব্লক"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Building a Full E-Commerce App Project with Payment Gateway",
-            "bn": "পেমেন্ট গেটওয়ে সহ সম্পূর্ণ ই-কমার্স মোবাইল অ্যাপ প্রজেক্ট"
-          },
+            "en": "Scalable reactive state management, events, states, Cubit and global providers",
+            "bn": "রিভারপড ও ব্লক প্যাটার্নে স্টেট ম্যানেজমেন্ট"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "REST API Integration, JSON Serialization & HTTP Client",
+          "bn": "রেস্ট এপিআই ইন্টিগ্রেশন, জেসন ও এইচটিটিপি নেটওয়ার্কিং"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Google Play Store & Apple App Store Deployment Guidelines",
-            "bn": "গুগল প্লে ও অ্যাপল অ্যাপ স্টোরে পাবলিশিং গাইডলাইন"
-          },
+            "en": "Dio/HTTP client, interceptors, error handling, JSON model generation & token refresh",
+            "bn": "রেস্ট এপিআই ও ডায়ো নেটওয়ার্কিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Local Database & Offline Storage (Hive, SQLite, Shared Preferences)",
+          "bn": "লোকাল ডেটাবেস ও অফলাইন ক্যাশিং (হাইভ ও সিকিউলাইট)"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Communicative English, Soft Skills & Freelance App Projects",
-            "bn": "কমিউনিকেটিভ ইংলিশ, সফট স্কিলস ও ফ্রিল্যান্স অ্যাপ প্রজেক্টস"
+            "en": "Fast NoSQL Hive database, SQLite relational queries, offline sync & secure storage",
+            "bn": "হাইভ নোসিকুয়েল ও অফলাইন সিঙ্ক"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "Firebase Suite: Authentication, Firestore, Cloud Functions & Storage",
+          "bn": "ফায়ারবেস স্যুট: অথেন্টিকেশন, ক্লাউড ফায়ারস্টোর ও স্টোরেজ"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Social login (Google/Apple), real-time Firestore database and file uploads",
+            "bn": "ফায়ারবেস অথেন্টিকেশন ও রিয়েলটাইম ডেটাবেস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "Push Notifications, Background Services & Cloud Messaging (FCM)",
+          "bn": "পুশ নোটিফিকেশন, ব্যাকগ্রাউন্ড সার্ভিস ও ক্লাউড মেসেজিং"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "FCM payload integration, local notification scheduling and background tasks",
+            "bn": "ফায়ারবেস ক্লাউড মেসেজিং ও ব্যাকগ্রাউন্ড সার্ভিস"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Device Hardware Integration: Camera, GPS, Maps & Sensors",
+          "bn": "হার্ডওয়্যার ইন্টিগ্রেশন: ক্যামেরা, জিপিএস, ম্যাপস ও সেন্সরস"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Google Maps SDK, live location tracking, camera capture & biometric auth",
+            "bn": "গুগল ম্যাপস ও বায়োমেট্রিক অথেন্টিকেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "In-App Purchases, Payment Gateways (bKash/Nagad/Stripe) & AdMob",
+          "bn": "ইন-অ্যাপ পারচেস, পেমেন্ট গেটওয়ে ও গুগল অ্যাডমব"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Monetization with Google AdMob, Stripe SDK, bKash merchant integration & IAP",
+            "bn": "পেমেন্ট গেটওয়ে ও অ্যাপ মনেটাইজেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "App Architecture, Clean Code & Automated Unit/Widget Testing",
+          "bn": "ক্লিন আর্কিটেকচার, ইউনিট টেস্টিং ও কোড অপ্টিমাইজেশন"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Feature-first clean architecture, repository pattern, unit & widget testing",
+            "bn": "ক্লিন আর্কিটেকচার ও অটোমেটেড টেস্টিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "Google Play Store & Apple App Store Deployment Pipelines (CI/CD)",
+          "bn": "গুগল প্লে স্টোর ও অ্যাপ স্টোর ডিপ্লয়মেন্ট (সিআই/সিডি)"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "App signing, Fastlane CI/CD automation, Play Console & App Store Connect release",
+            "bn": "প্লে কনসোল ও অ্যাপ স্টোর ডিপ্লয়মেন্ট"
           }
         ]
       }
@@ -3032,8 +3908,8 @@ module.exports = [
       "bn": "২০০ ঘণ্টা (৬ মাস)"
     },
     "classesCount": {
-      "en": "60 Classes",
-      "bn": "৬০ টি ক্লাস"
+      "en": "12 Modules",
+      "bn": "১২ টি মডিউল"
     },
     "image": "/images/course thumbnail/comptia-a-plus.webp",
     "videoUrl": "https://www.facebook.com/reel/1931942940836268/",
@@ -3123,94 +3999,216 @@ module.exports = [
       {
         "moduleNumber": 1,
         "title": {
-          "en": "Module 1: CompTIA A+ Hardware, OS & CC Camera Installation",
-          "bn": "মডিউল ১: কম্পটিয়া এ+ হার্ডওয়্যার, ওএস ও সিসি ক্যামেরা ইনস্টলেশন"
+          "en": "Network Fundamentals, OSI Reference Model & TCP/IP Protocols",
+          "bn": "নেটওয়ার্ক ফান্ডামেন্টালস, ওএসআই মডেল ও টিসিপি/আইপি প্রোটোকল"
         },
         "duration": {
-          "en": "20 Classes • 60 Hours",
-          "bn": "২০ টি ক্লাস • ৬০ ঘণ্টা"
+          "en": "Module 01",
+          "bn": "মডিউল ০১"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Computer Hardware Fundamentals: Motherboard, CPU, RAM, Storage & Power",
-            "bn": "কম্পিউটার হার্ডওয়্যার ফান্ডামেন্টালস: মাদারবোর্ড, র‍্যাম ও প্রসেসর"
-          },
-          {
-            "en": "Operating Systems Installation, BIOS/UEFI, Partitioning & Recovery",
-            "bn": "অপারেটিং সিস্টেম ইনস্টলেশন, বায়োস ও পার্টিশনিং"
-          },
-          {
-            "en": "Hardware Troubleshooting, Preventative Maintenance & Toolkits",
-            "bn": "হার্ডওয়্যার ট্রাবলশুটিং ও মেইনটেন্যান্স"
-          },
-          {
-            "en": "CC Camera Installation: Analog, IP Cameras, NVR/DVR, Cabling & Remote Monitoring",
-            "bn": "সিসি ক্যামেরা ইনস্টলেশন: এনভিআর/ডিভিআর, ক্যাবলিং ও রিমোট ভিউ"
+            "en": "Network topologies, cabling, OSI 7-layer architecture, TCP/UDP sockets & packet headers",
+            "bn": "নেটওয়ার্ক টপোলজি, ওএসআই মডেল ও টিসিপি/আইপি"
           }
         ]
       },
       {
         "moduleNumber": 2,
         "title": {
-          "en": "Module 2: Cisco CCNA (Routing, Switching & Security)",
-          "bn": "মডিউল ২: সিসকো সিসিএনএ (রাউটিং, সুইচিং ও সিকিউরিটি)"
+          "en": "IPv4 & IPv6 Architecture, Subnetting, VLSM & Supernetting",
+          "bn": "আইপিভি৪ ও আইপিভি৬ অ্যাড্রেসিং, সাবনেটিং ও ভিএলএসএম"
         },
         "duration": {
-          "en": "20 Classes • 60 Hours",
-          "bn": "২০ টি ক্লাস • ৬০ ঘণ্টা"
+          "en": "Module 02",
+          "bn": "মডিউল ০২"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Basic Networking Concepts: OSI Model, TCP/IP, IPv4 Subnetting & IPv6",
-            "bn": "বেসিক নেটওয়ার্কিং: ওএসআই মডেল, আইপি সাবনেটিং ও আইপিভি৬"
-          },
-          {
-            "en": "Routing and Switching (CCNA): Static Routing, OSPFv2, VLANs, Trunking & STP",
-            "bn": "রাউটিং ও সুইচিং: ওএসপিএফ, ভি-ল্যান, ট্রাংকিং ও এসটিপি"
-          },
-          {
-            "en": "Network Security: Access Control Lists (ACL), Port Security & DHCP Snooping",
-            "bn": "নেটওয়ার্ক সিকিউরিটি: এসিএল, পোর্ট সিকিউরিটি ও ডিএইচসিপি স্নুপিং"
-          },
-          {
-            "en": "Wireless Networking Fundamentals & Cisco Packet Tracer / GNS3 Labs",
-            "bn": "ওয়্যারলেস নেটওয়ার্কিং ও প্যাকেট ট্রেসার লাইভ ল্যাব"
+            "en": "Classful/classless addressing, binary subnetting calculations, VLSM design & IPv6 unicast",
+            "bn": "আইপিভি৪ ও আইপিভি৬ সাবনেটিং মাস্টারি"
           }
         ]
       },
       {
         "moduleNumber": 3,
         "title": {
-          "en": "Module 3: MikroTik RouterOS (MTCNA), Protocols & Career",
-          "bn": "মডিউল ৩: মিক্রোটিক রাউটারওএস (MTCNA), প্রোটোকলস ও ক্যারিয়ার"
+          "en": "Cisco IOS CLI Navigation, Router Configuration & Device Hardening",
+          "bn": "সিসকো আইওএস সিএলআই, রাউটার কনফিগারেশন ও ডিভাইস হার্ডেনিং"
         },
         "duration": {
-          "en": "20 Classes • 60 Hours",
-          "bn": "২০ টি ক্লাস • ৬০ ঘণ্টা"
+          "en": "Module 03",
+          "bn": "মডিউল ০৩"
         },
-        "lessonsCount": 8,
+        "lessonsCount": 4,
         "topics": [
           {
-            "en": "Mikrotik RouterOS Essentials: Winbox, Initial Setup, Bridges & IP Addressing",
-            "bn": "মিক্রোটিক রাউটারওএস বেসিকস: উইনবক্স, ব্রিজ ও আইপি সেটআপ"
-          },
+            "en": "User/Privileged EXEC modes, configuration registers, SSH/Telnet security & banners",
+            "bn": "সিসকো আইওএস সিএলআই ও বেসিক কনফিগারেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "title": {
+          "en": "Ethernet Switching, VLANs, Trunking (802.1Q) & Inter-VLAN Routing",
+          "bn": "ইথারনেট সুইচিং, ভি-ল্যান, ট্রাঙ্কিং ও ইন্টার-ভ্যান রাউটিং"
+        },
+        "duration": {
+          "en": "Module 04",
+          "bn": "মডিউল ০৪"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "ISP Bandwidth Management: Simple Queue, Queue Tree & PCQ Strategies",
-            "bn": "আইএসপি ব্যান্ডউইথ ম্যানেজমেন্ট: কিউ ও পিসিকিউ রুলস"
-          },
+            "en": "MAC address tables, VLAN segmentation, DTP, VTP, Native VLANs & Router-on-a-Stick",
+            "bn": "সুইচিং, ভি-ল্যান ও ইন্টার-ভি-ল্যান রাউটিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 5,
+        "title": {
+          "en": "Spanning Tree Protocols (STP, RSTP, MSTP) & EtherChannel Bundling",
+          "bn": "স্প্যানিং ট্রি প্রোটোকলস (এসটিপি, আরএসটিপি) ও ইথারচ্যানেল"
+        },
+        "duration": {
+          "en": "Module 05",
+          "bn": "মডিউল ০৫"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "PPPoE Server/Client, Hotspot Server, Firewall Filter & NAT Configuration",
-            "bn": "পিপিপিওই সার্ভার, হটস্পট ও ফায়ারওয়াল কনফিগারেশন"
-          },
+            "en": "Loop prevention, root bridge election, PVST+, Rapid STP & LACP/PAGP EtherChannel",
+            "bn": "স্প্যানিং ট্রি প্রোটোকল ও লিংক অ্যাগ্রিগেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "title": {
+          "en": "Dynamic Routing Architecture: OSPFv2, OSPFv3 & Route Summarization",
+          "bn": "ডায়নামিক রাউটিং আর্কিটেকচার: ওএসপিএফ ও রাউট সামারাইজেশন"
+        },
+        "duration": {
+          "en": "Module 06",
+          "bn": "মডিউল ০৬"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Network Services and Protocols (DNS, DHCP, NTP, SNMP, VPN)",
-            "bn": "নেটওয়ার্ক সার্ভিসেস ও প্রোটোকলস (ডিএনএস, ভিপিএন)"
-          },
+            "en": "Link-state routing, OSPF adjacency, single/multi-area OSPF, DR/BDR election & metric cost",
+            "bn": "ওএসপিএফ রাউটিং প্রোটোকল কনফিগারেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 7,
+        "title": {
+          "en": "First Hop Redundancy Protocols (HSRP, VRRP, GLBP)",
+          "bn": "ফার্স্ট হপ রিডানড্যান্সি প্রোটোকলস (এইচএসআরপি ও ভিআরআরপি)"
+        },
+        "duration": {
+          "en": "Module 07",
+          "bn": "মডিউল ০৭"
+        },
+        "lessonsCount": 4,
+        "topics": [
           {
-            "en": "Network Troubleshooting, Communicative English, Soft Skills & Job Placement",
-            "bn": "নেটওয়ার্ক ট্রাবলশুটিং, কমিউনিকেটিভ ইংলিশ ও জব প্লেসমেন্ট"
+            "en": "Gateway failover redundancy, virtual MACs, priority preemption and tracking interfaces",
+            "bn": "গেটওয়ে রিডানড্যান্সি ও এইচএসআরপি সেটআপ"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 8,
+        "title": {
+          "en": "IP Services & Network Address Translation (Static, Dynamic, PAT)",
+          "bn": "আইপি সার্ভিসেস, স্ট্যাটিক/ডায়নামিক ন্যাট (NAT/PAT) ও ডিএইচসিপি"
+        },
+        "duration": {
+          "en": "Module 08",
+          "bn": "মডিউল ০৮"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Cisco DHCP Server, DHCP Relay Agent, DNS resolution, NTP and NAT overload (PAT)",
+            "bn": "আইপি সার্ভিসেস, ডিএইচসিপি ও প্যাট কনফিগারেশন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 9,
+        "title": {
+          "en": "Network Security Fundamentals: Standard & Extended Access Lists (ACLs)",
+          "bn": "নেটওয়ার্ক সিকিউরিটি ও অ্যাক্সেস কন্ট্রোল লিস্ট (এসিএল)"
+        },
+        "duration": {
+          "en": "Module 09",
+          "bn": "মডিউল ০৯"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Standard/Extended ACL filtering, Port Security, DHCP Snooping, Dynamic ARP Inspection",
+            "bn": "সিকিউরিটি ফিল্টারিং ও পোর্ট সিকিউরিটি"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 10,
+        "title": {
+          "en": "Wide Area Networks (WAN), Site-to-Site VPNs & IPsec Tunnels",
+          "bn": "ওয়াইড এরিয়া নেটওয়ার্ক (WAN), সাইট-টু-সাইট ভিপিএন ও আইপিসেক"
+        },
+        "duration": {
+          "en": "Module 10",
+          "bn": "মডিউল ১০"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Point-to-Point WAN, Metro Ethernet, GRE tunnels, IPsec cryptography and site-to-site VPN",
+            "bn": "ওয়াইড এরিয়া নেটওয়ার্ক ও আইপিসেক ভিপিএন"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 11,
+        "title": {
+          "en": "Quality of Service (QoS), Network Management & Monitoring (SNMP, Syslog)",
+          "bn": "কোয়ালিটি অব সার্ভিস (QoS), নেটওয়ার্ক মনিটরিং ও এসএনএমপি"
+        },
+        "duration": {
+          "en": "Module 11",
+          "bn": "মডিউল ১১"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Classification, marking, queuing, SNMPv2/v3, Syslog logging, NetFlow & CDP/LLDP",
+            "bn": "কিউওএস ট্রাফিক ম্যানেজমেন্ট ও নেটওয়ার্ক মনিটরিং"
+          }
+        ]
+      },
+      {
+        "moduleNumber": 12,
+        "title": {
+          "en": "Network Programmability, REST APIs, Cisco DNA Center & Automation",
+          "bn": "নেটওয়ার্ক অটোমেশন, রেস্ট এপিআই ও সিসকো ডিএনএ সেন্টার"
+        },
+        "duration": {
+          "en": "Module 12",
+          "bn": "মডিউল ১২"
+        },
+        "lessonsCount": 4,
+        "topics": [
+          {
+            "en": "Software Defined Networking (SDN), REST APIs, JSON/YAML data modeling, Puppet/Ansible & DNA Center",
+            "bn": "এসডিএন নেটওয়ার্ক আর্কিটেকচার ও পাইথন অটোমেশন"
           }
         ]
       }
