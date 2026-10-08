@@ -98,7 +98,6 @@ function RobotModel() {
   );
 }
 
-useGLTF.preload("/glb file/futuristic_flying_animated_robot_-_low_poly.glb");
 
 export default function RobotCanvas() {
   return (

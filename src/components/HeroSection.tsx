@@ -196,9 +196,20 @@ const heroFloatingShapes: FloatingShapeItem[] = [
 
 export default function HeroSection() {
   const { t } = useLanguage();
-
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      const isLargeScreen = window.innerWidth >= 1024;
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsDesktop(isLargeScreen && !isMobileDevice);
+    };
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   const handlePlayVideo = () => {
     if (videoRef.current) {
@@ -354,10 +365,12 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* 3D Animated Robot Mascot */}
-            <div className="absolute -bottom-14 sm:-bottom-18 lg:-bottom-22 -left-14 sm:-left-20 lg:-left-32 z-40 w-36 h-36 sm:w-48 sm:h-48 lg:w-[320px] lg:h-[320px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)] pointer-events-none transform-gpu">
-              <RobotCanvas />
-            </div>
+            {/* 3D Animated Robot Mascot (Desktop only to prevent mobile downloading and performance freeze) */}
+            {isDesktop && (
+              <div className="hidden lg:block absolute -bottom-14 sm:-bottom-18 lg:-bottom-22 -left-14 sm:-left-20 lg:-left-32 z-40 w-36 h-36 sm:w-48 sm:h-48 lg:w-[320px] lg:h-[320px] drop-shadow-[0_30px_40px_rgba(0,0,0,0.3)] pointer-events-none transform-gpu">
+                <RobotCanvas />
+              </div>
+            )}
 
             {/* Video Player (Local Clean HTML5 Video - Zero Ads & Zero Pause Suggestions) */}
             <motion.div

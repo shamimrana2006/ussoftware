@@ -1,12 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import RobotCanvas from "@/components/RobotCanvas";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
+
+const RobotCanvas = dynamic(() => import("@/components/RobotCanvas"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="w-10 h-10 rounded-full border-2 border-[#008744]/30 border-t-[#008744] animate-spin" />
+    </div>
+  ),
+});
 import {
   BookOpen,
   Briefcase,
@@ -32,6 +41,18 @@ export default function NotFound() {
   const notFound = t.notFound;
 
   const [searchQuery, setSearchQuery] = useState("");
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      const isLargeScreen = window.innerWidth >= 1024;
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsDesktop(isLargeScreen && !isMobileDevice);
+    };
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   const allNavLinks = [
     {
@@ -158,9 +179,18 @@ export default function NotFound() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-dashed border-emerald-300/60 rounded-full animate-spin pointer-events-none" style={{ animationDuration: "25s" }} />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-emerald-200/30 rounded-full pointer-events-none" />
 
-              {/* 3D Robot Canvas */}
-              <div className="w-full h-full relative z-10">
-                <RobotCanvas />
+              {/* 3D Robot Canvas or Lightweight Mobile Icon */}
+              <div className="w-full h-full relative z-10 flex items-center justify-center">
+                {isDesktop ? (
+                  <RobotCanvas />
+                ) : (
+                  <div className="flex flex-col items-center justify-center text-center p-6 space-y-3">
+                    <div className="w-24 h-24 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center shadow-inner">
+                      <Sparkles className="w-12 h-12 text-[#008744] animate-pulse" />
+                    </div>
+                    <span className="text-sm font-bold text-slate-700">US Software 404 Guide</span>
+                  </div>
+                )}
               </div>
 
               {/* Floating Tooltip Pill */}

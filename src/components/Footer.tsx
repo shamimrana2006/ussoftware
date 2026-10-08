@@ -308,7 +308,6 @@ export default function Footer() {
                 { name: isEn ? "Events & Workshops" : "ইভেন্টস ও ওয়ার্কশপ", href: "/events" },
                 { name: isEn ? "Courses" : "সকল কোর্স", href: "/courses" },
                 { name: isEn ? "Verification" : "সার্টিফিকেট যাচাই", href: "/certification" },
-                { name: isEn ? "3D Canvas" : "৩ডি ক্যানভাস", href: "/canvas" },
               ].map((item, idx) => (
                 <li key={idx}>
                   <Link

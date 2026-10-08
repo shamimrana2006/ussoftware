@@ -81,6 +81,14 @@ export default function CoursesClient() {
   const [expandedRowId, setExpandedRowId] = useState<string | null>(null);
   const [selectedCourseForModal, setSelectedCourseForModal] = useState<FormattedCourse | null>(null);
 
+  const INITIAL_COUNT = 20;
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+
+  // Reset pagination when category, mode, search or sort changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_COUNT);
+  }, [activeCategory, selectedMode, searchQuery, sortBy]);
+
   // Close sort dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -272,6 +280,11 @@ export default function CoursesClient() {
 
     return result;
   }, [allCourses, activeCategory, selectedMode, searchQuery, sortBy]);
+
+  // Paginated course slice (20 per page for high performance and fast DOM rendering)
+  const displayedCourses = useMemo(() => {
+    return filteredCourses.slice(0, visibleCount);
+  }, [filteredCourses, visibleCount]);
 
   return (
     <div className="min-h-screen bg-[#f8fafc] flex flex-col">
@@ -693,7 +706,7 @@ export default function CoursesClient() {
                   /* 1. GRID VIEW: 3-COLUMN RICH VISUAL CARDS                                  */
                   /* ========================================================================= */
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
-                    {filteredCourses.map((course) => {
+                    {displayedCourses.map((course) => {
                       const CatIcon = course.catIcon;
 
                       return (
@@ -841,7 +854,7 @@ export default function CoursesClient() {
                   /* 2. LIST/ROW VIEW: COMPACT SIMPLE EXPANDABLE ROWS WITH SMALL BUTTONS       */
                   /* ========================================================================= */
                   <div className="space-y-3">
-                    {filteredCourses.map((course) => {
+                    {displayedCourses.map((course) => {
                       const CatIcon = course.catIcon;
                       const isExpanded = expandedRowId === course.id;
 
@@ -1087,6 +1100,41 @@ export default function CoursesClient() {
                         </motion.div>
                       );
                     })}
+                  </div>
+                )}
+
+                {/* SEE MORE / LOAD MORE BUTTON FOR 20+ COURSES */}
+                {visibleCount < filteredCourses.length && (
+                  <div className="mt-8 pt-6 border-t border-slate-200/80 flex flex-col items-center justify-center text-center">
+                    <p className="text-xs font-semibold text-slate-500 mb-3">
+                      {isEn
+                        ? `Showing ${displayedCourses.length} of ${filteredCourses.length} courses`
+                        : `${filteredCourses.length}টি কোর্সের মধ্যে ${displayedCourses.length}টি প্রদর্শিত হচ্ছে`}
+                    </p>
+
+                    {/* Progress Bar */}
+                    <div className="w-52 sm:w-64 h-1.5 bg-slate-200/80 rounded-full overflow-hidden mb-4">
+                      <div
+                        className="h-full bg-gradient-to-r from-[#008744] to-emerald-500 rounded-full transition-all duration-300"
+                        style={{
+                          width: `${(displayedCourses.length / filteredCourses.length) * 100}%`,
+                        }}
+                      />
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setVisibleCount((prev) =>
+                          Math.min(prev + 20, filteredCourses.length)
+                        )
+                      }
+                      className="group inline-flex items-center gap-2 bg-white hover:bg-[#008744] text-[#008744] hover:text-white border-2 border-[#008744] px-8 py-3 rounded-2xl text-xs sm:text-sm font-bold shadow-2xs hover:shadow-md hover:shadow-emerald-700/20 transition-all duration-200 cursor-pointer"
+                    >
+                      <Sparkles size={15} className="group-hover:rotate-12 transition-transform" />
+                      <span>{isEn ? "See More Courses" : "আরও কোর্স দেখুন"}</span>
+                      <ChevronDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
+                    </button>
                   </div>
                 )}
               </div>
