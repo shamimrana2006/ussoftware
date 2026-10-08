@@ -387,7 +387,7 @@ export default function Header() {
     { href: "/projects", label: t.header.projects || "Success Story" },
     { href: "/mentors", label: t.header.mentors || "Mentors" },
     { href: "/certification", label: t.header.certification || "Certification" },
-    { href: "/contact", label: t.header.contact || "Contact" },
+    { href: "/contact-us", label: t.header.contact || "Contact" },
   ];
 
   const handleHomeClick = (e: React.MouseEvent) => {
@@ -581,8 +581,8 @@ export default function Header() {
             </NavItem>
 
             <NavItem
-              href="/contact"
-              active={isLinkActive("/contact")}
+              href="/contact-us"
+              active={isLinkActive("/contact-us")}
             >
               {t.header.contact || "Contact"}
             </NavItem>

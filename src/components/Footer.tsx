@@ -278,10 +278,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
               {[
-                { name: isEn ? "Help Center" : "হেল্প সেন্টার", href: "/contact" },
+                { name: isEn ? "Help Center" : "হেল্প সেন্টার", href: "/contact-us" },
                 { name: isEn ? "Full-Stack Web" : "ফুল-স্ট্যাক ওয়েব", href: "/courses" },
                 { name: isEn ? "AI & Agents" : "এআই ও এজেন্টস", href: "/courses" },
-                { name: isEn ? "Feedback" : "ফিডব্যাক", href: "/contact" },
+                { name: isEn ? "Feedback" : "ফিডব্যাক", href: "/contact-us" },
               ].map((item, idx) => (
                 <li key={idx}>
                   <Link

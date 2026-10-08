@@ -87,7 +87,7 @@ export default function NotFound() {
     {
       id: "contact",
       title: notFound.links.contact,
-      path: "/contact",
+      path: "/contact-us",
       icon: Phone,
       badge: isEn ? "24/7 Support" : "২৪/৭ সাপোর্ট",
       color: "from-rose-500/20 via-red-500/10 to-transparent",
@@ -214,7 +214,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-slate-700 border border-slate-200 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base shadow-2xs transition-all duration-200 cursor-pointer"
             >
               <Phone size={16} className="text-rose-500" />

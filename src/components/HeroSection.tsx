@@ -10,9 +10,18 @@ import {
   RiDatabase2Line,
   RiStackLine
 } from "react-icons/ri";
-import RobotCanvas from "./RobotCanvas";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { COMPANY_STATS } from "@/data/companyStats";
+
+const RobotCanvas = dynamic(() => import("./RobotCanvas"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="w-12 h-12 rounded-full border-2 border-[#008744]/30 border-t-[#008744] animate-spin" />
+    </div>
+  ),
+});
 
 const SparkleIcon = ({ size = 24, className, style }: { size?: number | string; className?: string; style?: React.CSSProperties }) => (
   <svg
@@ -460,7 +469,7 @@ export default function HeroSection() {
               </motion.button>
             </Link>
 
-            <Link href="/contact">
+            <Link href="/contact-us">
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}

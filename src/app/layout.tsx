@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
-import { Geist, Geist_Mono, Hind_Siliguri, Baloo_Da_2, Outfit, Plus_Jakarta_Sans, Space_Grotesk, Sora, Poppins, Urbanist } from "next/font/google";
+import { Geist, Geist_Mono, Hind_Siliguri, Baloo_Da_2, Outfit, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -32,27 +31,9 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const poppins = Poppins({
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-poppins",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const urbanist = Urbanist({
-  variable: "--font-urbanist",
   subsets: ["latin"],
   display: "swap",
 });
@@ -72,30 +53,35 @@ const hindSiliguri = Hind_Siliguri({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#f8fafc",
+  themeColor: "#008744",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ussoftwareltd.com"),
   title: {
     default: "US Software LTD | Your Complete IT & Tech Education Partner",
     template: "%s | US Software LTD",
   },
   description:
-    "Empowering engineers and businesses with enterprise software engineering, scalable cloud systems and industry-grade IT academy programs.",
+    "Empowering engineers and businesses with enterprise software engineering, scalable cloud systems and industry-grade IT academy programs in Bangladesh.",
   keywords: [
     "US Software LTD",
     "Software Engineering Bangladesh",
-    "Full-Stack Development",
-    "Next.js",
-    "React",
-    "AI Training",
     "IT Training Dhaka",
-    "DevOps Cloud",
+    "Full-Stack Web Development",
+    "Next.js Bootcamp",
+    "React Training",
+    "Cyber Security Course",
+    "UI/UX Design Course",
+    "App Development Course",
+    "Digital Marketing CPA",
+    "DevOps Cloud Engineering",
+    "Software Company Bangladesh",
   ],
-  authors: [{ name: "US Software LTD" }],
+  authors: [{ name: "US Software LTD", url: "https://ussoftwareltd.com" }],
   creator: "US Software LTD",
   publisher: "US Software LTD",
   formatDetection: {
@@ -103,29 +89,49 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/logo/us software logo.png",
     shortcut: "/logo/us software logo.png",
     apple: "/logo/us software logo.png",
   },
   openGraph: {
-    title: "US Software LTD | Your Complete IT Partner",
+    title: "US Software LTD | Your Complete IT & Tech Education Partner",
     description:
       "Enterprise software solutions & premier tech academy. Build production-grade skills with 1-on-1 industry mentorship.",
     url: "https://ussoftwareltd.com",
     siteName: "US Software LTD",
-    locale: "en_US",
+    locale: "bn_BD",
+    alternateLocale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/logo/us software logo.png",
+        width: 800,
+        height: 600,
+        alt: "US Software LTD",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "US Software LTD | Your Complete IT Partner",
+    title: "US Software LTD | Your Complete IT & Tech Education Partner",
     description:
       "We deliver smart, scalable and secure IT solutions and industry-grade training.",
+    images: ["/logo/us software logo.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -136,27 +142,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="bn"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${spaceGrotesk.variable} ${sora.variable} ${poppins.variable} ${urbanist.variable} ${balooDa2.variable} ${hindSiliguri.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${poppins.variable} ${balooDa2.variable} ${hindSiliguri.variable} antialiased`}
     >
       <body
         className="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-900 selection:bg-[#008744]/20 selection:text-[#008744] antialiased"
         style={{ fontFamily: "var(--font-hind), sans-serif" }}
       >
-        <Script
-          id="app-loader-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (!sessionStorage.getItem('us_software_initial_loaded')) {
-                  document.documentElement.classList.add('app-loading');
-                }
-              } catch(e) {}
-            `,
-          }}
-        />
         <LanguageProvider>
           <LoadingScreen>
             <SmoothScroll>

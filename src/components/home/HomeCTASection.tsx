@@ -95,7 +95,7 @@ export default function HomeCTASection() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-xs hover:border-slate-300 hover:shadow-sm transition-all"
               >
                 <PhoneCall size={15} className="text-[#DE1F26]" />
