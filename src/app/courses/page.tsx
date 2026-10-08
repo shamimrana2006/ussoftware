@@ -414,7 +414,7 @@ function CoursesContent() {
           {/* MAIN LAYOUT: LEFT SIDEBAR (SEARCH + CATEGORIES) & RIGHT CONTENT (CONTROLS + COURSE GRID) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             {/* LEFT SIDEBAR: Search & Categories (Sticky on Desktop) */}
-            <div data-lenis-prevent className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-[88px] xl:top-[96px] space-y-4 max-h-[calc(100vh-7.5rem)] overflow-y-auto overflow-x-hidden pr-0.5 z-20">
+            <div data-lenis-prevent-wheel className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-[88px] xl:top-[96px] space-y-4 lg:max-h-[calc(100vh-7.5rem)] lg:overflow-y-auto lg:overflow-x-hidden pr-0.5 z-20">
               {/* Search Input Box */}
               <div className="bg-white rounded-2xl border border-slate-200/90 p-2.5 shadow-2xs focus-within:border-[#008744] focus-within:ring-2 focus-within:ring-[#008744]/15 transition-all">
                 <div className="relative flex items-center">
