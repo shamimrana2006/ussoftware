@@ -93,14 +93,14 @@ export default function Home() {
       {/* 2. COURSES SECTION: Featured Courses */}
       <HomeCoursesSection />
 
-      {/* 3. CATEGORIES SECTION: Explore Course Categories */}
-      <HomeCategoriesSection />
+      {/* 3. CATEGORIES SECTION: Explore Course Categories (Hidden temporarily) */}
+      {/* <HomeCategoriesSection /> */}
 
       {/* 4. BENEFITS SECTION: Why Choose Us */}
       <HomeBenefitsSection />
 
-      {/* 5. TRAINING METHODOLOGY SECTION: Our Training Methodology */}
-      <HomeTrainingSection />
+      {/* 5. TRAINING METHODOLOGY SECTION: Our Training Methodology (Hidden temporarily) */}
+      {/* <HomeTrainingSection /> */}
 
       {/* 7. PARTNERS SECTION: Our Industry Partners */}
       <HomePartnersSection />

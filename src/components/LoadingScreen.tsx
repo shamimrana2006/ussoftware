@@ -14,17 +14,9 @@ const isBotOrLighthouse = () => {
 };
 
 export default function LoadingScreen({ children }: { children?: React.ReactNode }) {
-  const [isLoading, setIsLoading] = useState(() => {
-    if (typeof window !== "undefined") {
-      try {
-        if (sessionStorage.getItem("us_software_initial_loaded")) {
-          return false;
-        }
-      } catch {}
-    }
-    return true;
-  });
-  const [isFinishedLoading, setIsFinishedLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFinishedLoading, setIsFinishedLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [statusIndex, setStatusIndex] = useState(0);
 
@@ -43,6 +35,8 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
   const infinityPath = "M 120,60 C 150,15 210,15 210,60 C 210,105 150,105 120,60 Z";
 
   useEffect(() => {
+    setIsClient(true);
+
     // Bypass loader immediately for search engine crawlers and PageSpeed / Lighthouse audits
     if (isBotOrLighthouse()) {
       setIsLoading(false);
@@ -65,26 +59,31 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
     setIsFinishedLoading(false);
 
     let animationFrameId: number;
-    const startTime = performance.now();
+    let startTime: number | null = null;
     const duration = 850; // Snappy 850ms duration for high-speed feel and great user experience
 
-    const updateProgress = (currentTime: number) => {
-      const elapsed = currentTime - startTime;
-      const rawProgress = Math.min(elapsed / duration, 1);
+    const updateProgress = (timestamp: number) => {
+      const currentTime = typeof timestamp === "number" && !isNaN(timestamp) ? timestamp : performance.now();
+      if (startTime === null) {
+        startTime = currentTime;
+      }
+      const elapsed = Math.max(0, currentTime - startTime);
+      const rawProgress = Math.min(Math.max(0, elapsed / duration), 1);
 
-      const curvedProgress = Math.min(1, Math.pow(rawProgress, 0.85));
-      const currentPercent = Math.min(Math.round(curvedProgress * 100), 100);
-      setProgress(currentPercent);
+      const curvedProgress = Math.min(1, Math.max(0, Math.pow(rawProgress, 0.85)));
+      const currentPercent = Math.min(Math.max(0, Math.round(curvedProgress * 100)), 100);
+      const safePercent = Number.isFinite(currentPercent) ? currentPercent : 0;
+      setProgress(safePercent);
 
-      if (currentPercent < 22) {
+      if (safePercent < 22) {
         setStatusIndex(0);
-      } else if (currentPercent < 45) {
+      } else if (safePercent < 45) {
         setStatusIndex(1);
-      } else if (currentPercent < 70) {
+      } else if (safePercent < 70) {
         setStatusIndex(2);
-      } else if (currentPercent < 90) {
+      } else if (safePercent < 90) {
         setStatusIndex(3);
-      } else if (currentPercent < 100) {
+      } else if (safePercent < 100) {
         setStatusIndex(4);
       } else {
         setStatusIndex(5);
@@ -118,7 +117,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && (
+        {isClient && isLoading && (
           <motion.div
             key="loader-container"
             initial={{ opacity: 1 }}
@@ -304,7 +303,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
                 <motion.span
                   className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 font-mono"
                 >
-                  {progress}
+                  {Number.isFinite(progress) ? progress : 0}
                 </motion.span>
                 <span className="text-xl sm:text-2xl font-mono text-[#008744] font-bold">
                   %
@@ -317,7 +316,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
                   {/* Progress Track */}
                   <motion.div
                     className="h-full bg-gradient-to-r from-[#DE1F26] via-rose-500 to-[#008744] rounded-full relative"
-                    style={{ width: `${progress}%` }}
+                    style={{ width: `${Number.isFinite(progress) ? progress : 0}%` }}
                     transition={{ ease: "easeOut", duration: 0.1 }}
                   >
                     {/* Glowing Laser Scan on top of the bar */}

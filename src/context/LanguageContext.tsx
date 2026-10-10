@@ -17,19 +17,18 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window !== "undefined") {
-      try {
-        const savedLang = localStorage.getItem("us_software_language") as Language;
-        if (savedLang === "en" || savedLang === "bn") {
-          return savedLang;
-        }
-      } catch {
-        // ignore
+  const [language, setLanguageState] = useState<Language>("en");
+
+  React.useEffect(() => {
+    try {
+      const savedLang = localStorage.getItem("us_software_language") as Language;
+      if (savedLang === "en" || savedLang === "bn") {
+        setLanguageState(savedLang);
       }
+    } catch {
+      // ignore
     }
-    return "en";
-  });
+  }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
