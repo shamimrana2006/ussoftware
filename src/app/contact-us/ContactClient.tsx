@@ -88,8 +88,8 @@ export default function ContactPage() {
     {
       q: isEn ? "Are courses held online, offline or hybrid?" : "ক্লাসগুলো কি সরাসরি অফলাইনে হয় নাকি অনলাইনে?",
       a: isEn 
-        ? "We provide both interactive offline batches at our Dhanmondi Dhaka Campus (Metro Shopping Mall, Level-5) and 100% live online interactive batches. All students get lifetime LMS recordings and repository access." 
-        : "আমাদের ধানমন্ডি ঢাকা ক্যাম্পাসে (মেট্রো শপিং মল, লেভেল-৫) সরাসরি অফলাইন ক্লাস এবং দূরবর্তী শিক্ষার্থীদের জন্য ১০০% লাইভ অনলাইন ক্লাসের ব্যবস্থা রয়েছে। সব ক্লাসের রেকর্ডিং ও সোর্স কোড লাইফটাইম অ্যাক্সেস পাবেন।"
+        ? "We provide both interactive offline batches at our Dhaka Campus (Metro Shopping Mall, Level-05, 12/A, Mirpur Rd) and 100% live online interactive batches. All students get lifetime LMS recordings and repository access." 
+        : "আমাদের ঢাকা ক্যাম্পাসে (মেট্রো শপিং মল, লেভেল-০৫, ১২/এ, মিরপুর রোড) সরাসরি অফলাইন ক্লাস এবং দূরবর্তী শিক্ষার্থীদের জন্য ১০০% লাইভ অনলাইন ক্লাসের ব্যবস্থা রয়েছে। সব ক্লাসের রেকর্ডিং ও সোর্স কোড লাইফটাইম অ্যাক্সেস পাবেন।"
     },
     {
       q: isEn ? "How does the job placement & internship assistance work?" : "প্লেসমেন্ট সাপোর্ট ও ইন্টার্নশিপ সুবিধা কীভাবে কাজ করে?",
@@ -151,8 +151,8 @@ export default function ContactPage() {
               className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
             >
               {isEn
-                ? "Visit our Dhanmondi campus, send an inquiry through our direct concierge form or connect with our lead engineering counselors."
-                : "আমাদের ধানমন্ডি ক্যাম্পাসে সরাসরি চলে আসুন, ফর্মের মাধ্যমে তথ্য পাঠান অথবা আমাদের সিনিয়র ইঞ্জিনিয়ারদের সাথে সরাসরি কথা বলুন।"}
+                ? "Visit our campus, send an inquiry through our direct concierge form or connect with our lead engineering counselors."
+                : "আমাদের ক্যাম্পাসে সরাসরি চলে আসুন, ফর্মের মাধ্যমে তথ্য পাঠান অথবা আমাদের সিনিয়র ইঞ্জিনিয়ারদের সাথে সরাসরি কথা বলুন।"}
             </motion.p>
 
             {/* 4 Trust & Direct Action Pills */}
@@ -182,7 +182,7 @@ export default function ContactPage() {
 
               <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
                 <Building2 size={14} className="text-[#008744] flex-shrink-0" />
-                <span className="text-xs font-bold text-slate-800">{isEn ? "Metro Shopping Mall, Level-5" : "মেট্রো শপিং মল, লেভেল-৫"}</span>
+                <span className="text-xs font-bold text-slate-800">{isEn ? "Metro Shopping Mall, Level-05" : "মেট্রো শপিং মল, লেভেল-০৫"}</span>
               </div>
 
               <div className="flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl py-2.5 px-3 shadow-2xs">
@@ -422,8 +422,8 @@ export default function ContactPage() {
                       className="font-bold text-slate-800 hover:text-[#008744] transition-colors leading-snug"
                     >
                       {isEn
-                        ? "US Software Ltd., Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207, Bangladesh."
-                        : "ইউএস সফটওয়্যার লিমিটেড, মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭, বাংলাদেশ।"}
+                        ? "US Software Ltd., Metro Shopping Mall, Level-05, 12/A, Mirpur Rd, Dhaka 1209, Bangladesh."
+                        : "ইউএস সফটওয়্যার লিমিটেড, মেট্রো শপিং মল, লেভেল-০৫, ১২/এ, মিরপুর রোড, ঢাকা ১২০৯, বাংলাদেশ।"}
                     </a>
                   </div>
 
@@ -489,7 +489,7 @@ export default function ContactPage() {
                       {isEn ? "U S Software Limited Campus" : "ইউএস সফটওয়্যার লিমিটেড ক্যাম্পাস"}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-                      {isEn ? "Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207" : "মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭"}
+                      {isEn ? "Metro Shopping Mall, Level-05, 12/A, Mirpur Rd, Dhaka 1209" : "মেট্রো শপিং মল, লেভেল-০৫, ১২/এ, মিরপুর রোড, ঢাকা ১২০৯"}
                     </p>
                   </div>
                 </div>
@@ -532,7 +532,7 @@ export default function ContactPage() {
                     <span>U S Software Limited</span>
                   </div>
                   <p className="text-xs text-slate-500 font-medium mt-0.5">
-                    {isEn ? "Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207" : "মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭"}
+                    {isEn ? "Metro Shopping Mall, Level-05, 12/A, Mirpur Rd, Dhaka 1209" : "মেট্রো শপিং মল, লেভেল-০৫, ১২/এ, মিরপুর রোড, ঢাকা ১২০৯"}
                   </p>
                 </div>
               </div>
@@ -542,7 +542,7 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-2">
                   <MapPin size={17} className="text-[#008744] flex-shrink-0" />
                   <span className="text-xs sm:text-sm font-bold text-slate-800">
-                    {isEn ? "Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207" : "মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭"}
+                    {isEn ? "Metro Shopping Mall, Level-05, 12/A, Mirpur Rd, Dhaka 1209" : "মেট্রো শপিং মল, লেভেল-০৫, ১২/এ, মিরপুর রোড, ঢাকা ১২০৯"}
                   </span>
                 </div>
 

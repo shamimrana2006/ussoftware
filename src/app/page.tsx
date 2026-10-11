@@ -53,7 +53,8 @@ export default function Home() {
         "telephone": "+8801995852964",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Mirpur-10",
+          "streetAddress": "Metro Shopping Mall, Level-05, 12/A, Mirpur Rd",
+          "postalCode": "1209",
           "addressLocality": "Dhaka",
           "addressCountry": "BD"
         },

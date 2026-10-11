@@ -364,8 +364,8 @@ export default function Footer() {
                   title={isEn ? "View on Google Maps" : "গুগল ম্যাপে দেখুন"}
                 >
                   {isEn
-                    ? "US Software Ltd., Metro Shopping Mall, Road- 31, Level- 05, Dhanmondi, Dhaka-1207, Bangladesh."
-                    : "ইউএস সফটওয়্যার লিমিটেড, মেট্রো শপিং মল, রোড- ৩১, লেভেল- ০৫, ধানমন্ডি, ঢাকা-১২০৭, বাংলাদেশ।"}
+                    ? "US Software Ltd., Metro Shopping Mall, Level-05, 12/A, Mirpur Rd, Dhaka 1209, Bangladesh."
+                    : "ইউএস সফটওয়্যার লিমিটেড, মেট্রো শপিং মল, লেভেল-০৫, ১২/এ, মিরপুর রোড, ঢাকা ১২০৯, বাংলাদেশ।"}
                 </a>
               </li>
             </ul>

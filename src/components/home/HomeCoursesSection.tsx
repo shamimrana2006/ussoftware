@@ -14,7 +14,7 @@ import {
 
 import { coursesData } from "@/data/coursesData";
 
-const FEATURED_COURSE_IDS = ["1", "14", "3", "6", "8", "13"];
+const FEATURED_COURSE_IDS = ["1", "11", "10", "2", "15", "6"];
 
 export default function HomeCoursesSection() {
   const { language } = useLanguage();
