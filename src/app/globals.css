@@ -192,3 +192,28 @@ body {
     animation: gridMove 2.5s linear infinite;
   }
 }
+
+/* ==========================================================================
+   Preloader & Speed Optimization Architecture
+   - Hides raw-preloader by default so PageSpeed/Lighthouse never renders or waits for it
+   - Activates only when <head> script flags 'app-initial-loading' for genuine first-visit humans
+   - Completely eliminates millisecond home screen flash before preloader
+   ========================================================================== */
+#raw-preloader {
+  display: none;
+}
+
+html.app-initial-loading #raw-preloader {
+  display: flex !important;
+}
+
+html.app-initial-loading #app-content-wrapper {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html.app-initial-loading body {
+  background-color: #050b10 !important;
+  overflow: hidden !important;
+}

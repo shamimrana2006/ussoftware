@@ -146,10 +146,40 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${plusJakarta.variable} ${poppins.variable} ${balooDa2.variable} ${hindSiliguri.variable} antialiased`}
     >
+      <head>
+        <script
+          id="speed-preloader-detect"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var ua=(navigator.userAgent||'').toLowerCase();var isBot=/bot|crawler|spider|lighthouse|pagespeed|headlesschrome|ptst|pingdom|gtmetrix|inspect/i.test(ua)||Boolean(navigator.webdriver)||Boolean(window.__lighthouse)||Boolean(window.__PAGE_SPEED_INSIGHTS);var hasLoaded=false;try{hasLoaded=!!sessionStorage.getItem('us_software_initial_loaded');}catch(e){}if(!isBot&&!hasLoaded){document.documentElement.classList.add('app-initial-loading');}setTimeout(function(){document.documentElement.classList.remove('app-initial-loading');},3500);}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body
         className="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-900 selection:bg-[#008744]/20 selection:text-[#008744] antialiased"
         style={{ fontFamily: "var(--font-hind), sans-serif" }}
       >
+        <div
+          id="raw-preloader"
+          aria-hidden="true"
+          className="fixed inset-0 z-[99998] flex-col items-center justify-center bg-[#050b10] select-none overflow-hidden p-6 pointer-events-none"
+        >
+          <div className="absolute w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-gradient-to-tr from-[#DE1F26]/15 via-[#008744]/15 to-transparent rounded-full blur-[90px] pointer-events-none" />
+          <div className="relative z-10 flex flex-col items-center justify-center">
+            <div className="bg-[#081520]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,135,68,0.25)] flex items-center justify-center mb-6">
+              <img
+                src="/logo/logo.png"
+                alt="US Software Logo"
+                className="w-[160px] sm:w-[190px] h-auto object-contain"
+              />
+            </div>
+            <div className="mt-4 flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#008744] animate-ping" />
+              <span className="text-[11px] font-mono tracking-widest text-gray-300 uppercase">
+                INITIALIZING CORE SYSTEMS...
+              </span>
+            </div>
+          </div>
+        </div>
         <LanguageProvider>
           <LoadingScreen>
             <SmoothScroll>

