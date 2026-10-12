@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Mail, Globe, User, Menu, X, LayoutGrid, ChevronDown, BookOpen, Code, Cpu, Cloud, Layers, Sparkles, Box, Orbit, Bot, ArrowRight, GraduationCap, Award, CheckCircle2, Users, PhoneCall } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
 interface NavItemProps {
@@ -451,7 +452,14 @@ export default function Header() {
           {/* Left: Logo (Responsive: Compact on mobile, balanced on tablet & desktop) */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" onClick={handleHomeClick} className="flex items-center cursor-pointer">
-              <img src="/logo/logo.png" alt="US Software LTD" className="h-7 sm:h-9 md:h-10 lg:h-11 xl:h-12 max-w-[130px] sm:max-w-none w-auto object-contain transition-transform duration-200 hover:scale-105" />
+              <Image
+                src="/logo/logo.png"
+                alt="US Software LTD"
+                width={210}
+                height={48}
+                priority
+                className="h-7 sm:h-9 md:h-10 lg:h-11 xl:h-12 max-w-[130px] sm:max-w-none w-auto object-contain transition-transform duration-200 hover:scale-105"
+              />
             </Link>
           </div>
 

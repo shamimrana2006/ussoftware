@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -182,10 +183,13 @@ export default function HomeCoursesSection() {
                     title={isEn ? "Click to view course details" : "কোর্স বিস্তারিত দেখতে ক্লিক করুন"}
                   >
                     {/* Thumbnail Image with Scale-Up on hover */}
-                    <img
+                    <Image
                       src={course.thumbnail}
                       alt={course.title}
-                      className="w-full h-full object-cover group-hover/thumb:scale-108 transition-transform duration-500 ease-out"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                      className="object-cover group-hover/thumb:scale-108 transition-transform duration-500 ease-out"
+                      loading="lazy"
                     />
 
                     {/* Subtle dark overlay on hover */}

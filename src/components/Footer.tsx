@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -135,9 +136,12 @@ export default function Footer() {
           {/* Column 1: Brand Logo, Description & Magnetic Social Icons (4 cols on lg) */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" onClick={handleHomeClick} className="inline-flex items-center space-x-2 group">
-              <img
+              <Image
                 src="/logo/logo.png"
                 alt="US Software LTD"
+                width={240}
+                height={55}
+                loading="lazy"
                 className="h-11 sm:h-13 lg:h-14 xl:h-[60px] w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
