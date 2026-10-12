@@ -37,7 +37,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
     []
   );
 
-  const infinityPath = "M 120,60 C 150,15 210,15 210,60 C 210,105 150,105 120,60 Z";
+  const infinityPath = "M 120,60 C 150,15 210,15 210,60 C 210,105 150,105 120,60 C 90,15 30,15 30,60 C 30,105 90,105 120,60 Z";
 
   useEffect(() => {
     setIsClient(true);
@@ -184,18 +184,18 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
 
             {/* MAIN CENTER CONTAINER */}
             <div className="relative z-10 flex flex-col items-center justify-center max-w-lg w-full">
-              {/* Clean Logo Card */}
+              {/* Clean Logo Card with White Background for Dark PNG Text */}
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 className="flex items-center justify-center mb-6"
               >
-                <div className="bg-[#081520]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,135,68,0.25)]">
+                <div className="bg-white px-7 py-3 rounded-2xl border border-white/60 shadow-[0_0_35px_rgba(255,255,255,0.35),0_10px_25px_rgba(0,0,0,0.5)] flex items-center justify-center">
                   <img
                     src="/logo/logo.png"
                     alt="US Software Logo"
-                    className="w-[160px] sm:w-[190px] h-auto object-contain drop-shadow-[0_2px_10px_rgba(0,135,68,0.4)]"
+                    className="w-[160px] sm:w-[190px] h-auto object-contain"
                   />
                 </div>
               </motion.div>
@@ -287,8 +287,6 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
                       path={infinityPath}
                       dur="2.2s"
                       repeatCount="indefinite"
-                      keyPoints="0;1"
-                      keyTimes="0;1"
                       calcMode="linear"
                     />
                   </circle>
@@ -299,8 +297,7 @@ export default function LoadingScreen({ children }: { children?: React.ReactNode
                       path={infinityPath}
                       dur="2.2s"
                       repeatCount="indefinite"
-                      keyPoints="0.5;1;0.5"
-                      keyTimes="0;0.5;1"
+                      begin="-1.1s"
                       calcMode="linear"
                     />
                   </circle>

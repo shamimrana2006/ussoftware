@@ -165,7 +165,7 @@ export default function RootLayout({
         >
           <div className="absolute w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-gradient-to-tr from-[#DE1F26]/15 via-[#008744]/15 to-transparent rounded-full blur-[90px] pointer-events-none" />
           <div className="relative z-10 flex flex-col items-center justify-center">
-            <div className="bg-[#081520]/80 backdrop-blur-xl px-7 py-3 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,135,68,0.25)] flex items-center justify-center mb-6">
+            <div className="bg-white px-7 py-3 rounded-2xl border border-white/60 shadow-[0_0_35px_rgba(255,255,255,0.35),0_10px_25px_rgba(0,0,0,0.5)] flex items-center justify-center mb-6">
               <img
                 src="/logo/logo.png"
                 alt="US Software Logo"
