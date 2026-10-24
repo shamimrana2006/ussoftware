@@ -1907,8 +1907,8 @@ module.exports = [
         "bn": "ব্লেন্ডারে ৩ডি ক্যারেক্টার ও অবজেক্ট মডেলিং ও অ্যানিমেশন করা।"
       },
       {
-        "en": "Graduate with a 6-Month Government Endorsed Professional Diploma.",
-        "bn": "৬ মাসের সরকারি অনুমোদিত প্রফেশনাল ডিপ্লোমা সার্টিফিকেট অর্জন।"
+        "en": "Graduate with a 6-Month Global Professional Diploma.",
+        "bn": "৬ মাসের গ্লোবাল প্রফেশনাল ডিপ্লোমা সার্টিফিকেট অর্জন।"
       }
     ],
     "curriculum": [
@@ -2005,8 +2005,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "6-Month Government Endorsed Diploma Certificate",
-        "bn": "৬ মাসের সরকারি অনুমোদিত প্রফেশনাল ডিপ্লোমা"
+        "en": "6-Month Global Professional Diploma Certificate",
+        "bn": "৬ মাসের গ্লোবাল প্রফেশনাল ডিপ্লোমা"
       },
       {
         "en": "1 TB Premium Multimedia Assets, Sound FX & 3D Models",
@@ -2162,8 +2162,8 @@ module.exports = [
         "bn": "ডকার ও রেডিস ক্যাশিং দিয়ে সিস্টেম পারফরম্যান্স বাড়ানো।"
       },
       {
-        "en": "Graduate with a 6-Month Government Endorsed Professional Web Diploma.",
-        "bn": "৬ মাসের সরকারি অনুমোদিত প্রফেশনাল ডিপ্লোমা সার্টিফিকেট অর্জন।"
+        "en": "Graduate with a 6-Month Global Professional Web Diploma.",
+        "bn": "৬ মাসের গ্লোবাল প্রফেশনাল ওয়েব ডিপ্লোমা সার্টিফিকেট অর্জন।"
       }
     ],
     "curriculum": [
@@ -2260,8 +2260,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "6-Month Government Endorsed Professional Web Diploma",
-        "bn": "৬ মাসের সরকারি অনুমোদিত প্রফেশনাল ওয়েব ডিপ্লোমা"
+        "en": "6-Month Global Professional Web Diploma",
+        "bn": "৬ মাসের গ্লোবাল প্রফেশনাল ওয়েব ডিপ্লোমা"
       },
       {
         "en": "Full Source Code of 4 Enterprise Projects",
@@ -2417,8 +2417,8 @@ module.exports = [
         "bn": "উইন্ডোজ সার্ভার অ্যাক্টিভ ডিরেক্টরি ও গ্রুপ পলিসি পরিচালনা করা।"
       },
       {
-        "en": "Graduate with a 6-Month Government Endorsed Professional Network Diploma.",
-        "bn": "৬ মাসের সরকারি অনুমোদিত প্রফেশনাল নেটওয়ার্কিং ডিপ্লোমা অর্জন।"
+        "en": "Graduate with a 6-Month Global Professional Network Diploma.",
+        "bn": "৬ মাসের গ্লোবাল প্রফেশনাল নেটওয়ার্কিং ডিপ্লোমা অর্জন।"
       }
     ],
     "curriculum": [
@@ -2515,8 +2515,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "6-Month Government Endorsed Professional Network Diploma",
-        "bn": "৬ মাসের সরকারি অনুমোদিত প্রফেশনাল নেটওয়ার্কিং ডিপ্লোমা"
+        "en": "6-Month Global Professional Network Diploma",
+        "bn": "৬ মাসের গ্লোবাল প্রফেশনাল নেটওয়ার্কিং ডিপ্লোমা"
       },
       {
         "en": "Cisco, MikroTik & Red Hat Training Certificates",
@@ -4300,8 +4300,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government & Internationally Endorsed Caregiver Certificate",
-        "bn": "আন্তর্জাতিক মানসম্পন্ন প্রফেশনাল কেয়ারগিভার সার্টিফিকেট"
+        "en": "Global & Internationally Recognized Caregiver Certificate",
+        "bn": "আন্তর্জাতিক মানসম্পন্ন গ্লোবাল কেয়ারগিভার সার্টিফিকেট"
       },
       {
         "en": "First Aid & CPR Practical Training Badge",

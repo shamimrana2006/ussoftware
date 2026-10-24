@@ -400,8 +400,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "100+ GB Premium Design Assets & Fonts",
@@ -781,8 +781,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Elementor Pro & Premium Theme Pack (Worth $500+)",
@@ -1036,8 +1036,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Full Source Code of 4 Production Apps",
@@ -1327,8 +1327,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Comprehensive UI Kit & Design System Assets",
@@ -1762,8 +1762,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Access to Premium SEO Tools (Semrush, Ahrefs, Moz)",
@@ -2143,8 +2143,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Ready-to-Use 20+ High-Converting Landing Pages",
@@ -2524,8 +2524,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "500+ GB Video Assets (LUTs, SFX, Transitions, Overlays)",
@@ -2905,8 +2905,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "3 Production Flutter App Repositories on GitHub",
@@ -3160,8 +3160,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Complete Source Code of 3 Enterprise Django Projects",
@@ -3469,8 +3469,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "4 Complete Production Web Projects Source Code",
@@ -3876,8 +3876,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Full Source Code of 2 Full Stack Enterprise Projects",

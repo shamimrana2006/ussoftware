@@ -479,8 +479,8 @@ module.exports = [
     ],
     "includedItems": [
       {
-        "en": "Government Endorsed Certificate",
-        "bn": "সরকারি অনুমোদিত সার্টিফিকেট"
+        "en": "Global Certificate",
+        "bn": "গ্লোবাল সার্টিফিকেট"
       },
       {
         "en": "Complete Source Code of Full E-Commerce Project",
